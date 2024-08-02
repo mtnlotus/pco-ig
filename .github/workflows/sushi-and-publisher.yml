@@ -14,21 +14,29 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-      - name: Build Implementation Guide
-        run: |
-          wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-          docker run -v $(pwd):/home/publisher/ig ghcr.io/fhir/ig-publisher-gh java -jar publisher.jar -ig .
-
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
+      - name: Update the image to the latest publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
         with:
-          path: ./output
+          args: ./_updatePublisher.sh --force
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - name: Run sushi to generate the ig.ini file
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: sushi
+
+      - name: Run the IG publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: ./_genonce.sh -no-sushi
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          
