@@ -19,6 +19,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Prepare Ruby and Jekyll
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+
+      - name: Install ruby dependencies
+        run: bundle install
+
       - name: Install publisher
         run: |
           wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -P ./input-cache
@@ -34,9 +42,6 @@ jobs:
 
       - name: Run the IG publisher
         run: |
-          mkdir ./temp
-          mkdir ./temp/pages
-          mkdir ./output
           ./_genonce.sh
 
       # - name: Update the image to the latest publisher
