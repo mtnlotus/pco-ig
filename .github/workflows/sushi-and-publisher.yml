@@ -19,20 +19,32 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # - name: Build Implementation Guide
+      #   run: |
+      #     wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+          
       - name: Update the image to the latest publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: ./_updatePublisher.sh --force
-
-      - name: Run sushi to generate the ig.ini file
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: sushi build
+        run: |
+          ./_updatePublisher.sh
 
       - name: Run the IG publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: ./_genonce.sh -no-sushi
+        run: |
+          ./_genonce.sh
+
+      # - name: Update the image to the latest publisher
+      #   uses: docker://hl7fhir/ig-publisher-base:latest
+      #   with:
+      #     args: ./_updatePublisher.sh --force
+
+      # - name: Run sushi to generate the ig.ini file
+      #   uses: docker://hl7fhir/ig-publisher-base:latest
+      #   with:
+      #     args: sushi build
+
+      # - name: Run the IG publisher
+      #   uses: docker://hl7fhir/ig-publisher-base:latest
+      #   with:
+      #     args: ./_genonce.sh -no-sushi
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
