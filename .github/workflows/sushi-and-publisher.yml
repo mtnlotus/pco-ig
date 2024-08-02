@@ -19,15 +19,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Update the image to the latest publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: ./_updatePublisher.sh
+      - name: Build Implementation Guide
+        run: |
+          wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+          docker run -v $(pwd):/home/publisher/ig ghcr.io/fhir/ig-publisher-gh java -jar publisher.jar -ig .
 
-      - name: Run the IG publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: ./_genonce.sh
+      # - name: Update the image to the latest publisher
+      #   uses: docker://hl7fhir/ig-publisher-base:latest
+      #   with:
+      #     args: ./_updatePublisher.sh
+
+      # - name: Run the IG publisher
+      #   uses: docker://hl7fhir/ig-publisher-base:latest
+      #   with:
+      #     args: ./_genonce.sh
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
