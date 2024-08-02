@@ -19,13 +19,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # - name: Build Implementation Guide
-      #   run: |
-      #     wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-          
-      - name: Update the image to the latest publisher
+      - name: Build Implementation Guide
         run: |
-          ./_updatePublisher.sh
+          wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -P ./input-cache
+          
+      # - name: Update the image to the latest publisher
+      #   run: |
+      #     ./_updatePublisher.sh
 
       - name: Run the IG publisher
         run: |
