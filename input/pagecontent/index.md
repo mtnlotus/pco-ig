@@ -1,0 +1,43 @@
+### Introduction
+
+Person-Centered Outcomes (PCO) focus on setting and achieving specific, personalized goals that prioritize an individual's well-being and "What Matters Most" to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. After goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual's needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness.
+
+Goal Attainment Scaling (GAS) in healthcare measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.
+
+### User Stories
+
+
+### Actors
+
+#### PCO Plan Facilitator
+
+
+
+#### PCO Data Submitter
+
+The data submitter is a software system that collects and manages PCO data. It typically incorporates a patient-facing app, and may also incorporate a clinician-facing EHR-integrated app and a cloud service.
+
+This IG also refers to Data Submitters as "**apps**" or "**PCO management platforms**".
+
+#### PCO Data Receiver
+
+The data receiver is a software system that receives and stores the PCO data submitted by the data submitter.
+
+This IG also refers to Data Receivers as "**EHRs**".
+
+#### PCO Measure Performer
+
+The measure performer is a software system that receives the PCO data and computes digital quality measures for a population of individuals.
+
+### Nominal Workflow
+
+Under development.
+
+### Normative vs Informative Content
+
+* Profile and extension definitions in this IG are proposed as **normative** content.
+* CQL, Measure, and Questionnaire resources are **informative** resources that support illustrative use cases.
+
+### Package Downloads
+
+{% include cross-version-analysis.xhtml %}
