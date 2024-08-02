@@ -19,16 +19,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Create input-cache folder
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          entrypoint: /bin/sh
-          args: -c "mkdir ./input-cache
-
       - name: Update the image to the latest publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
         with:
-          args: ./_updatePublisher.sh --force
+          args: ./_updatePublisher.sh
 
       - name: Run the IG publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
