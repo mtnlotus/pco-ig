@@ -1,0 +1,89 @@
+PCO : Validation Results
+=========================================
+
+err = 56, warn = 9, info = 1
+$--
+Generated $--. FHIR version $-- for mtnlotus.fhir.uv.pco#$-- (canonical = http://mtnlotus.com/uv/pco)
+ Build Errors : 0 / 8 / 0
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ImplementationGuide-mtnlotus.fhir.uv.pco : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/ExtensionAndSlicingExample : 3 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers : 6 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/PHQ9LogicExample : 4 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/QuestionnaireMeasureExample : 3 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-QuestionnaireMeasureExample : 38 / 1 / 3
+ /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-phq-9-questionnaire : 2 / 0 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/ExtensionAndSlicingExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/PHQ9LogicExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Library/QuestionnaireMeasureExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/phq-9-questionnaire.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-mtnlotus.fhir.uv.pco.json ==
+== input/resources/library/ExtensionAndSlicingExample.json ==
+ERROR: Library/ExtensionAndSlicingExample: Library.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
+ERROR: Library/ExtensionAndSlicingExample: Library.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/ExtensionAndSlicingExample: Library.extension[1].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
+== input/resources/library/FHIRHelpers.json ==
+ERROR: Library.where(url = 'http://hl7.org/fhir/Library/FHIRHelpers'): Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers.json - the canonical URL (http://mtnlotus.com/uv/pco/Library/FHIRHelpers) does not match the URL (http://hl7.org/fhir/Library/FHIRHelpers)
+ERROR: Library/FHIRHelpers: Library.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
+ERROR: Library/FHIRHelpers: Library.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/FHIRHelpers: Library.extension[1].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
+ERROR: Library/FHIRHelpers: Library: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+ERROR: /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers: URL Mismatch http://mtnlotus.com/uv/pco/Library/FHIRHelpers vs http://hl7.org/fhir/Library/FHIRHelpers
+== input/resources/library/PHQ9LogicExample.json ==
+ERROR: Library/PHQ9LogicExample: Library.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
+ERROR: Library/PHQ9LogicExample: Library.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/PHQ9LogicExample: Library.extension[1].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
+ERROR: Library/PHQ9LogicExample: Library.parameter[4]: ParameterDefinition.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ParameterDefinition|4.0.1)
+== input/resources/library/QuestionnaireMeasureExample.json ==
+ERROR: Library/QuestionnaireMeasureExample: Library.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
+ERROR: Library/QuestionnaireMeasureExample: Library.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/QuestionnaireMeasureExample: Library.extension[1].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
+== input/resources/measure/Measure-QuestionnaireMeasureExample.json ==
+ERROR: Measure.where(url = 'http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample'): Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-QuestionnaireMeasureExample.json - the canonical URL (http://mtnlotus.com/uv/pco/Measure/QuestionnaireMeasureExample) does not match the URL (http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample)
+ERROR: Measure/QuestionnaireMeasureExample: Measure.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[2]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[2].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[3]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[3].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[4]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[4].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[5]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[5].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[6]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[6].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[7]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[7].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[8]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[8].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[9]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[9].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[10]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[10].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[11]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[11].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[12]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[12].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.extension[0]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.extension[0].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.extension[0].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
+ERROR: Measure/QuestionnaireMeasureExample: Measure.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.group[0].population[2].extension[0]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.group[0].population[2].extension[0].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod' does not resolve
+ERROR: Measure/QuestionnaireMeasureExample: Measure.group[0].population[2].extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference could not be found so is not allowed here
+ERROR: Measure/QuestionnaireMeasureExample: Measure.group[0].population[2].extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference' does not resolve
+INFORMATION: Measure/QuestionnaireMeasureExample: Measure: The Library http://somewhere.org/fhir/uv/mycontentig/Library/QuestionnaireMeasureExample could not be resolved, so expression validation may not be correct
+WARNING: Measure/QuestionnaireMeasureExample: Measure.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
+ERROR: /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-QuestionnaireMeasureExample: URL Mismatch http://mtnlotus.com/uv/pco/Measure/QuestionnaireMeasureExample vs http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample
+== input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json ==
+ERROR: Questionnaire.where(url = 'http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire'): Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/phq-9-questionnaire) does not match the URL (http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire)
+ERROR: /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-phq-9-questionnaire: URL Mismatch http://mtnlotus.com/uv/pco/Questionnaire/phq-9-questionnaire vs http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire
