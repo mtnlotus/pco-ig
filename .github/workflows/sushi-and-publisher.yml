@@ -18,18 +18,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: qligier/fhir-ig-action@v0.3.0
 
-      # - uses: ruby/setup-ruby@v1
-      #   with:
-      #     ruby-version: '3.3'
-      #     bundler-cache: true
-      
-      # - name: Install Jekyll
-      #   run: |
-      #     gem install bundler
-      #     bundle install
-          
+      - name: Install and run sushi
+        run: |
+          npm install -g fsh-sushi
+          sushi build
+
+      - name: Generate Implementation Guide (IG)
+        uses: qligier/fhir-ig-action@v0.3.0
+
       # - name: Install publisher
       #   run: |
       #     wget https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -P ./input-cache
@@ -37,29 +34,9 @@ jobs:
       # - name: Update Publisher executable
       #   run: bash _updatePublisher.sh --force --yes
 
-      # - name: Install and run sushi
-      #   run: |
-      #     npm install -g fsh-sushi
-      #     sushi build
-      
       # - name: Generate Implementation Guide (IG)
       #   run: bash _genonce.sh
 
-      # - name: Update the image to the latest publisher
-      #   uses: docker://hl7fhir/ig-publisher-base:latest
-      #   with:
-      #     args: ./_updatePublisher.sh --force
-
-      # - name: Run sushi to generate the ig.ini file
-      #   uses: docker://hl7fhir/ig-publisher-base:latest
-      #   with:
-      #     args: sushi
-
-      # - name: Run the IG publisher
-      #   uses: docker://hl7fhir/ig-publisher-base:latest
-      #   with:
-      #     args: ./_genonce.sh -no-sushi
-          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
