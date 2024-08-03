@@ -24,6 +24,7 @@ jobs:
           npm install -g fsh-sushi
           sushi build
 
+      # Using this action: https://github.com/qligier/fhir-ig-action
       - name: Generate Implementation Guide (IG)
         uses: qligier/fhir-ig-action@v0.3.0
 
@@ -34,6 +35,7 @@ jobs:
       # - name: Update Publisher executable
       #   run: bash _updatePublisher.sh --force --yes
 
+      # TODO: I always get an error with this, cannot find jekyll
       # - name: Generate Implementation Guide (IG)
       #   run: bash _genonce.sh
 
