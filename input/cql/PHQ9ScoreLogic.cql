@@ -1,4 +1,4 @@
-library PHQ9LogicExample version '0.4.1'
+library PHQ9ScoreLogic version '0.1.0'
 
 using FHIR version '4.0.1'
 
@@ -25,7 +25,7 @@ define "QuestionnaireResponse":
   else
     Last(
       [QuestionnaireResponse] QR
-        where QR.questionnaire = 'http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire'
+        where QR.questionnaire = 'http://loinc.org/q/44249-1'
         sort by (authored as FHIR.dateTime) desc
     )
 
@@ -36,14 +36,15 @@ define "QuestionnaireResponse":
 define "Responses":
   "QuestionnaireResponse" QR
     return QR.item I where I.linkId in {
-      'LittleInterest',
-      'FeelingDown',
-      'TroubleSleeping',
-      'FeelingTired',
-      'BadApetite',
-      'FeelingBadAboutSelf',
-      'TroubleConcetrating',
-      'MovingSpeaking'
+      '14363', //'LittleInterest'
+      '14364', //'FeelingDown'
+      '14365', //'TroubleSleeping'
+      '14366', //'FeelingTired'
+      '14367', //'BadApetite'
+      '14368', //'FeelingBadAboutSelf'
+      '14369', //'TroubleConcetrating'
+      '14370' //'MovingSpeaking'
+      // '14371' // HurtingSelf
     }
 
 /*
