@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/Goal/pcoGoalPainLevelExample> a fhir:Goal ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoGoalPainLevelExample"] ; # 
+  fhir:lifecycleStatus [ fhir:v "active"] ; # 
+  fhir:achievementStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/goal-achievement"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "in-progress" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "person-centered" ]
+     ] )
+  ] ) ; # 
+  fhir:description [
+     fhir:text [ fhir:v "Maintain pain level below 5 while walking" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:start [ fhir:v "2024-02-15"^^xsd:date] ; # 
+  fhir:target ( [
+     fhir:due [ fhir:v "2024-06-30"^^xsd:date ]
+  ] ) ; # 
+  fhir:expressedBy [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

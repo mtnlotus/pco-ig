@@ -144,6 +144,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>
          <a href="#3">Structures: Questionnaires</a>
       </li>
+      <li>
+         <a href="#4">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#5">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#8">Example: Example Instances</a>
+      </li>
    </ul>
 </div>
 <div xmlns:html="http://www.w3.org/1999/xhtml"
@@ -158,8 +173,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Measure-QuestionnaireMeasureExample.html"
-                  title="Measure/QuestionnaireMeasureExample">Questionnaire Measure Example</a>
+               <a href="Measure-PHQ9MeasureExample.html"
+                  title="Measure/PHQ9MeasureExample">PHQ-9 Measure Example</a>
             </td>
             <td>
 <p>Example measure illustrating a continuous variable measure calculating scores from multiple questionnaires</p>
@@ -175,24 +190,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Library-ExtensionAndSlicingExample.html"
-                  title="Library/ExtensionAndSlicingExample">ExtensionAndSlicingExample</a>
-            </td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="Library-FHIRHelpers.html" title="Library/FHIRHelpers">FHIRHelpers</a>
             </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Library-PHQ9LogicExample.html" title="Library/PHQ9LogicExample">PHQ9LogicExample</a>
+               <a href="Library-PHQ9MeasureExample.html"
+                  title="Library/PHQ9MeasureExample">PHQ9MeasureExample</a>
             </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Library-QuestionnaireMeasureExample.html"
-                  title="Library/QuestionnaireMeasureExample">QuestionnaireMeasureExample</a>
+               <a href="Library-PHQ9ScoreLogic.html" title="Library/PHQ9ScoreLogic">PHQ9ScoreLogic</a>
             </td>
          </tr>
       </tbody>
@@ -205,9 +214,195 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Questionnaire-phq-9-questionnaire.html"
-                  title="Questionnaire/phq-9-questionnaire">Patient Health Questionnaire (PHQ-9)</a>
+               <a href="Questionnaire-69737-5.html" title="Questionnaire/69737-5">Generalized anxiety disorder 7 item</a>
             </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-44249-1.html" title="Questionnaire/44249-1">PHQ-9 quick depression assessment panel</a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-caregiver-gas-score.html"
+                  title="StructureDefinition/pco-caregiver-gas-score">Caregiver Goal Attainment Scaling (GAS) score</a>
+            </td>
+            <td>
+<p>The caregiver follow-up score indicates how the caregiver rated either the patient’s progress or their own progress on goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-patient-gas-score.html"
+                  title="StructureDefinition/pco-patient-gas-score">Patient Goal Attainment Scaling (GAS) score</a>
+            </td>
+            <td>
+<p>The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-goal.html"
+                  title="StructureDefinition/pco-goal">Person-Centered Goal</a>
+            </td>
+            <td>
+<p>Person-centered goal with goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-practitioner-gas-score.html"
+                  title="StructureDefinition/pco-practitioner-gas-score">Practitioner Goal Attainment Scaling (GAS) score</a>
+            </td>
+            <td>
+<p>The practitioner follow-up score indicates how the practitioner rated the patient’s progress on goal attainment scaling.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-goal-attainment-scaling.html"
+                  title="StructureDefinition/pco-goal-attainment-scaling">Goal Attainment Scaling</a>
+            </td>
+            <td>
+<p>Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-caregiver-gas-followup-vs.html"
+                  title="ValueSet/caregiver-gas-followup-vs">Caregiver Follow-Up GAS Score</a>
+            </td>
+            <td>
+<p>The caregiver follow-up score indicates how the caregiver rated either the patient’s progress or their own progress on goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-patient-gas-followup-vs.html"
+                  title="ValueSet/patient-gas-followup-vs">Patient Follow-Up GAS Score</a>
+            </td>
+            <td>
+<p>The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-practitioner-gas-followup-vs.html"
+                  title="ValueSet/practitioner-gas-followup-vs">Practitioner Follow-Up GAS Score</a>
+            </td>
+            <td>
+<p>The practitioner follow-up score indicates how the practitioner rated the patient’s progress on goal attainment scaling.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-pco.html" title="CodeSystem/pco">Codes for PCO</a>
+            </td>
+            <td>
+<p>Codes to identify content associated with this IG</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-pcoPatientJones.html" title="Patient/pcoPatientJones">Example Patient</a>
+            </td>
+            <td>
+<p>Dorothy Jones</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-pcoPractitionerGonzalez.html"
+                  title="Practitioner/pcoPractitionerGonzalez">Example Practitioner</a>
+            </td>
+            <td>
+<p>Maria Gonzalez</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-pcoGoalWalkDogExample.html"
+                  title="Goal/pcoGoalWalkDogExample">Goal with GAS</a>
+            </td>
+            <td>
+<p>Person-centered goal with attainment scaling extensions</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-pcoGoalPainLevelExample.html"
+                  title="Goal/pcoGoalPainLevelExample">Goal without GAS</a>
+            </td>
+            <td>
+<p>Person-centered goal without attainment scaling</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pcoGASScorePatientBaselineExample.html"
+                  title="Observation/pcoGASScorePatientBaselineExample">Patient GAS Baseline Score</a>
+            </td>
+            <td>
+<p>Baseline GAS score observation recorded by a Patient at start of goal.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pcoGASScorePatientFollowupExample.html"
+                  title="Observation/pcoGASScorePatientFollowupExample">Patient GAS Follow-up Score</a>
+            </td>
+            <td>
+<p>Follow-up GAS score observation recorded by a Patient showing goal progress.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pcoGASScorePractitionerFollowupExample.html"
+                  title="Observation/pcoGASScorePractitionerFollowupExample">Practitioner GAS Follow-up Score</a>
+            </td>
+            <td>
+<p>Follow-up GAS score observation recorded by a Practitioner showing goal progress.</p>
+</td>
          </tr>
       </tbody>
    </table>
@@ -229,7 +424,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 3, 2024 16:38+0000">2024-08-03</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 6, 2024 18:33+0000">2024-08-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

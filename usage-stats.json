@@ -3,17 +3,111 @@
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",
-  "extensions": [],
-  "profiles": {},
+  "extensions": [
+    {
+      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling",
+      "title": "Goal Attainment Scaling",
+      "types": [
+        "Coding",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    }
+  ],
+  "profiles": {
+    "Observation": [
+      {
+        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score",
+        "title": "Patient Goal Attainment Scaling (GAS) score"
+      },
+      {
+        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score",
+        "title": "Practitioner Goal Attainment Scaling (GAS) score"
+      }
+    ],
+    "Goal": [
+      {
+        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal",
+        "title": "Person-Centered Goal"
+      }
+    ]
+  },
   "usage": {
     "http://hl7.org/fhir/StructureDefinition/cqf-cqlOptions": [
       "Library"
     ],
-    "http://hl7.org/fhir/StructureDefinition/cqf-expression": [
-      "Questionnaire.item"
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
     ],
-    "http://hl7.org/fhir/StructureDefinition/cqf-library": [
-      "Questionnaire"
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.differential.element.type.targetProfile",
+      "StructureDefinition.snapshot.element.type",
+      "StructureDefinition.snapshot.element.type.targetProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
       "ImplementationGuide.definition"
@@ -30,6 +124,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod": [
       "Measure.group.population"
@@ -49,6 +146,9 @@
     "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem": [
       "Library",
       "Measure"
+    ],
+    "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling": [
+      "Goal"
     ]
   }
 }

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-03T16:38:13+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-06T18:33:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -672,14 +672,63 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Library/ExtensionAndSlicingExample> ;
-         fhir:reference [ fhir:v "Library/ExtensionAndSlicingExample" ]
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs> ;
+         fhir:reference [ fhir:v "ValueSet/caregiver-gas-followup-vs" ]
        ] ;
-       fhir:name [ fhir:v "ExtensionAndSlicingExample" ] ;
+       fhir:name [ fhir:v "Caregiver Follow-Up GAS Score" ] ;
+       fhir:description [ fhir:v "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-caregiver-gas-score> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-caregiver-gas-score" ]
+       ] ;
+       fhir:name [ fhir:v "Caregiver Goal Attainment Scaling (GAS) score" ] ;
+       fhir:description [ fhir:v "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/pco> ;
+         fhir:reference [ fhir:v "CodeSystem/pco" ]
+       ] ;
+       fhir:name [ fhir:v "Codes for PCO" ] ;
+       fhir:description [ fhir:v "Codes to identify content associated with this IG" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+         fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+       ] ;
+       fhir:name [ fhir:v "Example Patient" ] ;
+       fhir:description [ fhir:v "Dorothy Jones" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerGonzalez> ;
+         fhir:reference [ fhir:v "Practitioner/pcoPractitionerGonzalez" ]
+       ] ;
+       fhir:name [ fhir:v "Example Practitioner" ] ;
+       fhir:description [ fhir:v "Maria Gonzalez" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -697,21 +746,118 @@
          fhir:value [ fhir:v "Questionnaire" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Questionnaire/phq-9-questionnaire> ;
-         fhir:reference [ fhir:v "Questionnaire/phq-9-questionnaire" ]
+         fhir:link <http://mtnlotus.com/uv/pco/Questionnaire/69737-5> ;
+         fhir:reference [ fhir:v "Questionnaire/69737-5" ]
        ] ;
-       fhir:name [ fhir:v "Patient Health Questionnaire (PHQ-9)" ] ;
+       fhir:name [ fhir:v "Generalized anxiety disorder 7 item" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Library/PHQ9LogicExample> ;
-         fhir:reference [ fhir:v "Library/PHQ9LogicExample" ]
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-goal-attainment-scaling" ]
        ] ;
-       fhir:name [ fhir:v "PHQ9LogicExample" ] ;
+       fhir:name [ fhir:v "Goal Attainment Scaling" ] ;
+       fhir:description [ fhir:v "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Goal" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Goal/pcoGoalWalkDogExample> ;
+         fhir:reference [ fhir:v "Goal/pcoGoalWalkDogExample" ]
+       ] ;
+       fhir:name [ fhir:v "Goal with GAS" ] ;
+       fhir:description [ fhir:v "Person-centered goal with attainment scaling extensions" ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Goal" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Goal/pcoGoalPainLevelExample> ;
+         fhir:reference [ fhir:v "Goal/pcoGoalPainLevelExample" ]
+       ] ;
+       fhir:name [ fhir:v "Goal without GAS" ] ;
+       fhir:description [ fhir:v "Person-centered goal without attainment scaling" ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs> ;
+         fhir:reference [ fhir:v "ValueSet/patient-gas-followup-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Follow-Up GAS Score" ] ;
+       fhir:description [ fhir:v "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoGASScorePatientBaselineExample> ;
+         fhir:reference [ fhir:v "Observation/pcoGASScorePatientBaselineExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient GAS Baseline Score" ] ;
+       fhir:description [ fhir:v "Baseline GAS score observation recorded by a Patient at start of goal." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoGASScorePatientFollowupExample> ;
+         fhir:reference [ fhir:v "Observation/pcoGASScorePatientFollowupExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient GAS Follow-up Score" ] ;
+       fhir:description [ fhir:v "Follow-up GAS score observation recorded by a Patient showing goal progress." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-patient-gas-score" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Goal Attainment Scaling (GAS) score" ] ;
+       fhir:description [ fhir:v "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-goal" ]
+       ] ;
+       fhir:name [ fhir:v "Person-Centered Goal" ] ;
+       fhir:description [ fhir:v "Person-centered goal with goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -719,11 +865,22 @@
          fhir:value [ fhir:v "Measure" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Measure/QuestionnaireMeasureExample> ;
-         fhir:reference [ fhir:v "Measure/QuestionnaireMeasureExample" ]
+         fhir:link <http://mtnlotus.com/uv/pco/Measure/PHQ9MeasureExample> ;
+         fhir:reference [ fhir:v "Measure/PHQ9MeasureExample" ]
        ] ;
-       fhir:name [ fhir:v "Questionnaire Measure Example" ] ;
+       fhir:name [ fhir:v "PHQ-9 Measure Example" ] ;
        fhir:description [ fhir:v "Example measure illustrating a continuous variable measure calculating scores from multiple questionnaires" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Questionnaire" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Questionnaire/44249-1> ;
+         fhir:reference [ fhir:v "Questionnaire/44249-1" ]
+       ] ;
+       fhir:name [ fhir:v "PHQ-9 quick depression assessment panel" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -731,10 +888,60 @@
          fhir:value [ fhir:v "Library" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Library/QuestionnaireMeasureExample> ;
-         fhir:reference [ fhir:v "Library/QuestionnaireMeasureExample" ]
+         fhir:link <http://mtnlotus.com/uv/pco/Library/PHQ9MeasureExample> ;
+         fhir:reference [ fhir:v "Library/PHQ9MeasureExample" ]
        ] ;
-       fhir:name [ fhir:v "QuestionnaireMeasureExample" ] ;
+       fhir:name [ fhir:v "PHQ9MeasureExample" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Library/PHQ9ScoreLogic> ;
+         fhir:reference [ fhir:v "Library/PHQ9ScoreLogic" ]
+       ] ;
+       fhir:name [ fhir:v "PHQ9ScoreLogic" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs> ;
+         fhir:reference [ fhir:v "ValueSet/practitioner-gas-followup-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner Follow-Up GAS Score" ] ;
+       fhir:description [ fhir:v "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoGASScorePractitionerFollowupExample> ;
+         fhir:reference [ fhir:v "Observation/pcoGASScorePractitionerFollowupExample" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner GAS Follow-up Score" ] ;
+       fhir:description [ fhir:v "Follow-up GAS score observation recorded by a Practitioner showing goal progress." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-practitioner-gas-score" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner Goal Attainment Scaling (GAS) score" ] ;
+       fhir:description [ fhir:v "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [

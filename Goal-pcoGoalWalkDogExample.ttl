@@ -1,0 +1,113 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/Goal/pcoGoalWalkDogExample> a fhir:Goal ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoGoalWalkDogExample"] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding, loinc:PATIENT-GAS-MUCH-BETTER-THAN-EXPECTED ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "patient-gas-much-better-than-expected" ] ;
+         fhir:display [ fhir:v "Much better than expected" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Walk my dog every day and visit with friends in the park" ]
+     ] ) ;
+     fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding, loinc:PATIENT-GAS-BETTER-THAN-EXPECTED ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "patient-gas-better-than-expected" ] ;
+         fhir:display [ fhir:v "Better than expected" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Walk my dog every day" ]
+     ] ) ;
+     fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding, loinc:PATIENT-GAS-EXPECTED-OUTCOME ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "patient-gas-expected-outcome" ] ;
+         fhir:display [ fhir:v "Expected outcome" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Walk my dog 5 times per week in the park" ]
+     ] ) ;
+     fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding, loinc:PATIENT-GAS-LESS-THAN-EXPECTED ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "patient-gas-less-than-expected" ] ;
+         fhir:display [ fhir:v "Less than expected" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Walk my dog less than 5 times per week or not in the park" ]
+     ] ) ;
+     fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding, loinc:PATIENT-GAS-MUCH-LESS-THAN-EXPECTED ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "patient-gas-much-less-than-expected" ] ;
+         fhir:display [ fhir:v "Much less than expected" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Cannot walk my dog" ]
+     ] ) ;
+     fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:lifecycleStatus [ fhir:v "active"] ; # 
+  fhir:achievementStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/goal-achievement"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "in-progress" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "person-centered" ]
+     ] )
+  ] ) ; # 
+  fhir:description [
+     fhir:text [ fhir:v "Walk my dog 5 times per week in the park" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:start [ fhir:v "2024-04-03"^^xsd:date] ; # 
+  fhir:target ( [
+     fhir:due [ fhir:v "2024-09-30"^^xsd:date ]
+  ] ) ; # 
+  fhir:expressedBy [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

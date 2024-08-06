@@ -1,0 +1,105 @@
+{
+  "resourceType" : "Goal",
+  "id" : "pcoGoalWalkDogExample",
+  "extension" : [{
+    "extension" : [{
+      "url" : "level",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "patient-gas-much-better-than-expected",
+        "display" : "Much better than expected"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "Walk my dog every day and visit with friends in the park"
+    }],
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+  },
+  {
+    "extension" : [{
+      "url" : "level",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "patient-gas-better-than-expected",
+        "display" : "Better than expected"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "Walk my dog every day"
+    }],
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+  },
+  {
+    "extension" : [{
+      "url" : "level",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "patient-gas-expected-outcome",
+        "display" : "Expected outcome"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "Walk my dog 5 times per week in the park"
+    }],
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+  },
+  {
+    "extension" : [{
+      "url" : "level",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "patient-gas-less-than-expected",
+        "display" : "Less than expected"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "Walk my dog less than 5 times per week or not in the park"
+    }],
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+  },
+  {
+    "extension" : [{
+      "url" : "level",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "patient-gas-much-less-than-expected",
+        "display" : "Much less than expected"
+      }
+    },
+    {
+      "url" : "text",
+      "valueString" : "Cannot walk my dog"
+    }],
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+  }],
+  "lifecycleStatus" : "active",
+  "achievementStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/goal-achievement",
+      "code" : "in-progress"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
+      "code" : "person-centered"
+    }]
+  }],
+  "description" : {
+    "text" : "Walk my dog 5 times per week in the park"
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientJones"
+  },
+  "startDate" : "2024-04-03",
+  "target" : [{
+    "dueDate" : "2024-09-30"
+  }],
+  "expressedBy" : {
+    "reference" : "Patient/pcoPatientJones"
+  }
+}

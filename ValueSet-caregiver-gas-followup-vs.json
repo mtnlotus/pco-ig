@@ -1,0 +1,56 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "caregiver-gas-followup-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet caregiver-gas-followup-vs</b></p><a name=\"caregiver-gas-followup-vs\"> </a><a name=\"hccaregiver-gas-followup-vs\"> </a><a name=\"caregiver-gas-followup-vs-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/caregiver-gas-much-better-than-expected/\">caregiver-gas-much-better-than-expected</a></td><td>Much better than expected</td></tr><tr><td><a href=\"https://loinc.org/caregiver-gas-better-than-expected/\">caregiver-gas-better-than-expected</a></td><td>Better than expected</td></tr><tr><td><a href=\"https://loinc.org/caregiver-gas-expected-outcome/\">caregiver-gas-expected-outcome</a></td><td>Expected outcome</td></tr><tr><td><a href=\"https://loinc.org/caregiver-gas-less-than-expected/\">caregiver-gas-less-than-expected</a></td><td>Less than expected</td></tr><tr><td><a href=\"https://loinc.org/caregiver-gas-much-less-than-expected/\">caregiver-gas-much-less-than-expected</a></td><td>Much less than expected</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
+  "version" : "0.1.0",
+  "name" : "CaregiverGASFollowupVS",
+  "title" : "Caregiver Follow-Up GAS Score",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-08-06T18:33:54+00:00",
+  "publisher" : "Mountain Lotus WellBeing LLC",
+  "contact" : [{
+    "name" : "Mountain Lotus WellBeing LLC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://mtnlotus.com"
+    }]
+  }],
+  "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "caregiver-gas-much-better-than-expected",
+        "display" : "Much better than expected"
+      },
+      {
+        "code" : "caregiver-gas-better-than-expected",
+        "display" : "Better than expected"
+      },
+      {
+        "code" : "caregiver-gas-expected-outcome",
+        "display" : "Expected outcome"
+      },
+      {
+        "code" : "caregiver-gas-less-than-expected",
+        "display" : "Less than expected"
+      },
+      {
+        "code" : "caregiver-gas-much-less-than-expected",
+        "display" : "Much less than expected"
+      }]
+    }]
+  }
+}

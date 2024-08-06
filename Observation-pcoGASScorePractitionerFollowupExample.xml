@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pcoGASScorePractitionerFollowupExample"/>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco"/>
+      <code value="person-centered"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="goal-attainment-scaling"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <focus>
+    <reference value="Goal/pcoGoalWalkDogExample"/>
+  </focus>
+  <effectiveDateTime value="2024-05-22T10:15:00Z"/>
+  <performer>
+    <reference value="Practitioner/pcoPractitionerGonzalez"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="practitioner-gas-expected-outcome"/>
+      <display value="Expected outcome"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

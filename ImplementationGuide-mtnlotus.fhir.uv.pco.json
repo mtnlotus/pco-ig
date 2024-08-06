@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-08-03T16:38:13+00:00",
+  "date" : "2024-08-06T18:33:54+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -790,13 +790,62 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "Library/ExtensionAndSlicingExample"
+        "reference" : "ValueSet/caregiver-gas-followup-vs"
       },
-      "name" : "ExtensionAndSlicingExample",
+      "name" : "Caregiver Follow-Up GAS Score",
+      "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-caregiver-gas-score"
+      },
+      "name" : "Caregiver Goal Attainment Scaling (GAS) score",
+      "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pco"
+      },
+      "name" : "Codes for PCO",
+      "description" : "Codes to identify content associated with this IG",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/pcoPatientJones"
+      },
+      "name" : "Example Patient",
+      "description" : "Dorothy Jones",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/pcoPractitionerGonzalez"
+      },
+      "name" : "Example Practitioner",
+      "description" : "Maria Gonzalez",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -815,20 +864,105 @@
         "valueString" : "Questionnaire"
       }],
       "reference" : {
-        "reference" : "Questionnaire/phq-9-questionnaire"
+        "reference" : "Questionnaire/69737-5"
       },
-      "name" : "Patient Health Questionnaire (PHQ-9)",
+      "name" : "Generalized anxiety disorder 7 item",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Library"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "Library/PHQ9LogicExample"
+        "reference" : "StructureDefinition/pco-goal-attainment-scaling"
       },
-      "name" : "PHQ9LogicExample",
+      "name" : "Goal Attainment Scaling",
+      "description" : "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      }],
+      "reference" : {
+        "reference" : "Goal/pcoGoalWalkDogExample"
+      },
+      "name" : "Goal with GAS",
+      "description" : "Person-centered goal with attainment scaling extensions",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      }],
+      "reference" : {
+        "reference" : "Goal/pcoGoalPainLevelExample"
+      },
+      "name" : "Goal without GAS",
+      "description" : "Person-centered goal without attainment scaling",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/patient-gas-followup-vs"
+      },
+      "name" : "Patient Follow-Up GAS Score",
+      "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoGASScorePatientBaselineExample"
+      },
+      "name" : "Patient GAS Baseline Score",
+      "description" : "Baseline GAS score observation recorded by a Patient at start of goal.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoGASScorePatientFollowupExample"
+      },
+      "name" : "Patient GAS Follow-up Score",
+      "description" : "Follow-up GAS score observation recorded by a Patient showing goal progress.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-patient-gas-score"
+      },
+      "name" : "Patient Goal Attainment Scaling (GAS) score",
+      "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-goal"
+      },
+      "name" : "Person-Centered Goal",
+      "description" : "Person-centered goal with goal attainment scaling.",
       "exampleBoolean" : false
     },
     {
@@ -837,10 +971,21 @@
         "valueString" : "Measure"
       }],
       "reference" : {
-        "reference" : "Measure/QuestionnaireMeasureExample"
+        "reference" : "Measure/PHQ9MeasureExample"
       },
-      "name" : "Questionnaire Measure Example",
+      "name" : "PHQ-9 Measure Example",
       "description" : "Example measure illustrating a continuous variable measure calculating scores from multiple questionnaires",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/44249-1"
+      },
+      "name" : "PHQ-9 quick depression assessment panel",
       "exampleBoolean" : false
     },
     {
@@ -849,9 +994,56 @@
         "valueString" : "Library"
       }],
       "reference" : {
-        "reference" : "Library/QuestionnaireMeasureExample"
+        "reference" : "Library/PHQ9MeasureExample"
       },
-      "name" : "QuestionnaireMeasureExample",
+      "name" : "PHQ9MeasureExample",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/PHQ9ScoreLogic"
+      },
+      "name" : "PHQ9ScoreLogic",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/practitioner-gas-followup-vs"
+      },
+      "name" : "Practitioner Follow-Up GAS Score",
+      "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoGASScorePractitionerFollowupExample"
+      },
+      "name" : "Practitioner GAS Follow-up Score",
+      "description" : "Follow-up GAS score observation recorded by a Practitioner showing goal progress.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-practitioner-gas-score"
+      },
+      "name" : "Practitioner Goal Attainment Scaling (GAS) score",
+      "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
       "exampleBoolean" : false
     }],
     "page" : {

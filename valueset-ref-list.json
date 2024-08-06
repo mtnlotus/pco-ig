@@ -1,3 +1,41 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [
+    {
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CaregiverGASFollowupVS",
+      "title" : "Caregiver Follow-Up GAS Score",
+      "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PatientGASFollowupVS",
+      "title" : "Patient Follow-Up GAS Score",
+      "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PractitionerGASFollowupVS",
+      "title" : "Practitioner Follow-Up GAS Score",
+      "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
+    }
+  ]
 }

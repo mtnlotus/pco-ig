@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 56, warn = 9, info = 1-->
+<!-- broken links = 0, errors = 99, warn = 36, info = 3-->
 <head>
   <title>PCO : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,9 +36,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for PCO</h1>
- <p>Generated Sat Aug 03 16:39:00 UTC 2024, FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = <a href="http://mtnlotus.com/uv/pco">http://mtnlotus.com/uv/pco</a> (<a href="http://mtnlotus.com/uv/pco/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Tue Aug 06 18:35:18 UTC 2024, FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = <a href="http://mtnlotus.com/uv/pco">http://mtnlotus.com/uv/pco</a> (<a href="http://mtnlotus.com/uv/pco/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.18</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.19</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = mtnlotus.fhir.uv.pco, Canonical = http://mtnlotus.com/uv/pco</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Publication Request:</td><td><ul><li>Error fetching package-list from http://mtnlotus.com/uv/pco: Not Found <img src="icon-error.gif" height="16px" width="16px"/></li>
@@ -70,17 +70,51 @@
  <tr><td>Draft Dependencies:</td><td><ul>
   <li>
 hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
- (17 uses),     <a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a>
- (1 uses),     <a href="http://hl7.org/fhir/R4/cqf-questionnaire.html">CQF-Questionnaire</a>
+ (17 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/devicerequest.html">DeviceRequest</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/immunizationrecommendation.html">ImmunizationRecommendation</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/nutritionorder.html">NutritionOrder</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/medicationdispense.html">MedicationDispense</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/imagingstudy.html">ImagingStudy</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-category.html">ObservationCategoryCodes</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-body-site.html">SNOMEDCTBodyStructures</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-methods.html">ObservationMethods</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/devicemetric.html">DeviceMetric</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-referencerange-meaning.html">ObservationReferenceRangeMeaningCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html">ObservationReferenceRangeAppliesToCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/molecularsequence.html">MolecularSequence</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/media.html">Media</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-codes.html">LOINCCodes</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-goal-status.html">GoalLifecycleStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-goal-achievement.html">GoalAchievementStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-goal-category.html">GoalCategory</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-goal-priority.html">GoalPriority</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-goal-start-event.html">GoalStartEvent</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/goal.html">Goal</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/riskassessment.html">RiskAssessment</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMEDCTClinicalFindings</a>
  (1 uses)
   </li>
   <li>
-hl7.fhir.uv.extensions.r4#5.1.0:     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-cqf-cqlOptions.html">CQFCQLOptions</a>
- (4 uses)
+hl7.fhir.uv.extensions.r4#5.1.0:     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-elementdefinition-type-must-support.html">TypeMustSupport</a>
+ (59 uses),     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-cqf-cqlOptions.html">CQFCQLOptions</a>
+ (3 uses)
   </li>
   <li>
 hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureDefinition-resource-sort.html">ResourceSortExt</a>
- (6 uses)
+ (22 uses)
   </li>
 </ul>
 </td></tr>
@@ -88,35 +122,83 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://mtnlotus.com/uv/pco (Problem #1 with package-list.json at http://mtnlotus.com/uv/pco: Not Found)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 56, warn = 9, info = 1, broken links = 0</td></tr>
+<tr><td>Narratives Suppressed</td><td><a href="Goal-pcoGoalPainLevelExample.html">Goal/pcoGoalPainLevelExample</a>, <a href="Goal-pcoGoalWalkDogExample.html">Goal/pcoGoalWalkDogExample</a>, <a href="Observation-pcoGASScorePatientBaselineExample.html">Observation/pcoGASScorePatientBaselineExample</a>, <a href="Observation-pcoGASScorePatientFollowupExample.html">Observation/pcoGASScorePatientFollowupExample</a>, <a href="Observation-pcoGASScorePractitionerFollowupExample.html">Observation/pcoGASScorePractitionerFollowupExample</a>, <a href="Patient-pcoPatientJones.html">Patient/pcoPatientJones</a> <tr><td>Summary:</td><td> errors = 99, warn = 36, info = 3, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>8</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>13</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalPainLevelExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalPainLevelExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalWalkDogExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExample</b></a></td><td><b>10</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ImplementationGuide-mtnlotus.fhir.uv.pco"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ImplementationGuide-mtnlotus.fhir.uv.pco</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_ExtensionAndSlicingExample"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/ExtensionAndSlicingExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientBaselineExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientBaselineExample</b></a></td><td><b>3</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientFollowupExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample</b></a></td><td><b>3</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample</b></a></td><td><b>3</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Patient-pcoPatientJones"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientJones</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Practitioner-pcoPractitionerGonzalez"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerGonzalez</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-caregiver-gas-score"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-caregiver-gas-score</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal-attainment-scaling"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-patient-gas-score"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-patient-gas-score</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-practitioner-gas-score"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-practitioner-gas-score</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-caregiver-gas-followup-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-caregiver-gas-followup-vs</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-patient-gas-followup-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-patient-gas-followup-vs</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-practitioner-gas-followup-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-practitioner-gas-followup-vs</b></a></td><td><b>0</b></td><td><b>5</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_FHIRHelpers"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers</b></a></td><td><b>6</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_PHQ9LogicExample"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/PHQ9LogicExample</b></a></td><td><b>4</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_PHQ9MeasureExample"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/PHQ9MeasureExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_QuestionnaireMeasureExample"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/QuestionnaireMeasureExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_PHQ9ScoreLogic"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/PHQ9ScoreLogic</b></a></td><td><b>4</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-QuestionnaireMeasureExample"><b>/home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-QuestionnaireMeasureExample</b></a></td><td><b>38</b></td><td><b>1</b></td><td><b>1</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-PHQ9MeasureExample"><b>/home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-PHQ9MeasureExample</b></a></td><td><b>36</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-phq-9-questionnaire"><b>/home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-phq-9-questionnaire</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-GAD7"><b>/home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7</b></a></td><td><b>10</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-PHQ9"><b>/home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9</b></a></td><td><b>13</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -125,19 +207,34 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
  <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/ExtensionAndSlicingExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PHQ9LogicExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PHQ9MeasureExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/QuestionnaireMeasureExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PHQ9ScoreLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/phq-9-questionnaire.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/69737-5.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/StructureDefinition-pco-caregiver-gas-score&#8203;.html</b></td><td><b>warning</b></td><td title=""><b>The html source has duplicate anchor Ids: Observation,Observation.basedOn,Observation.bodySite,Observation.category,Observation.category.2,Observation.category.3,Observation.category.4,Observation.code,Observation.component,Observation.component.code,Observation.component.dataAbsentReason,Observation.component.extension,Observation.component.id,Observation.component.interpretation,Observation.component.modifierExtension,Observation.component.referenceRange,Observation.component.value_x_,Observation.contained,Observation.dataAbsentReason,Observation.derivedFrom,Observation.device,Observation.effective_x_,Observation.effective_x_.2,Observation.encounter,Observation.extension,Observation.focus,Observation.hasMember,Observation.id,Observation.identifier,Observation.implicitRules,Observation.interpretation,Observation.issued,Observation.language,Observation.meta,Observation.method,Observation.modifierExtension,Observation.note,Observation.partOf,Observation.performer,Observation.referenceRange,Observation.referenceRange.age,Observation.referenceRange.appliesTo,Observation.referenceRange.extension,Observation.referenceRange.high,Observation.referenceRange.id,Observation.referenceRange.low,Observation.referenceRange.modifierExtension,Observation.referenceRange.text,Observation.referenceRange.type,Observation.specimen,Observation.status,Observation.subject,Observation.text,Observation.value_x_,d-Observation,d-Observation.category,d-Observation.category.2,d-Observation.category.3,d-Observation.code,d-Observation.effective_x_,d-Observation.effective_x_.2,d-Observation.focus,d-Observation.performer,d-Observation.value_x_,inv,k-Observation,k-Observation.category,k-Observation.category.2,k-Observation.category.3,k-Observation.category.4,k-Observation.code,k-Observation.dataAbsentReason,k-Observation.derivedFrom,k-Observation.effective_x_,k-Observation.effective_x_.2,k-Observation.focus,k-Observation.hasMember,k-Observation.implicitRules,k-Observation.modifierExtension,k-Observation.performer,k-Observation.status,k-Observation.subject,k-Observation.value_x_,s-summary</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/StructureDefinition-pco-goal-attainment-scaling&#8203;.html</b></td><td><b>warning</b></td><td title=""><b>The html source has duplicate anchor Ids: Extension,Extension.extension,Extension.extension.2,Extension.extension.3,Extension.extension.extension,Extension.extension.extension.2,Extension.extension.id,Extension.extension.id.2,Extension.extension.url,Extension.extension.url.2,Extension.extension.value_x_,Extension.extension.value_x_.2,Extension.id,Extension.url,d-Extension,d-Extension.extension,d-Extension.extension.2,d-Extension.extension.3,d-Extension.extension.4,d-Extension.extension.5,d-Extension.extension.extension,d-Extension.extension.extension.2,d-Extension.extension.url,d-Extension.extension.url.2,d-Extension.extension.value_x_,d-Extension.extension.value_x_.2,d-Extension.url,d-Extension.value_x_,s-summary</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/StructureDefinition-pco-goal&#8203;.html</b></td><td><b>warning</b></td><td title=""><b>The html source has duplicate anchor Ids: Goal,Goal.achievementStatus,Goal.addresses,Goal.category,Goal.category.2,Goal.contained,Goal.description,Goal.expressedBy,Goal.extension,Goal.extension.2,Goal.id,Goal.identifier,Goal.implicitRules,Goal.language,Goal.lifecycleStatus,Goal.meta,Goal.modifierExtension,Goal.note,Goal.outcomeCode,Goal.outcomeReference,Goal.priority,Goal.start_x_,Goal.start_x_.2,Goal.statusDate,Goal.statusReason,Goal.subject,Goal.target,Goal.target.detail_x_,Goal.target.due_x_,Goal.target.extension,Goal.target.id,Goal.target.measure,Goal.target.modifierExtension,Goal.text,d-Goal,d-Goal.category,d-Goal.category.2,d-Goal.expressedBy,d-Goal.extension,d-Goal.extension.2,d-Goal.start_x_,d-Goal.start_x_.2,inv,k-Goal,k-Goal.category,k-Goal.category.2,k-Goal.description,k-Goal.expressedBy,k-Goal.extension,k-Goal.extension.2,k-Goal.implicitRules,k-Goal.lifecycleStatus,k-Goal.modifierExtension,k-Goal.start_x_,k-Goal.start_x_.2,k-Goal.subject,k-Goal.target,k-Goal.target.due_x_,k-Goal.target.modifierExtension,s-summary</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/StructureDefinition-pco-patient-gas-score&#8203;.html</b></td><td><b>warning</b></td><td title=""><b>The html source has duplicate anchor Ids: Observation,Observation.basedOn,Observation.bodySite,Observation.category,Observation.category.2,Observation.category.3,Observation.category.4,Observation.code,Observation.component,Observation.component.code,Observation.component.dataAbsentReason,Observation.component.extension,Observation.component.id,Observation.component.interpretation,Observation.component.modifierExtension,Observation.component.referenceRange,Observation.component.value_x_,Observation.contained,Observation.dataAbsentReason,Observation.derivedFrom,Observation.device,Observation.effective_x_,Observation.effective_x_.2,Observation.encounter,Observation.extension,Observation.focus,Observation.hasMember,Observation.id,Observation.identifier,Observation.implicitRules,Observation.interpretation,Observation.issued,Observation.language,Observation.meta,Observation.method,Observation.modifierExtension,Observation.note,Observation.partOf,Observation.performer,Observation.referenceRange,Observation.referenceRange.age,Observation.referenceRange.appliesTo,Observation.referenceRange.extension,Observation.referenceRange.high,Observation.referenceRange.id,Observation.referenceRange.low,Observation.referenceRange.modifierExtension,Observation.referenceRange.text,Observation.referenceRange.type,Observation.specimen,Observation.status,Observation.subject,Observation.text,Observation.value_x_,d-Observation,d-Observation.category,d-Observation.category.2,d-Observation.category.3,d-Observation.code,d-Observation.effective_x_,d-Observation.effective_x_.2,d-Observation.focus,d-Observation.performer,d-Observation.value_x_,inv,k-Observation,k-Observation.category,k-Observation.category.2,k-Observation.category.3,k-Observation.category.4,k-Observation.code,k-Observation.dataAbsentReason,k-Observation.derivedFrom,k-Observation.effective_x_,k-Observation.effective_x_.2,k-Observation.focus,k-Observation.hasMember,k-Observation.implicitRules,k-Observation.modifierExtension,k-Observation.performer,k-Observation.status,k-Observation.subject,k-Observation.value_x_,s-summary</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>output&#8203;/StructureDefinition-pco-practitioner-gas-score&#8203;.html</b></td><td><b>warning</b></td><td title=""><b>The html source has duplicate anchor Ids: Observation,Observation.basedOn,Observation.bodySite,Observation.category,Observation.category.2,Observation.category.3,Observation.category.4,Observation.code,Observation.component,Observation.component.code,Observation.component.dataAbsentReason,Observation.component.extension,Observation.component.id,Observation.component.interpretation,Observation.component.modifierExtension,Observation.component.referenceRange,Observation.component.value_x_,Observation.contained,Observation.dataAbsentReason,Observation.derivedFrom,Observation.device,Observation.effective_x_,Observation.effective_x_.2,Observation.encounter,Observation.extension,Observation.focus,Observation.hasMember,Observation.id,Observation.identifier,Observation.implicitRules,Observation.interpretation,Observation.issued,Observation.language,Observation.meta,Observation.method,Observation.modifierExtension,Observation.note,Observation.partOf,Observation.performer,Observation.referenceRange,Observation.referenceRange.age,Observation.referenceRange.appliesTo,Observation.referenceRange.extension,Observation.referenceRange.high,Observation.referenceRange.id,Observation.referenceRange.low,Observation.referenceRange.modifierExtension,Observation.referenceRange.text,Observation.referenceRange.type,Observation.specimen,Observation.status,Observation.subject,Observation.text,Observation.value_x_,d-Observation,d-Observation.category,d-Observation.category.2,d-Observation.category.3,d-Observation.code,d-Observation.effective_x_,d-Observation.effective_x_.2,d-Observation.focus,d-Observation.performer,d-Observation.value_x_,inv,k-Observation,k-Observation.category,k-Observation.category.2,k-Observation.category.3,k-Observation.category.4,k-Observation.code,k-Observation.dataAbsentReason,k-Observation.derivedFrom,k-Observation.effective_x_,k-Observation.effective_x_.2,k-Observation.focus,k-Observation.hasMember,k-Observation.implicitRules,k-Observation.modifierExtension,k-Observation.performer,k-Observation.status,k-Observation.subject,k-Observation.value_x_,s-summary</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>1</b></td><td><b>warning</b></td><td title=""><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b></td>
@@ -150,9 +247,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ImplementationGuide-mtnlotus.fhir.uv.pco"> </a>
-<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-mtnlotus.fhir.uv.pco.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>ImplementationGuide/mtnlotus.fhir.uv.pco: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco"> </a>
+<h2><a href="CodeSystem-pco.html">fsh-generated/resources/CodeSystem-pco.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -160,28 +257,325 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_ExtensionAndSlicingExample"> </a>
-<h2><a href="Library-ExtensionAndSlicingExample.html">input/resources/library/ExtensionAndSlicingExample.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalPainLevelExample"> </a>
+<h2><a href="Goal-pcoGoalPainLevelExample.html">fsh-generated/resources/Goal-pcoGoalPainLevelExample.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal.html">Person-Centered Goal</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Goal (l1/c2)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalWalkDogExample"> </a>
+<h2><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal.html">Person-Centered Goal</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library.extension[1] (l1/c1120)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><b>Goal&#8203;.extension[0]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l17&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l61">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library.extension[1].url (l1/c1067)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><b>Goal&#8203;.extension[0]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l17&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#patient-gas-much-better-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-much-better-than-expected ('Much better than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#"></ta>, see <a href="qa-tx.html#l62">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c1119)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><b>Goal&#8203;.extension[1]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l34&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l63">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[1]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l34&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#patient-gas-better-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-better-than-expected ('Better than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#"></ta>, see <a href="qa-tx.html#l64">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[2]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l51&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l65">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[2]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l51&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#patient-gas-expected-outcome) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-expected-outcome ('Expected outcome')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#"></ta>, see <a href="qa-tx.html#l66">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l68&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l67">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l68&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#patient-gas-less-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-less-than-expected ('Less than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#"></ta>, see <a href="qa-tx.html#l68">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l85&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l69">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l85&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#patient-gas-much-less-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#"></ta>, see <a href="qa-tx.html#l70">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Goal (l1/c2)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ImplementationGuide-mtnlotus.fhir.uv.pco"> </a>
+<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-mtnlotus.fhir.uv.pco.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>ImplementationGuide/mtnlotus.fhir.uv.pco: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientBaselineExample"> </a>
+<h2><a href="Observation-pcoGASScorePatientBaselineExample.html">fsh-generated/resources/Observation-pcoGASScorePatientBaselineExample.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-patient-gas-score.html">Patient Goal Attainment Scaling (GAS) score</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l32&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l45&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l45&#8203;/c4)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a coding from this value set is required) (codes = http://loinc.org#patient-gas-less-than-expected)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Observation (l1/c2)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientFollowupExample"> </a>
+<h2><a href="Observation-pcoGASScorePatientFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-patient-gas-score.html">Patient Goal Attainment Scaling (GAS) score</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l32&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l45&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'patient-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l45&#8203;/c4)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a coding from this value set is required) (codes = http://loinc.org#patient-gas-better-than-expected)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Observation (l1/c2)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"> </a>
+<h2><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-practitioner-gas-score.html">Practitioner Goal Attainment Scaling (GAS) score</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l32&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l45&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'practitioner-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l45&#8203;/c4)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Practitioner Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs|0.1.0), and a coding from this value set is required) (codes = http://loinc.org#practitioner-gas-expected-outcome)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Observation (l1/c2)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Patient-pcoPatientJones"> </a>
+<h2><a href="Patient-pcoPatientJones.html">fsh-generated/resources/Patient-pcoPatientJones.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Patient (l1/c2)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Practitioner-pcoPractitionerGonzalez"> </a>
+<h2><a href="Practitioner-pcoPractitionerGonzalez.html">fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>Practitioner: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-caregiver-gas-score"> </a>
+<h2><a href="StructureDefinition-pco-caregiver-gas-score.html">fsh-generated/resources/StructureDefinition-pco-caregiver-gas-score.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[17]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c64717)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[3]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c123577)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/mtnlotus&#8203;.com&#8203;/uv&#8203;/pco&#8203;/StructureDefinition&#8203;/pco-caregiver-gas-score')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal"> </a>
+<h2><a href="StructureDefinition-pco-goal.html">fsh-generated/resources/StructureDefinition-pco-goal.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[18]</b></td><td><b>error</b></td><td title="SD_ILLEGAL_CHARACTERISTICS"><b>This element has a Binding but the types [date] do not make this kind of constraint relevant</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[18]&#8203;.binding</b></td><td><b>error</b></td><td title="SD_ED_BIND_NO_BINDABLE"><b>The element Goal.start[x] has a binding, but no bindable types are present [date]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal-attainment-scaling"> </a>
+<h2><a href="StructureDefinition-pco-goal-attainment-scaling.html">fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-patient-gas-score"> </a>
+<h2><a href="StructureDefinition-pco-patient-gas-score.html">fsh-generated/resources/StructureDefinition-pco-patient-gas-score.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[17]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c64628)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[3]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c123480)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-practitioner-gas-score"> </a>
+<h2><a href="StructureDefinition-pco-practitioner-gas-score.html">fsh-generated/resources/StructureDefinition-pco-practitioner-gas-score.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[17]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c64752)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[3]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c123614)</b></td><td><b>error</b></td><td><b>Unknown code 'goal-attainment-scaling' in the CodeSystem 'http://loinc.org' version '2.77'</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-caregiver-gas-followup-vs"> </a>
+<h2><a href="ValueSet-caregiver-gas-followup-vs.html">fsh-generated/resources/ValueSet-caregiver-gas-followup-vs.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2184)</b></td><td><b>warning</b></td><td title=""><b>The code 'caregiver-gas-much-better-than-expected' is not valid in the system http://loinc.org (Unknown code 'caregiver-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2184)</b></td><td><b>information</b></td><td title="Unknown code 'caregiver-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'"><b>Unknown code 'caregiver-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td title=""><b>The code 'caregiver-gas-better-than-expected' is not valid in the system http://loinc.org (Unknown code 'caregiver-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td title=""><b>The code 'caregiver-gas-expected-outcome' is not valid in the system http://loinc.org (Unknown code 'caregiver-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code 'caregiver-gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'caregiver-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td title=""><b>The code 'caregiver-gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'caregiver-gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-patient-gas-followup-vs"> </a>
+<h2><a href="ValueSet-patient-gas-followup-vs.html">fsh-generated/resources/ValueSet-patient-gas-followup-vs.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2109)</b></td><td><b>warning</b></td><td title=""><b>The code 'patient-gas-much-better-than-expected' is not valid in the system http://loinc.org (Unknown code 'patient-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2109)</b></td><td><b>information</b></td><td title="Unknown code 'patient-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'"><b>Unknown code 'patient-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td title=""><b>The code 'patient-gas-better-than-expected' is not valid in the system http://loinc.org (Unknown code 'patient-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td title=""><b>The code 'patient-gas-expected-outcome' is not valid in the system http://loinc.org (Unknown code 'patient-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code 'patient-gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'patient-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td title=""><b>The code 'patient-gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'patient-gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-practitioner-gas-followup-vs"> </a>
+<h2><a href="ValueSet-practitioner-gas-followup-vs.html">fsh-generated/resources/ValueSet-practitioner-gas-followup-vs.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2218)</b></td><td><b>warning</b></td><td title=""><b>The code 'practitioner-gas-much-better-than-expected' is not valid in the system http://loinc.org (Unknown code 'practitioner-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2218)</b></td><td><b>information</b></td><td title="Unknown code 'practitioner-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'"><b>Unknown code 'practitioner-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td title=""><b>The code 'practitioner-gas-better-than-expected' is not valid in the system http://loinc.org (Unknown code 'practitioner-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td title=""><b>The code 'practitioner-gas-expected-outcome' is not valid in the system http://loinc.org (Unknown code 'practitioner-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code 'practitioner-gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'practitioner-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td title=""><b>The code 'practitioner-gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'practitioner-gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77')</b></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_FHIRHelpers"> </a>
-<h2><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -207,190 +601,254 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_PHQ9LogicExample"> </a>
-<h2><a href="Library-PHQ9LogicExample.html">input/resources/library/PHQ9LogicExample.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_PHQ9MeasureExample"> </a>
+<h2><a href="Library-PHQ9MeasureExample.html">input/resources/library/PHQ9MeasureExample.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library.extension[1] (l1/c1110)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><b>Library.extension[1] (l1/c1112)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library.extension[1].url (l1/c1057)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><b>Library.extension[1].url (l1/c1059)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c1109)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Library.parameter[4] (l1/c2403)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ParameterDefinition.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ParameterDefinition|4.0.1)</b></td>
+     <td><b>Library&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c1111)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_QuestionnaireMeasureExample"> </a>
-<h2><a href="Library-QuestionnaireMeasureExample.html">input/resources/library/QuestionnaireMeasureExample.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_PHQ9ScoreLogic"> </a>
+<h2><a href="Library-PHQ9ScoreLogic.html">input/resources/library/PHQ9ScoreLogic.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library.extension[1] (l1/c1121)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><b>Library.extension[1] (l1/c1108)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library.extension[1].url (l1/c1068)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><b>Library.extension[1].url (l1/c1055)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Library&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c1120)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><b>Library&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c1107)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Library.parameter[4] (l1/c2397)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ParameterDefinition.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ParameterDefinition|4.0.1)</b></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-QuestionnaireMeasureExample"> </a>
-<h2><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/measure.html">Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-PHQ9MeasureExample"> </a>
+<h2><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/measure.html">Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.where(url = 'http:&#8203;/&#8203;/somewhere&#8203;.org&#8203;/fhir&#8203;/uv&#8203;/mycontentig&#8203;/Measure&#8203;/QuestionnaireMeasureExample')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-QuestionnaireMeasureExample.json - the canonical URL (http://mtnlotus.com/uv/pco/Measure/QuestionnaireMeasureExample) does not match the URL (http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample)</b></td>
+     <td><b>Measure.meta.profile[0] (l1/c152)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.meta.profile[0] (l1/c161)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0] (l1&#8203;/c393)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0] (l1&#8203;/c402)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.url (l1&#8203;/c330)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.url (l1&#8203;/c339)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1] (l1&#8203;/c545)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1] (l1&#8203;/c554)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1]&#8203;.url (l1&#8203;/c482)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1]&#8203;.url (l1&#8203;/c491)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2] (l1&#8203;/c697)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2] (l1&#8203;/c706)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2]&#8203;.url (l1&#8203;/c634)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2]&#8203;.url (l1&#8203;/c643)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3] (l1&#8203;/c849)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3] (l1&#8203;/c858)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3]&#8203;.url (l1&#8203;/c786)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3]&#8203;.url (l1&#8203;/c795)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4] (l1&#8203;/c1499)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4] (l1&#8203;/c1558)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4]&#8203;.url (l1&#8203;/c1498)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4]&#8203;.url (l1&#8203;/c1557)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5] (l1&#8203;/c2486)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5] (l1&#8203;/c2434)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5]&#8203;.url (l1&#8203;/c2485)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5]&#8203;.url (l1&#8203;/c2433)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6] (l1&#8203;/c2877)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6] (l1&#8203;/c2827)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6]&#8203;.url (l1&#8203;/c2876)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6]&#8203;.url (l1&#8203;/c2826)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7] (l1&#8203;/c3249)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7] (l1&#8203;/c3208)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7]&#8203;.url (l1&#8203;/c3248)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7]&#8203;.url (l1&#8203;/c3207)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8] (l1&#8203;/c3664)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8] (l1&#8203;/c3632)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8]&#8203;.url (l1&#8203;/c3663)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8]&#8203;.url (l1&#8203;/c3631)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9] (l1&#8203;/c4457)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9] (l1&#8203;/c4434)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9]&#8203;.url (l1&#8203;/c4456)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9]&#8203;.url (l1&#8203;/c4433)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10] (l1&#8203;/c4778)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10] (l1&#8203;/c4755)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10]&#8203;.url (l1&#8203;/c4777)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10]&#8203;.url (l1&#8203;/c4754)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11] (l1&#8203;/c5415)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11] (l1&#8203;/c5394)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11]&#8203;.url (l1&#8203;/c5414)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11]&#8203;.url (l1&#8203;/c5393)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12] (l1&#8203;/c5971)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12] (l1&#8203;/c5950)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12]&#8203;.url (l1&#8203;/c5970)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12]&#8203;.url (l1&#8203;/c5949)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure.extension[0] (l1/c6969)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[0] (l1/c6957)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><b>Measure.extension[0].url (l1/c6916)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[0].url (l1/c6904)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><b>Measure&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c6968)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c6956)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><b>Measure.extension[1] (l1/c7162)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[1] (l1/c7150)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
+     <td><b>Measure.extension[1].url (l1/c7099)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[1].url (l1/c7087)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[0] (l1&#8203;/c8983)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[0] (l1&#8203;/c9034)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[0]&#8203;.url (l1&#8203;/c8960)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[0]&#8203;.url (l1&#8203;/c9011)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[1] (l1&#8203;/c9124)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[1] (l1&#8203;/c9175)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference could not be found so is not allowed here</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[1]&#8203;.url (l1&#8203;/c9121)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference' does not resolve</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Measure (l1/c7891)</b></td><td><b>information</b></td><td title="MEASURE_M_LIB_UNKNOWN"><b>The Library http://somewhere.org/fhir/uv/mycontentig/Library/QuestionnaireMeasureExample could not be resolved, so expression validation may not be correct</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.population[2]&#8203;.extension[1]&#8203;.url (l1&#8203;/c9070)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.meta.profile[0] (l1/c9412)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>input&#8203;/resources&#8203;/measure&#8203;/Measure-QuestionnaireMeasureExample</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://mtnlotus.com/uv/pco/Measure/QuestionnaireMeasureExample vs http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample</b></td>
+     <td><b>Measure.meta.profile[0] (l1/c9361)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-phq-9-questionnaire"> </a>
-<h2><a href="Questionnaire-phq-9-questionnaire.html">input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/cqf-questionnaire.html">CQF-Questionnaire</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-GAD7"> </a>
+<h2><a href="Questionnaire-69737-5.html">input/resources/questionnaire/Questionnaire-GAD7.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Questionnaire&#8203;.where(url = 'http:&#8203;/&#8203;/somewhere&#8203;.org&#8203;/fhir&#8203;/uv&#8203;/mycontentig&#8203;/Questionnaire&#8203;/phq-9-questionnaire')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/phq-9-questionnaire) does not match the URL (http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire)</b></td>
+     <td><b>Questionnaire&#8203;.where(url = 'http:&#8203;/&#8203;/loinc&#8203;.org&#8203;/q&#8203;/69737-5')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/69737-5) does not match the URL (http://loinc.org/q/69737-5)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>input&#8203;/resources&#8203;/questionnaire&#8203;/Questionnaire-phq-9-questionnaire</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://mtnlotus.com/uv/pco/Questionnaire/phq-9-questionnaire vs http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire</b></td>
+     <td><b>Questionnaire&#8203;.code[0]&#8203;.display (l1&#8203;/c22040)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Generalized anxiety disorder 7 item' for http://loinc.org#69737-5. Valid display is 'Generalized anxiety disorder 7 item (GAD-7)' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l33">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[0]&#8203;.code[0]&#8203;.display (l1&#8203;/c22170)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Feeling nervous, anxious or on edge' for http://loinc.org#69725-0. Valid display is 'Feeling nervous, anxious or on edge in last 2 weeks' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l34">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[1]&#8203;.code[0]&#8203;.display (l1&#8203;/c22812)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Over the past 2 weeks have you not been able to stop or control worrying' for http://loinc.org#68509-9. Valid display is 'Not able to stop or control worrying in the last 2 weeks' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l39">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[2]&#8203;.code[0]&#8203;.display (l1&#8203;/c23455)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Worrying too much about different things' for http://loinc.org#69733-4. Valid display is 'Worrying too much about different things in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l41">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[3]&#8203;.code[0]&#8203;.display (l1&#8203;/c24046)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Trouble relaxing' for http://loinc.org#69734-2. Valid display is 'Trouble relaxing in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l42">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[4]&#8203;.code[0]&#8203;.display (l1&#8203;/c24643)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Being so restless that it is hard to sit still' for http://loinc.org#69735-9. Valid display is 'Being so restless that it is hard to sit still in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l43">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[5]&#8203;.code[0]&#8203;.display (l1&#8203;/c25284)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Becoming easily annoyed or irritable.' for http://loinc.org#69689-8. Valid display is 'Becoming easily annoyed or irritable in last 4 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l44">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[6]&#8203;.code[0]&#8203;.display (l1&#8203;/c25905)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Feeling afraid as if something awful might happen' for http://loinc.org#69736-7. Valid display is 'Feeling afraid as if something awful might happen in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l45">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>input&#8203;/resources&#8203;/questionnaire&#8203;/Questionnaire-GAD7</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://mtnlotus.com/uv/pco/Questionnaire/69737-5 vs http://loinc.org/q/69737-5</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-PHQ9"> </a>
+<h2><a href="Questionnaire-44249-1.html">input/resources/questionnaire/Questionnaire-PHQ9.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.where(url = 'http:&#8203;/&#8203;/loinc&#8203;.org&#8203;/q&#8203;/44249-1')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/44249-1) does not match the URL (http://loinc.org/q/44249-1)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.code[0]&#8203;.display (l1&#8203;/c28139)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'PHQ-9 quick depression assessment panel' for http://loinc.org#44249-1. Valid display is 'PHQ-9 quick depression assessment panel [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l46">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[0]&#8203;.code[0]&#8203;.display (l1&#8203;/c28277)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Little interest or pleasure in doing things' for http://loinc.org#44250-9. Valid display is 'Little interest or pleasure in doing things in last 2 weeks' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l47">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[1]&#8203;.code[0]&#8203;.display (l1&#8203;/c28907)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Feeling down, depressed, or hopeless' for http://loinc.org#44255-8. Valid display is 'Feeling down, depressed, or hopeless in last 2 weeks' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l48">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[2]&#8203;.code[0]&#8203;.display (l1&#8203;/c29549)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Trouble falling or staying asleep, or sleeping too much' for http://loinc.org#44259-0. Valid display is 'Trouble falling or staying asleep, or sleeping too much in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l49">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[3]&#8203;.code[0]&#8203;.display (l1&#8203;/c30173)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Feeling tired or having little energy' for http://loinc.org#44254-1. Valid display is 'Feeling tired or having little energy in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l50">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[4]&#8203;.code[0]&#8203;.display (l1&#8203;/c30769)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Poor appetite or overeating' for http://loinc.org#44251-7. Valid display is 'Poor appetite or overeating in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l51">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[5]&#8203;.code[0]&#8203;.display (l1&#8203;/c31421)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Feeling bad about yourself-or that you are a failure or have let yourself or your family down' for http://loinc.org#44258-2. Valid display is 'Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l52">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[6]&#8203;.code[0]&#8203;.display (l1&#8203;/c32131)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Trouble concentrating on things, such as reading the newspaper or watching television' for http://loinc.org#44252-5. Valid display is 'Trouble concentrating on things, such as reading the newspaper or watching television in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l53">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[7]&#8203;.code[0]&#8203;.display (l1&#8203;/c32914)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Moving or speaking so slowly that other people could have noticed. Or the opposite-being so fidgety or restless that you have been moving around a lot more than usual' for http://loinc.org#44253-3. Valid display is 'Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l54">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[8]&#8203;.code[0]&#8203;.display (l1&#8203;/c33690)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Thoughts that you would be better off dead, or of hurting yourself in some way' for http://loinc.org#44260-8. Valid display is 'Thoughts that you would be better off dead, or of hurting yourself in some way in last 2 weeks [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l55">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire&#8203;.item[9]&#8203;.code[0]&#8203;.display (l1&#8203;/c34411)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?' for http://loinc.org#69722-7. Valid display is 'How difficult have these made it for you to do your work, take care of things at home, or get along with other people [Reported.PHQ]' (en-US) (for the language(s) '--')</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>, see <a href="qa-tx.html#l56">log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>input&#8203;/resources&#8203;/questionnaire&#8203;/Questionnaire-PHQ9</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://mtnlotus.com/uv/pco/Questionnaire/44249-1 vs http://loinc.org/q/44249-1</b></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -402,75 +860,64 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>Extension_EXT_Unknown_NotHere</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-ExtensionAndSlicingExample.html">input/resources/library/ExtensionAndSlicingExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
      <td><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-PHQ9LogicExample.html">input/resources/library/PHQ9LogicExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><a href="Library-PHQ9MeasureExample.html">input/resources/library/PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-QuestionnaireMeasureExample.html">input/resources/library/QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><a href="Library-PHQ9ScoreLogic.html">input/resources/library/PHQ9ScoreLogic.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod could not be found so is not allowed here</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference could not be found so is not allowed here</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="MEASURE_M_LIB_UNKNOWN"> </a>
-<h2>MEASURE_M_LIB_UNKNOWN</h2>
- <table class="grid">
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>The Library http://somewhere.org/fhir/uv/mycontentig/Library/QuestionnaireMeasureExample could not be resolved, so expression validation may not be correct</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference could not be found so is not allowed here</b></td>
    </tr>
 </table>
 <hr/>
@@ -481,10 +928,10 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a></td><td><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers.json - the canonical URL (http://mtnlotus.com/uv/pco/Library/FHIRHelpers) does not match the URL (http://hl7.org/fhir/Library/FHIRHelpers)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-QuestionnaireMeasureExample.json - the canonical URL (http://mtnlotus.com/uv/pco/Measure/QuestionnaireMeasureExample) does not match the URL (http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample)</b></td>
+     <td><a href="Questionnaire-69737-5.html">input/resources/questionnaire/Questionnaire-GAD7.json</a></td><td><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/69737-5) does not match the URL (http://loinc.org/q/69737-5)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Questionnaire-phq-9-questionnaire.html">input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json</a></td><td><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/phq-9-questionnaire) does not match the URL (http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire)</b></td>
+     <td><a href="Questionnaire-44249-1.html">input/resources/questionnaire/Questionnaire-PHQ9.json</a></td><td><b>Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9.json - the canonical URL (http://mtnlotus.com/uv/pco/Questionnaire/44249-1) does not match the URL (http://loinc.org/q/44249-1)</b></td>
    </tr>
 </table>
 <hr/>
@@ -492,19 +939,32 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>Reference_REF_CantResolve</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-ExtensionAndSlicingExample.html">input/resources/library/ExtensionAndSlicingExample.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
      <td><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-PHQ9LogicExample.html">input/resources/library/PHQ9LogicExample.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><a href="Library-PHQ9MeasureExample.html">input/resources/library/PHQ9MeasureExample.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-QuestionnaireMeasureExample.html">input/resources/library/QuestionnaireMeasureExample.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><a href="Library-PHQ9ScoreLogic.html">input/resources/library/PHQ9ScoreLogic.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_ED_BIND_NO_BINDABLE"> </a>
+<h2>SD_ED_BIND_NO_BINDABLE</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-pco-goal.html">fsh-generated/resources/StructureDefinition-pco-goal.json</a></td><td><b>The element Goal.start[x] has a binding, but no bindable types are present [date]</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_ILLEGAL_CHARACTERISTICS"> </a>
+<h2>SD_ILLEGAL_CHARACTERISTICS</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-pco-goal.html">fsh-generated/resources/StructureDefinition-pco-goal.json</a></td><td><b>This element has a Binding but the types [date] do not make this kind of constraint relevant</b></td>
    </tr>
 </table>
 <hr/>
@@ -512,7 +972,41 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_Confirm_4a"> </a>
+<h2>Terminology_TX_Confirm_4a</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a></td><td><b>The code provided (http://loinc.org#patient-gas-much-better-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-much-better-than-expected ('Much better than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-much-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a></td><td><b>The code provided (http://loinc.org#patient-gas-better-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-better-than-expected ('Better than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-better-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a></td><td><b>The code provided (http://loinc.org#patient-gas-expected-outcome) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-expected-outcome ('Expected outcome')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-expected-outcome' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a></td><td><b>The code provided (http://loinc.org#patient-gas-less-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-less-than-expected ('Less than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a></td><td><b>The code provided (http://loinc.org#patient-gas-much-less-than-expected) was not found in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a code from this value set is required: The provided code 'http://loinc.org#patient-gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0'; Unknown code 'patient-gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.77'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_NoValid_1_CC"> </a>
+<h2>Terminology_TX_NoValid_1_CC</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-pcoGASScorePatientBaselineExample.html">fsh-generated/resources/Observation-pcoGASScorePatientBaselineExample.json</a></td><td><b>None of the codings provided are in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a coding from this value set is required) (codes = http://loinc.org#patient-gas-less-than-expected)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-pcoGASScorePatientFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json</a></td><td><b>None of the codings provided are in the value set 'Patient Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs|0.1.0), and a coding from this value set is required) (codes = http://loinc.org#patient-gas-better-than-expected)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a></td><td><b>None of the codings provided are in the value set 'Practitioner Follow-Up GAS Score' (http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs|0.1.0), and a coding from this value set is required) (codes = http://loinc.org#practitioner-gas-expected-outcome)</b></td>
    </tr>
 </table>
 <hr/>
@@ -520,67 +1014,64 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>Type_Specific_Checks_DT_URL_Resolve</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-ExtensionAndSlicingExample.html">input/resources/library/ExtensionAndSlicingExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
      <td><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-PHQ9LogicExample.html">input/resources/library/PHQ9LogicExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><a href="Library-PHQ9MeasureExample.html">input/resources/library/PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-QuestionnaireMeasureExample.html">input/resources/library/QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><a href="Library-PHQ9ScoreLogic.html">input/resources/library/PHQ9ScoreLogic.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference' does not resolve</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference' does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -596,7 +1087,7 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY</h2>
  <table class="grid">
    <tr style="background-color: #fff4ee">
-     <td><a href="Measure-QuestionnaireMeasureExample.html">input/resources/measure/Measure-QuestionnaireMeasureExample.json</a></td><td><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+     <td><a href="Measure-PHQ9MeasureExample.html">input/resources/measure/Measure-PHQ9MeasureExample.json</a></td><td><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
    </tr>
 </table>
 <hr/>
@@ -604,7 +1095,7 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>Validation_VAL_Profile_Minimum</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Library-PHQ9LogicExample.html">input/resources/library/PHQ9LogicExample.json</a></td><td><b>ParameterDefinition.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ParameterDefinition|4.0.1)</b></td>
+     <td><a href="Library-PHQ9ScoreLogic.html">input/resources/library/PHQ9ScoreLogic.json</a></td><td><b>ParameterDefinition.type: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ParameterDefinition|4.0.1)</b></td>
    </tr>
 </table>
 </body>

@@ -7,6 +7,27 @@
     "name" : "FHIRHelpers"
   },
   {
+    "id" : "44249-1",
+    "type" : "Questionnaire",
+    "url" : "http://loinc.org/q/44249-1",
+    "version" : "0.1.0",
+    "name" : "PHQ_quick_depression_assessment_panel"
+  },
+  {
+    "id" : "69737-5",
+    "type" : "Questionnaire",
+    "url" : "http://loinc.org/q/69737-5",
+    "version" : "0.1.0",
+    "name" : "Generalized_anxiety_disorder_item"
+  },
+  {
+    "id" : "pco",
+    "type" : "CodeSystem",
+    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
+    "version" : "0.1.0",
+    "name" : "PCOCodes"
+  },
+  {
     "id" : "mtnlotus.fhir.uv.pco",
     "type" : "ImplementationGuide",
     "url" : "http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco",
@@ -14,37 +35,80 @@
     "name" : "PCO"
   },
   {
-    "id" : "ExtensionAndSlicingExample",
+    "id" : "PHQ9MeasureExample",
     "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/ExtensionAndSlicingExample",
+    "url" : "http://mtnlotus.com/uv/pco/Library/PHQ9MeasureExample",
     "version" : "0.1.0",
-    "name" : "ExtensionAndSlicingExample"
+    "name" : "PHQ9MeasureExample"
   },
   {
-    "id" : "PHQ9LogicExample",
+    "id" : "PHQ9ScoreLogic",
     "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/PHQ9LogicExample",
+    "url" : "http://mtnlotus.com/uv/pco/Library/PHQ9ScoreLogic",
     "version" : "0.1.0",
-    "name" : "PHQ9LogicExample"
+    "name" : "PHQ9ScoreLogic"
   },
   {
-    "id" : "QuestionnaireMeasureExample",
-    "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/QuestionnaireMeasureExample",
-    "version" : "0.1.0",
-    "name" : "QuestionnaireMeasureExample"
-  },
-  {
-    "id" : "QuestionnaireMeasureExample",
+    "id" : "PHQ9MeasureExample",
     "type" : "Measure",
-    "url" : "http://somewhere.org/fhir/uv/mycontentig/Measure/QuestionnaireMeasureExample",
+    "url" : "http://mtnlotus.com/uv/pco/Measure/PHQ9MeasureExample",
     "version" : "0.1.0",
-    "name" : "QuestionnaireMeasureExample"
+    "name" : "PHQ9MeasureExample"
   },
   {
-    "id" : "phq-9-questionnaire",
-    "type" : "Questionnaire",
-    "url" : "http://somewhere.org/fhir/uv/mycontentig/Questionnaire/phq-9-questionnaire",
-    "version" : "0.1.0"
+    "id" : "pco-caregiver-gas-score",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-caregiver-gas-score",
+    "version" : "0.1.0",
+    "name" : "PCOCaregiverGASScore"
+  },
+  {
+    "id" : "pco-goal",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal",
+    "version" : "0.1.0",
+    "name" : "PCOGoal"
+  },
+  {
+    "id" : "pco-goal-attainment-scaling",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling",
+    "version" : "0.1.0",
+    "name" : "PCOGoalAttainmentScaling"
+  },
+  {
+    "id" : "pco-patient-gas-score",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score",
+    "version" : "0.1.0",
+    "name" : "PCOPatientGASScore"
+  },
+  {
+    "id" : "pco-practitioner-gas-score",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score",
+    "version" : "0.1.0",
+    "name" : "PCOPractitionerGASScore"
+  },
+  {
+    "id" : "caregiver-gas-followup-vs",
+    "type" : "ValueSet",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
+    "version" : "0.1.0",
+    "name" : "CaregiverGASFollowupVS"
+  },
+  {
+    "id" : "patient-gas-followup-vs",
+    "type" : "ValueSet",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
+    "version" : "0.1.0",
+    "name" : "PatientGASFollowupVS"
+  },
+  {
+    "id" : "practitioner-gas-followup-vs",
+    "type" : "ValueSet",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
+    "version" : "0.1.0",
+    "name" : "PractitionerGASFollowupVS"
   }
 ]

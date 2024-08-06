@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="pcoGoalPainLevelExample"/>
+  <lifecycleStatus value="active"/>
+  <achievementStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+      <code value="in-progress"/>
+    </coding>
+  </achievementStatus>
+  <category>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco"/>
+      <code value="person-centered"/>
+    </coding>
+  </category>
+  <description>
+    <text value="Maintain pain level below 5 while walking"/>
+  </description>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <startDate value="2024-02-15"/>
+  <target>
+    <dueDate value="2024-06-30"/>
+  </target>
+  <expressedBy>
+    <reference value="Patient/pcoPatientJones"/>
+  </expressedBy>
+</Goal>

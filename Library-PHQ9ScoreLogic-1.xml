@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.10.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="324">
+         <a:s>library PHQ9ScoreLogic version '0.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="PHQ9ScoreLogic" system="http://mtnlotus.com/uv/pco" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="207" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://mtnlotus.com/uv/pco/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="207">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="217" locator="14:1-14:40" name="response" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="217">
+               <a:s>parameter response </a:s>
+               <a:s r="218">
+                  <a:s>QuestionnaireResponse</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="218" locator="14:20-14:40" name="fhir:QuestionnaireResponse" xsi:type="NamedTypeSpecifier"/>
+      </def>
+   </parameters>
+   <codeSystems>
+      <def localId="208" locator="7:1-7:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <codes>
+      <def localId="209" locator="9:1-9:42" name="Not at all" id="LA6568-5" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="209">
+               <a:s>code &quot;Not at all&quot;: 'LA6568-5' from </a:s>
+               <a:s r="210">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="210" locator="9:36-9:42" name="LOINC"/>
+      </def>
+      <def localId="211" locator="10:1-10:44" name="Several days" id="LA6569-3" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="211">
+               <a:s>code &quot;Several days&quot;: 'LA6569-3' from </a:s>
+               <a:s r="212">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="212" locator="10:38-10:44" name="LOINC"/>
+      </def>
+      <def localId="213" locator="11:1-11:55" name="More than half the days" id="LA6570-1" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="213">
+               <a:s>code &quot;More than half the days&quot;: 'LA6570-1' from </a:s>
+               <a:s r="214">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="214" locator="11:49-11:55" name="LOINC"/>
+      </def>
+      <def localId="215" locator="12:1-12:48" name="Nearly every day" id="LA6571-9" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="215">
+               <a:s>code &quot;Nearly every day&quot;: 'LA6571-9' from </a:s>
+               <a:s r="216">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="216" locator="12:42-12:48" name="LOINC"/>
+      </def>
+   </codes>
+   <contexts>
+      <def localId="222" locator="16:1-16:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="220" locator="16:1-16:15" name="Patient" context="Patient">
+         <expression localId="221" xsi:type="SingletonFrom">
+            <operand localId="219" locator="16:1-16:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="224" locator="18:1-18:54" name="QuestionnaireResponses" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="224">
+               <a:s>define QuestionnaireResponses: </a:s>
+               <a:s r="225">
+                  <a:s>[QuestionnaireResponse]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="225" locator="18:32-18:54" dataType="fhir:QuestionnaireResponse" templateId="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" xsi:type="Retrieve"/>
+      </def>
+      <def localId="227" locator="22:1-30:5" name="QuestionnaireResponse" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="227">
+               <a:s>// Use the QuestionnaireResponse provided as a parameter if available
+// Otherwise look it up from the record
+define &quot;QuestionnaireResponse&quot;:
+  </a:s>
+               <a:s r="228">
+                  <a:s>if </a:s>
+                  <a:s r="231">
+                     <a:s r="229">
+                        <a:s>response</a:s>
+                     </a:s>
+                     <a:s> is not null</a:s>
+                  </a:s>
+                  <a:s> then
+    </a:s>
+                  <a:s r="232">
+                     <a:s>response</a:s>
+                  </a:s>
+                  <a:s>
+  else
+    </a:s>
+                  <a:s r="260">
+                     <a:s>Last(
+      </a:s>
+                     <a:s r="257">
+                        <a:s>
+                           <a:s r="233">
+                              <a:s r="234">
+                                 <a:s r="234">
+                                    <a:s>[QuestionnaireResponse]</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> QR</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+        </a:s>
+                        <a:s r="235">
+                           <a:s>where </a:s>
+                           <a:s r="235">
+                              <a:s r="237">
+                                 <a:s r="236">
+                                    <a:s>QR</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="237">
+                                    <a:s>questionnaire</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> = </a:s>
+                              <a:s r="238">
+                                 <a:s>'http://loinc.org/q/44249-1'</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+        </a:s>
+                        <a:s r="247">
+                           <a:s>sort by </a:s>
+                           <a:s r="246">
+                              <a:s r="243">
+                                 <a:s>(</a:s>
+                                 <a:s r="243">
+                                    <a:s r="244">
+                                       <a:s>authored</a:s>
+                                    </a:s>
+                                    <a:s> as </a:s>
+                                    <a:s r="245">
+                                       <a:s>FHIR.dateTime</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                              <a:s> desc</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="228" locator="23:3-30:5" xsi:type="If">
+            <condition localId="231" locator="23:6-23:25" xsi:type="Not">
+               <operand localId="230" locator="23:6-23:25" xsi:type="IsNull">
+                  <operand localId="229" locator="23:6-23:13" name="response" xsi:type="ParameterRef"/>
+               </operand>
+            </condition>
+            <then localId="232" locator="24:5-24:12" name="response" xsi:type="ParameterRef"/>
+            <else localId="260" locator="26:5-30:5" xsi:type="Last">
+               <source localId="257" locator="27:7-29:48" xsi:type="Query">
+                  <source localId="233" locator="27:7-27:32" alias="QR">
+                     <expression localId="234" locator="27:7-27:29" dataType="fhir:QuestionnaireResponse" templateId="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" xsi:type="Retrieve"/>
+                  </source>
+                  <where localId="235" locator="28:9-28:61" xsi:type="Equal">
+                     <signature localId="241" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                     <signature localId="242" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="239" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <signature localId="240" name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="237" locator="28:15-28:30" path="questionnaire" scope="QR" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="238" locator="28:34-28:61" valueType="t:String" value="http://loinc.org/q/44249-1" xsi:type="Literal"/>
+                  </where>
+                  <sort localId="247" locator="29:9-29:48">
+                     <by localId="246" locator="29:17-29:48" direction="desc" xsi:type="ByExpression">
+                        <expression localId="243" locator="29:17-29:43" strict="false" xsi:type="As">
+                           <operand localId="244" locator="29:18-29:25" name="authored" xsi:type="IdentifierRef"/>
+                           <asTypeSpecifier localId="245" locator="29:30-29:42" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        </expression>
+                     </by>
+                  </sort>
+               </source>
+            </else>
+         </expression>
+      </def>
+      <def localId="262" locator="36:1-48:5" name="Responses" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="262">
+               <a:s>// NOTE: This ties this logic directly to this particular rendering of the Questionnaire.
+// Ideally the items would be filtered based on Code of the Item, rather than the LinkId,
+// but that would require pulling in the Questionnaire because the QuestionnaireResponse
+// only has the LinkId.
+define &quot;Responses&quot;:
+  </a:s>
+               <a:s r="284">
+                  <a:s>
+                     <a:s r="263">
+                        <a:s r="264">
+                           <a:s>
+                              <a:s>&quot;QuestionnaireResponse&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> QR</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="265">
+                     <a:s>return </a:s>
+                     <a:s r="283">
+                        <a:s>
+                           <a:s r="266">
+                              <a:s r="268">
+                                 <a:s>
+                                    <a:s>QR.item</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> I</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> </a:s>
+                        <a:s r="280">
+                           <a:s>where </a:s>
+                           <a:s r="280">
+                              <a:s r="270">
+                                 <a:s r="269">
+                                    <a:s>I</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="270">
+                                    <a:s>linkId</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> in </a:s>
+                              <a:s r="271">
+                                 <a:s>{
+      </a:s>
+                                 <a:s r="272">
+                                    <a:s>'14363'</a:s>
+                                 </a:s>
+                                 <a:s>, //'LittleInterest'
+      </a:s>
+                                 <a:s r="273">
+                                    <a:s>'14364'</a:s>
+                                 </a:s>
+                                 <a:s>, //'FeelingDown'
+      </a:s>
+                                 <a:s r="274">
+                                    <a:s>'14365'</a:s>
+                                 </a:s>
+                                 <a:s>, //'TroubleSleeping'
+      </a:s>
+                                 <a:s r="275">
+                                    <a:s>'14366'</a:s>
+                                 </a:s>
+                                 <a:s>, //'FeelingTired'
+      </a:s>
+                                 <a:s r="276">
+                                    <a:s>'14367'</a:s>
+                                 </a:s>
+                                 <a:s>, //'BadApetite'
+      </a:s>
+                                 <a:s r="277">
+                                    <a:s>'14368'</a:s>
+                                 </a:s>
+                                 <a:s>, //'FeelingBadAboutSelf'
+      </a:s>
+                                 <a:s r="278">
+                                    <a:s>'14369'</a:s>
+                                 </a:s>
+                                 <a:s>, //'TroubleConcetrating'
+      </a:s>
+                                 <a:s r="279">
+                                    <a:s>'14370'</a:s>
+                                 </a:s>
+                                 <a:s> //'MovingSpeaking'
+      // '14371' // HurtingSelf
+    }</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="284" locator="37:3-48:5" xsi:type="Query">
+            <source localId="263" locator="37:3-37:28" alias="QR">
+               <expression localId="264" locator="37:3-37:25" name="QuestionnaireResponse" xsi:type="ExpressionRef"/>
+            </source>
+            <return localId="265" locator="38:5-48:5">
+               <expression localId="283" locator="38:12-48:5" xsi:type="Query">
+                  <source localId="266" locator="38:12-38:20" alias="I">
+                     <expression localId="268" locator="38:12-38:18" path="item" scope="QR" xsi:type="Property"/>
+                  </source>
+                  <where localId="280" locator="38:22-48:5" xsi:type="In">
+                     <operand localId="281" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <signature localId="282" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="270" locator="38:28-38:35" path="linkId" scope="I" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="271" locator="38:40-48:5" xsi:type="List">
+                        <element localId="272" locator="39:7-39:13" valueType="t:String" value="14363" xsi:type="Literal"/>
+                        <element localId="273" locator="40:7-40:13" valueType="t:String" value="14364" xsi:type="Literal"/>
+                        <element localId="274" locator="41:7-41:13" valueType="t:String" value="14365" xsi:type="Literal"/>
+                        <element localId="275" locator="42:7-42:13" valueType="t:String" value="14366" xsi:type="Literal"/>
+                        <element localId="276" locator="43:7-43:13" valueType="t:String" value="14367" xsi:type="Literal"/>
+                        <element localId="277" locator="44:7-44:13" valueType="t:String" value="14368" xsi:type="Literal"/>
+                        <element localId="278" locator="45:7-45:13" valueType="t:String" value="14369" xsi:type="Literal"/>
+                        <element localId="279" locator="46:7-46:13" valueType="t:String" value="14370" xsi:type="Literal"/>
+                     </operand>
+                  </where>
+               </expression>
+            </return>
+         </expression>
+      </def>
+      <def localId="285" locator="53:1-60:5" name="AnswerCardinality" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:t name="source" value="https://www.med.umich.edu/1info/FHP/practiceguides/depress/score.pdf"/>
+            <a:s r="285">
+               <a:s>/*
+@source: https://www.med.umich.edu/1info/FHP/practiceguides/depress/score.pdf
+*/
+define function &quot;AnswerCardinality&quot;(answer Coding):
+  </a:s>
+               <a:s r="288">
+                  <a:s r="288">
+                     <a:s>case
+    </a:s>
+                     <a:s r="289">
+                        <a:s>when </a:s>
+                        <a:s r="290">
+                           <a:s r="291">
+                              <a:s>answer</a:s>
+                           </a:s>
+                           <a:s> ~ </a:s>
+                           <a:s r="292">
+                              <a:s>&quot;Not at all&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="296"> then 0</a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="297">
+                        <a:s>when </a:s>
+                        <a:s r="298">
+                           <a:s r="299">
+                              <a:s>answer</a:s>
+                           </a:s>
+                           <a:s> ~ </a:s>
+                           <a:s r="300">
+                              <a:s>&quot;Several days&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="304"> then 1</a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="305">
+                        <a:s>when </a:s>
+                        <a:s r="306">
+                           <a:s r="307">
+                              <a:s>answer</a:s>
+                           </a:s>
+                           <a:s> ~ </a:s>
+                           <a:s r="308">
+                              <a:s>&quot;More than half the days&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="312"> then 2</a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="313">
+                        <a:s>when </a:s>
+                        <a:s r="314">
+                           <a:s r="315">
+                              <a:s>answer</a:s>
+                           </a:s>
+                           <a:s> ~ </a:s>
+                           <a:s r="316">
+                              <a:s>&quot;Nearly every day&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s r="320"> then 3</a:s>
+                     </a:s>
+                     <a:s r="321">
+    else null
+  end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="288" locator="54:3-60:5" xsi:type="Case">
+            <caseItem localId="289" locator="55:5-55:37">
+               <when localId="290" locator="55:10-55:30" xsi:type="Equivalent">
+                  <signature localId="294" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="295" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="293" name="ToCode" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="291" locator="55:10-55:15" name="answer" xsi:type="OperandRef"/>
+                  </operand>
+                  <operand localId="292" locator="55:19-55:30" name="Not at all" xsi:type="CodeRef"/>
+               </when>
+               <then localId="296" locator="55:37" valueType="t:Integer" value="0" xsi:type="Literal"/>
+            </caseItem>
+            <caseItem localId="297" locator="56:5-56:39">
+               <when localId="298" locator="56:10-56:32" xsi:type="Equivalent">
+                  <signature localId="302" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="303" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="301" name="ToCode" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="299" locator="56:10-56:15" name="answer" xsi:type="OperandRef"/>
+                  </operand>
+                  <operand localId="300" locator="56:19-56:32" name="Several days" xsi:type="CodeRef"/>
+               </when>
+               <then localId="304" locator="56:39" valueType="t:Integer" value="1" xsi:type="Literal"/>
+            </caseItem>
+            <caseItem localId="305" locator="57:5-57:50">
+               <when localId="306" locator="57:10-57:43" xsi:type="Equivalent">
+                  <signature localId="310" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="311" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="309" name="ToCode" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="307" locator="57:10-57:15" name="answer" xsi:type="OperandRef"/>
+                  </operand>
+                  <operand localId="308" locator="57:19-57:43" name="More than half the days" xsi:type="CodeRef"/>
+               </when>
+               <then localId="312" locator="57:50" valueType="t:Integer" value="2" xsi:type="Literal"/>
+            </caseItem>
+            <caseItem localId="313" locator="58:5-58:43">
+               <when localId="314" locator="58:10-58:36" xsi:type="Equivalent">
+                  <signature localId="318" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="319" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="317" name="ToCode" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="315" locator="58:10-58:15" name="answer" xsi:type="OperandRef"/>
+                  </operand>
+                  <operand localId="316" locator="58:19-58:36" name="Nearly every day" xsi:type="CodeRef"/>
+               </when>
+               <then localId="320" locator="58:43" valueType="t:Integer" value="3" xsi:type="Literal"/>
+            </caseItem>
+            <else localId="322" asType="t:Integer" xsi:type="As">
+               <operand localId="321" locator="59:10-59:13" xsi:type="Null"/>
+            </else>
+         </expression>
+         <operand localId="287" name="answer">
+            <operandTypeSpecifier localId="286" locator="53:44-53:49" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="324" locator="62:1-63:72" name="CalculateTotalScore" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="324">
+               <a:s>define &quot;CalculateTotalScore&quot;:
+  </a:s>
+               <a:s r="349">
+                  <a:s>Sum(</a:s>
+                  <a:s r="344">
+                     <a:s>
+                        <a:s r="325">
+                           <a:s r="326">
+                              <a:s>
+                                 <a:s>&quot;Responses&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> R</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> </a:s>
+                     <a:s r="327">
+                        <a:s>return all </a:s>
+                        <a:s r="342">
+                           <a:s>AnswerCardinality(</a:s>
+                           <a:s r="341">
+                              <a:s>First(</a:s>
+                              <a:s r="337">
+                                 <a:s r="329">
+                                    <a:s r="328">
+                                       <a:s>R</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="329">
+                                       <a:s>answer</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="337">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="349" locator="63:3-63:72" xsi:type="Sum">
+            <signature localId="350" xsi:type="ListTypeSpecifier">
+               <elementType localId="351" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+            </signature>
+            <source localId="344" locator="63:7-63:71" xsi:type="Query">
+               <source localId="325" locator="63:7-63:19" alias="R">
+                  <expression localId="326" locator="63:7-63:17" name="Responses" xsi:type="ExpressionRef"/>
+               </source>
+               <return localId="327" locator="63:21-63:71" distinct="false">
+                  <expression localId="342" locator="63:32-63:71" name="AnswerCardinality" xsi:type="FunctionRef">
+                     <operand localId="343" asType="fhir:Coding" xsi:type="As">
+                        <operand localId="341" locator="63:50-63:70" xsi:type="First">
+                           <source localId="337" locator="63:56-63:69" xsi:type="Query">
+                              <source localId="336" alias="$this">
+                                 <expression localId="329" locator="63:56-63:63" path="answer" scope="R" xsi:type="Property"/>
+                              </source>
+                              <where localId="333" xsi:type="Not">
+                                 <operand localId="332" xsi:type="IsNull">
+                                    <operand localId="331" path="value" xsi:type="Property">
+                                       <source localId="330" name="$this" xsi:type="AliasRef"/>
+                                    </operand>
+                                 </operand>
+                              </where>
+                              <return localId="338" distinct="false">
+                                 <expression localId="335" path="value" xsi:type="Property">
+                                    <source localId="334" name="$this" xsi:type="AliasRef"/>
+                                 </expression>
+                              </return>
+                           </source>
+                        </operand>
+                     </operand>
+                  </expression>
+               </return>
+            </source>
+         </expression>
+      </def>
+   </statements>
+</library>

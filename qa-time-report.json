@@ -1,101 +1,696 @@
 {
-  "date" : "Sat, 03 Aug, 2024 16:38:13 +0000",
+  "date" : "Tue, 06 Aug, 2024 18:33:54 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/fsh-generated/resources/ImplementationGuide-mtnlotus.fhir.uv.pco.json",
-      "size" : 3729,
+      "size" : 8797,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 22
+          "start" : 55,
+          "length" : 18
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 46,
+          "start" : 55,
           "length" : 5
         },
         {
           "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 65
+          "start" : 55,
+          "length" : 92
         },
         {
           "activity" : "validate",
-          "start" : 46,
-          "length" : 4971
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 53,
-          "length" : 1
+          "start" : 61,
+          "length" : 1169
         },
         {
           "activity" : "generate1",
-          "start" : 53,
-          "length" : 105
+          "start" : 73,
+          "length" : 135
         },
         {
           "activity" : "generate2",
-          "start" : 61,
-          "length" : 71
+          "start" : 82,
+          "length" : 157
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 86,
-          "length" : 2
+          "start" : 128,
+          "length" : 5
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 92,
+          "start" : 138,
           "length" : 1
         }
       ]
     },
     {
-      "name" : "input/resources/library/ExtensionAndSlicingExample.json",
-      "size" : 206808,
+      "name" : "fsh-generated/resources/CodeSystem-pco.json",
+      "size" : 645,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 45,
-          "length" : 27
+          "start" : 54,
+          "length" : 11
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 55,
+          "length" : 1
         },
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 82
+          "start" : 55,
+          "length" : 8
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 26
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 195
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 31
+        },
+        {
+          "activity" : "generate2",
+          "start" : 82,
+          "length" : 11221
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Goal-pcoGoalPainLevelExample.json",
+      "size" : 749,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 10
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 13
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 23
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 119
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Goal-pcoGoalWalkDogExample.json",
+      "size" : 3143,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 10
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 594
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 29
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 42
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-pcoGASScorePatientBaselineExample.json",
+      "size" : 1051,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 46,
+          "start" : 55,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 6688
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 23
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 110
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json",
+      "size" : 1055,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "validate",
+          "start" : 72,
+          "length" : 105
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 22
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 56
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json",
+      "size" : 1070,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 9
+        },
+        {
+          "activity" : "validate",
+          "start" : 72,
+          "length" : 118
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 22
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 42
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-pcoPatientJones.json",
+      "size" : 359,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "validate",
+          "start" : 72,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 20
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 24
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json",
+      "size" : 344,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 435
+        },
+        {
+          "activity" : "validate",
+          "start" : 72,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 23
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 22
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-pco-caregiver-gas-score.json",
+      "size" : 4137,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 12
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 55,
+          "length" : 106
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 102
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 1279
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 65,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 65,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 423
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 1869
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 106,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 11
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 138,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 138,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling.json",
+      "size" : 2975,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 55,
+          "length" : 26
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 46
+        },
+        {
+          "activity" : "validate",
+          "start" : 59,
+          "length" : 268
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 212
+        },
+        {
+          "activity" : "generate2",
+          "start" : 96,
+          "length" : 409
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-pco-goal.json",
+      "size" : 3300,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 55,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 55,
+          "length" : 51
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 42
+        },
+        {
+          "activity" : "validate",
+          "start" : 59,
+          "length" : 493
+        },
+        {
+          "activity" : "generate1",
+          "start" : 74,
+          "length" : 263
+        },
+        {
+          "activity" : "generate2",
+          "start" : 96,
+          "length" : 596
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 6
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 138,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-pco-patient-gas-score.json",
+      "size" : 4084,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 10
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 55,
+          "length" : 85
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 57
+        },
+        {
+          "activity" : "validate",
+          "start" : 60,
+          "length" : 756
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 65,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 74,
+          "length" : 362
+        },
+        {
+          "activity" : "generate2",
+          "start" : 97,
+          "length" : 686
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 127,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 11
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 138,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-pco-practitioner-gas-score.json",
+      "size" : 4128,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 55,
+          "length" : 86
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 56,
+          "length" : 43
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 687
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 65,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 74,
+          "length" : 365
+        },
+        {
+          "activity" : "generate2",
+          "start" : 98,
+          "length" : 656
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 11
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 138,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-caregiver-gas-followup-vs.json",
+      "size" : 1210,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 5
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 55,
           "length" : 1
         },
         {
           "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 258
+          "start" : 56,
+          "length" : 322
         },
         {
           "activity" : "validate",
-          "start" : 51,
-          "length" : 473
+          "start" : 57,
+          "length" : 126
         },
         {
           "activity" : "generate1",
-          "start" : 53,
-          "length" : 554
+          "start" : 75,
+          "length" : 31
         },
         {
           "activity" : "generate2",
-          "start" : 61,
-          "length" : 57
+          "start" : 98,
+          "length" : 5906
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 86,
-          "length" : 14
+          "start" : 128,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-patient-gas-followup-vs.json",
+      "size" : 1155,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 57,
+          "length" : 122
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 124
+        },
+        {
+          "activity" : "generate1",
+          "start" : 75,
+          "length" : 31
+        },
+        {
+          "activity" : "generate2",
+          "start" : 104,
+          "length" : 260
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-practitioner-gas-followup-vs.json",
+      "size" : 1214,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 8
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 57,
+          "length" : 120
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 142
+        },
+        {
+          "activity" : "generate1",
+          "start" : 75,
+          "length" : 30
+        },
+        {
+          "activity" : "generate2",
+          "start" : 104,
+          "length" : 227
         }
       ]
     },
@@ -105,227 +700,268 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 45,
-          "length" : 49
+          "start" : 54,
+          "length" : 72
         },
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 238
+          "start" : 55,
+          "length" : 275
         },
         {
           "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 27
+          "start" : 57,
+          "length" : 224
         },
         {
           "activity" : "validate",
-          "start" : 52,
-          "length" : 176
+          "start" : 62,
+          "length" : 529
         },
         {
           "activity" : "generate1",
-          "start" : 54,
-          "length" : 5719
+          "start" : 75,
+          "length" : 5828
         },
         {
           "activity" : "generate2",
-          "start" : 61,
-          "length" : 221
+          "start" : 105,
+          "length" : 195
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 86,
-          "length" : 107
+          "start" : 128,
+          "length" : 132
         }
       ]
     },
     {
-      "name" : "input/resources/library/PHQ9LogicExample.json",
-      "size" : 116710,
+      "name" : "input/resources/library/PHQ9MeasureExample.json",
+      "size" : 34638,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 45,
-          "length" : 25
+          "start" : 54,
+          "length" : 4
         },
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 20
+          "start" : 55,
+          "length" : 12
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 46,
+          "start" : 55,
           "length" : 1
         },
         {
           "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 26
+          "start" : 57,
+          "length" : 39
         },
         {
           "activity" : "validate",
-          "start" : 52,
-          "length" : 83
+          "start" : 63,
+          "length" : 50
         },
         {
           "activity" : "generate1",
-          "start" : 59,
+          "start" : 80,
+          "length" : 116
+        },
+        {
+          "activity" : "generate2",
+          "start" : 105,
+          "length" : 29
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/library/PHQ9ScoreLogic.json",
+      "size" : 116620,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 12
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 57,
+          "length" : 35
+        },
+        {
+          "activity" : "validate",
+          "start" : 63,
+          "length" : 52
+        },
+        {
+          "activity" : "generate1",
+          "start" : 81,
           "length" : 315
         },
         {
           "activity" : "generate2",
-          "start" : 62,
-          "length" : 35
+          "start" : 105,
+          "length" : 37
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 86,
+          "start" : 128,
           "length" : 9
         }
       ]
     },
     {
-      "name" : "input/resources/library/QuestionnaireMeasureExample.json",
-      "size" : 34735,
+      "name" : "input/resources/measure/Measure-PHQ9MeasureExample.json",
+      "size" : 11534,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 45,
-          "length" : 24
-        },
-        {
-          "activity" : "load",
-          "start" : 46,
-          "length" : 17
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 46,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 27
-        },
-        {
-          "activity" : "validate",
-          "start" : 52,
-          "length" : 31
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 53,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 60,
-          "length" : 113
-        },
-        {
-          "activity" : "generate2",
-          "start" : 62,
-          "length" : 33
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 86,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "input/resources/measure/Measure-QuestionnaireMeasureExample.json",
-      "size" : 11585,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 45,
-          "length" : 26
+          "start" : 54,
+          "length" : 5
         },
         {
           "activity" : "load-configure",
-          "start" : 46,
+          "start" : 55,
           "length" : 1
         },
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 25
+          "start" : 55,
+          "length" : 22
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 46,
-          "length" : 2
+          "start" : 55,
+          "length" : 1
         },
         {
           "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 40
+          "start" : 57,
+          "length" : 35
         },
         {
           "activity" : "validate",
-          "start" : 52,
-          "length" : 387
+          "start" : 63,
+          "length" : 504
         },
         {
           "activity" : "generate1",
-          "start" : 60,
-          "length" : 100
+          "start" : 81,
+          "length" : 98
         },
         {
           "activity" : "generate2",
-          "start" : 62,
-          "length" : 61
+          "start" : 105,
+          "length" : 64
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 86,
-          "length" : 2
+          "start" : 128,
+          "length" : 1
         }
       ]
     },
     {
-      "name" : "input/resources/questionnaire/Questionnaire-phq-9-questionnaire.json",
-      "size" : 4685,
+      "name" : "input/resources/questionnaire/Questionnaire-GAD7.json",
+      "size" : 8964,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 45,
-          "length" : 12
-        },
-        {
-          "activity" : "scan",
-          "start" : 46,
-          "length" : 1
+          "start" : 54,
+          "length" : 5
         },
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 22
+          "start" : 55,
+          "length" : 20
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 55,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 57,
+          "length" : 29
         },
         {
           "activity" : "validate",
-          "start" : 53,
-          "length" : 463
+          "start" : 64,
+          "length" : 655
         },
         {
           "activity" : "generate1",
-          "start" : 60,
-          "length" : 22
+          "start" : 81,
+          "length" : 80
         },
         {
           "activity" : "generate2",
-          "start" : 62,
-          "length" : 467
+          "start" : 105,
+          "length" : 40
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 86,
+          "start" : 128,
           "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "input/resources/questionnaire/Questionnaire-PHQ9.json",
+      "size" : 16968,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 54,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 55,
+          "length" : 11
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 55,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 57,
+          "length" : 25
+        },
+        {
+          "activity" : "validate",
+          "start" : 64,
+          "length" : 732
+        },
+        {
+          "activity" : "generate1",
+          "start" : 81,
+          "length" : 99
+        },
+        {
+          "activity" : "generate2",
+          "start" : 105,
+          "length" : 38
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 128,
+          "length" : 2
         }
       ]
     }

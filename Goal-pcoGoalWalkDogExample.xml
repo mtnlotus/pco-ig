@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="pcoGoalWalkDogExample"/>
+  <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
+    <extension url="level">
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="patient-gas-much-better-than-expected"/>
+        <display value="Much better than expected"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Walk my dog every day and visit with friends in the park"/>
+    </extension>
+  </extension>
+  <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
+    <extension url="level">
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="patient-gas-better-than-expected"/>
+        <display value="Better than expected"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Walk my dog every day"/>
+    </extension>
+  </extension>
+  <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
+    <extension url="level">
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="patient-gas-expected-outcome"/>
+        <display value="Expected outcome"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Walk my dog 5 times per week in the park"/>
+    </extension>
+  </extension>
+  <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
+    <extension url="level">
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="patient-gas-less-than-expected"/>
+        <display value="Less than expected"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Walk my dog less than 5 times per week or not in the park"/>
+    </extension>
+  </extension>
+  <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
+    <extension url="level">
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="patient-gas-much-less-than-expected"/>
+        <display value="Much less than expected"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Cannot walk my dog"/>
+    </extension>
+  </extension>
+  <lifecycleStatus value="active"/>
+  <achievementStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+      <code value="in-progress"/>
+    </coding>
+  </achievementStatus>
+  <category>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco"/>
+      <code value="person-centered"/>
+    </coding>
+  </category>
+  <description>
+    <text value="Walk my dog 5 times per week in the park"/>
+  </description>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <startDate value="2024-04-03"/>
+  <target>
+    <dueDate value="2024-09-30"/>
+  </target>
+  <expressedBy>
+    <reference value="Patient/pcoPatientJones"/>
+  </expressedBy>
+</Goal>

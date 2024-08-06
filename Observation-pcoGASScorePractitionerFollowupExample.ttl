@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/Observation/pcoGASScorePractitionerFollowupExample> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoGASScorePractitionerFollowupExample"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "survey" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "person-centered" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:GOAL-ATTAINMENT-SCALING ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "goal-attainment-scaling" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://mtnlotus.com/uv/pco/Goal/pcoGoalWalkDogExample> ;
+     fhir:reference [ fhir:v "Goal/pcoGoalWalkDogExample" ]
+  ] ) ; # 
+  fhir:effective [ fhir:v "2024-05-22T10:15:00Z"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerGonzalez> ;
+     fhir:reference [ fhir:v "Practitioner/pcoPractitionerGonzalez" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a loinc:PRACTITIONER-GAS-EXPECTED-OUTCOME ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "practitioner-gas-expected-outcome" ] ;
+       fhir:display [ fhir:v "Expected outcome" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
