@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.18"}
-    h3,h4,h5,h6{--heading-prefix:"2.18"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.20"}
+    h3,h4,h5,h6{--heading-prefix:"2.20"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -192,7 +192,7 @@
         },
         {
           "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "text",
-          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk my dog every day and visit with friends in the park"
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk dog outside three times a week"
         }
       ],
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
@@ -209,7 +209,7 @@
         },
         {
           "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "text",
-          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk my dog every day"
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk dog outside twice a week"
         }
       ],
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
@@ -226,7 +226,7 @@
         },
         {
           "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "text",
-          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk my dog 5 times per week in the park"
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk dog outside once a week"
         }
       ],
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
@@ -243,7 +243,7 @@
         },
         {
           "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "text",
-          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Walk my dog less than 5 times per week or not in the park"
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Does not walk dog but goes outside with dog"
         }
       ],
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
@@ -260,7 +260,7 @@
         },
         {
           "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "text",
-          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Cannot walk my dog"
+          "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Unable to go outside with dog"
         }
       ],
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
@@ -279,6 +279,15 @@
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
         {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "physical-function",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Physical Function"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "person-centered"
         }
@@ -286,7 +295,7 @@
     }
   ],
   "<a href="http://hl7.org/fhir/R4/goal.html#Goal.description">description</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Walk my dog 5 times per week in the park"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Walk dog outside once a week"
   },
   "<a href="http://hl7.org/fhir/R4/goal.html#Goal.subject">subject</a>" : {
     <a href="Patient-pcoPatientJones.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/pcoPatientJones"
@@ -324,7 +333,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 6, 2024 18:33+0000">2024-08-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 7, 2024 20:05+0000">2024-08-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

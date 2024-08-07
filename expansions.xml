@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="90c80df1-23af-4ef0-a31c-faffc29e0e2e"/>
+  <id value="9486bb43-fdf1-4c73-bd9d-f10f390e1cb0"/>
   <meta>
-    <lastUpdated value="2024-08-06T18:33:54.520+00:00"/>
+    <lastUpdated value="2024-08-07T20:05:12.722+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -39,7 +39,7 @@
         <title value="Caregiver Follow-Up GAS Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-08-06T18:33:54+00:00"/>
+        <date value="2024-08-07T20:05:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -48,8 +48,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2faa2406-a660-4e44-aaed-def65805bb03"/>
-          <timestamp value="2024-08-06T18:34:44+00:00"/>
+          <identifier value="urn:uuid:cc705c04-85f2-4894-992c-ce6d996814a7"/>
+          <timestamp value="2024-08-07T20:06:06+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -113,7 +113,7 @@
         <title value="Patient Follow-Up GAS Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-08-06T18:33:54+00:00"/>
+        <date value="2024-08-07T20:05:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -122,8 +122,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:531f0a74-d377-4b3a-a7eb-6fe846f88b4b"/>
-          <timestamp value="2024-08-06T18:34:44+00:00"/>
+          <identifier value="urn:uuid:cfdd4f46-5f9c-4e7c-8671-565808b3dc85"/>
+          <timestamp value="2024-08-07T20:06:07+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -150,6 +150,229 @@
             <name value="version"/>
             <valueUri value="http://loinc.org|2.77"/>
           </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-pco-goal-domain-codes-example.html">codesystem Goal Domain Code Examples v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 12 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-housing"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-housing">housing</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Housing</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-access-to-services"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-access-to-services">access-to-services</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Access To Services</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-caregiver-needs"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-caregiver-needs">caregiver-needs</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Caregiver Needs</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-end-of-life"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-end-of-life">end-of-life</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>End Of Life</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-independence"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-independence">independence</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Independence</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-legal"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-legal">legal</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Legal</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-managing-conditions"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-managing-conditions">managing-conditions</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Managing Conditions</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-medication-management"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-medication-management">medication-management</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Medication Management</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-improving-health-and-wellness"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-improving-health-and-wellness">improving-health-and-wellness</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Improving Health And Wellness</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-physical-function"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-physical-function">physical-function</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Physical Function</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-social-functioning"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-social-functioning">social-functioning</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Social Functioning</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example-emotional-and-mental-health"> </a>  
+                  <a href="CodeSystem-pco-goal-domain-codes-example.html#pco-goal-domain-codes-example-emotional-and-mental-health">emotional-and-mental-health</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</td>
+                <td>Emotional And Mental Health</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example"/>
+        <version value="0.1.0"/>
+        <name value="PCOGoalDomainsExample"/>
+        <title value="Goal Domains"/>
+        <status value="draft"/>
+        <date value="2024-08-07T20:05:12+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:ce76422c-0265-4ba3-85f5-5ff13807e7e4"/>
+          <timestamp value="2024-08-07T20:06:07+00:00"/>
+          <total value="12"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="housing"/>
+            <display value="Housing"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="access-to-services"/>
+            <display value="Access To Services"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="caregiver-needs"/>
+            <display value="Caregiver Needs"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="end-of-life"/>
+            <display value="End Of Life"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="independence"/>
+            <display value="Independence"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="legal"/>
+            <display value="Legal"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="managing-conditions"/>
+            <display value="Managing Conditions"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="medication-management"/>
+            <display value="Medication Management"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="improving-health-and-wellness"/>
+            <display value="Improving Health And Wellness"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="physical-function"/>
+            <display value="Physical Function"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="social-functioning"/>
+            <display value="Social Functioning"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+            <code value="emotional-and-mental-health"/>
+            <display value="Emotional And Mental Health"/>
+          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -187,7 +410,7 @@
         <title value="Practitioner Follow-Up GAS Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-08-06T18:33:54+00:00"/>
+        <date value="2024-08-07T20:05:12+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -196,8 +419,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9c6b3c0a-51cc-4192-b33a-95bc6171c6f2"/>
-          <timestamp value="2024-08-06T18:34:45+00:00"/>
+          <identifier value="urn:uuid:3fe80b7e-728e-4340-8c90-47e08c8ebf3a"/>
+          <timestamp value="2024-08-07T20:06:07+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-06T18:33:54+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-07T20:05:12+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -762,6 +762,30 @@
        ] ;
        fhir:name [ fhir:v "Goal Attainment Scaling" ] ;
        fhir:description [ fhir:v "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example> ;
+         fhir:reference [ fhir:v "CodeSystem/pco-goal-domain-codes-example" ]
+       ] ;
+       fhir:name [ fhir:v "Goal Domain Code Examples" ] ;
+       fhir:description [ fhir:v "Example code system to identify the domain of a PCO Goal." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example> ;
+         fhir:reference [ fhir:v "ValueSet/pco-goal-domains-example" ]
+       ] ;
+       fhir:name [ fhir:v "Goal Domains" ] ;
+       fhir:description [ fhir:v "Example value set to identify the domain of a PCO Goal." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

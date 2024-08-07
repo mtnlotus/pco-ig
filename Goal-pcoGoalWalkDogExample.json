@@ -12,7 +12,7 @@
     },
     {
       "url" : "text",
-      "valueString" : "Walk my dog every day and visit with friends in the park"
+      "valueString" : "Walk dog outside three times a week"
     }],
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
   },
@@ -27,7 +27,7 @@
     },
     {
       "url" : "text",
-      "valueString" : "Walk my dog every day"
+      "valueString" : "Walk dog outside twice a week"
     }],
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
   },
@@ -42,7 +42,7 @@
     },
     {
       "url" : "text",
-      "valueString" : "Walk my dog 5 times per week in the park"
+      "valueString" : "Walk dog outside once a week"
     }],
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
   },
@@ -57,7 +57,7 @@
     },
     {
       "url" : "text",
-      "valueString" : "Walk my dog less than 5 times per week or not in the park"
+      "valueString" : "Does not walk dog but goes outside with dog"
     }],
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
   },
@@ -72,7 +72,7 @@
     },
     {
       "url" : "text",
-      "valueString" : "Cannot walk my dog"
+      "valueString" : "Unable to go outside with dog"
     }],
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
   }],
@@ -85,12 +85,19 @@
   },
   "category" : [{
     "coding" : [{
+      "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example",
+      "code" : "physical-function",
+      "display" : "Physical Function"
+    }]
+  },
+  {
+    "coding" : [{
       "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
       "code" : "person-centered"
     }]
   }],
   "description" : {
-    "text" : "Walk my dog 5 times per week in the park"
+    "text" : "Walk dog outside once a week"
   },
   "subject" : {
     "reference" : "Patient/pcoPatientJones"

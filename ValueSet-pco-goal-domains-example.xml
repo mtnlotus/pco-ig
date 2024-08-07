@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pco-goal-domains-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pco-goal-domains-example</b></p><a name="pco-goal-domains-example"> </a><a name="hcpco-goal-domains-example"> </a><a name="pco-goal-domains-example-en-US"> </a><ul><li>Include all codes defined in <a href="CodeSystem-pco-goal-domain-codes-example.html"><code>http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example</code></a></li></ul></div>
+  </text>
+  <url value="http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example"/>
+  <version value="0.1.0"/>
+  <name value="PCOGoalDomainsExample"/>
+  <title value="Goal Domains"/>
+  <status value="draft"/>
+  <date value="2024-08-07T20:05:12+00:00"/>
+  <publisher value="Mountain Lotus WellBeing LLC"/>
+  <contact>
+    <name value="Mountain Lotus WellBeing LLC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://mtnlotus.com"/>
+    </telecom>
+  </contact>
+  <description value="Example value set to identify the domain of a PCO Goal."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+    </include>
+  </compose>
+</ValueSet>

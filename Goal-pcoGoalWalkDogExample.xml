@@ -11,7 +11,7 @@
       </valueCoding>
     </extension>
     <extension url="text">
-      <valueString value="Walk my dog every day and visit with friends in the park"/>
+      <valueString value="Walk dog outside three times a week"/>
     </extension>
   </extension>
   <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
@@ -23,7 +23,7 @@
       </valueCoding>
     </extension>
     <extension url="text">
-      <valueString value="Walk my dog every day"/>
+      <valueString value="Walk dog outside twice a week"/>
     </extension>
   </extension>
   <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
@@ -35,7 +35,7 @@
       </valueCoding>
     </extension>
     <extension url="text">
-      <valueString value="Walk my dog 5 times per week in the park"/>
+      <valueString value="Walk dog outside once a week"/>
     </extension>
   </extension>
   <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
@@ -47,7 +47,7 @@
       </valueCoding>
     </extension>
     <extension url="text">
-      <valueString value="Walk my dog less than 5 times per week or not in the park"/>
+      <valueString value="Does not walk dog but goes outside with dog"/>
     </extension>
   </extension>
   <extension url="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling">
@@ -59,7 +59,7 @@
       </valueCoding>
     </extension>
     <extension url="text">
-      <valueString value="Cannot walk my dog"/>
+      <valueString value="Unable to go outside with dog"/>
     </extension>
   </extension>
   <lifecycleStatus value="active"/>
@@ -71,12 +71,19 @@
   </achievementStatus>
   <category>
     <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"/>
+      <code value="physical-function"/>
+      <display value="Physical Function"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
       <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco"/>
       <code value="person-centered"/>
     </coding>
   </category>
   <description>
-    <text value="Walk my dog 5 times per week in the park"/>
+    <text value="Walk dog outside once a week"/>
   </description>
   <subject>
     <reference value="Patient/pcoPatientJones"/>

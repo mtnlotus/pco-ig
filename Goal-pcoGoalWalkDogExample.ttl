@@ -20,7 +20,7 @@
        ]
      ] [
        fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Walk my dog every day and visit with friends in the park" ]
+       fhir:value [ fhir:v "Walk dog outside three times a week" ]
      ] ) ;
      fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
   ] [
@@ -34,7 +34,7 @@
        ]
      ] [
        fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Walk my dog every day" ]
+       fhir:value [ fhir:v "Walk dog outside twice a week" ]
      ] ) ;
      fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
   ] [
@@ -48,7 +48,7 @@
        ]
      ] [
        fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Walk my dog 5 times per week in the park" ]
+       fhir:value [ fhir:v "Walk dog outside once a week" ]
      ] ) ;
      fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
   ] [
@@ -62,7 +62,7 @@
        ]
      ] [
        fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Walk my dog less than 5 times per week or not in the park" ]
+       fhir:value [ fhir:v "Does not walk dog but goes outside with dog" ]
      ] ) ;
      fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
   ] [
@@ -76,7 +76,7 @@
        ]
      ] [
        fhir:url [ fhir:v "text"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Cannot walk my dog" ]
+       fhir:value [ fhir:v "Unable to go outside with dog" ]
      ] ) ;
      fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"^^xsd:anyURI ]
   ] ) ; # 
@@ -89,12 +89,18 @@
   ] ; # 
   fhir:category ( [
      fhir:coding ( [
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "physical-function" ] ;
+       fhir:display [ fhir:v "Physical Function" ]
+     ] )
+  ] [
+     fhir:coding ( [
        fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "person-centered" ]
      ] )
   ] ) ; # 
   fhir:description [
-     fhir:text [ fhir:v "Walk my dog 5 times per week in the park" ]
+     fhir:text [ fhir:v "Walk dog outside once a week" ]
   ] ; # 
   fhir:subject [
      fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
