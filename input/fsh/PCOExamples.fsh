@@ -45,21 +45,22 @@ Description: "Person-centered goal with attainment scaling extensions"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
+* category = pco-goal-domain-codes-example#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-04-03"
 * target.dueDate = "2024-09-30"
-* description.text = "Walk my dog 5 times per week in the park"
+* description.text = "Walk dog outside once a week"
 * extension[gas-scaling][0].extension[level].valueCoding = $LNC#patient-gas-much-better-than-expected "Much better than expected"
-* extension[gas-scaling][0].extension[text].valueString = "Walk my dog every day and visit with friends in the park"
+* extension[gas-scaling][0].extension[text].valueString = "Walk dog outside three times a week"
 * extension[gas-scaling][1].extension[level].valueCoding = $LNC#patient-gas-better-than-expected "Better than expected"
-* extension[gas-scaling][1].extension[text].valueString = "Walk my dog every day"
+* extension[gas-scaling][1].extension[text].valueString = "Walk dog outside twice a week"
 * extension[gas-scaling][2].extension[level].valueCoding = $LNC#patient-gas-expected-outcome "Expected outcome"
-* extension[gas-scaling][2].extension[text].valueString = "Walk my dog 5 times per week in the park"
+* extension[gas-scaling][2].extension[text].valueString = "Walk dog outside once a week"
 * extension[gas-scaling][3].extension[level].valueCoding = $LNC#patient-gas-less-than-expected "Less than expected"
-* extension[gas-scaling][3].extension[text].valueString = "Walk my dog less than 5 times per week or not in the park"
+* extension[gas-scaling][3].extension[text].valueString = "Does not walk dog but goes outside with dog"
 * extension[gas-scaling][4].extension[level].valueCoding = $LNC#patient-gas-much-less-than-expected "Much less than expected"
-* extension[gas-scaling][4].extension[text].valueString = "Cannot walk my dog"
+* extension[gas-scaling][4].extension[text].valueString = "Unable to go outside with dog"
 
 Instance: pcoGASScorePatientBaselineExample
 InstanceOf: PCOPatientGASScore
