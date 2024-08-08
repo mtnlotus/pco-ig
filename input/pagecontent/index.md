@@ -14,9 +14,9 @@ This example illustrates use of goal attainment scaling for the goal of walking 
 
 🎯 Goal: *Walk Dog Outside Once a Week*
 
-| Much Less Than Expected (-2)  | Less Than Expected (-1)   | Expected Outcome (0)  | Better Than Expected (+1) | Much Better Than Expecte (+2) |
+| Much Less Than <br>Expected (-2)  | Less Than Expected <br>(-1)   | Expected Outcome <br>(0)  | Better Than <br>Expected (+1) | Much Better Than <br>Expected (+2) |
 | :--------:                    | :--------:                | :--------:            | :--------:                | :--------:                    |
-| Unable to go outside with dog | Does not walk dog but goes outside with dog | Walk dog outside once a week | Walk dog outside twice a week | Walk dog outside three times a week |
+| Unable to go outside <br>with dog | Does not walk dog <br>but goes outside <br>with dog | Walk dog outside <br>once a week | Walk dog outside <br>twice a week | Walk dog outside <br>three times a week |
 
 **☛ See [Person-Centered Goal Profile](StructureDefinition-pco-goal.html#profile)**
 
