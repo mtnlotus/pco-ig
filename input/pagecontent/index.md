@@ -36,7 +36,7 @@ If the health coaching role is performed by Dorothy's primary care physician or 
 
 If the applications used by Dorothy and her health coach are separate from her provider organization's EHR system, either Dorothy or Maria can export and submit a complete bundle of standardized data to share with her extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.
 
-This same bundle of person-centered care goals and outcome scores can be submitted to an independent organization that uses these data compute digital quality measures over a large population of individuals.
+This same bundle of person-centered care goals and outcome scores can be submitted to an independent organization that uses these data to compute digital quality measures over a large population of individuals.
 
 ### Actors
 
@@ -44,13 +44,13 @@ This same bundle of person-centered care goals and outcome scores can be submitt
 
 The data submitter is a software system that collects and manages PCO data. It typically incorporates a patient-facing app, and may also incorporate a clinician-facing EHR-integrated app and a cloud service.
 
-This IG also refers to Data Submitters as "**apps**" or "**PCO management platforms**".
+This IG also refers to Data Submitters as "**apps**".
 
 #### PCO Data Receiver
 
 The data receiver is a software system that receives and stores the PCO data submitted by the data submitter.
 
-This IG also refers to Data Receivers as "**EHRs**".
+This IG also refers to Data Receivers as "**EHRs**" or "**PCO management platforms**".
 
 #### PCO Measure Performer
 
