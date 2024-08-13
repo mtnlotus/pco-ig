@@ -4,7 +4,7 @@ Alias: $rxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
 
 Instance: pcoPhyicalFunctionCarePlanExample
 InstanceOf: PCOCarePlan
-Title: "Care Plan for improving physical funtiontion"
+Title: "Care Plan for person-centered goal"
 Description: "Care Plan for a person-centered goal with action steps for achieving what matters most to that person."
 Usage: #example
 * status = #active
