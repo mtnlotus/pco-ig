@@ -15,26 +15,6 @@ Description: "Goal Attainment Scaling (GAS) is an extension used to specify five
 * extension[text].value[x] only string
 * extension[text].valueString 1..1
 
-RuleSet: PCOCategory
-* category
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* category contains
-    pcoCategory 1..1 MS
-* category[pcoCategory] = PCOCodes#person-centered
-  * ^short = "Person-Centered Outcomes"
-
-RuleSet: GoalDomainCategory
-* category
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* category contains
-    goalDomain 0..1 MS
-* category[goalDomain] from PCOGoalDomainsExample (example)
-  * ^short = "Goal domain"
-
 RuleSet: GASScoreObservationBase
 * insert PCOCategory
 * code = $LNC#goal-attainment-scaling
@@ -67,7 +47,6 @@ Id: pco-goal
 Title: "Person-Centered Goal"
 Description: "Person-centered goal with goal attainment scaling."
 * insert PCOCategory
-* insert GoalDomainCategory
 * expressedBy 1..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
 * startDate 1..1 MS

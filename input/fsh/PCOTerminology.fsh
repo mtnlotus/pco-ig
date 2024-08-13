@@ -1,5 +1,6 @@
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $LNC = http://loinc.org
+Alias: $SNOMED = http://snomed.info/sct
 
 CodeSystem: PCOCodes
 Id: pco
@@ -8,7 +9,7 @@ Description: "Codes to identify content associated with this IG"
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
-* #person-centered "Person-Centered Outcomes"
+* #person-centered "Person-Centered"
 * #pco-data-submission-bundle "PCO Bundle"
 * #pco-data-submission-standing-order "PCO Submission Standing Order"
 
