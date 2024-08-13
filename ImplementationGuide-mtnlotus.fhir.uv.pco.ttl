@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-13T17:11:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-13T22:41:25+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -813,6 +813,18 @@
        ] ;
        fhir:name [ fhir:v "Goal Attainment Scaling" ] ;
        fhir:description [ fhir:v "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary> ;
+         fhir:reference [ fhir:v "CodeSystem/pco-gas-codes-temporary" ]
+       ] ;
+       fhir:name [ fhir:v "Goal Attainment Scaling (GAS) Codes" ] ;
+       fhir:description [ fhir:v "Temporary code system for GAS codes until publication by LOINC. All of these codes have been submitted to LOINC." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

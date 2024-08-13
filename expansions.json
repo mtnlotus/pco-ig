@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "f66ac568-4e39-4028-84e3-b02f312ba6a4",
+  "id" : "7aa806d8-4884-4090-9d4c-5694ec16684d",
   "meta" : {
-    "lastUpdated" : "2024-08-13T17:11:01.256+00:00"
+    "lastUpdated" : "2024-08-13T22:41:25.600+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -11,7 +11,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.77</p><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-pco-gas-codes-temporary.html\">codesystem Goal Attainment Scaling (GAS) Codes v0.1.0 (CodeSystem)</a></p><p>This value set contains 5 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-caregiver-gas-much-better-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-caregiver-gas-much-better-than-expected\">caregiver-gas-much-better-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Much better than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-caregiver-gas-better-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-caregiver-gas-better-than-expected\">caregiver-gas-better-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Better than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-caregiver-gas-expected-outcome\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-caregiver-gas-expected-outcome\">caregiver-gas-expected-outcome</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Expected outcome</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-caregiver-gas-less-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-caregiver-gas-less-than-expected\">caregiver-gas-less-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Less than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-caregiver-gas-much-less-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-caregiver-gas-much-less-than-expected\">caregiver-gas-much-less-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Much less than expected</td></tr></table></div>"
       },
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
       "version" : "0.1.0",
@@ -19,7 +19,7 @@
       "title" : "Caregiver Follow-Up GAS Score",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-08-13T17:11:01+00:00",
+      "date" : "2024-08-13T22:41:25+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -28,9 +28,9 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f2d114e6-1ae5-4c57-9af7-aca100710207",
-        "timestamp" : "2024-08-13T17:11:56+00:00",
-        "total" : 0,
+        "identifier" : "urn:uuid:b5ef1fdb-7b1d-450d-b574-2b1833a0e607",
+        "timestamp" : "2024-08-13T22:42:12+00:00",
+        "total" : 5,
         "offset" : 0,
         "parameter" : [{
           "name" : "count",
@@ -45,16 +45,33 @@
           "valueBoolean" : false
         },
         {
-          "name" : "used-valueset",
-          "valueUri" : "null"
-        },
-        {
           "name" : "used-codesystem",
-          "valueUri" : "http://loinc.org|2.77"
+          "valueUri" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "caregiver-gas-much-better-than-expected",
+          "display" : "Much better than expected"
         },
         {
-          "name" : "version",
-          "valueUri" : "http://loinc.org|2.77"
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "caregiver-gas-better-than-expected",
+          "display" : "Better than expected"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "caregiver-gas-expected-outcome",
+          "display" : "Expected outcome"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "caregiver-gas-less-than-expected",
+          "display" : "Less than expected"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "caregiver-gas-much-less-than-expected",
+          "display" : "Much less than expected"
         }]
       }
     }
@@ -65,7 +82,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.77</p><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-pco-gas-codes-temporary.html\">codesystem Goal Attainment Scaling (GAS) Codes v0.1.0 (CodeSystem)</a></p><p>This value set contains 5 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-patient-gas-much-better-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-patient-gas-much-better-than-expected\">patient-gas-much-better-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Much better than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-patient-gas-better-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-patient-gas-better-than-expected\">patient-gas-better-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Better than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-patient-gas-expected-outcome\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-patient-gas-expected-outcome\">patient-gas-expected-outcome</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Expected outcome</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-patient-gas-less-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-patient-gas-less-than-expected\">patient-gas-less-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Less than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-patient-gas-much-less-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-patient-gas-much-less-than-expected\">patient-gas-much-less-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Much less than expected</td></tr></table></div>"
       },
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
       "version" : "0.1.0",
@@ -73,7 +90,7 @@
       "title" : "Patient Follow-Up GAS Score",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-08-13T17:11:01+00:00",
+      "date" : "2024-08-13T22:41:25+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -82,9 +99,9 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d29d2fb1-1d8d-4071-8396-c1d1786407fb",
-        "timestamp" : "2024-08-13T17:11:57+00:00",
-        "total" : 0,
+        "identifier" : "urn:uuid:fb3084ea-cec7-42b8-83b2-fa139854287b",
+        "timestamp" : "2024-08-13T22:42:13+00:00",
+        "total" : 5,
         "offset" : 0,
         "parameter" : [{
           "name" : "count",
@@ -99,16 +116,33 @@
           "valueBoolean" : false
         },
         {
-          "name" : "used-valueset",
-          "valueUri" : "null"
-        },
-        {
           "name" : "used-codesystem",
-          "valueUri" : "http://loinc.org|2.77"
+          "valueUri" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "patient-gas-much-better-than-expected",
+          "display" : "Much better than expected"
         },
         {
-          "name" : "version",
-          "valueUri" : "http://loinc.org|2.77"
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "patient-gas-better-than-expected",
+          "display" : "Better than expected"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "patient-gas-expected-outcome",
+          "display" : "Expected outcome"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "patient-gas-less-than-expected",
+          "display" : "Less than expected"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "patient-gas-much-less-than-expected",
+          "display" : "Much less than expected"
         }]
       }
     }
@@ -126,7 +160,7 @@
       "name" : "PCOCategoryValueSet",
       "title" : "PCO Categories",
       "status" : "draft",
-      "date" : "2024-08-13T17:11:01+00:00",
+      "date" : "2024-08-13T22:41:25+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -135,8 +169,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:120d51f8-fbd0-4fd8-a0de-2e95e2409e57",
-        "timestamp" : "2024-08-13T17:11:58+00:00",
+        "identifier" : "urn:uuid:4dfcf951-ff45-487f-acfc-b9c4ff254299",
+        "timestamp" : "2024-08-13T22:42:13+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -224,7 +258,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.77</p><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-pco-gas-codes-temporary.html\">codesystem Goal Attainment Scaling (GAS) Codes v0.1.0 (CodeSystem)</a></p><p>This value set contains 5 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-practitioner-gas-much-better-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-practitioner-gas-much-better-than-expected\">practitioner-gas-much-better-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Much better than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-practitioner-gas-better-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-practitioner-gas-better-than-expected\">practitioner-gas-better-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Better than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-practitioner-gas-expected-outcome\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-practitioner-gas-expected-outcome\">practitioner-gas-expected-outcome</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Expected outcome</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-practitioner-gas-less-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-practitioner-gas-less-than-expected\">practitioner-gas-less-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Less than expected</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary-practitioner-gas-much-less-than-expected\"> </a>\u00a0\u00a0<a href=\"CodeSystem-pco-gas-codes-temporary.html#pco-gas-codes-temporary-practitioner-gas-much-less-than-expected\">practitioner-gas-much-less-than-expected</a></td><td>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</td><td>Much less than expected</td></tr></table></div>"
       },
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
       "version" : "0.1.0",
@@ -232,7 +266,7 @@
       "title" : "Practitioner Follow-Up GAS Score",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-08-13T17:11:01+00:00",
+      "date" : "2024-08-13T22:41:25+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -241,9 +275,9 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:4929b539-2630-48f1-a0a5-e4b92532fda0",
-        "timestamp" : "2024-08-13T17:11:59+00:00",
-        "total" : 0,
+        "identifier" : "urn:uuid:7734cd27-e464-4fe7-bbac-890edf9a0fb7",
+        "timestamp" : "2024-08-13T22:42:13+00:00",
+        "total" : 5,
         "offset" : 0,
         "parameter" : [{
           "name" : "count",
@@ -258,16 +292,33 @@
           "valueBoolean" : false
         },
         {
-          "name" : "used-valueset",
-          "valueUri" : "null"
-        },
-        {
           "name" : "used-codesystem",
-          "valueUri" : "http://loinc.org|2.77"
+          "valueUri" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "practitioner-gas-much-better-than-expected",
+          "display" : "Much better than expected"
         },
         {
-          "name" : "version",
-          "valueUri" : "http://loinc.org|2.77"
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "practitioner-gas-better-than-expected",
+          "display" : "Better than expected"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "practitioner-gas-expected-outcome",
+          "display" : "Expected outcome"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "practitioner-gas-less-than-expected",
+          "display" : "Less than expected"
+        },
+        {
+          "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+          "code" : "practitioner-gas-much-less-than-expected",
+          "display" : "Much less than expected"
         }]
       }
     }

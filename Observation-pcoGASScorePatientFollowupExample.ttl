@@ -1,5 +1,4 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,8 +17,7 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       a loinc:GOAL-ATTAINMENT-SCALING ;
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "goal-attainment-scaling" ]
      ] )
   ] ; # 
@@ -39,8 +37,7 @@
   fhir:value [
      a fhir:CodeableConcept ;
      fhir:coding ( [
-       a loinc:PATIENT-GAS-BETTER-THAN-EXPECTED ;
-       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "patient-gas-better-than-expected" ] ;
        fhir:display [ fhir:v "Better than expected" ]
      ] )

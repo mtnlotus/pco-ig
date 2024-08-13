@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-08-13T17:11:01+00:00",
+  "date" : "2024-08-13T22:41:25+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -927,6 +927,18 @@
       },
       "name" : "Goal Attainment Scaling",
       "description" : "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pco-gas-codes-temporary"
+      },
+      "name" : "Goal Attainment Scaling (GAS) Codes",
+      "description" : "Temporary code system for GAS codes until publication by LOINC. All of these codes have been submitted to LOINC.",
       "exampleBoolean" : false
     },
     {

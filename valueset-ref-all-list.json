@@ -98,8 +98,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.232"],
       "uses" : {
       },
-      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
-      "StructureDefinition-pco-goal.html" : "Person-Centered Goal"
+      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -199,11 +199,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
       "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
@@ -249,8 +249,8 @@
       },
       "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal.html" : "Person-Centered Goal"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -426,7 +426,9 @@
       "name" : "CaregiverGASFollowupVS",
       "title" : "Caregiver Follow-Up GAS Score",
       "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
-      "systems" : ["http://loinc.org"],
+      "systems" : [
+        "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
+      ],
       "uses" : {
       },
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score"
@@ -438,7 +440,9 @@
       "name" : "PatientGASFollowupVS",
       "title" : "Patient Follow-Up GAS Score",
       "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
-      "systems" : ["http://loinc.org"],
+      "systems" : [
+        "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
+      ],
       "uses" : {
       },
       "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
@@ -456,11 +460,11 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
       "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
@@ -469,7 +473,9 @@
       "name" : "PractitionerGASFollowupVS",
       "title" : "Practitioner Follow-Up GAS Score",
       "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
-      "systems" : ["http://loinc.org"],
+      "systems" : [
+        "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
+      ],
       "uses" : {
       },
       "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"

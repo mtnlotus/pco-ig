@@ -1,5 +1,4 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,8 +12,8 @@
      fhir:extension ( [
        fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:Coding, loinc:PATIENT-GAS-MUCH-BETTER-THAN-EXPECTED ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "patient-gas-much-better-than-expected" ] ;
          fhir:display [ fhir:v "Much better than expected" ]
        ]
@@ -27,8 +26,8 @@
      fhir:extension ( [
        fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:Coding, loinc:PATIENT-GAS-BETTER-THAN-EXPECTED ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "patient-gas-better-than-expected" ] ;
          fhir:display [ fhir:v "Better than expected" ]
        ]
@@ -41,8 +40,8 @@
      fhir:extension ( [
        fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:Coding, loinc:PATIENT-GAS-EXPECTED-OUTCOME ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "patient-gas-expected-outcome" ] ;
          fhir:display [ fhir:v "Expected outcome" ]
        ]
@@ -55,8 +54,8 @@
      fhir:extension ( [
        fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:Coding, loinc:PATIENT-GAS-LESS-THAN-EXPECTED ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "patient-gas-less-than-expected" ] ;
          fhir:display [ fhir:v "Less than expected" ]
        ]
@@ -69,8 +68,8 @@
      fhir:extension ( [
        fhir:url [ fhir:v "level"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:Coding, loinc:PATIENT-GAS-MUCH-LESS-THAN-EXPECTED ;
-         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"^^xsd:anyURI ] ;
          fhir:code [ fhir:v "patient-gas-much-less-than-expected" ] ;
          fhir:display [ fhir:v "Much less than expected" ]
        ]

@@ -67,7 +67,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
 ","Code for Goal Attainment Scaling (GAS) score observation","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://loinc.org""/>
+    <system value=""http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary""/>
     <code value=""goal-attainment-scaling""/>
   </coding>
 </valueCodeableConcept>","","","",,"preferred","","http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes","",,,,"Observation.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
