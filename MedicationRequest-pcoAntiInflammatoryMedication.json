@@ -1,0 +1,35 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "pcoAntiInflammatoryMedication",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest pcoAntiInflammatoryMedication</b></p><a name=\"pcoAntiInflammatoryMedication\"> </a><a name=\"hcpcoAntiInflammatoryMedication\"> </a><a name=\"pcoAntiInflammatoryMedication-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <span title=\"Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 2550740}\">Aleve Arthritis Pain Topical Gel</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>requester</b>: <a href=\"Practitioner-pcoPractitionerAnderson.html\">Practitioner John Anderson, MD</a></p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>PatientInstruction</b></td><td><b>Timing</b></td><td><b>AsNeeded[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Anti-inflammatory gel applied to knee 30 minutes before exercise</td><td>Once</td><td>true</td></tr></table></div>"
+  },
+  "status" : "active",
+  "intent" : "order",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code" : "2550740",
+      "display" : "Aleve Arthritis Pain Topical Gel"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientJones"
+  },
+  "requester" : {
+    "reference" : "Practitioner/pcoPractitionerAnderson"
+  },
+  "dosageInstruction" : [{
+    "patientInstruction" : "Anti-inflammatory gel applied to knee 30 minutes before exercise",
+    "timing" : {
+      "repeat" : {
+        "boundsPeriod" : {
+          "start" : "2024-02-22",
+          "end" : "2024-06-30"
+        }
+      }
+    },
+    "asNeededBoolean" : true
+  }]
+}

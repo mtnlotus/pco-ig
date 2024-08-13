@@ -1,0 +1,35 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "pco-category-valueset",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet pco-category-valueset</b></p><a name=\"pco-category-valueset\"> </a><a name=\"hcpco-category-valueset\"> </a><a name=\"pco-category-valueset-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-pco-category-codes-example.html\"><code>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</code></a></li></ul></div>"
+  },
+  "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
+  "version" : "0.1.0",
+  "name" : "PCOCategoryValueSet",
+  "title" : "PCO Categories",
+  "status" : "draft",
+  "date" : "2024-08-13T17:00:10+00:00",
+  "publisher" : "Mountain Lotus WellBeing LLC",
+  "contact" : [{
+    "name" : "Mountain Lotus WellBeing LLC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://mtnlotus.com"
+    }]
+  }],
+  "description" : "Example value set to identify the category for PCO resources.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"
+    }]
+  }
+}

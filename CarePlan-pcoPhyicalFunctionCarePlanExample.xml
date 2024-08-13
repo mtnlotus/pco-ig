@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="pcoPhyicalFunctionCarePlanExample"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CarePlan pcoPhyicalFunctionCarePlanExample</b></p><a name="pcoPhyicalFunctionCarePlanExample"> </a><a name="hcpcoPhyicalFunctionCarePlanExample"> </a><a name="pcoPhyicalFunctionCarePlanExample-en-US"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title="Codes:{http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example physical-function}">Physical Function</span>, <span title="Codes:{http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example independence}">Independence</span>, <span title="Codes:{http://hl7.org/fhir/us/core/CodeSystem/careplan-category assess-plan}">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>period</b>: 2024-02-22 --&gt; 2024-09-30</p><p><b>goal</b>: <a href="Goal-pcoGoalWalkDogExample.html">Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Physical Function; description = ; start[x] = 2024-04-03</a></p><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="ServiceRequest-pcoWalkOutsideActionStep.html">ServiceRequest </a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="ServiceRequest-pcoPhysicalTherapyReferral.html">ServiceRequest Physical therapy procedure (regime/therapy)</a></p></blockquote><blockquote><p><b>activity</b></p><p><b>reference</b>: <a href="MedicationRequest-pcoAntiInflammatoryMedication.html">MedicationRequest: status = active; intent = order; medication[x] = Aleve Arthritis Pain Topical Gel</a></p></blockquote></div>
+  </text>
+  <status value="active"/>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+      <code value="physical-function"/>
+      <display value="Physical Function"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+      <code value="independence"/>
+      <display value="Independence"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/us/core/CodeSystem/careplan-category"/>
+      <code value="assess-plan"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <period>
+    <start value="2024-02-22"/>
+    <end value="2024-09-30"/>
+  </period>
+  <goal>
+    <reference value="Goal/pcoGoalWalkDogExample"/>
+  </goal>
+  <activity>
+    <reference>
+      <reference value="ServiceRequest/pcoWalkOutsideActionStep"/>
+    </reference>
+  </activity>
+  <activity>
+    <reference>
+      <reference value="ServiceRequest/pcoPhysicalTherapyReferral"/>
+    </reference>
+  </activity>
+  <activity>
+    <reference>
+      <reference value="MedicationRequest/pcoAntiInflammatoryMedication"/>
+    </reference>
+  </activity>
+</CarePlan>

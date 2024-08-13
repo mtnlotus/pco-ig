@@ -1,6 +1,18 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://hl7.org/fhir/care-plan-activity-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityStatus",
+      "title" : "CarePlanActivityStatus",
+      "description" : "Codes that reflect the current state of a care plan activity within its overall life cycle.",
+      "oids" : ["2.16.840.1.113883.4.642.4.147"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-status.html" : "CarePlanActivityStatus"
+    },
+    {
       "url" : "http://hl7.org/fhir/goal-status",
       "version" : "4.0.1",
       "status" : "draft",
@@ -13,6 +25,18 @@
       "http://hl7.org/fhir/R4/valueset-goal-status.html" : "GoalLifecycleStatus"
     },
     {
+      "url" : "http://hl7.org/fhir/narrative-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "NarrativeStatus",
+      "title" : "NarrativeStatus",
+      "description" : "The status of a resource narrative.",
+      "oids" : ["2.16.840.1.113883.4.642.4.56"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-narrative-status.html" : "US Core Narrative Status"
+    },
+    {
       "url" : "http://hl7.org/fhir/observation-status",
       "version" : "4.0.1",
       "status" : "active",
@@ -23,6 +47,41 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-observation-status.html" : "ObservationStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestIntent",
+      "title" : "RequestIntent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.114"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-care-plan-intent.html" : "Care Plan Intent"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.112"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-request-status.html" : "RequestStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/resource-types",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ResourceType",
+      "title" : "ResourceType",
+      "description" : "One of the resource types defined as part of this version of FHIR.",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-kind.html" : "Care Plan Activity Kind"
     },
     {
       "url" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
@@ -45,23 +104,23 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
       "ValueSet-caregiver-gas-followup-vs.html" : "Caregiver Follow-Up GAS Score",
       "ValueSet-patient-gas-followup-vs.html" : "Patient Follow-Up GAS Score",
       "ValueSet-practitioner-gas-followup-vs.html" : "Practitioner Follow-Up GAS Score",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-survey-codes.html" : "US Core Survey Codes",
       "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example",
+      "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
       "version" : "0.1.0",
       "status" : "active",
-      "name" : "PCOGoalDomainCodesExample",
-      "title" : "Goal Domain Code Examples",
-      "description" : "Example code system to identify the domain of a PCO Goal.",
+      "name" : "PCOCategoryCodesExample",
+      "title" : "Category Code Examples",
+      "description" : "Example code system to identify the category for PCO resources.",
       "uses" : {
       },
-      "ValueSet-pco-goal-domains-example.html" : "Goal Domains"
+      "ValueSet-pco-category-valueset.html" : "PCO Categories"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -73,12 +132,16 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
       "http://hl7.org/fhir/R4/valueset-goal-start-event.html" : "Goal start event",
-      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
       "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings"
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",

@@ -1,0 +1,39 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "pcoPhysicalTherapyReferral",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal",
+    "valueReference" : {
+      "reference" : "Goal/pcoGoalWalkDogExample"
+    }
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "91251008",
+      "display" : "Physical therapy procedure (regime/therapy)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientJones"
+  },
+  "occurrenceTiming" : {
+    "repeat" : {
+      "boundsPeriod" : {
+        "start" : "2024-03-01",
+        "end" : "2024-04-30"
+      },
+      "frequency" : 1,
+      "periodUnit" : "wk"
+    }
+  },
+  "authoredOn" : "2024-02-22",
+  "requester" : {
+    "reference" : "Practitioner/pcoPractitionerAnderson"
+  },
+  "note" : [{
+    "text" : "Trial of physical therapy focused on strengthening"
+  }]
+}

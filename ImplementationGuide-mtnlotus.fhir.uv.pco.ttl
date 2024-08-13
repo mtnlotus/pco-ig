@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-08T17:33:11+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-13T17:00:10+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -672,6 +672,57 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CarePlan" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CarePlan/pcoPhyicalFunctionCarePlanExample> ;
+         fhir:reference [ fhir:v "CarePlan/pcoPhyicalFunctionCarePlanExample" ]
+       ] ;
+       fhir:name [ fhir:v "Care Plan for improving physical funtiontion" ] ;
+       fhir:description [ fhir:v "Care Plan for a person-centered goal with action steps for achieving what matters most to that person." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/MedicationRequest/pcoAntiInflammatoryMedication> ;
+         fhir:reference [ fhir:v "MedicationRequest/pcoAntiInflammatoryMedication" ]
+       ] ;
+       fhir:name [ fhir:v "Care Plan: Anti-Inflammatory Medication" ] ;
+       fhir:description [ fhir:v "Care Plan activity: Anti-inflammatory gel for knee pain to enable walking" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ServiceRequest/pcoPhysicalTherapyReferral> ;
+         fhir:reference [ fhir:v "ServiceRequest/pcoPhysicalTherapyReferral" ]
+       ] ;
+       fhir:name [ fhir:v "Care Plan: Clinical action step" ] ;
+       fhir:description [ fhir:v "Care Plan activity: Physical therapy to relieve pain related to walking" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ServiceRequest/pcoWalkOutsideActionStep> ;
+         fhir:reference [ fhir:v "ServiceRequest/pcoWalkOutsideActionStep" ]
+       ] ;
+       fhir:name [ fhir:v "Care Plan: Personal action step" ] ;
+       fhir:description [ fhir:v "Care Plan activity: Initial personal action step toward goal of walking dog outside" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -699,6 +750,18 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example> ;
+         fhir:reference [ fhir:v "CodeSystem/pco-category-codes-example" ]
+       ] ;
+       fhir:name [ fhir:v "Category Code Examples" ] ;
+       fhir:description [ fhir:v "Example code system to identify the category for PCO resources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/pco> ;
          fhir:reference [ fhir:v "CodeSystem/pco" ]
        ] ;
@@ -716,18 +779,6 @@
        ] ;
        fhir:name [ fhir:v "Example Patient" ] ;
        fhir:description [ fhir:v "Dorothy Jones" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerGonzalez> ;
-         fhir:reference [ fhir:v "Practitioner/pcoPractitionerGonzalez" ]
-       ] ;
-       fhir:name [ fhir:v "Example Practitioner" ] ;
-       fhir:description [ fhir:v "Maria Gonzalez" ] ;
        fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -766,30 +817,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example> ;
-         fhir:reference [ fhir:v "CodeSystem/pco-goal-domain-codes-example" ]
-       ] ;
-       fhir:name [ fhir:v "Goal Domain Code Examples" ] ;
-       fhir:description [ fhir:v "Example code system to identify the domain of a PCO Goal." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example> ;
-         fhir:reference [ fhir:v "ValueSet/pco-goal-domains-example" ]
-       ] ;
-       fhir:name [ fhir:v "Goal Domains" ] ;
-       fhir:description [ fhir:v "Example value set to identify the domain of a PCO Goal." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Goal" ]
        ] ) ;
        fhir:reference [
@@ -817,6 +844,18 @@
          fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"^^xsd:anyURI ;
          fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal>
        ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerGonzalez> ;
+         fhir:reference [ fhir:v "Practitioner/pcoPractitionerGonzalez" ]
+       ] ;
+       fhir:name [ fhir:v "Health & Wellness Coach" ] ;
+       fhir:description [ fhir:v "Maria Gonzalez, NBC-HWC" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -870,6 +909,30 @@
        ] ;
        fhir:name [ fhir:v "Patient Goal Attainment Scaling (GAS) score" ] ;
        fhir:description [ fhir:v "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset> ;
+         fhir:reference [ fhir:v "ValueSet/pco-category-valueset" ]
+       ] ;
+       fhir:name [ fhir:v "PCO Categories" ] ;
+       fhir:description [ fhir:v "Example value set to identify the category for PCO resources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-care-plan" ]
+       ] ;
+       fhir:name [ fhir:v "Person-Centered Care Plan" ] ;
+       fhir:description [ fhir:v "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan’s goals and desired outcomes. A plan SHOULD address the person’s stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -967,6 +1030,18 @@
        fhir:name [ fhir:v "Practitioner Goal Attainment Scaling (GAS) score" ] ;
        fhir:description [ fhir:v "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerAnderson> ;
+         fhir:reference [ fhir:v "Practitioner/pcoPractitionerAnderson" ]
+       ] ;
+       fhir:name [ fhir:v "Primary Care Physician" ] ;
+       fhir:description [ fhir:v "John Anderson, MD" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

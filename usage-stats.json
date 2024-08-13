@@ -64,6 +64,12 @@
     }
   ],
   "profiles": {
+    "CarePlan": [
+      {
+        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan",
+        "title": "Person-Centered Care Plan"
+      }
+    ],
     "Observation": [
       {
         "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score",
@@ -103,10 +109,16 @@
       "StructureDefinition.snapshot.element.type",
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
+    "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal": [
+      "ServiceRequest"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [

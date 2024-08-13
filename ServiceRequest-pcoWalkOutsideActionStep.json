@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "pcoWalkOutsideActionStep",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal",
+    "valueReference" : {
+      "reference" : "Goal/pcoGoalWalkDogExample"
+    }
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "code" : {
+    "text" : "Walk outside without my dog"
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientJones"
+  },
+  "occurrenceTiming" : {
+    "repeat" : {
+      "boundsPeriod" : {
+        "start" : "2024-02-22",
+        "end" : "2024-03-07"
+      },
+      "frequency" : 2,
+      "periodUnit" : "wk"
+    }
+  },
+  "authoredOn" : "2024-02-22",
+  "requester" : {
+    "reference" : "Practitioner/pcoPractitionerGonzalez"
+  },
+  "performer" : [{
+    "reference" : "Patient/pcoPatientJones"
+  }],
+  "patientInstruction" : "Start with a short walk to the corner of your block to gain confidence in your walking."
+}

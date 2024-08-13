@@ -12,9 +12,79 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-kind",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityKind",
+      "title" : "Care Plan Activity Kind",
+      "description" : "Resource types defined as part of FHIR that can be represented as in-line definitions of a care plan activity.",
+      "systems" : ["http://hl7.org/fhir/resource-types"],
+      "oids" : ["2.16.840.1.113883.4.642.3.145"],
+      "sources" : ["2.16.840.1.113883.4.642.3.145"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-outcome",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityOutcome",
+      "title" : "Care Plan Activity Outcome",
+      "description" : "Example codes indicating the outcome of a care plan activity. Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.149"],
+      "sources" : ["2.16.840.1.113883.4.642.3.149"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-activity-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanActivityStatus",
+      "title" : "CarePlanActivityStatus",
+      "description" : "Codes that reflect the current state of a care plan activity within its overall life cycle.",
+      "systems" : ["http://hl7.org/fhir/care-plan-activity-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.146"],
+      "sources" : ["2.16.840.1.113883.4.642.3.146"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanCategory",
+      "title" : "Care Plan Category",
+      "description" : "Example codes indicating the category a care plan falls within.  Note that these are in no way complete and might not even be appropriate for some uses.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.148"],
+      "sources" : ["2.16.840.1.113883.4.642.3.148"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/care-plan-intent",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CarePlanIntent",
+      "title" : "Care Plan Intent",
+      "description" : "Codes indicating the degree of authority/intentionality associated with a care plan.",
+      "systems" : ["http://hl7.org/fhir/request-intent"],
+      "oids" : ["2.16.840.1.113883.4.642.3.150"],
+      "sources" : ["2.16.840.1.113883.4.642.3.150"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -28,6 +98,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.232"],
       "uses" : {
       },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
       "StructureDefinition-pco-goal.html" : "Person-Centered Goal"
     },
     {
@@ -42,9 +113,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.5"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/goal-achievement",
@@ -128,10 +199,25 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.375"],
+      "sources" : ["2.16.840.1.113883.4.642.3.375"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-category",
@@ -145,9 +231,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.403"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -161,10 +247,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.396"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -180,9 +266,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.399"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -196,9 +282,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.395"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -212,9 +298,23 @@
       "sources" : ["2.16.840.1.113883.4.642.3.400"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureCodes(SNOMEDCT)",
+      "title" : "Procedure Codes (SNOMED CT)",
+      "description" : "Procedure Code: All SNOMED CT procedure codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.427"],
+      "sources" : ["2.16.840.1.113883.4.642.3.427"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
@@ -231,9 +331,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.407"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -249,9 +349,23 @@
       "sources" : ["2.16.840.1.113883.4.642.3.397"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "RequestStatus",
+      "title" : "RequestStatus",
+      "description" : "Codes identifying the lifecycle stage of a request.",
+      "systems" : ["http://hl7.org/fhir/request-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.111"],
+      "sources" : ["2.16.840.1.113883.4.642.3.111"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
     },
     {
       "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description",
@@ -266,6 +380,18 @@
       "StructureDefinition-pco-goal.html" : "Person-Centered Goal"
     },
     {
+      "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status",
+      "version" : "6.1.0",
+      "status" : "active",
+      "name" : "NarrativeStatus",
+      "title" : "US Core Narrative Status",
+      "description" : "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
+      "systems" : ["http://hl7.org/fhir/narrative-status"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+    },
+    {
       "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category",
       "version" : "6.1.0",
       "status" : "active",
@@ -275,9 +401,9 @@
       "systems" : ["http://hl7.org/fhir/us/core/CodeSystem/us-core-category"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes",
@@ -289,9 +415,9 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
@@ -315,22 +441,26 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "PCOGoalDomainsExample",
-      "title" : "Goal Domains",
-      "description" : "Example value set to identify the domain of a PCO Goal.",
+      "name" : "PCOCategoryValueSet",
+      "title" : "PCO Categories",
+      "description" : "Example value set to identify the category for PCO resources.",
       "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"
+        "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"
       ],
       "uses" : {
       },
-      "StructureDefinition-pco-goal.html" : "Person-Centered Goal"
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
+      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",

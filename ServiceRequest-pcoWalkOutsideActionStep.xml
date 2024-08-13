@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="pcoWalkOutsideActionStep"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal">
+    <valueReference>
+      <reference value="Goal/pcoGoalWalkDogExample"/>
+    </valueReference>
+  </extension>
+  <status value="active"/>
+  <intent value="plan"/>
+  <code>
+    <text value="Walk outside without my dog"/>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <occurrenceTiming>
+    <repeat>
+      <boundsPeriod>
+        <start value="2024-02-22"/>
+        <end value="2024-03-07"/>
+      </boundsPeriod>
+      <frequency value="2"/>
+      <periodUnit value="wk"/>
+    </repeat>
+  </occurrenceTiming>
+  <authoredOn value="2024-02-22"/>
+  <requester>
+    <reference value="Practitioner/pcoPractitionerGonzalez"/>
+  </requester>
+  <performer>
+    <reference value="Patient/pcoPatientJones"/>
+  </performer>
+  <patientInstruction value="Start with a short walk to the corner of your block to gain confidence in your walking."/>
+</ServiceRequest>

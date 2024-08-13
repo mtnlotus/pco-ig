@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pco-category-valueset"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pco-category-valueset</b></p><a name="pco-category-valueset"> </a><a name="hcpco-category-valueset"> </a><a name="pco-category-valueset-en-US"> </a><ul><li>Include all codes defined in <a href="CodeSystem-pco-category-codes-example.html"><code>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</code></a></li></ul></div>
+  </text>
+  <url value="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"/>
+  <version value="0.1.0"/>
+  <name value="PCOCategoryValueSet"/>
+  <title value="PCO Categories"/>
+  <status value="draft"/>
+  <date value="2024-08-13T17:00:10+00:00"/>
+  <publisher value="Mountain Lotus WellBeing LLC"/>
+  <contact>
+    <name value="Mountain Lotus WellBeing LLC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://mtnlotus.com"/>
+    </telecom>
+  </contact>
+  <description value="Example value set to identify the category for PCO resources."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+    </include>
+  </compose>
+</ValueSet>

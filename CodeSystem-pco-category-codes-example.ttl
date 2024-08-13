@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pco-category-codes-example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco-category-codes-example</b></p><a name=\"pco-category-codes-example\"> </a><a name=\"hcpco-category-codes-example\"> </a><a name=\"pco-category-codes-example-en-US\"> </a><p>This case-sensitive code system <code>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">housing<a name=\"pco-category-codes-example-housing\"> </a></td><td>Housing</td><td>Having acceptable housing that is appropriate for a person's needs.</td></tr><tr><td style=\"white-space:nowrap\">access-to-services<a name=\"pco-category-codes-example-access-to-services\"> </a></td><td>Access To Services</td><td>Ability to access, afford, and utilize appropriate health and community resources. Includes access to transportation, stable food resources, and assistance with financial concerns.</td></tr><tr><td style=\"white-space:nowrap\">caregiver-needs<a name=\"pco-category-codes-example-caregiver-needs\"> </a></td><td>Caregiver Needs</td><td/></tr><tr><td style=\"white-space:nowrap\">end-of-life<a name=\"pco-category-codes-example-end-of-life\"> </a></td><td>End Of Life</td><td>Planning for end-of-life care and desires to reduce burden on family or others.</td></tr><tr><td style=\"white-space:nowrap\">independence<a name=\"pco-category-codes-example-independence\"> </a></td><td>Independence</td><td>Ability to live independently without help or assistance from others.</td></tr><tr><td style=\"white-space:nowrap\">legal<a name=\"pco-category-codes-example-legal\"> </a></td><td>Legal</td><td>Having adequate support for legal issues such as child custody, medical power of attorney, etc.</td></tr><tr><td style=\"white-space:nowrap\">managing-conditions<a name=\"pco-category-codes-example-managing-conditions\"> </a></td><td>Managing Conditions</td><td>Satisfaction with health care received or desired, and experiences with providers and the health care system.</td></tr><tr><td style=\"white-space:nowrap\">medication-management<a name=\"pco-category-codes-example-medication-management\"> </a></td><td>Medication Management</td><td>Satisfaction with ability to manage medications.</td></tr><tr><td style=\"white-space:nowrap\">improving-health-and-wellness<a name=\"pco-category-codes-example-improving-health-and-wellness\"> </a></td><td>Improving Health And Wellness</td><td>Ability to develop, improve and maintain positive health and wellness habits.</td></tr><tr><td style=\"white-space:nowrap\">physical-function<a name=\"pco-category-codes-example-physical-function\"> </a></td><td>Physical Function</td><td>Ability to manage physical functioning, physical symptoms or conditions, and improve or maintain ability to participate in physical activities.</td></tr><tr><td style=\"white-space:nowrap\">social-functioning<a name=\"pco-category-codes-example-social-functioning\"> </a></td><td>Social Functioning</td><td/></tr><tr><td style=\"white-space:nowrap\">emotional-and-mental-health<a name=\"pco-category-codes-example-emotional-and-mental-health\"> </a></td><td>Emotional And Mental Health</td><td/></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "PCOCategoryCodesExample"] ; # 
+  fhir:title [ fhir:v "Category Code Examples"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-13T17:00:10+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://mtnlotus.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Example code system to identify the category for PCO resources."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "housing" ] ;
+     fhir:display [ fhir:v "Housing" ] ;
+     fhir:definition [ fhir:v "Having acceptable housing that is appropriate for a person's needs." ]
+  ] [
+     fhir:code [ fhir:v "access-to-services" ] ;
+     fhir:display [ fhir:v "Access To Services" ] ;
+     fhir:definition [ fhir:v "Ability to access, afford, and utilize appropriate health and community resources. Includes access to transportation, stable food resources, and assistance with financial concerns." ]
+  ] [
+     fhir:code [ fhir:v "caregiver-needs" ] ;
+     fhir:display [ fhir:v "Caregiver Needs" ]
+  ] [
+     fhir:code [ fhir:v "end-of-life" ] ;
+     fhir:display [ fhir:v "End Of Life" ] ;
+     fhir:definition [ fhir:v "Planning for end-of-life care and desires to reduce burden on family or others." ]
+  ] [
+     fhir:code [ fhir:v "independence" ] ;
+     fhir:display [ fhir:v "Independence" ] ;
+     fhir:definition [ fhir:v "Ability to live independently without help or assistance from others." ]
+  ] [
+     fhir:code [ fhir:v "legal" ] ;
+     fhir:display [ fhir:v "Legal" ] ;
+     fhir:definition [ fhir:v "Having adequate support for legal issues such as child custody, medical power of attorney, etc." ]
+  ] [
+     fhir:code [ fhir:v "managing-conditions" ] ;
+     fhir:display [ fhir:v "Managing Conditions" ] ;
+     fhir:definition [ fhir:v "Satisfaction with health care received or desired, and experiences with providers and the health care system." ]
+  ] [
+     fhir:code [ fhir:v "medication-management" ] ;
+     fhir:display [ fhir:v "Medication Management" ] ;
+     fhir:definition [ fhir:v "Satisfaction with ability to manage medications." ]
+  ] [
+     fhir:code [ fhir:v "improving-health-and-wellness" ] ;
+     fhir:display [ fhir:v "Improving Health And Wellness" ] ;
+     fhir:definition [ fhir:v "Ability to develop, improve and maintain positive health and wellness habits." ]
+  ] [
+     fhir:code [ fhir:v "physical-function" ] ;
+     fhir:display [ fhir:v "Physical Function" ] ;
+     fhir:definition [ fhir:v "Ability to manage physical functioning, physical symptoms or conditions, and improve or maintain ability to participate in physical activities." ]
+  ] [
+     fhir:code [ fhir:v "social-functioning" ] ;
+     fhir:display [ fhir:v "Social Functioning" ]
+  ] [
+     fhir:code [ fhir:v "emotional-and-mental-health" ] ;
+     fhir:display [ fhir:v "Emotional And Mental Health" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

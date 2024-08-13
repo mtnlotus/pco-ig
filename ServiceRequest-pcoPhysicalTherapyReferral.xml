@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="pcoPhysicalTherapyReferral"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal">
+    <valueReference>
+      <reference value="Goal/pcoGoalWalkDogExample"/>
+    </valueReference>
+  </extension>
+  <status value="active"/>
+  <intent value="plan"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="91251008"/>
+      <display value="Physical therapy procedure (regime/therapy)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <occurrenceTiming>
+    <repeat>
+      <boundsPeriod>
+        <start value="2024-03-01"/>
+        <end value="2024-04-30"/>
+      </boundsPeriod>
+      <frequency value="1"/>
+      <periodUnit value="wk"/>
+    </repeat>
+  </occurrenceTiming>
+  <authoredOn value="2024-02-22"/>
+  <requester>
+    <reference value="Practitioner/pcoPractitionerAnderson"/>
+  </requester>
+  <note>
+    <text value="Trial of physical therapy focused on strengthening"/>
+  </note>
+</ServiceRequest>

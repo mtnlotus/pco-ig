@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-08-08T17:33:11+00:00"/>
+  <date value="2024-08-13T17:00:10+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -586,6 +586,50 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/pcoPhyicalFunctionCarePlanExample"/>
+      </reference>
+      <name value="Care Plan for improving physical funtiontion"/>
+      <description value="Care Plan for a person-centered goal with action steps for achieving what matters most to that person."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/pcoAntiInflammatoryMedication"/>
+      </reference>
+      <name value="Care Plan: Anti-Inflammatory Medication"/>
+      <description value="Care Plan activity: Anti-inflammatory gel for knee pain to enable walking"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/pcoPhysicalTherapyReferral"/>
+      </reference>
+      <name value="Care Plan: Clinical action step"/>
+      <description value="Care Plan activity: Physical therapy to relieve pain related to walking"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/pcoWalkOutsideActionStep"/>
+      </reference>
+      <name value="Care Plan: Personal action step"/>
+      <description value="Care Plan activity: Initial personal action step toward goal of walking dog outside"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -611,6 +655,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/pco-category-codes-example"/>
+      </reference>
+      <name value="Category Code Examples"/>
+      <description value="Example code system to identify the category for PCO resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/pco"/>
       </reference>
       <name value="Codes for PCO"/>
@@ -626,17 +681,6 @@
       </reference>
       <name value="Example Patient"/>
       <description value="Dorothy Jones"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
-      </extension>
-      <reference>
-        <reference value="Practitioner/pcoPractitionerGonzalez"/>
-      </reference>
-      <name value="Example Practitioner"/>
-      <description value="Maria Gonzalez"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -672,28 +716,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/pco-goal-domain-codes-example"/>
-      </reference>
-      <name value="Goal Domain Code Examples"/>
-      <description value="Example code system to identify the domain of a PCO Goal."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/pco-goal-domains-example"/>
-      </reference>
-      <name value="Goal Domains"/>
-      <description value="Example value set to identify the domain of a PCO Goal."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Goal"/>
       </extension>
       <reference>
@@ -713,6 +735,17 @@
       <name value="Goal without GAS"/>
       <description value="Person-centered goal without attainment scaling"/>
       <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/pcoPractitionerGonzalez"/>
+      </reference>
+      <name value="Health &amp; Wellness Coach"/>
+      <description value="Maria Gonzalez, NBC-HWC"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -756,6 +789,28 @@
       </reference>
       <name value="Patient Goal Attainment Scaling (GAS) score"/>
       <description value="The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-category-valueset"/>
+      </reference>
+      <name value="PCO Categories"/>
+      <description value="Example value set to identify the category for PCO resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-care-plan"/>
+      </reference>
+      <name value="Person-Centered Care Plan"/>
+      <description value="A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan’s goals and desired outcomes. A plan SHOULD address the person’s stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -842,6 +897,17 @@
       <name value="Practitioner Goal Attainment Scaling (GAS) score"/>
       <description value="The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/pcoPractitionerAnderson"/>
+      </reference>
+      <name value="Primary Care Physician"/>
+      <description value="John Anderson, MD"/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

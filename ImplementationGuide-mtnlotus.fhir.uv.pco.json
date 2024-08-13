@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-08-08T17:33:11+00:00",
+  "date" : "2024-08-13T17:00:10+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -790,6 +790,54 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/pcoPhyicalFunctionCarePlanExample"
+      },
+      "name" : "Care Plan for improving physical funtiontion",
+      "description" : "Care Plan for a person-centered goal with action steps for achieving what matters most to that person.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/pcoAntiInflammatoryMedication"
+      },
+      "name" : "Care Plan: Anti-Inflammatory Medication",
+      "description" : "Care Plan activity: Anti-inflammatory gel for knee pain to enable walking",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/pcoPhysicalTherapyReferral"
+      },
+      "name" : "Care Plan: Clinical action step",
+      "description" : "Care Plan activity: Physical therapy to relieve pain related to walking",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/pcoWalkOutsideActionStep"
+      },
+      "name" : "Care Plan: Personal action step",
+      "description" : "Care Plan activity: Initial personal action step toward goal of walking dog outside",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -817,6 +865,18 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
+        "reference" : "CodeSystem/pco-category-codes-example"
+      },
+      "name" : "Category Code Examples",
+      "description" : "Example code system to identify the category for PCO resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
         "reference" : "CodeSystem/pco"
       },
       "name" : "Codes for PCO",
@@ -833,18 +893,6 @@
       },
       "name" : "Example Patient",
       "description" : "Dorothy Jones",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/pcoPractitionerGonzalez"
-      },
-      "name" : "Example Practitioner",
-      "description" : "Maria Gonzalez",
       "exampleBoolean" : true
     },
     {
@@ -884,30 +932,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/pco-goal-domain-codes-example"
-      },
-      "name" : "Goal Domain Code Examples",
-      "description" : "Example code system to identify the domain of a PCO Goal.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pco-goal-domains-example"
-      },
-      "name" : "Goal Domains",
-      "description" : "Example value set to identify the domain of a PCO Goal.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
       }],
       "reference" : {
@@ -928,6 +952,18 @@
       "name" : "Goal without GAS",
       "description" : "Person-centered goal without attainment scaling",
       "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/pcoPractitionerGonzalez"
+      },
+      "name" : "Health & Wellness Coach",
+      "description" : "Maria Gonzalez, NBC-HWC",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -975,6 +1011,30 @@
       },
       "name" : "Patient Goal Attainment Scaling (GAS) score",
       "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-category-valueset"
+      },
+      "name" : "PCO Categories",
+      "description" : "Example value set to identify the category for PCO resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-care-plan"
+      },
+      "name" : "Person-Centered Care Plan",
+      "description" : "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan’s goals and desired outcomes. A plan SHOULD address the person’s stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person.",
       "exampleBoolean" : false
     },
     {
@@ -1069,6 +1129,18 @@
       "name" : "Practitioner Goal Attainment Scaling (GAS) score",
       "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/pcoPractitionerAnderson"
+      },
+      "name" : "Primary Care Physician",
+      "description" : "John Anderson, MD",
+      "exampleBoolean" : true
     }],
     "page" : {
       "extension" : [{

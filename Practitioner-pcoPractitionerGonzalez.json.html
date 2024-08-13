@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Example Practitioner - JSON Representation - Person-Centered Outcomes v0.1.0</title>
+    <title>Health &amp; Wellness Coach - JSON Representation - Person-Centered Outcomes v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.19"}
-    h3,h4,h5,h6{--heading-prefix:"2.19"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.26"}
+    h3,h4,h5,h6{--heading-prefix:"2.26"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -106,7 +106,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Example Practitioner</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Health &amp; Wellness Coach</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -165,7 +165,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Example Practitioner - JSON Representation</h2>
+<h2 id="root">: Health &amp; Wellness Coach - JSON Representation</h2>
 
 
 <p><a href="Practitioner-pcoPractitionerGonzalez.json" no-download="true">Raw json</a> | <a href="Practitioner-pcoPractitionerGonzalez.json" download>Download</a></p>
@@ -181,7 +181,7 @@
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "pcoPractitionerGonzalez",
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner pcoPractitionerGonzalez&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;pcoPractitionerGonzalez\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpcoPractitionerGonzalez\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;pcoPractitionerGonzalez-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;http://example.org&lt;/code&gt;/ee8d4ac0-545c-4501-8d7e-646bfbda6cd7\u00a0(use:\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Maria Gonzalez &lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: Female&lt;/p&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner pcoPractitionerGonzalez&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;pcoPractitionerGonzalez\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpcoPractitionerGonzalez\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;pcoPractitionerGonzalez-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;http://example.org&lt;/code&gt;/ee8d4ac0-545c-4501-8d7e-646bfbda6cd7\u00a0(use:\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Maria Gonzalez, NBC-HWC&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: Female&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
     {
@@ -192,9 +192,13 @@
   ],
   "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
     {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.text">text</a>" : "Maria Gonzalez, NBC-HWC",
       "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Gonzalez",
       "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
         "Maria"
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.suffix">suffix</a>" : [
+        "NBC-HWC"
       ]
     }
   ],
@@ -223,7 +227,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 8, 2024 17:33+0000">2024-08-08</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 13, 2024 17:00+0000">2024-08-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

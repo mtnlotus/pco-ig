@@ -22,22 +22,26 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-goal-domains-example",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "PCOGoalDomainsExample",
-      "title" : "Goal Domains",
-      "description" : "Example value set to identify the domain of a PCO Goal.",
+      "name" : "PCOCategoryValueSet",
+      "title" : "PCO Categories",
+      "description" : "Example value set to identify the category for PCO resources.",
       "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/pco-goal-domain-codes-example"
+        "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"
       ],
       "uses" : {
       },
-      "StructureDefinition-pco-goal.html" : "Person-Centered Goal"
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
+      "StructureDefinition-pco-caregiver-gas-score.html" : "Caregiver Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal.html" : "Person-Centered Goal",
+      "StructureDefinition-pco-practitioner-gas-score.html" : "Practitioner Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
