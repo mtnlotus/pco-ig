@@ -65,7 +65,7 @@ Usage: #example
 * intent = #order
 * subject = Reference(pcoPatientJones)
 * requester = Reference(pcoPractitionerAnderson)
-* medicationCodeableConcept = $rxNorm#2550740 "Aleve Arthritis Pain Topical Gel"
+* medicationCodeableConcept = $rxNorm#2550740 "Aleve Arthritis Pain 1 % Topical Gel"
 * dosageInstruction.asNeededBoolean = true
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2024-02-22"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2024-06-30"

@@ -17,7 +17,7 @@ Description: "Goal Attainment Scaling (GAS) is an extension used to specify five
 
 RuleSet: GASScoreObservationBase
 * insert PCOCategory
-* code = $LNC#goal-attainment-scaling
+* code = PCOGASCodesTemporary#goal-attainment-scaling
   * ^short = "Code for Goal Attainment Scaling (GAS) score observation"
 * effectiveDateTime 1..1 MS
   * ^short = "Time the score was assessed"
@@ -33,12 +33,12 @@ This slicing does not work. Always adds this to example instances:
     }
 */
 // * focus
-//   * ^slicing.discriminator.type = #pattern
+//   * ^slicing.discriminator.type = #value
 //   * ^slicing.discriminator.path = "$this"
 //   * ^slicing.rules = #open
 // * focus contains
 //     pcoGoal 1..1 MS
-// * focus[pcoGoal] = Reference(PCOGoal)
+// * focus[pcoGoal] = only Reference(PCOGoal)
 //   * ^short = "Person-centered goal"
 
 Profile: PCOGoal

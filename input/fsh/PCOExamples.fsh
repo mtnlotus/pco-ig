@@ -68,15 +68,15 @@ Usage: #example
 * startDate = "2024-04-03"
 * target.dueDate = "2024-09-30"
 * description.text = "Walk dog outside once a week"
-* extension[gas-scaling][0].extension[level].valueCoding = $LNC#patient-gas-much-better-than-expected "Much better than expected"
+* extension[gas-scaling][0].extension[level].valueCoding = PCOGASCodesTemporary#patient-gas-much-better-than-expected "Much better than expected"
 * extension[gas-scaling][0].extension[text].valueString = "Walk dog outside three times a week"
-* extension[gas-scaling][1].extension[level].valueCoding = $LNC#patient-gas-better-than-expected "Better than expected"
+* extension[gas-scaling][1].extension[level].valueCoding = PCOGASCodesTemporary#patient-gas-better-than-expected "Better than expected"
 * extension[gas-scaling][1].extension[text].valueString = "Walk dog outside twice a week"
-* extension[gas-scaling][2].extension[level].valueCoding = $LNC#patient-gas-expected-outcome "Expected outcome"
+* extension[gas-scaling][2].extension[level].valueCoding = PCOGASCodesTemporary#patient-gas-expected-outcome "Expected outcome"
 * extension[gas-scaling][2].extension[text].valueString = "Walk dog outside once a week"
-* extension[gas-scaling][3].extension[level].valueCoding = $LNC#patient-gas-less-than-expected "Less than expected"
+* extension[gas-scaling][3].extension[level].valueCoding = PCOGASCodesTemporary#patient-gas-less-than-expected "Less than expected"
 * extension[gas-scaling][3].extension[text].valueString = "Does not walk dog but goes outside with dog"
-* extension[gas-scaling][4].extension[level].valueCoding = $LNC#patient-gas-much-less-than-expected "Much less than expected"
+* extension[gas-scaling][4].extension[level].valueCoding = PCOGASCodesTemporary#patient-gas-much-less-than-expected "Much less than expected"
 * extension[gas-scaling][4].extension[text].valueString = "Unable to go outside with dog"
 
 Instance: pcoGASScorePatientBaselineExample
@@ -89,7 +89,7 @@ Usage: #example
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-04-03T10:15:00Z"
 * focus = Reference(pcoGoalWalkDogExample)
-* valueCodeableConcept = $LNC#patient-gas-less-than-expected "Less than expected"
+* valueCodeableConcept = PCOGASCodesTemporary#patient-gas-less-than-expected "Less than expected"
 
 Instance: pcoGASScorePatientFollowupExample
 InstanceOf: PCOPatientGASScore
@@ -101,7 +101,7 @@ Usage: #example
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-05-10T10:15:00Z"
 * focus = Reference(pcoGoalWalkDogExample)
-* valueCodeableConcept = $LNC#patient-gas-better-than-expected "Better than expected"
+* valueCodeableConcept = PCOGASCodesTemporary#patient-gas-better-than-expected "Better than expected"
 
 Instance: pcoGASScorePractitionerFollowupExample
 InstanceOf: PCOPractitionerGASScore
@@ -113,4 +113,4 @@ Usage: #example
 * performer = Reference(pcoPractitionerGonzalez)
 * effectiveDateTime = "2024-05-22T10:15:00Z"
 * focus = Reference(pcoGoalWalkDogExample)
-* valueCodeableConcept = $LNC#practitioner-gas-expected-outcome "Expected outcome"
+* valueCodeableConcept = PCOGASCodesTemporary#practitioner-gas-expected-outcome "Expected outcome"
