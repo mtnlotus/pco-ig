@@ -1,0 +1,126 @@
+{
+  "resourceType": "Goal",
+  "id": "pcoGoalWalkDogExample",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "physical-function",
+          "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+          "display": "Physical Function"
+        }
+      ]
+    }
+  ],
+  "target": [
+    {
+      "dueDate": "2024-09-30"
+    }
+  ],
+  "description": {
+    "text": "Walk dog outside once a week"
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "level",
+          "valueCoding": {
+            "code": "patient-gas-much-better-than-expected",
+            "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+            "display": "Much better than expected"
+          }
+        },
+        {
+          "url": "text",
+          "valueString": "Walk dog outside three times a week"
+        }
+      ],
+      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+    },
+    {
+      "extension": [
+        {
+          "url": "level",
+          "valueCoding": {
+            "code": "patient-gas-better-than-expected",
+            "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+            "display": "Better than expected"
+          }
+        },
+        {
+          "url": "text",
+          "valueString": "Walk dog outside twice a week"
+        }
+      ],
+      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+    },
+    {
+      "extension": [
+        {
+          "url": "level",
+          "valueCoding": {
+            "code": "patient-gas-expected-outcome",
+            "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+            "display": "Expected outcome"
+          }
+        },
+        {
+          "url": "text",
+          "valueString": "Walk dog outside once a week"
+        }
+      ],
+      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+    },
+    {
+      "extension": [
+        {
+          "url": "level",
+          "valueCoding": {
+            "code": "patient-gas-less-than-expected",
+            "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+            "display": "Less than expected"
+          }
+        },
+        {
+          "url": "text",
+          "valueString": "Does not walk dog but goes outside with dog"
+        }
+      ],
+      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+    },
+    {
+      "extension": [
+        {
+          "url": "level",
+          "valueCoding": {
+            "code": "patient-gas-much-less-than-expected",
+            "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+            "display": "Much less than expected"
+          }
+        },
+        {
+          "url": "text",
+          "valueString": "Unable to go outside with dog"
+        }
+      ],
+      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling"
+    }
+  ],
+  "lifecycleStatus": "active",
+  "achievementStatus": {
+    "coding": [
+      {
+        "code": "in-progress",
+        "system": "http://terminology.hl7.org/CodeSystem/goal-achievement"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/pcoPatientJones"
+  },
+  "expressedBy": {
+    "reference": "Patient/pcoPatientJones"
+  },
+  "startDate": "2024-04-03"
+}
