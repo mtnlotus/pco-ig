@@ -1,0 +1,3213 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.10.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "An operand identifier [goal] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "An operand identifier [goal] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "An operand identifier [obs] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "An operand identifier [carePlan] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "An operand identifier [goal] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "638",
+            "s" : [ {
+               "value" : [ "","library GoalAttainmentLogic version '0.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "GoalAttainmentLogic",
+         "system" : "http://mtnlotus.com/uv/pco",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "5:1-5:56",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://mtnlotus.com/uv/pco/FHIRHelpers",
+            "version" : "4.4.000",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.4.000'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "215",
+            "locator" : "16:1-16:49",
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "215",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Measurement Period\""," " ]
+                  }, {
+                     "r" : "216",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "217",
+                        "s" : [ {
+                           "value" : [ "DateTime" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "parameterTypeSpecifier" : {
+               "localId" : "216",
+               "locator" : "16:32-16:49",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "217",
+                  "locator" : "16:41-16:48",
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "7:1-7:38",
+            "name" : "LOINC",
+            "id" : "http://loinc.org",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"LOINC\"",": ","'http://loinc.org'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "209",
+            "locator" : "8:1-8:93",
+            "name" : "PCO Category",
+            "id" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "209",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"PCO Category\"",": ","'http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "9:1-9:91",
+            "name" : "PCO GAS Codes",
+            "id" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"PCO GAS Codes\"",": ","'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "valueSets" : {
+         "def" : [ {
+            "localId" : "211",
+            "locator" : "11:1-11:86",
+            "name" : "PCO Categories",
+            "id" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "211",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"PCO Categories\"",": ","'http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : [ ]
+         }, {
+            "localId" : "212",
+            "locator" : "12:1-12:101",
+            "name" : "Patient Follow-Up GAS Score",
+            "id" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Patient Follow-Up GAS Score\"",": ","'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : [ ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "213",
+            "locator" : "14:1-14:124",
+            "name" : "Goal attainment scaling score",
+            "id" : "goal-attainment-scaling",
+            "display" : "Goal Attainment Scaling (GAS)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "213",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Goal attainment scaling score\"",": ","'goal-attainment-scaling'"," from " ]
+                  }, {
+                     "r" : "214",
+                     "s" : [ {
+                        "value" : [ "\"PCO GAS Codes\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Goal Attainment Scaling (GAS)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "214",
+               "locator" : "14:70-14:84",
+               "name" : "PCO GAS Codes"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "221",
+            "locator" : "18:1-18:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "219",
+            "locator" : "18:1-18:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "220",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "218",
+                  "locator" : "18:1-18:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "232",
+            "locator" : "106:1-112:3",
+            "name" : "dueDate",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "232",
+                  "s" : [ {
+                     "value" : [ "// Returns Date from the first Goal target that has a due date.\n","define fluent function dueDate(goal Goal):\n  " ]
+                  }, {
+                     "r" : "559",
+                     "s" : [ {
+                        "r" : "559",
+                        "s" : [ {
+                           "value" : [ "First","(" ]
+                        }, {
+                           "r" : "556",
+                           "s" : [ {
+                              "s" : [ {
+                                 "r" : "542",
+                                 "s" : [ {
+                                    "r" : "544",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "value" : [ "goal",".","target" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","target" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    // TODO if due is Duration, add that quantity to startDate\n      " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "let " ]
+                              }, {
+                                 "r" : "545",
+                                 "s" : [ {
+                                    "value" : [ "due",":" ]
+                                 }, {
+                                    "r" : "550",
+                                    "s" : [ {
+                                       "r" : "546",
+                                       "s" : [ {
+                                          "value" : [ "(" ]
+                                       }, {
+                                          "r" : "546",
+                                          "s" : [ {
+                                             "r" : "548",
+                                             "s" : [ {
+                                                "r" : "547",
+                                                "s" : [ {
+                                                   "value" : [ "target" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "548",
+                                                "s" : [ {
+                                                   "value" : [ "due" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " as " ]
+                                          }, {
+                                             "r" : "549",
+                                             "s" : [ {
+                                                "value" : [ "FHIR",".","date" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ ")" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "550",
+                                       "s" : [ {
+                                          "value" : [ "value" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      " ]
+                           }, {
+                              "r" : "553",
+                              "s" : [ {
+                                 "value" : [ "where " ]
+                              }, {
+                                 "r" : "553",
+                                 "s" : [ {
+                                    "r" : "551",
+                                    "s" : [ {
+                                       "value" : [ "due" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      " ]
+                           }, {
+                              "r" : "554",
+                              "s" : [ {
+                                 "value" : [ "return " ]
+                              }, {
+                                 "r" : "555",
+                                 "s" : [ {
+                                    "value" : [ "due" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "559",
+               "locator" : "107:3-112:3",
+               "type" : "First",
+               "signature" : [ ],
+               "source" : {
+                  "localId" : "556",
+                  "locator" : "107:9-111:16",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "542",
+                     "locator" : "107:9-107:26",
+                     "alias" : "target",
+                     "expression" : {
+                        "localId" : "544",
+                        "locator" : "107:9-107:19",
+                        "path" : "target",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "543",
+                           "name" : "goal",
+                           "type" : "OperandRef"
+                        }
+                     }
+                  } ],
+                  "let" : [ {
+                     "localId" : "545",
+                     "locator" : "109:11-109:45",
+                     "identifier" : "due",
+                     "expression" : {
+                        "localId" : "550",
+                        "locator" : "109:15-109:45",
+                        "path" : "value",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "546",
+                           "locator" : "109:15-109:39",
+                           "strict" : false,
+                           "type" : "As",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "548",
+                              "locator" : "109:16-109:25",
+                              "path" : "due",
+                              "scope" : "target",
+                              "type" : "Property"
+                           },
+                           "asTypeSpecifier" : {
+                              "localId" : "549",
+                              "locator" : "109:30-109:38",
+                              "name" : "{http://hl7.org/fhir}date",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     }
+                  } ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "localId" : "553",
+                     "locator" : "110:7-110:27",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "552",
+                        "locator" : "110:13-110:27",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "551",
+                           "locator" : "110:13-110:15",
+                           "name" : "due",
+                           "type" : "QueryLetRef"
+                        }
+                     }
+                  },
+                  "return" : {
+                     "localId" : "554",
+                     "locator" : "111:7-111:16",
+                     "expression" : {
+                        "localId" : "555",
+                        "locator" : "111:14-111:16",
+                        "name" : "due",
+                        "type" : "QueryLetRef"
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "234",
+               "name" : "goal",
+               "operandTypeSpecifier" : {
+                  "localId" : "233",
+                  "locator" : "106:37-106:40",
+                  "name" : "{http://hl7.org/fhir}Goal",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "255",
+            "locator" : "91:1-96:3",
+            "name" : "goalDomainObservations",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "255",
+                  "s" : [ {
+                     "value" : [ "// Returns a list of goal domain Observations that this Goal addresses.\n","define fluent function goalDomainObservations(goal Goal):\n  " ]
+                  }, {
+                     "r" : "488",
+                     "s" : [ {
+                        "r" : "488",
+                        "s" : [ {
+                           "value" : [ "flatten" ]
+                        }, {
+                           "r" : "511",
+                           "s" : [ {
+                              "value" : [ "( " ]
+                           }, {
+                              "r" : "511",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "r" : "489",
+                                    "s" : [ {
+                                       "r" : "491",
+                                       "s" : [ {
+                                          "s" : [ {
+                                             "value" : [ "goal",".","addresses" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " ","GA" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      " ]
+                              }, {
+                                 "r" : "492",
+                                 "s" : [ {
+                                    "value" : [ "return " ]
+                                 }, {
+                                    "r" : "510",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "r" : "493",
+                                          "s" : [ {
+                                             "r" : "494",
+                                             "s" : [ {
+                                                "r" : "494",
+                                                "s" : [ {
+                                                   "value" : [ "[","Observation","]" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","obs" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n        " ]
+                                    }, {
+                                       "r" : "495",
+                                       "s" : [ {
+                                          "value" : [ "where " ]
+                                       }, {
+                                          "r" : "495",
+                                          "s" : [ {
+                                             "r" : "496",
+                                             "s" : [ {
+                                                "r" : "498",
+                                                "s" : [ {
+                                                   "r" : "497",
+                                                   "s" : [ {
+                                                      "value" : [ "obs" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "498",
+                                                   "s" : [ {
+                                                      "value" : [ "id" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " ","="," " ]
+                                             }, {
+                                                "r" : "501",
+                                                "s" : [ {
+                                                   "r" : "500",
+                                                   "s" : [ {
+                                                      "r" : "499",
+                                                      "s" : [ {
+                                                         "value" : [ "GA" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "." ]
+                                                   }, {
+                                                      "r" : "500",
+                                                      "s" : [ {
+                                                         "value" : [ "reference" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "501",
+                                                   "s" : [ {
+                                                      "value" : [ "getId","()" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "\n          and " ]
+                                          }, {
+                                             "r" : "509",
+                                             "s" : [ {
+                                                "r" : "508",
+                                                "s" : [ {
+                                                   "value" : [ "obs" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "509",
+                                                "s" : [ {
+                                                   "value" : [ "isNCQAGoalDomain","()" ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n  )" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "488",
+               "locator" : "92:3-96:3",
+               "type" : "Flatten",
+               "signature" : [ {
+                  "localId" : "512",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "513",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "514",
+                        "name" : "{http://hl7.org/fhir}Observation",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               } ],
+               "operand" : {
+                  "localId" : "511",
+                  "locator" : "92:10-96:3",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "489",
+                     "locator" : "92:12-92:28",
+                     "alias" : "GA",
+                     "expression" : {
+                        "localId" : "491",
+                        "locator" : "92:12-92:25",
+                        "path" : "addresses",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "490",
+                           "name" : "goal",
+                           "type" : "OperandRef"
+                        }
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "return" : {
+                     "localId" : "492",
+                     "locator" : "93:7-95:36",
+                     "expression" : {
+                        "localId" : "510",
+                        "locator" : "93:14-95:36",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "493",
+                           "locator" : "93:14-93:30",
+                           "alias" : "obs",
+                           "expression" : {
+                              "localId" : "494",
+                              "locator" : "93:14-93:26",
+                              "dataType" : "{http://hl7.org/fhir}Observation",
+                              "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                              "type" : "Retrieve",
+                              "include" : [ ],
+                              "codeFilter" : [ ],
+                              "dateFilter" : [ ],
+                              "otherFilter" : [ ]
+                           }
+                        } ],
+                        "let" : [ ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "495",
+                           "locator" : "94:9-95:36",
+                           "type" : "And",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "496",
+                              "locator" : "94:15-94:43",
+                              "type" : "Equal",
+                              "signature" : [ {
+                                 "localId" : "506",
+                                 "name" : "{urn:hl7-org:elm-types:r1}String",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "507",
+                                 "name" : "{urn:hl7-org:elm-types:r1}String",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "504",
+                                 "name" : "ToString",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "505",
+                                    "name" : "{http://hl7.org/fhir}string",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "498",
+                                    "locator" : "94:15-94:20",
+                                    "path" : "id",
+                                    "scope" : "obs",
+                                    "type" : "Property"
+                                 } ]
+                              }, {
+                                 "localId" : "501",
+                                 "locator" : "94:24-94:43",
+                                 "name" : "getId",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "502",
+                                    "name" : "ToString",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ {
+                                       "localId" : "503",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "500",
+                                       "locator" : "94:24-94:35",
+                                       "path" : "reference",
+                                       "scope" : "GA",
+                                       "type" : "Property"
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "localId" : "509",
+                              "locator" : "95:15-95:36",
+                              "name" : "isNCQAGoalDomain",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "508",
+                                 "locator" : "95:15-95:17",
+                                 "name" : "obs",
+                                 "type" : "AliasRef"
+                              } ]
+                           } ]
+                        }
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "257",
+               "name" : "goal",
+               "operandTypeSpecifier" : {
+                  "localId" : "256",
+                  "locator" : "91:52-91:55",
+                  "name" : "{http://hl7.org/fhir}Goal",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "272",
+            "locator" : "133:1-134:23",
+            "name" : "getId",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "272",
+                  "s" : [ {
+                     "value" : [ "/*\n * General FHIR data helpers.\n */\n\n","define fluent function getId(uri String):\n  " ]
+                  }, {
+                     "r" : "623",
+                     "s" : [ {
+                        "r" : "623",
+                        "s" : [ {
+                           "value" : [ "Last","(" ]
+                        }, {
+                           "r" : "620",
+                           "s" : [ {
+                              "value" : [ "Split","(" ]
+                           }, {
+                              "r" : "616",
+                              "s" : [ {
+                                 "value" : [ "uri" ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "r" : "617",
+                              "s" : [ {
+                                 "value" : [ "'/'" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "623",
+               "locator" : "134:3-134:23",
+               "type" : "Last",
+               "signature" : [ ],
+               "source" : {
+                  "localId" : "620",
+                  "locator" : "134:8-134:22",
+                  "type" : "Split",
+                  "signature" : [ ],
+                  "stringToSplit" : {
+                     "localId" : "616",
+                     "locator" : "134:14-134:16",
+                     "name" : "uri",
+                     "type" : "OperandRef"
+                  },
+                  "separator" : {
+                     "localId" : "617",
+                     "locator" : "134:19-134:21",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "/",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "274",
+               "name" : "uri",
+               "operandTypeSpecifier" : {
+                  "localId" : "273",
+                  "locator" : "133:34-133:39",
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "291",
+            "locator" : "40:1-41:45",
+            "name" : "isNCQAGoalDomain",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "291",
+                  "s" : [ {
+                     "value" : [ "","define fluent function isNCQAGoalDomain(obs Observation):\n  " ]
+                  }, {
+                     "r" : "373",
+                     "s" : [ {
+                        "r" : "373",
+                        "s" : [ {
+                           "r" : "371",
+                           "s" : [ {
+                              "value" : [ "\"PCO Goal Domain Observations\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " contains " ]
+                        }, {
+                           "r" : "372",
+                           "s" : [ {
+                              "value" : [ "obs" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "373",
+               "locator" : "41:3-41:45",
+               "type" : "Contains",
+               "signature" : [ {
+                  "localId" : "374",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "375",
+                     "name" : "{http://hl7.org/fhir}Observation",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "localId" : "376",
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "371",
+                  "locator" : "41:3-41:32",
+                  "name" : "PCO Goal Domain Observations",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "372",
+                  "locator" : "41:43-41:45",
+                  "name" : "obs",
+                  "type" : "OperandRef"
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "293",
+               "name" : "obs",
+               "operandTypeSpecifier" : {
+                  "localId" : "292",
+                  "locator" : "40:45-40:55",
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "296",
+            "locator" : "37:1-38:33",
+            "name" : "PCO Goal Domain Observations",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "296",
+                  "s" : [ {
+                     "value" : [ "","define ","\"PCO Goal Domain Observations\"",":\n  " ]
+                  }, {
+                     "r" : "299",
+                     "s" : [ {
+                        "value" : [ "[","Observation",": " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "\"PCO Categories\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "299",
+               "locator" : "38:3-38:33",
+               "dataType" : "{http://hl7.org/fhir}Observation",
+               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+               "codeProperty" : "code",
+               "codeComparator" : "in",
+               "type" : "Retrieve",
+               "codes" : {
+                  "localId" : "298",
+                  "locator" : "38:17-38:32",
+                  "name" : "PCO Categories",
+                  "preserve" : true,
+                  "type" : "ValueSetRef"
+               },
+               "include" : [ ],
+               "codeFilter" : [ ],
+               "dateFilter" : [ ],
+               "otherFilter" : [ ]
+            }
+         }, {
+            "localId" : "223",
+            "locator" : "21:1-27:5",
+            "name" : "GoalSummary",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "223",
+                  "s" : [ {
+                     "value" : [ "// For debugging\n","define ","GoalSummary",": \n  " ]
+                  }, {
+                     "r" : "308",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "224",
+                           "s" : [ {
+                              "r" : "225",
+                              "s" : [ {
+                                 "r" : "225",
+                                 "s" : [ {
+                                    "value" : [ "[","Goal","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","goal" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "226",
+                        "s" : [ {
+                           "value" : [ "return " ]
+                        }, {
+                           "r" : "227",
+                           "s" : [ {
+                              "value" : [ "{\n      " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "id",": " ]
+                              }, {
+                                 "r" : "230",
+                                 "s" : [ {
+                                    "r" : "229",
+                                    "s" : [ {
+                                       "r" : "228",
+                                       "s" : [ {
+                                          "value" : [ "goal" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "229",
+                                       "s" : [ {
+                                          "value" : [ "id" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "230",
+                                    "s" : [ {
+                                       "value" : [ "value" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ",\n      " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "dueDate",": " ]
+                              }, {
+                                 "r" : "235",
+                                 "s" : [ {
+                                    "r" : "231",
+                                    "s" : [ {
+                                       "value" : [ "goal" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "235",
+                                    "s" : [ {
+                                       "value" : [ "dueDate","()" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ",\n      " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "pcoGoalDomains",": " ]
+                              }, {
+                                 "r" : "258",
+                                 "s" : [ {
+                                    "r" : "254",
+                                    "s" : [ {
+                                       "value" : [ "goal" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "258",
+                                    "s" : [ {
+                                       "value" : [ "goalDomainObservations","()" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    }" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "308",
+               "locator" : "22:3-27:5",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "224",
+                  "locator" : "22:3-22:13",
+                  "alias" : "goal",
+                  "expression" : {
+                     "localId" : "225",
+                     "locator" : "22:3-22:8",
+                     "dataType" : "{http://hl7.org/fhir}Goal",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "return" : {
+                  "localId" : "226",
+                  "locator" : "23:5-27:5",
+                  "expression" : {
+                     "localId" : "227",
+                     "locator" : "23:12-27:5",
+                     "type" : "Tuple",
+                     "element" : [ {
+                        "name" : "id",
+                        "value" : {
+                           "localId" : "230",
+                           "locator" : "24:11-24:23",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "229",
+                              "locator" : "24:11-24:17",
+                              "path" : "id",
+                              "scope" : "goal",
+                              "type" : "Property"
+                           }
+                        }
+                     }, {
+                        "name" : "dueDate",
+                        "value" : {
+                           "localId" : "235",
+                           "locator" : "25:16-25:29",
+                           "name" : "dueDate",
+                           "type" : "FunctionRef",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "231",
+                              "locator" : "25:16-25:19",
+                              "name" : "goal",
+                              "type" : "AliasRef"
+                           } ]
+                        }
+                     }, {
+                        "name" : "pcoGoalDomains",
+                        "value" : {
+                           "localId" : "258",
+                           "locator" : "26:23-26:51",
+                           "name" : "goalDomainObservations",
+                           "type" : "FunctionRef",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "254",
+                              "locator" : "26:23-26:26",
+                              "name" : "goal",
+                              "type" : "AliasRef"
+                           } ]
+                        }
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "319",
+            "locator" : "115:1-120:3",
+            "name" : "pcoGoals",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "319",
+                  "s" : [ {
+                     "value" : [ "// Returns a list of PCO Goals that are included in this CarePlan.\n","define fluent function pcoGoals(carePlan CarePlan):\n  " ]
+                  }, {
+                     "r" : "560",
+                     "s" : [ {
+                        "r" : "560",
+                        "s" : [ {
+                           "value" : [ "flatten" ]
+                        }, {
+                           "r" : "587",
+                           "s" : [ {
+                              "value" : [ "( " ]
+                           }, {
+                              "r" : "587",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "r" : "561",
+                                    "s" : [ {
+                                       "r" : "563",
+                                       "s" : [ {
+                                          "s" : [ {
+                                             "value" : [ "carePlan",".","goal" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " ","goalRef" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      " ]
+                              }, {
+                                 "r" : "564",
+                                 "s" : [ {
+                                    "value" : [ "return " ]
+                                 }, {
+                                    "r" : "586",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "r" : "565",
+                                          "s" : [ {
+                                             "r" : "566",
+                                             "s" : [ {
+                                                "r" : "566",
+                                                "s" : [ {
+                                                   "value" : [ "[","Goal","]" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","goal" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n        " ]
+                                    }, {
+                                       "r" : "567",
+                                       "s" : [ {
+                                          "value" : [ "where " ]
+                                       }, {
+                                          "r" : "567",
+                                          "s" : [ {
+                                             "r" : "568",
+                                             "s" : [ {
+                                                "r" : "570",
+                                                "s" : [ {
+                                                   "r" : "569",
+                                                   "s" : [ {
+                                                      "value" : [ "goal" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "570",
+                                                   "s" : [ {
+                                                      "value" : [ "id" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " ","="," " ]
+                                             }, {
+                                                "r" : "573",
+                                                "s" : [ {
+                                                   "r" : "572",
+                                                   "s" : [ {
+                                                      "r" : "571",
+                                                      "s" : [ {
+                                                         "value" : [ "goalRef" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "." ]
+                                                   }, {
+                                                      "r" : "572",
+                                                      "s" : [ {
+                                                         "value" : [ "reference" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "573",
+                                                   "s" : [ {
+                                                      "value" : [ "getId","()" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "\n          and " ]
+                                          }, {
+                                             "r" : "582",
+                                             "s" : [ {
+                                                "r" : "580",
+                                                "s" : [ {
+                                                   "value" : [ "\"PCO Goals\"" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " contains " ]
+                                             }, {
+                                                "r" : "581",
+                                                "s" : [ {
+                                                   "value" : [ "goal" ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n  )" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "560",
+               "locator" : "116:3-120:3",
+               "type" : "Flatten",
+               "signature" : [ {
+                  "localId" : "588",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "589",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "590",
+                        "name" : "{http://hl7.org/fhir}Goal",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               } ],
+               "operand" : {
+                  "localId" : "587",
+                  "locator" : "116:10-120:3",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "561",
+                     "locator" : "116:12-116:32",
+                     "alias" : "goalRef",
+                     "expression" : {
+                        "localId" : "563",
+                        "locator" : "116:12-116:24",
+                        "path" : "goal",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "562",
+                           "name" : "carePlan",
+                           "type" : "OperandRef"
+                        }
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "return" : {
+                     "localId" : "564",
+                     "locator" : "117:7-119:39",
+                     "expression" : {
+                        "localId" : "586",
+                        "locator" : "117:14-119:39",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "565",
+                           "locator" : "117:14-117:24",
+                           "alias" : "goal",
+                           "expression" : {
+                              "localId" : "566",
+                              "locator" : "117:14-117:19",
+                              "dataType" : "{http://hl7.org/fhir}Goal",
+                              "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
+                              "type" : "Retrieve",
+                              "include" : [ ],
+                              "codeFilter" : [ ],
+                              "dateFilter" : [ ],
+                              "otherFilter" : [ ]
+                           }
+                        } ],
+                        "let" : [ ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "567",
+                           "locator" : "118:9-119:39",
+                           "type" : "And",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "568",
+                              "locator" : "118:15-118:49",
+                              "type" : "Equal",
+                              "signature" : [ {
+                                 "localId" : "578",
+                                 "name" : "{urn:hl7-org:elm-types:r1}String",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "579",
+                                 "name" : "{urn:hl7-org:elm-types:r1}String",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "576",
+                                 "name" : "ToString",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "577",
+                                    "name" : "{http://hl7.org/fhir}string",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "570",
+                                    "locator" : "118:15-118:21",
+                                    "path" : "id",
+                                    "scope" : "goal",
+                                    "type" : "Property"
+                                 } ]
+                              }, {
+                                 "localId" : "573",
+                                 "locator" : "118:25-118:49",
+                                 "name" : "getId",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "574",
+                                    "name" : "ToString",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ {
+                                       "localId" : "575",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "572",
+                                       "locator" : "118:25-118:41",
+                                       "path" : "reference",
+                                       "scope" : "goalRef",
+                                       "type" : "Property"
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "localId" : "582",
+                              "locator" : "119:15-119:39",
+                              "type" : "Contains",
+                              "signature" : [ {
+                                 "localId" : "583",
+                                 "type" : "ListTypeSpecifier",
+                                 "elementType" : {
+                                    "localId" : "584",
+                                    "name" : "{http://hl7.org/fhir}Goal",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              }, {
+                                 "localId" : "585",
+                                 "name" : "{http://hl7.org/fhir}Goal",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "580",
+                                 "locator" : "119:15-119:25",
+                                 "name" : "PCO Goals",
+                                 "type" : "ExpressionRef"
+                              }, {
+                                 "localId" : "581",
+                                 "locator" : "119:36-119:39",
+                                 "name" : "goal",
+                                 "type" : "AliasRef"
+                              } ]
+                           } ]
+                        }
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "321",
+               "name" : "carePlan",
+               "operandTypeSpecifier" : {
+                  "localId" : "320",
+                  "locator" : "115:42-115:49",
+                  "name" : "{http://hl7.org/fhir}CarePlan",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "344",
+            "locator" : "52:1-54:43",
+            "name" : "PCO Goals",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "344",
+                  "s" : [ {
+                     "value" : [ "// A \"PCO Goal\" is any FHIR Goal that has a category in \"PCO Categories\"\n","define ","\"PCO Goals\"",":\n  " ]
+                  }, {
+                     "r" : "358",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "345",
+                           "s" : [ {
+                              "r" : "346",
+                              "s" : [ {
+                                 "r" : "346",
+                                 "s" : [ {
+                                    "value" : [ "[","Goal","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","goal" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "350",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "350",
+                           "s" : [ {
+                              "r" : "348",
+                              "s" : [ {
+                                 "r" : "347",
+                                 "s" : [ {
+                                    "value" : [ "goal" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "348",
+                                 "s" : [ {
+                                    "value" : [ "category" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " in " ]
+                           }, {
+                              "r" : "349",
+                              "s" : [ {
+                                 "value" : [ "\"PCO Categories\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "358",
+               "locator" : "53:3-54:43",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "345",
+                  "locator" : "53:3-53:13",
+                  "alias" : "goal",
+                  "expression" : {
+                     "localId" : "346",
+                     "locator" : "53:3-53:8",
+                     "dataType" : "{http://hl7.org/fhir}Goal",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "350",
+                  "locator" : "54:5-54:43",
+                  "type" : "AnyInValueSet",
+                  "signature" : [ {
+                     "localId" : "356",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "357",
+                        "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "codes" : {
+                     "localId" : "351",
+                     "type" : "Query",
+                     "source" : [ {
+                        "localId" : "352",
+                        "alias" : "X",
+                        "expression" : {
+                           "localId" : "348",
+                           "locator" : "54:11-54:23",
+                           "path" : "category",
+                           "scope" : "goal",
+                           "type" : "Property"
+                        }
+                     } ],
+                     "let" : [ ],
+                     "relationship" : [ ],
+                     "return" : {
+                        "localId" : "353",
+                        "distinct" : false,
+                        "expression" : {
+                           "localId" : "355",
+                           "name" : "ToConcept",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "354",
+                              "name" : "X",
+                              "type" : "AliasRef"
+                           } ]
+                        }
+                     }
+                  },
+                  "valueset" : {
+                     "localId" : "349",
+                     "locator" : "54:28-54:43",
+                     "name" : "PCO Categories",
+                     "preserve" : true
+                  }
+               }
+            }
+         }, {
+            "localId" : "310",
+            "locator" : "30:1-35:5",
+            "name" : "CarPlanSummary",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "310",
+                  "s" : [ {
+                     "value" : [ "// For debugging\n","define ","CarPlanSummary",": \n  " ]
+                  }, {
+                     "r" : "370",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "311",
+                           "s" : [ {
+                              "r" : "312",
+                              "s" : [ {
+                                 "r" : "312",
+                                 "s" : [ {
+                                    "value" : [ "[","CarePlan","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","carePlan" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "313",
+                        "s" : [ {
+                           "value" : [ "return " ]
+                        }, {
+                           "r" : "314",
+                           "s" : [ {
+                              "value" : [ "{\n      " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "id",": " ]
+                              }, {
+                                 "r" : "317",
+                                 "s" : [ {
+                                    "r" : "316",
+                                    "s" : [ {
+                                       "r" : "315",
+                                       "s" : [ {
+                                          "value" : [ "carePlan" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "316",
+                                       "s" : [ {
+                                          "value" : [ "id" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "317",
+                                    "s" : [ {
+                                       "value" : [ "value" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ",\n      " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "pcoGoals",": " ]
+                              }, {
+                                 "r" : "322",
+                                 "s" : [ {
+                                    "r" : "318",
+                                    "s" : [ {
+                                       "value" : [ "carePlan" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "322",
+                                    "s" : [ {
+                                       "value" : [ "pcoGoals","()" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    }" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "370",
+               "locator" : "31:3-35:5",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "311",
+                  "locator" : "31:3-31:21",
+                  "alias" : "carePlan",
+                  "expression" : {
+                     "localId" : "312",
+                     "locator" : "31:3-31:12",
+                     "dataType" : "{http://hl7.org/fhir}CarePlan",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/CarePlan",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "return" : {
+                  "localId" : "313",
+                  "locator" : "32:5-35:5",
+                  "expression" : {
+                     "localId" : "314",
+                     "locator" : "32:12-35:5",
+                     "type" : "Tuple",
+                     "element" : [ {
+                        "name" : "id",
+                        "value" : {
+                           "localId" : "317",
+                           "locator" : "33:11-33:27",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "316",
+                              "locator" : "33:11-33:21",
+                              "path" : "id",
+                              "scope" : "carePlan",
+                              "type" : "Property"
+                           }
+                        }
+                     }, {
+                        "name" : "pcoGoals",
+                        "value" : {
+                           "localId" : "322",
+                           "locator" : "34:17-34:35",
+                           "name" : "pcoGoals",
+                           "type" : "FunctionRef",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "318",
+                              "locator" : "34:17-34:24",
+                              "name" : "carePlan",
+                              "type" : "AliasRef"
+                           } ]
+                        }
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "378",
+            "locator" : "44:1-45:48",
+            "name" : "GAS Observations",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "378",
+                  "s" : [ {
+                     "value" : [ "// All observations containing a Goal Attainment Scaling (GAS) score.\n","define ","\"GAS Observations\"",":\n  " ]
+                  }, {
+                     "r" : "381",
+                     "s" : [ {
+                        "value" : [ "[","Observation",": " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "\"Goal attainment scaling score\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "381",
+               "locator" : "45:3-45:48",
+               "dataType" : "{http://hl7.org/fhir}Observation",
+               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+               "codeProperty" : "code",
+               "codeComparator" : "~",
+               "type" : "Retrieve",
+               "codes" : {
+                  "localId" : "389",
+                  "type" : "ToList",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "380",
+                     "locator" : "45:17-45:47",
+                     "name" : "Goal attainment scaling score",
+                     "type" : "CodeRef"
+                  }
+               },
+               "include" : [ ],
+               "codeFilter" : [ ],
+               "dateFilter" : [ ],
+               "otherFilter" : [ ]
+            }
+         }, {
+            "localId" : "391",
+            "locator" : "48:1-49:13",
+            "name" : "All Goals",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "391",
+                  "s" : [ {
+                     "value" : [ "// All FHIR Goals for this patient. Useful for verifying subset matched by \"PCO Goals\".\n","define ","\"All Goals\"",":\n  " ]
+                  }, {
+                     "r" : "394",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "392",
+                           "s" : [ {
+                              "r" : "393",
+                              "s" : [ {
+                                 "r" : "393",
+                                 "s" : [ {
+                                    "value" : [ "[","Goal","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","goal" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "394",
+               "locator" : "49:3-49:13",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "392",
+                  "locator" : "49:3-49:13",
+                  "alias" : "goal",
+                  "expression" : {
+                     "localId" : "393",
+                     "locator" : "49:3-49:8",
+                     "dataType" : "{http://hl7.org/fhir}Goal",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ]
+            }
+         }, {
+            "localId" : "400",
+            "locator" : "87:1-88:102",
+            "name" : "hasGAS",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "400",
+                  "s" : [ {
+                     "value" : [ "","define fluent function hasGAS(goal Goal):\n  " ]
+                  }, {
+                     "r" : "482",
+                     "s" : [ {
+                        "r" : "482",
+                        "s" : [ {
+                           "value" : [ "exists " ]
+                        }, {
+                           "r" : "485",
+                           "s" : [ {
+                              "r" : "483",
+                              "s" : [ {
+                                 "value" : [ "goal" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "485",
+                              "s" : [ {
+                                 "value" : [ "extensions","(" ]
+                              }, {
+                                 "r" : "484",
+                                 "s" : [ {
+                                    "value" : [ "'http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "482",
+               "locator" : "88:3-88:102",
+               "type" : "Exists",
+               "signature" : [ {
+                  "localId" : "486",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "487",
+                     "name" : "{http://hl7.org/fhir}Extension",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ],
+               "operand" : {
+                  "localId" : "485",
+                  "locator" : "88:10-88:102",
+                  "name" : "extensions",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "483",
+                     "locator" : "88:10-88:13",
+                     "name" : "goal",
+                     "type" : "OperandRef"
+                  }, {
+                     "localId" : "484",
+                     "locator" : "88:26-88:101",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling",
+                     "type" : "Literal"
+                  } ]
+               }
+            },
+            "operand" : [ {
+               "localId" : "402",
+               "name" : "goal",
+               "operandTypeSpecifier" : {
+                  "localId" : "401",
+                  "locator" : "87:36-87:39",
+                  "name" : "{http://hl7.org/fhir}Goal",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "407",
+            "locator" : "145:1-148:10",
+            "name" : "extensions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "t" : [ {
+                  "name" : "description",
+                  "value" : "Returns any extensions defined on the given resource with the specified url."
+               }, {
+                  "name" : "comment",
+                  "value" : "NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info."
+               } ],
+               "s" : {
+                  "r" : "407",
+                  "s" : [ {
+                     "value" : [ "// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.\n\n/*\n@description: Returns any extensions defined on the given resource with the specified url.\n@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info.\n*/\n","define fluent function extensions(domainResource DomainResource, url String):\n  " ]
+                  }, {
+                     "r" : "637",
+                     "s" : [ {
+                        "r" : "637",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "624",
+                              "s" : [ {
+                                 "r" : "626",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "domainResource",".","extension" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","E" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t  " ]
+                        }, {
+                           "r" : "627",
+                           "s" : [ {
+                              "value" : [ "where " ]
+                           }, {
+                              "r" : "627",
+                              "s" : [ {
+                                 "r" : "629",
+                                 "s" : [ {
+                                    "r" : "628",
+                                    "s" : [ {
+                                       "value" : [ "E" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "629",
+                                    "s" : [ {
+                                       "value" : [ "url" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","="," " ]
+                              }, {
+                                 "r" : "630",
+                                 "s" : [ {
+                                    "value" : [ "url" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n\t\t" ]
+                        }, {
+                           "r" : "635",
+                           "s" : [ {
+                              "value" : [ "return " ]
+                           }, {
+                              "r" : "636",
+                              "s" : [ {
+                                 "value" : [ "E" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "637",
+               "locator" : "146:3-148:10",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "624",
+                  "locator" : "146:3-146:28",
+                  "alias" : "E",
+                  "expression" : {
+                     "localId" : "626",
+                     "locator" : "146:3-146:26",
+                     "path" : "extension",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "625",
+                        "name" : "domainResource",
+                        "type" : "OperandRef"
+                     }
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "627",
+                  "locator" : "147:4-147:20",
+                  "type" : "Equal",
+                  "signature" : [ {
+                     "localId" : "633",
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "634",
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "631",
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "signature" : [ {
+                        "localId" : "632",
+                        "name" : "{http://hl7.org/fhir}uri",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "629",
+                        "locator" : "147:10-147:14",
+                        "path" : "url",
+                        "scope" : "E",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "630",
+                     "locator" : "147:18-147:20",
+                     "name" : "url",
+                     "type" : "OperandRef"
+                  } ]
+               },
+               "return" : {
+                  "localId" : "635",
+                  "locator" : "148:3-148:10",
+                  "expression" : {
+                     "localId" : "636",
+                     "locator" : "148:10",
+                     "name" : "E",
+                     "type" : "AliasRef"
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "409",
+               "name" : "domainResource",
+               "operandTypeSpecifier" : {
+                  "localId" : "408",
+                  "locator" : "145:50-145:63",
+                  "name" : "{http://hl7.org/fhir}DomainResource",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }, {
+               "localId" : "411",
+               "name" : "url",
+               "operandTypeSpecifier" : {
+                  "localId" : "410",
+                  "locator" : "145:70-145:75",
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "396",
+            "locator" : "57:1-59:23",
+            "name" : "GAS Goals",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "396",
+                  "s" : [ {
+                     "value" : [ "// A \"GAS Goal\" is any FHIR Goal that includes GAS extensions\n","define ","\"GAS Goals\"",":\n  " ]
+                  }, {
+                     "r" : "427",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "397",
+                           "s" : [ {
+                              "r" : "398",
+                              "s" : [ {
+                                 "r" : "398",
+                                 "s" : [ {
+                                    "value" : [ "[","Goal","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","goal" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "403",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "403",
+                           "s" : [ {
+                              "r" : "399",
+                              "s" : [ {
+                                 "value" : [ "goal" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "403",
+                              "s" : [ {
+                                 "value" : [ "hasGAS","()" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "427",
+               "locator" : "58:3-59:23",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "397",
+                  "locator" : "58:3-58:13",
+                  "alias" : "goal",
+                  "expression" : {
+                     "localId" : "398",
+                     "locator" : "58:3-58:8",
+                     "dataType" : "{http://hl7.org/fhir}Goal",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "403",
+                  "locator" : "59:5-59:23",
+                  "name" : "hasGAS",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "399",
+                     "locator" : "59:11-59:14",
+                     "name" : "goal",
+                     "type" : "AliasRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "429",
+            "locator" : "62:1-63:21",
+            "name" : "All Care Plans",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "429",
+                  "s" : [ {
+                     "value" : [ "// All FHIR CarePlan resources for this patient. Useful for verifying subset matched by \"PCO Care Plans\".\n","define ","\"All Care Plans\"",":\n  " ]
+                  }, {
+                     "r" : "432",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "430",
+                           "s" : [ {
+                              "r" : "431",
+                              "s" : [ {
+                                 "r" : "431",
+                                 "s" : [ {
+                                    "value" : [ "[","CarePlan","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","carePlan" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "432",
+               "locator" : "63:3-63:21",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "430",
+                  "locator" : "63:3-63:21",
+                  "alias" : "carePlan",
+                  "expression" : {
+                     "localId" : "431",
+                     "locator" : "63:3-63:12",
+                     "dataType" : "{http://hl7.org/fhir}CarePlan",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/CarePlan",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ]
+            }
+         }, {
+            "localId" : "434",
+            "locator" : "66:1-68:36",
+            "name" : "PCO Care Plans",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "434",
+                  "s" : [ {
+                     "value" : [ "// A \"PCO CarePlan\" is any FHIR CarePlan that includes a PCO Goal\n","define ","\"PCO Care Plans\"",":\n  " ]
+                  }, {
+                     "r" : "442",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "435",
+                           "s" : [ {
+                              "r" : "436",
+                              "s" : [ {
+                                 "r" : "436",
+                                 "s" : [ {
+                                    "value" : [ "[","CarePlan","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","carePlan" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "437",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "437",
+                           "s" : [ {
+                              "value" : [ "exists " ]
+                           }, {
+                              "r" : "439",
+                              "s" : [ {
+                                 "r" : "438",
+                                 "s" : [ {
+                                    "value" : [ "carePlan" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "439",
+                                 "s" : [ {
+                                    "value" : [ "pcoGoals","()" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "442",
+               "locator" : "67:3-68:36",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "435",
+                  "locator" : "67:3-67:21",
+                  "alias" : "carePlan",
+                  "expression" : {
+                     "localId" : "436",
+                     "locator" : "67:3-67:12",
+                     "dataType" : "{http://hl7.org/fhir}CarePlan",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/CarePlan",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "437",
+                  "locator" : "68:5-68:36",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "440",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "441",
+                        "name" : "{http://hl7.org/fhir}Goal",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "439",
+                     "locator" : "68:18-68:36",
+                     "name" : "pcoGoals",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "438",
+                        "locator" : "68:18-68:25",
+                        "name" : "carePlan",
+                        "type" : "AliasRef"
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "444",
+            "locator" : "75:1-76:48",
+            "name" : "GAS Patient Follow-Up Scores",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "444",
+                  "s" : [ {
+                     "value" : [ "// Returns a collection of Observations with a person's baseline GAS score.\n// define \"GAS Baseline Scores\":\n//   [Observation: \"GAS Baseline score\"]\n\n// Returns a collection of Observations with a patient's follow-up GAS score.\n","define ","\"GAS Patient Follow-Up Scores\"",":\n  " ]
+                  }, {
+                     "r" : "447",
+                     "s" : [ {
+                        "value" : [ "[","Observation",": " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "\"Goal attainment scaling score\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "447",
+               "locator" : "76:3-76:48",
+               "dataType" : "{http://hl7.org/fhir}Observation",
+               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+               "codeProperty" : "code",
+               "codeComparator" : "~",
+               "type" : "Retrieve",
+               "codes" : {
+                  "localId" : "455",
+                  "type" : "ToList",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "446",
+                     "locator" : "76:17-76:47",
+                     "name" : "Goal attainment scaling score",
+                     "type" : "CodeRef"
+                  }
+               },
+               "include" : [ ],
+               "codeFilter" : [ ],
+               "dateFilter" : [ ],
+               "otherFilter" : [ ]
+            }
+         }, {
+            "localId" : "457",
+            "locator" : "80:1-81:48",
+            "name" : "GAS Provider Follow-Up Scores",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "457",
+                  "s" : [ {
+                     "value" : [ "// TODO and recorded by a Patient\n\n// Returns a collection of Observations with a practitioner's follow-up GAS score.\n","define ","\"GAS Provider Follow-Up Scores\"",":\n  " ]
+                  }, {
+                     "r" : "460",
+                     "s" : [ {
+                        "value" : [ "[","Observation",": " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "\"Goal attainment scaling score\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "460",
+               "locator" : "81:3-81:48",
+               "dataType" : "{http://hl7.org/fhir}Observation",
+               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+               "codeProperty" : "code",
+               "codeComparator" : "~",
+               "type" : "Retrieve",
+               "codes" : {
+                  "localId" : "468",
+                  "type" : "ToList",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "459",
+                     "locator" : "81:17-81:47",
+                     "name" : "Goal attainment scaling score",
+                     "type" : "CodeRef"
+                  }
+               },
+               "include" : [ ],
+               "codeFilter" : [ ],
+               "dateFilter" : [ ],
+               "otherFilter" : [ ]
+            }
+         }, {
+            "localId" : "470",
+            "locator" : "84:1-85:48",
+            "name" : "GAS Caregiver Follow-Up Scores",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "470",
+                  "s" : [ {
+                     "value" : [ "// Returns a collection of Observations with a caregiver's follow-up GAS score.\n","define ","\"GAS Caregiver Follow-Up Scores\"",":\n  " ]
+                  }, {
+                     "r" : "473",
+                     "s" : [ {
+                        "value" : [ "[","Observation",": " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "\"Goal attainment scaling score\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "473",
+               "locator" : "85:3-85:48",
+               "dataType" : "{http://hl7.org/fhir}Observation",
+               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+               "codeProperty" : "code",
+               "codeComparator" : "~",
+               "type" : "Retrieve",
+               "codes" : {
+                  "localId" : "481",
+                  "type" : "ToList",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "472",
+                     "locator" : "85:17-85:47",
+                     "name" : "Goal attainment scaling score",
+                     "type" : "CodeRef"
+                  }
+               },
+               "include" : [ ],
+               "codeFilter" : [ ],
+               "dateFilter" : [ ],
+               "otherFilter" : [ ]
+            }
+         }, {
+            "localId" : "515",
+            "locator" : "99:1-103:3",
+            "name" : "addressesObservations",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "515",
+                  "s" : [ {
+                     "value" : [ "// Returns a list of Observations that this Goal addresses.\n","define fluent function addressesObservations(goal Goal):\n  " ]
+                  }, {
+                     "r" : "518",
+                     "s" : [ {
+                        "r" : "518",
+                        "s" : [ {
+                           "value" : [ "flatten" ]
+                        }, {
+                           "r" : "538",
+                           "s" : [ {
+                              "value" : [ "( " ]
+                           }, {
+                              "r" : "538",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "r" : "519",
+                                    "s" : [ {
+                                       "r" : "521",
+                                       "s" : [ {
+                                          "s" : [ {
+                                             "value" : [ "goal",".","addresses" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " ","GA" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      " ]
+                              }, {
+                                 "r" : "522",
+                                 "s" : [ {
+                                    "value" : [ "return " ]
+                                 }, {
+                                    "r" : "537",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "r" : "523",
+                                          "s" : [ {
+                                             "r" : "524",
+                                             "s" : [ {
+                                                "r" : "524",
+                                                "s" : [ {
+                                                   "value" : [ "[","Observation","]" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","obs" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n        " ]
+                                    }, {
+                                       "r" : "525",
+                                       "s" : [ {
+                                          "value" : [ "where " ]
+                                       }, {
+                                          "r" : "525",
+                                          "s" : [ {
+                                             "r" : "527",
+                                             "s" : [ {
+                                                "r" : "526",
+                                                "s" : [ {
+                                                   "value" : [ "obs" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "527",
+                                                "s" : [ {
+                                                   "value" : [ "id" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","="," " ]
+                                          }, {
+                                             "r" : "530",
+                                             "s" : [ {
+                                                "r" : "529",
+                                                "s" : [ {
+                                                   "r" : "528",
+                                                   "s" : [ {
+                                                      "value" : [ "GA" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "529",
+                                                   "s" : [ {
+                                                      "value" : [ "reference" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "530",
+                                                "s" : [ {
+                                                   "value" : [ "getId","()" ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n  )" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "518",
+               "locator" : "100:3-103:3",
+               "type" : "Flatten",
+               "signature" : [ {
+                  "localId" : "539",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "540",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "541",
+                        "name" : "{http://hl7.org/fhir}Observation",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               } ],
+               "operand" : {
+                  "localId" : "538",
+                  "locator" : "100:10-103:3",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "519",
+                     "locator" : "100:12-100:28",
+                     "alias" : "GA",
+                     "expression" : {
+                        "localId" : "521",
+                        "locator" : "100:12-100:25",
+                        "path" : "addresses",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "520",
+                           "name" : "goal",
+                           "type" : "OperandRef"
+                        }
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "return" : {
+                     "localId" : "522",
+                     "locator" : "101:7-102:43",
+                     "expression" : {
+                        "localId" : "537",
+                        "locator" : "101:14-102:43",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "523",
+                           "locator" : "101:14-101:30",
+                           "alias" : "obs",
+                           "expression" : {
+                              "localId" : "524",
+                              "locator" : "101:14-101:26",
+                              "dataType" : "{http://hl7.org/fhir}Observation",
+                              "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                              "type" : "Retrieve",
+                              "include" : [ ],
+                              "codeFilter" : [ ],
+                              "dateFilter" : [ ],
+                              "otherFilter" : [ ]
+                           }
+                        } ],
+                        "let" : [ ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "525",
+                           "locator" : "102:9-102:43",
+                           "type" : "Equal",
+                           "signature" : [ {
+                              "localId" : "535",
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "536",
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "533",
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "534",
+                                 "name" : "{http://hl7.org/fhir}string",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "527",
+                                 "locator" : "102:15-102:20",
+                                 "path" : "id",
+                                 "scope" : "obs",
+                                 "type" : "Property"
+                              } ]
+                           }, {
+                              "localId" : "530",
+                              "locator" : "102:24-102:43",
+                              "name" : "getId",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "531",
+                                 "name" : "ToString",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "532",
+                                    "name" : "{http://hl7.org/fhir}string",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "529",
+                                    "locator" : "102:24-102:35",
+                                    "path" : "reference",
+                                    "scope" : "GA",
+                                    "type" : "Property"
+                                 } ]
+                              } ]
+                           } ]
+                        }
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "517",
+               "name" : "goal",
+               "operandTypeSpecifier" : {
+                  "localId" : "516",
+                  "locator" : "99:51-99:54",
+                  "name" : "{http://hl7.org/fhir}Goal",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "591",
+            "locator" : "123:1-127:5",
+            "name" : "addressedByGoals",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "591",
+                  "s" : [ {
+                     "value" : [ "// Returns a list of Goals that address this Observation\n","define fluent function addressedByGoals(obs Observation):\n  " ]
+                  }, {
+                     "r" : "615",
+                     "s" : [ {
+                        "r" : "615",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "594",
+                              "s" : [ {
+                                 "r" : "595",
+                                 "s" : [ {
+                                    "r" : "595",
+                                    "s" : [ {
+                                       "value" : [ "[","Goal","]" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","goal" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "596",
+                           "s" : [ {
+                              "value" : [ "where " ]
+                           }, {
+                              "r" : "596",
+                              "s" : [ {
+                                 "value" : [ "exists " ]
+                              }, {
+                                 "r" : "612",
+                                 "s" : [ {
+                                    "value" : [ "( " ]
+                                 }, {
+                                    "r" : "612",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "r" : "597",
+                                          "s" : [ {
+                                             "r" : "599",
+                                             "s" : [ {
+                                                "s" : [ {
+                                                   "value" : [ "goal",".","addresses" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","GA" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n        " ]
+                                    }, {
+                                       "r" : "600",
+                                       "s" : [ {
+                                          "value" : [ "where " ]
+                                       }, {
+                                          "r" : "600",
+                                          "s" : [ {
+                                             "r" : "602",
+                                             "s" : [ {
+                                                "r" : "601",
+                                                "s" : [ {
+                                                   "value" : [ "obs" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "602",
+                                                "s" : [ {
+                                                   "value" : [ "id" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","="," " ]
+                                          }, {
+                                             "r" : "605",
+                                             "s" : [ {
+                                                "r" : "604",
+                                                "s" : [ {
+                                                   "r" : "603",
+                                                   "s" : [ {
+                                                      "value" : [ "GA" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "604",
+                                                   "s" : [ {
+                                                      "value" : [ "reference" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "605",
+                                                "s" : [ {
+                                                   "value" : [ "getId","()" ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n    )" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "615",
+               "locator" : "124:3-127:5",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "594",
+                  "locator" : "124:3-124:13",
+                  "alias" : "goal",
+                  "expression" : {
+                     "localId" : "595",
+                     "locator" : "124:3-124:8",
+                     "dataType" : "{http://hl7.org/fhir}Goal",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "596",
+                  "locator" : "125:5-127:5",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "613",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "614",
+                        "name" : "{http://hl7.org/fhir}Reference",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "612",
+                     "locator" : "125:18-127:5",
+                     "type" : "Query",
+                     "source" : [ {
+                        "localId" : "597",
+                        "locator" : "125:20-125:36",
+                        "alias" : "GA",
+                        "expression" : {
+                           "localId" : "599",
+                           "locator" : "125:20-125:33",
+                           "path" : "addresses",
+                           "scope" : "goal",
+                           "type" : "Property"
+                        }
+                     } ],
+                     "let" : [ ],
+                     "relationship" : [ ],
+                     "where" : {
+                        "localId" : "600",
+                        "locator" : "126:9-126:43",
+                        "type" : "Equal",
+                        "signature" : [ {
+                           "localId" : "610",
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "611",
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "608",
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "signature" : [ {
+                              "localId" : "609",
+                              "name" : "{http://hl7.org/fhir}string",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "602",
+                              "locator" : "126:15-126:20",
+                              "path" : "id",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "601",
+                                 "locator" : "126:15-126:17",
+                                 "name" : "obs",
+                                 "type" : "OperandRef"
+                              }
+                           } ]
+                        }, {
+                           "localId" : "605",
+                           "locator" : "126:24-126:43",
+                           "name" : "getId",
+                           "type" : "FunctionRef",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "606",
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "607",
+                                 "name" : "{http://hl7.org/fhir}string",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "604",
+                                 "locator" : "126:24-126:35",
+                                 "path" : "reference",
+                                 "scope" : "GA",
+                                 "type" : "Property"
+                              } ]
+                           } ]
+                        } ]
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "593",
+               "name" : "obs",
+               "operandTypeSpecifier" : {
+                  "localId" : "592",
+                  "locator" : "123:45-123:55",
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "638",
+            "locator" : "155:1-156:47",
+            "name" : "extension",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "fluent" : true,
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "t" : [ {
+                  "name" : "description",
+                  "value" : "Returns the single extension (if present) on the given resource with the specified url."
+               }, {
+                  "name" : "comment",
+                  "value" : "This function uses singleton from to ensure that a run-time exception is thrown if there\nis more than one extension on the given resource with the specified url."
+               } ],
+               "s" : {
+                  "r" : "638",
+                  "s" : [ {
+                     "value" : [ "/*\n@description: Returns the single extension (if present) on the given resource with the specified url.\n@comment: This function uses singleton from to ensure that a run-time exception is thrown if there\nis more than one extension on the given resource with the specified url.\n*/\n","define fluent function extension(domainResource DomainResource, url String):\n  " ]
+                  }, {
+                     "r" : "643",
+                     "s" : [ {
+                        "r" : "643",
+                        "s" : [ {
+                           "value" : [ "singleton from " ]
+                        }, {
+                           "r" : "646",
+                           "s" : [ {
+                              "r" : "644",
+                              "s" : [ {
+                                 "value" : [ "domainResource" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "646",
+                              "s" : [ {
+                                 "value" : [ "extensions","(" ]
+                              }, {
+                                 "r" : "645",
+                                 "s" : [ {
+                                    "value" : [ "url" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "643",
+               "locator" : "156:3-156:47",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "646",
+                  "locator" : "156:18-156:47",
+                  "name" : "extensions",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "644",
+                     "locator" : "156:18-156:31",
+                     "name" : "domainResource",
+                     "type" : "OperandRef"
+                  }, {
+                     "localId" : "645",
+                     "locator" : "156:44-156:46",
+                     "name" : "url",
+                     "type" : "OperandRef"
+                  } ]
+               }
+            },
+            "operand" : [ {
+               "localId" : "640",
+               "name" : "domainResource",
+               "operandTypeSpecifier" : {
+                  "localId" : "639",
+                  "locator" : "155:49-155:62",
+                  "name" : "{http://hl7.org/fhir}DomainResource",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }, {
+               "localId" : "642",
+               "name" : "url",
+               "operandTypeSpecifier" : {
+                  "localId" : "641",
+                  "locator" : "155:69-155:74",
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         } ]
+      }
+   }
+}

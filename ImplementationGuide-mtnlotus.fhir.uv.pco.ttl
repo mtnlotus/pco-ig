@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-13T22:41:25+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-15T16:20:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -859,6 +859,28 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Library/GoalAttainmentLogic> ;
+         fhir:reference [ fhir:v "Library/GoalAttainmentLogic" ]
+       ] ;
+       fhir:name [ fhir:v "GoalAttainmentLogic" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Library/GoalIdentificationMeasure> ;
+         fhir:reference [ fhir:v "Library/GoalIdentificationMeasure" ]
+       ] ;
+       fhir:name [ fhir:v "GoalIdentificationMeasure" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Practitioner" ]
        ] ) ;
        fhir:reference [
@@ -964,11 +986,11 @@
          fhir:value [ fhir:v "Measure" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Measure/PHQ9MeasureExample> ;
-         fhir:reference [ fhir:v "Measure/PHQ9MeasureExample" ]
+         fhir:link <http://mtnlotus.com/uv/pco/Measure/GoalIdentificationMeasure> ;
+         fhir:reference [ fhir:v "Measure/GoalIdentificationMeasure" ]
        ] ;
-       fhir:name [ fhir:v "PHQ-9 Measure Example" ] ;
-       fhir:description [ fhir:v "Example measure illustrating a continuous variable measure calculating scores from multiple questionnaires" ] ;
+       fhir:name [ fhir:v "Person-Centered Goal Identification" ] ;
+       fhir:description [ fhir:v "Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -980,28 +1002,6 @@
          fhir:reference [ fhir:v "Questionnaire/44249-1" ]
        ] ;
        fhir:name [ fhir:v "PHQ-9 quick depression assessment panel" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Library/PHQ9MeasureExample> ;
-         fhir:reference [ fhir:v "Library/PHQ9MeasureExample" ]
-       ] ;
-       fhir:name [ fhir:v "PHQ9MeasureExample" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Library/PHQ9ScoreLogic> ;
-         fhir:reference [ fhir:v "Library/PHQ9ScoreLogic" ]
-       ] ;
-       fhir:name [ fhir:v "PHQ9ScoreLogic" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
