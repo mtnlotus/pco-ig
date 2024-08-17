@@ -17,7 +17,7 @@
         "valueString": "Initial Population"
       }, {
         "url": "statement",
-        "valueString": "/*\nGoal Identification: % of individuals 18 years of age and older with a complex care need \nwho had a PCO goal identified resulting in completion of goal attainment scaling (GAS) \nor a Patient-Reported Outcome Measure (PROM) and development of an action plan.\n*/\n\n/// individuals 18 years of age and older\ndefine \"Initial Population\":\n  Patient person\n    where AgeInYearsAt(start of \"Measurement Period\") >= 18"
+        "valueString": "/*\nGoal Identification: % of individuals 18 years of age and older with a complex care need \nwho had a PCO goal identified resulting in completion of goal attainment scaling (GAS) \nor a Patient-Reported Outcome Measure (PROM) and development of an action plan.\n*/\n\n/// individuals 18 years of age and older\ndefine \"Initial Population\": {\n  Patient person\n    where AgeInYearsAt(start of \"Measurement Period\") >= 18\n}"
       }, {
         "url": "displaySequence",
         "valueInteger": 0
@@ -32,7 +32,7 @@
         "valueString": "Denominator"
       }, {
         "url": "statement",
-        "valueString": "/// with a complex care need \ndefine \"Denominator\":\n  \"Initial Population\""
+        "valueString": "/// TODO: with a complex care need \ndefine \"Denominator\":\n  \"Initial Population\""
       }, {
         "url": "displaySequence",
         "valueInteger": 1
@@ -77,7 +77,7 @@
         "valueString": "Numerator"
       }, {
         "url": "statement",
-        "valueString": "/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)\ndefine \"Numerator\":\n  \"Denominator\" person where (\n    exists \"Identified PCO Goals\" pcoGoal\n      where pcoGoal.hasGAS()\n  )"
+        "valueString": "/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)\n/// ... and development of an action plan.\ndefine \"Numerator\":\n  \"Denominator\" person where (\n    exists \"Identified PCO Goals\" pcoGoal\n      where pcoGoal.hasGAS()\n        and exists pcoGoal.carePlans()\n  )"
       }, {
         "url": "displaySequence",
         "valueInteger": 4
@@ -187,6 +187,36 @@
         "url": "displaySequence",
         "valueInteger": 11
       } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "GoalAttainmentLogic"
+      }, {
+        "url": "name",
+        "valueString": "carePlans"
+      }, {
+        "url": "statement",
+        "valueString": "// Returns a list of CarePlan that support this Goal.\ndefine fluent function carePlans(goal Goal):\n  [CarePlan] carePlan\n    where exists ( carePlan.goal goalRef\n        where goal.id = goalRef.reference.getId()\n    )"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 12
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "GoalAttainmentLogic"
+      }, {
+        "url": "name",
+        "valueString": "getId"
+      }, {
+        "url": "statement",
+        "valueString": "/*\n * General FHIR data helpers.\n */\n\ndefine fluent function getId(uri String):\n  Last(Split(uri, '/'))"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 13
+      } ]
     } ],
     "name": "EffectiveDataRequirements",
     "status": "active",
@@ -219,19 +249,19 @@
       "name": "Numerator",
       "use": "out",
       "min": 0,
-      "max": "1",
+      "max": "*",
       "type": "Patient"
     }, {
       "name": "Denominator",
       "use": "out",
       "min": 0,
-      "max": "1",
+      "max": "*",
       "type": "Patient"
     }, {
       "name": "Initial Population",
       "use": "out",
       "min": 0,
-      "max": "1",
+      "max": "*",
       "type": "Patient"
     }, {
       "name": "Denominator Exclusions",
@@ -253,6 +283,10 @@
       "type": "Goal",
       "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
       "mustSupport": [ "category", "start" ]
+    }, {
+      "type": "CarePlan",
+      "profile": [ "http://hl7.org/fhir/StructureDefinition/CarePlan" ],
+      "mustSupport": [ "goal" ]
     } ]
   } ],
   "extension": [ {
@@ -317,7 +351,7 @@
   "title": "Person-Centered Goal Identification",
   "status": "draft",
   "experimental": false,
-  "date": "2024-08-15T12:40:53+00:00",
+  "date": "2024-08-16T23:24:39+00:00",
   "publisher": "Mountain Lotus WellBeing LLC",
   "contact": [ {
     "telecom": [ {
