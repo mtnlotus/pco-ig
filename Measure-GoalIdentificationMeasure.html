@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-15
+            as of 2024-08-16
           
         
       </td>
@@ -623,7 +623,7 @@
                                     <td>Numerator</td>
                                     <td>Out</td>
                                     <td>0</td>
-                                    <td>1</td>
+                                    <td>*</td>
                                     <td>Patient</td>
                                 </tr>
                             
@@ -631,7 +631,7 @@
                                     <td>Denominator</td>
                                     <td>Out</td>
                                     <td>0</td>
-                                    <td>1</td>
+                                    <td>*</td>
                                     <td>Patient</td>
                                 </tr>
                             
@@ -639,7 +639,7 @@
                                     <td>Initial Population</td>
                                     <td>Out</td>
                                     <td>0</td>
-                                    <td>1</td>
+                                    <td>*</td>
                                     <td>Patient</td>
                                 </tr>
                             
@@ -692,6 +692,19 @@
                                             category
                                         
                                             start
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td/>
+                                </tr>
+                            
+                                <tr>
+                                    <td>CarePlan(<a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a>)</td>
+                                    <td>
+                                        
+                                            goal
                                         
                                     </td>
                                     <td>
@@ -804,9 +817,10 @@ or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
 /// individuals 18 years of age and older
-define &quot;Initial Population&quot;:
+define &quot;Initial Population&quot;: {
   Patient person
-    where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18</code></pre>
+    where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
+}</code></pre>
                                         
                                     </td>
                                 </tr>
@@ -817,7 +831,7 @@ define &quot;Initial Population&quot;:
                                     <td>Denominator</td>
                                     <td>
                                         
-                                            <pre><code class="language-cql">/// with a complex care need 
+                                            <pre><code class="language-cql">/// TODO: with a complex care need 
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;</code></pre>
                                         
@@ -843,10 +857,12 @@ define &quot;Denominator&quot;:
                                     <td>
                                         
                                             <pre><code class="language-cql">/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
+/// ... and development of an action plan.
 define &quot;Numerator&quot;:
   &quot;Denominator&quot; person where (
     exists &quot;Identified PCO Goals&quot; pcoGoal
       where pcoGoal.hasGAS()
+        and exists pcoGoal.carePlans()
   )</code></pre>
                                         
                                     </td>
@@ -895,9 +911,10 @@ or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
 /// individuals 18 years of age and older
-define &quot;Initial Population&quot;:
+define &quot;Initial Population&quot;: {
   Patient person
-    where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18</code></pre>
+    where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
+}</code></pre>
                                 </td>
                             
                         </tr>
@@ -918,7 +935,7 @@ define &quot;Initial Population&quot;:
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">/// with a complex care need 
+                                    <pre class="highlight language-cql"><code class="language-cql">/// TODO: with a complex care need 
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;</code></pre>
                                 </td>
@@ -989,10 +1006,12 @@ define &quot;PCO Goals&quot;:
                                 <td/>
                                 <td>
                                     <pre class="highlight language-cql"><code class="language-cql">/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
+/// ... and development of an action plan.
 define &quot;Numerator&quot;:
   &quot;Denominator&quot; person where (
     exists &quot;Identified PCO Goals&quot; pcoGoal
       where pcoGoal.hasGAS()
+        and exists pcoGoal.carePlans()
   )</code></pre>
                                 </td>
                             
@@ -1169,6 +1188,58 @@ define fluent function extensions(domainResource DomainResource, url String):
                             
                         </tr>
                     
+                        <tr>
+                            <th><b>Library Name</b></th>
+                            <th><b>Name</b></th>
+                        </tr>
+                        <tr>
+                            
+                                <td>GoalAttainmentLogic</td>
+                            
+                            
+                                <td>carePlans</td>
+                            
+                        </tr>
+                        <tr>
+                            
+                                <td/>
+                                <td>
+                                    <pre class="highlight language-cql"><code class="language-cql">// Returns a list of CarePlan that support this Goal.
+define fluent function carePlans(goal Goal):
+  [CarePlan] carePlan
+    where exists ( carePlan.goal goalRef
+        where goal.id = goalRef.reference.getId()
+    )</code></pre>
+                                </td>
+                            
+                        </tr>
+                    
+                        <tr>
+                            <th><b>Library Name</b></th>
+                            <th><b>Name</b></th>
+                        </tr>
+                        <tr>
+                            
+                                <td>GoalAttainmentLogic</td>
+                            
+                            
+                                <td>getId</td>
+                            
+                        </tr>
+                        <tr>
+                            
+                                <td/>
+                                <td>
+                                    <pre class="highlight language-cql"><code class="language-cql">/*
+ * General FHIR data helpers.
+ */
+
+define fluent function getId(uri String):
+  Last(Split(uri, '/'))</code></pre>
+                                </td>
+                            
+                        </tr>
+                    
                     </table>
                 </td>
             </tr>
@@ -1202,7 +1273,7 @@ define fluent function extensions(domainResource DomainResource, url String):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:14+0000">2024-08-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:18+0000">2024-08-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

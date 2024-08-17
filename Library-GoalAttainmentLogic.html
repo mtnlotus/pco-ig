@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-17 01:14:43+0000</td>
+            <td style="padding-left: 4px;">2024-08-17 01:18:03+0000</td>
         </tr>
         
 
@@ -369,13 +369,13 @@
               
                 <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
               
-                <tr><th>PCO Goal Domain Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
-              
                 <tr><th>GoalSummary</th><th>Resource</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>PCO Goals</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>CarPlanSummary</th><th>Resource</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>PCO Goal Domain Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>GAS Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
@@ -409,6 +409,24 @@
                   <th>Patient</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Patient</th>
                   <th/>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>CarePlan</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
+                  <th>;;;;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>Goal</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
+                  <th>;;;;;;;</th>
                   <th>
                     
                   </th>
@@ -491,24 +509,6 @@
                   </th>
                 </tr>
               
-                <tr>
-                  <th>Goal</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;;;;;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>CarePlan</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
-                  <th>;;;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
             </table>
           </td>
         </tr>
@@ -545,7 +545,8 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoGoalDomains: goal.goalDomainObservations()
+      pcoGoalDomains: goal.category in &quot;PCO Categories&quot;,
+      carePlans: goal.carePlans()
     }
 
 // For debugging
@@ -559,7 +560,7 @@ define CarPlanSummary:
 define &quot;PCO Goal Domain Observations&quot;:
   [Observation: &quot;PCO Categories&quot;]
 
-define fluent function isNCQAGoalDomain(obs Observation):
+define fluent function isGoalDomain(obs Observation):
   &quot;PCO Goal Domain Observations&quot; contains obs
 
 // All observations containing a Goal Attainment Scaling (GAS) score.
@@ -609,12 +610,19 @@ define &quot;GAS Caregiver Follow-Up Scores&quot;:
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
 
+// Returns a list of CarePlan that support this Goal.
+define fluent function carePlans(goal Goal):
+  [CarePlan] carePlan
+    where exists ( carePlan.goal goalRef
+        where goal.id = goalRef.reference.getId()
+    )
+
 // Returns a list of goal domain Observations that this Goal addresses.
 define fluent function goalDomainObservations(goal Goal):
   flatten( goal.addresses GA
       return [Observation] obs
         where obs.id = GA.reference.getId()
-          and obs.isNCQAGoalDomain()
+          and obs.isGoalDomain()
   )
 
 // Returns a list of Observations that this Goal addresses.
@@ -689,7 +697,7 @@ define fluent function extension(domainResource DomainResource, url String):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (98244 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (108740 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -701,7 +709,7 @@ define fluent function extension(domainResource DomainResource, url String):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (180240 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (200832 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -733,7 +741,7 @@ define fluent function extension(domainResource DomainResource, url String):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:14+0000">2024-08-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:18+0000">2024-08-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

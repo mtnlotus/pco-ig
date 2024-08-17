@@ -1,9 +1,9 @@
 PCO : Validation Results
 =========================================
 
-err = 92, warn = 32, info = 1
+err = 96, warn = 32, info = 1
 IG Publisher Version: 1.6.20
-Generated Sat Aug 17 01:16:06 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = http://mtnlotus.com/uv/pco)
+Generated Sat Aug 17 01:19:36 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = http://mtnlotus.com/uv/pco)
  Build Errors : 0 / 14 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco : 0 / 0 / 1
@@ -34,7 +34,7 @@ Generated Sat Aug 17 01:16:06 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.
  /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers : 6 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 3 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 47 / 7 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 51 / 7 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7 : 10 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9 : 13 / 0 / 1
 </table>
@@ -144,6 +144,10 @@ ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effectiv
 ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[10].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
 ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[11]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
 ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[11].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[12]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[12].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[13]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[13].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve
 ERROR: Measure/GoalIdentificationMeasure: Measure.extension[0]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
 ERROR: Measure/GoalIdentificationMeasure: Measure.extension[0].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
 ERROR: Measure/GoalIdentificationMeasure: Measure.extension[0].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'

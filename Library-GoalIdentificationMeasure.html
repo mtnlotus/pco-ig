@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-17 01:14:43+0000</td>
+            <td style="padding-left: 4px;">2024-08-17 01:18:03+0000</td>
         </tr>
         
 
@@ -363,9 +363,9 @@
               
                 <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
               
-                <tr><th>Initial Population</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
+                <tr><th>Initial Population</th><th>Patient</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>Denominator</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
+                <tr><th>Denominator</th><th>Patient</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>Denominator Exclusions</th><th>Resource</th><th>0</th><th>1</th><th>Out</th></tr>
               
@@ -373,7 +373,7 @@
               
                 <tr><th>Identified PCO Goals</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>Numerator</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
+                <tr><th>Numerator</th><th>Patient</th><th>0</th><th>*</th><th>Out</th></tr>
               
             </table>
           </td>
@@ -400,6 +400,15 @@
                   <th>Goal</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
                   <th>;;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>CarePlan</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
+                  <th>;</th>
                   <th>
                     
                   </th>
@@ -435,11 +444,12 @@ or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
 /// individuals 18 years of age and older
-define &quot;Initial Population&quot;:
+define &quot;Initial Population&quot;: {
   Patient person
     where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
+}
 
-/// with a complex care need 
+/// TODO: with a complex care need 
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;
 
@@ -450,10 +460,12 @@ define &quot;Denominator Exceptions&quot;:
   null
 
 /// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
+/// ... and development of an action plan.
 define &quot;Numerator&quot;:
   &quot;Denominator&quot; person where (
     exists &quot;Identified PCO Goals&quot; pcoGoal
       where pcoGoal.hasGAS()
+        and exists pcoGoal.carePlans()
   )
 
 define &quot;Identified PCO Goals&quot;:
@@ -472,7 +484,7 @@ define &quot;Identified PCO Goals&quot;:
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (22220 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (24792 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -484,7 +496,7 @@ define &quot;Identified PCO Goals&quot;:
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (40880 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (45916 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -516,7 +528,7 @@ define &quot;Identified PCO Goals&quot;:
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:14+0000">2024-08-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:18+0000">2024-08-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

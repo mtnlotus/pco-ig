@@ -23,7 +23,8 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoGoalDomains: goal.goalDomainObservations()
+      pcoGoalDomains: goal.category in "PCO Categories",
+      carePlans: goal.carePlans()
     }
 
 // For debugging
@@ -37,7 +38,7 @@ define CarPlanSummary:
 define "PCO Goal Domain Observations":
   [Observation: "PCO Categories"]
 
-define fluent function isNCQAGoalDomain(obs Observation):
+define fluent function isGoalDomain(obs Observation):
   "PCO Goal Domain Observations" contains obs
 
 // All observations containing a Goal Attainment Scaling (GAS) score.
@@ -87,12 +88,19 @@ define "GAS Caregiver Follow-Up Scores":
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
 
+// Returns a list of CarePlan that support this Goal.
+define fluent function carePlans(goal Goal):
+  [CarePlan] carePlan
+    where exists ( carePlan.goal goalRef
+        where goal.id = goalRef.reference.getId()
+    )
+
 // Returns a list of goal domain Observations that this Goal addresses.
 define fluent function goalDomainObservations(goal Goal):
   flatten( goal.addresses GA
       return [Observation] obs
         where obs.id = GA.reference.getId()
-          and obs.isNCQAGoalDomain()
+          and obs.isGoalDomain()
   )
 
 // Returns a list of Observations that this Goal addresses.
