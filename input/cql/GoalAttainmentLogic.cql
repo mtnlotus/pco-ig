@@ -23,7 +23,8 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoGoalDomains: goal.category in "PCO Categories"
+      pcoGoalDomains: goal.category in "PCO Categories",
+      carePlans: goal.carePlans()
     }
 
 // For debugging
@@ -86,6 +87,13 @@ define "GAS Caregiver Follow-Up Scores":
 
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+
+// Returns a list of CarePlan that support this Goal.
+define fluent function carePlans(goal Goal):
+  [CarePlan] carePlan
+    where exists ( carePlan.goal goalRef
+        where goal.id = goalRef.reference.getId()
+    )
 
 // Returns a list of goal domain Observations that this Goal addresses.
 define fluent function goalDomainObservations(goal Goal):
