@@ -50,6 +50,9 @@ Description: "Person-centered goal with goal attainment scaling."
 * expressedBy 1..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
 * startDate 1..1 MS
+* addresses 0..* MS
+  * ^short = "What Matters Assessment or Condition"
+* addresses only Reference(WhatMattersAssessment or USCoreConditionProblemsHealthConcernsProfile)
 * extension contains
     PCOGoalAttainmentScaling named gas-scaling 0..5 MS
 

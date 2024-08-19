@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "patient-gas-followup-vs",
+  "id": "practitioner-gas-followup-vs",
   "meta": {
     "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
   },
@@ -11,58 +11,58 @@
     "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
     "valueString": "executable"
   } ],
-  "url": "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
-  "name": "PatientGASFollowupVS",
-  "title": "Patient Follow-Up GAS Score",
+  "url": "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
+  "name": "PractitionerGASFollowupVS",
+  "title": "Practitioner Follow-Up GAS Score",
   "status": "draft",
   "experimental": false,
-  "description": "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
+  "description": "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
   "compose": {
     "include": [ {
       "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
       "concept": [ {
-        "code": "patient-gas-much-better-than-expected",
+        "code": "practitioner-gas-much-better-than-expected",
         "display": "Much better than expected"
       }, {
-        "code": "patient-gas-better-than-expected",
+        "code": "practitioner-gas-better-than-expected",
         "display": "Better than expected"
       }, {
-        "code": "patient-gas-expected-outcome",
+        "code": "practitioner-gas-expected-outcome",
         "display": "Expected outcome"
       }, {
-        "code": "patient-gas-less-than-expected",
+        "code": "practitioner-gas-less-than-expected",
         "display": "Less than expected"
       }, {
-        "code": "patient-gas-much-less-than-expected",
+        "code": "practitioner-gas-much-less-than-expected",
         "display": "Much less than expected"
       } ]
     } ]
   },
   "expansion": {
-    "timestamp": "2024-08-14T11:52:01-06:00",
+    "timestamp": "2024-08-19T14:21:23-06:00",
     "parameter": [ {
       "name": "naive",
       "valueBoolean": true
     } ],
     "contains": [ {
       "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-      "code": "patient-gas-much-better-than-expected",
+      "code": "practitioner-gas-much-better-than-expected",
       "display": "Much better than expected"
     }, {
       "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-      "code": "patient-gas-better-than-expected",
+      "code": "practitioner-gas-better-than-expected",
       "display": "Better than expected"
     }, {
       "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-      "code": "patient-gas-expected-outcome",
+      "code": "practitioner-gas-expected-outcome",
       "display": "Expected outcome"
     }, {
       "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-      "code": "patient-gas-less-than-expected",
+      "code": "practitioner-gas-less-than-expected",
       "display": "Less than expected"
     }, {
       "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-      "code": "patient-gas-much-less-than-expected",
+      "code": "practitioner-gas-much-less-than-expected",
       "display": "Much less than expected"
     } ]
   }

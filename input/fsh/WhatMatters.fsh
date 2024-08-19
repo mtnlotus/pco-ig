@@ -1,0 +1,106 @@
+
+Profile: WhatMattersAssessment
+Parent: USCoreObservationScreeningAssessmentProfile
+Id: pco-what-matters-assessment
+Title: "What Matters Assessment"
+Description: "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."
+* code from WhatMattersFocusAreas (preferred)
+  * ^short = "Focus area for What Matters assessment"
+* component
+  * ^slicing.discriminator.type = #value
+  * ^slicing.discriminator.path = "code"
+  * ^slicing.rules = #open
+* component contains
+    nowRating 0..1 MS and
+    nowReasons 0..1 MS and
+    futureRating 0..1 MS and
+    futureChanges 0..1 MS
+  * ^short = "Components representing What Matters rating"
+* component[nowRating]
+  * code = WhatMattersRating#nowRating
+    * ^short = "Where are you now?"
+  * insert ValueInteger
+* component[nowReasons]
+  * code = WhatMattersRating#nowReasons
+    * ^short = "What are the reasons you chose this number?"
+  * insert ValueString
+* component[futureRating]
+  * code = WhatMattersRating#futureRating
+    * ^short = "Where would you like to be?"
+  * insert ValueInteger
+* component[futureChanges]
+  * code = WhatMattersRating#futureChanges
+    * ^short = "What changes could you make to help you get there?"
+  * insert ValueString
+
+RuleSet: ValueInteger
+* value[x] only integer
+* valueInteger 1..1 MS
+  * ^short = "Rating on scale of 1 (low) to 10 (high)"
+
+RuleSet: ValueString
+* value[x] only string
+* valueString 1..1 MS
+  * ^short = "Reasons for your rating"
+
+CodeSystem: WhatMattersRating
+Id: what-matters-rating
+Title: "What Matters Rating Concepts"
+Description: "Code system to identify \"What Matters\" rating concepts."
+* ^caseSensitive = true
+* ^experimental = false
+* ^status = #active
+* #nowRating "Now Rating"
+    "Where are you now?"
+* #nowReasons "Now Reasons"
+    "What are the reasons you chose this number?"
+* #futureRating "Future Rating"
+    "Where would you like to be?"
+* #futureChanges "Future Changes"
+    "What changes could you make to help you get there?"
+
+CodeSystem: WhatMattersConcepts
+Id: what-matters-concepts
+Title: "What Matters Concepts"
+Description: "Code system to identify \"What Matters\" concepts, example from the VA Circle of Health."
+* ^caseSensitive = true
+* ^experimental = false
+* ^status = #active
+* #body "Moving the Body"
+    "Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise."
+* #mind "Power of the Mind"
+    "Our thoughts are powerful and can affect our physical, mental, and emotional health. Changing our mindset can aid in healing and coping. Breathing techniques, guided imagery, Tai Chi, yoga, or gratitude can buffer the impact of stress and other emotions."
+* #nourishment "Food & Drink"
+    "What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink."
+* #recharge "Recharge"
+    "Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night’s rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh."
+* #surroundings "Surroundings"
+    "Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health."
+* #personalDevelopment "Personal Development"
+    "Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life."
+* #spiritSoul "Spirit & Soul"
+    "Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art."
+* #relationships "Family, Friends & Co-Workers"
+    "Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that \"fuel\" us and less in relationships that \"drain\" us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider."
+* #professionalCare "Professional Care"
+    "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health."
+
+ValueSet: WhatMattersFocusAreas
+Id: what-matters-focus-areas
+Title: "What Matters Focus Areas"
+Description: "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."
+// Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
+// * include codes from system WhatMattersConcepts
+* WhatMattersConcepts#body "Moving the Body"
+* WhatMattersConcepts#mind "Power of the Mind"
+* WhatMattersConcepts#nourishment "Food & Drink"
+* WhatMattersConcepts#recharge "Recharge"
+* WhatMattersConcepts#surroundings "Surroundings"
+* WhatMattersConcepts#personalDevelopment "Personal Development"
+* WhatMattersConcepts#spiritSoul "Spirit & Soul"
+* WhatMattersConcepts#relationships "Family, Friends & Co-Workers"
+* WhatMattersConcepts#professionalCare "Professional Care"
+
+/*
+ * TODO: ConceptMap from Circle of Health to PCO Categories.
+*/

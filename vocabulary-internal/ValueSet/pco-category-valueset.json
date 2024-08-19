@@ -1,0 +1,117 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pco-category-valueset",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+  },
+  "extension": [ {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueString": "executable"
+  }, {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueString": "executable"
+  } ],
+  "url": "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
+  "name": "PCOCategoryValueSet",
+  "title": "PCO Categories",
+  "status": "draft",
+  "description": "Example value set to identify the category for PCO resources.",
+  "compose": {
+    "include": [ {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "concept": [ {
+        "code": "housing",
+        "display": "Housing"
+      }, {
+        "code": "access-to-services",
+        "display": "Access To Services"
+      }, {
+        "code": "caregiver-needs",
+        "display": "Caregiver Needs"
+      }, {
+        "code": "end-of-life",
+        "display": "End Of Life"
+      }, {
+        "code": "independence",
+        "display": "Independence"
+      }, {
+        "code": "legal",
+        "display": "Legal"
+      }, {
+        "code": "managing-conditions",
+        "display": "Managing Conditions"
+      }, {
+        "code": "medication-management",
+        "display": "Medication Management"
+      }, {
+        "code": "improving-health-and-wellness",
+        "display": "Improving Health And Wellness"
+      }, {
+        "code": "physical-function",
+        "display": "Physical Function"
+      }, {
+        "code": "social-functioning",
+        "display": "Social Functioning"
+      }, {
+        "code": "emotional-and-mental-health",
+        "display": "Emotional And Mental Health"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-19T14:21:23-06:00",
+    "parameter": [ {
+      "name": "naive",
+      "valueBoolean": true
+    } ],
+    "contains": [ {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "housing",
+      "display": "Housing"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "access-to-services",
+      "display": "Access To Services"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "caregiver-needs",
+      "display": "Caregiver Needs"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "end-of-life",
+      "display": "End Of Life"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "independence",
+      "display": "Independence"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "legal",
+      "display": "Legal"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "managing-conditions",
+      "display": "Managing Conditions"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "medication-management",
+      "display": "Medication Management"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "improving-health-and-wellness",
+      "display": "Improving Health And Wellness"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "physical-function",
+      "display": "Physical Function"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "social-functioning",
+      "display": "Social Functioning"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
+      "code": "emotional-and-mental-health",
+      "display": "Emotional And Mental Health"
+    } ]
+  }
+}

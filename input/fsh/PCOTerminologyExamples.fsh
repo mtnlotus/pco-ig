@@ -38,4 +38,17 @@ ValueSet: PCOCategoryValueSet
 Id: pco-category-valueset
 Title: "PCO Categories"
 Description: "Example value set to identify the category for PCO resources."
-* include codes from system PCOCategoryCodesExample
+// Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
+// * include codes from system PCOCategoryCodesExample
+* PCOCategoryCodesExample#housing "Housing"
+* PCOCategoryCodesExample#access-to-services "Access To Services"
+* PCOCategoryCodesExample#caregiver-needs "Caregiver Needs"
+* PCOCategoryCodesExample#end-of-life "End Of Life"
+* PCOCategoryCodesExample#independence "Independence"
+* PCOCategoryCodesExample#legal "Legal"
+* PCOCategoryCodesExample#managing-conditions "Managing Conditions"
+* PCOCategoryCodesExample#medication-management "Medication Management"
+* PCOCategoryCodesExample#improving-health-and-wellness "Improving Health And Wellness"
+* PCOCategoryCodesExample#physical-function "Physical Function"
+* PCOCategoryCodesExample#social-functioning "Social Functioning"
+* PCOCategoryCodesExample#emotional-and-mental-health "Emotional And Mental Health"

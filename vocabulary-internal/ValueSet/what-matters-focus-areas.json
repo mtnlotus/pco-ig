@@ -1,0 +1,96 @@
+{
+  "resourceType": "ValueSet",
+  "id": "what-matters-focus-areas",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+  },
+  "extension": [ {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueString": "executable"
+  }, {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueString": "executable"
+  } ],
+  "url": "http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas",
+  "name": "WhatMattersFocusAreas",
+  "title": "What Matters Focus Areas",
+  "status": "draft",
+  "description": "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals.",
+  "compose": {
+    "include": [ {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "concept": [ {
+        "code": "body",
+        "display": "Moving the Body"
+      }, {
+        "code": "mind",
+        "display": "Power of the Mind"
+      }, {
+        "code": "nourishment",
+        "display": "Food & Drink"
+      }, {
+        "code": "recharge",
+        "display": "Recharge"
+      }, {
+        "code": "surroundings",
+        "display": "Surroundings"
+      }, {
+        "code": "personalDevelopment",
+        "display": "Personal Development"
+      }, {
+        "code": "spiritSoul",
+        "display": "Spirit & Soul"
+      }, {
+        "code": "relationships",
+        "display": "Family, Friends & Co-Workers"
+      }, {
+        "code": "professionalCare",
+        "display": "Professional Care"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-19T14:21:23-06:00",
+    "parameter": [ {
+      "name": "naive",
+      "valueBoolean": true
+    } ],
+    "contains": [ {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "body",
+      "display": "Moving the Body"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "mind",
+      "display": "Power of the Mind"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "nourishment",
+      "display": "Food & Drink"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "recharge",
+      "display": "Recharge"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "surroundings",
+      "display": "Surroundings"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "personalDevelopment",
+      "display": "Personal Development"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "spiritSoul",
+      "display": "Spirit & Soul"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "relationships",
+      "display": "Family, Friends & Co-Workers"
+    }, {
+      "system": "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code": "professionalCare",
+      "display": "Professional Care"
+    } ]
+  }
+}

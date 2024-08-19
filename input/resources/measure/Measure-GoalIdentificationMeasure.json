@@ -47,7 +47,7 @@
         "valueString": "PCO Goals"
       }, {
         "url": "statement",
-        "valueString": "// A \"PCO Goal\" is any FHIR Goal that has a category in \"PCO Categories\"\ndefine \"PCO Goals\":\n  [Goal] goal\n    where goal.category in \"PCO Categories\""
+        "valueString": "/* \n  A \"PCO Goal\" is any FHIR Goal that has a category in \"PCO Categories\"\n  and has a start date.\n*/\ndefine \"PCO Goals\":\n  [Goal] goal\n    where goal.category in \"PCO Categories\"\n      and (goal.start as FHIR.date) is not null"
       }, {
         "url": "displaySequence",
         "valueInteger": 2
@@ -161,13 +161,13 @@
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
       "extension": [ {
         "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
+        "valueString": "PCOCommon"
       }, {
         "url": "name",
         "valueString": "extensions"
       }, {
         "url": "statement",
-        "valueString": "// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.\n\n/*\n@description: Returns any extensions defined on the given resource with the specified url.\n@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info.\n*/\ndefine fluent function extensions(domainResource DomainResource, url String):\n  domainResource.extension E\n\t  where E.url = url\n\t\treturn E"
+        "valueString": "/*\n@description: Returns any extensions defined on the given resource with the specified url.\n@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info.\n*/\ndefine fluent function extensions(domainResource DomainResource, url String):\n  domainResource.extension E\n\t  where E.url = url\n\t\treturn E"
       }, {
         "url": "displaySequence",
         "valueInteger": 10
@@ -191,7 +191,7 @@
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
       "extension": [ {
         "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
+        "valueString": "PCOCommon"
       }, {
         "url": "name",
         "valueString": "carePlans"
@@ -206,13 +206,13 @@
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
       "extension": [ {
         "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
+        "valueString": "PCOCommon"
       }, {
         "url": "name",
         "valueString": "getId"
       }, {
         "url": "statement",
-        "valueString": "/*\n * General FHIR data helpers.\n */\n\ndefine fluent function getId(uri String):\n  Last(Split(uri, '/'))"
+        "valueString": "define fluent function getId(uri String):\n  Last(Split(uri, '/'))"
       }, {
         "url": "displaySequence",
         "valueInteger": 13
@@ -234,6 +234,10 @@
       "type": "depends-on",
       "display": "Library FHIRHelpers",
       "resource": "http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000"
+    }, {
+      "type": "depends-on",
+      "display": "Library PC",
+      "resource": "http://mtnlotus.com/uv/pco/Library/PCOCommon|0.1.0"
     }, {
       "type": "depends-on",
       "display": "Value set PCO Categories",
@@ -351,7 +355,7 @@
   "title": "Person-Centered Goal Identification",
   "status": "draft",
   "experimental": false,
-  "date": "2024-08-16T23:24:39+00:00",
+  "date": "2024-08-19T20:15:52+00:00",
   "publisher": "Mountain Lotus WellBeing LLC",
   "contact": [ {
     "telecom": [ {
