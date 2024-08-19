@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
    <annotation translatorVersion="3.10.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
-   <annotation message="An operand identifier [goal] is hiding another identifier of the same name." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
-   <annotation message="An operand identifier [goal] is hiding another identifier of the same name." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
    <annotation message="An operand identifier [carePlan] is hiding another identifier of the same name." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
    <annotation message="An operand identifier [goal] is hiding another identifier of the same name." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
    <annotation xsi:type="a:Annotation">
-      <a:s r="663">
+      <a:s r="258">
          <a:s>library GoalAttainmentLogic version '0.1.0'</a:s>
       </a:s>
    </annotation>
@@ -38,360 +36,110 @@
             </a:s>
          </annotation>
       </def>
+      <def localId="208" locator="6:1-6:43" localIdentifier="PC" path="http://mtnlotus.com/uv/pco/PCOCommon" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>PCOCommon</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called PC</a:s>
+            </a:s>
+         </annotation>
+      </def>
    </includes>
    <parameters>
-      <def localId="215" locator="16:1-16:49" name="Measurement Period" accessLevel="Public">
+      <def localId="216" locator="17:1-17:49" name="Measurement Period" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="215">
+            <a:s r="216">
                <a:s>parameter &quot;Measurement Period&quot; </a:s>
-               <a:s r="216">
+               <a:s r="217">
                   <a:s>Interval&lt;</a:s>
-                  <a:s r="217">
+                  <a:s r="218">
                      <a:s>DateTime</a:s>
                   </a:s>
                   <a:s>></a:s>
                </a:s>
             </a:s>
          </annotation>
-         <parameterTypeSpecifier localId="216" locator="16:32-16:49" xsi:type="IntervalTypeSpecifier">
-            <pointType localId="217" locator="16:41-16:48" name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+         <parameterTypeSpecifier localId="217" locator="17:32-17:49" xsi:type="IntervalTypeSpecifier">
+            <pointType localId="218" locator="17:41-17:48" name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
          </parameterTypeSpecifier>
       </def>
    </parameters>
    <codeSystems>
-      <def localId="208" locator="7:1-7:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+      <def localId="209" locator="8:1-8:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="208">
+            <a:s r="209">
                <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
             </a:s>
          </annotation>
       </def>
-      <def localId="209" locator="8:1-8:93" name="PCO Category" id="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example" accessLevel="Public">
+      <def localId="210" locator="9:1-9:93" name="PCO Category" id="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="209">
+            <a:s r="210">
                <a:s>codesystem &quot;PCO Category&quot;: 'http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example'</a:s>
             </a:s>
          </annotation>
       </def>
-      <def localId="210" locator="9:1-9:91" name="PCO GAS Codes" id="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary" accessLevel="Public">
+      <def localId="211" locator="10:1-10:91" name="PCO GAS Codes" id="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="210">
+            <a:s r="211">
                <a:s>codesystem &quot;PCO GAS Codes&quot;: 'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'</a:s>
             </a:s>
          </annotation>
       </def>
    </codeSystems>
    <valueSets>
-      <def localId="211" locator="11:1-11:86" name="PCO Categories" id="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset" accessLevel="Public">
+      <def localId="212" locator="12:1-12:86" name="PCO Categories" id="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="211">
+            <a:s r="212">
                <a:s>valueset &quot;PCO Categories&quot;: 'http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset'</a:s>
             </a:s>
          </annotation>
       </def>
-      <def localId="212" locator="12:1-12:101" name="Patient Follow-Up GAS Score" id="http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs" accessLevel="Public">
+      <def localId="213" locator="13:1-13:101" name="Patient Follow-Up GAS Score" id="http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="212">
+            <a:s r="213">
                <a:s>valueset &quot;Patient Follow-Up GAS Score&quot;: 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs'</a:s>
             </a:s>
          </annotation>
       </def>
    </valueSets>
    <codes>
-      <def localId="213" locator="14:1-14:124" name="Goal attainment scaling score" id="goal-attainment-scaling" display="Goal Attainment Scaling (GAS)" accessLevel="Public">
+      <def localId="214" locator="15:1-15:124" name="Goal attainment scaling score" id="goal-attainment-scaling" display="Goal Attainment Scaling (GAS)" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="213">
+            <a:s r="214">
                <a:s>code &quot;Goal attainment scaling score&quot;: 'goal-attainment-scaling' from </a:s>
-               <a:s r="214">
+               <a:s r="215">
                   <a:s>&quot;PCO GAS Codes&quot;</a:s>
                </a:s>
                <a:s> display 'Goal Attainment Scaling (GAS)'</a:s>
             </a:s>
          </annotation>
-         <codeSystem localId="214" locator="14:70-14:84" name="PCO GAS Codes"/>
+         <codeSystem localId="215" locator="15:70-15:84" name="PCO GAS Codes"/>
       </def>
    </codes>
    <contexts>
-      <def localId="221" locator="18:1-18:15" name="Patient"/>
+      <def localId="222" locator="19:1-19:15" name="Patient"/>
    </contexts>
    <statements>
-      <def localId="219" locator="18:1-18:15" name="Patient" context="Patient">
-         <expression localId="220" xsi:type="SingletonFrom">
-            <operand localId="218" locator="18:1-18:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+      <def localId="220" locator="19:1-19:15" name="Patient" context="Patient">
+         <expression localId="221" xsi:type="SingletonFrom">
+            <operand localId="219" locator="19:1-19:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
          </expression>
       </def>
-      <def localId="232" locator="114:1-120:3" name="dueDate" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
+      <def localId="224" locator="22:1-29:5" name="GoalSummary" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="232">
-               <a:s>// Returns Date from the first Goal target that has a due date.
-define fluent function dueDate(goal Goal):
-  </a:s>
-               <a:s r="584">
-                  <a:s r="584">
-                     <a:s>First(</a:s>
-                     <a:s r="581">
-                        <a:s>
-                           <a:s r="567">
-                              <a:s r="569">
-                                 <a:s>
-                                    <a:s>goal.target</a:s>
-                                 </a:s>
-                              </a:s>
-                              <a:s> target</a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-    // TODO if due is Duration, add that quantity to startDate
-      </a:s>
-                        <a:s>
-                           <a:s>let </a:s>
-                           <a:s r="570">
-                              <a:s>due:</a:s>
-                              <a:s r="575">
-                                 <a:s r="571">
-                                    <a:s>(</a:s>
-                                    <a:s r="571">
-                                       <a:s r="573">
-                                          <a:s r="572">
-                                             <a:s>target</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="573">
-                                             <a:s>due</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> as </a:s>
-                                       <a:s r="574">
-                                          <a:s>FHIR.date</a:s>
-                                       </a:s>
-                                    </a:s>
-                                    <a:s>)</a:s>
-                                 </a:s>
-                                 <a:s>.</a:s>
-                                 <a:s r="575">
-                                    <a:s>value</a:s>
-                                 </a:s>
-                              </a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-      </a:s>
-                        <a:s r="578">
-                           <a:s>where </a:s>
-                           <a:s r="578">
-                              <a:s r="576">
-                                 <a:s>due</a:s>
-                              </a:s>
-                              <a:s> is not null</a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-      </a:s>
-                        <a:s r="579">
-                           <a:s>return </a:s>
-                           <a:s r="580">
-                              <a:s>due</a:s>
-                           </a:s>
-                        </a:s>
-                     </a:s>
-                     <a:s>
-  )</a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="584" locator="115:3-120:3" xsi:type="First">
-            <source localId="581" locator="115:9-119:16" xsi:type="Query">
-               <source localId="567" locator="115:9-115:26" alias="target">
-                  <expression localId="569" locator="115:9-115:19" path="target" xsi:type="Property">
-                     <source localId="568" name="goal" xsi:type="OperandRef"/>
-                  </expression>
-               </source>
-               <let localId="570" locator="117:11-117:45" identifier="due">
-                  <expression localId="575" locator="117:15-117:45" path="value" xsi:type="Property">
-                     <source localId="571" locator="117:15-117:39" strict="false" xsi:type="As">
-                        <operand localId="573" locator="117:16-117:25" path="due" scope="target" xsi:type="Property"/>
-                        <asTypeSpecifier localId="574" locator="117:30-117:38" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
-                     </source>
-                  </expression>
-               </let>
-               <where localId="578" locator="118:7-118:27" xsi:type="Not">
-                  <operand localId="577" locator="118:13-118:27" xsi:type="IsNull">
-                     <operand localId="576" locator="118:13-118:15" name="due" xsi:type="QueryLetRef"/>
-                  </operand>
-               </where>
-               <return localId="579" locator="119:7-119:16">
-                  <expression localId="580" locator="119:14-119:16" name="due" xsi:type="QueryLetRef"/>
-               </return>
-            </source>
-         </expression>
-         <operand localId="234" name="goal">
-            <operandTypeSpecifier localId="233" locator="114:37-114:40" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="266" locator="92:1-96:5" name="carePlans" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="266">
-               <a:s>// Returns a list of CarePlan that support this Goal.
-define fluent function carePlans(goal Goal):
-  </a:s>
-               <a:s r="509">
-                  <a:s r="509">
-                     <a:s>
-                        <a:s r="488">
-                           <a:s r="489">
-                              <a:s r="489">
-                                 <a:s>[CarePlan]</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s> carePlan</a:s>
-                        </a:s>
-                     </a:s>
-                     <a:s>
-    </a:s>
-                     <a:s r="490">
-                        <a:s>where </a:s>
-                        <a:s r="490">
-                           <a:s>exists </a:s>
-                           <a:s r="506">
-                              <a:s>( </a:s>
-                              <a:s r="506">
-                                 <a:s>
-                                    <a:s r="491">
-                                       <a:s r="493">
-                                          <a:s>
-                                             <a:s>carePlan.goal</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> goalRef</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s>
-        </a:s>
-                                 <a:s r="494">
-                                    <a:s>where </a:s>
-                                    <a:s r="494">
-                                       <a:s r="496">
-                                          <a:s r="495">
-                                             <a:s>goal</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="496">
-                                             <a:s>id</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> = </a:s>
-                                       <a:s r="499">
-                                          <a:s r="498">
-                                             <a:s r="497">
-                                                <a:s>goalRef</a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="498">
-                                                <a:s>reference</a:s>
-                                             </a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="499">
-                                             <a:s>getId()</a:s>
-                                          </a:s>
-                                       </a:s>
-                                    </a:s>
-                                 </a:s>
-                              </a:s>
-                              <a:s>
-    )</a:s>
-                           </a:s>
-                        </a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="509" locator="93:3-96:5" xsi:type="Query">
-            <source localId="488" locator="93:3-93:21" alias="carePlan">
-               <expression localId="489" locator="93:3-93:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
-            </source>
-            <where localId="490" locator="94:5-96:5" xsi:type="Exists">
-               <signature localId="507" xsi:type="ListTypeSpecifier">
-                  <elementType localId="508" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
-               </signature>
-               <operand localId="506" locator="94:18-96:5" xsi:type="Query">
-                  <source localId="491" locator="94:20-94:40" alias="goalRef">
-                     <expression localId="493" locator="94:20-94:32" path="goal" scope="carePlan" xsi:type="Property"/>
-                  </source>
-                  <where localId="494" locator="95:9-95:49" xsi:type="Equal">
-                     <signature localId="504" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                     <signature localId="505" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                     <operand localId="502" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                        <signature localId="503" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                        <operand localId="496" locator="95:15-95:21" path="id" xsi:type="Property">
-                           <source localId="495" locator="95:15-95:18" name="goal" xsi:type="OperandRef"/>
-                        </operand>
-                     </operand>
-                     <operand localId="499" locator="95:25-95:49" name="getId" xsi:type="FunctionRef">
-                        <operand localId="500" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                           <signature localId="501" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="498" locator="95:25-95:41" path="reference" scope="goalRef" xsi:type="Property"/>
-                        </operand>
-                     </operand>
-                  </where>
-               </operand>
-            </where>
-         </expression>
-         <operand localId="268" name="goal">
-            <operandTypeSpecifier localId="267" locator="92:39-92:42" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="281" locator="141:1-142:23" name="getId" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="281">
-               <a:s>/*
- * General FHIR data helpers.
- */
-
-define fluent function getId(uri String):
-  </a:s>
-               <a:s r="648">
-                  <a:s r="648">
-                     <a:s>Last(</a:s>
-                     <a:s r="645">
-                        <a:s>Split(</a:s>
-                        <a:s r="641">
-                           <a:s>uri</a:s>
-                        </a:s>
-                        <a:s>, </a:s>
-                        <a:s r="642">
-                           <a:s>'/'</a:s>
-                        </a:s>
-                        <a:s>)</a:s>
-                     </a:s>
-                     <a:s>)</a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="648" locator="142:3-142:23" xsi:type="Last">
-            <source localId="645" locator="142:8-142:22" xsi:type="Split">
-               <stringToSplit localId="641" locator="142:14-142:16" name="uri" xsi:type="OperandRef"/>
-               <separator localId="642" locator="142:19-142:21" valueType="t:String" value="/" xsi:type="Literal"/>
-            </source>
-         </expression>
-         <operand localId="283" name="uri">
-            <operandTypeSpecifier localId="282" locator="141:34-141:39" name="t:String" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="223" locator="21:1-28:5" name="GoalSummary" context="Patient" accessLevel="Public">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="223">
+            <a:s r="224">
                <a:s>// For debugging
 define GoalSummary: 
   </a:s>
-               <a:s r="301">
+               <a:s r="247">
                   <a:s>
-                     <a:s r="224">
-                        <a:s r="225">
-                           <a:s r="225">
+                     <a:s r="225">
+                        <a:s r="226">
+                           <a:s r="226">
                               <a:s>[Goal]</a:s>
                            </a:s>
                         </a:s>
@@ -400,25 +148,25 @@ define GoalSummary:
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="226">
+                  <a:s r="227">
                      <a:s>return </a:s>
-                     <a:s r="227">
+                     <a:s r="228">
                         <a:s>{
       </a:s>
                         <a:s>
                            <a:s>id: </a:s>
-                           <a:s r="230">
-                              <a:s r="229">
-                                 <a:s r="228">
+                           <a:s r="231">
+                              <a:s r="230">
+                                 <a:s r="229">
                                     <a:s>goal</a:s>
                                  </a:s>
                                  <a:s>.</a:s>
-                                 <a:s r="229">
+                                 <a:s r="230">
                                     <a:s>id</a:s>
                                  </a:s>
                               </a:s>
                               <a:s>.</a:s>
-                              <a:s r="230">
+                              <a:s r="231">
                                  <a:s>value</a:s>
                               </a:s>
                            </a:s>
@@ -427,12 +175,12 @@ define GoalSummary:
       </a:s>
                         <a:s>
                            <a:s>dueDate: </a:s>
-                           <a:s r="235">
-                              <a:s r="231">
+                           <a:s r="233">
+                              <a:s r="232">
                                  <a:s>goal</a:s>
                               </a:s>
                               <a:s>.</a:s>
-                              <a:s r="235">
+                              <a:s r="233">
                                  <a:s>dueDate()</a:s>
                               </a:s>
                            </a:s>
@@ -441,18 +189,18 @@ define GoalSummary:
       </a:s>
                         <a:s>
                            <a:s>pcoGoalDomains: </a:s>
-                           <a:s r="257">
-                              <a:s r="255">
-                                 <a:s r="254">
+                           <a:s r="237">
+                              <a:s r="235">
+                                 <a:s r="234">
                                     <a:s>goal</a:s>
                                  </a:s>
                                  <a:s>.</a:s>
-                                 <a:s r="255">
+                                 <a:s r="235">
                                     <a:s>category</a:s>
                                  </a:s>
                               </a:s>
                               <a:s> in </a:s>
-                              <a:s r="256">
+                              <a:s r="236">
                                  <a:s>&quot;PCO Categories&quot;</a:s>
                               </a:s>
                            </a:s>
@@ -461,12 +209,12 @@ define GoalSummary:
       </a:s>
                         <a:s>
                            <a:s>carePlans: </a:s>
-                           <a:s r="269">
-                              <a:s r="265">
+                           <a:s r="246">
+                              <a:s r="245">
                                  <a:s>goal</a:s>
                               </a:s>
                               <a:s>.</a:s>
-                              <a:s r="269">
+                              <a:s r="246">
                                  <a:s>carePlans()</a:s>
                               </a:s>
                            </a:s>
@@ -478,64 +226,64 @@ define GoalSummary:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="301" locator="22:3-28:5" xsi:type="Query">
-            <source localId="224" locator="22:3-22:13" alias="goal">
-               <expression localId="225" locator="22:3-22:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
+         <expression localId="247" locator="23:3-29:5" xsi:type="Query">
+            <source localId="225" locator="23:3-23:13" alias="goal">
+               <expression localId="226" locator="23:3-23:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
             </source>
-            <return localId="226" locator="23:5-28:5">
-               <expression localId="227" locator="23:12-28:5" xsi:type="Tuple">
+            <return localId="227" locator="24:5-29:5">
+               <expression localId="228" locator="24:12-29:5" xsi:type="Tuple">
                   <element name="id">
-                     <value localId="230" locator="24:11-24:23" path="value" xsi:type="Property">
-                        <source localId="229" locator="24:11-24:17" path="id" scope="goal" xsi:type="Property"/>
+                     <value localId="231" locator="25:11-25:23" path="value" xsi:type="Property">
+                        <source localId="230" locator="25:11-25:17" path="id" scope="goal" xsi:type="Property"/>
                      </value>
                   </element>
                   <element name="dueDate">
-                     <value localId="235" locator="25:16-25:29" name="dueDate" xsi:type="FunctionRef">
-                        <operand localId="231" locator="25:16-25:19" name="goal" xsi:type="AliasRef"/>
+                     <value localId="233" locator="26:16-26:29" name="dueDate" libraryName="PC" xsi:type="FunctionRef">
+                        <operand localId="232" locator="26:16-26:19" name="goal" xsi:type="AliasRef"/>
                      </value>
                   </element>
                   <element name="pcoGoalDomains">
-                     <value localId="257" locator="26:23-26:55" xsi:type="AnyInValueSet">
-                        <signature localId="263" xsi:type="ListTypeSpecifier">
-                           <elementType localId="264" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
+                     <value localId="237" locator="27:23-27:55" xsi:type="AnyInValueSet">
+                        <signature localId="243" xsi:type="ListTypeSpecifier">
+                           <elementType localId="244" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
                         </signature>
-                        <codes localId="258" xsi:type="Query">
-                           <source localId="259" alias="X">
-                              <expression localId="255" locator="26:23-26:35" path="category" scope="goal" xsi:type="Property"/>
+                        <codes localId="238" xsi:type="Query">
+                           <source localId="239" alias="X">
+                              <expression localId="235" locator="27:23-27:35" path="category" scope="goal" xsi:type="Property"/>
                            </source>
-                           <return localId="260" distinct="false">
-                              <expression localId="262" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                                 <operand localId="261" name="X" xsi:type="AliasRef"/>
+                           <return localId="240" distinct="false">
+                              <expression localId="242" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <operand localId="241" name="X" xsi:type="AliasRef"/>
                               </expression>
                            </return>
                         </codes>
-                        <valueset localId="256" locator="26:40-26:55" name="PCO Categories" preserve="true"/>
+                        <valueset localId="236" locator="27:40-27:55" name="PCO Categories" preserve="true"/>
                      </value>
                   </element>
                   <element name="carePlans">
-                     <value localId="269" locator="27:18-27:33" name="carePlans" xsi:type="FunctionRef">
-                        <operand localId="265" locator="27:18-27:21" name="goal" xsi:type="AliasRef"/>
+                     <value localId="246" locator="28:18-28:33" name="carePlans" libraryName="PC" xsi:type="FunctionRef">
+                        <operand localId="245" locator="28:18-28:21" name="goal" xsi:type="AliasRef"/>
                      </value>
                   </element>
                </expression>
             </return>
          </expression>
       </def>
-      <def localId="312" locator="123:1-128:3" name="pcoGoals" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
+      <def localId="258" locator="114:1-119:3" name="pcoGoals" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
          <annotation xsi:type="a:Annotation">
-            <a:s r="312">
+            <a:s r="258">
                <a:s>// Returns a list of PCO Goals that are included in this CarePlan.
 define fluent function pcoGoals(carePlan CarePlan):
   </a:s>
-               <a:s r="585">
-                  <a:s r="585">
+               <a:s r="452">
+                  <a:s r="452">
                      <a:s>flatten</a:s>
-                     <a:s r="612">
+                     <a:s r="476">
                         <a:s>( </a:s>
-                        <a:s r="612">
+                        <a:s r="476">
                            <a:s>
-                              <a:s r="586">
-                                 <a:s r="588">
+                              <a:s r="453">
+                                 <a:s r="455">
                                     <a:s>
                                        <a:s>carePlan.goal</a:s>
                                     </a:s>
@@ -545,13 +293,13 @@ define fluent function pcoGoals(carePlan CarePlan):
                            </a:s>
                            <a:s>
       </a:s>
-                           <a:s r="589">
+                           <a:s r="456">
                               <a:s>return </a:s>
-                              <a:s r="611">
+                              <a:s r="475">
                                  <a:s>
-                                    <a:s r="590">
-                                       <a:s r="591">
-                                          <a:s r="591">
+                                    <a:s r="457">
+                                       <a:s r="458">
+                                          <a:s r="458">
                                              <a:s>[Goal]</a:s>
                                           </a:s>
                                        </a:s>
@@ -560,44 +308,44 @@ define fluent function pcoGoals(carePlan CarePlan):
                                  </a:s>
                                  <a:s>
         </a:s>
-                                 <a:s r="592">
+                                 <a:s r="459">
                                     <a:s>where </a:s>
-                                    <a:s r="592">
-                                       <a:s r="593">
-                                          <a:s r="595">
-                                             <a:s r="594">
+                                    <a:s r="459">
+                                       <a:s r="460">
+                                          <a:s r="462">
+                                             <a:s r="461">
                                                 <a:s>goal</a:s>
                                              </a:s>
                                              <a:s>.</a:s>
-                                             <a:s r="595">
+                                             <a:s r="462">
                                                 <a:s>id</a:s>
                                              </a:s>
                                           </a:s>
                                           <a:s> = </a:s>
-                                          <a:s r="598">
-                                             <a:s r="597">
-                                                <a:s r="596">
+                                          <a:s r="465">
+                                             <a:s r="464">
+                                                <a:s r="463">
                                                    <a:s>goalRef</a:s>
                                                 </a:s>
                                                 <a:s>.</a:s>
-                                                <a:s r="597">
+                                                <a:s r="464">
                                                    <a:s>reference</a:s>
                                                 </a:s>
                                              </a:s>
                                              <a:s>.</a:s>
-                                             <a:s r="598">
+                                             <a:s r="465">
                                                 <a:s>getId()</a:s>
                                              </a:s>
                                           </a:s>
                                        </a:s>
                                        <a:s>
           and </a:s>
-                                       <a:s r="607">
-                                          <a:s r="605">
+                                       <a:s r="474">
+                                          <a:s r="472">
                                              <a:s>&quot;PCO Goals&quot;</a:s>
                                           </a:s>
                                           <a:s> contains </a:s>
-                                          <a:s r="606">
+                                          <a:s r="473">
                                              <a:s>goal</a:s>
                                           </a:s>
                                        </a:s>
@@ -613,66 +361,60 @@ define fluent function pcoGoals(carePlan CarePlan):
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="585" locator="124:3-128:3" xsi:type="Flatten">
-            <signature localId="613" xsi:type="ListTypeSpecifier">
-               <elementType localId="614" xsi:type="ListTypeSpecifier">
-                  <elementType localId="615" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-               </elementType>
-            </signature>
-            <operand localId="612" locator="124:10-128:3" xsi:type="Query">
-               <source localId="586" locator="124:12-124:32" alias="goalRef">
-                  <expression localId="588" locator="124:12-124:24" path="goal" xsi:type="Property">
-                     <source localId="587" name="carePlan" xsi:type="OperandRef"/>
+         <expression localId="452" locator="115:3-119:3" xsi:type="Flatten">
+            <operand localId="476" locator="115:10-119:3" xsi:type="Query">
+               <source localId="453" locator="115:12-115:32" alias="goalRef">
+                  <expression localId="455" locator="115:12-115:24" path="goal" xsi:type="Property">
+                     <source localId="454" name="carePlan" xsi:type="OperandRef"/>
                   </expression>
                </source>
-               <return localId="589" locator="125:7-127:39">
-                  <expression localId="611" locator="125:14-127:39" xsi:type="Query">
-                     <source localId="590" locator="125:14-125:24" alias="goal">
-                        <expression localId="591" locator="125:14-125:19" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
+               <return localId="456" locator="116:7-118:39">
+                  <expression localId="475" locator="116:14-118:39" xsi:type="Query">
+                     <source localId="457" locator="116:14-116:24" alias="goal">
+                        <expression localId="458" locator="116:14-116:19" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
                      </source>
-                     <where localId="592" locator="126:9-127:39" xsi:type="And">
-                        <operand localId="593" locator="126:15-126:49" xsi:type="Equal">
-                           <signature localId="603" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                           <signature localId="604" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="601" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                              <signature localId="602" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                              <operand localId="595" locator="126:15-126:21" path="id" scope="goal" xsi:type="Property"/>
+                     <where localId="459" locator="117:9-118:39" xsi:type="And">
+                        <operand localId="460" locator="117:15-117:49" xsi:type="Equal">
+                           <signature localId="470" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                           <signature localId="471" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="468" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                              <signature localId="469" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                              <operand localId="462" locator="117:15-117:21" path="id" scope="goal" xsi:type="Property"/>
                            </operand>
-                           <operand localId="598" locator="126:25-126:49" name="getId" xsi:type="FunctionRef">
-                              <operand localId="599" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                                 <signature localId="600" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                                 <operand localId="597" locator="126:25-126:41" path="reference" scope="goalRef" xsi:type="Property"/>
+                           <operand localId="465" locator="117:25-117:49" name="getId" libraryName="PC" xsi:type="FunctionRef">
+                              <operand localId="466" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <signature localId="467" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="464" locator="117:25-117:41" path="reference" scope="goalRef" xsi:type="Property"/>
                               </operand>
                            </operand>
                         </operand>
-                        <operand localId="607" locator="127:15-127:39" xsi:type="Contains">
-                           <signature localId="608" xsi:type="ListTypeSpecifier">
-                              <elementType localId="609" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-                           </signature>
-                           <signature localId="610" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="605" locator="127:15-127:25" name="PCO Goals" xsi:type="ExpressionRef"/>
-                           <operand localId="606" locator="127:36-127:39" name="goal" xsi:type="AliasRef"/>
+                        <operand localId="474" locator="118:15-118:39" xsi:type="Contains">
+                           <operand localId="472" locator="118:15-118:25" name="PCO Goals" xsi:type="ExpressionRef"/>
+                           <operand localId="473" locator="118:36-118:39" name="goal" xsi:type="AliasRef"/>
                         </operand>
                      </where>
                   </expression>
                </return>
             </operand>
          </expression>
-         <operand localId="314" name="carePlan">
-            <operandTypeSpecifier localId="313" locator="123:42-123:49" name="fhir:CarePlan" xsi:type="NamedTypeSpecifier"/>
+         <operand localId="260" name="carePlan">
+            <operandTypeSpecifier localId="259" locator="114:42-114:49" name="fhir:CarePlan" xsi:type="NamedTypeSpecifier"/>
          </operand>
       </def>
-      <def localId="337" locator="53:1-55:43" name="PCO Goals" context="Patient" accessLevel="Public">
+      <def localId="283" locator="47:1-50:47" name="PCO Goals" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="337">
-               <a:s>// A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+            <a:s r="283">
+               <a:s>/* 
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+  and has a start date.
+*/
 define &quot;PCO Goals&quot;:
   </a:s>
-               <a:s r="351">
+               <a:s r="304">
                   <a:s>
-                     <a:s r="338">
-                        <a:s r="339">
-                           <a:s r="339">
+                     <a:s r="284">
+                        <a:s r="285">
+                           <a:s r="285">
                               <a:s>[Goal]</a:s>
                            </a:s>
                         </a:s>
@@ -681,60 +423,96 @@ define &quot;PCO Goals&quot;:
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="343">
+                  <a:s r="286">
                      <a:s>where </a:s>
-                     <a:s r="343">
-                        <a:s r="341">
-                           <a:s r="340">
-                              <a:s>goal</a:s>
+                     <a:s r="286">
+                        <a:s r="290">
+                           <a:s r="288">
+                              <a:s r="287">
+                                 <a:s>goal</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="288">
+                                 <a:s>category</a:s>
+                              </a:s>
                            </a:s>
-                           <a:s>.</a:s>
-                           <a:s r="341">
-                              <a:s>category</a:s>
+                           <a:s> in </a:s>
+                           <a:s r="289">
+                              <a:s>&quot;PCO Categories&quot;</a:s>
                            </a:s>
                         </a:s>
-                        <a:s> in </a:s>
-                        <a:s r="342">
-                           <a:s>&quot;PCO Categories&quot;</a:s>
+                        <a:s>
+      and </a:s>
+                        <a:s r="303">
+                           <a:s r="298">
+                              <a:s>(</a:s>
+                              <a:s r="298">
+                                 <a:s r="300">
+                                    <a:s r="299">
+                                       <a:s>goal</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="300">
+                                       <a:s>start</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="301">
+                                    <a:s>FHIR.date</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s> is not null</a:s>
                         </a:s>
                      </a:s>
                   </a:s>
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="351" locator="54:3-55:43" xsi:type="Query">
-            <source localId="338" locator="54:3-54:13" alias="goal">
-               <expression localId="339" locator="54:3-54:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
+         <expression localId="304" locator="48:3-50:47" xsi:type="Query">
+            <source localId="284" locator="48:3-48:13" alias="goal">
+               <expression localId="285" locator="48:3-48:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
             </source>
-            <where localId="343" locator="55:5-55:43" xsi:type="AnyInValueSet">
-               <signature localId="349" xsi:type="ListTypeSpecifier">
-                  <elementType localId="350" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
-               </signature>
-               <codes localId="344" xsi:type="Query">
-                  <source localId="345" alias="X">
-                     <expression localId="341" locator="55:11-55:23" path="category" scope="goal" xsi:type="Property"/>
-                  </source>
-                  <return localId="346" distinct="false">
-                     <expression localId="348" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                        <operand localId="347" name="X" xsi:type="AliasRef"/>
-                     </expression>
-                  </return>
-               </codes>
-               <valueset localId="342" locator="55:28-55:43" name="PCO Categories" preserve="true"/>
+            <where localId="286" locator="49:5-50:47" xsi:type="And">
+               <operand localId="290" locator="49:11-49:43" xsi:type="AnyInValueSet">
+                  <signature localId="296" xsi:type="ListTypeSpecifier">
+                     <elementType localId="297" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
+                  </signature>
+                  <codes localId="291" xsi:type="Query">
+                     <source localId="292" alias="X">
+                        <expression localId="288" locator="49:11-49:23" path="category" scope="goal" xsi:type="Property"/>
+                     </source>
+                     <return localId="293" distinct="false">
+                        <expression localId="295" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="294" name="X" xsi:type="AliasRef"/>
+                        </expression>
+                     </return>
+                  </codes>
+                  <valueset localId="289" locator="49:28-49:43" name="PCO Categories" preserve="true"/>
+               </operand>
+               <operand localId="303" locator="50:11-50:47" xsi:type="Not">
+                  <operand localId="302" locator="50:11-50:47" xsi:type="IsNull">
+                     <operand localId="298" locator="50:11-50:35" strict="false" xsi:type="As">
+                        <operand localId="300" locator="50:12-50:21" path="start" scope="goal" xsi:type="Property"/>
+                        <asTypeSpecifier localId="301" locator="50:26-50:34" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+                     </operand>
+                  </operand>
+               </operand>
             </where>
          </expression>
       </def>
-      <def localId="303" locator="31:1-36:5" name="CarPlanSummary" context="Patient" accessLevel="Public">
+      <def localId="249" locator="32:1-37:5" name="CarPlanSummary" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="303">
+            <a:s r="249">
                <a:s>// For debugging
 define CarPlanSummary: 
   </a:s>
-               <a:s r="357">
+               <a:s r="310">
                   <a:s>
-                     <a:s r="304">
-                        <a:s r="305">
-                           <a:s r="305">
+                     <a:s r="250">
+                        <a:s r="251">
+                           <a:s r="251">
                               <a:s>[CarePlan]</a:s>
                            </a:s>
                         </a:s>
@@ -743,25 +521,25 @@ define CarPlanSummary:
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="306">
+                  <a:s r="252">
                      <a:s>return </a:s>
-                     <a:s r="307">
+                     <a:s r="253">
                         <a:s>{
       </a:s>
                         <a:s>
                            <a:s>id: </a:s>
-                           <a:s r="310">
-                              <a:s r="309">
-                                 <a:s r="308">
+                           <a:s r="256">
+                              <a:s r="255">
+                                 <a:s r="254">
                                     <a:s>carePlan</a:s>
                                  </a:s>
                                  <a:s>.</a:s>
-                                 <a:s r="309">
+                                 <a:s r="255">
                                     <a:s>id</a:s>
                                  </a:s>
                               </a:s>
                               <a:s>.</a:s>
-                              <a:s r="310">
+                              <a:s r="256">
                                  <a:s>value</a:s>
                               </a:s>
                            </a:s>
@@ -770,12 +548,12 @@ define CarPlanSummary:
       </a:s>
                         <a:s>
                            <a:s>pcoGoals: </a:s>
-                           <a:s r="315">
-                              <a:s r="311">
+                           <a:s r="261">
+                              <a:s r="257">
                                  <a:s>carePlan</a:s>
                               </a:s>
                               <a:s>.</a:s>
-                              <a:s r="315">
+                              <a:s r="261">
                                  <a:s>pcoGoals()</a:s>
                               </a:s>
                            </a:s>
@@ -787,106 +565,37 @@ define CarPlanSummary:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="357" locator="32:3-36:5" xsi:type="Query">
-            <source localId="304" locator="32:3-32:21" alias="carePlan">
-               <expression localId="305" locator="32:3-32:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
+         <expression localId="310" locator="33:3-37:5" xsi:type="Query">
+            <source localId="250" locator="33:3-33:21" alias="carePlan">
+               <expression localId="251" locator="33:3-33:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
             </source>
-            <return localId="306" locator="33:5-36:5">
-               <expression localId="307" locator="33:12-36:5" xsi:type="Tuple">
+            <return localId="252" locator="34:5-37:5">
+               <expression localId="253" locator="34:12-37:5" xsi:type="Tuple">
                   <element name="id">
-                     <value localId="310" locator="34:11-34:27" path="value" xsi:type="Property">
-                        <source localId="309" locator="34:11-34:21" path="id" scope="carePlan" xsi:type="Property"/>
+                     <value localId="256" locator="35:11-35:27" path="value" xsi:type="Property">
+                        <source localId="255" locator="35:11-35:21" path="id" scope="carePlan" xsi:type="Property"/>
                      </value>
                   </element>
                   <element name="pcoGoals">
-                     <value localId="315" locator="35:17-35:35" name="pcoGoals" xsi:type="FunctionRef">
-                        <operand localId="311" locator="35:17-35:24" name="carePlan" xsi:type="AliasRef"/>
+                     <value localId="261" locator="36:17-36:35" name="pcoGoals" xsi:type="FunctionRef">
+                        <operand localId="257" locator="36:17-36:24" name="carePlan" xsi:type="AliasRef"/>
                      </value>
                   </element>
                </expression>
             </return>
          </expression>
       </def>
-      <def localId="359" locator="38:1-39:33" name="PCO Goal Domain Observations" context="Patient" accessLevel="Public">
+      <def localId="312" locator="40:1-41:13" name="All Goals" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="359">
-               <a:s>define &quot;PCO Goal Domain Observations&quot;:
-  </a:s>
-               <a:s r="362">
-                  <a:s>[Observation: </a:s>
-                  <a:s>
-                     <a:s>&quot;PCO Categories&quot;</a:s>
-                  </a:s>
-                  <a:s>]</a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="362" locator="39:3-39:33" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="in" xsi:type="Retrieve">
-            <codes localId="361" locator="39:17-39:32" name="PCO Categories" preserve="true" xsi:type="ValueSetRef"/>
-         </expression>
-      </def>
-      <def localId="366" locator="41:1-42:45" name="isGoalDomain" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="366">
-               <a:s>define fluent function isGoalDomain(obs Observation):
-  </a:s>
-               <a:s r="371">
-                  <a:s r="371">
-                     <a:s r="369">
-                        <a:s>&quot;PCO Goal Domain Observations&quot;</a:s>
-                     </a:s>
-                     <a:s> contains </a:s>
-                     <a:s r="370">
-                        <a:s>obs</a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="371" locator="42:3-42:45" xsi:type="Contains">
-            <signature localId="372" xsi:type="ListTypeSpecifier">
-               <elementType localId="373" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-            </signature>
-            <signature localId="374" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-            <operand localId="369" locator="42:3-42:32" name="PCO Goal Domain Observations" xsi:type="ExpressionRef"/>
-            <operand localId="370" locator="42:43-42:45" name="obs" xsi:type="OperandRef"/>
-         </expression>
-         <operand localId="368" name="obs">
-            <operandTypeSpecifier localId="367" locator="41:41-41:51" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="376" locator="45:1-46:48" name="GAS Observations" context="Patient" accessLevel="Public">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="376">
-               <a:s>// All observations containing a Goal Attainment Scaling (GAS) score.
-define &quot;GAS Observations&quot;:
-  </a:s>
-               <a:s r="379">
-                  <a:s>[Observation: </a:s>
-                  <a:s>
-                     <a:s>&quot;Goal attainment scaling score&quot;</a:s>
-                  </a:s>
-                  <a:s>]</a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="379" locator="46:3-46:48" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
-            <codes localId="387" xsi:type="ToList">
-               <operand localId="378" locator="46:17-46:47" name="Goal attainment scaling score" xsi:type="CodeRef"/>
-            </codes>
-         </expression>
-      </def>
-      <def localId="389" locator="49:1-50:13" name="All Goals" context="Patient" accessLevel="Public">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="389">
+            <a:s r="312">
                <a:s>// All FHIR Goals for this patient. Useful for verifying subset matched by &quot;PCO Goals&quot;.
 define &quot;All Goals&quot;:
   </a:s>
-               <a:s r="392">
+               <a:s r="315">
                   <a:s>
-                     <a:s r="390">
-                        <a:s r="391">
-                           <a:s r="391">
+                     <a:s r="313">
+                        <a:s r="314">
+                           <a:s r="314">
                               <a:s>[Goal]</a:s>
                            </a:s>
                         </a:s>
@@ -896,28 +605,28 @@ define &quot;All Goals&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="392" locator="50:3-50:13" xsi:type="Query">
-            <source localId="390" locator="50:3-50:13" alias="goal">
-               <expression localId="391" locator="50:3-50:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
+         <expression localId="315" locator="41:3-41:13" xsi:type="Query">
+            <source localId="313" locator="41:3-41:13" alias="goal">
+               <expression localId="314" locator="41:3-41:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
             </source>
          </expression>
       </def>
-      <def localId="398" locator="88:1-89:102" name="hasGAS" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
+      <def localId="321" locator="110:1-111:102" name="hasGAS" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
          <annotation xsi:type="a:Annotation">
-            <a:s r="398">
+            <a:s r="321">
                <a:s>define fluent function hasGAS(goal Goal):
   </a:s>
-               <a:s r="482">
-                  <a:s r="482">
+               <a:s r="446">
+                  <a:s r="446">
                      <a:s>exists </a:s>
-                     <a:s r="485">
-                        <a:s r="483">
+                     <a:s r="449">
+                        <a:s r="447">
                            <a:s>goal</a:s>
                         </a:s>
                         <a:s>.</a:s>
-                        <a:s r="485">
+                        <a:s r="449">
                            <a:s>extensions(</a:s>
-                           <a:s r="484">
+                           <a:s r="448">
                               <a:s>'http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling'</a:s>
                            </a:s>
                            <a:s>)</a:s>
@@ -927,116 +636,31 @@ define &quot;All Goals&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="482" locator="89:3-89:102" xsi:type="Exists">
-            <signature localId="486" xsi:type="ListTypeSpecifier">
-               <elementType localId="487" name="fhir:Extension" xsi:type="NamedTypeSpecifier"/>
+         <expression localId="446" locator="111:3-111:102" xsi:type="Exists">
+            <signature localId="450" xsi:type="ListTypeSpecifier">
+               <elementType localId="451" name="fhir:Extension" xsi:type="NamedTypeSpecifier"/>
             </signature>
-            <operand localId="485" locator="89:10-89:102" name="extensions" xsi:type="FunctionRef">
-               <operand localId="483" locator="89:10-89:13" name="goal" xsi:type="OperandRef"/>
-               <operand localId="484" locator="89:26-89:101" valueType="t:String" value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling" xsi:type="Literal"/>
+            <operand localId="449" locator="111:10-111:102" name="extensions" libraryName="PC" xsi:type="FunctionRef">
+               <operand localId="447" locator="111:10-111:13" name="goal" xsi:type="OperandRef"/>
+               <operand localId="448" locator="111:26-111:101" valueType="t:String" value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling" xsi:type="Literal"/>
             </operand>
          </expression>
-         <operand localId="400" name="goal">
-            <operandTypeSpecifier localId="399" locator="88:36-88:39" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
+         <operand localId="323" name="goal">
+            <operandTypeSpecifier localId="322" locator="110:36-110:39" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
          </operand>
       </def>
-      <def localId="405" locator="153:1-156:10" name="extensions" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
+      <def localId="317" locator="53:1-55:23" name="GAS Goals" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:t name="description" value="Returns any extensions defined on the given resource with the specified url."/>
-            <a:t name="comment" value="NOTE: Extensions are not the preferred approach, but are used as a way to access&#xa;content that is defined by extensions but not yet surfaced in the&#xa;CQL model info."/>
-            <a:s r="405">
-               <a:s>// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.
-
-/*
-@description: Returns any extensions defined on the given resource with the specified url.
-@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access
-content that is defined by extensions but not yet surfaced in the
-CQL model info.
-*/
-define fluent function extensions(domainResource DomainResource, url String):
-  </a:s>
-               <a:s r="662">
-                  <a:s r="662">
-                     <a:s>
-                        <a:s r="649">
-                           <a:s r="651">
-                              <a:s>
-                                 <a:s>domainResource.extension</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s> E</a:s>
-                        </a:s>
-                     </a:s>
-                     <a:s>
-	  </a:s>
-                     <a:s r="652">
-                        <a:s>where </a:s>
-                        <a:s r="652">
-                           <a:s r="654">
-                              <a:s r="653">
-                                 <a:s>E</a:s>
-                              </a:s>
-                              <a:s>.</a:s>
-                              <a:s r="654">
-                                 <a:s>url</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s> = </a:s>
-                           <a:s r="655">
-                              <a:s>url</a:s>
-                           </a:s>
-                        </a:s>
-                     </a:s>
-                     <a:s>
-		</a:s>
-                     <a:s r="660">
-                        <a:s>return </a:s>
-                        <a:s r="661">
-                           <a:s>E</a:s>
-                        </a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="662" locator="154:3-156:10" xsi:type="Query">
-            <source localId="649" locator="154:3-154:28" alias="E">
-               <expression localId="651" locator="154:3-154:26" path="extension" xsi:type="Property">
-                  <source localId="650" name="domainResource" xsi:type="OperandRef"/>
-               </expression>
-            </source>
-            <where localId="652" locator="155:4-155:20" xsi:type="Equal">
-               <signature localId="658" name="t:String" xsi:type="NamedTypeSpecifier"/>
-               <signature localId="659" name="t:String" xsi:type="NamedTypeSpecifier"/>
-               <operand localId="656" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                  <signature localId="657" name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
-                  <operand localId="654" locator="155:10-155:14" path="url" scope="E" xsi:type="Property"/>
-               </operand>
-               <operand localId="655" locator="155:18-155:20" name="url" xsi:type="OperandRef"/>
-            </where>
-            <return localId="660" locator="156:3-156:10">
-               <expression localId="661" locator="156:10" name="E" xsi:type="AliasRef"/>
-            </return>
-         </expression>
-         <operand localId="407" name="domainResource">
-            <operandTypeSpecifier localId="406" locator="153:50-153:63" name="fhir:DomainResource" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-         <operand localId="409" name="url">
-            <operandTypeSpecifier localId="408" locator="153:70-153:75" name="t:String" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="394" locator="58:1-60:23" name="GAS Goals" context="Patient" accessLevel="Public">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="394">
-               <a:s>// A &quot;GAS Goal&quot; is any FHIR Goal that includes GAS extensions
+            <a:s r="317">
+               <a:s>// A &quot;GAS Goal&quot; is any PCO Goal that includes GAS extensions
 define &quot;GAS Goals&quot;:
   </a:s>
-               <a:s r="427">
+               <a:s r="329">
                   <a:s>
-                     <a:s r="395">
-                        <a:s r="396">
-                           <a:s r="396">
-                              <a:s>[Goal]</a:s>
+                     <a:s r="318">
+                        <a:s r="319">
+                           <a:s>
+                              <a:s>&quot;PCO Goals&quot;</a:s>
                            </a:s>
                         </a:s>
                         <a:s> goal</a:s>
@@ -1044,14 +668,14 @@ define &quot;GAS Goals&quot;:
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="401">
+                  <a:s r="324">
                      <a:s>where </a:s>
-                     <a:s r="401">
-                        <a:s r="397">
+                     <a:s r="324">
+                        <a:s r="320">
                            <a:s>goal</a:s>
                         </a:s>
                         <a:s>.</a:s>
-                        <a:s r="401">
+                        <a:s r="324">
                            <a:s>hasGAS()</a:s>
                         </a:s>
                      </a:s>
@@ -1059,26 +683,26 @@ define &quot;GAS Goals&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="427" locator="59:3-60:23" xsi:type="Query">
-            <source localId="395" locator="59:3-59:13" alias="goal">
-               <expression localId="396" locator="59:3-59:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
+         <expression localId="329" locator="54:3-55:23" xsi:type="Query">
+            <source localId="318" locator="54:3-54:18" alias="goal">
+               <expression localId="319" locator="54:3-54:13" name="PCO Goals" xsi:type="ExpressionRef"/>
             </source>
-            <where localId="401" locator="60:5-60:23" name="hasGAS" xsi:type="FunctionRef">
-               <operand localId="397" locator="60:11-60:14" name="goal" xsi:type="AliasRef"/>
+            <where localId="324" locator="55:5-55:23" name="hasGAS" xsi:type="FunctionRef">
+               <operand localId="320" locator="55:11-55:14" name="goal" xsi:type="AliasRef"/>
             </where>
          </expression>
       </def>
-      <def localId="429" locator="63:1-64:21" name="All Care Plans" context="Patient" accessLevel="Public">
+      <def localId="331" locator="58:1-59:21" name="All Care Plans" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="429">
+            <a:s r="331">
                <a:s>// All FHIR CarePlan resources for this patient. Useful for verifying subset matched by &quot;PCO Care Plans&quot;.
 define &quot;All Care Plans&quot;:
   </a:s>
-               <a:s r="432">
+               <a:s r="334">
                   <a:s>
-                     <a:s r="430">
-                        <a:s r="431">
-                           <a:s r="431">
+                     <a:s r="332">
+                        <a:s r="333">
+                           <a:s r="333">
                               <a:s>[CarePlan]</a:s>
                            </a:s>
                         </a:s>
@@ -1088,23 +712,23 @@ define &quot;All Care Plans&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="432" locator="64:3-64:21" xsi:type="Query">
-            <source localId="430" locator="64:3-64:21" alias="carePlan">
-               <expression localId="431" locator="64:3-64:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
+         <expression localId="334" locator="59:3-59:21" xsi:type="Query">
+            <source localId="332" locator="59:3-59:21" alias="carePlan">
+               <expression localId="333" locator="59:3-59:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
             </source>
          </expression>
       </def>
-      <def localId="434" locator="67:1-69:36" name="PCO Care Plans" context="Patient" accessLevel="Public">
+      <def localId="336" locator="62:1-64:36" name="PCO Care Plans" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="434">
+            <a:s r="336">
                <a:s>// A &quot;PCO CarePlan&quot; is any FHIR CarePlan that includes a PCO Goal
 define &quot;PCO Care Plans&quot;:
   </a:s>
-               <a:s r="442">
+               <a:s r="344">
                   <a:s>
-                     <a:s r="435">
-                        <a:s r="436">
-                           <a:s r="436">
+                     <a:s r="337">
+                        <a:s r="338">
+                           <a:s r="338">
                               <a:s>[CarePlan]</a:s>
                            </a:s>
                         </a:s>
@@ -1113,16 +737,16 @@ define &quot;PCO Care Plans&quot;:
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="437">
+                  <a:s r="339">
                      <a:s>where </a:s>
-                     <a:s r="437">
+                     <a:s r="339">
                         <a:s>exists </a:s>
-                        <a:s r="439">
-                           <a:s r="438">
+                        <a:s r="341">
+                           <a:s r="340">
                               <a:s>carePlan</a:s>
                            </a:s>
                            <a:s>.</a:s>
-                           <a:s r="439">
+                           <a:s r="341">
                               <a:s>pcoGoals()</a:s>
                            </a:s>
                         </a:s>
@@ -1131,31 +755,27 @@ define &quot;PCO Care Plans&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="442" locator="68:3-69:36" xsi:type="Query">
-            <source localId="435" locator="68:3-68:21" alias="carePlan">
-               <expression localId="436" locator="68:3-68:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
+         <expression localId="344" locator="63:3-64:36" xsi:type="Query">
+            <source localId="337" locator="63:3-63:21" alias="carePlan">
+               <expression localId="338" locator="63:3-63:12" dataType="fhir:CarePlan" templateId="http://hl7.org/fhir/StructureDefinition/CarePlan" xsi:type="Retrieve"/>
             </source>
-            <where localId="437" locator="69:5-69:36" xsi:type="Exists">
-               <signature localId="440" xsi:type="ListTypeSpecifier">
-                  <elementType localId="441" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
+            <where localId="339" locator="64:5-64:36" xsi:type="Exists">
+               <signature localId="342" xsi:type="ListTypeSpecifier">
+                  <elementType localId="343" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
                </signature>
-               <operand localId="439" locator="69:18-69:36" name="pcoGoals" xsi:type="FunctionRef">
-                  <operand localId="438" locator="69:18-69:25" name="carePlan" xsi:type="AliasRef"/>
+               <operand localId="341" locator="64:18-64:36" name="pcoGoals" xsi:type="FunctionRef">
+                  <operand localId="340" locator="64:18-64:25" name="carePlan" xsi:type="AliasRef"/>
                </operand>
             </where>
          </expression>
       </def>
-      <def localId="444" locator="76:1-77:48" name="GAS Patient Follow-Up Scores" context="Patient" accessLevel="Public">
+      <def localId="346" locator="67:1-68:48" name="All GAS Score Observations" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="444">
-               <a:s>// Returns a collection of Observations with a person's baseline GAS score.
-// define &quot;GAS Baseline Scores&quot;:
-//   [Observation: &quot;GAS Baseline score&quot;]
-
-// Returns a collection of Observations with a patient's follow-up GAS score.
-define &quot;GAS Patient Follow-Up Scores&quot;:
+            <a:s r="346">
+               <a:s>// All observations containing a Goal Attainment Scaling (GAS) score.
+define &quot;All GAS Score Observations&quot;:
   </a:s>
-               <a:s r="447">
+               <a:s r="349">
                   <a:s>[Observation: </a:s>
                   <a:s>
                      <a:s>&quot;Goal attainment scaling score&quot;</a:s>
@@ -1164,382 +784,48 @@ define &quot;GAS Patient Follow-Up Scores&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="447" locator="77:3-77:48" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
-            <codes localId="455" xsi:type="ToList">
-               <operand localId="446" locator="77:17-77:47" name="Goal attainment scaling score" xsi:type="CodeRef"/>
+         <expression localId="349" locator="68:3-68:48" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+            <codes localId="357" xsi:type="ToList">
+               <operand localId="348" locator="68:17-68:47" name="Goal attainment scaling score" xsi:type="CodeRef"/>
             </codes>
          </expression>
       </def>
-      <def localId="457" locator="81:1-82:48" name="GAS Provider Follow-Up Scores" context="Patient" accessLevel="Public">
+      <def localId="365" locator="96:1-98:48" name="GAS Patient Scores" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="457">
-               <a:s>// TODO and recorded by a Patient
-
-// Returns a collection of Observations with a practitioner's follow-up GAS score.
-define &quot;GAS Provider Follow-Up Scores&quot;:
+            <a:s r="365">
+               <a:s>// Returns a collection of Observations with a patient's GAS scores.
+define &quot;GAS Patient Scores&quot;:
   </a:s>
-               <a:s r="460">
-                  <a:s>[Observation: </a:s>
+               <a:s r="374">
                   <a:s>
-                     <a:s>&quot;Goal attainment scaling score&quot;</a:s>
+                     <a:s r="366">
+                        <a:s r="367">
+                           <a:s>
+                              <a:s>&quot;All GAS Score Observations&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> obs</a:s>
+                     </a:s>
                   </a:s>
-                  <a:s>]</a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="460" locator="82:3-82:48" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
-            <codes localId="468" xsi:type="ToList">
-               <operand localId="459" locator="82:17-82:47" name="Goal attainment scaling score" xsi:type="CodeRef"/>
-            </codes>
-         </expression>
-      </def>
-      <def localId="470" locator="85:1-86:48" name="GAS Caregiver Follow-Up Scores" context="Patient" accessLevel="Public">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="470">
-               <a:s>// Returns a collection of Observations with a caregiver's follow-up GAS score.
-define &quot;GAS Caregiver Follow-Up Scores&quot;:
-  </a:s>
-               <a:s r="473">
-                  <a:s>[Observation: </a:s>
                   <a:s>
-                     <a:s>&quot;Goal attainment scaling score&quot;</a:s>
-                  </a:s>
-                  <a:s>]</a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="473" locator="86:3-86:48" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
-            <codes localId="481" xsi:type="ToList">
-               <operand localId="472" locator="86:17-86:47" name="Goal attainment scaling score" xsi:type="CodeRef"/>
-            </codes>
-         </expression>
-      </def>
-      <def localId="510" locator="99:1-104:3" name="goalDomainObservations" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="510">
-               <a:s>// Returns a list of goal domain Observations that this Goal addresses.
-define fluent function goalDomainObservations(goal Goal):
-  </a:s>
-               <a:s r="513">
-                  <a:s r="513">
-                     <a:s>flatten</a:s>
-                     <a:s r="536">
-                        <a:s>( </a:s>
-                        <a:s r="536">
-                           <a:s>
-                              <a:s r="514">
-                                 <a:s r="516">
-                                    <a:s>
-                                       <a:s>goal.addresses</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s> GA</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s>
-      </a:s>
-                           <a:s r="517">
-                              <a:s>return </a:s>
-                              <a:s r="535">
-                                 <a:s>
-                                    <a:s r="518">
-                                       <a:s r="519">
-                                          <a:s r="519">
-                                             <a:s>[Observation]</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> obs</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s>
-        </a:s>
-                                 <a:s r="520">
-                                    <a:s>where </a:s>
-                                    <a:s r="520">
-                                       <a:s r="521">
-                                          <a:s r="523">
-                                             <a:s r="522">
-                                                <a:s>obs</a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="523">
-                                                <a:s>id</a:s>
-                                             </a:s>
-                                          </a:s>
-                                          <a:s> = </a:s>
-                                          <a:s r="526">
-                                             <a:s r="525">
-                                                <a:s r="524">
-                                                   <a:s>GA</a:s>
-                                                </a:s>
-                                                <a:s>.</a:s>
-                                                <a:s r="525">
-                                                   <a:s>reference</a:s>
-                                                </a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="526">
-                                                <a:s>getId()</a:s>
-                                             </a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s>
-          and </a:s>
-                                       <a:s r="534">
-                                          <a:s r="533">
-                                             <a:s>obs</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="534">
-                                             <a:s>isGoalDomain()</a:s>
-                                          </a:s>
-                                       </a:s>
-                                    </a:s>
-                                 </a:s>
-                              </a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-  )</a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="513" locator="100:3-104:3" xsi:type="Flatten">
-            <signature localId="537" xsi:type="ListTypeSpecifier">
-               <elementType localId="538" xsi:type="ListTypeSpecifier">
-                  <elementType localId="539" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-               </elementType>
-            </signature>
-            <operand localId="536" locator="100:10-104:3" xsi:type="Query">
-               <source localId="514" locator="100:12-100:28" alias="GA">
-                  <expression localId="516" locator="100:12-100:25" path="addresses" xsi:type="Property">
-                     <source localId="515" name="goal" xsi:type="OperandRef"/>
-                  </expression>
-               </source>
-               <return localId="517" locator="101:7-103:32">
-                  <expression localId="535" locator="101:14-103:32" xsi:type="Query">
-                     <source localId="518" locator="101:14-101:30" alias="obs">
-                        <expression localId="519" locator="101:14-101:26" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" xsi:type="Retrieve"/>
-                     </source>
-                     <where localId="520" locator="102:9-103:32" xsi:type="And">
-                        <operand localId="521" locator="102:15-102:43" xsi:type="Equal">
-                           <signature localId="531" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                           <signature localId="532" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="529" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                              <signature localId="530" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                              <operand localId="523" locator="102:15-102:20" path="id" scope="obs" xsi:type="Property"/>
-                           </operand>
-                           <operand localId="526" locator="102:24-102:43" name="getId" xsi:type="FunctionRef">
-                              <operand localId="527" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                                 <signature localId="528" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                                 <operand localId="525" locator="102:24-102:35" path="reference" scope="GA" xsi:type="Property"/>
-                              </operand>
-                           </operand>
-                        </operand>
-                        <operand localId="534" locator="103:15-103:32" name="isGoalDomain" xsi:type="FunctionRef">
-                           <operand localId="533" locator="103:15-103:17" name="obs" xsi:type="AliasRef"/>
-                        </operand>
-                     </where>
-                  </expression>
-               </return>
-            </operand>
-         </expression>
-         <operand localId="512" name="goal">
-            <operandTypeSpecifier localId="511" locator="99:52-99:55" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="540" locator="107:1-111:3" name="addressesObservations" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="540">
-               <a:s>// Returns a list of Observations that this Goal addresses.
-define fluent function addressesObservations(goal Goal):
-  </a:s>
-               <a:s r="543">
-                  <a:s r="543">
-                     <a:s>flatten</a:s>
-                     <a:s r="563">
-                        <a:s>( </a:s>
-                        <a:s r="563">
-                           <a:s>
-                              <a:s r="544">
-                                 <a:s r="546">
-                                    <a:s>
-                                       <a:s>goal.addresses</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s> GA</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s>
-      </a:s>
-                           <a:s r="547">
-                              <a:s>return </a:s>
-                              <a:s r="562">
-                                 <a:s>
-                                    <a:s r="548">
-                                       <a:s r="549">
-                                          <a:s r="549">
-                                             <a:s>[Observation]</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> obs</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s>
-        </a:s>
-                                 <a:s r="550">
-                                    <a:s>where </a:s>
-                                    <a:s r="550">
-                                       <a:s r="552">
-                                          <a:s r="551">
-                                             <a:s>obs</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="552">
-                                             <a:s>id</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> = </a:s>
-                                       <a:s r="555">
-                                          <a:s r="554">
-                                             <a:s r="553">
-                                                <a:s>GA</a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="554">
-                                                <a:s>reference</a:s>
-                                             </a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="555">
-                                             <a:s>getId()</a:s>
-                                          </a:s>
-                                       </a:s>
-                                    </a:s>
-                                 </a:s>
-                              </a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-  )</a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="543" locator="108:3-111:3" xsi:type="Flatten">
-            <signature localId="564" xsi:type="ListTypeSpecifier">
-               <elementType localId="565" xsi:type="ListTypeSpecifier">
-                  <elementType localId="566" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-               </elementType>
-            </signature>
-            <operand localId="563" locator="108:10-111:3" xsi:type="Query">
-               <source localId="544" locator="108:12-108:28" alias="GA">
-                  <expression localId="546" locator="108:12-108:25" path="addresses" xsi:type="Property">
-                     <source localId="545" name="goal" xsi:type="OperandRef"/>
-                  </expression>
-               </source>
-               <return localId="547" locator="109:7-110:43">
-                  <expression localId="562" locator="109:14-110:43" xsi:type="Query">
-                     <source localId="548" locator="109:14-109:30" alias="obs">
-                        <expression localId="549" locator="109:14-109:26" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" xsi:type="Retrieve"/>
-                     </source>
-                     <where localId="550" locator="110:9-110:43" xsi:type="Equal">
-                        <signature localId="560" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                        <signature localId="561" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                        <operand localId="558" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                           <signature localId="559" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="552" locator="110:15-110:20" path="id" scope="obs" xsi:type="Property"/>
-                        </operand>
-                        <operand localId="555" locator="110:24-110:43" name="getId" xsi:type="FunctionRef">
-                           <operand localId="556" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                              <signature localId="557" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                              <operand localId="554" locator="110:24-110:35" path="reference" scope="GA" xsi:type="Property"/>
-                           </operand>
-                        </operand>
-                     </where>
-                  </expression>
-               </return>
-            </operand>
-         </expression>
-         <operand localId="542" name="goal">
-            <operandTypeSpecifier localId="541" locator="107:51-107:54" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="616" locator="131:1-135:5" name="addressedByGoals" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="616">
-               <a:s>// Returns a list of Goals that address this Observation
-define fluent function addressedByGoals(obs Observation):
-  </a:s>
-               <a:s r="640">
-                  <a:s r="640">
-                     <a:s>
-                        <a:s r="619">
-                           <a:s r="620">
-                              <a:s r="620">
-                                 <a:s>[Goal]</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s> goal</a:s>
-                        </a:s>
-                     </a:s>
-                     <a:s>
     </a:s>
-                     <a:s r="621">
-                        <a:s>where </a:s>
-                        <a:s r="621">
-                           <a:s>exists </a:s>
-                           <a:s r="637">
-                              <a:s>( </a:s>
-                              <a:s r="637">
-                                 <a:s>
-                                    <a:s r="622">
-                                       <a:s r="624">
-                                          <a:s>
-                                             <a:s>goal.addresses</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> GA</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s>
-        </a:s>
-                                 <a:s r="625">
-                                    <a:s>where </a:s>
-                                    <a:s r="625">
-                                       <a:s r="627">
-                                          <a:s r="626">
-                                             <a:s>obs</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="627">
-                                             <a:s>id</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> = </a:s>
-                                       <a:s r="630">
-                                          <a:s r="629">
-                                             <a:s r="628">
-                                                <a:s>GA</a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="629">
-                                                <a:s>reference</a:s>
-                                             </a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="630">
-                                             <a:s>getId()</a:s>
-                                          </a:s>
-                                       </a:s>
-                                    </a:s>
-                                 </a:s>
+                  <a:s r="368">
+                     <a:s>where </a:s>
+                     <a:s r="368">
+                        <a:s>exists </a:s>
+                        <a:s r="371">
+                           <a:s r="370">
+                              <a:s r="369">
+                                 <a:s>obs</a:s>
                               </a:s>
-                              <a:s>
-    )</a:s>
+                              <a:s>.</a:s>
+                              <a:s r="370">
+                                 <a:s>performer</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="371">
+                              <a:s>resolvePatients()</a:s>
                            </a:s>
                         </a:s>
                      </a:s>
@@ -1547,85 +833,379 @@ define fluent function addressedByGoals(obs Observation):
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="640" locator="132:3-135:5" xsi:type="Query">
-            <source localId="619" locator="132:3-132:13" alias="goal">
-               <expression localId="620" locator="132:3-132:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
+         <expression localId="374" locator="97:3-98:48" xsi:type="Query">
+            <source localId="366" locator="97:3-97:34" alias="obs">
+               <expression localId="367" locator="97:3-97:30" name="All GAS Score Observations" xsi:type="ExpressionRef"/>
             </source>
-            <where localId="621" locator="133:5-135:5" xsi:type="Exists">
-               <signature localId="638" xsi:type="ListTypeSpecifier">
-                  <elementType localId="639" name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+            <where localId="368" locator="98:5-98:48" xsi:type="Exists">
+               <signature localId="372" xsi:type="ListTypeSpecifier">
+                  <elementType localId="373" name="fhir:Patient" xsi:type="NamedTypeSpecifier"/>
                </signature>
-               <operand localId="637" locator="133:18-135:5" xsi:type="Query">
-                  <source localId="622" locator="133:20-133:36" alias="GA">
-                     <expression localId="624" locator="133:20-133:33" path="addresses" scope="goal" xsi:type="Property"/>
-                  </source>
-                  <where localId="625" locator="134:9-134:43" xsi:type="Equal">
-                     <signature localId="635" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                     <signature localId="636" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                     <operand localId="633" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                        <signature localId="634" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                        <operand localId="627" locator="134:15-134:20" path="id" xsi:type="Property">
-                           <source localId="626" locator="134:15-134:17" name="obs" xsi:type="OperandRef"/>
-                        </operand>
-                     </operand>
-                     <operand localId="630" locator="134:24-134:43" name="getId" xsi:type="FunctionRef">
-                        <operand localId="631" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                           <signature localId="632" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="629" locator="134:24-134:35" path="reference" scope="GA" xsi:type="Property"/>
-                        </operand>
-                     </operand>
-                  </where>
+               <operand localId="371" locator="98:18-98:48" name="resolvePatients" libraryName="PC" xsi:type="FunctionRef">
+                  <operand localId="370" locator="98:18-98:30" path="performer" scope="obs" xsi:type="Property"/>
                </operand>
             </where>
          </expression>
-         <operand localId="618" name="obs">
-            <operandTypeSpecifier localId="617" locator="131:45-131:55" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-         </operand>
       </def>
-      <def localId="663" locator="163:1-164:47" name="extension" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
+      <def localId="377" locator="101:1-103:53" name="GAS Practitioner Scores" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:t name="description" value="Returns the single extension (if present) on the given resource with the specified url."/>
-            <a:t name="comment" value="This function uses singleton from to ensure that a run-time exception is thrown if there&#xa;is more than one extension on the given resource with the specified url."/>
-            <a:s r="663">
-               <a:s>/*
-@description: Returns the single extension (if present) on the given resource with the specified url.
-@comment: This function uses singleton from to ensure that a run-time exception is thrown if there
-is more than one extension on the given resource with the specified url.
-*/
-define fluent function extension(domainResource DomainResource, url String):
+            <a:s r="377">
+               <a:s>// Returns a collection of Observations with a practitioner's GAS scores.
+define &quot;GAS Practitioner Scores&quot;:
   </a:s>
-               <a:s r="668">
-                  <a:s r="668">
-                     <a:s>singleton from </a:s>
-                     <a:s r="671">
-                        <a:s r="669">
-                           <a:s>domainResource</a:s>
+               <a:s r="386">
+                  <a:s>
+                     <a:s r="378">
+                        <a:s r="379">
+                           <a:s>
+                              <a:s>&quot;All GAS Score Observations&quot;</a:s>
+                           </a:s>
                         </a:s>
-                        <a:s>.</a:s>
-                        <a:s r="671">
-                           <a:s>extensions(</a:s>
-                           <a:s r="670">
-                              <a:s>url</a:s>
+                        <a:s> obs</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="380">
+                     <a:s>where </a:s>
+                     <a:s r="380">
+                        <a:s>exists </a:s>
+                        <a:s r="383">
+                           <a:s r="382">
+                              <a:s r="381">
+                                 <a:s>obs</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="382">
+                                 <a:s>performer</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="383">
+                              <a:s>resolvePractitioners()</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="386" locator="102:3-103:53" xsi:type="Query">
+            <source localId="378" locator="102:3-102:34" alias="obs">
+               <expression localId="379" locator="102:3-102:30" name="All GAS Score Observations" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="380" locator="103:5-103:53" xsi:type="Exists">
+               <signature localId="384" xsi:type="ListTypeSpecifier">
+                  <elementType localId="385" name="fhir:Practitioner" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <operand localId="383" locator="103:18-103:53" name="resolvePractitioners" libraryName="PC" xsi:type="FunctionRef">
+                  <operand localId="382" locator="103:18-103:30" path="performer" scope="obs" xsi:type="Property"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="390" locator="106:1-108:54" name="GAS Caregiver Scores" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="390">
+               <a:s>// Returns a collection of Observations with a caregiver's GAS scores.
+define &quot;GAS Caregiver Scores&quot;:
+  </a:s>
+               <a:s r="399">
+                  <a:s>
+                     <a:s r="391">
+                        <a:s r="392">
+                           <a:s>
+                              <a:s>&quot;All GAS Score Observations&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> obs</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="393">
+                     <a:s>where </a:s>
+                     <a:s r="393">
+                        <a:s>exists </a:s>
+                        <a:s r="396">
+                           <a:s r="395">
+                              <a:s r="394">
+                                 <a:s>obs</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="395">
+                                 <a:s>performer</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="396">
+                              <a:s>resolveRelatedPersons()</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="399" locator="107:3-108:54" xsi:type="Query">
+            <source localId="391" locator="107:3-107:34" alias="obs">
+               <expression localId="392" locator="107:3-107:30" name="All GAS Score Observations" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="393" locator="108:5-108:54" xsi:type="Exists">
+               <signature localId="397" xsi:type="ListTypeSpecifier">
+                  <elementType localId="398" name="fhir:RelatedPerson" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <operand localId="396" locator="108:18-108:54" name="resolveRelatedPersons" libraryName="PC" xsi:type="FunctionRef">
+                  <operand localId="395" locator="108:18-108:30" path="performer" scope="obs" xsi:type="Property"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="362" locator="89:1-93:3" name="GAS Scores" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="362">
+               <a:s>define &quot;GAS Scores&quot;:
+  </a:s>
+               <a:s r="402">
+                  <a:s r="363">
+                     <a:s>PC</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="402">
+                     <a:s>SortAscending(</a:s>
+                     <a:s r="401">
+                        <a:s r="388">
+                           <a:s r="375">
+                              <a:s>&quot;GAS Patient Scores&quot;</a:s>
+                           </a:s>
+                           <a:s>
+    union </a:s>
+                           <a:s r="387">
+                              <a:s>&quot;GAS Practitioner Scores&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    union </a:s>
+                        <a:s r="400">
+                           <a:s>&quot;GAS Caregiver Scores&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="402" locator="90:3-93:3" name="SortAscending" libraryName="PC" xsi:type="FunctionRef">
+            <operand localId="401" locator="90:20-92:32" xsi:type="Union">
+               <operand localId="388" locator="90:20-91:35" xsi:type="Union">
+                  <operand localId="375" locator="90:20-90:39" name="GAS Patient Scores" xsi:type="ExpressionRef"/>
+                  <operand localId="387" locator="91:11-91:35" name="GAS Practitioner Scores" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand localId="400" locator="92:11-92:32" name="GAS Caregiver Scores" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="359" locator="74:1-79:71" name="GAS Baseline Scores" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:t name="description" value="Returns a list of Observations with a person's baseline GAS scores. &#xa;A baseline score is recorded less than 2 weeks after its Goal was started."/>
+            <a:s r="359">
+               <a:s>/* 
+@description: Returns a list of Observations with a person's baseline GAS scores. 
+A baseline score is recorded less than 2 weeks after its Goal was started.
+*/
+define &quot;GAS Baseline Scores&quot;:
+  </a:s>
+               <a:s r="440">
+                  <a:s>
+                     <a:s r="360">
+                        <a:s r="403">
+                           <a:s>
+                              <a:s>&quot;GAS Scores&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> scoreObs</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s>
+                     <a:s>let </a:s>
+                     <a:s r="404">
+                        <a:s>goal: </a:s>
+                        <a:s r="410">
+                           <a:s>First(</a:s>
+                           <a:s r="407">
+                              <a:s r="406">
+                                 <a:s r="405">
+                                    <a:s>scoreObs</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="406">
+                                    <a:s>focus</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="407">
+                                 <a:s>resolveGoals()</a:s>
+                              </a:s>
                            </a:s>
                            <a:s>)</a:s>
                         </a:s>
                      </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s r="411">
+                        <a:s>startDate: </a:s>
+                        <a:s r="420">
+                           <a:s>ToDateTime(</a:s>
+                           <a:s r="412">
+                              <a:s r="414">
+                                 <a:s r="413">
+                                    <a:s>goal</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="414">
+                                    <a:s>start</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> as </a:s>
+                              <a:s r="415">
+                                 <a:s>FHIR.date</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s r="423">
+                        <a:s>baselineInterval: </a:s>
+                        <a:s r="430">
+                           <a:s>Interval(</a:s>
+                           <a:s r="424">
+                              <a:s>startDate</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="425">
+                              <a:s r="426">
+                                 <a:s>startDate</a:s>
+                              </a:s>
+                              <a:s> + </a:s>
+                              <a:s r="427">
+                                 <a:s>13 day</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>]</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="437">
+                     <a:s>where </a:s>
+                     <a:s r="437">
+                        <a:s r="431">
+                           <a:s>(</a:s>
+                           <a:s r="431">
+                              <a:s r="433">
+                                 <a:s r="432">
+                                    <a:s>scoreObs</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="433">
+                                    <a:s>effective</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> as </a:s>
+                              <a:s r="434">
+                                 <a:s>FHIR.dateTime</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s r="437"> during </a:s>
+                        <a:s r="435">
+                           <a:s>baselineInterval</a:s>
+                        </a:s>
+                     </a:s>
                   </a:s>
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="668" locator="164:3-164:47" xsi:type="SingletonFrom">
-            <operand localId="671" locator="164:18-164:47" name="extensions" xsi:type="FunctionRef">
-               <operand localId="669" locator="164:18-164:31" name="domainResource" xsi:type="OperandRef"/>
-               <operand localId="670" locator="164:44-164:46" name="url" xsi:type="OperandRef"/>
-            </operand>
+         <expression localId="440" locator="75:3-79:71" xsi:type="Query">
+            <source localId="360" locator="75:3-75:23" alias="scoreObs">
+               <expression localId="403" locator="75:3-75:14" name="GAS Scores" xsi:type="ExpressionRef"/>
+            </source>
+            <let localId="404" locator="76:9-76:50" identifier="goal">
+               <expression localId="410" locator="76:15-76:50" xsi:type="First">
+                  <source localId="407" locator="76:21-76:49" name="resolveGoals" libraryName="PC" xsi:type="FunctionRef">
+                     <operand localId="406" locator="76:21-76:34" path="focus" scope="scoreObs" xsi:type="Property"/>
+                  </source>
+               </expression>
+            </let>
+            <let localId="411" locator="77:7-77:52" identifier="startDate">
+               <expression localId="420" locator="77:18-77:52" xsi:type="ToDateTime">
+                  <signature localId="422" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="421" name="ToDate" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="412" locator="77:29-77:51" strict="false" xsi:type="As">
+                        <operand localId="414" locator="77:29-77:38" path="start" xsi:type="Property">
+                           <source localId="413" locator="77:29-77:32" name="goal" xsi:type="QueryLetRef"/>
+                        </operand>
+                        <asTypeSpecifier localId="415" locator="77:43-77:51" name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+                     </operand>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="423" locator="78:7-78:63" identifier="baselineInterval">
+               <expression localId="430" locator="78:25-78:63" lowClosed="false" highClosed="true" xsi:type="Interval">
+                  <low localId="424" locator="78:34-78:42" name="startDate" xsi:type="QueryLetRef"/>
+                  <high localId="425" locator="78:45-78:62" xsi:type="Add">
+                     <signature localId="428" name="t:DateTime" xsi:type="NamedTypeSpecifier"/>
+                     <signature localId="429" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="426" locator="78:45-78:53" name="startDate" xsi:type="QueryLetRef"/>
+                     <operand localId="427" locator="78:57-78:62" value="13" unit="day" xsi:type="Quantity"/>
+                  </high>
+               </expression>
+            </let>
+            <where localId="437" locator="79:5-79:71" xsi:type="In">
+               <operand localId="438" name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <signature localId="439" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="431" locator="79:11-79:47" strict="false" xsi:type="As">
+                     <operand localId="433" locator="79:12-79:29" path="effective" scope="scoreObs" xsi:type="Property"/>
+                     <asTypeSpecifier localId="434" locator="79:34-79:46" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  </operand>
+               </operand>
+               <operand localId="435" locator="79:56-79:71" name="baselineInterval" xsi:type="QueryLetRef"/>
+            </where>
          </expression>
-         <operand localId="665" name="domainResource">
-            <operandTypeSpecifier localId="664" locator="163:49-163:62" name="fhir:DomainResource" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-         <operand localId="667" name="url">
-            <operandTypeSpecifier localId="666" locator="163:69-163:74" name="t:String" xsi:type="NamedTypeSpecifier"/>
-         </operand>
+      </def>
+      <def localId="442" locator="85:1-87:32" name="GAS Follow-Up Scores" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:t name="description" value="Returns a list of Observations with a person's follow-up GAS scores. &#xa;A follow-up score is recorded 2 or more weeks after its Goal was started."/>
+            <a:s r="442">
+               <a:s>/* 
+@description: Returns a list of Observations with a person's follow-up GAS scores. 
+A follow-up score is recorded 2 or more weeks after its Goal was started.
+*/
+define &quot;GAS Follow-Up Scores&quot;:
+  </a:s>
+               <a:s r="445">
+                  <a:s r="443">
+                     <a:s>&quot;GAS Scores&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    except </a:s>
+                  <a:s r="444">
+                     <a:s>&quot;GAS Baseline Scores&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="445" locator="86:3-87:32" xsi:type="Except">
+            <operand localId="443" locator="86:3-86:14" name="GAS Scores" xsi:type="ExpressionRef"/>
+            <operand localId="444" locator="87:12-87:32" name="GAS Baseline Scores" xsi:type="ExpressionRef"/>
+         </expression>
       </def>
    </statements>
 </library>

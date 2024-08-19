@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-17T01:18:03+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-19T20:32:01+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -959,6 +959,17 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Library/PCOCommon> ;
+         fhir:reference [ fhir:v "Library/PCOCommon" ]
+       ] ;
+       fhir:name [ fhir:v "PCOCommon" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -1054,6 +1065,65 @@
        fhir:name [ fhir:v "Primary Care Physician" ] ;
        fhir:description [ fhir:v "John Anderson, MD" ] ;
        fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-assessment" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Assessment" ] ;
+       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts> ;
+         fhir:reference [ fhir:v "CodeSystem/what-matters-concepts" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Concepts" ] ;
+       fhir:description [ fhir:v "Code system to identify \"What Matters\" concepts, example from the VA Circle of Health." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas> ;
+         fhir:reference [ fhir:v "ValueSet/what-matters-focus-areas" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Focus Areas" ] ;
+       fhir:description [ fhir:v "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating> ;
+         fhir:reference [ fhir:v "CodeSystem/what-matters-rating" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Rating Concepts" ] ;
+       fhir:description [ fhir:v "Code system to identify \"What Matters\" rating concepts." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Library/WhatMattersLogic> ;
+         fhir:reference [ fhir:v "Library/WhatMattersLogic" ]
+       ] ;
+       fhir:name [ fhir:v "WhatMattersLogic" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

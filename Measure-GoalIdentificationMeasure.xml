@@ -364,6 +364,8 @@
                         
                             <li><code>http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000</code></li>
                         
+                            <li><a href="Library-PCOCommon.html">PCOCommonversion: {0}0.1.0)</a></li>
+                        
                             <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                         
                     </td>
@@ -727,10 +729,14 @@ define &quot;Denominator&quot;:
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+                                    <pre class="highlight language-cql"><code class="language-cql">/* 
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+  and has a start date.
+*/
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where goal.category in &quot;PCO Categories&quot;</code></pre>
+    where goal.category in &quot;PCO Categories&quot;
+      and (goal.start as FHIR.date) is not null</code></pre>
                                 </td>
                             
                         </tr>
@@ -910,7 +916,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
                         </tr>
                         <tr>
                             
-                                <td>GoalAttainmentLogic</td>
+                                <td>PCOCommon</td>
                             
                             
                                 <td>extensions</td>
@@ -920,9 +926,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.
-
-/*
+                                    <pre class="highlight language-cql"><code class="language-cql">/*
 @description: Returns any extensions defined on the given resource with the specified url.
 @comment: NOTE: Extensions are not the preferred approach, but are used as a way to access
 content that is defined by extensions but not yet surfaced in the
@@ -963,7 +967,7 @@ define fluent function extensions(domainResource DomainResource, url String):
                         </tr>
                         <tr>
                             
-                                <td>GoalAttainmentLogic</td>
+                                <td>PCOCommon</td>
                             
                             
                                 <td>carePlans</td>
@@ -989,7 +993,7 @@ define fluent function carePlans(goal Goal):
                         </tr>
                         <tr>
                             
-                                <td>GoalAttainmentLogic</td>
+                                <td>PCOCommon</td>
                             
                             
                                 <td>getId</td>
@@ -999,11 +1003,7 @@ define fluent function carePlans(goal Goal):
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">/*
- * General FHIR data helpers.
- */
-
-define fluent function getId(uri String):
+                                    <pre class="highlight language-cql"><code class="language-cql">define fluent function getId(uri String):
   Last(Split(uri, '/'))</code></pre>
                                 </td>
                             
@@ -1058,7 +1058,7 @@ define fluent function getId(uri String):
           <valueString value="PCO Goals"/>
         </extension>
         <extension url="statement">
-          <valueString value="// A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;&#xA;define &quot;PCO Goals&quot;:&#xA;  [Goal] goal&#xA;    where goal.category in &quot;PCO Categories&quot;"/>
+          <valueString value="/* &#xA;  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;&#xA;  and has a start date.&#xA;*/&#xA;define &quot;PCO Goals&quot;:&#xA;  [Goal] goal&#xA;    where goal.category in &quot;PCO Categories&quot;&#xA;      and (goal.start as FHIR.date) is not null"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="2"/>
@@ -1164,13 +1164,13 @@ define fluent function getId(uri String):
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
         <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
+          <valueString value="PCOCommon"/>
         </extension>
         <extension url="name">
           <valueString value="extensions"/>
         </extension>
         <extension url="statement">
-          <valueString value="// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.&#xA;&#xA;/*&#xA;@description: Returns any extensions defined on the given resource with the specified url.&#xA;@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access&#xA;content that is defined by extensions but not yet surfaced in the&#xA;CQL model info.&#xA;*/&#xA;define fluent function extensions(domainResource DomainResource, url String):&#xA;  domainResource.extension E&#xA;&#x9;  where E.url = url&#xA;&#x9;&#x9;return E"/>
+          <valueString value="/*&#xA;@description: Returns any extensions defined on the given resource with the specified url.&#xA;@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access&#xA;content that is defined by extensions but not yet surfaced in the&#xA;CQL model info.&#xA;*/&#xA;define fluent function extensions(domainResource DomainResource, url String):&#xA;  domainResource.extension E&#xA;&#x9;  where E.url = url&#xA;&#x9;&#x9;return E"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="10"/>
@@ -1192,7 +1192,7 @@ define fluent function getId(uri String):
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
         <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
+          <valueString value="PCOCommon"/>
         </extension>
         <extension url="name">
           <valueString value="carePlans"/>
@@ -1206,13 +1206,13 @@ define fluent function getId(uri String):
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
         <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
+          <valueString value="PCOCommon"/>
         </extension>
         <extension url="name">
           <valueString value="getId"/>
         </extension>
         <extension url="statement">
-          <valueString value="/*&#xA; * General FHIR data helpers.&#xA; */&#xA;&#xA;define fluent function getId(uri String):&#xA;  Last(Split(uri, '/'))"/>
+          <valueString value="define fluent function getId(uri String):&#xA;  Last(Split(uri, '/'))"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="13"/>
@@ -1235,6 +1235,11 @@ define fluent function getId(uri String):
         <type value="depends-on"/>
         <display value="Library FHIRHelpers"/>
         <resource value="http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Library PC"/>
+        <resource value="http://mtnlotus.com/uv/pco/Library/PCOCommon|0.1.0"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
@@ -1363,7 +1368,7 @@ define fluent function getId(uri String):
   <title value="Person-Centered Goal Identification"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2024-08-16T23:24:39+00:00"/>
+  <date value="2024-08-19T20:15:52+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>

@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-16
+            as of 2024-08-19
           
         
       </td>
@@ -595,6 +595,8 @@
                         
                             <li><code>http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000</code></li>
                         
+                            <li><a href="Library-PCOCommon.html">PCOCommonversion: {0}0.1.0)</a></li>
+                        
                             <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                         
                     </td>
@@ -958,10 +960,14 @@ define &quot;Denominator&quot;:
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+                                    <pre class="highlight language-cql"><code class="language-cql">/* 
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+  and has a start date.
+*/
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where goal.category in &quot;PCO Categories&quot;</code></pre>
+    where goal.category in &quot;PCO Categories&quot;
+      and (goal.start as FHIR.date) is not null</code></pre>
                                 </td>
                             
                         </tr>
@@ -1141,7 +1147,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
                         </tr>
                         <tr>
                             
-                                <td>GoalAttainmentLogic</td>
+                                <td>PCOCommon</td>
                             
                             
                                 <td>extensions</td>
@@ -1151,9 +1157,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.
-
-/*
+                                    <pre class="highlight language-cql"><code class="language-cql">/*
 @description: Returns any extensions defined on the given resource with the specified url.
 @comment: NOTE: Extensions are not the preferred approach, but are used as a way to access
 content that is defined by extensions but not yet surfaced in the
@@ -1194,7 +1198,7 @@ define fluent function extensions(domainResource DomainResource, url String):
                         </tr>
                         <tr>
                             
-                                <td>GoalAttainmentLogic</td>
+                                <td>PCOCommon</td>
                             
                             
                                 <td>carePlans</td>
@@ -1220,7 +1224,7 @@ define fluent function carePlans(goal Goal):
                         </tr>
                         <tr>
                             
-                                <td>GoalAttainmentLogic</td>
+                                <td>PCOCommon</td>
                             
                             
                                 <td>getId</td>
@@ -1230,11 +1234,7 @@ define fluent function carePlans(goal Goal):
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">/*
- * General FHIR data helpers.
- */
-
-define fluent function getId(uri String):
+                                    <pre class="highlight language-cql"><code class="language-cql">define fluent function getId(uri String):
   Last(Split(uri, '/'))</code></pre>
                                 </td>
                             
@@ -1273,7 +1273,7 @@ define fluent function getId(uri String):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:18+0000">2024-08-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 19, 2024 20:32+0000">2024-08-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

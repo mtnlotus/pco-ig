@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-17
+            as of 2024-08-19
           
         
       </td>
@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-17 01:18:03+0000</td>
+            <td style="padding-left: 4px;">2024-08-19 20:32:01+0000</td>
         </tr>
         
 
@@ -338,6 +338,8 @@
                   
                     <li><code>http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000</code></li>
                   
+                    <li><a href="Library-PCOCommon.html">PCOCommonversion: {0}0.1.0)</a></li>
+                  
                     <li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
                   
                     <li><a href="CodeSystem-pco-category-codes-example.html">Category Code Examples</a></li>
@@ -375,10 +377,6 @@
               
                 <tr><th>CarPlanSummary</th><th>Resource</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>PCO Goal Domain Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
-              
-                <tr><th>GAS Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
-              
                 <tr><th>All Goals</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>GAS Goals</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
@@ -387,11 +385,19 @@
               
                 <tr><th>PCO Care Plans</th><th>CarePlan</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>GAS Patient Follow-Up Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+                <tr><th>All GAS Score Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>GAS Provider Follow-Up Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+                <tr><th>GAS Patient Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>GAS Caregiver Follow-Up Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+                <tr><th>GAS Practitioner Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>GAS Caregiver Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>GAS Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>GAS Baseline Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>GAS Follow-Up Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
             </table>
           </td>
@@ -408,7 +414,7 @@
                 <tr>
                   <th>Patient</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Patient</th>
-                  <th/>
+                  <th>;</th>
                   <th>
                     
                   </th>
@@ -426,7 +432,7 @@
                 <tr>
                   <th>Goal</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;;;;;</th>
+                  <th>;;;;;;</th>
                   <th>
                     
                   </th>
@@ -435,35 +441,7 @@
                 <tr>
                   <th>Observation</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
-                  <th>;</th>
-                  <th>
-                    
-                      <b>code filter: </b>
-                      
-                      <br/>
-                      
-                      
-                      <span style="padding-left: 4px;">
-                          <b>path: </b><span>code</span>
-                      </span>
-                      
-                      <br/>
-                      
-                      
-                      
-                      <span style="padding-left: 4px;">
-                          <b>value set: </b><span>http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset</span>
-                      </span>
-                      
-                      
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>Observation</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
-                  <th>;</th>
+                  <th>;;;;</th>
                   <th>
                     
                       <b>code filter: </b>
@@ -501,8 +479,17 @@
                 </tr>
               
                 <tr>
-                  <th>Observation</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
+                  <th>Practitioner</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Practitioner</th>
+                  <th>;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>RelatedPerson</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/RelatedPerson</th>
                   <th>;</th>
                   <th>
                     
@@ -525,6 +512,7 @@
 using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.4.000' called FHIRHelpers
+include PCOCommon version '0.1.0' called PC
 
 codesystem &quot;LOINC&quot;: 'http://loinc.org'
 codesystem &quot;PCO Category&quot;: 'http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example'
@@ -557,28 +545,22 @@ define CarPlanSummary:
       pcoGoals: carePlan.pcoGoals()
     }
 
-define &quot;PCO Goal Domain Observations&quot;:
-  [Observation: &quot;PCO Categories&quot;]
-
-define fluent function isGoalDomain(obs Observation):
-  &quot;PCO Goal Domain Observations&quot; contains obs
-
-// All observations containing a Goal Attainment Scaling (GAS) score.
-define &quot;GAS Observations&quot;:
-  [Observation: &quot;Goal attainment scaling score&quot;]
-
 // All FHIR Goals for this patient. Useful for verifying subset matched by &quot;PCO Goals&quot;.
 define &quot;All Goals&quot;:
   [Goal] goal
 
-// A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+/* 
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+  and has a start date.
+*/
 define &quot;PCO Goals&quot;:
   [Goal] goal
     where goal.category in &quot;PCO Categories&quot;
+      and (goal.start as FHIR.date) is not null
 
-// A &quot;GAS Goal&quot; is any FHIR Goal that includes GAS extensions
+// A &quot;GAS Goal&quot; is any PCO Goal that includes GAS extensions
 define &quot;GAS Goals&quot;:
-  [Goal] goal
+  &quot;PCO Goals&quot; goal
     where goal.hasGAS()
 
 // All FHIR CarePlan resources for this patient. Useful for verifying subset matched by &quot;PCO Care Plans&quot;.
@@ -590,56 +572,52 @@ define &quot;PCO Care Plans&quot;:
   [CarePlan] carePlan
     where exists carePlan.pcoGoals()
 
-// Returns a collection of Observations with a person's baseline GAS score.
-// define &quot;GAS Baseline Scores&quot;:
-//   [Observation: &quot;GAS Baseline score&quot;]
-
-// Returns a collection of Observations with a patient's follow-up GAS score.
-define &quot;GAS Patient Follow-Up Scores&quot;:
-  [Observation: &quot;Goal attainment scaling score&quot;]
-  // TODO and recorded by a Patient
-
-// Returns a collection of Observations with a practitioner's follow-up GAS score.
-define &quot;GAS Provider Follow-Up Scores&quot;:
+// All observations containing a Goal Attainment Scaling (GAS) score.
+define &quot;All GAS Score Observations&quot;:
   [Observation: &quot;Goal attainment scaling score&quot;]
 
-// Returns a collection of Observations with a caregiver's follow-up GAS score.
-define &quot;GAS Caregiver Follow-Up Scores&quot;:
-  [Observation: &quot;Goal attainment scaling score&quot;]
+/* 
+@description: Returns a list of Observations with a person's baseline GAS scores. 
+A baseline score is recorded less than 2 weeks after its Goal was started.
+*/
+define &quot;GAS Baseline Scores&quot;:
+  &quot;GAS Scores&quot; scoreObs
+    let goal: First(scoreObs.focus.resolveGoals()),
+      startDate: ToDateTime(goal.start as FHIR.date),
+      baselineInterval: Interval(startDate, startDate + 13 day]
+    where (scoreObs.effective as FHIR.dateTime) during baselineInterval
+
+/* 
+@description: Returns a list of Observations with a person's follow-up GAS scores. 
+A follow-up score is recorded 2 or more weeks after its Goal was started.
+*/
+define &quot;GAS Follow-Up Scores&quot;:
+  &quot;GAS Scores&quot;
+    except &quot;GAS Baseline Scores&quot;
+
+define &quot;GAS Scores&quot;:
+  PC.SortAscending(&quot;GAS Patient Scores&quot;
+    union &quot;GAS Practitioner Scores&quot;
+    union &quot;GAS Caregiver Scores&quot;
+  )
+
+// Returns a collection of Observations with a patient's GAS scores.
+define &quot;GAS Patient Scores&quot;:
+  &quot;All GAS Score Observations&quot; obs
+    where exists obs.performer.resolvePatients()
+
+// Returns a collection of Observations with a practitioner's GAS scores.
+define &quot;GAS Practitioner Scores&quot;:
+  &quot;All GAS Score Observations&quot; obs
+    where exists obs.performer.resolvePractitioners()
+
+// Returns a collection of Observations with a caregiver's GAS scores.
+define &quot;GAS Caregiver Scores&quot;:
+  &quot;All GAS Score Observations&quot; obs
+    where exists obs.performer.resolveRelatedPersons()
 
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
-
-// Returns a list of CarePlan that support this Goal.
-define fluent function carePlans(goal Goal):
-  [CarePlan] carePlan
-    where exists ( carePlan.goal goalRef
-        where goal.id = goalRef.reference.getId()
-    )
-
-// Returns a list of goal domain Observations that this Goal addresses.
-define fluent function goalDomainObservations(goal Goal):
-  flatten( goal.addresses GA
-      return [Observation] obs
-        where obs.id = GA.reference.getId()
-          and obs.isGoalDomain()
-  )
-
-// Returns a list of Observations that this Goal addresses.
-define fluent function addressesObservations(goal Goal):
-  flatten( goal.addresses GA
-      return [Observation] obs
-        where obs.id = GA.reference.getId()
-  )
-
-// Returns Date from the first Goal target that has a due date.
-define fluent function dueDate(goal Goal):
-  First(goal.target target
-    // TODO if due is Duration, add that quantity to startDate
-      let due:(target.due as FHIR.date).value
-      where due is not null
-      return due
-  )
 
 // Returns a list of PCO Goals that are included in this CarePlan.
 define fluent function pcoGoals(carePlan CarePlan):
@@ -648,42 +626,6 @@ define fluent function pcoGoals(carePlan CarePlan):
         where goal.id = goalRef.reference.getId()
           and &quot;PCO Goals&quot; contains goal
   )
-
-// Returns a list of Goals that address this Observation
-define fluent function addressedByGoals(obs Observation):
-  [Goal] goal
-    where exists ( goal.addresses GA
-        where obs.id = GA.reference.getId()
-    )
-
-/*
- * General FHIR data helpers.
- */
-
-define fluent function getId(uri String):
-  Last(Split(uri, '/'))
-
-
-// Note: the external versions of the following functions in FHIRHelpers do not execute in VS Code.
-
-/*
-@description: Returns any extensions defined on the given resource with the specified url.
-@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access
-content that is defined by extensions but not yet surfaced in the
-CQL model info.
-*/
-define fluent function extensions(domainResource DomainResource, url String):
-  domainResource.extension E
-	  where E.url = url
-		return E
-
-/*
-@description: Returns the single extension (if present) on the given resource with the specified url.
-@comment: This function uses singleton from to ensure that a run-time exception is thrown if there
-is more than one extension on the given resource with the specified url.
-*/
-define fluent function extension(domainResource DomainResource, url String):
-  singleton from domainResource.extensions(url)
 </code></pre></td></tr>
             </table>
           </td>
@@ -697,7 +639,7 @@ define fluent function extension(domainResource DomainResource, url String):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (108740 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (76300 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -709,7 +651,7 @@ define fluent function extension(domainResource DomainResource, url String):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (200832 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (139892 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -741,7 +683,7 @@ define fluent function extension(domainResource DomainResource, url String):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Aug 17, 2024 01:18+0000">2024-08-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 19, 2024 20:32+0000">2024-08-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
