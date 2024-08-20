@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.1"}
-    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-19
+            as of 2024-08-20
           
         
       </td>
@@ -818,7 +818,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &quot;Initial Population&quot;: {
   Patient person
     where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
@@ -833,7 +835,10 @@ define &quot;Initial Population&quot;: {
                                     <td>Denominator</td>
                                     <td>
                                         
-                                            <pre><code class="language-cql">/// TODO: with a complex care need 
+                                            <pre><code class="language-cql">/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &quot;complex care need?&quot;
+*/
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;</code></pre>
                                         
@@ -861,11 +866,10 @@ define &quot;Denominator&quot;:
                                             <pre><code class="language-cql">/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &quot;Numerator&quot;:
-  &quot;Denominator&quot; person where (
-    exists &quot;Identified PCO Goals&quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )</code></pre>
+  &quot;Denominator&quot; person where
+    exists &quot;PCO Goals During Measurement Period&quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()</code></pre>
                                         
                                     </td>
                                 </tr>
@@ -912,7 +916,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &quot;Initial Population&quot;: {
   Patient person
     where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
@@ -937,7 +943,10 @@ define &quot;Initial Population&quot;: {
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">/// TODO: with a complex care need 
+                                    <pre class="highlight language-cql"><code class="language-cql">/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &quot;complex care need?&quot;
+*/
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;</code></pre>
                                 </td>
@@ -981,16 +990,16 @@ define &quot;PCO Goals&quot;:
                                 <td>GoalIdentificationMeasure</td>
                             
                             
-                                <td>Identified PCO Goals</td>
+                                <td>PCO Goals During Measurement Period</td>
                             
                         </tr>
                         <tr>
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define &quot;Identified PCO Goals&quot;:
-  GAS.&quot;PCO Goals&quot; pcoGoal
-    where ToDateTime(pcoGoal.start as FHIR.date) during &quot;Measurement Period&quot;</code></pre>
+                                    <pre class="highlight language-cql"><code class="language-cql">define &quot;PCO Goals During Measurement Period&quot;:
+  GAS.&quot;PCO Goals&quot; goal
+    where ToDateTime(goal.start as FHIR.date) during &quot;Measurement Period&quot;</code></pre>
                                 </td>
                             
                         </tr>
@@ -1014,11 +1023,10 @@ define &quot;PCO Goals&quot;:
                                     <pre class="highlight language-cql"><code class="language-cql">/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &quot;Numerator&quot;:
-  &quot;Denominator&quot; person where (
-    exists &quot;Identified PCO Goals&quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )</code></pre>
+  &quot;Denominator&quot; person where
+    exists &quot;PCO Goals During Measurement Period&quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()</code></pre>
                                 </td>
                             
                         </tr>
@@ -1273,7 +1281,7 @@ define fluent function carePlans(goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 19, 2024 20:32+0000">2024-08-19</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 20, 2024 21:03+0000">2024-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

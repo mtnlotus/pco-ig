@@ -1,0 +1,1449 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.10.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "An operand identifier [goal] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "librarySystem" : "http://mtnlotus.com/uv/pco",
+         "libraryId" : "GoalFollowUpMeasure",
+         "libraryVersion" : "0.1.0",
+         "startLine" : 69,
+         "startChar" : 3,
+         "endLine" : 69,
+         "endChar" : 11,
+         "message" : "An alias identifier [goal] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "librarySystem" : "http://mtnlotus.com/uv/pco",
+         "libraryId" : "GoalFollowUpMeasure",
+         "libraryVersion" : "0.1.0",
+         "startLine" : 69,
+         "startChar" : 3,
+         "endLine" : 69,
+         "endChar" : 11,
+         "message" : "An alias identifier [goal] is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "type" : "Annotation",
+         "t" : [ {
+            "name" : "description",
+            "value" : "Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with\na complex care need who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were\nidentified."
+         }, {
+            "name" : "author",
+            "value" : "Mountain Lotus WellBeing LLC"
+         } ],
+         "s" : {
+            "r" : "309",
+            "s" : [ {
+               "value" : [ "/*\n@description: Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with\na complex care need who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were\nidentified.\n\n@author: Mountain Lotus WellBeing LLC\n*/\n","library GoalFollowUpMeasure version '0.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "GoalFollowUpMeasure",
+         "system" : "http://mtnlotus.com/uv/pco",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "11:1-11:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "13:1-13:56",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://mtnlotus.com/uv/pco/FHIRHelpers",
+            "version" : "4.4.000",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.4.000'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "208",
+            "locator" : "14:1-14:43",
+            "localIdentifier" : "PC",
+            "path" : "http://mtnlotus.com/uv/pco/PCOCommon",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "PCOCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","PC" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "209",
+            "locator" : "15:1-15:54",
+            "localIdentifier" : "GAS",
+            "path" : "http://mtnlotus.com/uv/pco/GoalAttainmentLogic",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "209",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "GoalAttainmentLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","GAS" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "210",
+            "locator" : "17:1-18:74",
+            "name" : "Measurement Period",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Measurement Period\""," " ]
+                  }, {
+                     "r" : "230",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "231",
+                        "s" : [ {
+                           "value" : [ "DateTime" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  }, {
+                     "value" : [ "\n    default " ]
+                  }, {
+                     "r" : "229",
+                     "s" : [ {
+                        "r" : "211",
+                        "value" : [ "Interval[","@2024-01-01T00:00:00.000Z",", ","@2024-12-31T23:59:59.999Z","]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "229",
+               "locator" : "18:13-18:74",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "211",
+                  "locator" : "18:22-18:46",
+                  "type" : "DateTime",
+                  "signature" : [ ],
+                  "year" : {
+                     "localId" : "212",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "2024",
+                     "type" : "Literal"
+                  },
+                  "month" : {
+                     "localId" : "213",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "day" : {
+                     "localId" : "214",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "hour" : {
+                     "localId" : "215",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "minute" : {
+                     "localId" : "216",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "second" : {
+                     "localId" : "217",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "millisecond" : {
+                     "localId" : "218",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "timezoneOffset" : {
+                     "localId" : "219",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "0.0",
+                     "type" : "Literal"
+                  }
+               },
+               "high" : {
+                  "localId" : "220",
+                  "locator" : "18:49-18:73",
+                  "type" : "DateTime",
+                  "signature" : [ ],
+                  "year" : {
+                     "localId" : "221",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "2024",
+                     "type" : "Literal"
+                  },
+                  "month" : {
+                     "localId" : "222",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "12",
+                     "type" : "Literal"
+                  },
+                  "day" : {
+                     "localId" : "223",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "31",
+                     "type" : "Literal"
+                  },
+                  "hour" : {
+                     "localId" : "224",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "23",
+                     "type" : "Literal"
+                  },
+                  "minute" : {
+                     "localId" : "225",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "59",
+                     "type" : "Literal"
+                  },
+                  "second" : {
+                     "localId" : "226",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "59",
+                     "type" : "Literal"
+                  },
+                  "millisecond" : {
+                     "localId" : "227",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "999",
+                     "type" : "Literal"
+                  },
+                  "timezoneOffset" : {
+                     "localId" : "228",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "0.0",
+                     "type" : "Literal"
+                  }
+               }
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "230",
+               "locator" : "17:32-17:49",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "231",
+                  "locator" : "17:41-17:48",
+                  "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         }, {
+            "localId" : "232",
+            "locator" : "20:1-21:37",
+            "name" : "Follow-Up Interval",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "232",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Follow-Up Interval\""," " ]
+                  }, {
+                     "r" : "236",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "237",
+                        "s" : [ {
+                           "value" : [ "System",".","Quantity" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  }, {
+                     "value" : [ "\n  default " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "233",
+                        "s" : [ {
+                           "value" : [ "2 ","weeks" ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "234",
+                        "s" : [ {
+                           "value" : [ "26 ","weeks" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "235",
+               "locator" : "21:11-21:37",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "233",
+                  "locator" : "21:20-21:26",
+                  "value" : 2,
+                  "unit" : "weeks",
+                  "type" : "Quantity"
+               },
+               "high" : {
+                  "localId" : "234",
+                  "locator" : "21:29-21:36",
+                  "value" : 26,
+                  "unit" : "weeks",
+                  "type" : "Quantity"
+               }
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "236",
+               "locator" : "20:32-20:56",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "237",
+                  "locator" : "20:41-20:55",
+                  "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "241",
+            "locator" : "23:1-23:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "239",
+            "locator" : "23:1-23:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "240",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "238",
+                  "locator" : "23:1-23:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "243",
+            "locator" : "28:1-31:1",
+            "name" : "Initial Population",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "t" : [ {
+                  "name" : "description",
+                  "value" : "Includes individuals 18 years of age and older."
+               } ],
+               "s" : {
+                  "r" : "243",
+                  "s" : [ {
+                     "value" : [ "/*\n@description: Includes individuals 18 years of age and older.\n*/\n","define ","\"Initial Population\"",": " ]
+                  }, {
+                     "r" : "244",
+                     "s" : [ {
+                        "value" : [ "{\n  " ]
+                     }, {
+                        "r" : "263",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "245",
+                              "s" : [ {
+                                 "r" : "246",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "Patient" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","person" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "247",
+                           "s" : [ {
+                              "value" : [ "where " ]
+                           }, {
+                              "r" : "247",
+                              "s" : [ {
+                                 "r" : "257",
+                                 "s" : [ {
+                                    "value" : [ "AgeInYearsAt","(" ]
+                                 }, {
+                                    "r" : "248",
+                                    "s" : [ {
+                                       "value" : [ "start of " ]
+                                    }, {
+                                       "r" : "249",
+                                       "s" : [ {
+                                          "value" : [ "\"Measurement Period\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              }, {
+                                 "r" : "260",
+                                 "value" : [ " ",">="," ","18" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n}" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "244",
+               "locator" : "28:30-31:1",
+               "type" : "List",
+               "element" : [ {
+                  "localId" : "263",
+                  "locator" : "29:3-30:59",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "245",
+                     "locator" : "29:3-29:16",
+                     "alias" : "person",
+                     "expression" : {
+                        "localId" : "246",
+                        "locator" : "29:3-29:9",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "localId" : "247",
+                     "locator" : "30:5-30:59",
+                     "type" : "GreaterOrEqual",
+                     "signature" : [ {
+                        "localId" : "261",
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "262",
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "257",
+                        "locator" : "30:11-30:53",
+                        "precision" : "Year",
+                        "type" : "CalculateAgeAt",
+                        "signature" : [ {
+                           "localId" : "258",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "259",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "255",
+                           "type" : "ToDateTime",
+                           "signature" : [ {
+                              "localId" : "256",
+                              "name" : "{urn:hl7-org:elm-types:r1}Date",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "253",
+                              "path" : "birthDate.value",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "252",
+                                 "name" : "Patient",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "localId" : "248",
+                           "locator" : "30:24-30:52",
+                           "type" : "Start",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "249",
+                              "locator" : "30:33-30:52",
+                              "name" : "Measurement Period",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }, {
+                        "localId" : "260",
+                        "locator" : "30:58-30:59",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "value" : "18",
+                        "type" : "Literal"
+                     } ]
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "265",
+            "locator" : "37:1-39:32",
+            "name" : "Denominator",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "t" : [ {
+                  "name" : "description",
+                  "value" : "Initial Population individuals with a complex care need and has a PCO Goal."
+               }, {
+                  "name" : "comment",
+                  "value" : "\"complex care need?\""
+               } ],
+               "s" : {
+                  "r" : "265",
+                  "s" : [ {
+                     "value" : [ "/*\n@description: Initial Population individuals with a complex care need and has a PCO Goal.\n@comment: TODO - How do we determine \"complex care need?\"\n*/\n","define ","\"Denominator\"",":\n  " ]
+                  }, {
+                     "r" : "271",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "266",
+                           "s" : [ {
+                              "r" : "267",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "\"Initial Population\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","person" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "268",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "268",
+                           "s" : [ {
+                              "value" : [ "exists " ]
+                           }, {
+                              "r" : "270",
+                              "s" : [ {
+                                 "r" : "269",
+                                 "s" : [ {
+                                    "value" : [ "GAS" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "270",
+                                 "s" : [ {
+                                    "value" : [ "\"PCO Goals\"" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "271",
+               "locator" : "38:3-39:32",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "266",
+                  "locator" : "38:3-38:29",
+                  "alias" : "person",
+                  "expression" : {
+                     "localId" : "267",
+                     "locator" : "38:3-38:22",
+                     "name" : "Initial Population",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "268",
+                  "locator" : "39:5-39:32",
+                  "type" : "Exists",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "270",
+                     "locator" : "39:18-39:32",
+                     "name" : "PCO Goals",
+                     "libraryName" : "GAS",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "273",
+            "locator" : "41:1-42:6",
+            "name" : "Denominator Exclusions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "273",
+                  "s" : [ {
+                     "r" : "274",
+                     "value" : [ "","define ","\"Denominator Exclusions\"",":\n  ","null" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "274",
+               "locator" : "42:3-42:6",
+               "type" : "Null"
+            }
+         }, {
+            "localId" : "276",
+            "locator" : "44:1-45:6",
+            "name" : "Denominator Exceptions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "276",
+                  "s" : [ {
+                     "r" : "277",
+                     "value" : [ "","define ","\"Denominator Exceptions\"",":\n  ","null" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "277",
+               "locator" : "45:3-45:6",
+               "type" : "Null"
+            }
+         }, {
+            "localId" : "309",
+            "locator" : "68:1-71:105",
+            "name" : "Follow-Up Interval For",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "t" : [ {
+                  "name" : "description",
+                  "value" : "\"Follow-Up Interval\" parameter."
+               } ],
+               "s" : {
+                  "r" : "309",
+                  "s" : [ {
+                     "value" : [ "/*\n@description: Computes the follow-up interval for a Goal based on this measure's \"Follow-Up Interval\" parameter.\n@return Interval<DateTime>\n*/\n","define function \"Follow-Up Interval For\" (goal Goal):\n  " ]
+                  }, {
+                     "r" : "384",
+                     "s" : [ {
+                        "r" : "384",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "354",
+                              "s" : [ {
+                                 "r" : "355",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "goal" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","goal" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "let " ]
+                           }, {
+                              "r" : "356",
+                              "s" : [ {
+                                 "value" : [ "startDate",": " ]
+                              }, {
+                                 "r" : "365",
+                                 "s" : [ {
+                                    "value" : [ "ToDateTime","(" ]
+                                 }, {
+                                    "r" : "357",
+                                    "s" : [ {
+                                       "r" : "359",
+                                       "s" : [ {
+                                          "r" : "358",
+                                          "s" : [ {
+                                             "value" : [ "goal" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "359",
+                                          "s" : [ {
+                                             "value" : [ "start" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "360",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","date" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n      " ]
+                        }, {
+                           "r" : "368",
+                           "s" : [ {
+                              "value" : [ "return " ]
+                           }, {
+                              "r" : "383",
+                              "s" : [ {
+                                 "value" : [ "Interval(" ]
+                              }, {
+                                 "r" : "369",
+                                 "s" : [ {
+                                    "r" : "370",
+                                    "s" : [ {
+                                       "value" : [ "startDate" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " + " ]
+                                 }, {
+                                    "r" : "371",
+                                    "s" : [ {
+                                       "value" : [ "start of " ]
+                                    }, {
+                                       "r" : "372",
+                                       "s" : [ {
+                                          "value" : [ "\"Follow-Up Interval\"" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "377",
+                                 "s" : [ {
+                                    "r" : "378",
+                                    "s" : [ {
+                                       "value" : [ "startDate" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " + " ]
+                                 }, {
+                                    "r" : "379",
+                                    "s" : [ {
+                                       "value" : [ "end of " ]
+                                    }, {
+                                       "r" : "380",
+                                       "s" : [ {
+                                          "value" : [ "\"Follow-Up Interval\"" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "384",
+               "locator" : "69:3-71:105",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "354",
+                  "locator" : "69:3-69:11",
+                  "alias" : "goal",
+                  "expression" : {
+                     "localId" : "355",
+                     "locator" : "69:3-69:6",
+                     "name" : "goal",
+                     "type" : "OperandRef"
+                  }
+               } ],
+               "let" : [ {
+                  "localId" : "356",
+                  "locator" : "70:9-70:54",
+                  "identifier" : "startDate",
+                  "expression" : {
+                     "localId" : "365",
+                     "locator" : "70:20-70:54",
+                     "type" : "ToDateTime",
+                     "signature" : [ {
+                        "localId" : "367",
+                        "name" : "{urn:hl7-org:elm-types:r1}Date",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : {
+                        "localId" : "366",
+                        "name" : "ToDate",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "localId" : "357",
+                           "locator" : "70:31-70:53",
+                           "strict" : false,
+                           "type" : "As",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "359",
+                              "locator" : "70:31-70:40",
+                              "path" : "start",
+                              "scope" : "goal",
+                              "type" : "Property"
+                           },
+                           "asTypeSpecifier" : {
+                              "localId" : "360",
+                              "locator" : "70:45-70:53",
+                              "name" : "{http://hl7.org/fhir}date",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  }
+               } ],
+               "relationship" : [ ],
+               "return" : {
+                  "localId" : "368",
+                  "locator" : "71:7-71:105",
+                  "expression" : {
+                     "localId" : "383",
+                     "locator" : "71:14-71:105",
+                     "lowClosed" : false,
+                     "highClosed" : false,
+                     "type" : "Interval",
+                     "low" : {
+                        "localId" : "369",
+                        "locator" : "71:23-71:63",
+                        "type" : "Add",
+                        "signature" : [ {
+                           "localId" : "375",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "376",
+                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "370",
+                           "locator" : "71:23-71:31",
+                           "name" : "startDate",
+                           "type" : "QueryLetRef"
+                        }, {
+                           "localId" : "371",
+                           "locator" : "71:35-71:63",
+                           "type" : "Start",
+                           "signature" : [ {
+                              "localId" : "373",
+                              "type" : "IntervalTypeSpecifier",
+                              "pointType" : {
+                                 "localId" : "374",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ],
+                           "operand" : {
+                              "localId" : "372",
+                              "locator" : "71:44-71:63",
+                              "name" : "Follow-Up Interval",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     },
+                     "high" : {
+                        "localId" : "377",
+                        "locator" : "71:66-71:104",
+                        "type" : "Add",
+                        "signature" : [ {
+                           "localId" : "381",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "382",
+                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "378",
+                           "locator" : "71:66-71:74",
+                           "name" : "startDate",
+                           "type" : "QueryLetRef"
+                        }, {
+                           "localId" : "379",
+                           "locator" : "71:78-71:104",
+                           "type" : "End",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "380",
+                              "locator" : "71:85-71:104",
+                              "name" : "Follow-Up Interval",
+                              "type" : "ParameterRef"
+                           }
+                        } ]
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "311",
+               "name" : "goal",
+               "operandTypeSpecifier" : {
+                  "localId" : "310",
+                  "locator" : "68:48-68:51",
+                  "name" : "{http://hl7.org/fhir}Goal",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "284",
+            "locator" : "55:1-62:3",
+            "name" : "Follow-Up Scores During Measurement Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "284",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Follow-Up Scores During Measurement Period\"",":\n  " ]
+                  }, {
+                     "r" : "285",
+                     "s" : [ {
+                        "value" : [ "flatten" ]
+                     }, {
+                        "r" : "349",
+                        "s" : [ {
+                           "value" : [ "( " ]
+                        }, {
+                           "r" : "349",
+                           "s" : [ {
+                              "s" : [ {
+                                 "r" : "286",
+                                 "s" : [ {
+                                    "r" : "288",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "value" : [ "GAS",".","\"PCO Goals\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","goal" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "let " ]
+                              }, {
+                                 "r" : "289",
+                                 "s" : [ {
+                                    "value" : [ "gasScores",": " ]
+                                 }, {
+                                    "r" : "291",
+                                    "s" : [ {
+                                       "r" : "290",
+                                       "s" : [ {
+                                          "value" : [ "goal" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "291",
+                                       "s" : [ {
+                                          "value" : [ "gasScores","()" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      " ]
+                           }, {
+                              "r" : "292",
+                              "s" : [ {
+                                 "value" : [ "return " ]
+                              }, {
+                                 "r" : "348",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "r" : "293",
+                                       "s" : [ {
+                                          "r" : "294",
+                                          "s" : [ {
+                                             "s" : [ {
+                                                "value" : [ "gasScores" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " ","score" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " \n        " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "let " ]
+                                    }, {
+                                       "r" : "295",
+                                       "s" : [ {
+                                          "value" : [ "scoreDate",": " ]
+                                       }, {
+                                          "r" : "296",
+                                          "s" : [ {
+                                             "r" : "298",
+                                             "s" : [ {
+                                                "r" : "297",
+                                                "s" : [ {
+                                                   "value" : [ "score" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "298",
+                                                "s" : [ {
+                                                   "value" : [ "effective" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " as " ]
+                                          }, {
+                                             "r" : "299",
+                                             "s" : [ {
+                                                "value" : [ "FHIR",".","dateTime" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "r" : "300",
+                                    "s" : [ {
+                                       "value" : [ "where " ]
+                                    }, {
+                                       "r" : "300",
+                                       "s" : [ {
+                                          "r" : "304",
+                                          "s" : [ {
+                                             "r" : "301",
+                                             "s" : [ {
+                                                "value" : [ "scoreDate" ]
+                                             } ]
+                                          }, {
+                                             "r" : "304",
+                                             "value" : [ " ","during"," " ]
+                                          }, {
+                                             "r" : "302",
+                                             "s" : [ {
+                                                "value" : [ "\"Measurement Period\"" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "\n          and " ]
+                                       }, {
+                                          "r" : "345",
+                                          "s" : [ {
+                                             "r" : "307",
+                                             "s" : [ {
+                                                "value" : [ "scoreDate" ]
+                                             } ]
+                                          }, {
+                                             "r" : "345",
+                                             "value" : [ " ","during"," " ]
+                                          }, {
+                                             "r" : "312",
+                                             "s" : [ {
+                                                "value" : [ "\"Follow-Up Interval For\"","(" ]
+                                             }, {
+                                                "r" : "308",
+                                                "s" : [ {
+                                                   "value" : [ "goal" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "285",
+               "locator" : "56:3-62:3",
+               "type" : "Flatten",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "349",
+                  "locator" : "56:10-62:3",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "286",
+                     "locator" : "56:12-56:31",
+                     "alias" : "goal",
+                     "expression" : {
+                        "localId" : "288",
+                        "locator" : "56:12-56:26",
+                        "name" : "PCO Goals",
+                        "libraryName" : "GAS",
+                        "type" : "ExpressionRef"
+                     }
+                  } ],
+                  "let" : [ {
+                     "localId" : "289",
+                     "locator" : "57:9-57:35",
+                     "identifier" : "gasScores",
+                     "expression" : {
+                        "localId" : "291",
+                        "locator" : "57:20-57:35",
+                        "name" : "gasScores",
+                        "libraryName" : "GAS",
+                        "type" : "FunctionRef",
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "localId" : "290",
+                           "locator" : "57:20-57:23",
+                           "name" : "goal",
+                           "type" : "AliasRef"
+                        } ]
+                     }
+                  } ],
+                  "relationship" : [ ],
+                  "return" : {
+                     "localId" : "292",
+                     "locator" : "58:7-61:61",
+                     "expression" : {
+                        "localId" : "348",
+                        "locator" : "58:14-61:61",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "293",
+                           "locator" : "58:14-58:28",
+                           "alias" : "score",
+                           "expression" : {
+                              "localId" : "294",
+                              "locator" : "58:14-58:22",
+                              "name" : "gasScores",
+                              "type" : "QueryLetRef"
+                           }
+                        } ],
+                        "let" : [ {
+                           "localId" : "295",
+                           "locator" : "59:13-59:55",
+                           "identifier" : "scoreDate",
+                           "expression" : {
+                              "localId" : "296",
+                              "locator" : "59:24-59:55",
+                              "strict" : false,
+                              "type" : "As",
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "298",
+                                 "locator" : "59:24-59:38",
+                                 "path" : "effective",
+                                 "scope" : "score",
+                                 "type" : "Property"
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "299",
+                                 "locator" : "59:43-59:55",
+                                 "name" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        } ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "300",
+                           "locator" : "60:9-61:61",
+                           "type" : "And",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "304",
+                              "locator" : "60:15-60:51",
+                              "type" : "In",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "305",
+                                 "name" : "ToDateTime",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "306",
+                                    "name" : "{http://hl7.org/fhir}dateTime",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "301",
+                                    "locator" : "60:15-60:23",
+                                    "name" : "scoreDate",
+                                    "type" : "QueryLetRef"
+                                 } ]
+                              }, {
+                                 "localId" : "302",
+                                 "locator" : "60:32-60:51",
+                                 "name" : "Measurement Period",
+                                 "type" : "ParameterRef"
+                              } ]
+                           }, {
+                              "localId" : "345",
+                              "locator" : "61:15-61:61",
+                              "type" : "In",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "346",
+                                 "name" : "ToDateTime",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "347",
+                                    "name" : "{http://hl7.org/fhir}dateTime",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "307",
+                                    "locator" : "61:15-61:23",
+                                    "name" : "scoreDate",
+                                    "type" : "QueryLetRef"
+                                 } ]
+                              }, {
+                                 "localId" : "312",
+                                 "locator" : "61:32-61:61",
+                                 "name" : "Follow-Up Interval For",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "308",
+                                    "locator" : "61:57-61:60",
+                                    "name" : "goal",
+                                    "type" : "AliasRef"
+                                 } ]
+                              } ]
+                           } ]
+                        }
+                     }
+                  }
+               }
+            }
+         }, {
+            "localId" : "279",
+            "locator" : "51:1-53:61",
+            "name" : "Numerator",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "t" : [ {
+                  "name" : "description",
+                  "value" : "Indivuals who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were identified."
+               } ],
+               "s" : {
+                  "r" : "279",
+                  "s" : [ {
+                     "value" : [ "/*\n@description: Indivuals who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were identified.\n*/\n","define ","\"Numerator\"",":\n  " ]
+                  }, {
+                     "r" : "353",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "280",
+                           "s" : [ {
+                              "r" : "281",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "\"Denominator\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","person" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "282",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "282",
+                           "s" : [ {
+                              "value" : [ "exists " ]
+                           }, {
+                              "r" : "350",
+                              "s" : [ {
+                                 "value" : [ "\"Follow-Up Scores During Measurement Period\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "353",
+               "locator" : "52:3-53:61",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "280",
+                  "locator" : "52:3-52:22",
+                  "alias" : "person",
+                  "expression" : {
+                     "localId" : "281",
+                     "locator" : "52:3-52:15",
+                     "name" : "Denominator",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "282",
+                  "locator" : "53:5-53:61",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "351",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "352",
+                        "name" : "{http://hl7.org/fhir}Observation",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "350",
+                     "locator" : "53:18-53:61",
+                     "name" : "Follow-Up Scores During Measurement Period",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         } ]
+      }
+   }
+}

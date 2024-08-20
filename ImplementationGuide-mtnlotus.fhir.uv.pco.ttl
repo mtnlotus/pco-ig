@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-19T20:32:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-20T21:03:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -873,6 +873,17 @@
          fhir:value [ fhir:v "Library" ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Library/GoalFollowUpMeasure> ;
+         fhir:reference [ fhir:v "Library/GoalFollowUpMeasure" ]
+       ] ;
+       fhir:name [ fhir:v "GoalFollowUpMeasure" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://mtnlotus.com/uv/pco/Library/GoalIdentificationMeasure> ;
          fhir:reference [ fhir:v "Library/GoalIdentificationMeasure" ]
        ] ;
@@ -990,6 +1001,18 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal with goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Measure" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Measure/GoalFollowUpMeasure> ;
+         fhir:reference [ fhir:v "Measure/GoalFollowUpMeasure" ]
+       ] ;
+       fhir:name [ fhir:v "Person-Centered Goal Follow-Up" ] ;
+       fhir:description [ fhir:v "Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

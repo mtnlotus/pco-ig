@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.1"}
-    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -174,7 +174,7 @@
         
           Draft
           
-            as of 2024-08-19
+            as of 2024-08-20
           
         
       </td>
@@ -783,7 +783,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &amp;quot;Initial Population&amp;quot;: {
   Patient person
     where AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 18
@@ -798,7 +800,10 @@ define &amp;quot;Initial Population&amp;quot;: {
                                     &lt;td&gt;Denominator&lt;/td&gt;
                                     &lt;td&gt;
                                         
-                                            &lt;pre&gt;&lt;code class=&quot;language-cql&quot;&gt;/// TODO: with a complex care need 
+                                            &lt;pre&gt;&lt;code class=&quot;language-cql&quot;&gt;/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &amp;quot;complex care need?&amp;quot;
+*/
 define &amp;quot;Denominator&amp;quot;:
   &amp;quot;Initial Population&amp;quot;&lt;/code&gt;&lt;/pre&gt;
                                         
@@ -826,11 +831,10 @@ define &amp;quot;Denominator&amp;quot;:
                                             &lt;pre&gt;&lt;code class=&quot;language-cql&quot;&gt;/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &amp;quot;Numerator&amp;quot;:
-  &amp;quot;Denominator&amp;quot; person where (
-    exists &amp;quot;Identified PCO Goals&amp;quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )&lt;/code&gt;&lt;/pre&gt;
+  &amp;quot;Denominator&amp;quot; person where
+    exists &amp;quot;PCO Goals During Measurement Period&amp;quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()&lt;/code&gt;&lt;/pre&gt;
                                         
                                     &lt;/td&gt;
                                 &lt;/tr&gt;
@@ -877,7 +881,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &amp;quot;Initial Population&amp;quot;: {
   Patient person
     where AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 18
@@ -902,7 +908,10 @@ define &amp;quot;Initial Population&amp;quot;: {
                             
                                 &lt;td/&gt;
                                 &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;/// TODO: with a complex care need 
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &amp;quot;complex care need?&amp;quot;
+*/
 define &amp;quot;Denominator&amp;quot;:
   &amp;quot;Initial Population&amp;quot;&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
@@ -946,16 +955,16 @@ define &amp;quot;PCO Goals&amp;quot;:
                                 &lt;td&gt;GoalIdentificationMeasure&lt;/td&gt;
                             
                             
-                                &lt;td&gt;Identified PCO Goals&lt;/td&gt;
+                                &lt;td&gt;PCO Goals During Measurement Period&lt;/td&gt;
                             
                         &lt;/tr&gt;
                         &lt;tr&gt;
                             
                                 &lt;td/&gt;
                                 &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define &amp;quot;Identified PCO Goals&amp;quot;:
-  GAS.&amp;quot;PCO Goals&amp;quot; pcoGoal
-    where ToDateTime(pcoGoal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
+  GAS.&amp;quot;PCO Goals&amp;quot; goal
+    where ToDateTime(goal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -979,11 +988,10 @@ define &amp;quot;PCO Goals&amp;quot;:
                                     &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &amp;quot;Numerator&amp;quot;:
-  &amp;quot;Denominator&amp;quot; person where (
-    exists &amp;quot;Identified PCO Goals&amp;quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )&lt;/code&gt;&lt;/pre&gt;
+  &amp;quot;Denominator&amp;quot; person where
+    exists &amp;quot;PCO Goals During Measurement Period&amp;quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1234,7 +1242,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &amp;quot;Initial Population&amp;quot;: {
   Patient person
     where AgeInYearsAt(start of &amp;quot;Measurement Period&amp;quot;) &amp;gt;= 18
@@ -1254,7 +1264,10 @@ define &amp;quot;Initial Population&amp;quot;: {
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;/// TODO: with a complex care need 
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &amp;quot;complex care need?&amp;quot;
+*/
 define &amp;quot;Denominator&amp;quot;:
   &amp;quot;Initial Population&amp;quot;&quot;/&gt;
         &lt;/extension&gt;
@@ -1291,13 +1304,13 @@ define &amp;quot;PCO Goals&amp;quot;:
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalIdentificationMeasure&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Identified PCO Goals&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCO Goals During Measurement Period&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define &amp;quot;Identified PCO Goals&amp;quot;:
-  GAS.&amp;quot;PCO Goals&amp;quot; pcoGoal
-    where ToDateTime(pcoGoal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;&quot;/&gt;
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
+  GAS.&amp;quot;PCO Goals&amp;quot; goal
+    where ToDateTime(goal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;3&quot;/&gt;
@@ -1316,11 +1329,10 @@ define &amp;quot;PCO Goals&amp;quot;:
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &amp;quot;Numerator&amp;quot;:
-  &amp;quot;Denominator&amp;quot; person where (
-    exists &amp;quot;Identified PCO Goals&amp;quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )&quot;/&gt;
+  &amp;quot;Denominator&amp;quot; person where
+    exists &amp;quot;PCO Goals During Measurement Period&amp;quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
@@ -1657,7 +1669,7 @@ define fluent function carePlans(goal Goal):
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Person-Centered Goal Identification&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-08-19T20:15:52+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-08-20T20:45:46+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
@@ -1851,7 +1863,7 @@ LOINC(R) copyright 2004-2023 Regenstrief Institute, Inc. This material contains 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 19, 2024 20:32+0000">2024-08-19</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 20, 2024 21:03+0000">2024-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

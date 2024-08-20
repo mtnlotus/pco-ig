@@ -587,7 +587,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &quot;Initial Population&quot;: {
   Patient person
     where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
@@ -602,7 +604,10 @@ define &quot;Initial Population&quot;: {
                                     <td>Denominator</td>
                                     <td>
                                         
-                                            <pre><code class="language-cql">/// TODO: with a complex care need 
+                                            <pre><code class="language-cql">/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &quot;complex care need?&quot;
+*/
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;</code></pre>
                                         
@@ -630,11 +635,10 @@ define &quot;Denominator&quot;:
                                             <pre><code class="language-cql">/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &quot;Numerator&quot;:
-  &quot;Denominator&quot; person where (
-    exists &quot;Identified PCO Goals&quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )</code></pre>
+  &quot;Denominator&quot; person where
+    exists &quot;PCO Goals During Measurement Period&quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()</code></pre>
                                         
                                     </td>
                                 </tr>
@@ -681,7 +685,9 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &quot;Initial Population&quot;: {
   Patient person
     where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
@@ -706,7 +712,10 @@ define &quot;Initial Population&quot;: {
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">/// TODO: with a complex care need 
+                                    <pre class="highlight language-cql"><code class="language-cql">/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &quot;complex care need?&quot;
+*/
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;</code></pre>
                                 </td>
@@ -750,16 +759,16 @@ define &quot;PCO Goals&quot;:
                                 <td>GoalIdentificationMeasure</td>
                             
                             
-                                <td>Identified PCO Goals</td>
+                                <td>PCO Goals During Measurement Period</td>
                             
                         </tr>
                         <tr>
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define &quot;Identified PCO Goals&quot;:
-  GAS.&quot;PCO Goals&quot; pcoGoal
-    where ToDateTime(pcoGoal.start as FHIR.date) during &quot;Measurement Period&quot;</code></pre>
+                                    <pre class="highlight language-cql"><code class="language-cql">define &quot;PCO Goals During Measurement Period&quot;:
+  GAS.&quot;PCO Goals&quot; goal
+    where ToDateTime(goal.start as FHIR.date) during &quot;Measurement Period&quot;</code></pre>
                                 </td>
                             
                         </tr>
@@ -783,11 +792,10 @@ define &quot;PCO Goals&quot;:
                                     <pre class="highlight language-cql"><code class="language-cql">/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &quot;Numerator&quot;:
-  &quot;Denominator&quot; person where (
-    exists &quot;Identified PCO Goals&quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )</code></pre>
+  &quot;Denominator&quot; person where
+    exists &quot;PCO Goals During Measurement Period&quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()</code></pre>
                                 </td>
                             
                         </tr>
@@ -1030,7 +1038,7 @@ define fluent function carePlans(goal Goal):
           <valueString value="Initial Population"/>
         </extension>
         <extension url="statement">
-          <valueString value="/*&#xA;Goal Identification: % of individuals 18 years of age and older with a complex care need &#xA;who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) &#xA;or a Patient-Reported Outcome Measure (PROM) and development of an action plan.&#xA;*/&#xA;&#xA;/// individuals 18 years of age and older&#xA;define &quot;Initial Population&quot;: {&#xA;  Patient person&#xA;    where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18&#xA;}"/>
+          <valueString value="/*&#xA;Goal Identification: % of individuals 18 years of age and older with a complex care need &#xA;who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) &#xA;or a Patient-Reported Outcome Measure (PROM) and development of an action plan.&#xA;*/&#xA;&#xA;/*&#xA;@description: Includes individuals 18 years of age and older.&#xA;*/&#xA;define &quot;Initial Population&quot;: {&#xA;  Patient person&#xA;    where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18&#xA;}"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="0"/>
@@ -1044,7 +1052,7 @@ define fluent function carePlans(goal Goal):
           <valueString value="Denominator"/>
         </extension>
         <extension url="statement">
-          <valueString value="/// TODO: with a complex care need &#xA;define &quot;Denominator&quot;:&#xA;  &quot;Initial Population&quot;"/>
+          <valueString value="/*&#xA;@description: Initial Population individuals with a complex care need.&#xA;@comment: TODO - How do we determine &quot;complex care need?&quot;&#xA;*/&#xA;define &quot;Denominator&quot;:&#xA;  &quot;Initial Population&quot;"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="1"/>
@@ -1069,10 +1077,10 @@ define fluent function carePlans(goal Goal):
           <valueString value="GoalIdentificationMeasure"/>
         </extension>
         <extension url="name">
-          <valueString value="Identified PCO Goals"/>
+          <valueString value="PCO Goals During Measurement Period"/>
         </extension>
         <extension url="statement">
-          <valueString value="define &quot;Identified PCO Goals&quot;:&#xA;  GAS.&quot;PCO Goals&quot; pcoGoal&#xA;    where ToDateTime(pcoGoal.start as FHIR.date) during &quot;Measurement Period&quot;"/>
+          <valueString value="define &quot;PCO Goals During Measurement Period&quot;:&#xA;  GAS.&quot;PCO Goals&quot; goal&#xA;    where ToDateTime(goal.start as FHIR.date) during &quot;Measurement Period&quot;"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="3"/>
@@ -1086,7 +1094,7 @@ define fluent function carePlans(goal Goal):
           <valueString value="Numerator"/>
         </extension>
         <extension url="statement">
-          <valueString value="/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)&#xA;/// ... and development of an action plan.&#xA;define &quot;Numerator&quot;:&#xA;  &quot;Denominator&quot; person where (&#xA;    exists &quot;Identified PCO Goals&quot; pcoGoal&#xA;      where pcoGoal.hasGAS()&#xA;        and exists pcoGoal.carePlans()&#xA;  )"/>
+          <valueString value="/// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)&#xA;/// ... and development of an action plan.&#xA;define &quot;Numerator&quot;:&#xA;  &quot;Denominator&quot; person where&#xA;    exists &quot;PCO Goals During Measurement Period&quot; goal&#xA;      where goal.hasGAS()&#xA;        and exists goal.carePlans()"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="4"/>
@@ -1368,7 +1376,7 @@ define fluent function carePlans(goal Goal):
   <title value="Person-Centered Goal Identification"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2024-08-19T20:15:52+00:00"/>
+  <date value="2024-08-20T20:45:46+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>

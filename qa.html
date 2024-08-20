@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 102, warn = 37, info = 1-->
+<!-- broken links = 0, errors = 180, warn = 45, info = 1-->
 <head>
   <title>PCO : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for PCO</h1>
- <p>Generated Mon Aug 19 20:33:35 UTC 2024, FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = <a href="http://mtnlotus.com/uv/pco">http://mtnlotus.com/uv/pco</a> (<a href="http://mtnlotus.com/uv/pco/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Tue Aug 20 21:05:50 UTC 2024, FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = <a href="http://mtnlotus.com/uv/pco">http://mtnlotus.com/uv/pco</a> (<a href="http://mtnlotus.com/uv/pco/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.20</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = mtnlotus.fhir.uv.pco, Canonical = http://mtnlotus.com/uv/pco</td></tr>
@@ -81,10 +81,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-care-plan-category.html">CarePlanCategory</a>
  (2 uses),     <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a>
  (5 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
- (5 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
  (7 uses),     <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>
- (5 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
  (3 uses),     <a href="http://hl7.org/fhir/R4/careteam.html">CareTeam</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
  (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html">CarePlanActivityOutcome</a>
@@ -103,7 +103,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (2 uses),     <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/goal.html">Goal</a>
- (7 uses),     <a href="http://hl7.org/fhir/R4/valueset-care-plan-activity-status.html">CarePlanActivityStatus</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/valueset-care-plan-activity-status.html">CarePlanActivityStatus</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/location.html">Location</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/healthcareservice.html">HealthcareService</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/medication.html">Medication</a>
@@ -137,11 +137,11 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
   <li>
 hl7.fhir.uv.extensions.r4#5.1.0:     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-elementdefinition-type-must-support.html">TypeMustSupport</a>
  (78 uses),     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-cqf-cqlOptions.html">CQFCQLOptions</a>
- (5 uses)
+ (6 uses)
   </li>
   <li>
 hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureDefinition-resource-sort.html">ResourceSortExt</a>
- (37 uses)
+ (39 uses)
   </li>
 </ul>
 </td></tr>
@@ -149,14 +149,14 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://mtnlotus.com/uv/pco (Problem #1 with package-list.json at http://mtnlotus.com/uv/pco: Not Found)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
-<tr><td>Narratives Suppressed</td><td><a href="Goal-pcoGoalPainLevelExample.html">Goal/pcoGoalPainLevelExample</a>, <a href="Goal-pcoGoalWalkDogExample.html">Goal/pcoGoalWalkDogExample</a>, <a href="Observation-pcoGASScorePatientBaselineExample.html">Observation/pcoGASScorePatientBaselineExample</a>, <a href="Observation-pcoGASScorePatientFollowupExample.html">Observation/pcoGASScorePatientFollowupExample</a>, <a href="Observation-pcoGASScorePractitionerFollowupExample.html">Observation/pcoGASScorePractitionerFollowupExample</a>, <a href="Patient-pcoPatientJones.html">Patient/pcoPatientJones</a>, <a href="ServiceRequest-pcoPhysicalTherapyReferral.html">ServiceRequest/pcoPhysicalTherapyReferral</a>, <a href="ServiceRequest-pcoWalkOutsideActionStep.html">ServiceRequest/pcoWalkOutsideActionStep</a> <tr><td>Summary:</td><td> errors = 102, warn = 37, info = 1, broken links = 0</td></tr>
+<tr><td>Narratives Suppressed</td><td><a href="Goal-pcoGoalPainLevelExample.html">Goal/pcoGoalPainLevelExample</a>, <a href="Goal-pcoGoalWalkDogExample.html">Goal/pcoGoalWalkDogExample</a>, <a href="Observation-pcoGASScorePatientBaselineExample.html">Observation/pcoGASScorePatientBaselineExample</a>, <a href="Observation-pcoGASScorePatientFollowupExample.html">Observation/pcoGASScorePatientFollowupExample</a>, <a href="Observation-pcoGASScorePractitionerFollowupExample.html">Observation/pcoGASScorePractitionerFollowupExample</a>, <a href="Patient-pcoPatientJones.html">Patient/pcoPatientJones</a>, <a href="ServiceRequest-pcoPhysicalTherapyReferral.html">ServiceRequest/pcoPhysicalTherapyReferral</a>, <a href="ServiceRequest-pcoWalkOutsideActionStep.html">ServiceRequest/pcoWalkOutsideActionStep</a> <tr><td>Summary:</td><td> errors = 180, warn = 45, info = 1, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>17</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>18</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CarePlan-pcoPhyicalFunctionCarePlanExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>1</b></td>
@@ -255,6 +255,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalAttainmentLogic"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalFollowUpMeasure"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/GoalFollowUpMeasure</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalIdentificationMeasure"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
@@ -262,6 +265,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_library_WhatMattersLogic"><b>/home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-GoalFollowUpMeasure"><b>/home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure</b></a></td><td><b>75</b></td><td><b>7</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-GoalIdentificationMeasure"><b>/home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure</b></a></td><td><b>51</b></td><td><b>7</b></td><td><b>0</b></td>
@@ -283,6 +289,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalAttainmentLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalFollowUpMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalIdentificationMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
@@ -750,9 +759,28 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalIdentificationMeasure"> </a>
-<h2><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(2)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalFollowUpMeasure"> </a>
+<h2><a href="Library-GoalFollowUpMeasure.html">input/resources/library/GoalFollowUpMeasure.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(2)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi33"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Library.extension[1] (l1/c1113)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Library.extension[1].url (l1/c1060)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Library&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c1112)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalIdentificationMeasure"> </a>
+<h2><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -770,8 +798,8 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_PCOCommon"> </a>
-<h2><a href="Library-PCOCommon.html">input/resources/library/PCOCommon.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-PCOCommon.html">input/resources/library/PCOCommon.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -789,8 +817,8 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_WhatMattersLogic"> </a>
-<h2><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi36"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -807,9 +835,265 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
 </table>
 <hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-GoalFollowUpMeasure"> </a>
+<h2><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/measure.html">Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.meta.profile[0] (l1/c153)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.meta.profile[1] (l1/c235)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.meta.profile[2] (l1/c316)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0] (l1&#8203;/c659)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.url (l1&#8203;/c494)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1] (l1&#8203;/c1134)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1]&#8203;.url (l1&#8203;/c1133)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2] (l1&#8203;/c1656)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2]&#8203;.url (l1&#8203;/c1655)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3] (l1&#8203;/c2189)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3]&#8203;.url (l1&#8203;/c2188)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4] (l1&#8203;/c2646)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4]&#8203;.url (l1&#8203;/c2645)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5] (l1&#8203;/c3122)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5]&#8203;.url (l1&#8203;/c3121)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6] (l1&#8203;/c3618)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6]&#8203;.url (l1&#8203;/c3617)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7] (l1&#8203;/c4106)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7]&#8203;.url (l1&#8203;/c4105)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8] (l1&#8203;/c4531)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8]&#8203;.url (l1&#8203;/c4530)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9] (l1&#8203;/c5182)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9]&#8203;.url (l1&#8203;/c5181)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10] (l1&#8203;/c5733)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10]&#8203;.url (l1&#8203;/c5732)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11] (l1&#8203;/c6068)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11]&#8203;.url (l1&#8203;/c6067)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12] (l1&#8203;/c6403)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12]&#8203;.url (l1&#8203;/c6402)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[13] (l1&#8203;/c7059)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[13]&#8203;.url (l1&#8203;/c7058)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[14] (l1&#8203;/c7451)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[14]&#8203;.url (l1&#8203;/c7450)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[15] (l1&#8203;/c8023)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[15]&#8203;.url (l1&#8203;/c8022)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[16] (l1&#8203;/c8478)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[16]&#8203;.url (l1&#8203;/c8477)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[17] (l1&#8203;/c8800)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[17]&#8203;.url (l1&#8203;/c8799)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[18] (l1&#8203;/c9132)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[18]&#8203;.url (l1&#8203;/c9131)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[19] (l1&#8203;/c9602)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[19]&#8203;.url (l1&#8203;/c9601)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[20] (l1&#8203;/c10075)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[20]&#8203;.url (l1&#8203;/c10074)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[21] (l1&#8203;/c10506)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[21]&#8203;.url (l1&#8203;/c10505)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[22] (l1&#8203;/c10952)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[22]&#8203;.url (l1&#8203;/c10951)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[23] (l1&#8203;/c11280)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[23]&#8203;.url (l1&#8203;/c11279)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[24] (l1&#8203;/c11960)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[24]&#8203;.url (l1&#8203;/c11959)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[25] (l1&#8203;/c12276)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[25]&#8203;.url (l1&#8203;/c12275)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.extension[0] (l1/c14548)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.extension[0].url (l1/c14495)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c14547)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.extension[1] (l1/c14741)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure.extension[1].url (l1/c14678)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c14949)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c14926)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure&#8203;.identifier[1]&#8203;.type&#8203;.coding[0] (l1&#8203;/c15165)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.identifier[1]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c15133)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure&#8203;.identifier[2]&#8203;.type&#8203;.coding[0] (l1&#8203;/c15390)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.identifier[2]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c15361)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure&#8203;.identifier[3]&#8203;.type&#8203;.coding[0] (l1&#8203;/c15608)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.identifier[3]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c15586)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[0] (l1&#8203;/c18770)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[0]&#8203;.url (l1&#8203;/c18623)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[1] (l1&#8203;/c18878)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[1]&#8203;.url (l1&#8203;/c18855)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[2] (l1&#8203;/c19090)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[2]&#8203;.url (l1&#8203;/c18952)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[3] (l1&#8203;/c19195)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[3]&#8203;.url (l1&#8203;/c19175)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[4] (l1&#8203;/c19440)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[4]&#8203;.url (l1&#8203;/c19284)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[4]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.display (l1&#8203;/c19439)</b></td><td><b>error</b></td><td title=""><b>Wrong Display Name 'increase' for http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease. Valid display is 'Decreased score indicates improvement' (for the language(s) 'en')</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure.meta.profile[0] (l1/c21182)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure.meta.profile[1] (l1/c21182)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Measure.meta.profile[2] (l1/c21182)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+</table>
+<hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-GoalIdentificationMeasure"> </a>
-<h2><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi36"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/measure.html">Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
+<h2><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/measure.html">Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -825,175 +1109,175 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><b>Measure.meta.profile[2] (l1/c322)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0] (l1&#8203;/c1135)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0] (l1&#8203;/c1163)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.url (l1&#8203;/c1134)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.url (l1&#8203;/c1162)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1] (l1&#8203;/c1508)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1] (l1&#8203;/c1640)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1]&#8203;.url (l1&#8203;/c1507)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[1]&#8203;.url (l1&#8203;/c1639)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2] (l1&#8203;/c2030)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2] (l1&#8203;/c2162)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2]&#8203;.url (l1&#8203;/c2029)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[2]&#8203;.url (l1&#8203;/c2161)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3] (l1&#8203;/c2467)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3] (l1&#8203;/c2623)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3]&#8203;.url (l1&#8203;/c2466)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[3]&#8203;.url (l1&#8203;/c2622)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4] (l1&#8203;/c3059)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4] (l1&#8203;/c3214)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4]&#8203;.url (l1&#8203;/c3058)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[4]&#8203;.url (l1&#8203;/c3213)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5] (l1&#8203;/c3399)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5] (l1&#8203;/c3554)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5]&#8203;.url (l1&#8203;/c3398)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[5]&#8203;.url (l1&#8203;/c3553)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6] (l1&#8203;/c3739)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6] (l1&#8203;/c3894)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6]&#8203;.url (l1&#8203;/c3738)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[6]&#8203;.url (l1&#8203;/c3893)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7] (l1&#8203;/c4394)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7] (l1&#8203;/c4549)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7]&#8203;.url (l1&#8203;/c4393)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[7]&#8203;.url (l1&#8203;/c4548)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8] (l1&#8203;/c4709)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8] (l1&#8203;/c4864)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8]&#8203;.url (l1&#8203;/c4708)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[8]&#8203;.url (l1&#8203;/c4863)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9] (l1&#8203;/c5130)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9] (l1&#8203;/c5285)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9]&#8203;.url (l1&#8203;/c5129)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[9]&#8203;.url (l1&#8203;/c5284)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10] (l1&#8203;/c5821)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10] (l1&#8203;/c5976)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10]&#8203;.url (l1&#8203;/c5820)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[10]&#8203;.url (l1&#8203;/c5975)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11] (l1&#8203;/c6140)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11] (l1&#8203;/c6295)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11]&#8203;.url (l1&#8203;/c6139)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[11]&#8203;.url (l1&#8203;/c6294)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12] (l1&#8203;/c6632)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12] (l1&#8203;/c6787)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12]&#8203;.url (l1&#8203;/c6631)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[12]&#8203;.url (l1&#8203;/c6786)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[13] (l1&#8203;/c6964)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[13] (l1&#8203;/c7119)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[13]&#8203;.url (l1&#8203;/c6963)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[13]&#8203;.url (l1&#8203;/c7118)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[0] (l1/c8567)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+     <td><b>Measure.extension[0] (l1/c8722)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[0].url (l1/c8514)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+     <td><b>Measure.extension[0].url (l1/c8669)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c8566)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+     <td><b>Measure&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c8721)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[1] (l1/c8760)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
+     <td><b>Measure.extension[1] (l1/c8915)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure.extension[1].url (l1/c8697)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
+     <td><b>Measure.extension[1].url (l1/c8852)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c8974)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+     <td><b>Measure&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9129)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c8951)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+     <td><b>Measure&#8203;.identifier[0]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9106)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure&#8203;.identifier[1]&#8203;.type&#8203;.coding[0] (l1&#8203;/c9190)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
+     <td><b>Measure&#8203;.identifier[1]&#8203;.type&#8203;.coding[0] (l1&#8203;/c9345)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.identifier[1]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9158)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+     <td><b>Measure&#8203;.identifier[1]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9313)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure&#8203;.identifier[2]&#8203;.type&#8203;.coding[0] (l1&#8203;/c9415)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
+     <td><b>Measure&#8203;.identifier[2]&#8203;.type&#8203;.coding[0] (l1&#8203;/c9570)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.identifier[2]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9386)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+     <td><b>Measure&#8203;.identifier[2]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9541)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure&#8203;.identifier[3]&#8203;.type&#8203;.coding[0] (l1&#8203;/c9633)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
+     <td><b>Measure&#8203;.identifier[3]&#8203;.type&#8203;.coding[0] (l1&#8203;/c9788)</b></td><td><b>warning</b></td><td title=""><b>A definition for CodeSystem 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' could not be found, so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.identifier[3]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9611)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+     <td><b>Measure&#8203;.identifier[3]&#8203;.type&#8203;.coding[0]&#8203;.system (l1&#8203;/c9766)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[0] (l1&#8203;/c12859)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[0] (l1&#8203;/c13014)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[0]&#8203;.url (l1&#8203;/c12712)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[0]&#8203;.url (l1&#8203;/c12867)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[1] (l1&#8203;/c12967)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[1] (l1&#8203;/c13122)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[1]&#8203;.url (l1&#8203;/c12944)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[1]&#8203;.url (l1&#8203;/c13099)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[2] (l1&#8203;/c13179)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[2] (l1&#8203;/c13334)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[2]&#8203;.url (l1&#8203;/c13041)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[2]&#8203;.url (l1&#8203;/c13196)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[3] (l1&#8203;/c13284)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[3] (l1&#8203;/c13439)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[3]&#8203;.url (l1&#8203;/c13264)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[3]&#8203;.url (l1&#8203;/c13419)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[4] (l1&#8203;/c13529)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation could not be found so is not allowed here</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[4] (l1&#8203;/c13684)</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[4]&#8203;.url (l1&#8203;/c13373)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation' does not resolve</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[4]&#8203;.url (l1&#8203;/c13528)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.group[0]&#8203;.extension[4]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.display (l1&#8203;/c13528)</b></td><td><b>error</b></td><td title=""><b>Wrong Display Name 'increase' for http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease. Valid display is 'Decreased score indicates improvement' (for the language(s) 'en')</b></td>
+     <td><b>Measure&#8203;.group[0]&#8203;.extension[4]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.display (l1&#8203;/c13683)</b></td><td><b>error</b></td><td title=""><b>Wrong Display Name 'increase' for http://terminology.hl7.org/CodeSystem/measure-improvement-notation#decrease. Valid display is 'Decreased score indicates improvement' (for the language(s) 'en')</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.meta.profile[0] (l1/c15295)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+     <td><b>Measure.meta.profile[0] (l1/c15450)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.meta.profile[1] (l1/c15295)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+     <td><b>Measure.meta.profile[1] (l1/c15450)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.meta.profile[2] (l1/c15295)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+     <td><b>Measure.meta.profile[2] (l1/c15450)</b></td><td><b>warning</b></td><td title="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-GAD7"> </a>
-<h2><a href="Questionnaire-69737-5.html">input/resources/questionnaire/Questionnaire-GAD7.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
+<h2><a href="Questionnaire-69737-5.html">input/resources/questionnaire/Questionnaire-GAD7.json</a> <span id="svi39" class="toggle" onclick="toggle('vi39')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi39')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi39"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1032,8 +1316,8 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-PHQ9"> </a>
-<h2><a href="Questionnaire-44249-1.html">input/resources/questionnaire/Questionnaire-PHQ9.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
+<h2><a href="Questionnaire-44249-1.html">input/resources/questionnaire/Questionnaire-PHQ9.json</a> <span id="svi40" class="toggle" onclick="toggle('vi40')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi40')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi40"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1094,6 +1378,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><a href="Library-GoalAttainmentLogic.html">input/resources/library/GoalAttainmentLogic.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
+     <td><a href="Library-GoalFollowUpMeasure.html">input/resources/library/GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
      <td><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
@@ -1101,6 +1388,105 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation could not be found so is not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation could not be found so is not allowed here</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition could not be found so is not allowed here</b></td>
@@ -1199,6 +1585,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><a href="Library-GoalAttainmentLogic.html">input/resources/library/GoalAttainmentLogic.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
+     <td><a href="Library-GoalFollowUpMeasure.html">input/resources/library/GoalFollowUpMeasure.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
      <td><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
@@ -1206,6 +1595,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>Unable to resolve resource with reference 'Device/cqf-tooling'</b></td>
@@ -1261,6 +1653,15 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <h2>TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
      <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
@@ -1289,6 +1690,9 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
      <td><a href="Library-GoalAttainmentLogic.html">input/resources/library/GoalAttainmentLogic.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
+     <td><a href="Library-GoalFollowUpMeasure.html">input/resources/library/GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
      <td><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
@@ -1296,6 +1700,117 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/CodeSystem/identifier-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoring' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition' does not resolve</b></td>
@@ -1385,6 +1900,15 @@ hl7.fhir.uv.tools#0.2.0:     <a href="http://hl7.org/fhir/tools/0.2.0/StructureD
 <a name="VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY"> </a>
 <h2>VALIDATION_VAL_PROFILE_UNKNOWN_NOT_POLICY</h2>
  <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
+   </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>Profile reference 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles</b></td>
    </tr>

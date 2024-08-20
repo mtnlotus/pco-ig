@@ -15,6 +15,7 @@ valueset "Patient Follow-Up GAS Score": 'http://mtnlotus.com/uv/pco/ValueSet/pat
 code "Goal attainment scaling score": 'goal-attainment-scaling' from "PCO GAS Codes" display 'Goal Attainment Scaling (GAS)'
 
 parameter "Measurement Period" Interval<DateTime>
+parameter "Follow-Up Interval" Interval<System.Quantity>
 
 context Patient
 
@@ -63,6 +64,13 @@ define "PCO Care Plans":
   [CarePlan] carePlan
     where exists carePlan.pcoGoals()
 
+/*
+  @description: Returns a list of Goals with goal attainment scaling (GAS) extensions and an associated CarePlan.
+*/
+define "PCO Goals with GAS and Action Plan":
+    "GAS Goals" goal
+      where exists goal.carePlans()
+
 // All observations containing a Goal Attainment Scaling (GAS) score.
 define "All GAS Score Observations":
   [Observation: "Goal attainment scaling score"]
@@ -73,7 +81,7 @@ A baseline score is recorded less than 2 weeks after its Goal was started.
 */
 define "GAS Baseline Scores":
   "GAS Scores" scoreObs
-    let goal: First(scoreObs.focus.resolveGoals()),
+    let goal: scoreObs.focusGoals().first(),
       startDate: ToDateTime(goal.start as FHIR.date),
       baselineInterval: Interval(startDate, startDate + 13 day]
     where (scoreObs.effective as FHIR.dateTime) during baselineInterval
@@ -117,3 +125,15 @@ define fluent function pcoGoals(carePlan CarePlan):
         where goal.id = goalRef.reference.getId()
           and "PCO Goals" contains goal
   )
+
+// Returns a list of Goal where focus includes the given Observation.
+define fluent function focusGoals(obs Observation):
+  obs.focus.resolveGoals()
+
+define fluent function gasScores(goal Goal):
+  "GAS Scores" score
+    where score.focusGoals() contains goal
+
+define fluent function gasFollowUpScores(goal Goal):
+  "GAS Follow-Up Scores" score
+    where score.focusGoals() contains goal

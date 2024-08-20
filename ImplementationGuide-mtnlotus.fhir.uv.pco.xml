@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-08-19T20:32:01+00:00"/>
+  <date value="2024-08-20T21:03:59+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -762,6 +762,16 @@
         <valueString value="Library"/>
       </extension>
       <reference>
+        <reference value="Library/GoalFollowUpMeasure"/>
+      </reference>
+      <name value="GoalFollowUpMeasure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
         <reference value="Library/GoalIdentificationMeasure"/>
       </reference>
       <name value="GoalIdentificationMeasure"/>
@@ -863,6 +873,17 @@
       </reference>
       <name value="Person-Centered Goal"/>
       <description value="Person-centered goal with goal attainment scaling."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Measure"/>
+      </extension>
+      <reference>
+        <reference value="Measure/GoalFollowUpMeasure"/>
+      </reference>
+      <name value="Person-Centered Goal Follow-Up"/>
+      <description value="Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

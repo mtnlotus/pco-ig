@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.4"}
-    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.6"}
+    h3,h4,h5,h6{--heading-prefix:"2.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-19
+            as of 2024-08-20
           
         
       </td>
@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-19 20:32:01+0000</td>
+            <td style="padding-left: 4px;">2024-08-20 21:03:59+0000</td>
         </tr>
         
 
@@ -373,7 +373,7 @@
               
                 <tr><th>Denominator Exceptions</th><th>Resource</th><th>0</th><th>1</th><th>Out</th></tr>
               
-                <tr><th>Identified PCO Goals</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
+                <tr><th>PCO Goals During Measurement Period</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>Numerator</th><th>Patient</th><th>0</th><th>*</th><th>Out</th></tr>
               
@@ -446,13 +446,18 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define &quot;Initial Population&quot;: {
   Patient person
     where AgeInYearsAt(start of &quot;Measurement Period&quot;) &gt;= 18
 }
 
-/// TODO: with a complex care need 
+/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine &quot;complex care need?&quot;
+*/
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot;
 
@@ -465,15 +470,14 @@ define &quot;Denominator Exceptions&quot;:
 /// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define &quot;Numerator&quot;:
-  &quot;Denominator&quot; person where (
-    exists &quot;Identified PCO Goals&quot; pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )
+  &quot;Denominator&quot; person where
+    exists &quot;PCO Goals During Measurement Period&quot; goal
+      where goal.hasGAS()
+        and exists goal.carePlans()
 
-define &quot;Identified PCO Goals&quot;:
-  GAS.&quot;PCO Goals&quot; pcoGoal
-    where ToDateTime(pcoGoal.start as FHIR.date) during &quot;Measurement Period&quot;
+define &quot;PCO Goals During Measurement Period&quot;:
+  GAS.&quot;PCO Goals&quot; goal
+    where ToDateTime(goal.start as FHIR.date) during &quot;Measurement Period&quot;
 </code></pre></td></tr>
             </table>
           </td>
@@ -487,7 +491,7 @@ define &quot;Identified PCO Goals&quot;:
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (25364 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (25588 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -499,7 +503,7 @@ define &quot;Identified PCO Goals&quot;:
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (46848 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (47032 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -531,7 +535,7 @@ define &quot;Identified PCO Goals&quot;:
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 19, 2024 20:32+0000">2024-08-19</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 20, 2024 21:03+0000">2024-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

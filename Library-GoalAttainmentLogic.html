@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.3"}
-    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.4"}
+    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-19
+            as of 2024-08-20
           
         
       </td>
@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-19 20:32:01+0000</td>
+            <td style="padding-left: 4px;">2024-08-20 21:03:59+0000</td>
         </tr>
         
 
@@ -369,6 +369,8 @@
               
                 <tr><th>Measurement Period</th><th>Period</th><th>0</th><th>1</th><th>In</th></tr>
               
+                <tr><th>Follow-Up Interval</th><th>Range</th><th>0</th><th>1</th><th>In</th></tr>
+              
                 <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
               
                 <tr><th>GoalSummary</th><th>Resource</th><th>0</th><th>*</th><th>Out</th></tr>
@@ -384,6 +386,8 @@
                 <tr><th>All Care Plans</th><th>CarePlan</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>PCO Care Plans</th><th>CarePlan</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>PCO Goals with GAS and Action Plan</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>All GAS Score Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
@@ -441,7 +445,7 @@
                 <tr>
                   <th>Observation</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
-                  <th>;;;;</th>
+                  <th>;;;</th>
                   <th>
                     
                       <b>code filter: </b>
@@ -524,6 +528,7 @@ valueset &quot;Patient Follow-Up GAS Score&quot;: 'http://mtnlotus.com/uv/pco/Va
 code &quot;Goal attainment scaling score&quot;: 'goal-attainment-scaling' from &quot;PCO GAS Codes&quot; display 'Goal Attainment Scaling (GAS)'
 
 parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt;
+parameter &quot;Follow-Up Interval&quot; Interval&lt;System.Quantity&gt;
 
 context Patient
 
@@ -572,6 +577,13 @@ define &quot;PCO Care Plans&quot;:
   [CarePlan] carePlan
     where exists carePlan.pcoGoals()
 
+/*
+  @description: Returns a list of Goals with goal attainment scaling (GAS) extensions and an associated CarePlan.
+*/
+define &quot;PCO Goals with GAS and Action Plan&quot;:
+    &quot;GAS Goals&quot; goal
+      where exists goal.carePlans()
+
 // All observations containing a Goal Attainment Scaling (GAS) score.
 define &quot;All GAS Score Observations&quot;:
   [Observation: &quot;Goal attainment scaling score&quot;]
@@ -582,7 +594,7 @@ A baseline score is recorded less than 2 weeks after its Goal was started.
 */
 define &quot;GAS Baseline Scores&quot;:
   &quot;GAS Scores&quot; scoreObs
-    let goal: First(scoreObs.focus.resolveGoals()),
+    let goal: scoreObs.focusGoals().first(),
       startDate: ToDateTime(goal.start as FHIR.date),
       baselineInterval: Interval(startDate, startDate + 13 day]
     where (scoreObs.effective as FHIR.dateTime) during baselineInterval
@@ -626,7 +638,18 @@ define fluent function pcoGoals(carePlan CarePlan):
         where goal.id = goalRef.reference.getId()
           and &quot;PCO Goals&quot; contains goal
   )
-</code></pre></td></tr>
+
+// Returns a list of Goal where focus includes the given Observation.
+define fluent function focusGoals(obs Observation):
+  obs.focus.resolveGoals()
+
+define fluent function gasScores(goal Goal):
+  &quot;GAS Scores&quot; score
+    where score.focusGoals() contains goal
+
+define fluent function gasFollowUpScores(goal Goal):
+  &quot;GAS Follow-Up Scores&quot; score
+    where score.focusGoals() contains goal</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -639,7 +662,7 @@ define fluent function pcoGoals(carePlan CarePlan):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (76300 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (89096 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -651,7 +674,7 @@ define fluent function pcoGoals(carePlan CarePlan):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (139892 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (162740 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -683,7 +706,7 @@ define fluent function pcoGoals(carePlan CarePlan):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 19, 2024 20:32+0000">2024-08-19</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 20, 2024 21:03+0000">2024-08-20</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
