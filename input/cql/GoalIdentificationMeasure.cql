@@ -17,13 +17,18 @@ who had a PCO goal identified resulting in completion of goal attainment scaling
 or a Patient-Reported Outcome Measure (PROM) and development of an action plan.
 */
 
-/// individuals 18 years of age and older
+/*
+@description: Includes individuals 18 years of age and older.
+*/
 define "Initial Population": {
   Patient person
     where AgeInYearsAt(start of "Measurement Period") >= 18
 }
 
-/// TODO: with a complex care need 
+/*
+@description: Initial Population individuals with a complex care need.
+@comment: TODO - How do we determine "complex care need?"
+*/
 define "Denominator":
   "Initial Population"
 
@@ -36,12 +41,11 @@ define "Denominator Exceptions":
 /// has a PCO goal identified resulting in completion of goal attainment scaling (GAS)
 /// ... and development of an action plan.
 define "Numerator":
-  "Denominator" person where (
-    exists "Identified PCO Goals" pcoGoal
-      where pcoGoal.hasGAS()
-        and exists pcoGoal.carePlans()
-  )
+  "Denominator" person where
+    exists "PCO Goals During Measurement Period" goal
+      where goal.hasGAS()
+        and exists goal.carePlans()
 
-define "Identified PCO Goals":
-  GAS."PCO Goals" pcoGoal
-    where ToDateTime(pcoGoal.start as FHIR.date) during "Measurement Period"
+define "PCO Goals During Measurement Period":
+  GAS."PCO Goals" goal
+    where ToDateTime(goal.start as FHIR.date) during "Measurement Period"
