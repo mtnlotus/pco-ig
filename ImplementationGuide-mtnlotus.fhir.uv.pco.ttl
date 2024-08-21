@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-20T21:03:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-21T16:21:33+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -1136,6 +1136,36 @@
        fhir:name [ fhir:v "What Matters Rating Concepts" ] ;
        fhir:description [ fhir:v "Code system to identify \"What Matters\" rating concepts." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoWhatMattersRelationshipsExample> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExample" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Family & Friends" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoWhatMattersBodyExample> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExample" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Moving the Body" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

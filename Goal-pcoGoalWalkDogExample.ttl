@@ -107,7 +107,16 @@
   fhir:expressedBy [
      fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
-  ] . # 
+  ] ; # 
+  fhir:addresses ( [
+     fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoWhatMattersBodyExample> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExample" ] ;
+     fhir:display [ fhir:v "What Matters: Moving the Body" ]
+  ] [
+     fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoWhatMattersRelationshipsExample> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExample" ] ;
+     fhir:display [ fhir:v "What Matters: Family & Friends" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Observation",
+  "id" : "pcoWhatMattersRelationshipsExample",
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "survey"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+      "code" : "relationships",
+      "display" : "Family, Friends & Co-Workers"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientJones"
+  },
+  "effectiveDateTime" : "2024-03-27T15:20:00Z",
+  "performer" : [{
+    "reference" : "Patient/pcoPatientJones"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating",
+        "code" : "nowRating"
+      }]
+    },
+    "valueInteger" : 3
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating",
+        "code" : "nowReasons"
+      }]
+    },
+    "valueString" : "I am still recovering from isolation during COVID and now physical difficulty leaving my home."
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating",
+        "code" : "futureRating"
+      }]
+    },
+    "valueInteger" : 9
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating",
+        "code" : "futureChanges"
+      }]
+    },
+    "valueString" : "I want to walk outside and visit friends in the park."
+  }]
+}

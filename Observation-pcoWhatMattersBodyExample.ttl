@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/Observation/pcoWhatMattersBodyExample> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoWhatMattersBodyExample"] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "survey" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "body" ] ;
+       fhir:display [ fhir:v "Moving the Body" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2024-03-27T15:10:00Z"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "nowRating" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "nowReasons" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "My knee pain prevents me from walking." ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "futureRating" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "7"^^xsd:integer ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pcoWhatMattersBodyExample"/>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+      <code value="body"/>
+      <display value="Moving the Body"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <effectiveDateTime value="2024-03-27T15:10:00Z"/>
+  <performer>
+    <reference value="Patient/pcoPatientJones"/>
+  </performer>
+  <component>
+    <code>
+      <coding>
+        <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"/>
+        <code value="nowRating"/>
+      </coding>
+    </code>
+    <valueInteger value="2"/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"/>
+        <code value="nowReasons"/>
+      </coding>
+    </code>
+    <valueString value="My knee pain prevents me from walking."/>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"/>
+        <code value="futureRating"/>
+      </coding>
+    </code>
+    <valueInteger value="7"/>
+  </component>
+</Observation>

@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-08-20T21:03:59+00:00"/>
+  <date value="2024-08-21T16:21:33+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -994,6 +994,28 @@
       <name value="What Matters Rating Concepts"/>
       <description value="Code system to identify &quot;What Matters&quot; rating concepts."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoWhatMattersRelationshipsExample"/>
+      </reference>
+      <name value="What Matters: Family &amp; Friends"/>
+      <description value="What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoWhatMattersBodyExample"/>
+      </reference>
+      <name value="What Matters: Moving the Body"/>
+      <description value="What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

@@ -155,7 +155,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2024-08-20
+            as of 2024-08-21
           
         
       </td>
@@ -183,9 +183,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#user-stories" id="markdown-toc-user-stories">User Stories</a></li>
-  <li><a href="#person-works-with-health-coach-to-create-goals-and-action-steps" id="markdown-toc-person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</a></li>
-  <li><a href="#person-or-member-of-care-team-records-goal-attainment-progress" id="markdown-toc-person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</a></li>
-  <li><a href="#person-or-member-of-care-team-shares-a-pco-data-bundle" id="markdown-toc-person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</a></li>
   <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
   <li><a href="#nominal-workflow" id="markdown-toc-nominal-workflow">Nominal Workflow</a></li>
   <li><a href="#pco-data-submission-bundles" id="markdown-toc-pco-data-submission-bundles">PCO Data Submission: Bundles</a></li>
@@ -202,9 +199,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="user-stories">User Stories</h3>
 
-<h3 id="person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</h3>
+<h4 id="person-or-member-of-care-team-performs-assessment-of-what-matters-most">Person or member of care team performs assessment of What Matters Most</h4>
 
-<p>Dorothy is working with her health &amp; wellbeing coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach guides Dorothy to define a goal for walking her dog that includes five levels of achievement that can be used to evaluate her progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare provider. The health coach role also may be performed by Dorothy’s primary care physician.</p>
+<p>Dorothy uses a dedicated mobile app that presents a list of several areas for health &amp; well-being where she can think about What Matters Most to her. She can assign two ratings to each area: 1) Where am I now? and 2) Where would I like to be?  Dorothy rates each question on a scale of 1 to 10, where 1 is “low” and 10 is “high”. She can then select one or two areas as her current focus for creating person-centered goals and action steps, and for tracking progress toward her desired outcomes. Dorothy also works with her health &amp; wellness coach and her primary care physician to create a care plan that helps mitigate barriers and achieve her goals.</p>
+
+<p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA’s approach, but can be adapted to other asseessments used by different organizations.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-what-matters-assessment.html#profile">What Matters Assessment Profile</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoWhatMattersRelationshipsExample.html#root">Example Assessment</a></strong></p>
+
+<h4 id="person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</h4>
+
+<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy’s responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. This goal includes five levels of achievement that can be used to evaluate Dorothy’s progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. The health coach role also may be performed by Dorothy’s primary care physician.</p>
 
 <p>This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
 
@@ -235,7 +242,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>☛ See <a href="Goal-pcoGoalWalkDogExample.html#root">Example Goal</a></strong></p>
 
-<h3 id="person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</h3>
+<h4 id="person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</h4>
 
 <p>Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy’s health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy’s goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.</p>
 
@@ -245,7 +252,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><strong>☛ See <a href="StructureDefinition-pco-practitioner-gas-score.html#profile">Goal Attainment Scaling (GAS) score by practitioner</a></strong></p>
 
-<h3 id="person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</h3>
+<h4 id="person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</h4>
 
 <p>If the applications used by Dorothy and her health coach are separate from her provider organization’s EHR system, either Dorothy or Maria can export and submit a complete bundle of standardized data to share with her extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
 
@@ -322,7 +329,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 20, 2024 21:03+0000">2024-08-20</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 21, 2024 16:21+0000">2024-08-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

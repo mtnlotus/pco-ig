@@ -1,7 +1,7 @@
 PCO : Validation Results
 =========================================
 
-err = 180, warn = 45, info = 1
+err = 180, warn = 46, info = 1
 $--
 Generated $--. FHIR version $-- for mtnlotus.fhir.uv.pco#$-- (canonical = http://mtnlotus.com/uv/pco)
  Build Errors : 0 / 18 / 0
@@ -18,6 +18,8 @@ Generated $--. FHIR version $-- for mtnlotus.fhir.uv.pco#$-- (canonical = http:/
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientBaselineExample : 1 / 1 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample : 1 / 1 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample : 1 / 1 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersBodyExample : 0 / 1 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample : 0 / 1 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientJones : 0 / 1 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerAnderson : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerGonzalez : 0 / 0 / 1
@@ -29,7 +31,7 @@ Generated $--. FHIR version $-- for mtnlotus.fhir.uv.pco#$-- (canonical = http:/
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-patient-gas-score : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-practitioner-gas-score : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 0 / 1 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-caregiver-gas-followup-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-patient-gas-followup-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-category-valueset : 0 / 1 / 1
@@ -92,6 +94,10 @@ WARNING: Observation/pcoGASScorePatientFollowupExample: Observation: Constraint 
 == fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json ==
 ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:pcoCategory - the discriminator http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score|0.1.0 does not have fixed value, binding or existence assertions
 WARNING: Observation/pcoGASScorePractitionerFollowupExample: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/Observation-pcoWhatMattersBodyExample.json ==
+WARNING: Observation/pcoWhatMattersBodyExample: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample.json ==
+WARNING: Observation/pcoWhatMattersRelationshipsExample: Observation: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Patient-pcoPatientJones.json ==
 WARNING: Patient/pcoPatientJones: Patient: Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json ==
@@ -111,7 +117,6 @@ ERROR: StructureDefinition/pco-goal: StructureDefinition.snapshot.element[18].bi
 == fsh-generated/resources/StructureDefinition-pco-patient-gas-score.json ==
 == fsh-generated/resources/StructureDefinition-pco-practitioner-gas-score.json ==
 == fsh-generated/resources/StructureDefinition-pco-what-matters-assessment.json ==
-WARNING: StructureDefinition.where(url = 'http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/ValueSet-caregiver-gas-followup-vs.json ==
 == fsh-generated/resources/ValueSet-patient-gas-followup-vs.json ==
 == fsh-generated/resources/ValueSet-pco-category-valueset.json ==
