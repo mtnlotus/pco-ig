@@ -67,6 +67,8 @@ Usage: #example
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-04-03"
 * target.dueDate = "2024-09-30"
+* addresses[0] = Reference(pcoWhatMattersBodyExample) "What Matters: Moving the Body"
+* addresses[1] = Reference(pcoWhatMattersRelationshipsExample) "What Matters: Family & Friends"
 * description.text = "Walk dog outside once a week"
 * extension[gas-scaling][0].extension[level].valueCoding = PCOGASCodesTemporary#patient-gas-much-better-than-expected "Much better than expected"
 * extension[gas-scaling][0].extension[text].valueString = "Walk dog outside three times a week"

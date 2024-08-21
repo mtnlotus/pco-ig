@@ -6,9 +6,19 @@ Goal Attainment Scaling (GAS) in healthcare measures the extent to which individ
 
 ### User Stories
 
-### Person works with health coach to create goals and action steps
+#### Person or member of care team performs assessment of What Matters Most
 
-Dorothy is working with her health & wellbeing coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach guides Dorothy to define a goal for walking her dog that includes five levels of achievement that can be used to evaluate her progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare provider. The health coach role also may be performed by Dorothy's primary care physician.
+Dorothy uses a dedicated mobile app that presents a list of several areas for health & well-being where she can think about What Matters Most to her. She can assign two ratings to each area: 1) Where am I now? and 2) Where would I like to be?  Dorothy rates each question on a scale of 1 to 10, where 1 is "low" and 10 is "high". She can then select one or two areas as her current focus for creating person-centered goals and action steps, and for tracking progress toward her desired outcomes. Dorothy also works with her health & wellness coach and her primary care physician to create a care plan that helps mitigate barriers and achieve her goals.
+
+Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health & well-being. One example is the U.S. Department of Veterns Affairs [Whole Health appoach to care](https://va.gov/wholehealth) that includes a [Circle of Health](https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp) and [Personal Health Inventory](https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf). The examples in this FHIR IG are based on VA's approach, but can be adapted to other asseessments used by different organizations.
+
+**☛ See [What Matters Assessment Profile](StructureDefinition-pco-what-matters-assessment.html#profile)**
+
+**☛ See [Example Assessment](Observation-pcoWhatMattersRelationshipsExample.html#root)**
+
+#### Person works with health coach to create goals and action steps
+
+Dorothy is working with her health & wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy's responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. This goal includes five levels of achievement that can be used to evaluate Dorothy's progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. The health coach role also may be performed by Dorothy's primary care physician.
 
 This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.
 
@@ -22,7 +32,7 @@ This example illustrates use of goal attainment scaling for the goal of walking 
 
 **☛ See [Example Goal](Goal-pcoGoalWalkDogExample.html#root)**
 
-### Person or member of care team records goal attainment progress
+#### Person or member of care team records goal attainment progress
 
 Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy's health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy's goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.
 
@@ -32,7 +42,7 @@ If the health coaching role is performed by Dorothy's primary care physician or 
 
 **☛ See [Goal Attainment Scaling (GAS) score by practitioner](StructureDefinition-pco-practitioner-gas-score.html#profile)**
 
-### Person or member of care team shares a PCO Data Bundle
+#### Person or member of care team shares a PCO Data Bundle
 
 If the applications used by Dorothy and her health coach are separate from her provider organization's EHR system, either Dorothy or Maria can export and submit a complete bundle of standardized data to share with her extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.
 
