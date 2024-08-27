@@ -14,7 +14,7 @@
       }, {
          "type" : "Annotation",
          "s" : {
-            "r" : "284",
+            "r" : "309",
             "s" : [ {
                "value" : [ "","library WhatMattersLogic version '0.1.0'" ]
             } ]
@@ -105,7 +105,7 @@
       "parameters" : {
          "def" : [ {
             "localId" : "210",
-            "locator" : "10:1-10:49",
+            "locator" : "10:1-11:74",
             "name" : "Measurement Period",
             "accessLevel" : "Public",
             "annotation" : [ {
@@ -115,28 +115,230 @@
                   "s" : [ {
                      "value" : [ "","parameter ","\"Measurement Period\""," " ]
                   }, {
-                     "r" : "211",
+                     "r" : "230",
                      "s" : [ {
                         "value" : [ "Interval<" ]
                      }, {
-                        "r" : "212",
+                        "r" : "231",
                         "s" : [ {
                            "value" : [ "DateTime" ]
                         } ]
                      }, {
                         "value" : [ ">" ]
                      } ]
+                  }, {
+                     "value" : [ "\n    default " ]
+                  }, {
+                     "r" : "229",
+                     "s" : [ {
+                        "r" : "211",
+                        "value" : [ "Interval[","@2024-01-01T00:00:00.000Z",", ","@2024-12-31T23:59:59.999Z","]" ]
+                     } ]
                   } ]
                }
             } ],
+            "default" : {
+               "localId" : "229",
+               "locator" : "11:13-11:74",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "211",
+                  "locator" : "11:22-11:46",
+                  "type" : "DateTime",
+                  "signature" : [ ],
+                  "year" : {
+                     "localId" : "212",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "2024",
+                     "type" : "Literal"
+                  },
+                  "month" : {
+                     "localId" : "213",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "day" : {
+                     "localId" : "214",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  },
+                  "hour" : {
+                     "localId" : "215",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "minute" : {
+                     "localId" : "216",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "second" : {
+                     "localId" : "217",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "millisecond" : {
+                     "localId" : "218",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal"
+                  },
+                  "timezoneOffset" : {
+                     "localId" : "219",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "0.0",
+                     "type" : "Literal"
+                  }
+               },
+               "high" : {
+                  "localId" : "220",
+                  "locator" : "11:49-11:73",
+                  "type" : "DateTime",
+                  "signature" : [ ],
+                  "year" : {
+                     "localId" : "221",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "2024",
+                     "type" : "Literal"
+                  },
+                  "month" : {
+                     "localId" : "222",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "12",
+                     "type" : "Literal"
+                  },
+                  "day" : {
+                     "localId" : "223",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "31",
+                     "type" : "Literal"
+                  },
+                  "hour" : {
+                     "localId" : "224",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "23",
+                     "type" : "Literal"
+                  },
+                  "minute" : {
+                     "localId" : "225",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "59",
+                     "type" : "Literal"
+                  },
+                  "second" : {
+                     "localId" : "226",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "59",
+                     "type" : "Literal"
+                  },
+                  "millisecond" : {
+                     "localId" : "227",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "999",
+                     "type" : "Literal"
+                  },
+                  "timezoneOffset" : {
+                     "localId" : "228",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "0.0",
+                     "type" : "Literal"
+                  }
+               }
+            },
             "parameterTypeSpecifier" : {
-               "localId" : "211",
+               "localId" : "230",
                "locator" : "10:32-10:49",
                "type" : "IntervalTypeSpecifier",
                "pointType" : {
-                  "localId" : "212",
+                  "localId" : "231",
                   "locator" : "10:41-10:48",
                   "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         }, {
+            "localId" : "232",
+            "locator" : "13:1-14:37",
+            "name" : "Follow-Up Interval",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "232",
+                  "s" : [ {
+                     "value" : [ "","parameter ","\"Follow-Up Interval\""," " ]
+                  }, {
+                     "r" : "236",
+                     "s" : [ {
+                        "value" : [ "Interval<" ]
+                     }, {
+                        "r" : "237",
+                        "s" : [ {
+                           "value" : [ "System",".","Quantity" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  }, {
+                     "value" : [ "\n  default " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "233",
+                        "s" : [ {
+                           "value" : [ "2 ","weeks" ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "234",
+                        "s" : [ {
+                           "value" : [ "26 ","weeks" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "235",
+               "locator" : "14:11-14:37",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "233",
+                  "locator" : "14:20-14:26",
+                  "value" : 2,
+                  "unit" : "weeks",
+                  "type" : "Quantity"
+               },
+               "high" : {
+                  "localId" : "234",
+                  "locator" : "14:29-14:36",
+                  "value" : 26,
+                  "unit" : "weeks",
+                  "type" : "Quantity"
+               }
+            },
+            "parameterTypeSpecifier" : {
+               "localId" : "236",
+               "locator" : "13:32-13:56",
+               "type" : "IntervalTypeSpecifier",
+               "pointType" : {
+                  "localId" : "237",
+                  "locator" : "13:41-13:55",
+                  "name" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "type" : "NamedTypeSpecifier"
                }
             }
@@ -163,24 +365,24 @@
       },
       "contexts" : {
          "def" : [ {
-            "localId" : "216",
-            "locator" : "12:1-12:15",
+            "localId" : "241",
+            "locator" : "16:1-16:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
-            "localId" : "214",
-            "locator" : "12:1-12:15",
+            "localId" : "239",
+            "locator" : "16:1-16:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
-               "localId" : "215",
+               "localId" : "240",
                "type" : "SingletonFrom",
                "signature" : [ ],
                "operand" : {
-                  "localId" : "213",
-                  "locator" : "12:1-12:15",
+                  "localId" : "238",
+                  "locator" : "16:1-16:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -191,19 +393,19 @@
                }
             }
          }, {
-            "localId" : "218",
-            "locator" : "14:1-15:43",
+            "localId" : "243",
+            "locator" : "18:1-19:43",
             "name" : "What Matters Observations",
             "context" : "Patient",
             "accessLevel" : "Public",
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "218",
+                  "r" : "243",
                   "s" : [ {
                      "value" : [ "","define ","\"What Matters Observations\"",":\n  " ]
                   }, {
-                     "r" : "221",
+                     "r" : "246",
                      "s" : [ {
                         "value" : [ "[","Observation",": " ]
                      }, {
@@ -217,16 +419,16 @@
                }
             } ],
             "expression" : {
-               "localId" : "221",
-               "locator" : "15:3-15:43",
+               "localId" : "246",
+               "locator" : "19:3-19:43",
                "dataType" : "{http://hl7.org/fhir}Observation",
                "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
                "codeProperty" : "code",
                "codeComparator" : "in",
                "type" : "Retrieve",
                "codes" : {
-                  "localId" : "220",
-                  "locator" : "15:17-15:42",
+                  "localId" : "245",
+                  "locator" : "19:17-19:42",
                   "name" : "What Matters Focus Areas",
                   "preserve" : true,
                   "type" : "ValueSetRef"
@@ -237,8 +439,8 @@
                "otherFilter" : [ ]
             }
          }, {
-            "localId" : "225",
-            "locator" : "18:1-23:3",
+            "localId" : "250",
+            "locator" : "22:1-27:3",
             "name" : "whatMattersObservations",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -247,26 +449,26 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "225",
+                  "r" : "250",
                   "s" : [ {
                      "value" : [ "// Returns a list of what matters Observations this Goal addresses.\n","define fluent function whatMattersObservations(goal Goal):\n  " ]
                   }, {
-                     "r" : "228",
+                     "r" : "253",
                      "s" : [ {
-                        "r" : "228",
+                        "r" : "253",
                         "s" : [ {
                            "value" : [ "flatten" ]
                         }, {
-                           "r" : "257",
+                           "r" : "282",
                            "s" : [ {
                               "value" : [ "( " ]
                            }, {
-                              "r" : "257",
+                              "r" : "282",
                               "s" : [ {
                                  "s" : [ {
-                                    "r" : "229",
+                                    "r" : "254",
                                     "s" : [ {
-                                       "r" : "231",
+                                       "r" : "256",
                                        "s" : [ {
                                           "s" : [ {
                                              "value" : [ "goal",".","addresses" ]
@@ -279,18 +481,18 @@
                               }, {
                                  "value" : [ "\n      " ]
                               }, {
-                                 "r" : "232",
+                                 "r" : "257",
                                  "s" : [ {
                                     "value" : [ "return " ]
                                  }, {
-                                    "r" : "256",
+                                    "r" : "281",
                                     "s" : [ {
                                        "s" : [ {
-                                          "r" : "233",
+                                          "r" : "258",
                                           "s" : [ {
-                                             "r" : "234",
+                                             "r" : "259",
                                              "s" : [ {
-                                                "r" : "234",
+                                                "r" : "259",
                                                 "s" : [ {
                                                    "value" : [ "[","Observation","]" ]
                                                 } ]
@@ -302,24 +504,24 @@
                                     }, {
                                        "value" : [ "\n        " ]
                                     }, {
-                                       "r" : "235",
+                                       "r" : "260",
                                        "s" : [ {
                                           "value" : [ "where " ]
                                        }, {
-                                          "r" : "235",
+                                          "r" : "260",
                                           "s" : [ {
-                                             "r" : "236",
+                                             "r" : "261",
                                              "s" : [ {
-                                                "r" : "238",
+                                                "r" : "263",
                                                 "s" : [ {
-                                                   "r" : "237",
+                                                   "r" : "262",
                                                    "s" : [ {
                                                       "value" : [ "obs" ]
                                                    } ]
                                                 }, {
                                                    "value" : [ "." ]
                                                 }, {
-                                                   "r" : "238",
+                                                   "r" : "263",
                                                    "s" : [ {
                                                       "value" : [ "id" ]
                                                    } ]
@@ -327,18 +529,18 @@
                                              }, {
                                                 "value" : [ " ","="," " ]
                                              }, {
-                                                "r" : "241",
+                                                "r" : "266",
                                                 "s" : [ {
-                                                   "r" : "240",
+                                                   "r" : "265",
                                                    "s" : [ {
-                                                      "r" : "239",
+                                                      "r" : "264",
                                                       "s" : [ {
                                                          "value" : [ "GA" ]
                                                       } ]
                                                    }, {
                                                       "value" : [ "." ]
                                                    }, {
-                                                      "r" : "240",
+                                                      "r" : "265",
                                                       "s" : [ {
                                                          "value" : [ "reference" ]
                                                       } ]
@@ -346,7 +548,7 @@
                                                 }, {
                                                    "value" : [ "." ]
                                                 }, {
-                                                   "r" : "241",
+                                                   "r" : "266",
                                                    "s" : [ {
                                                       "value" : [ "getId","()" ]
                                                    } ]
@@ -355,16 +557,16 @@
                                           }, {
                                              "value" : [ "\n          and " ]
                                           }, {
-                                             "r" : "252",
+                                             "r" : "277",
                                              "s" : [ {
-                                                "r" : "248",
+                                                "r" : "273",
                                                 "s" : [ {
                                                    "value" : [ "obs" ]
                                                 } ]
                                              }, {
                                                 "value" : [ "." ]
                                              }, {
-                                                "r" : "252",
+                                                "r" : "277",
                                                 "s" : [ {
                                                    "value" : [ "isWhatMatters","()" ]
                                                 } ]
@@ -383,25 +585,25 @@
                }
             } ],
             "expression" : {
-               "localId" : "228",
-               "locator" : "19:3-23:3",
+               "localId" : "253",
+               "locator" : "23:3-27:3",
                "type" : "Flatten",
                "signature" : [ ],
                "operand" : {
-                  "localId" : "257",
-                  "locator" : "19:10-23:3",
+                  "localId" : "282",
+                  "locator" : "23:10-27:3",
                   "type" : "Query",
                   "source" : [ {
-                     "localId" : "229",
-                     "locator" : "19:12-19:28",
+                     "localId" : "254",
+                     "locator" : "23:12-23:28",
                      "alias" : "GA",
                      "expression" : {
-                        "localId" : "231",
-                        "locator" : "19:12-19:25",
+                        "localId" : "256",
+                        "locator" : "23:12-23:25",
                         "path" : "addresses",
                         "type" : "Property",
                         "source" : {
-                           "localId" : "230",
+                           "localId" : "255",
                            "name" : "goal",
                            "type" : "OperandRef"
                         }
@@ -410,19 +612,19 @@
                   "let" : [ ],
                   "relationship" : [ ],
                   "return" : {
-                     "localId" : "232",
-                     "locator" : "20:7-22:33",
+                     "localId" : "257",
+                     "locator" : "24:7-26:33",
                      "expression" : {
-                        "localId" : "256",
-                        "locator" : "20:14-22:33",
+                        "localId" : "281",
+                        "locator" : "24:14-26:33",
                         "type" : "Query",
                         "source" : [ {
-                           "localId" : "233",
-                           "locator" : "20:14-20:30",
+                           "localId" : "258",
+                           "locator" : "24:14-24:30",
                            "alias" : "obs",
                            "expression" : {
-                              "localId" : "234",
-                              "locator" : "20:14-20:26",
+                              "localId" : "259",
+                              "locator" : "24:14-24:26",
                               "dataType" : "{http://hl7.org/fhir}Observation",
                               "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
                               "type" : "Retrieve",
@@ -435,60 +637,60 @@
                         "let" : [ ],
                         "relationship" : [ ],
                         "where" : {
-                           "localId" : "235",
-                           "locator" : "21:9-22:33",
+                           "localId" : "260",
+                           "locator" : "25:9-26:33",
                            "type" : "And",
                            "signature" : [ ],
                            "operand" : [ {
-                              "localId" : "236",
-                              "locator" : "21:15-21:43",
+                              "localId" : "261",
+                              "locator" : "25:15-25:43",
                               "type" : "Equal",
                               "signature" : [ {
-                                 "localId" : "246",
+                                 "localId" : "271",
                                  "name" : "{urn:hl7-org:elm-types:r1}String",
                                  "type" : "NamedTypeSpecifier"
                               }, {
-                                 "localId" : "247",
+                                 "localId" : "272",
                                  "name" : "{urn:hl7-org:elm-types:r1}String",
                                  "type" : "NamedTypeSpecifier"
                               } ],
                               "operand" : [ {
-                                 "localId" : "244",
+                                 "localId" : "269",
                                  "name" : "ToString",
                                  "libraryName" : "FHIRHelpers",
                                  "type" : "FunctionRef",
                                  "signature" : [ {
-                                    "localId" : "245",
+                                    "localId" : "270",
                                     "name" : "{http://hl7.org/fhir}string",
                                     "type" : "NamedTypeSpecifier"
                                  } ],
                                  "operand" : [ {
-                                    "localId" : "238",
-                                    "locator" : "21:15-21:20",
+                                    "localId" : "263",
+                                    "locator" : "25:15-25:20",
                                     "path" : "id",
                                     "scope" : "obs",
                                     "type" : "Property"
                                  } ]
                               }, {
-                                 "localId" : "241",
-                                 "locator" : "21:24-21:43",
+                                 "localId" : "266",
+                                 "locator" : "25:24-25:43",
                                  "name" : "getId",
                                  "libraryName" : "PC",
                                  "type" : "FunctionRef",
                                  "signature" : [ ],
                                  "operand" : [ {
-                                    "localId" : "242",
+                                    "localId" : "267",
                                     "name" : "ToString",
                                     "libraryName" : "FHIRHelpers",
                                     "type" : "FunctionRef",
                                     "signature" : [ {
-                                       "localId" : "243",
+                                       "localId" : "268",
                                        "name" : "{http://hl7.org/fhir}string",
                                        "type" : "NamedTypeSpecifier"
                                     } ],
                                     "operand" : [ {
-                                       "localId" : "240",
-                                       "locator" : "21:24-21:35",
+                                       "localId" : "265",
+                                       "locator" : "25:24-25:35",
                                        "path" : "reference",
                                        "scope" : "GA",
                                        "type" : "Property"
@@ -496,14 +698,14 @@
                                  } ]
                               } ]
                            }, {
-                              "localId" : "252",
-                              "locator" : "22:15-22:33",
+                              "localId" : "277",
+                              "locator" : "26:15-26:33",
                               "name" : "isWhatMatters",
                               "type" : "FunctionRef",
                               "signature" : [ ],
                               "operand" : [ {
-                                 "localId" : "248",
-                                 "locator" : "22:15-22:17",
+                                 "localId" : "273",
+                                 "locator" : "26:15-26:17",
                                  "name" : "obs",
                                  "type" : "AliasRef"
                               } ]
@@ -514,18 +716,18 @@
                }
             },
             "operand" : [ {
-               "localId" : "227",
+               "localId" : "252",
                "name" : "goal",
                "operandTypeSpecifier" : {
-                  "localId" : "226",
-                  "locator" : "18:53-18:56",
+                  "localId" : "251",
+                  "locator" : "22:53-22:56",
                   "name" : "{http://hl7.org/fhir}Goal",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
-            "localId" : "249",
-            "locator" : "25:1-26:42",
+            "localId" : "274",
+            "locator" : "29:1-30:42",
             "name" : "isWhatMatters",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -534,22 +736,22 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "249",
+                  "r" : "274",
                   "s" : [ {
                      "value" : [ "","define fluent function isWhatMatters(obs Observation):\n  " ]
                   }, {
-                     "r" : "260",
+                     "r" : "285",
                      "s" : [ {
-                        "r" : "260",
+                        "r" : "285",
                         "s" : [ {
-                           "r" : "258",
+                           "r" : "283",
                            "s" : [ {
                               "value" : [ "\"What Matters Observations\"" ]
                            } ]
                         }, {
                            "value" : [ " contains " ]
                         }, {
-                           "r" : "259",
+                           "r" : "284",
                            "s" : [ {
                               "value" : [ "obs" ]
                            } ]
@@ -559,35 +761,35 @@
                }
             } ],
             "expression" : {
-               "localId" : "260",
-               "locator" : "26:3-26:42",
+               "localId" : "285",
+               "locator" : "30:3-30:42",
                "type" : "Contains",
                "signature" : [ ],
                "operand" : [ {
-                  "localId" : "258",
-                  "locator" : "26:3-26:29",
+                  "localId" : "283",
+                  "locator" : "30:3-30:29",
                   "name" : "What Matters Observations",
                   "type" : "ExpressionRef"
                }, {
-                  "localId" : "259",
-                  "locator" : "26:40-26:42",
+                  "localId" : "284",
+                  "locator" : "30:40-30:42",
                   "name" : "obs",
                   "type" : "OperandRef"
                } ]
             },
             "operand" : [ {
-               "localId" : "251",
+               "localId" : "276",
                "name" : "obs",
                "operandTypeSpecifier" : {
-                  "localId" : "250",
-                  "locator" : "25:42-25:52",
+                  "localId" : "275",
+                  "locator" : "29:42-29:52",
                   "name" : "{http://hl7.org/fhir}Observation",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
-            "localId" : "261",
-            "locator" : "29:1-33:5",
+            "localId" : "286",
+            "locator" : "33:1-37:5",
             "name" : "addressedByGoals",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -596,20 +798,20 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "261",
+                  "r" : "286",
                   "s" : [ {
                      "value" : [ "// Returns a list of Goals that address this Observation\n","define fluent function addressedByGoals(obs Observation):\n  " ]
                   }, {
-                     "r" : "283",
+                     "r" : "308",
                      "s" : [ {
-                        "r" : "283",
+                        "r" : "308",
                         "s" : [ {
                            "s" : [ {
-                              "r" : "264",
+                              "r" : "289",
                               "s" : [ {
-                                 "r" : "265",
+                                 "r" : "290",
                                  "s" : [ {
-                                    "r" : "265",
+                                    "r" : "290",
                                     "s" : [ {
                                        "value" : [ "[","Goal","]" ]
                                     } ]
@@ -621,24 +823,24 @@
                         }, {
                            "value" : [ "\n    " ]
                         }, {
-                           "r" : "266",
+                           "r" : "291",
                            "s" : [ {
                               "value" : [ "where " ]
                            }, {
-                              "r" : "266",
+                              "r" : "291",
                               "s" : [ {
                                  "value" : [ "exists " ]
                               }, {
-                                 "r" : "282",
+                                 "r" : "307",
                                  "s" : [ {
                                     "value" : [ "( " ]
                                  }, {
-                                    "r" : "282",
+                                    "r" : "307",
                                     "s" : [ {
                                        "s" : [ {
-                                          "r" : "267",
+                                          "r" : "292",
                                           "s" : [ {
-                                             "r" : "269",
+                                             "r" : "294",
                                              "s" : [ {
                                                 "s" : [ {
                                                    "value" : [ "goal",".","addresses" ]
@@ -651,22 +853,22 @@
                                     }, {
                                        "value" : [ "\n        " ]
                                     }, {
-                                       "r" : "270",
+                                       "r" : "295",
                                        "s" : [ {
                                           "value" : [ "where " ]
                                        }, {
-                                          "r" : "270",
+                                          "r" : "295",
                                           "s" : [ {
-                                             "r" : "272",
+                                             "r" : "297",
                                              "s" : [ {
-                                                "r" : "271",
+                                                "r" : "296",
                                                 "s" : [ {
                                                    "value" : [ "obs" ]
                                                 } ]
                                              }, {
                                                 "value" : [ "." ]
                                              }, {
-                                                "r" : "272",
+                                                "r" : "297",
                                                 "s" : [ {
                                                    "value" : [ "id" ]
                                                 } ]
@@ -674,18 +876,18 @@
                                           }, {
                                              "value" : [ " ","="," " ]
                                           }, {
-                                             "r" : "275",
+                                             "r" : "300",
                                              "s" : [ {
-                                                "r" : "274",
+                                                "r" : "299",
                                                 "s" : [ {
-                                                   "r" : "273",
+                                                   "r" : "298",
                                                    "s" : [ {
                                                       "value" : [ "GA" ]
                                                    } ]
                                                 }, {
                                                    "value" : [ "." ]
                                                 }, {
-                                                   "r" : "274",
+                                                   "r" : "299",
                                                    "s" : [ {
                                                       "value" : [ "reference" ]
                                                    } ]
@@ -693,7 +895,7 @@
                                              }, {
                                                 "value" : [ "." ]
                                              }, {
-                                                "r" : "275",
+                                                "r" : "300",
                                                 "s" : [ {
                                                    "value" : [ "getId","()" ]
                                                 } ]
@@ -712,16 +914,16 @@
                }
             } ],
             "expression" : {
-               "localId" : "283",
-               "locator" : "30:3-33:5",
+               "localId" : "308",
+               "locator" : "34:3-37:5",
                "type" : "Query",
                "source" : [ {
-                  "localId" : "264",
-                  "locator" : "30:3-30:13",
+                  "localId" : "289",
+                  "locator" : "34:3-34:13",
                   "alias" : "goal",
                   "expression" : {
-                     "localId" : "265",
-                     "locator" : "30:3-30:8",
+                     "localId" : "290",
+                     "locator" : "34:3-34:8",
                      "dataType" : "{http://hl7.org/fhir}Goal",
                      "templateId" : "http://hl7.org/fhir/StructureDefinition/Goal",
                      "type" : "Retrieve",
@@ -734,21 +936,21 @@
                "let" : [ ],
                "relationship" : [ ],
                "where" : {
-                  "localId" : "266",
-                  "locator" : "31:5-33:5",
+                  "localId" : "291",
+                  "locator" : "35:5-37:5",
                   "type" : "Exists",
                   "signature" : [ ],
                   "operand" : {
-                     "localId" : "282",
-                     "locator" : "31:18-33:5",
+                     "localId" : "307",
+                     "locator" : "35:18-37:5",
                      "type" : "Query",
                      "source" : [ {
-                        "localId" : "267",
-                        "locator" : "31:20-31:36",
+                        "localId" : "292",
+                        "locator" : "35:20-35:36",
                         "alias" : "GA",
                         "expression" : {
-                           "localId" : "269",
-                           "locator" : "31:20-31:33",
+                           "localId" : "294",
+                           "locator" : "35:20-35:33",
                            "path" : "addresses",
                            "scope" : "goal",
                            "type" : "Property"
@@ -757,60 +959,60 @@
                      "let" : [ ],
                      "relationship" : [ ],
                      "where" : {
-                        "localId" : "270",
-                        "locator" : "32:9-32:43",
+                        "localId" : "295",
+                        "locator" : "36:9-36:43",
                         "type" : "Equal",
                         "signature" : [ {
-                           "localId" : "280",
+                           "localId" : "305",
                            "name" : "{urn:hl7-org:elm-types:r1}String",
                            "type" : "NamedTypeSpecifier"
                         }, {
-                           "localId" : "281",
+                           "localId" : "306",
                            "name" : "{urn:hl7-org:elm-types:r1}String",
                            "type" : "NamedTypeSpecifier"
                         } ],
                         "operand" : [ {
-                           "localId" : "278",
+                           "localId" : "303",
                            "name" : "ToString",
                            "libraryName" : "FHIRHelpers",
                            "type" : "FunctionRef",
                            "signature" : [ {
-                              "localId" : "279",
+                              "localId" : "304",
                               "name" : "{http://hl7.org/fhir}string",
                               "type" : "NamedTypeSpecifier"
                            } ],
                            "operand" : [ {
-                              "localId" : "272",
-                              "locator" : "32:15-32:20",
+                              "localId" : "297",
+                              "locator" : "36:15-36:20",
                               "path" : "id",
                               "type" : "Property",
                               "source" : {
-                                 "localId" : "271",
-                                 "locator" : "32:15-32:17",
+                                 "localId" : "296",
+                                 "locator" : "36:15-36:17",
                                  "name" : "obs",
                                  "type" : "OperandRef"
                               }
                            } ]
                         }, {
-                           "localId" : "275",
-                           "locator" : "32:24-32:43",
+                           "localId" : "300",
+                           "locator" : "36:24-36:43",
                            "name" : "getId",
                            "libraryName" : "PC",
                            "type" : "FunctionRef",
                            "signature" : [ ],
                            "operand" : [ {
-                              "localId" : "276",
+                              "localId" : "301",
                               "name" : "ToString",
                               "libraryName" : "FHIRHelpers",
                               "type" : "FunctionRef",
                               "signature" : [ {
-                                 "localId" : "277",
+                                 "localId" : "302",
                                  "name" : "{http://hl7.org/fhir}string",
                                  "type" : "NamedTypeSpecifier"
                               } ],
                               "operand" : [ {
-                                 "localId" : "274",
-                                 "locator" : "32:24-32:35",
+                                 "localId" : "299",
+                                 "locator" : "36:24-36:35",
                                  "path" : "reference",
                                  "scope" : "GA",
                                  "type" : "Property"
@@ -822,18 +1024,18 @@
                }
             },
             "operand" : [ {
-               "localId" : "263",
+               "localId" : "288",
                "name" : "obs",
                "operandTypeSpecifier" : {
-                  "localId" : "262",
-                  "locator" : "29:45-29:55",
+                  "localId" : "287",
+                  "locator" : "33:45-33:55",
                   "name" : "{http://hl7.org/fhir}Observation",
                   "type" : "NamedTypeSpecifier"
                }
             } ]
          }, {
-            "localId" : "284",
-            "locator" : "36:1-40:3",
+            "localId" : "309",
+            "locator" : "40:1-44:3",
             "name" : "addressesConditions",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -842,26 +1044,26 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "284",
+                  "r" : "309",
                   "s" : [ {
                      "value" : [ "// Returns a list of Conditions that this Goal addresses.\n","define fluent function addressesConditions(goal Goal):\n  " ]
                   }, {
-                     "r" : "287",
+                     "r" : "312",
                      "s" : [ {
-                        "r" : "287",
+                        "r" : "312",
                         "s" : [ {
                            "value" : [ "flatten" ]
                         }, {
-                           "r" : "307",
+                           "r" : "332",
                            "s" : [ {
                               "value" : [ "( " ]
                            }, {
-                              "r" : "307",
+                              "r" : "332",
                               "s" : [ {
                                  "s" : [ {
-                                    "r" : "288",
+                                    "r" : "313",
                                     "s" : [ {
-                                       "r" : "290",
+                                       "r" : "315",
                                        "s" : [ {
                                           "s" : [ {
                                              "value" : [ "goal",".","addresses" ]
@@ -874,18 +1076,18 @@
                               }, {
                                  "value" : [ "\n      " ]
                               }, {
-                                 "r" : "291",
+                                 "r" : "316",
                                  "s" : [ {
                                     "value" : [ "return " ]
                                  }, {
-                                    "r" : "306",
+                                    "r" : "331",
                                     "s" : [ {
                                        "s" : [ {
-                                          "r" : "292",
+                                          "r" : "317",
                                           "s" : [ {
-                                             "r" : "293",
+                                             "r" : "318",
                                              "s" : [ {
-                                                "r" : "293",
+                                                "r" : "318",
                                                 "s" : [ {
                                                    "value" : [ "[","Condition","]" ]
                                                 } ]
@@ -897,22 +1099,22 @@
                                     }, {
                                        "value" : [ "\n        " ]
                                     }, {
-                                       "r" : "294",
+                                       "r" : "319",
                                        "s" : [ {
                                           "value" : [ "where " ]
                                        }, {
-                                          "r" : "294",
+                                          "r" : "319",
                                           "s" : [ {
-                                             "r" : "296",
+                                             "r" : "321",
                                              "s" : [ {
-                                                "r" : "295",
+                                                "r" : "320",
                                                 "s" : [ {
                                                    "value" : [ "obs" ]
                                                 } ]
                                              }, {
                                                 "value" : [ "." ]
                                              }, {
-                                                "r" : "296",
+                                                "r" : "321",
                                                 "s" : [ {
                                                    "value" : [ "id" ]
                                                 } ]
@@ -920,18 +1122,18 @@
                                           }, {
                                              "value" : [ " ","="," " ]
                                           }, {
-                                             "r" : "299",
+                                             "r" : "324",
                                              "s" : [ {
-                                                "r" : "298",
+                                                "r" : "323",
                                                 "s" : [ {
-                                                   "r" : "297",
+                                                   "r" : "322",
                                                    "s" : [ {
                                                       "value" : [ "GA" ]
                                                    } ]
                                                 }, {
                                                    "value" : [ "." ]
                                                 }, {
-                                                   "r" : "298",
+                                                   "r" : "323",
                                                    "s" : [ {
                                                       "value" : [ "reference" ]
                                                    } ]
@@ -939,7 +1141,7 @@
                                              }, {
                                                 "value" : [ "." ]
                                              }, {
-                                                "r" : "299",
+                                                "r" : "324",
                                                 "s" : [ {
                                                    "value" : [ "getId","()" ]
                                                 } ]
@@ -958,37 +1160,37 @@
                }
             } ],
             "expression" : {
-               "localId" : "287",
-               "locator" : "37:3-40:3",
+               "localId" : "312",
+               "locator" : "41:3-44:3",
                "type" : "Flatten",
                "signature" : [ {
-                  "localId" : "308",
+                  "localId" : "333",
                   "type" : "ListTypeSpecifier",
                   "elementType" : {
-                     "localId" : "309",
+                     "localId" : "334",
                      "type" : "ListTypeSpecifier",
                      "elementType" : {
-                        "localId" : "310",
+                        "localId" : "335",
                         "name" : "{http://hl7.org/fhir}Condition",
                         "type" : "NamedTypeSpecifier"
                      }
                   }
                } ],
                "operand" : {
-                  "localId" : "307",
-                  "locator" : "37:10-40:3",
+                  "localId" : "332",
+                  "locator" : "41:10-44:3",
                   "type" : "Query",
                   "source" : [ {
-                     "localId" : "288",
-                     "locator" : "37:12-37:28",
+                     "localId" : "313",
+                     "locator" : "41:12-41:28",
                      "alias" : "GA",
                      "expression" : {
-                        "localId" : "290",
-                        "locator" : "37:12-37:25",
+                        "localId" : "315",
+                        "locator" : "41:12-41:25",
                         "path" : "addresses",
                         "type" : "Property",
                         "source" : {
-                           "localId" : "289",
+                           "localId" : "314",
                            "name" : "goal",
                            "type" : "OperandRef"
                         }
@@ -997,19 +1199,19 @@
                   "let" : [ ],
                   "relationship" : [ ],
                   "return" : {
-                     "localId" : "291",
-                     "locator" : "38:7-39:43",
+                     "localId" : "316",
+                     "locator" : "42:7-43:43",
                      "expression" : {
-                        "localId" : "306",
-                        "locator" : "38:14-39:43",
+                        "localId" : "331",
+                        "locator" : "42:14-43:43",
                         "type" : "Query",
                         "source" : [ {
-                           "localId" : "292",
-                           "locator" : "38:14-38:28",
+                           "localId" : "317",
+                           "locator" : "42:14-42:28",
                            "alias" : "obs",
                            "expression" : {
-                              "localId" : "293",
-                              "locator" : "38:14-38:24",
+                              "localId" : "318",
+                              "locator" : "42:14-42:24",
                               "dataType" : "{http://hl7.org/fhir}Condition",
                               "templateId" : "http://hl7.org/fhir/StructureDefinition/Condition",
                               "type" : "Retrieve",
@@ -1022,55 +1224,55 @@
                         "let" : [ ],
                         "relationship" : [ ],
                         "where" : {
-                           "localId" : "294",
-                           "locator" : "39:9-39:43",
+                           "localId" : "319",
+                           "locator" : "43:9-43:43",
                            "type" : "Equal",
                            "signature" : [ {
-                              "localId" : "304",
+                              "localId" : "329",
                               "name" : "{urn:hl7-org:elm-types:r1}String",
                               "type" : "NamedTypeSpecifier"
                            }, {
-                              "localId" : "305",
+                              "localId" : "330",
                               "name" : "{urn:hl7-org:elm-types:r1}String",
                               "type" : "NamedTypeSpecifier"
                            } ],
                            "operand" : [ {
-                              "localId" : "302",
+                              "localId" : "327",
                               "name" : "ToString",
                               "libraryName" : "FHIRHelpers",
                               "type" : "FunctionRef",
                               "signature" : [ {
-                                 "localId" : "303",
+                                 "localId" : "328",
                                  "name" : "{http://hl7.org/fhir}string",
                                  "type" : "NamedTypeSpecifier"
                               } ],
                               "operand" : [ {
-                                 "localId" : "296",
-                                 "locator" : "39:15-39:20",
+                                 "localId" : "321",
+                                 "locator" : "43:15-43:20",
                                  "path" : "id",
                                  "scope" : "obs",
                                  "type" : "Property"
                               } ]
                            }, {
-                              "localId" : "299",
-                              "locator" : "39:24-39:43",
+                              "localId" : "324",
+                              "locator" : "43:24-43:43",
                               "name" : "getId",
                               "libraryName" : "PC",
                               "type" : "FunctionRef",
                               "signature" : [ ],
                               "operand" : [ {
-                                 "localId" : "300",
+                                 "localId" : "325",
                                  "name" : "ToString",
                                  "libraryName" : "FHIRHelpers",
                                  "type" : "FunctionRef",
                                  "signature" : [ {
-                                    "localId" : "301",
+                                    "localId" : "326",
                                     "name" : "{http://hl7.org/fhir}string",
                                     "type" : "NamedTypeSpecifier"
                                  } ],
                                  "operand" : [ {
-                                    "localId" : "298",
-                                    "locator" : "39:24-39:35",
+                                    "localId" : "323",
+                                    "locator" : "43:24-43:35",
                                     "path" : "reference",
                                     "scope" : "GA",
                                     "type" : "Property"
@@ -1083,11 +1285,11 @@
                }
             },
             "operand" : [ {
-               "localId" : "286",
+               "localId" : "311",
                "name" : "goal",
                "operandTypeSpecifier" : {
-                  "localId" : "285",
-                  "locator" : "36:49-36:52",
+                  "localId" : "310",
+                  "locator" : "40:49-40:52",
                   "name" : "{http://hl7.org/fhir}Goal",
                   "type" : "NamedTypeSpecifier"
                }

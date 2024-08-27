@@ -177,7 +177,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="Measure/GoalFollowUpMeasure">Person-Centered Goal Follow-Up</a>
             </td>
             <td>
-<p>Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.</p>
+<p>NCQA Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.</p>
 </td>
          </tr>
          <tr>
@@ -186,7 +186,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="Measure/GoalIdentificationMeasure">Person-Centered Goal Identification</a>
             </td>
             <td>
-<p>Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan.</p>
+<p>NCQA Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan.</p>
 </td>
          </tr>
       </tbody>
@@ -276,6 +276,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-pco-prom-score.html"
+                  title="StructureDefinition/pco-prom-score">Patient-Reported Outcome Measure (PROM) score</a>
+            </td>
+            <td>
+<p>This observation records how a patient rated their own progress score using a PROM assessment.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-pco-care-plan.html"
                   title="StructureDefinition/pco-care-plan">Person-Centered Care Plan</a>
             </td>
@@ -285,11 +294,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-goal.html"
-                  title="StructureDefinition/pco-goal">Person-Centered Goal</a>
+               <a href="StructureDefinition-pco-goal-profile.html"
+                  title="StructureDefinition/pco-goal-profile">Person-Centered Goal</a>
+            </td>
+            <td>
+<p>Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-gas-goal-profile.html"
+                  title="StructureDefinition/pco-gas-goal-profile">Person-Centered Goal Attainment</a>
             </td>
             <td>
 <p>Person-centered goal with goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-goal-prom-profile.html"
+                  title="StructureDefinition/pco-goal-prom-profile">Person-Centered Goal for PROMs</a>
+            </td>
+            <td>
+<p>Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-progress-score-observation.html"
+                  title="StructureDefinition/pco-progress-score-observation">Person-Centered Progress Score</a>
+            </td>
+            <td>
+<p>A progress score observation for a person-centered goal.</p>
 </td>
          </tr>
          <tr>
@@ -337,8 +373,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-caregiver-gas-followup-vs.html"
-                  title="ValueSet/caregiver-gas-followup-vs">Caregiver Follow-Up GAS Score</a>
+               <a href="ValueSet-caregiver-gas-followup.html"
+                  title="ValueSet/caregiver-gas-followup">Caregiver Follow-Up GAS Score</a>
             </td>
             <td>
 <p>The caregiver follow-up score indicates how the caregiver rated either the patient’s progress or their own progress on goal attainment scaling.</p>
@@ -355,8 +391,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-patient-gas-followup-vs.html"
-                  title="ValueSet/patient-gas-followup-vs">Patient Follow-Up GAS Score</a>
+               <a href="ValueSet-prom-target-measures.html"
+                  title="ValueSet/prom-target-measures">PROM Target Measures</a>
+            </td>
+            <td>
+<p>Target measure codes used to track progress on patient-reported outcome measures (PROMs).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-patient-gas-followup.html"
+                  title="ValueSet/patient-gas-followup">Patient Follow-Up GAS Score</a>
             </td>
             <td>
 <p>The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.</p>
@@ -364,8 +409,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-practitioner-gas-followup-vs.html"
-                  title="ValueSet/practitioner-gas-followup-vs">Practitioner Follow-Up GAS Score</a>
+               <a href="ValueSet-practitioner-gas-followup.html"
+                  title="ValueSet/practitioner-gas-followup">Practitioner Follow-Up GAS Score</a>
             </td>
             <td>
 <p>The practitioner follow-up score indicates how the practitioner rated the patient’s progress on goal attainment scaling.</p>
@@ -390,15 +435,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-pco-category-codes-example.html"
-                  title="CodeSystem/pco-category-codes-example">Category Code Examples</a>
-            </td>
-            <td>
-<p>Example code system to identify the category for PCO resources.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="CodeSystem-pco.html" title="CodeSystem/pco">Codes for PCO</a>
             </td>
             <td>
@@ -416,11 +452,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-what-matters-concepts.html"
-                  title="CodeSystem/what-matters-concepts">What Matters Concepts</a>
+               <a href="CodeSystem-ncqa-goal-domains.html"
+                  title="CodeSystem/ncqa-goal-domains">NCQA Goal Domains</a>
             </td>
             <td>
-<p>Code system to identify “What Matters” concepts, example from the VA Circle of Health.</p>
+<p>NCQA goal domain codes used to identify the category for PCO resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-va-whole-health.html"
+                  title="CodeSystem/va-whole-health">VA Whole Health Concepts</a>
+            </td>
+            <td>
+<p>Code system to identify “What Matters” concepts from the VA Whole Health appraoch and Circle of Health.</p>
 </td>
          </tr>
          <tr>
@@ -442,11 +487,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="CarePlan-pcoAnxietyCarePlanExample.html"
+                  title="CarePlan/pcoAnxietyCarePlanExample">Care Plan for PCO Anxiety Goal</a>
+            </td>
+            <td>
+<p>Care Plan for a person-centered goal using a PROM score measure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="CarePlan-pcoPhyicalFunctionCarePlanExample.html"
                   title="CarePlan/pcoPhyicalFunctionCarePlanExample">Care Plan for person-centered goal</a>
             </td>
             <td>
 <p>Care Plan for a person-centered goal with action steps for achieving what matters most to that person.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-pcoMindfulnessSupportProgram.html"
+                  title="ServiceRequest/pcoMindfulnessSupportProgram">Care Plan: Action step for mindfulness program</a>
+            </td>
+            <td>
+<p>Care Plan activity: Mindfulness coaching to support anxiety management</p>
 </td>
          </tr>
          <tr>
@@ -461,7 +524,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="ServiceRequest-pcoPhysicalTherapyReferral.html"
-                  title="ServiceRequest/pcoPhysicalTherapyReferral">Care Plan: Clinical action step</a>
+                  title="ServiceRequest/pcoPhysicalTherapyReferral">Care Plan: Clinical action step for PT</a>
             </td>
             <td>
 <p>Care Plan activity: Physical therapy to relieve pain related to walking</p>
@@ -478,10 +541,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-pcoPatientJones.html" title="Patient/pcoPatientJones">Example Patient</a>
+               <a href="Patient-pcoPatientLopez.html" title="Patient/pcoPatientLopez">Example Patient Camila</a>
+            </td>
+            <td>
+<p>Camila Lopez</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-pcoPatientJones.html" title="Patient/pcoPatientJones">Example Patient Dorothy</a>
             </td>
             <td>
 <p>Dorothy Jones</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-pcoPROMScoreAnxietyExample.html"
+                  title="Observation/pcoPROMScoreAnxietyExample">GAD-7 PROM Follow-up Score</a>
+            </td>
+            <td>
+<p>Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-pcoGoalAnxietyExample.html"
+                  title="Goal/pcoGoalAnxietyExample">Goal for GAD-7 PROM Outcome</a>
+            </td>
+            <td>
+<p>Person-centered goal with a PROM outcome target for GAD-7 score.</p>
 </td>
          </tr>
          <tr>
@@ -496,10 +585,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="Goal-pcoGoalPainLevelExample.html"
-                  title="Goal/pcoGoalPainLevelExample">Goal without GAS</a>
+                  title="Goal/pcoGoalPainLevelExample">Goal without GAS or PROM</a>
             </td>
             <td>
-<p>Person-centered goal without attainment scaling</p>
+<p>Person-centered goal without attainment scaling or PROM</p>
 </td>
          </tr>
          <tr>
@@ -585,7 +674,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 21, 2024 16:21+0000">2024-08-21</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 27, 2024 18:37+0000">2024-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

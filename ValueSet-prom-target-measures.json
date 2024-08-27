@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "prom-target-measures",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet prom-target-measures</b></p><a name=\"prom-target-measures\"> </a><a name=\"hcprom-target-measures\"> </a><a name=\"prom-target-measures-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/70274-6/\">70274-6</a></td><td>Generalized anxiety disorder 7 item (GAD-7) total score</td></tr><tr><td><a href=\"https://loinc.org/44261-6/\">44261-6</a></td><td>Patient health questionnaire 9 item (PHQ-9) total score</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
+  "version" : "0.1.0",
+  "name" : "PROMTargetMeasures",
+  "title" : "PROM Target Measures",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-08-27T18:37:51+00:00",
+  "publisher" : "Mountain Lotus WellBeing LLC",
+  "contact" : [{
+    "name" : "Mountain Lotus WellBeing LLC",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://mtnlotus.com"
+    }]
+  }],
+  "description" : "Target measure codes used to track progress on patient-reported outcome measures (PROMs).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "70274-6",
+        "display" : "Generalized anxiety disorder 7 item (GAD-7) total score"
+      },
+      {
+        "code" : "44261-6",
+        "display" : "Patient health questionnaire 9 item (PHQ-9) total score"
+      }]
+    }]
+  }
+}

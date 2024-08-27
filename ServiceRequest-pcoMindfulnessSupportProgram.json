@@ -1,0 +1,39 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "pcoMindfulnessSupportProgram",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal",
+    "valueReference" : {
+      "reference" : "Goal/pcoGoalAnxietyExample"
+    }
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "1259023009",
+      "display" : "Mindfulness Based Stress Reduction program (regime/therapy)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientLopez"
+  },
+  "occurrenceTiming" : {
+    "repeat" : {
+      "boundsPeriod" : {
+        "start" : "2024-08-11",
+        "end" : "2024-10-31"
+      },
+      "frequency" : 1,
+      "periodUnit" : "wk"
+    }
+  },
+  "authoredOn" : "2024-08-11",
+  "requester" : {
+    "reference" : "Practitioner/pcoPractitionerAnderson"
+  },
+  "note" : [{
+    "text" : "Trial of mindfulness coaching to support anxiety management"
+  }]
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="pcoGoalAnxietyExample"/>
+  <lifecycleStatus value="active"/>
+  <achievementStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+      <code value="in-progress"/>
+    </coding>
+  </achievementStatus>
+  <category>
+    <coding>
+      <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+      <code value="mind"/>
+      <display value="Power of the Mind"/>
+    </coding>
+  </category>
+  <description>
+    <text value="Reduce to mild anxiety level score"/>
+  </description>
+  <subject>
+    <reference value="Patient/pcoPatientLopez"/>
+  </subject>
+  <startDate value="2024-08-11"/>
+  <target>
+    <measure>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="70274-6"/>
+        <display value="Generalized anxiety disorder 7 item (GAD-7) total score"/>
+      </coding>
+    </measure>
+    <detailQuantity>
+      <value value="6"/>
+      <comparator value="&lt;"/>
+      <unit value="score"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </detailQuantity>
+    <dueDate value="2024-12-31"/>
+  </target>
+  <expressedBy>
+    <reference value="Practitioner/pcoPractitionerAnderson"/>
+  </expressedBy>
+</Goal>

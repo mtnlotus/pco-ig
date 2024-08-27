@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/Goal/pcoGoalAnxietyExample> a fhir:Goal ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoGoalAnxietyExample"] ; # 
+  fhir:lifecycleStatus [ fhir:v "active"] ; # 
+  fhir:achievementStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/goal-achievement"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "in-progress" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mind" ] ;
+       fhir:display [ fhir:v "Power of the Mind" ]
+     ] )
+  ] ) ; # 
+  fhir:description [
+     fhir:text [ fhir:v "Reduce to mild anxiety level score" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientLopez> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientLopez" ]
+  ] ; # 
+  fhir:start [ fhir:v "2024-08-11"^^xsd:date] ; # 
+  fhir:target ( [
+     fhir:measure [
+       fhir:coding ( [
+         a loinc:70274-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "70274-6" ] ;
+         fhir:display [ fhir:v "Generalized anxiety disorder 7 item (GAD-7) total score" ]
+       ] )
+     ] ;
+     fhir:detail [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "6"^^xsd:decimal ] ;
+       fhir:comparator [ fhir:v "<" ] ;
+       fhir:unit [ fhir:v "score" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "{score}" ]
+     ] ;
+     fhir:due [ fhir:v "2024-12-31"^^xsd:date ]
+  ] ) ; # 
+  fhir:expressedBy [
+     fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerAnderson> ;
+     fhir:reference [ fhir:v "Practitioner/pcoPractitionerAnderson" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -123,7 +123,7 @@ This element is labeled as a modifier because the status contains the code enter
 "CarePlan.supportingInfo","CarePlan.supportingInfo","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Information considered as part of plan","Identifies portions of the patient's record that specifically influenced the formation of the plan.  These might include comorbidities, recent procedures, limitations, recent assessments, etc.","Use ""concern"" to identify specific conditions addressed by the care plan.","Identifies barriers and other considerations associated with the care plan.","","","","","","","",,,,,"",,,,"CarePlan.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.supportingInfo"
-"CarePlan.goal","CarePlan.goal","","","",1,*,"Y","","","Reference {[]} {[CanonicalType[http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal]]}
+"CarePlan.goal","CarePlan.goal","","","",1,*,"Y","","","Reference {[]} {[CanonicalType[http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile]]}
 ","Person-centered goals supported by this plan","Describes the intended objective(s) of carrying out the care plan.","Goal can be achieving a particular change or merely maintaining a current state or even slowing a decline.","Provides context for plan.  Allows plan effectiveness to be evaluated by clinicians.","","","","","","","",,,,,"",,,,"CarePlan.goal",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode<=OBJ].","GOL.1"
 "CarePlan.activity","CarePlan.activity","","","",1,*,"","","","BackboneElement {[]} {[]}

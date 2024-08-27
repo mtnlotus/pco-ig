@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-08-21T16:21:33+00:00",
+  "date" : "2024-08-27T18:37:51+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -793,11 +793,35 @@
         "valueString" : "CarePlan"
       }],
       "reference" : {
+        "reference" : "CarePlan/pcoAnxietyCarePlanExample"
+      },
+      "name" : "Care Plan for PCO Anxiety Goal",
+      "description" : "Care Plan for a person-centered goal using a PROM score measure.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      }],
+      "reference" : {
         "reference" : "CarePlan/pcoPhyicalFunctionCarePlanExample"
       },
       "name" : "Care Plan for person-centered goal",
       "description" : "Care Plan for a person-centered goal with action steps for achieving what matters most to that person.",
       "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/pcoMindfulnessSupportProgram"
+      },
+      "name" : "Care Plan: Action step for mindfulness program",
+      "description" : "Care Plan activity: Mindfulness coaching to support anxiety management",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -819,7 +843,7 @@
       "reference" : {
         "reference" : "ServiceRequest/pcoPhysicalTherapyReferral"
       },
-      "name" : "Care Plan: Clinical action step",
+      "name" : "Care Plan: Clinical action step for PT",
       "description" : "Care Plan activity: Physical therapy to relieve pain related to walking",
       "exampleBoolean" : true
     },
@@ -841,7 +865,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/caregiver-gas-followup-vs"
+        "reference" : "ValueSet/caregiver-gas-followup"
       },
       "name" : "Caregiver Follow-Up GAS Score",
       "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
@@ -865,18 +889,6 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/pco-category-codes-example"
-      },
-      "name" : "Category Code Examples",
-      "description" : "Example code system to identify the category for PCO resources.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
         "reference" : "CodeSystem/pco"
       },
       "name" : "Codes for PCO",
@@ -889,9 +901,21 @@
         "valueString" : "Patient"
       }],
       "reference" : {
+        "reference" : "Patient/pcoPatientLopez"
+      },
+      "name" : "Example Patient Camila",
+      "description" : "Camila Lopez",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
         "reference" : "Patient/pcoPatientJones"
       },
-      "name" : "Example Patient",
+      "name" : "Example Patient Dorothy",
       "description" : "Dorothy Jones",
       "exampleBoolean" : true
     },
@@ -905,6 +929,18 @@
       },
       "name" : "FHIRHelpers",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoPROMScoreAnxietyExample"
+      },
+      "name" : "GAD-7 PROM Follow-up Score",
+      "description" : "Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score"
     },
     {
       "extension" : [{
@@ -947,11 +983,23 @@
         "valueString" : "Goal"
       }],
       "reference" : {
+        "reference" : "Goal/pcoGoalAnxietyExample"
+      },
+      "name" : "Goal for GAD-7 PROM Outcome",
+      "description" : "Person-centered goal with a PROM outcome target for GAD-7 score.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      }],
+      "reference" : {
         "reference" : "Goal/pcoGoalWalkDogExample"
       },
       "name" : "Goal with GAS",
       "description" : "Person-centered goal with attainment scaling extensions",
-      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-goal-profile"
     },
     {
       "extension" : [{
@@ -961,9 +1009,9 @@
       "reference" : {
         "reference" : "Goal/pcoGoalPainLevelExample"
       },
-      "name" : "Goal without GAS",
-      "description" : "Person-centered goal without attainment scaling",
-      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"
+      "name" : "Goal without GAS or PROM",
+      "description" : "Person-centered goal without attainment scaling or PROM",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile"
     },
     {
       "extension" : [{
@@ -1013,10 +1061,22 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ncqa-goal-domains"
+      },
+      "name" : "NCQA Goal Domains",
+      "description" : "NCQA goal domain codes used to identify the category for PCO resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/patient-gas-followup-vs"
+        "reference" : "ValueSet/patient-gas-followup"
       },
       "name" : "Patient Follow-Up GAS Score",
       "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
@@ -1061,6 +1121,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-prom-score"
+      },
+      "name" : "Patient-Reported Outcome Measure (PROM) score",
+      "description" : "This observation records how a patient rated their own progress score using a PROM assessment.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1099,9 +1171,21 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-goal"
+        "reference" : "StructureDefinition/pco-goal-profile"
       },
       "name" : "Person-Centered Goal",
+      "description" : "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-gas-goal-profile"
+      },
+      "name" : "Person-Centered Goal Attainment",
       "description" : "Person-centered goal with goal attainment scaling.",
       "exampleBoolean" : false
     },
@@ -1114,7 +1198,19 @@
         "reference" : "Measure/GoalFollowUpMeasure"
       },
       "name" : "Person-Centered Goal Follow-Up",
-      "description" : "Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.",
+      "description" : "NCQA Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-goal-prom-profile"
+      },
+      "name" : "Person-Centered Goal for PROMs",
+      "description" : "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target.",
       "exampleBoolean" : false
     },
     {
@@ -1126,7 +1222,19 @@
         "reference" : "Measure/GoalIdentificationMeasure"
       },
       "name" : "Person-Centered Goal Identification",
-      "description" : "Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan.",
+      "description" : "NCQA Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-progress-score-observation"
+      },
+      "name" : "Person-Centered Progress Score",
+      "description" : "A progress score observation for a person-centered goal.",
       "exampleBoolean" : false
     },
     {
@@ -1146,7 +1254,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/practitioner-gas-followup-vs"
+        "reference" : "ValueSet/practitioner-gas-followup"
       },
       "name" : "Practitioner Follow-Up GAS Score",
       "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
@@ -1191,13 +1299,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-assessment"
+        "reference" : "ValueSet/prom-target-measures"
       },
-      "name" : "What Matters Assessment",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future.",
+      "name" : "PROM Target Measures",
+      "description" : "Target measure codes used to track progress on patient-reported outcome measures (PROMs).",
       "exampleBoolean" : false
     },
     {
@@ -1206,10 +1314,22 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/what-matters-concepts"
+        "reference" : "CodeSystem/va-whole-health"
       },
-      "name" : "What Matters Concepts",
-      "description" : "Code system to identify \"What Matters\" concepts, example from the VA Circle of Health.",
+      "name" : "VA Whole Health Concepts",
+      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-what-matters-assessment"
+      },
+      "name" : "What Matters Assessment",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future.",
       "exampleBoolean" : false
     },
     {

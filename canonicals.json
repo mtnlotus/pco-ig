@@ -21,18 +21,18 @@
     "name" : "Generalized_anxiety_disorder_item"
   },
   {
+    "id" : "ncqa-goal-domains",
+    "type" : "CodeSystem",
+    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains",
+    "version" : "0.1.0",
+    "name" : "NCQAGoalDomains"
+  },
+  {
     "id" : "pco",
     "type" : "CodeSystem",
     "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
     "version" : "0.1.0",
     "name" : "PCOCodes"
-  },
-  {
-    "id" : "pco-category-codes-example",
-    "type" : "CodeSystem",
-    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example",
-    "version" : "0.1.0",
-    "name" : "PCOCategoryCodesExample"
   },
   {
     "id" : "pco-gas-codes-temporary",
@@ -42,11 +42,11 @@
     "name" : "PCOGASCodesTemporary"
   },
   {
-    "id" : "what-matters-concepts",
+    "id" : "va-whole-health",
     "type" : "CodeSystem",
-    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts",
+    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
     "version" : "0.1.0",
-    "name" : "WhatMattersConcepts"
+    "name" : "VAWholeHealth"
   },
   {
     "id" : "what-matters-rating",
@@ -134,11 +134,11 @@
     "name" : "PCOCaregiverGASScore"
   },
   {
-    "id" : "pco-goal",
+    "id" : "pco-gas-goal-profile",
     "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-goal-profile",
     "version" : "0.1.0",
-    "name" : "PCOGoal"
+    "name" : "PCOGoalAttainmentScaleProfile"
   },
   {
     "id" : "pco-goal-attainment-scaling",
@@ -146,6 +146,20 @@
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling",
     "version" : "0.1.0",
     "name" : "PCOGoalAttainmentScaling"
+  },
+  {
+    "id" : "pco-goal-profile",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile",
+    "version" : "0.1.0",
+    "name" : "PCOGoalProfile"
+  },
+  {
+    "id" : "pco-goal-prom-profile",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile",
+    "version" : "0.1.0",
+    "name" : "PCOGoalOutcomeMeasureProfile"
   },
   {
     "id" : "pco-patient-gas-score",
@@ -162,6 +176,20 @@
     "name" : "PCOPractitionerGASScore"
   },
   {
+    "id" : "pco-progress-score-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-progress-score-observation",
+    "version" : "0.1.0",
+    "name" : "PCOProgressScoreObservation"
+  },
+  {
+    "id" : "pco-prom-score",
+    "type" : "StructureDefinition",
+    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score",
+    "version" : "0.1.0",
+    "name" : "PCOPatientReportedOutcomeScore"
+  },
+  {
     "id" : "pco-what-matters-assessment",
     "type" : "StructureDefinition",
     "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment",
@@ -169,18 +197,18 @@
     "name" : "WhatMattersAssessment"
   },
   {
-    "id" : "caregiver-gas-followup-vs",
+    "id" : "caregiver-gas-followup",
     "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup",
     "version" : "0.1.0",
-    "name" : "CaregiverGASFollowupVS"
+    "name" : "CaregiverGASFollowup"
   },
   {
-    "id" : "patient-gas-followup-vs",
+    "id" : "patient-gas-followup",
     "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup",
     "version" : "0.1.0",
-    "name" : "PatientGASFollowupVS"
+    "name" : "PatientGASFollowup"
   },
   {
     "id" : "pco-category-valueset",
@@ -190,11 +218,18 @@
     "name" : "PCOCategoryValueSet"
   },
   {
-    "id" : "practitioner-gas-followup-vs",
+    "id" : "practitioner-gas-followup",
     "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup",
     "version" : "0.1.0",
-    "name" : "PractitionerGASFollowupVS"
+    "name" : "PractitionerGASFollowup"
+  },
+  {
+    "id" : "prom-target-measures",
+    "type" : "ValueSet",
+    "url" : "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
+    "version" : "0.1.0",
+    "name" : "PROMTargetMeasures"
   },
   {
     "id" : "what-matters-focus-areas",

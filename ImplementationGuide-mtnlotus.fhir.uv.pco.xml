@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-08-21T16:21:33+00:00"/>
+  <date value="2024-08-27T18:37:51+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -589,11 +589,33 @@
         <valueString value="CarePlan"/>
       </extension>
       <reference>
+        <reference value="CarePlan/pcoAnxietyCarePlanExample"/>
+      </reference>
+      <name value="Care Plan for PCO Anxiety Goal"/>
+      <description value="Care Plan for a person-centered goal using a PROM score measure."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
         <reference value="CarePlan/pcoPhyicalFunctionCarePlanExample"/>
       </reference>
       <name value="Care Plan for person-centered goal"/>
       <description value="Care Plan for a person-centered goal with action steps for achieving what matters most to that person."/>
       <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/pcoMindfulnessSupportProgram"/>
+      </reference>
+      <name value="Care Plan: Action step for mindfulness program"/>
+      <description value="Care Plan activity: Mindfulness coaching to support anxiety management"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -613,7 +635,7 @@
       <reference>
         <reference value="ServiceRequest/pcoPhysicalTherapyReferral"/>
       </reference>
-      <name value="Care Plan: Clinical action step"/>
+      <name value="Care Plan: Clinical action step for PT"/>
       <description value="Care Plan activity: Physical therapy to relieve pain related to walking"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -633,7 +655,7 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/caregiver-gas-followup-vs"/>
+        <reference value="ValueSet/caregiver-gas-followup"/>
       </reference>
       <name value="Caregiver Follow-Up GAS Score"/>
       <description value="The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling."/>
@@ -655,17 +677,6 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/pco-category-codes-example"/>
-      </reference>
-      <name value="Category Code Examples"/>
-      <description value="Example code system to identify the category for PCO resources."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
         <reference value="CodeSystem/pco"/>
       </reference>
       <name value="Codes for PCO"/>
@@ -677,9 +688,20 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/pcoPatientLopez"/>
+      </reference>
+      <name value="Example Patient Camila"/>
+      <description value="Camila Lopez"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/pcoPatientJones"/>
       </reference>
-      <name value="Example Patient"/>
+      <name value="Example Patient Dorothy"/>
       <description value="Dorothy Jones"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -692,6 +714,17 @@
       </reference>
       <name value="FHIRHelpers"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoPROMScoreAnxietyExample"/>
+      </reference>
+      <name value="GAD-7 PROM Follow-up Score"/>
+      <description value="Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -730,11 +763,22 @@
         <valueString value="Goal"/>
       </extension>
       <reference>
+        <reference value="Goal/pcoGoalAnxietyExample"/>
+      </reference>
+      <name value="Goal for GAD-7 PROM Outcome"/>
+      <description value="Person-centered goal with a PROM outcome target for GAD-7 score."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
         <reference value="Goal/pcoGoalWalkDogExample"/>
       </reference>
       <name value="Goal with GAS"/>
       <description value="Person-centered goal with attainment scaling extensions"/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-goal-profile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -743,9 +787,9 @@
       <reference>
         <reference value="Goal/pcoGoalPainLevelExample"/>
       </reference>
-      <name value="Goal without GAS"/>
-      <description value="Person-centered goal without attainment scaling"/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal"/>
+      <name value="Goal without GAS or PROM"/>
+      <description value="Person-centered goal without attainment scaling or PROM"/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -790,10 +834,21 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ncqa-goal-domains"/>
+      </reference>
+      <name value="NCQA Goal Domains"/>
+      <description value="NCQA goal domain codes used to identify the category for PCO resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/patient-gas-followup-vs"/>
+        <reference value="ValueSet/patient-gas-followup"/>
       </reference>
       <name value="Patient Follow-Up GAS Score"/>
       <description value="The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling."/>
@@ -834,6 +889,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-prom-score"/>
+      </reference>
+      <name value="Patient-Reported Outcome Measure (PROM) score"/>
+      <description value="This observation records how a patient rated their own progress score using a PROM assessment."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -869,9 +935,20 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-goal"/>
+        <reference value="StructureDefinition/pco-goal-profile"/>
       </reference>
       <name value="Person-Centered Goal"/>
+      <description value="Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-gas-goal-profile"/>
+      </reference>
+      <name value="Person-Centered Goal Attainment"/>
       <description value="Person-centered goal with goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -883,7 +960,18 @@
         <reference value="Measure/GoalFollowUpMeasure"/>
       </reference>
       <name value="Person-Centered Goal Follow-Up"/>
-      <description value="Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified."/>
+      <description value="NCQA Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-goal-prom-profile"/>
+      </reference>
+      <name value="Person-Centered Goal for PROMs"/>
+      <description value="Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -894,7 +982,18 @@
         <reference value="Measure/GoalIdentificationMeasure"/>
       </reference>
       <name value="Person-Centered Goal Identification"/>
-      <description value="Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan."/>
+      <description value="NCQA Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-progress-score-observation"/>
+      </reference>
+      <name value="Person-Centered Progress Score"/>
+      <description value="A progress score observation for a person-centered goal."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -912,7 +1011,7 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/practitioner-gas-followup-vs"/>
+        <reference value="ValueSet/practitioner-gas-followup"/>
       </reference>
       <name value="Practitioner Follow-Up GAS Score"/>
       <description value="The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."/>
@@ -953,13 +1052,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-what-matters-assessment"/>
+        <reference value="ValueSet/prom-target-measures"/>
       </reference>
-      <name value="What Matters Assessment"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."/>
+      <name value="PROM Target Measures"/>
+      <description value="Target measure codes used to track progress on patient-reported outcome measures (PROMs)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -967,10 +1066,21 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/what-matters-concepts"/>
+        <reference value="CodeSystem/va-whole-health"/>
       </reference>
-      <name value="What Matters Concepts"/>
-      <description value="Code system to identify &quot;What Matters&quot; concepts, example from the VA Circle of Health."/>
+      <name value="VA Whole Health Concepts"/>
+      <description value="Code system to identify &quot;What Matters&quot; concepts from the VA Whole Health appraoch and Circle of Health."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-what-matters-assessment"/>
+      </reference>
+      <name value="What Matters Assessment"/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

@@ -17,7 +17,7 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "body" ] ;
        fhir:display [ fhir:v "Moving the Body" ]
      ] )
@@ -35,7 +35,7 @@
      fhir:code [
        fhir:coding ( [
          fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "nowRating" ]
+         fhir:code [ fhir:v "now-rating" ]
        ] )
      ] ;
      fhir:value [ fhir:v "2"^^xsd:integer ]
@@ -43,7 +43,7 @@
      fhir:code [
        fhir:coding ( [
          fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "nowReasons" ]
+         fhir:code [ fhir:v "now-reasons" ]
        ] )
      ] ;
      fhir:value [ fhir:v "My knee pain prevents me from walking." ]
@@ -51,7 +51,7 @@
      fhir:code [
        fhir:coding ( [
          fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "futureRating" ]
+         fhir:code [ fhir:v "future-rating" ]
        ] )
      ] ;
      fhir:value [ fhir:v "7"^^xsd:integer ]

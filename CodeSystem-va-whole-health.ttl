@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "va-whole-health"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem va-whole-health</b></p><a name=\"va-whole-health\"> </a><a name=\"hcva-whole-health\"> </a><a name=\"va-whole-health-en-US\"> </a><p>This case-sensitive code system <code>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">body<a name=\"va-whole-health-body\"> </a></td><td>Moving the Body</td><td>Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise.</td></tr><tr><td style=\"white-space:nowrap\">mind<a name=\"va-whole-health-mind\"> </a></td><td>Power of the Mind</td><td>Our thoughts are powerful and can affect our physical, mental, and emotional health. Changing our mindset can aid in healing and coping. Breathing techniques, guided imagery, Tai Chi, yoga, or gratitude can buffer the impact of stress and other emotions.</td></tr><tr><td style=\"white-space:nowrap\">nourishment<a name=\"va-whole-health-nourishment\"> </a></td><td>Food &amp; Drink</td><td>What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink.</td></tr><tr><td style=\"white-space:nowrap\">recharge<a name=\"va-whole-health-recharge\"> </a></td><td>Recharge</td><td>Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night’s rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh.</td></tr><tr><td style=\"white-space:nowrap\">surroundings<a name=\"va-whole-health-surroundings\"> </a></td><td>Surroundings</td><td>Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health.</td></tr><tr><td style=\"white-space:nowrap\">personal-development<a name=\"va-whole-health-personal-development\"> </a></td><td>Personal Development</td><td>Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life.</td></tr><tr><td style=\"white-space:nowrap\">spirit-and-soul<a name=\"va-whole-health-spirit-and-soul\"> </a></td><td>Spirit &amp; Soul</td><td>Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art.</td></tr><tr><td style=\"white-space:nowrap\">relationships<a name=\"va-whole-health-relationships\"> </a></td><td>Family, Friends &amp; Co-Workers</td><td>Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that &quot;fuel&quot; us and less in relationships that &quot;drain&quot; us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider.</td></tr><tr><td style=\"white-space:nowrap\">professional-care<a name=\"va-whole-health-professional-care\"> </a></td><td>Professional Care</td><td>Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health.</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VAWholeHealth"] ; # 
+  fhir:title [ fhir:v "VA Whole Health Concepts"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-27T18:37:51+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://mtnlotus.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "9"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "body" ] ;
+     fhir:display [ fhir:v "Moving the Body" ] ;
+     fhir:definition [ fhir:v "Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise." ]
+  ] [
+     fhir:code [ fhir:v "mind" ] ;
+     fhir:display [ fhir:v "Power of the Mind" ] ;
+     fhir:definition [ fhir:v "Our thoughts are powerful and can affect our physical, mental, and emotional health. Changing our mindset can aid in healing and coping. Breathing techniques, guided imagery, Tai Chi, yoga, or gratitude can buffer the impact of stress and other emotions." ]
+  ] [
+     fhir:code [ fhir:v "nourishment" ] ;
+     fhir:display [ fhir:v "Food & Drink" ] ;
+     fhir:definition [ fhir:v "What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink." ]
+  ] [
+     fhir:code [ fhir:v "recharge" ] ;
+     fhir:display [ fhir:v "Recharge" ] ;
+     fhir:definition [ fhir:v "Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night’s rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh." ]
+  ] [
+     fhir:code [ fhir:v "surroundings" ] ;
+     fhir:display [ fhir:v "Surroundings" ] ;
+     fhir:definition [ fhir:v "Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health." ]
+  ] [
+     fhir:code [ fhir:v "personal-development" ] ;
+     fhir:display [ fhir:v "Personal Development" ] ;
+     fhir:definition [ fhir:v "Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life." ]
+  ] [
+     fhir:code [ fhir:v "spirit-and-soul" ] ;
+     fhir:display [ fhir:v "Spirit & Soul" ] ;
+     fhir:definition [ fhir:v "Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art." ]
+  ] [
+     fhir:code [ fhir:v "relationships" ] ;
+     fhir:display [ fhir:v "Family, Friends & Co-Workers" ] ;
+     fhir:definition [ fhir:v "Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that \"fuel\" us and less in relationships that \"drain\" us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider." ]
+  ] [
+     fhir:code [ fhir:v "professional-care" ] ;
+     fhir:display [ fhir:v "Professional Care" ] ;
+     fhir:definition [ fhir:v "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

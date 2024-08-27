@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="cc035af7-36fd-4a50-a523-42656874a7a5"/>
+  <id value="1bedead0-ba92-44e9-b181-ea835c4a1d50"/>
   <meta>
-    <lastUpdated value="2024-08-21T16:21:33.511+00:00"/>
+    <lastUpdated value="2024-08-27T18:37:51.251+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
-    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs"/>
+    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup"/>
     <resource>
       <ValueSet>
         <text>
@@ -75,13 +75,13 @@
             </table>
           </div>
         </text>
-        <url value="http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs"/>
+        <url value="http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup"/>
         <version value="0.1.0"/>
-        <name value="CaregiverGASFollowupVS"/>
+        <name value="CaregiverGASFollowup"/>
         <title value="Caregiver Follow-Up GAS Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-08-21T16:21:33+00:00"/>
+        <date value="2024-08-27T18:37:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -90,8 +90,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:771838ff-70bc-4e10-b045-d77484be6955"/>
-          <timestamp value="2024-08-21T16:22:33+00:00"/>
+          <identifier value="urn:uuid:feb3ee39-59b9-4842-872d-e408d96e6610"/>
+          <timestamp value="2024-08-27T18:38:49+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -140,7 +140,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs"/>
+    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup"/>
     <resource>
       <ValueSet>
         <text>
@@ -208,13 +208,13 @@
             </table>
           </div>
         </text>
-        <url value="http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs"/>
+        <url value="http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup"/>
         <version value="0.1.0"/>
-        <name value="PatientGASFollowupVS"/>
+        <name value="PatientGASFollowup"/>
         <title value="Patient Follow-Up GAS Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-08-21T16:21:33+00:00"/>
+        <date value="2024-08-27T18:37:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -223,8 +223,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2407ee53-64f0-465b-9c22-5df39702e8ac"/>
-          <timestamp value="2024-08-21T16:22:33+00:00"/>
+          <identifier value="urn:uuid:dfa95b81-ba02-4665-9453-51eec31af5c0"/>
+          <timestamp value="2024-08-27T18:38:50+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -282,10 +282,18 @@
             <p class="res-header-id">
               <b>Generated Narrative: ValueSet </b>
             </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-pco-category-codes-example.html">codesystem Category Code Examples v0.1.0 (CodeSystem)</a>
-            </p>
-            <p>This value set contains 12 concepts</p>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on:</p>
+              <ul>
+                <li>
+                  <a href="CodeSystem-ncqa-goal-domains.html">codesystem NCQA Goal Domains v0.1.0 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="CodeSystem-va-whole-health.html">codesystem VA Whole Health Concepts v0.1.0 (CodeSystem)</a>
+                </li>
+              </ul>
+            </div>
+            <p>This value set contains 21 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -303,10 +311,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-housing"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-housing">housing</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-housing"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-housing">housing</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Housing</td>
                 <td>
                   <div>
@@ -317,10 +325,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-access-to-services"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-access-to-services">access-to-services</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-access-to-services"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-access-to-services">access-to-services</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Access To Services</td>
                 <td>
                   <div>
@@ -331,10 +339,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-caregiver-needs"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-caregiver-needs">caregiver-needs</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-caregiver-needs"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-caregiver-needs">caregiver-needs</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Caregiver Needs</td>
                 <td>
                   <div/>
@@ -342,10 +350,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-end-of-life"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-end-of-life">end-of-life</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-end-of-life"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-end-of-life">end-of-life</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>End Of Life</td>
                 <td>
                   <div>
@@ -356,10 +364,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-independence"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-independence">independence</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-independence"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-independence">independence</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Independence</td>
                 <td>
                   <div>
@@ -370,10 +378,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-legal"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-legal">legal</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-legal"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-legal">legal</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Legal</td>
                 <td>
                   <div>
@@ -384,10 +392,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-managing-conditions"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-managing-conditions">managing-conditions</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-managing-conditions"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-managing-conditions">managing-conditions</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Managing Conditions</td>
                 <td>
                   <div>
@@ -398,10 +406,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-medication-management"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-medication-management">medication-management</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-medication-management"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-medication-management">medication-management</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Medication Management</td>
                 <td>
                   <div>
@@ -412,10 +420,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-improving-health-and-wellness"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-improving-health-and-wellness">improving-health-and-wellness</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-improving-health-and-wellness"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-improving-health-and-wellness">improving-health-and-wellness</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Improving Health And Wellness</td>
                 <td>
                   <div>
@@ -426,10 +434,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-physical-function"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-physical-function">physical-function</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-physical-function"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-physical-function">physical-function</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Physical Function</td>
                 <td>
                   <div>
@@ -440,10 +448,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-social-functioning"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-social-functioning">social-functioning</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-social-functioning"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-social-functioning">social-functioning</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Social Functioning</td>
                 <td>
                   <div/>
@@ -451,13 +459,139 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example-emotional-and-mental-health"> </a>  
-                  <a href="CodeSystem-pco-category-codes-example.html#pco-category-codes-example-emotional-and-mental-health">emotional-and-mental-health</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains-emotional-and-mental-health"> </a>  
+                  <a href="CodeSystem-ncqa-goal-domains.html#ncqa-goal-domains-emotional-and-mental-health">emotional-and-mental-health</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains</td>
                 <td>Emotional And Mental Health</td>
                 <td>
                   <div/>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-body"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-body">body</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Moving the Body</td>
+                <td>
+                  <div>
+                    <p>Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-mind"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-mind">mind</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Power of the Mind</td>
+                <td>
+                  <div>
+                    <p>Our thoughts are powerful and can affect our physical, mental, and emotional health. Changing our mindset can aid in healing and coping. Breathing techniques, guided imagery, Tai Chi, yoga, or gratitude can buffer the impact of stress and other emotions.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-nourishment"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-nourishment">nourishment</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Food &amp; Drink</td>
+                <td>
+                  <div>
+                    <p>What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-recharge"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-recharge">recharge</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Recharge</td>
+                <td>
+                  <div>
+                    <p>Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night’s rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-surroundings"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-surroundings">surroundings</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Surroundings</td>
+                <td>
+                  <div>
+                    <p>Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-personal-development"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-personal-development">personal-development</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Personal Development</td>
+                <td>
+                  <div>
+                    <p>Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-spirit-and-soul"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-spirit-and-soul">spirit-and-soul</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Spirit &amp; Soul</td>
+                <td>
+                  <div>
+                    <p>Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-relationships"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-relationships">relationships</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Family, Friends &amp; Co-Workers</td>
+                <td>
+                  <div>
+                    <p>Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that &quot;fuel&quot; us and less in relationships that &quot;drain&quot; us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-professional-care"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-professional-care">professional-care</a>
+                </td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
+                <td>Professional Care</td>
+                <td>
+                  <div>
+                    <p>Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health.</p>
+
+                  </div>
                 </td>
               </tr>
             </table>
@@ -468,7 +602,7 @@
         <name value="PCOCategoryValueSet"/>
         <title value="PCO Categories"/>
         <status value="draft"/>
-        <date value="2024-08-21T16:21:33+00:00"/>
+        <date value="2024-08-27T18:37:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -477,9 +611,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:90b0136a-31ad-4210-aa6c-5ebd396ba87f"/>
-          <timestamp value="2024-08-21T16:22:33+00:00"/>
-          <total value="12"/>
+          <identifier value="urn:uuid:128cd87f-e9a3-4f57-bdd2-b718f65ee76a"/>
+          <timestamp value="2024-08-27T18:38:51+00:00"/>
+          <total value="21"/>
           <offset value="0"/>
           <parameter>
             <name value="count"/>
@@ -495,74 +629,123 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example|0.1.0"/>
+            <valueUri value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="housing"/>
             <display value="Housing"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="access-to-services"/>
             <display value="Access To Services"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="caregiver-needs"/>
             <display value="Caregiver Needs"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="end-of-life"/>
             <display value="End Of Life"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="independence"/>
             <display value="Independence"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="legal"/>
             <display value="Legal"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="managing-conditions"/>
             <display value="Managing Conditions"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="medication-management"/>
             <display value="Medication Management"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="improving-health-and-wellness"/>
             <display value="Improving Health And Wellness"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="physical-function"/>
             <display value="Physical Function"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="social-functioning"/>
             <display value="Social Functioning"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"/>
             <code value="emotional-and-mental-health"/>
             <display value="Emotional And Mental Health"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="body"/>
+            <display value="Moving the Body"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="mind"/>
+            <display value="Power of the Mind"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="nourishment"/>
+            <display value="Food &amp; Drink"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="recharge"/>
+            <display value="Recharge"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="surroundings"/>
+            <display value="Surroundings"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="personal-development"/>
+            <display value="Personal Development"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="spirit-and-soul"/>
+            <display value="Spirit &amp; Soul"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="relationships"/>
+            <display value="Family, Friends &amp; Co-Workers"/>
+          </contains>
+          <contains>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="professional-care"/>
+            <display value="Professional Care"/>
           </contains>
         </expansion>
       </ValueSet>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs"/>
+    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup"/>
     <resource>
       <ValueSet>
         <text>
@@ -630,13 +813,13 @@
             </table>
           </div>
         </text>
-        <url value="http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs"/>
+        <url value="http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup"/>
         <version value="0.1.0"/>
-        <name value="PractitionerGASFollowupVS"/>
+        <name value="PractitionerGASFollowup"/>
         <title value="Practitioner Follow-Up GAS Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-08-21T16:21:33+00:00"/>
+        <date value="2024-08-27T18:37:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -645,8 +828,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6d6cee86-cf99-469b-ae33-52e60c754902"/>
-          <timestamp value="2024-08-21T16:22:34+00:00"/>
+          <identifier value="urn:uuid:76088e7e-1579-4d8c-9460-8e81f9b05cba"/>
+          <timestamp value="2024-08-27T18:38:51+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -695,6 +878,106 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.77</p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-70274-6"> </a>  
+                  <a href="https://loinc.org/70274-6/">70274-6</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-44261-6"> </a>  
+                  <a href="https://loinc.org/44261-6/">44261-6</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+        <version value="0.1.0"/>
+        <name value="PROMTargetMeasures"/>
+        <title value="PROM Target Measures"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-08-27T18:37:51+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:f47708f8-477a-4374-b191-7d1bee4e350c"/>
+          <timestamp value="2024-08-27T18:38:51+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://loinc.org|2.77"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://loinc.org|2.77"/>
+          </parameter>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="70274-6"/>
+            <display value="Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="44261-6"/>
+            <display value="Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas"/>
     <resource>
       <ValueSet>
@@ -705,7 +988,7 @@
               <b>Generated Narrative: ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-what-matters-concepts.html">codesystem What Matters Concepts v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-va-whole-health.html">codesystem VA Whole Health Concepts v0.1.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 9 concepts</p>
             <table class="codes">
@@ -725,10 +1008,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-body"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-body">body</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-body"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-body">body</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Moving the Body</td>
                 <td>
                   <div>
@@ -739,10 +1022,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-mind"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-mind">mind</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-mind"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-mind">mind</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Power of the Mind</td>
                 <td>
                   <div>
@@ -753,10 +1036,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-nourishment"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-nourishment">nourishment</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-nourishment"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-nourishment">nourishment</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Food &amp; Drink</td>
                 <td>
                   <div>
@@ -767,10 +1050,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-recharge"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-recharge">recharge</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-recharge"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-recharge">recharge</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Recharge</td>
                 <td>
                   <div>
@@ -781,10 +1064,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-surroundings"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-surroundings">surroundings</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-surroundings"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-surroundings">surroundings</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Surroundings</td>
                 <td>
                   <div>
@@ -795,10 +1078,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-personalDevelopment"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-personalDevelopment">personalDevelopment</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-personal-development"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-personal-development">personal-development</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Personal Development</td>
                 <td>
                   <div>
@@ -809,10 +1092,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-spiritSoul"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-spiritSoul">spiritSoul</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-spirit-and-soul"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-spirit-and-soul">spirit-and-soul</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Spirit &amp; Soul</td>
                 <td>
                   <div>
@@ -823,10 +1106,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-relationships"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-relationships">relationships</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-relationships"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-relationships">relationships</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Family, Friends &amp; Co-Workers</td>
                 <td>
                   <div>
@@ -837,10 +1120,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts-professionalCare"> </a>  
-                  <a href="CodeSystem-what-matters-concepts.html#what-matters-concepts-professionalCare">professionalCare</a>
+                  <a name="x-http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health-professional-care"> </a>  
+                  <a href="CodeSystem-va-whole-health.html#va-whole-health-professional-care">professional-care</a>
                 </td>
-                <td>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts</td>
+                <td>http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health</td>
                 <td>Professional Care</td>
                 <td>
                   <div>
@@ -857,7 +1140,7 @@
         <name value="WhatMattersFocusAreas"/>
         <title value="What Matters Focus Areas"/>
         <status value="draft"/>
-        <date value="2024-08-21T16:21:33+00:00"/>
+        <date value="2024-08-27T18:37:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -866,8 +1149,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:70a5fc58-f375-4206-a8f1-c34c19f7228e"/>
-          <timestamp value="2024-08-21T16:22:34+00:00"/>
+          <identifier value="urn:uuid:561451c9-dbba-4e9a-974c-f0e8af66a9e2"/>
+          <timestamp value="2024-08-27T18:38:51+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -884,51 +1167,51 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts|0.1.0"/>
+            <valueUri value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
             <code value="body"/>
             <display value="Moving the Body"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
             <code value="mind"/>
             <display value="Power of the Mind"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
             <code value="nourishment"/>
             <display value="Food &amp; Drink"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
             <code value="recharge"/>
             <display value="Recharge"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
             <code value="surroundings"/>
             <display value="Surroundings"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
-            <code value="personalDevelopment"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="personal-development"/>
             <display value="Personal Development"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
-            <code value="spiritSoul"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="spirit-and-soul"/>
             <display value="Spirit &amp; Soul"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
             <code value="relationships"/>
             <display value="Family, Friends &amp; Co-Workers"/>
           </contains>
           <contains>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"/>
-            <code value="professionalCare"/>
+            <system value="http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"/>
+            <code value="professional-care"/>
             <display value="Professional Care"/>
           </contains>
         </expansion>

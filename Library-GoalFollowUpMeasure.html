@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-21
+            as of 2024-08-27
           
         
       </td>
@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-21 16:21:33+0000</td>
+            <td style="padding-left: 4px;">2024-08-27 18:37:51+0000</td>
         </tr>
         
 
@@ -346,6 +346,8 @@
                   
                     <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                   
+                    <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
+                  
                 </ul>
                 
                 
@@ -377,8 +379,6 @@
               
                 <tr><th>Denominator Exceptions</th><th>Resource</th><th>0</th><th>1</th><th>Out</th></tr>
               
-                <tr><th>Follow-Up Scores During Measurement Period</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
-              
                 <tr><th>Numerator</th><th>Patient</th><th>0</th><th>*</th><th>Out</th></tr>
               
             </table>
@@ -405,7 +405,16 @@
                 <tr>
                   <th>Goal</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;</th>
+                  <th>;;;;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>CarePlan</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
+                  <th>;</th>
                   <th>
                     
                   </th>
@@ -446,6 +455,34 @@
                               <b>display: </b> <span>Goal Attainment Scaling (GAS)</span>
                           </p>
                           
+                      
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>Observation</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
+                  <th>;</th>
+                  <th>
+                    
+                      <b>code filter: </b>
+                      
+                      <br/>
+                      
+                      
+                      <span style="padding-left: 4px;">
+                          <b>path: </b><span>code</span>
+                      </span>
+                      
+                      <br/>
+                      
+                      
+                      
+                      <span style="padding-left: 4px;">
+                          <b>value set: </b><span>http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures</span>
+                      </span>
+                      
                       
                     
                   </th>
@@ -494,7 +531,7 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
-include GoalAttainmentLogic version '0.1.0' called GAS
+include GoalAttainmentLogic version '0.1.0' called PCOLogic
 
 parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt;
     default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
@@ -518,7 +555,7 @@ define &quot;Initial Population&quot;: {
 */
 define &quot;Denominator&quot;:
   &quot;Initial Population&quot; person
-    where exists GAS.&quot;PCO Goals&quot;
+    where exists PCOLogic.&quot;PCO Goals&quot;
 
 define &quot;Denominator Exclusions&quot;:
   null
@@ -532,25 +569,7 @@ weeks to six months of when the PCO goal and GAS or PROM were identified.
 */
 define &quot;Numerator&quot;:
   &quot;Denominator&quot; person
-    where exists &quot;Follow-Up Scores During Measurement Period&quot;
-
-define &quot;Follow-Up Scores During Measurement Period&quot;:
-  flatten( GAS.&quot;PCO Goals&quot; goal
-    let gasScores: goal.gasScores()
-      return gasScores score 
-        let scoreDate: score.effective as FHIR.dateTime
-        where scoreDate during &quot;Measurement Period&quot;
-          and scoreDate during &quot;Follow-Up Interval For&quot;(goal)
-  )
-
-/*
-@description: Computes the follow-up interval for a Goal based on this measure's &quot;Follow-Up Interval&quot; parameter.
-@return Interval&lt;DateTime&gt;
-*/
-define function &quot;Follow-Up Interval For&quot; (goal Goal):
-  goal goal
-    let startDate: ToDateTime(goal.start as FHIR.date)
-      return Interval(startDate + start of &quot;Follow-Up Interval&quot;, startDate + end of &quot;Follow-Up Interval&quot;)
+    where exists PCOLogic.&quot;Follow-Up Scores During Measurement Period&quot;
 </code></pre></td></tr>
             </table>
           </td>
@@ -564,7 +583,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (43448 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (22712 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -576,7 +595,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (79628 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (40528 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -608,7 +627,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 21, 2024 16:21+0000">2024-08-21</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 27, 2024 18:37+0000">2024-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

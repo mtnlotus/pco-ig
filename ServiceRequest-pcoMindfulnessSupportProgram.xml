@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="pcoMindfulnessSupportProgram"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal">
+    <valueReference>
+      <reference value="Goal/pcoGoalAnxietyExample"/>
+    </valueReference>
+  </extension>
+  <status value="active"/>
+  <intent value="plan"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1259023009"/>
+      <display value="Mindfulness Based Stress Reduction program (regime/therapy)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientLopez"/>
+  </subject>
+  <occurrenceTiming>
+    <repeat>
+      <boundsPeriod>
+        <start value="2024-08-11"/>
+        <end value="2024-10-31"/>
+      </boundsPeriod>
+      <frequency value="1"/>
+      <periodUnit value="wk"/>
+    </repeat>
+  </occurrenceTiming>
+  <authoredOn value="2024-08-11"/>
+  <requester>
+    <reference value="Practitioner/pcoPractitionerAnderson"/>
+  </requester>
+  <note>
+    <text value="Trial of mindfulness coaching to support anxiety management"/>
+  </note>
+</ServiceRequest>

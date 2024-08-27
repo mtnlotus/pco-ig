@@ -8,6 +8,10 @@ include PCOCommon version '0.1.0' called PC
 valueset "What Matters Focus Areas": 'http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas'
 
 parameter "Measurement Period" Interval<DateTime>
+    default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
+
+parameter "Follow-Up Interval" Interval<System.Quantity>
+  default Interval[2 weeks, 26 weeks]
 
 context Patient
 

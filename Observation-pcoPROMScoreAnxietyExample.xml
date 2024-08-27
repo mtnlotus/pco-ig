@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pcoPROMScoreAnxietyExample"/>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="70274-6"/>
+      <display value="Generalized anxiety disorder 7 item (GAD-7) total score"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientLopez"/>
+  </subject>
+  <focus>
+    <reference value="Goal/pcoGoalAnxietyExample"/>
+  </focus>
+  <effectiveDateTime value="2024-09-19T13:15:00Z"/>
+  <performer>
+    <reference value="Patient/pcoPatientLopez"/>
+  </performer>
+  <valueQuantity>
+    <value value="10"/>
+    <unit value="score"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{score}"/>
+  </valueQuantity>
+</Observation>

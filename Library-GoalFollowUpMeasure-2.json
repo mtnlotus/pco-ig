@@ -7,35 +7,6 @@
          "signatureLevel" : "Overloads",
          "type" : "CqlToElmInfo"
       }, {
-         "message" : "An operand identifier [goal] is hiding another identifier of the same name.",
-         "errorType" : "semantic",
-         "errorSeverity" : "warning",
-         "type" : "CqlToElmError"
-      }, {
-         "librarySystem" : "http://mtnlotus.com/uv/pco",
-         "libraryId" : "GoalFollowUpMeasure",
-         "libraryVersion" : "0.1.0",
-         "startLine" : 69,
-         "startChar" : 3,
-         "endLine" : 69,
-         "endChar" : 11,
-         "message" : "An alias identifier [goal] is hiding another identifier of the same name.",
-         "errorType" : "semantic",
-         "errorSeverity" : "warning",
-         "type" : "CqlToElmError"
-      }, {
-         "librarySystem" : "http://mtnlotus.com/uv/pco",
-         "libraryId" : "GoalFollowUpMeasure",
-         "libraryVersion" : "0.1.0",
-         "startLine" : 69,
-         "startChar" : 3,
-         "endLine" : 69,
-         "endChar" : 11,
-         "message" : "An alias identifier [goal] is hiding another identifier of the same name.",
-         "errorType" : "semantic",
-         "errorSeverity" : "warning",
-         "type" : "CqlToElmError"
-      }, {
          "type" : "Annotation",
          "t" : [ {
             "name" : "description",
@@ -45,7 +16,7 @@
             "value" : "Mountain Lotus WellBeing LLC"
          } ],
          "s" : {
-            "r" : "309",
+            "r" : "279",
             "s" : [ {
                "value" : [ "/*\n@description: Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with\na complex care need who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were\nidentified.\n\n@author: Mountain Lotus WellBeing LLC\n*/\n","library GoalFollowUpMeasure version '0.1.0'" ]
             } ]
@@ -133,8 +104,8 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "15:1-15:54",
-            "localIdentifier" : "GAS",
+            "locator" : "15:1-15:59",
+            "localIdentifier" : "PCOLogic",
             "path" : "http://mtnlotus.com/uv/pco/GoalAttainmentLogic",
             "version" : "0.1.0",
             "annotation" : [ {
@@ -148,7 +119,7 @@
                         "value" : [ "GoalAttainmentLogic" ]
                      } ]
                   }, {
-                     "value" : [ " version ","'0.1.0'"," called ","GAS" ]
+                     "value" : [ " version ","'0.1.0'"," called ","PCOLogic" ]
                   } ]
                }
             } ]
@@ -588,7 +559,7 @@
             }
          }, {
             "localId" : "265",
-            "locator" : "37:1-39:32",
+            "locator" : "37:1-39:37",
             "name" : "Denominator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -636,7 +607,7 @@
                               "s" : [ {
                                  "r" : "269",
                                  "s" : [ {
-                                    "value" : [ "GAS" ]
+                                    "value" : [ "PCOLogic" ]
                                  } ]
                               }, {
                                  "value" : [ "." ]
@@ -654,7 +625,7 @@
             } ],
             "expression" : {
                "localId" : "271",
-               "locator" : "38:3-39:32",
+               "locator" : "38:3-39:37",
                "type" : "Query",
                "source" : [ {
                   "localId" : "266",
@@ -671,14 +642,14 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "268",
-                  "locator" : "39:5-39:32",
+                  "locator" : "39:5-39:37",
                   "type" : "Exists",
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "270",
-                     "locator" : "39:18-39:32",
+                     "locator" : "39:18-39:37",
                      "name" : "PCO Goals",
-                     "libraryName" : "GAS",
+                     "libraryName" : "PCOLogic",
                      "type" : "ExpressionRef"
                   }
                }
@@ -726,635 +697,8 @@
                "type" : "Null"
             }
          }, {
-            "localId" : "309",
-            "locator" : "68:1-71:105",
-            "name" : "Follow-Up Interval For",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "type" : "FunctionDef",
-            "annotation" : [ {
-               "type" : "Annotation",
-               "t" : [ {
-                  "name" : "description",
-                  "value" : "\"Follow-Up Interval\" parameter."
-               } ],
-               "s" : {
-                  "r" : "309",
-                  "s" : [ {
-                     "value" : [ "/*\n@description: Computes the follow-up interval for a Goal based on this measure's \"Follow-Up Interval\" parameter.\n@return Interval<DateTime>\n*/\n","define function \"Follow-Up Interval For\" (goal Goal):\n  " ]
-                  }, {
-                     "r" : "384",
-                     "s" : [ {
-                        "r" : "384",
-                        "s" : [ {
-                           "s" : [ {
-                              "r" : "354",
-                              "s" : [ {
-                                 "r" : "355",
-                                 "s" : [ {
-                                    "s" : [ {
-                                       "value" : [ "goal" ]
-                                    } ]
-                                 } ]
-                              }, {
-                                 "value" : [ " ","goal" ]
-                              } ]
-                           } ]
-                        }, {
-                           "value" : [ "\n    " ]
-                        }, {
-                           "s" : [ {
-                              "value" : [ "let " ]
-                           }, {
-                              "r" : "356",
-                              "s" : [ {
-                                 "value" : [ "startDate",": " ]
-                              }, {
-                                 "r" : "365",
-                                 "s" : [ {
-                                    "value" : [ "ToDateTime","(" ]
-                                 }, {
-                                    "r" : "357",
-                                    "s" : [ {
-                                       "r" : "359",
-                                       "s" : [ {
-                                          "r" : "358",
-                                          "s" : [ {
-                                             "value" : [ "goal" ]
-                                          } ]
-                                       }, {
-                                          "value" : [ "." ]
-                                       }, {
-                                          "r" : "359",
-                                          "s" : [ {
-                                             "value" : [ "start" ]
-                                          } ]
-                                       } ]
-                                    }, {
-                                       "value" : [ " as " ]
-                                    }, {
-                                       "r" : "360",
-                                       "s" : [ {
-                                          "value" : [ "FHIR",".","date" ]
-                                       } ]
-                                    } ]
-                                 }, {
-                                    "value" : [ ")" ]
-                                 } ]
-                              } ]
-                           } ]
-                        }, {
-                           "value" : [ "\n      " ]
-                        }, {
-                           "r" : "368",
-                           "s" : [ {
-                              "value" : [ "return " ]
-                           }, {
-                              "r" : "383",
-                              "s" : [ {
-                                 "value" : [ "Interval(" ]
-                              }, {
-                                 "r" : "369",
-                                 "s" : [ {
-                                    "r" : "370",
-                                    "s" : [ {
-                                       "value" : [ "startDate" ]
-                                    } ]
-                                 }, {
-                                    "value" : [ " + " ]
-                                 }, {
-                                    "r" : "371",
-                                    "s" : [ {
-                                       "value" : [ "start of " ]
-                                    }, {
-                                       "r" : "372",
-                                       "s" : [ {
-                                          "value" : [ "\"Follow-Up Interval\"" ]
-                                       } ]
-                                    } ]
-                                 } ]
-                              }, {
-                                 "value" : [ ", " ]
-                              }, {
-                                 "r" : "377",
-                                 "s" : [ {
-                                    "r" : "378",
-                                    "s" : [ {
-                                       "value" : [ "startDate" ]
-                                    } ]
-                                 }, {
-                                    "value" : [ " + " ]
-                                 }, {
-                                    "r" : "379",
-                                    "s" : [ {
-                                       "value" : [ "end of " ]
-                                    }, {
-                                       "r" : "380",
-                                       "s" : [ {
-                                          "value" : [ "\"Follow-Up Interval\"" ]
-                                       } ]
-                                    } ]
-                                 } ]
-                              }, {
-                                 "value" : [ ")" ]
-                              } ]
-                           } ]
-                        } ]
-                     } ]
-                  } ]
-               }
-            } ],
-            "expression" : {
-               "localId" : "384",
-               "locator" : "69:3-71:105",
-               "type" : "Query",
-               "source" : [ {
-                  "localId" : "354",
-                  "locator" : "69:3-69:11",
-                  "alias" : "goal",
-                  "expression" : {
-                     "localId" : "355",
-                     "locator" : "69:3-69:6",
-                     "name" : "goal",
-                     "type" : "OperandRef"
-                  }
-               } ],
-               "let" : [ {
-                  "localId" : "356",
-                  "locator" : "70:9-70:54",
-                  "identifier" : "startDate",
-                  "expression" : {
-                     "localId" : "365",
-                     "locator" : "70:20-70:54",
-                     "type" : "ToDateTime",
-                     "signature" : [ {
-                        "localId" : "367",
-                        "name" : "{urn:hl7-org:elm-types:r1}Date",
-                        "type" : "NamedTypeSpecifier"
-                     } ],
-                     "operand" : {
-                        "localId" : "366",
-                        "name" : "ToDate",
-                        "libraryName" : "FHIRHelpers",
-                        "type" : "FunctionRef",
-                        "signature" : [ ],
-                        "operand" : [ {
-                           "localId" : "357",
-                           "locator" : "70:31-70:53",
-                           "strict" : false,
-                           "type" : "As",
-                           "signature" : [ ],
-                           "operand" : {
-                              "localId" : "359",
-                              "locator" : "70:31-70:40",
-                              "path" : "start",
-                              "scope" : "goal",
-                              "type" : "Property"
-                           },
-                           "asTypeSpecifier" : {
-                              "localId" : "360",
-                              "locator" : "70:45-70:53",
-                              "name" : "{http://hl7.org/fhir}date",
-                              "type" : "NamedTypeSpecifier"
-                           }
-                        } ]
-                     }
-                  }
-               } ],
-               "relationship" : [ ],
-               "return" : {
-                  "localId" : "368",
-                  "locator" : "71:7-71:105",
-                  "expression" : {
-                     "localId" : "383",
-                     "locator" : "71:14-71:105",
-                     "lowClosed" : false,
-                     "highClosed" : false,
-                     "type" : "Interval",
-                     "low" : {
-                        "localId" : "369",
-                        "locator" : "71:23-71:63",
-                        "type" : "Add",
-                        "signature" : [ {
-                           "localId" : "375",
-                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
-                           "type" : "NamedTypeSpecifier"
-                        }, {
-                           "localId" : "376",
-                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
-                           "type" : "NamedTypeSpecifier"
-                        } ],
-                        "operand" : [ {
-                           "localId" : "370",
-                           "locator" : "71:23-71:31",
-                           "name" : "startDate",
-                           "type" : "QueryLetRef"
-                        }, {
-                           "localId" : "371",
-                           "locator" : "71:35-71:63",
-                           "type" : "Start",
-                           "signature" : [ {
-                              "localId" : "373",
-                              "type" : "IntervalTypeSpecifier",
-                              "pointType" : {
-                                 "localId" : "374",
-                                 "name" : "{urn:hl7-org:elm-types:r1}Quantity",
-                                 "type" : "NamedTypeSpecifier"
-                              }
-                           } ],
-                           "operand" : {
-                              "localId" : "372",
-                              "locator" : "71:44-71:63",
-                              "name" : "Follow-Up Interval",
-                              "type" : "ParameterRef"
-                           }
-                        } ]
-                     },
-                     "high" : {
-                        "localId" : "377",
-                        "locator" : "71:66-71:104",
-                        "type" : "Add",
-                        "signature" : [ {
-                           "localId" : "381",
-                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
-                           "type" : "NamedTypeSpecifier"
-                        }, {
-                           "localId" : "382",
-                           "name" : "{urn:hl7-org:elm-types:r1}Quantity",
-                           "type" : "NamedTypeSpecifier"
-                        } ],
-                        "operand" : [ {
-                           "localId" : "378",
-                           "locator" : "71:66-71:74",
-                           "name" : "startDate",
-                           "type" : "QueryLetRef"
-                        }, {
-                           "localId" : "379",
-                           "locator" : "71:78-71:104",
-                           "type" : "End",
-                           "signature" : [ ],
-                           "operand" : {
-                              "localId" : "380",
-                              "locator" : "71:85-71:104",
-                              "name" : "Follow-Up Interval",
-                              "type" : "ParameterRef"
-                           }
-                        } ]
-                     }
-                  }
-               }
-            },
-            "operand" : [ {
-               "localId" : "311",
-               "name" : "goal",
-               "operandTypeSpecifier" : {
-                  "localId" : "310",
-                  "locator" : "68:48-68:51",
-                  "name" : "{http://hl7.org/fhir}Goal",
-                  "type" : "NamedTypeSpecifier"
-               }
-            } ]
-         }, {
-            "localId" : "284",
-            "locator" : "55:1-62:3",
-            "name" : "Follow-Up Scores During Measurement Period",
-            "context" : "Patient",
-            "accessLevel" : "Public",
-            "annotation" : [ {
-               "type" : "Annotation",
-               "s" : {
-                  "r" : "284",
-                  "s" : [ {
-                     "value" : [ "","define ","\"Follow-Up Scores During Measurement Period\"",":\n  " ]
-                  }, {
-                     "r" : "285",
-                     "s" : [ {
-                        "value" : [ "flatten" ]
-                     }, {
-                        "r" : "349",
-                        "s" : [ {
-                           "value" : [ "( " ]
-                        }, {
-                           "r" : "349",
-                           "s" : [ {
-                              "s" : [ {
-                                 "r" : "286",
-                                 "s" : [ {
-                                    "r" : "288",
-                                    "s" : [ {
-                                       "s" : [ {
-                                          "value" : [ "GAS",".","\"PCO Goals\"" ]
-                                       } ]
-                                    } ]
-                                 }, {
-                                    "value" : [ " ","goal" ]
-                                 } ]
-                              } ]
-                           }, {
-                              "value" : [ "\n    " ]
-                           }, {
-                              "s" : [ {
-                                 "value" : [ "let " ]
-                              }, {
-                                 "r" : "289",
-                                 "s" : [ {
-                                    "value" : [ "gasScores",": " ]
-                                 }, {
-                                    "r" : "291",
-                                    "s" : [ {
-                                       "r" : "290",
-                                       "s" : [ {
-                                          "value" : [ "goal" ]
-                                       } ]
-                                    }, {
-                                       "value" : [ "." ]
-                                    }, {
-                                       "r" : "291",
-                                       "s" : [ {
-                                          "value" : [ "gasScores","()" ]
-                                       } ]
-                                    } ]
-                                 } ]
-                              } ]
-                           }, {
-                              "value" : [ "\n      " ]
-                           }, {
-                              "r" : "292",
-                              "s" : [ {
-                                 "value" : [ "return " ]
-                              }, {
-                                 "r" : "348",
-                                 "s" : [ {
-                                    "s" : [ {
-                                       "r" : "293",
-                                       "s" : [ {
-                                          "r" : "294",
-                                          "s" : [ {
-                                             "s" : [ {
-                                                "value" : [ "gasScores" ]
-                                             } ]
-                                          } ]
-                                       }, {
-                                          "value" : [ " ","score" ]
-                                       } ]
-                                    } ]
-                                 }, {
-                                    "value" : [ " \n        " ]
-                                 }, {
-                                    "s" : [ {
-                                       "value" : [ "let " ]
-                                    }, {
-                                       "r" : "295",
-                                       "s" : [ {
-                                          "value" : [ "scoreDate",": " ]
-                                       }, {
-                                          "r" : "296",
-                                          "s" : [ {
-                                             "r" : "298",
-                                             "s" : [ {
-                                                "r" : "297",
-                                                "s" : [ {
-                                                   "value" : [ "score" ]
-                                                } ]
-                                             }, {
-                                                "value" : [ "." ]
-                                             }, {
-                                                "r" : "298",
-                                                "s" : [ {
-                                                   "value" : [ "effective" ]
-                                                } ]
-                                             } ]
-                                          }, {
-                                             "value" : [ " as " ]
-                                          }, {
-                                             "r" : "299",
-                                             "s" : [ {
-                                                "value" : [ "FHIR",".","dateTime" ]
-                                             } ]
-                                          } ]
-                                       } ]
-                                    } ]
-                                 }, {
-                                    "value" : [ "\n        " ]
-                                 }, {
-                                    "r" : "300",
-                                    "s" : [ {
-                                       "value" : [ "where " ]
-                                    }, {
-                                       "r" : "300",
-                                       "s" : [ {
-                                          "r" : "304",
-                                          "s" : [ {
-                                             "r" : "301",
-                                             "s" : [ {
-                                                "value" : [ "scoreDate" ]
-                                             } ]
-                                          }, {
-                                             "r" : "304",
-                                             "value" : [ " ","during"," " ]
-                                          }, {
-                                             "r" : "302",
-                                             "s" : [ {
-                                                "value" : [ "\"Measurement Period\"" ]
-                                             } ]
-                                          } ]
-                                       }, {
-                                          "value" : [ "\n          and " ]
-                                       }, {
-                                          "r" : "345",
-                                          "s" : [ {
-                                             "r" : "307",
-                                             "s" : [ {
-                                                "value" : [ "scoreDate" ]
-                                             } ]
-                                          }, {
-                                             "r" : "345",
-                                             "value" : [ " ","during"," " ]
-                                          }, {
-                                             "r" : "312",
-                                             "s" : [ {
-                                                "value" : [ "\"Follow-Up Interval For\"","(" ]
-                                             }, {
-                                                "r" : "308",
-                                                "s" : [ {
-                                                   "value" : [ "goal" ]
-                                                } ]
-                                             }, {
-                                                "value" : [ ")" ]
-                                             } ]
-                                          } ]
-                                       } ]
-                                    } ]
-                                 } ]
-                              } ]
-                           } ]
-                        }, {
-                           "value" : [ "\n  )" ]
-                        } ]
-                     } ]
-                  } ]
-               }
-            } ],
-            "expression" : {
-               "localId" : "285",
-               "locator" : "56:3-62:3",
-               "type" : "Flatten",
-               "signature" : [ ],
-               "operand" : {
-                  "localId" : "349",
-                  "locator" : "56:10-62:3",
-                  "type" : "Query",
-                  "source" : [ {
-                     "localId" : "286",
-                     "locator" : "56:12-56:31",
-                     "alias" : "goal",
-                     "expression" : {
-                        "localId" : "288",
-                        "locator" : "56:12-56:26",
-                        "name" : "PCO Goals",
-                        "libraryName" : "GAS",
-                        "type" : "ExpressionRef"
-                     }
-                  } ],
-                  "let" : [ {
-                     "localId" : "289",
-                     "locator" : "57:9-57:35",
-                     "identifier" : "gasScores",
-                     "expression" : {
-                        "localId" : "291",
-                        "locator" : "57:20-57:35",
-                        "name" : "gasScores",
-                        "libraryName" : "GAS",
-                        "type" : "FunctionRef",
-                        "signature" : [ ],
-                        "operand" : [ {
-                           "localId" : "290",
-                           "locator" : "57:20-57:23",
-                           "name" : "goal",
-                           "type" : "AliasRef"
-                        } ]
-                     }
-                  } ],
-                  "relationship" : [ ],
-                  "return" : {
-                     "localId" : "292",
-                     "locator" : "58:7-61:61",
-                     "expression" : {
-                        "localId" : "348",
-                        "locator" : "58:14-61:61",
-                        "type" : "Query",
-                        "source" : [ {
-                           "localId" : "293",
-                           "locator" : "58:14-58:28",
-                           "alias" : "score",
-                           "expression" : {
-                              "localId" : "294",
-                              "locator" : "58:14-58:22",
-                              "name" : "gasScores",
-                              "type" : "QueryLetRef"
-                           }
-                        } ],
-                        "let" : [ {
-                           "localId" : "295",
-                           "locator" : "59:13-59:55",
-                           "identifier" : "scoreDate",
-                           "expression" : {
-                              "localId" : "296",
-                              "locator" : "59:24-59:55",
-                              "strict" : false,
-                              "type" : "As",
-                              "signature" : [ ],
-                              "operand" : {
-                                 "localId" : "298",
-                                 "locator" : "59:24-59:38",
-                                 "path" : "effective",
-                                 "scope" : "score",
-                                 "type" : "Property"
-                              },
-                              "asTypeSpecifier" : {
-                                 "localId" : "299",
-                                 "locator" : "59:43-59:55",
-                                 "name" : "{http://hl7.org/fhir}dateTime",
-                                 "type" : "NamedTypeSpecifier"
-                              }
-                           }
-                        } ],
-                        "relationship" : [ ],
-                        "where" : {
-                           "localId" : "300",
-                           "locator" : "60:9-61:61",
-                           "type" : "And",
-                           "signature" : [ ],
-                           "operand" : [ {
-                              "localId" : "304",
-                              "locator" : "60:15-60:51",
-                              "type" : "In",
-                              "signature" : [ ],
-                              "operand" : [ {
-                                 "localId" : "305",
-                                 "name" : "ToDateTime",
-                                 "libraryName" : "FHIRHelpers",
-                                 "type" : "FunctionRef",
-                                 "signature" : [ {
-                                    "localId" : "306",
-                                    "name" : "{http://hl7.org/fhir}dateTime",
-                                    "type" : "NamedTypeSpecifier"
-                                 } ],
-                                 "operand" : [ {
-                                    "localId" : "301",
-                                    "locator" : "60:15-60:23",
-                                    "name" : "scoreDate",
-                                    "type" : "QueryLetRef"
-                                 } ]
-                              }, {
-                                 "localId" : "302",
-                                 "locator" : "60:32-60:51",
-                                 "name" : "Measurement Period",
-                                 "type" : "ParameterRef"
-                              } ]
-                           }, {
-                              "localId" : "345",
-                              "locator" : "61:15-61:61",
-                              "type" : "In",
-                              "signature" : [ ],
-                              "operand" : [ {
-                                 "localId" : "346",
-                                 "name" : "ToDateTime",
-                                 "libraryName" : "FHIRHelpers",
-                                 "type" : "FunctionRef",
-                                 "signature" : [ {
-                                    "localId" : "347",
-                                    "name" : "{http://hl7.org/fhir}dateTime",
-                                    "type" : "NamedTypeSpecifier"
-                                 } ],
-                                 "operand" : [ {
-                                    "localId" : "307",
-                                    "locator" : "61:15-61:23",
-                                    "name" : "scoreDate",
-                                    "type" : "QueryLetRef"
-                                 } ]
-                              }, {
-                                 "localId" : "312",
-                                 "locator" : "61:32-61:61",
-                                 "name" : "Follow-Up Interval For",
-                                 "type" : "FunctionRef",
-                                 "signature" : [ ],
-                                 "operand" : [ {
-                                    "localId" : "308",
-                                    "locator" : "61:57-61:60",
-                                    "name" : "goal",
-                                    "type" : "AliasRef"
-                                 } ]
-                              } ]
-                           } ]
-                        }
-                     }
-                  }
-               }
-            }
-         }, {
             "localId" : "279",
-            "locator" : "51:1-53:61",
+            "locator" : "51:1-53:70",
             "name" : "Numerator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1369,7 +713,7 @@
                   "s" : [ {
                      "value" : [ "/*\n@description: Indivuals who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were identified.\n*/\n","define ","\"Numerator\"",":\n  " ]
                   }, {
-                     "r" : "353",
+                     "r" : "287",
                      "s" : [ {
                         "s" : [ {
                            "r" : "280",
@@ -1395,9 +739,19 @@
                            "s" : [ {
                               "value" : [ "exists " ]
                            }, {
-                              "r" : "350",
+                              "r" : "284",
                               "s" : [ {
-                                 "value" : [ "\"Follow-Up Scores During Measurement Period\"" ]
+                                 "r" : "283",
+                                 "s" : [ {
+                                    "value" : [ "PCOLogic" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "284",
+                                 "s" : [ {
+                                    "value" : [ "\"Follow-Up Scores During Measurement Period\"" ]
+                                 } ]
                               } ]
                            } ]
                         } ]
@@ -1406,8 +760,8 @@
                }
             } ],
             "expression" : {
-               "localId" : "353",
-               "locator" : "52:3-53:61",
+               "localId" : "287",
+               "locator" : "52:3-53:70",
                "type" : "Query",
                "source" : [ {
                   "localId" : "280",
@@ -1424,21 +778,22 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "282",
-                  "locator" : "53:5-53:61",
+                  "locator" : "53:5-53:70",
                   "type" : "Exists",
                   "signature" : [ {
-                     "localId" : "351",
+                     "localId" : "285",
                      "type" : "ListTypeSpecifier",
                      "elementType" : {
-                        "localId" : "352",
+                        "localId" : "286",
                         "name" : "{http://hl7.org/fhir}Observation",
                         "type" : "NamedTypeSpecifier"
                      }
                   } ],
                   "operand" : {
-                     "localId" : "350",
-                     "locator" : "53:18-53:61",
+                     "localId" : "284",
+                     "locator" : "53:18-53:70",
                      "name" : "Follow-Up Scores During Measurement Period",
+                     "libraryName" : "PCOLogic",
                      "type" : "ExpressionRef"
                   }
                }

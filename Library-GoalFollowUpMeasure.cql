@@ -12,7 +12,7 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
-include GoalAttainmentLogic version '0.1.0' called GAS
+include GoalAttainmentLogic version '0.1.0' called PCOLogic
 
 parameter "Measurement Period" Interval<DateTime>
     default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
@@ -36,7 +36,7 @@ define "Initial Population": {
 */
 define "Denominator":
   "Initial Population" person
-    where exists GAS."PCO Goals"
+    where exists PCOLogic."PCO Goals"
 
 define "Denominator Exclusions":
   null
@@ -50,22 +50,4 @@ weeks to six months of when the PCO goal and GAS or PROM were identified.
 */
 define "Numerator":
   "Denominator" person
-    where exists "Follow-Up Scores During Measurement Period"
-
-define "Follow-Up Scores During Measurement Period":
-  flatten( GAS."PCO Goals" goal
-    let gasScores: goal.gasScores()
-      return gasScores score 
-        let scoreDate: score.effective as FHIR.dateTime
-        where scoreDate during "Measurement Period"
-          and scoreDate during "Follow-Up Interval For"(goal)
-  )
-
-/*
-@description: Computes the follow-up interval for a Goal based on this measure's "Follow-Up Interval" parameter.
-@return Interval<DateTime>
-*/
-define function "Follow-Up Interval For" (goal Goal):
-  goal goal
-    let startDate: ToDateTime(goal.start as FHIR.date)
-      return Interval(startDate + start of "Follow-Up Interval", startDate + end of "Follow-Up Interval")
+    where exists PCOLogic."Follow-Up Scores During Measurement Period"

@@ -1,10 +1,10 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup-vs",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "CaregiverGASFollowupVS",
+      "name" : "CaregiverGASFollowup",
       "title" : "Caregiver Follow-Up GAS Score",
       "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
       "systems" : [
@@ -12,10 +12,10 @@
       ]
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "PatientGASFollowupVS",
+      "name" : "PatientGASFollowup",
       "title" : "Patient Follow-Up GAS Score",
       "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
       "systems" : [
@@ -30,19 +30,29 @@
       "title" : "PCO Categories",
       "description" : "Example value set to identify the category for PCO resources.",
       "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example"
+        "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
+        "http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"
       ]
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup-vs",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "PractitionerGASFollowupVS",
+      "name" : "PractitionerGASFollowup",
       "title" : "Practitioner Follow-Up GAS Score",
       "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
       "systems" : [
         "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
       ]
+    },
+    {
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PROMTargetMeasures",
+      "title" : "PROM Target Measures",
+      "description" : "Target measure codes used to track progress on patient-reported outcome measures (PROMs).",
+      "systems" : ["http://loinc.org"]
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas",
@@ -51,9 +61,7 @@
       "name" : "WhatMattersFocusAreas",
       "title" : "What Matters Focus Areas",
       "description" : "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals.",
-      "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-concepts"
-      ]
+      "systems" : ["http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"]
     }
   ]
 }

@@ -187,7 +187,7 @@
         
           Draft
           
-            as of 2024-08-21
+            as of 2024-08-27
           
         
       </td>
@@ -286,7 +286,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-08-21 16:21:33+0000</td>
+            <td style="padding-left: 4px;">2024-08-27 18:37:51+0000</td>
         </tr>
         
 
@@ -342,13 +342,13 @@
                   
                     <li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
                   
-                    <li><a href="CodeSystem-pco-category-codes-example.html">Category Code Examples</a></li>
-                  
                     <li><a href="CodeSystem-pco-gas-codes-temporary.html">Goal Attainment Scaling (GAS) Codes</a></li>
                   
                     <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                   
-                    <li><a href="ValueSet-patient-gas-followup-vs.html">Patient Follow-Up GAS Score</a></li>
+                    <li><a href="ValueSet-patient-gas-followup.html">Patient Follow-Up GAS Score</a></li>
+                  
+                    <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
                   
                 </ul>
                 
@@ -389,6 +389,8 @@
               
                 <tr><th>PCO Goals with GAS and Action Plan</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
+                <tr><th>PROM Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
                 <tr><th>All GAS Score Observations</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>GAS Patient Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
@@ -399,9 +401,11 @@
               
                 <tr><th>GAS Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>GAS Baseline Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+                <tr><th>PCO Goals During Measurement Period</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
-                <tr><th>GAS Follow-Up Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+                <tr><th>Baseline Scores Before Follow-Up Period</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
+                <tr><th>Follow-Up Scores During Measurement Period</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
             </table>
           </td>
@@ -436,7 +440,7 @@
                 <tr>
                   <th>Goal</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;;;;</th>
+                  <th>;;;;;;;</th>
                   <th>
                     
                   </th>
@@ -445,7 +449,7 @@
                 <tr>
                   <th>Observation</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
-                  <th>;;;</th>
+                  <th>;;</th>
                   <th>
                     
                       <b>code filter: </b>
@@ -477,6 +481,34 @@
                               <b>display: </b> <span>Goal Attainment Scaling (GAS)</span>
                           </p>
                           
+                      
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>Observation</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
+                  <th>;</th>
+                  <th>
+                    
+                      <b>code filter: </b>
+                      
+                      <br/>
+                      
+                      
+                      <span style="padding-left: 4px;">
+                          <b>path: </b><span>code</span>
+                      </span>
+                      
+                      <br/>
+                      
+                      
+                      
+                      <span style="padding-left: 4px;">
+                          <b>value set: </b><span>http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures</span>
+                      </span>
+                      
                       
                     
                   </th>
@@ -519,16 +551,19 @@ include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
 codesystem &quot;LOINC&quot;: 'http://loinc.org'
-codesystem &quot;PCO Category&quot;: 'http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example'
 codesystem &quot;PCO GAS Codes&quot;: 'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'
 
 valueset &quot;PCO Categories&quot;: 'http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset'
-valueset &quot;Patient Follow-Up GAS Score&quot;: 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs'
+valueset &quot;Patient Follow-Up GAS Score&quot;: 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup'
+valueset &quot;PROM Target Measures&quot;: 'http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures'
 
 code &quot;Goal attainment scaling score&quot;: 'goal-attainment-scaling' from &quot;PCO GAS Codes&quot; display 'Goal Attainment Scaling (GAS)'
 
 parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt;
+    default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
+
 parameter &quot;Follow-Up Interval&quot; Interval&lt;System.Quantity&gt;
+  default Interval[2 weeks, 26 weeks]
 
 context Patient
 
@@ -538,7 +573,9 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoGoalDomains: goal.category in &quot;PCO Categories&quot;,
+      pcoCategories: goal.category in &quot;PCO Categories&quot;,
+      hasGAS: goal.hasGAS(),
+      hasPROM: goal.hasPROM(),
       carePlans: goal.carePlans()
     }
 
@@ -550,13 +587,14 @@ define CarPlanSummary:
       pcoGoals: carePlan.pcoGoals()
     }
 
-// All FHIR Goals for this patient. Useful for verifying subset matched by &quot;PCO Goals&quot;.
+// All FHIR Goals for this patient. Useful while debugging to verify subset matched by &quot;PCO Goals&quot;.
 define &quot;All Goals&quot;:
   [Goal] goal
 
 /* 
   A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
   and has a start date.
+  TODO: or a Goal that addresses a What Matters observation.
 */
 define &quot;PCO Goals&quot;:
   [Goal] goal
@@ -584,34 +622,20 @@ define &quot;PCO Goals with GAS and Action Plan&quot;:
     &quot;GAS Goals&quot; goal
       where exists goal.carePlans()
 
-// All observations containing a Goal Attainment Scaling (GAS) score.
-define &quot;All GAS Score Observations&quot;:
-  [Observation: &quot;Goal attainment scaling score&quot;]
+// Observations containing a PROM score.
+define &quot;PROM Scores&quot;:
+  [Observation: &quot;PROM Target Measures&quot;]
 
-/* 
-@description: Returns a list of Observations with a person's baseline GAS scores. 
-A baseline score is recorded less than 2 weeks after its Goal was started.
-*/
-define &quot;GAS Baseline Scores&quot;:
-  &quot;GAS Scores&quot; scoreObs
-    let goal: scoreObs.focusGoals().first(),
-      startDate: ToDateTime(goal.start as FHIR.date),
-      baselineInterval: Interval(startDate, startDate + 13 day]
-    where (scoreObs.effective as FHIR.dateTime) during baselineInterval
-
-/* 
-@description: Returns a list of Observations with a person's follow-up GAS scores. 
-A follow-up score is recorded 2 or more weeks after its Goal was started.
-*/
-define &quot;GAS Follow-Up Scores&quot;:
-  &quot;GAS Scores&quot;
-    except &quot;GAS Baseline Scores&quot;
-
+// Observations containing a GAS score.
 define &quot;GAS Scores&quot;:
   PC.SortAscending(&quot;GAS Patient Scores&quot;
     union &quot;GAS Practitioner Scores&quot;
     union &quot;GAS Caregiver Scores&quot;
   )
+
+// All observations containing a Goal Attainment Scaling (GAS) score.
+define &quot;All GAS Score Observations&quot;:
+  [Observation: &quot;Goal attainment scaling score&quot;]
 
 // Returns a collection of Observations with a patient's GAS scores.
 define &quot;GAS Patient Scores&quot;:
@@ -631,6 +655,27 @@ define &quot;GAS Caregiver Scores&quot;:
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
 
+/// Returns true if this Goal has a PROM code in its target.measure
+define fluent function hasPROM(goal Goal):
+  exists (goal.target target
+    where target.measure in &quot;PROM Target Measures&quot;
+  )
+
+// Returns a list of Observation including both GAS and PROM scores
+define fluent function pcoScores(goal Goal):
+  goal.gasScores()
+    union goal.promScores()
+
+// Returns a list of Observation including only GAS scores
+define fluent function gasScores(goal Goal):
+  &quot;GAS Scores&quot; score
+    where score.focusGoals() contains goal
+
+// Returns a list of Observation including only PROM scores
+define fluent function promScores(goal Goal):
+  &quot;PROM Scores&quot; score
+    where score.focusGoals() contains goal
+
 // Returns a list of PCO Goals that are included in this CarePlan.
 define fluent function pcoGoals(carePlan CarePlan):
   flatten( carePlan.goal goalRef
@@ -643,13 +688,50 @@ define fluent function pcoGoals(carePlan CarePlan):
 define fluent function focusGoals(obs Observation):
   obs.focus.resolveGoals()
 
-define fluent function gasScores(goal Goal):
-  &quot;GAS Scores&quot; score
-    where score.focusGoals() contains goal
+// PCO Goals whose startDate falls within the Measurement Period
+define &quot;PCO Goals During Measurement Period&quot;:
+  &quot;PCO Goals&quot; goal
+    where (ToDateTime(goal.start as FHIR.date) during &quot;Measurement Period&quot;)
+      and (goal.hasGAS() or goal.hasPROM())
+      and exists goal.carePlans()
 
-define fluent function gasFollowUpScores(goal Goal):
-  &quot;GAS Follow-Up Scores&quot; score
-    where score.focusGoals() contains goal</code></pre></td></tr>
+/* 
+Baseline Scares are PCO score observations taken during the Measurement Period,
+but before the follow-up period for its Goal. Default follow-up period is 
+2 weeks to 6 months following the goal startDate.
+*/
+define &quot;Baseline Scores Before Follow-Up Period&quot;:
+  flatten( &quot;PCO Goals During Measurement Period&quot; goal
+    let pcoScores: goal.pcoScores()
+      return pcoScores score 
+        let scoreDate: score.effective as FHIR.dateTime
+        where (scoreDate during &quot;Measurement Period&quot;)
+          and (scoreDate before start of &quot;Follow-Up Interval For&quot;(goal))
+  )
+
+/* 
+Follow-Up Scares are PCO score observations taken during the Measurement Period,
+and during the follow-up period for its Goal. Default follow-up period is 
+2 weeks to 6 months following the goal startDate.
+*/
+define &quot;Follow-Up Scores During Measurement Period&quot;:
+  flatten( &quot;PCO Goals During Measurement Period&quot; goal
+    let pcoScores: goal.pcoScores()
+      return pcoScores score 
+        let scoreDate: score.effective as FHIR.dateTime
+        where scoreDate during &quot;Measurement Period&quot;
+          and scoreDate during &quot;Follow-Up Interval For&quot;(goal)
+  )
+
+/*
+Computes the follow-up interval for a Goal based on this measure's &quot;Follow-Up Interval&quot; parameter.
+@return Interval&lt;DateTime&gt;
+*/
+define function &quot;Follow-Up Interval For&quot; (goal Goal):
+  goal goal
+    let startDate: ToDateTime(goal.start as FHIR.date)
+      return Interval(startDate + start of &quot;Follow-Up Interval&quot;, startDate + end of &quot;Follow-Up Interval&quot;)
+</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -662,7 +744,7 @@ define fluent function gasFollowUpScores(goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (89096 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (137108 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -674,7 +756,7 @@ define fluent function gasFollowUpScores(goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (162740 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (253680 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -706,7 +788,7 @@ define fluent function gasFollowUpScores(goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 21, 2024 16:21+0000">2024-08-21</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 27, 2024 18:37+0000">2024-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

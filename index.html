@@ -155,7 +155,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2024-08-21
+            as of 2024-08-27
           
         
       </td>
@@ -193,9 +193,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="introduction">Introduction</h3>
 
-<p>Person-Centered Outcomes (PCO) focus on setting and achieving specific, personalized goals that prioritize an individual’s well-being and “What Matters Most” to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. After goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual’s needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness.</p>
+<p>Person-Centered Outcomes (PCO) focus on setting and achieving specific, personalized goals that prioritize an individual’s well-being and “What Matters Most” to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. After goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual’s needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness. Goal Attainment Scaling (GAS) and Patient-Reported Outcome Measures (PROMs) are two approaches used to establish goal targets and track achievement progress.</p>
 
-<p>Goal Attainment Scaling (GAS) in healthcare measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.</p>
+<p><a href="https://www.ncqa.org/wp-content/uploads/NCQA-GAS-Whitepaper-WEB.pdf">Goal Attainment Scaling (GAS)</a> in healthcare measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.</p>
+
+<p>Based in psychometric science, <a href="https://mmshub.cms.gov/sites/default/files/Patient-Reported-Outcome-Measures.pdf">Patient-Reported Outcome Measures (PROMs)</a> are standardized questionnaires that contain multiple questions, or items, patients answer on their own to generate numerical scores measuring symptoms, function, perceived health status. Two examples of commonly used PROMs are <a href="Questionnaire-44249-1.html">PHQ-9 quick depression assessment panel</a> and <a href="Questionnaire-69737-5.html">Generalized Anxiety Disorder (GAD-7)</a>.</p>
 
 <h3 id="user-stories">User Stories</h3>
 
@@ -205,15 +207,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA’s approach, but can be adapted to other asseessments used by different organizations.</p>
 
-<p><strong>☛ See <a href="StructureDefinition-pco-what-matters-assessment.html#profile">What Matters Assessment Profile</a></strong></p>
+<p><strong>☛ See <a href="StructureDefinition-pco-what-matters-assessment.html#profile">Profile: What Matters Assessment</a></strong></p>
 
-<p><strong>☛ See <a href="Observation-pcoWhatMattersRelationshipsExample.html#root">Example Assessment</a></strong></p>
+<p><strong>☛ See <a href="Observation-pcoWhatMattersRelationshipsExample.html#root">Example: Assessment Observation</a></strong></p>
 
 <h4 id="person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</h4>
 
-<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy’s responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. This goal includes five levels of achievement that can be used to evaluate Dorothy’s progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. The health coach role also may be performed by Dorothy’s primary care physician.</p>
+<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy’s responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. The health coach role also may be performed by Dorothy’s primary care physician or others on her care team.</p>
 
-<p>This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
+<h5 id="goals-using-goal-attainment-scaling-gas">Goals using Goal Attainment Scaling (GAS)</h5>
+<p>This goal includes five levels of achievement that can be used to evaluate Dorothy’s progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
 
 <p>🎯 Goal: <em>Walk Dog Outside Once a Week</em></p>
 
@@ -238,25 +241,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p><strong>☛ See <a href="StructureDefinition-pco-goal.html#profile">Person-Centered Goal Profile</a></strong></p>
+<p><strong>☛ See <a href="StructureDefinition-pco-gas-goal-profile.html#profile">Profile: Person-Centered Goal using GAS</a></strong></p>
 
-<p><strong>☛ See <a href="Goal-pcoGoalWalkDogExample.html#root">Example Goal</a></strong></p>
+<p><strong>☛ See <a href="Goal-pcoGoalWalkDogExample.html#root">Example: GAS Goal</a></strong></p>
+
+<h5 id="goals-using-patient-reported-outcome-measures-proms">Goals using Patient-Reported Outcome Measures (PROMs)</h5>
+<p>Dorothy is working with her primary care provider to manage anxiety related to her complex care needs and Dr. Anderson recommends creating a goal measured by the Generalized Anxiety Disorder (GAS-7) assessment questionnaire. Dr. Anderson sets the goal target to be a GAD-7 score &lt; 6, which indicates mild anxiety.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-goal-prom-profile.html#profile">Profile: Person-Centered Goal using PROM</a></strong></p>
+
+<p><strong>☛ See <a href="Goal-pcoGoalAnxietyExample.html#root">Example: PROM Goal for Anxiety</a></strong></p>
 
 <h4 id="person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</h4>
-
 <p>Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy’s health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy’s goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.</p>
 
 <p>If the health coaching role is performed by Dorothy’s primary care physician or other member of that provider’s organization, they also can use a dedicated SMART on FHIR app launched from within their EHR system to record and view Dorothy’s priorities, goals, and progress on outcomes that matter most to her.</p>
 
-<p><strong>☛ See <a href="StructureDefinition-pco-patient-gas-score.html#profile">Goal Attainment Scaling (GAS) score by patient</a></strong></p>
+<h5 id="track-progress-using-using-goal-attainment-scaling-gas">Track progress using using Goal Attainment Scaling (GAS)</h5>
+<p>Dorothy’s mobile app prompts her once each month to record progress on attainment of her goals. For goals using Goal Attainment Scaling (GAS), the app displays a slider where Dorothy can rate herself using the five pre-defined goal attainment levels. Similarly, Dorothy’s health &amp; wellness coach or her primary care doctor can use their PCO apps to rate Dorothy’s progress from their perspectives.</p>
 
-<p><strong>☛ See <a href="StructureDefinition-pco-practitioner-gas-score.html#profile">Goal Attainment Scaling (GAS) score by practitioner</a></strong></p>
+<p><strong>☛ See <a href="StructureDefinition-pco-patient-gas-score.html#profile">Profile: Goal Attainment Scaling (GAS) score by patient</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoGASScorePatientFollowupExample.html#root">Example: GAS score by patient</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoGASScorePractitionerFollowupExample.html#root">Example: GAS score by a practitioner</a></strong></p>
+
+<h5 id="track-progress-using-using-proms">Track progress using using PROMs</h5>
+<p>Dorothy’s mobile app prompts her to complete the GAD-7 anxiety assessment once each month and shares that Observation with the rest of her care team, where they all can track progress on attainment of Dorothy’s PROM goal to achieve a GAD-7 score of less than 6.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-prom-score.html#profile">Profile: PROM progress score</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoPROMScoreAnxietyExample.html#root">Example: PROM score by patient</a></strong></p>
 
 <h4 id="person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</h4>
 
-<p>If the applications used by Dorothy and her health coach are separate from her provider organization’s EHR system, either Dorothy or Maria can export and submit a complete bundle of standardized data to share with her extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
+<p>If the applications used by Dorothy and her health coach are separate from her provider organization’s EHR system, either Dorothy or her health &amp; wellness coach can export and submit a complete bundle of standardized data to share with Dorothy’s extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
 
-<p>This same bundle of person-centered care goals and outcome scores can be submitted to an independent organization that uses these data to compute digital quality measures over a large population of individuals.</p>
+<p>This same bundle of person-centered goals, care plans and outcome scores can be submitted to an independent organization that uses these data to compute digital quality measures over a large population of individuals.</p>
 
 <h3 id="actors">Actors</h3>
 
@@ -329,7 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 21, 2024 16:21+0000">2024-08-21</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 27, 2024 18:37+0000">2024-08-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
