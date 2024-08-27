@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "prom-target-measures",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+  },
+  "extension": [ {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueString": "executable"
+  }, {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueString": "executable"
+  } ],
+  "url": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
+  "name": "PROMTargetMeasures",
+  "title": "PROM Target Measures",
+  "status": "draft",
+  "experimental": false,
+  "description": "Target measure codes used to track progress on patient-reported outcome measures (PROMs).",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "70274-6",
+        "display": "Generalized anxiety disorder 7 item (GAD-7) total score"
+      }, {
+        "code": "44261-6",
+        "display": "Patient health questionnaire 9 item (PHQ-9) total score"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-08-26T16:28:09-06:00",
+    "parameter": [ {
+      "name": "naive",
+      "valueBoolean": true
+    } ],
+    "contains": [ {
+      "system": "http://loinc.org",
+      "code": "70274-6",
+      "display": "Generalized anxiety disorder 7 item (GAD-7) total score"
+    }, {
+      "system": "http://loinc.org",
+      "code": "44261-6",
+      "display": "Patient health questionnaire 9 item (PHQ-9) total score"
+    } ]
+  }
+}

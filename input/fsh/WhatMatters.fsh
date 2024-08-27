@@ -17,19 +17,19 @@ Description: "Assessment observation for one aspect of What Matters Most to a pe
     futureChanges 0..1 MS
   * ^short = "Components representing What Matters rating"
 * component[nowRating]
-  * code = WhatMattersRating#nowRating
+  * code = WhatMattersRating#now-rating
     * ^short = "Where are you now?"
   * insert ValueInteger
 * component[nowReasons]
-  * code = WhatMattersRating#nowReasons
+  * code = WhatMattersRating#now-reasons
     * ^short = "What are the reasons you chose this number?"
   * insert ValueString
 * component[futureRating]
-  * code = WhatMattersRating#futureRating
+  * code = WhatMattersRating#future-rating
     * ^short = "Where would you like to be?"
   * insert ValueInteger
 * component[futureChanges]
-  * code = WhatMattersRating#futureChanges
+  * code = WhatMattersRating#future-changes
     * ^short = "What changes could you make to help you get there?"
   * insert ValueString
 
@@ -50,19 +50,19 @@ Description: "Code system to identify \"What Matters\" rating concepts."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
-* #nowRating "Now Rating"
+* #now-rating "Now Rating"
     "Where are you now?"
-* #nowReasons "Now Reasons"
+* #now-reasons "Now Reasons"
     "What are the reasons you chose this number?"
-* #futureRating "Future Rating"
+* #future-rating "Future Rating"
     "Where would you like to be?"
-* #futureChanges "Future Changes"
+* #future-changes "Future Changes"
     "What changes could you make to help you get there?"
 
-CodeSystem: WhatMattersConcepts
-Id: what-matters-concepts
-Title: "What Matters Concepts"
-Description: "Code system to identify \"What Matters\" concepts, example from the VA Circle of Health."
+CodeSystem: VAWholeHealth
+Id: va-whole-health
+Title: "VA Whole Health Concepts"
+Description: "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
@@ -76,13 +76,13 @@ Description: "Code system to identify \"What Matters\" concepts, example from th
     "Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night’s rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh."
 * #surroundings "Surroundings"
     "Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health."
-* #personalDevelopment "Personal Development"
+* #personal-development "Personal Development"
     "Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life."
-* #spiritSoul "Spirit & Soul"
+* #spirit-and-soul "Spirit & Soul"
     "Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art."
 * #relationships "Family, Friends & Co-Workers"
     "Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that \"fuel\" us and less in relationships that \"drain\" us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider."
-* #professionalCare "Professional Care"
+* #professional-care "Professional Care"
     "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health."
 
 ValueSet: WhatMattersFocusAreas
@@ -90,17 +90,17 @@ Id: what-matters-focus-areas
 Title: "What Matters Focus Areas"
 Description: "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-// * include codes from system WhatMattersConcepts
-* WhatMattersConcepts#body "Moving the Body"
-* WhatMattersConcepts#mind "Power of the Mind"
-* WhatMattersConcepts#nourishment "Food & Drink"
-* WhatMattersConcepts#recharge "Recharge"
-* WhatMattersConcepts#surroundings "Surroundings"
-* WhatMattersConcepts#personalDevelopment "Personal Development"
-* WhatMattersConcepts#spiritSoul "Spirit & Soul"
-* WhatMattersConcepts#relationships "Family, Friends & Co-Workers"
-* WhatMattersConcepts#professionalCare "Professional Care"
+// * include codes from system VAWholeHealth
+* VAWholeHealth#body "Moving the Body"
+* VAWholeHealth#mind "Power of the Mind"
+* VAWholeHealth#nourishment "Food & Drink"
+* VAWholeHealth#recharge "Recharge"
+* VAWholeHealth#surroundings "Surroundings"
+* VAWholeHealth#personal-development "Personal Development"
+* VAWholeHealth#spirit-and-soul "Spirit & Soul"
+* VAWholeHealth#relationships "Family, Friends & Co-Workers"
+* VAWholeHealth#professional-care "Professional Care"
 
 /*
- * TODO: ConceptMap from Circle of Health to PCO Categories.
+ * TODO: ConceptMap between VAWholeHealth amd NCQAGoalDomains.
 */

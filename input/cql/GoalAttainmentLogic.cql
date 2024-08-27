@@ -6,16 +6,19 @@ include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
 codesystem "LOINC": 'http://loinc.org'
-codesystem "PCO Category": 'http://mtnlotus.com/uv/pco/CodeSystem/pco-category-codes-example'
 codesystem "PCO GAS Codes": 'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'
 
 valueset "PCO Categories": 'http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset'
-valueset "Patient Follow-Up GAS Score": 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup-vs'
+valueset "Patient Follow-Up GAS Score": 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup'
+valueset "PROM Target Measures": 'http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures'
 
 code "Goal attainment scaling score": 'goal-attainment-scaling' from "PCO GAS Codes" display 'Goal Attainment Scaling (GAS)'
 
 parameter "Measurement Period" Interval<DateTime>
+    default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
+
 parameter "Follow-Up Interval" Interval<System.Quantity>
+  default Interval[2 weeks, 26 weeks]
 
 context Patient
 
@@ -25,7 +28,9 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoGoalDomains: goal.category in "PCO Categories",
+      pcoCategories: goal.category in "PCO Categories",
+      hasGAS: goal.hasGAS(),
+      hasPROM: goal.hasPROM(),
       carePlans: goal.carePlans()
     }
 
@@ -37,13 +42,14 @@ define CarPlanSummary:
       pcoGoals: carePlan.pcoGoals()
     }
 
-// All FHIR Goals for this patient. Useful for verifying subset matched by "PCO Goals".
+// All FHIR Goals for this patient. Useful while debugging to verify subset matched by "PCO Goals".
 define "All Goals":
   [Goal] goal
 
 /* 
   A "PCO Goal" is any FHIR Goal that has a category in "PCO Categories"
   and has a start date.
+  TODO: or a Goal that addresses a What Matters observation.
 */
 define "PCO Goals":
   [Goal] goal
@@ -71,34 +77,20 @@ define "PCO Goals with GAS and Action Plan":
     "GAS Goals" goal
       where exists goal.carePlans()
 
-// All observations containing a Goal Attainment Scaling (GAS) score.
-define "All GAS Score Observations":
-  [Observation: "Goal attainment scaling score"]
+// Observations containing a PROM score.
+define "PROM Scores":
+  [Observation: "PROM Target Measures"]
 
-/* 
-@description: Returns a list of Observations with a person's baseline GAS scores. 
-A baseline score is recorded less than 2 weeks after its Goal was started.
-*/
-define "GAS Baseline Scores":
-  "GAS Scores" scoreObs
-    let goal: scoreObs.focusGoals().first(),
-      startDate: ToDateTime(goal.start as FHIR.date),
-      baselineInterval: Interval(startDate, startDate + 13 day]
-    where (scoreObs.effective as FHIR.dateTime) during baselineInterval
-
-/* 
-@description: Returns a list of Observations with a person's follow-up GAS scores. 
-A follow-up score is recorded 2 or more weeks after its Goal was started.
-*/
-define "GAS Follow-Up Scores":
-  "GAS Scores"
-    except "GAS Baseline Scores"
-
+// Observations containing a GAS score.
 define "GAS Scores":
   PC.SortAscending("GAS Patient Scores"
     union "GAS Practitioner Scores"
     union "GAS Caregiver Scores"
   )
+
+// All observations containing a Goal Attainment Scaling (GAS) score.
+define "All GAS Score Observations":
+  [Observation: "Goal attainment scaling score"]
 
 // Returns a collection of Observations with a patient's GAS scores.
 define "GAS Patient Scores":
@@ -118,6 +110,27 @@ define "GAS Caregiver Scores":
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
 
+/// Returns true if this Goal has a PROM code in its target.measure
+define fluent function hasPROM(goal Goal):
+  exists (goal.target target
+    where target.measure in "PROM Target Measures"
+  )
+
+// Returns a list of Observation including both GAS and PROM scores
+define fluent function pcoScores(goal Goal):
+  goal.gasScores()
+    union goal.promScores()
+
+// Returns a list of Observation including only GAS scores
+define fluent function gasScores(goal Goal):
+  "GAS Scores" score
+    where score.focusGoals() contains goal
+
+// Returns a list of Observation including only PROM scores
+define fluent function promScores(goal Goal):
+  "PROM Scores" score
+    where score.focusGoals() contains goal
+
 // Returns a list of PCO Goals that are included in this CarePlan.
 define fluent function pcoGoals(carePlan CarePlan):
   flatten( carePlan.goal goalRef
@@ -130,10 +143,46 @@ define fluent function pcoGoals(carePlan CarePlan):
 define fluent function focusGoals(obs Observation):
   obs.focus.resolveGoals()
 
-define fluent function gasScores(goal Goal):
-  "GAS Scores" score
-    where score.focusGoals() contains goal
+// PCO Goals whose startDate falls within the Measurement Period
+define "PCO Goals During Measurement Period":
+  "PCO Goals" goal
+    where (ToDateTime(goal.start as FHIR.date) during "Measurement Period")
+      and (goal.hasGAS() or goal.hasPROM())
+      and exists goal.carePlans()
 
-define fluent function gasFollowUpScores(goal Goal):
-  "GAS Follow-Up Scores" score
-    where score.focusGoals() contains goal
+/* 
+Baseline Scares are PCO score observations taken during the Measurement Period,
+but before the follow-up period for its Goal. Default follow-up period is 
+2 weeks to 6 months following the goal startDate.
+*/
+define "Baseline Scores Before Follow-Up Period":
+  flatten( "PCO Goals During Measurement Period" goal
+    let pcoScores: goal.pcoScores()
+      return pcoScores score 
+        let scoreDate: score.effective as FHIR.dateTime
+        where (scoreDate during "Measurement Period")
+          and (scoreDate before start of "Follow-Up Interval For"(goal))
+  )
+
+/* 
+Follow-Up Scares are PCO score observations taken during the Measurement Period,
+and during the follow-up period for its Goal. Default follow-up period is 
+2 weeks to 6 months following the goal startDate.
+*/
+define "Follow-Up Scores During Measurement Period":
+  flatten( "PCO Goals During Measurement Period" goal
+    let pcoScores: goal.pcoScores()
+      return pcoScores score 
+        let scoreDate: score.effective as FHIR.dateTime
+        where scoreDate during "Measurement Period"
+          and scoreDate during "Follow-Up Interval For"(goal)
+  )
+
+/*
+Computes the follow-up interval for a Goal based on this measure's "Follow-Up Interval" parameter.
+@return Interval<DateTime>
+*/
+define function "Follow-Up Interval For" (goal Goal):
+  goal goal
+    let startDate: ToDateTime(goal.start as FHIR.date)
+      return Interval(startDate + start of "Follow-Up Interval", startDate + end of "Follow-Up Interval")

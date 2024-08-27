@@ -37,8 +37,8 @@ Description: "Temporary code system for GAS codes until publication by LOINC. Al
 * #practitioner-gas-less-than-expected "Less than expected"
 * #practitioner-gas-much-less-than-expected "Much less than expected"
 
-ValueSet: PatientGASFollowupVS
-Id: patient-gas-followup-vs
+ValueSet: PatientGASFollowup
+Id: patient-gas-followup
 Title: "Patient Follow-Up GAS Score"
 Description: "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling."
 * ^experimental = false
@@ -48,8 +48,8 @@ Description: "The patient follow-up score indicates how the patient rated their 
 * PCOGASCodesTemporary#patient-gas-less-than-expected "Less than expected"
 * PCOGASCodesTemporary#patient-gas-much-less-than-expected "Much less than expected"
 
-ValueSet: CaregiverGASFollowupVS
-Id: caregiver-gas-followup-vs
+ValueSet: CaregiverGASFollowup
+Id: caregiver-gas-followup
 Title: "Caregiver Follow-Up GAS Score"
 Description: "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling."
 * ^experimental = false
@@ -59,8 +59,8 @@ Description: "The caregiver follow-up score indicates how the caregiver rated ei
 * PCOGASCodesTemporary#caregiver-gas-less-than-expected "Less than expected"
 * PCOGASCodesTemporary#caregiver-gas-much-less-than-expected "Much less than expected"
 
-ValueSet: PractitionerGASFollowupVS
-Id: practitioner-gas-followup-vs
+ValueSet: PractitionerGASFollowup
+Id: practitioner-gas-followup
 Title: "Practitioner Follow-Up GAS Score"
 Description: "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."
 * ^experimental = false
@@ -69,3 +69,11 @@ Description: "The practitioner follow-up score indicates how the practitioner ra
 * PCOGASCodesTemporary#practitioner-gas-expected-outcome "Expected outcome"
 * PCOGASCodesTemporary#practitioner-gas-less-than-expected "Less than expected"
 * PCOGASCodesTemporary#practitioner-gas-much-less-than-expected "Much less than expected"
+
+ValueSet: PROMTargetMeasures
+Id: prom-target-measures
+Title: "PROM Target Measures"
+Description: "Target measure codes used to track progress on patient-reported outcome measures (PROMs)."
+* ^experimental = false
+* $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score"
+* $LNC#44261-6 "Patient health questionnaire 9 item (PHQ-9) total score"

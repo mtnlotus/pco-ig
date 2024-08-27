@@ -2,10 +2,10 @@
  * Terminology used for example bindings in this specification.
 */
 
-CodeSystem: PCOCategoryCodesExample
-Id: pco-category-codes-example
-Title: "Category Code Examples"
-Description: "Example code system to identify the category for PCO resources."
+CodeSystem: NCQAGoalDomains
+Id: ncqa-goal-domains
+Title: "NCQA Goal Domains"
+Description: "NCQA goal domain codes used to identify the category for PCO resources."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
@@ -39,16 +39,25 @@ Id: pco-category-valueset
 Title: "PCO Categories"
 Description: "Example value set to identify the category for PCO resources."
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-// * include codes from system PCOCategoryCodesExample
-* PCOCategoryCodesExample#housing "Housing"
-* PCOCategoryCodesExample#access-to-services "Access To Services"
-* PCOCategoryCodesExample#caregiver-needs "Caregiver Needs"
-* PCOCategoryCodesExample#end-of-life "End Of Life"
-* PCOCategoryCodesExample#independence "Independence"
-* PCOCategoryCodesExample#legal "Legal"
-* PCOCategoryCodesExample#managing-conditions "Managing Conditions"
-* PCOCategoryCodesExample#medication-management "Medication Management"
-* PCOCategoryCodesExample#improving-health-and-wellness "Improving Health And Wellness"
-* PCOCategoryCodesExample#physical-function "Physical Function"
-* PCOCategoryCodesExample#social-functioning "Social Functioning"
-* PCOCategoryCodesExample#emotional-and-mental-health "Emotional And Mental Health"
+// * include codes from system NCQAGoalDomains
+* NCQAGoalDomains#housing "Housing"
+* NCQAGoalDomains#access-to-services "Access To Services"
+* NCQAGoalDomains#caregiver-needs "Caregiver Needs"
+* NCQAGoalDomains#end-of-life "End Of Life"
+* NCQAGoalDomains#independence "Independence"
+* NCQAGoalDomains#legal "Legal"
+* NCQAGoalDomains#managing-conditions "Managing Conditions"
+* NCQAGoalDomains#medication-management "Medication Management"
+* NCQAGoalDomains#improving-health-and-wellness "Improving Health And Wellness"
+* NCQAGoalDomains#physical-function "Physical Function"
+* NCQAGoalDomains#social-functioning "Social Functioning"
+* NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
+* VAWholeHealth#body "Moving the Body"
+* VAWholeHealth#mind "Power of the Mind"
+* VAWholeHealth#nourishment "Food & Drink"
+* VAWholeHealth#recharge "Recharge"
+* VAWholeHealth#surroundings "Surroundings"
+* VAWholeHealth#personal-development "Personal Development"
+* VAWholeHealth#spirit-and-soul "Spirit & Soul"
+* VAWholeHealth#relationships "Family, Friends & Co-Workers"
+* VAWholeHealth#professional-care "Professional Care"

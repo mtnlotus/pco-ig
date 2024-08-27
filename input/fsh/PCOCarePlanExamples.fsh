@@ -10,8 +10,8 @@ Usage: #example
 * status = #active
 * intent = #plan
 * subject = Reference(pcoPatientJones)
-* category[0] = PCOCategoryCodesExample#physical-function "Physical Function"
-* category[1] = PCOCategoryCodesExample#independence "Independence"
+* category[0] = NCQAGoalDomains#physical-function "Physical Function"
+* category[1] = NCQAGoalDomains#independence "Independence"
 * goal = Reference(pcoGoalWalkDogExample)
 * activity[0].reference = Reference(pcoWalkOutsideActionStep)
 * activity[1].reference = Reference(pcoPhysicalTherapyReferral)
@@ -40,7 +40,7 @@ Usage: #example
 
 Instance: pcoPhysicalTherapyReferral
 InstanceOf: USCoreServiceRequestProfile
-Title: "Care Plan: Clinical action step"
+Title: "Care Plan: Clinical action step for PT"
 Description: "Care Plan activity: Physical therapy to relieve pain related to walking"
 Usage: #example
 * status = #active

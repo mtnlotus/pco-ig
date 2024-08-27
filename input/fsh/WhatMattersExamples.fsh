@@ -8,7 +8,7 @@ Usage: #example
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:10:00Z"
-* code = WhatMattersConcepts#body "Moving the Body"
+* code = VAWholeHealth#body "Moving the Body"
 * component[nowRating].valueInteger = 2
 * component[nowReasons].valueString = "My knee pain prevents me from walking."
 * component[futureRating].valueInteger = 7
@@ -22,7 +22,7 @@ Usage: #example
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:20:00Z"
-* code = WhatMattersConcepts#relationships "Family, Friends & Co-Workers"
+* code = VAWholeHealth#relationships "Family, Friends & Co-Workers"
 * component[nowRating].valueInteger = 3
 * component[nowReasons].valueString = "I am still recovering from isolation during COVID and now physical difficulty leaving my home."
 * component[futureRating].valueInteger = 9

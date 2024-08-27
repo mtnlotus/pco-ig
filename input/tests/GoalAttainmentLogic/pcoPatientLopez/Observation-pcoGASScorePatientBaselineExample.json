@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "pcoGASScorePatientBaselineExample",
+  "performer": [
+    {
+      "reference": "Patient/pcoPatientJones"
+    }
+  ],
+  "focus": [
+    {
+      "reference": "Goal/pcoGoalWalkDogExample"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "goal-attainment-scaling",
+        "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/pcoPatientJones"
+  },
+  "effectiveDateTime": "2024-04-03T10:15:00Z",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "patient-gas-less-than-expected",
+        "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+        "display": "Less than expected"
+      }
+    ]
+  }
+}

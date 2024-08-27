@@ -2,7 +2,7 @@ Alias: $GoalAchievement = http://terminology.hl7.org/CodeSystem/goal-achievement
 
 Instance: pcoPatientJones
 InstanceOf: USCorePatientProfile
-Title: "Example Patient" 
+Title: "Example Patient Dorothy" 
 Description: "Dorothy Jones"
 Usage: #example
 * identifier[0].use = #official
@@ -42,13 +42,13 @@ Usage: #example
 * gender = #male
 
 Instance: pcoGoalPainLevelExample
-InstanceOf: PCOGoal
-Title: "Goal without GAS"
-Description: "Person-centered goal without attainment scaling"
+InstanceOf: PCOGoalProfile
+Title: "Goal without GAS or PROM"
+Description: "Person-centered goal without attainment scaling or PROM"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category = PCOCategoryCodesExample#physical-function "Physical Function"
+* category = NCQAGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-02-15"
@@ -56,13 +56,13 @@ Usage: #example
 * description.text = "Maintain pain level below 5 while walking"
 
 Instance: pcoGoalWalkDogExample
-InstanceOf: PCOGoal
+InstanceOf: PCOGoalAttainmentScaleProfile
 Title: "Goal with GAS"
 Description: "Person-centered goal with attainment scaling extensions"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category = PCOCategoryCodesExample#physical-function "Physical Function"
+* category = NCQAGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-04-03"
