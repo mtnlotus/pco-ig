@@ -85,6 +85,10 @@ Description: "Code system to identify \"What Matters\" concepts from the VA Whol
 * #professional-care "Professional Care"
     "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health."
 
+/*
+ * TODO: ConceptMap between VAWholeHealth amd NCQAGoalDomains.
+*/
+
 ValueSet: WhatMattersFocusAreas
 Id: what-matters-focus-areas
 Title: "What Matters Focus Areas"
@@ -100,7 +104,11 @@ Description: "Example value set to identify focus areas from the VA Circle of He
 * VAWholeHealth#spirit-and-soul "Spirit & Soul"
 * VAWholeHealth#relationships "Family, Friends & Co-Workers"
 * VAWholeHealth#professional-care "Professional Care"
-
-/*
- * TODO: ConceptMap between VAWholeHealth amd NCQAGoalDomains.
-*/
+* MtnLotusConcepts#body "Healthy Body"
+* MtnLotusConcepts#mind "Healthy Mind"
+* MtnLotusConcepts#nourishment "Nourishment"
+* MtnLotusConcepts#sleep "Restful Sleep"
+* MtnLotusConcepts#physical-environment "Physical Environment"
+* MtnLotusConcepts#fulfillment-purpose "Fulfillment & Purpose"
+* MtnLotusConcepts#creativity-play "Creativity & Play"
+* MtnLotusConcepts#community "Community"
