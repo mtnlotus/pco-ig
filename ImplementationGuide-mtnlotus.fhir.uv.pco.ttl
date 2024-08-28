@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-28T01:59:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-08-28T17:18:00+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -69,6 +69,30 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.us.core" ] ;
      fhir:version [ fhir:v "6.1.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_cpg" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.cpg" ] ;
+     fhir:version [ fhir:v "1.0.0" ]
+  ] [
+     fhir:id [ fhir:v "fhir_cqf_common" ] ;
+     fhir:uri [
+       fhir:v "http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/guides/cqf/common/ImplementationGuide/fhir.cqf.common>
+     ] ;
+     fhir:packageId [ fhir:v "fhir.cqf.common" ] ;
+     fhir:version [ fhir:v "4.0.1" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_us_cqfmeasures" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.us.cqfmeasures" ] ;
+     fhir:version [ fhir:v "4.0.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1326,6 +1350,9 @@
        ] )
      ] ;
      fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources/device" ]
+     ] [
        fhir:code [ fhir:v "path-resource" ] ;
        fhir:value [ fhir:v "input/resources/library" ]
      ] [
