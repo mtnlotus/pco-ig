@@ -93,6 +93,7 @@ ValueSet: WhatMattersFocusAreas
 Id: what-matters-focus-areas
 Title: "What Matters Focus Areas"
 Description: "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."
+* ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
 // * include codes from system VAWholeHealth
 * VAWholeHealth#body "Moving the Body"

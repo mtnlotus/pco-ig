@@ -38,6 +38,7 @@ ValueSet: PCOCategoryValueSet
 Id: pco-category-valueset
 Title: "PCO Categories"
 Description: "Example value set to identify the category for PCO resources."
+* ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
 // * include codes from system NCQAGoalDomains
 * NCQAGoalDomains#housing "Housing"
