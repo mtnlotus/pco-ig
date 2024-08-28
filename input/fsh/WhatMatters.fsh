@@ -73,7 +73,7 @@ Description: "Code system to identify \"What Matters\" concepts from the VA Whol
 * #nourishment "Food & Drink"
     "What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink."
 * #recharge "Recharge"
-    "Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night’s rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh."
+    "Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night's rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh."
 * #surroundings "Surroundings"
     "Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health."
 * #personal-development "Personal Development"
@@ -92,7 +92,7 @@ Description: "Code system to identify \"What Matters\" concepts from the VA Whol
 ValueSet: WhatMattersFocusAreas
 Id: what-matters-focus-areas
 Title: "What Matters Focus Areas"
-Description: "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."
+Description: "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
 // * include codes from system VAWholeHealth
 * VAWholeHealth#body "Moving the Body"
