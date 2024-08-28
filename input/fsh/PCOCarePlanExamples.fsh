@@ -10,8 +10,8 @@ Usage: #example
 * status = #active
 * intent = #plan
 * subject = Reference(pcoPatientJones)
-* category[0] = NCQAGoalDomains#physical-function "Physical Function"
-* category[1] = NCQAGoalDomains#independence "Independence"
+* category[pcoCategory][0] = NCQAGoalDomains#physical-function "Physical Function"
+* category[pcoCategory][1] = NCQAGoalDomains#independence "Independence"
 * goal = Reference(pcoGoalWalkDogExample)
 * activity[0].reference = Reference(pcoWalkOutsideActionStep)
 * activity[1].reference = Reference(pcoPhysicalTherapyReferral)

@@ -19,7 +19,7 @@ Description: "Person-centered goal with a PROM outcome target for GAD-7 score."
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category = VAWholeHealth#mind "Power of the Mind"
+* category[pcoCategory] = VAWholeHealth#mind "Power of the Mind"
 * subject = Reference(pcoPatientLopez)
 * expressedBy = Reference(pcoPractitionerAnderson)
 * startDate = "2024-08-11"
@@ -50,8 +50,8 @@ Usage: #example
 * status = #active
 * intent = #plan
 * subject = Reference(pcoPatientLopez)
-* category[0] = VAWholeHealth#mind "Power of the Mind"
-* category[1] = NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
+* category[pcoCategory][0] = VAWholeHealth#mind "Power of the Mind"
+* category[pcoCategory][1] = NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
 * goal = Reference(pcoGoalAnxietyExample)
 * activity[0].reference = Reference(pcoMindfulnessSupportProgram)
 * period.start = "2024-08-11"

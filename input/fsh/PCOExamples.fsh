@@ -48,7 +48,7 @@ Description: "Person-centered goal without attainment scaling or PROM"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category = NCQAGoalDomains#physical-function "Physical Function"
+* category[pcoCategory] = NCQAGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-02-15"
@@ -62,7 +62,7 @@ Description: "Person-centered goal with attainment scaling extensions"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category = NCQAGoalDomains#physical-function "Physical Function"
+* category[pcoCategory] = NCQAGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-04-03"

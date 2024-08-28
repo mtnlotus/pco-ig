@@ -6,8 +6,11 @@ RuleSet: PCOCategory
   * ^slicing.rules = #open
 * category contains
     pcoCategory 0..* MS
-* category[pcoCategory] from PCOCategoryValueSet (preferred)
+* category[pcoCategory] from PCOCategoryValueSet (required)
   * ^short = "Person-Centered Outcome category"
+// Include same binding description as in US Core profiles.
+* category[pcoCategory]
+  * ^binding.description = "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"
 
 Profile: PCOGoalProfile
 Parent: USCoreGoalProfile
@@ -17,7 +20,8 @@ Description: "Person-centered goal focused on what matters most to an individual
 * insert PCOCategory
 * expressedBy 0..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
-* startDate 1..1 MS
+* start[x] 1..1 MS
+* start[x] only date
 * addresses 0..* MS
   * ^short = "What Matters Assessment or Condition"
 * addresses only Reference(WhatMattersAssessment or USCoreConditionProblemsHealthConcernsProfile)
