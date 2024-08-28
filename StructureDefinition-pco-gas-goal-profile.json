@@ -10,7 +10,7 @@
   "name" : "PCOGoalAttainmentScaleProfile",
   "title" : "Person-Centered Goal Attainment",
   "status" : "draft",
-  "date" : "2024-08-28T19:37:38+00:00",
+  "date" : "2024-08-28T21:15:57+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -635,7 +635,8 @@
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
-        "strength" : "preferred",
+        "strength" : "required",
+        "description" : "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
         "valueSet" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"
       },
       "mapping" : [{
@@ -802,64 +803,6 @@
         "valueBoolean" : true
       }],
       "path" : "Goal.start[x]",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "type",
-          "path" : "$this"
-        }],
-        "ordered" : false,
-        "rules" : "closed"
-      },
-      "short" : "(USCDI) When goal pursuit begins",
-      "definition" : "The date or event after which the goal should begin being pursued.",
-      "requirements" : "Goals can be established prior to there being an intention to start pursuing them; e.g. Goals for post-surgical recovery established prior to surgery.",
-      "min" : 1,
-      "max" : "1",
-      "base" : {
-        "path" : "Goal.start[x]",
-        "min" : 0,
-        "max" : "1"
-      },
-      "type" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-          "valueBoolean" : true
-        }],
-        "code" : "date"
-      }],
-      "constraint" : [{
-        "key" : "ele-1",
-        "severity" : "error",
-        "human" : "All FHIR elements must have a @value or children",
-        "expression" : "hasValue() or (children().count() > id.count())",
-        "xpath" : "@value|f:*|h:div",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
-      }],
-      "mustSupport" : true,
-      "isModifier" : false,
-      "isSummary" : true,
-      "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "GoalStartEvent"
-        }],
-        "strength" : "example",
-        "description" : "Codes describing events that can trigger the initiation of a goal.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/goal-start-event"
-      },
-      "mapping" : [{
-        "identity" : "w5",
-        "map" : "FiveWs.planned"
-      }]
-    },
-    {
-      "id" : "Goal.start[x]:startDate",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-        "valueBoolean" : true
-      }],
-      "path" : "Goal.start[x]",
-      "sliceName" : "startDate",
       "short" : "(USCDI) When goal pursuit begins",
       "definition" : "The date or event after which the goal should begin being pursued.",
       "requirements" : "Goals can be established prior to there being an intention to start pursuing them; e.g. Goals for post-surgical recovery established prior to surgery.",

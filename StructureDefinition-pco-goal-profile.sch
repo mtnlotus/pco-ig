@@ -9,4 +9,10 @@
     you may need to use this schematron fragment to build a, 
     single schematron that validates contained resources (if you have any) 
   -->
+  <sch:pattern>
+    <sch:title>f:Goal</sch:title>
+    <sch:rule context="f:Goal">
+      <sch:assert test="count(f:start[x]) &gt;= 1">start[x]: minimum cardinality of 'start[x]' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>
