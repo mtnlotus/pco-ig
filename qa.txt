@@ -1,9 +1,9 @@
 PCO : Validation Results
 =========================================
 
-err = 28, warn = 32, info = 6
+err = 26, warn = 30, info = 6
 IG Publisher Version: 1.6.22
-Generated Wed Aug 28 21:18:03 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = http://mtnlotus.com/uv/pco)
+Generated Wed Aug 28 22:26:28 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.1.0 (canonical = http://mtnlotus.com/uv/pco)
  Build Errors : 0 / 23 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 0 / 0 / 2
@@ -44,10 +44,10 @@ Generated Wed Aug 28 21:18:03 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-caregiver-gas-followup : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-patient-gas-followup : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-category-valueset : 0 / 1 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-category-valueset : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-practitioner-gas-followup : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-prom-target-measures : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-what-matters-focus-areas : 0 / 1 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-what-matters-focus-areas : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/device/cqf-tooling : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 0 / 0 / 2
@@ -55,8 +55,8 @@ Generated Wed Aug 28 21:18:03 UTC 2024. FHIR version 4.0.1 for mtnlotus.fhir.uv.
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/PCOCommon : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 1 / 1 / 9
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 1 / 1 / 9
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 0 / 1 / 9
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 0 / 1 / 9
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7 : 10 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9 : 13 / 0 / 1
 </table>
@@ -131,11 +131,9 @@ WARNING: StructureDefinition.where(url = 'http://mtnlotus.com/uv/pco/StructureDe
 == fsh-generated/resources/ValueSet-caregiver-gas-followup.json ==
 == fsh-generated/resources/ValueSet-patient-gas-followup.json ==
 == fsh-generated/resources/ValueSet-pco-category-valueset.json ==
-WARNING: ValueSet/pco-category-valueset: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-practitioner-gas-followup.json ==
 == fsh-generated/resources/ValueSet-prom-target-measures.json ==
 == fsh-generated/resources/ValueSet-what-matters-focus-areas.json ==
-WARNING: ValueSet/what-matters-focus-areas: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == input/resources/device/cqf-tooling.json ==
 == input/resources/library/FHIRHelpers.json ==
 ERROR: Library.where(url = 'http://hl7.org/fhir/Library/FHIRHelpers'): Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers.json - the canonical URL (http://mtnlotus.com/uv/pco/Library/FHIRHelpers) does not match the URL (http://hl7.org/fhir/Library/FHIRHelpers)
@@ -148,12 +146,10 @@ ERROR: /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers: URL 
 == input/resources/library/WhatMattersLogic.json ==
 == input/resources/measure/Measure-GoalFollowUpMeasure.json ==
 WARNING: Measure/GoalFollowUpMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)
-ERROR: Measure/GoalFollowUpMeasure: Measure: Constraint failed: cmp-2: 'Scoring must be specified at the root, or on each group'
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/resources/measure/Measure-GoalIdentificationMeasure.json ==
 WARNING: Measure/GoalIdentificationMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)
-ERROR: Measure/GoalIdentificationMeasure: Measure: Constraint failed: cmp-2: 'Scoring must be specified at the root, or on each group'
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/resources/questionnaire/Questionnaire-GAD7.json ==
