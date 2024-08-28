@@ -26,8 +26,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
+      "StructureDefinition-pco-patient-gas-score.html" : "Patient Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
@@ -79,7 +79,10 @@
       "name" : "WhatMattersFocusAreas",
       "title" : "What Matters Focus Areas",
       "description" : "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA’s approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals.",
-      "systems" : ["http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"],
+      "systems" : [
+        "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
+        "http://mtnlotus.com/uv/pco/CodeSystem/mtnlotus-concepts"
+      ],
       "uses" : {
       },
       "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment"

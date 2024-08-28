@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-08-28T17:18:00+00:00",
+  "date" : "2024-08-28T19:37:38+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -94,72 +94,6 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Bundle/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "DiagnosticReport/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Goal/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Observation/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Patient/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "ServiceRequest/*"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -461,72 +395,6 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Bundle/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "DiagnosticReport/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Goal/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Observation/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "Patient/*"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
-        "valueString" : "ServiceRequest/*"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -916,6 +784,17 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Device"
+      }],
+      "reference" : {
+        "reference" : "Device/cqf-tooling"
+      },
+      "name" : "cqf-tooling",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -1082,6 +961,18 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
+        "reference" : "CodeSystem/mtnlotus-concepts"
+      },
+      "name" : "My Lotus Lifestyle Concepts",
+      "description" : "Code system to identify \"What Matters\" concepts from Mountain Lotus WellBeing.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
         "reference" : "CodeSystem/ncqa-goal-domains"
       },
       "name" : "NCQA Goal Domains",
@@ -1180,7 +1071,7 @@
         "reference" : "StructureDefinition/pco-care-plan"
       },
       "name" : "Person-Centered Care Plan",
-      "description" : "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan’s goals and desired outcomes. A plan SHOULD address the person’s stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person.",
+      "description" : "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person.",
       "exampleBoolean" : false
     },
     {

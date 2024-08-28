@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.41"}
-    h3,h4,h5,h6{--heading-prefix:"2.41"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.42"}
+    h3,h4,h5,h6{--heading-prefix:"2.42"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -179,6 +179,10 @@
 
 &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation">Observation</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;pcoPROMScoreAnxietyExample&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Observation pcoPROMScoreAnxietyExample&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;pcoPROMScoreAnxietyExample&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcpcoPROMScoreAnxietyExample&quot;&gt; &lt;/a&gt;&lt;a name=&quot;pcoPROMScoreAnxietyExample-en-US&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}&quot;&gt;Survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=&quot;Codes:{http://loinc.org 70274-6}&quot;&gt;Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-pcoPatientLopez.html&quot;&gt;Camila Lopez  Female, DoB: 1959-07-16 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1ge3 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=&quot;Goal-pcoGoalAnxietyExample.html&quot;&gt;Goal: lifecycleStatus = active; achievementStatus = In Progress; category = Power of the Mind; description = ; start[x] = 2024-08-11&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-09-19 13:15:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a href=&quot;Patient-pcoPatientLopez.html&quot;&gt;Camila Lopez  Female, DoB: 1959-07-16 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1ge3 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 10 score&lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt; (Details: UCUM  code{score} = '{score}')&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;final&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
@@ -192,7 +196,7 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;70274-6&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Generalized anxiety disorder 7 item (GAD-7) total score&quot;/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]&quot;/&gt;
     &lt;/coding&gt;
   &lt;/code&gt;
   &lt;<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>&gt;<a href="Patient-pcoPatientLopez.html" style="color: Maroon">&#x1F517;</a> 
@@ -235,7 +239,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 28, 2024 17:18+0000">2024-08-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 28, 2024 19:37+0000">2024-08-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

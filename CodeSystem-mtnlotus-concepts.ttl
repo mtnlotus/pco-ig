@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mtnlotus.com/uv/pco/CodeSystem/mtnlotus-concepts> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "mtnlotus-concepts"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mtnlotus-concepts</b></p><a name=\"mtnlotus-concepts\"> </a><a name=\"hcmtnlotus-concepts\"> </a><a name=\"mtnlotus-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://mtnlotus.com/uv/pco/CodeSystem/mtnlotus-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">body<a name=\"mtnlotus-concepts-body\"> </a></td><td>Healthy Body</td><td>Do you incorporate movement into your life in ways that meet your individual needs, is enjoyable and sustainable?  Do you feel strong, flexible, balanced and happy?</td></tr><tr><td style=\"white-space:nowrap\">mind<a name=\"mtnlotus-concepts-mind\"> </a></td><td>Healthy Mind</td><td>Are you able to adapt to the stress of everyday life?  Do you feel calm and content?</td></tr><tr><td style=\"white-space:nowrap\">nourishment<a name=\"mtnlotus-concepts-nourishment\"> </a></td><td>Nourishment</td><td>Do you use food to fuel your mind and body?</td></tr><tr><td style=\"white-space:nowrap\">sleep<a name=\"mtnlotus-concepts-sleep\"> </a></td><td>Restful Sleep</td><td>Does the quality and quantity of your sleep feel restorative and restful?</td></tr><tr><td style=\"white-space:nowrap\">physical-environment<a name=\"mtnlotus-concepts-physical-environment\"> </a></td><td>Physical Environment</td><td>Does your physical environment support your overall health and wellbeing?</td></tr><tr><td style=\"white-space:nowrap\">fulfillment-purpose<a name=\"mtnlotus-concepts-fulfillment-purpose\"> </a></td><td>Fulfillment &amp; Purpose</td><td>Do you feel a sense of fulfillment and purpose in your life?</td></tr><tr><td style=\"white-space:nowrap\">creativity-play<a name=\"mtnlotus-concepts-creativity-play\"> </a></td><td>Creativity &amp; Play</td><td>Do you make time for things that are inspiring and/or make your heart sing?</td></tr><tr><td style=\"white-space:nowrap\">community<a name=\"mtnlotus-concepts-community\"> </a></td><td>Community</td><td>Do you have deep and meaningful relationships with people or pets in your life and/or community?</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/mtnlotus-concepts"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "MtnLotusConcepts"] ; # 
+  fhir:title [ fhir:v "My Lotus Lifestyle Concepts"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-28T19:37:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://mtnlotus.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code system to identify \"What Matters\" concepts from Mountain Lotus WellBeing."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Copyright 2024 Mountain Lotus WellBeing LLC.  All rights reserved."] ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "8"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "body" ] ;
+     fhir:display [ fhir:v "Healthy Body" ] ;
+     fhir:definition [ fhir:v "Do you incorporate movement into your life in ways that meet your individual needs, is enjoyable and sustainable?  Do you feel strong, flexible, balanced and happy?" ]
+  ] [
+     fhir:code [ fhir:v "mind" ] ;
+     fhir:display [ fhir:v "Healthy Mind" ] ;
+     fhir:definition [ fhir:v "Are you able to adapt to the stress of everyday life?  Do you feel calm and content?" ]
+  ] [
+     fhir:code [ fhir:v "nourishment" ] ;
+     fhir:display [ fhir:v "Nourishment" ] ;
+     fhir:definition [ fhir:v "Do you use food to fuel your mind and body?" ]
+  ] [
+     fhir:code [ fhir:v "sleep" ] ;
+     fhir:display [ fhir:v "Restful Sleep" ] ;
+     fhir:definition [ fhir:v "Does the quality and quantity of your sleep feel restorative and restful?" ]
+  ] [
+     fhir:code [ fhir:v "physical-environment" ] ;
+     fhir:display [ fhir:v "Physical Environment" ] ;
+     fhir:definition [ fhir:v "Does your physical environment support your overall health and wellbeing?" ]
+  ] [
+     fhir:code [ fhir:v "fulfillment-purpose" ] ;
+     fhir:display [ fhir:v "Fulfillment & Purpose" ] ;
+     fhir:definition [ fhir:v "Do you feel a sense of fulfillment and purpose in your life?" ]
+  ] [
+     fhir:code [ fhir:v "creativity-play" ] ;
+     fhir:display [ fhir:v "Creativity & Play" ] ;
+     fhir:definition [ fhir:v "Do you make time for things that are inspiring and/or make your heart sing?" ]
+  ] [
+     fhir:code [ fhir:v "community" ] ;
+     fhir:display [ fhir:v "Community" ] ;
+     fhir:definition [ fhir:v "Do you have deep and meaningful relationships with people or pets in your life and/or community?" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

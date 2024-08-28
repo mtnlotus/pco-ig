@@ -8,6 +8,10 @@
 <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "pcoPatientJones"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient pcoPatientJones</b></p><a name=\"pcoPatientJones\"> </a><a name=\"hcpcoPatientJones\"> </a><a name=\"pcoPatientJones-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</p><hr/></div>"
+  ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
      fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;

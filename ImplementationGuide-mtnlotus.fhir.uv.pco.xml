@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-08-28T17:18:00+00:00"/>
+  <date value="2024-08-28T19:37:38+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -82,54 +82,6 @@
       </extension>
       <extension url="value">
         <valueString value="ci-build"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Bundle/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="DiagnosticReport/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Goal/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Observation/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Patient/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="ServiceRequest/*"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -349,54 +301,6 @@
       </extension>
       <extension url="value">
         <valueString value="ci-build"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Bundle/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="DiagnosticReport/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Goal/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Observation/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="Patient/*"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="no-narrative"/>
-      </extension>
-      <extension url="value">
-        <valueString value="ServiceRequest/*"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -700,6 +604,16 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Device"/>
+      </extension>
+      <reference>
+        <reference value="Device/cqf-tooling"/>
+      </reference>
+      <name value="cqf-tooling"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -852,6 +766,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/mtnlotus-concepts"/>
+      </reference>
+      <name value="My Lotus Lifestyle Concepts"/>
+      <description value="Code system to identify &quot;What Matters&quot; concepts from Mountain Lotus WellBeing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/ncqa-goal-domains"/>
       </reference>
       <name value="NCQA Goal Domains"/>
@@ -942,7 +867,7 @@
         <reference value="StructureDefinition/pco-care-plan"/>
       </reference>
       <name value="Person-Centered Care Plan"/>
-      <description value="A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan’s goals and desired outcomes. A plan SHOULD address the person’s stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person."/>
+      <description value="A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

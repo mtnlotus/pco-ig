@@ -130,11 +130,6 @@
         
 
         
-            <tr>
-                <th scope="row"><b>Status: </b></th>
-                <td style="padding-left: 4px;">draft</td>
-            </tr>
-        
 
         
 
@@ -657,7 +652,7 @@
                                                 
                                                     
                                                         <p style="margin-bottom: 5px;">
-                                                            <span>increase </span>
+                                                            <span>Increased score indicates improvement </span>
                                                         </p>
                                                     
                                                 
@@ -2275,7 +2270,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
   <version value="0.1.0"/>
   <name value="GoalIdentificationMeasure"/>
   <title value="Person-Centered Goal Identification"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <date value="2024-08-27T18:09:14+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
@@ -2342,14 +2337,14 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       </valueCodeableConcept>
     </extension>
     <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-rateAggregation">
-      <valueCode value="None"/>
+      <valueString value="None"/>
     </extension>
     <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-improvementNotation">
       <valueCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/measure-improvement-notation"/>
-          <code value="decrease"/>
-          <display value="increase"/>
+          <code value="increase"/>
+          <display value="Increased score indicates improvement"/>
         </coding>
       </valueCodeableConcept>
     </extension>
