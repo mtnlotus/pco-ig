@@ -26,12 +26,15 @@ jobs:
 
       # Increate Java heap size for publisher
       - name: Set Java heap size
-        run: export _JAVA_OPTIONS="$JAVA_TOOL_OPTIONS -Xmx5120m"
+        run: export _JAVA_OPTIONS="$JAVA_TOOL_OPTIONS -Xmx5G"
 
       # Using this action: https://github.com/qligier/fhir-ig-action
       - name: Generate Implementation Guide (IG)
         # uses: qligier/fhir-ig-action@v0.3.0
         uses: mtnlotus/fhir-ig-action@v0.3.1
+        with:
+          ig-publisher: "latest"
+          sushi: "latest"
 
       # - name: Install publisher
       #   run: |

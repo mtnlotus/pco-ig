@@ -25,7 +25,7 @@ Usage: #example
 * startDate = "2024-08-11"
 * target.dueDate = "2024-12-31"
 * description.text = "Reduce to mild anxiety level score"
-* target.measure = $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score"
+* target.measure = $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"
 * target.detailQuantity.comparator = #<
 * target.detailQuantity = 6 '{score}' "score"
 
@@ -39,7 +39,7 @@ Usage: #example
 * performer = Reference(pcoPatientLopez)
 * effectiveDateTime = "2024-09-19T13:15:00Z"
 * focus = Reference(pcoGoalAnxietyExample)
-* code = $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score"
+* code = $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"
 * valueQuantity = 10 '{score}' "score"
 
 Instance: pcoAnxietyCarePlanExample
