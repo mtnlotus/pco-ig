@@ -361,11 +361,11 @@
                         
                             <li><a href="Library-PCOCommon.html">PCOCommonversion: {0}0.1.0)</a></li>
                         
-                            <li><code>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</code></li>
-                        
                             <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                         
                             <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
+                        
+                            <li><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></li>
                         
                     </td>
                 </tr>
@@ -456,8 +456,6 @@
                                     <td>Patient(<a href="http://hl7.org/fhir/R4/patient.html">Patient</a>)</td>
                                     <td>
                                         
-                                            id
-                                        
                                     </td>
                                     <td>
                                         
@@ -503,13 +501,15 @@
                                         
                                             code
                                         
-                                            performer
-                                        
                                     </td>
                                     <td>
                                         
+                                            
+                                                 Goal Attainment Scaling (GAS) Score
+                                            
+                                        
                                     </td>
-                                    <td/>
+                                    <td><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></td>
                                 </tr>
                             
                                 <tr>
@@ -529,56 +529,10 @@
                                     <td><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></td>
                                 </tr>
                             
-                                <tr>
-                                    <td>Practitioner(<a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>)</td>
-                                    <td>
-                                        
-                                            id
-                                        
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td/>
-                                </tr>
-                            
-                                <tr>
-                                    <td>RelatedPerson(<a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>)</td>
-                                    <td>
-                                        
-                                            id
-                                        
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td/>
-                                </tr>
-                            
                         </table>
                     </td>
                 </tr>
 
-                
-                    <tr>
-                        <th scope="row"><b>Direct Reference Codes:</b></th>
-                        <td style="padding-left: 4px;">
-                            <table class="grid-dict">
-                                <tr>
-                                    <th><b>display</b></th>
-                                    <th><b>code</b></th>
-                                    <th><b>system</b></th>
-                                </tr>
-                                
-                                    <tr>
-                                        <td>Goal Attainment Scaling (GAS)</td>
-                                        <td>goal-attainment-scaling</td>
-                                        <td><a href="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary">http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</a></td>
-                                    </tr>
-                                
-                            </table>
-                        </td>
-                    </tr>
                 
 
                 
@@ -873,101 +827,6 @@ define &quot;PCO Goals During Measurement Period&quot;:
                                 <td>GoalAttainmentLogic</td>
                             
                             
-                                <td>All GAS Score Observations</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// All observations containing a Goal Attainment Scaling (GAS) score.
-define &quot;All GAS Score Observations&quot;:
-  [Observation: &quot;Goal attainment scaling score&quot;]</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>GoalAttainmentLogic</td>
-                            
-                            
-                                <td>GAS Patient Scores</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// Returns a collection of Observations with a patient's GAS scores.
-define &quot;GAS Patient Scores&quot;:
-  &quot;All GAS Score Observations&quot; obs
-    where exists obs.performer.resolvePatients()</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>GoalAttainmentLogic</td>
-                            
-                            
-                                <td>GAS Practitioner Scores</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// Returns a collection of Observations with a practitioner's GAS scores.
-define &quot;GAS Practitioner Scores&quot;:
-  &quot;All GAS Score Observations&quot; obs
-    where exists obs.performer.resolvePractitioners()</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>GoalAttainmentLogic</td>
-                            
-                            
-                                <td>GAS Caregiver Scores</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">// Returns a collection of Observations with a caregiver's GAS scores.
-define &quot;GAS Caregiver Scores&quot;:
-  &quot;All GAS Score Observations&quot; obs
-    where exists obs.performer.resolveRelatedPersons()</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>GoalAttainmentLogic</td>
-                            
-                            
                                 <td>GAS Scores</td>
                             
                         </tr>
@@ -977,10 +836,7 @@ define &quot;GAS Caregiver Scores&quot;:
                                 <td>
                                     <pre class="highlight language-cql"><code class="language-cql">// Observations containing a GAS score.
 define &quot;GAS Scores&quot;:
-  PC.SortAscending(&quot;GAS Patient Scores&quot;
-    union &quot;GAS Practitioner Scores&quot;
-    union &quot;GAS Caregiver Scores&quot;
-  )</code></pre>
+  [Observation: &quot;Goal Attainment Scaling (GAS) Score&quot;]</code></pre>
                                 </td>
                             
                         </tr>
@@ -1181,7 +1037,9 @@ define function ToConcept(concept FHIR.CodeableConcept):
                             
                                 <td/>
                                 <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define fluent function hasGAS(goal Goal):
+                                    <pre class="highlight language-cql"><code class="language-cql">// where exists obs.performer.resolveRelatedPersons()
+
+define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')</code></pre>
                                 </td>
                             
@@ -1365,108 +1223,6 @@ define fluent function gasScores(goal Goal):
                         </tr>
                         <tr>
                             
-                                <td>PCOCommon</td>
-                            
-                            
-                                <td>SortAscending</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define function SortAscending(observations List&lt;Observation&gt;):
-  observations O
-    sort by Coalesce(
-      (effective as FHIR.dateTime).value,
-      (effective as FHIR.instant).value,
-      (effective as FHIR.Period).&quot;end&quot;.value,
-      (effective as FHIR.Period).&quot;start&quot;.value) ascending</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>PCOCommon</td>
-                            
-                            
-                                <td>resolvePatients</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define fluent function resolvePatients(references List&lt;Reference&gt;):
-  flatten( references ref
-    return [Patient] resource
-      where resource.id = ref.reference.getId()
-  )</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>PCOCommon</td>
-                            
-                            
-                                <td>resolvePractitioners</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define fluent function resolvePractitioners(references List&lt;Reference&gt;):
-  flatten( references ref
-    return [Practitioner] resource
-      where resource.id = ref.reference.getId()
-  )</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
-                                <td>PCOCommon</td>
-                            
-                            
-                                <td>resolveRelatedPersons</td>
-                            
-                        </tr>
-                        <tr>
-                            
-                                <td/>
-                                <td>
-                                    <pre class="highlight language-cql"><code class="language-cql">define fluent function resolveRelatedPersons(references List&lt;Reference&gt;):
-  flatten( references ref
-    return [RelatedPerson] resource
-      where resource.id = ref.reference.getId()
-  )</code></pre>
-                                </td>
-                            
-                        </tr>
-                    
-                        <tr>
-                            <th><b>Library Name</b></th>
-                            <th><b>Name</b></th>
-                        </tr>
-                        <tr>
-                            
                                 <td>GoalAttainmentLogic</td>
                             
                             
@@ -1595,13 +1351,6 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
   <contained>
     <Library>
       <id value="effective-data-requirements"/>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode">
-        <valueCoding>
-          <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-          <code value="goal-attainment-scaling"/>
-          <display value="Goal Attainment Scaling (GAS)"/>
-        </valueCoding>
-      </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
         <extension url="libraryName">
           <valueString value="GoalIdentificationMeasure"/>
@@ -1663,69 +1412,13 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="GoalAttainmentLogic"/>
         </extension>
         <extension url="name">
-          <valueString value="All GAS Score Observations"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="// All observations containing a Goal Attainment Scaling (GAS) score.&#xA;define &quot;All GAS Score Observations&quot;:&#xA;  [Observation: &quot;Goal attainment scaling score&quot;]"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="4"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
-        </extension>
-        <extension url="name">
-          <valueString value="GAS Patient Scores"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="// Returns a collection of Observations with a patient's GAS scores.&#xA;define &quot;GAS Patient Scores&quot;:&#xA;  &quot;All GAS Score Observations&quot; obs&#xA;    where exists obs.performer.resolvePatients()"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="5"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
-        </extension>
-        <extension url="name">
-          <valueString value="GAS Practitioner Scores"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="// Returns a collection of Observations with a practitioner's GAS scores.&#xA;define &quot;GAS Practitioner Scores&quot;:&#xA;  &quot;All GAS Score Observations&quot; obs&#xA;    where exists obs.performer.resolvePractitioners()"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="6"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
-        </extension>
-        <extension url="name">
-          <valueString value="GAS Caregiver Scores"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="// Returns a collection of Observations with a caregiver's GAS scores.&#xA;define &quot;GAS Caregiver Scores&quot;:&#xA;  &quot;All GAS Score Observations&quot; obs&#xA;    where exists obs.performer.resolveRelatedPersons()"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="7"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
-        </extension>
-        <extension url="name">
           <valueString value="GAS Scores"/>
         </extension>
         <extension url="statement">
-          <valueString value="// Observations containing a GAS score.&#xA;define &quot;GAS Scores&quot;:&#xA;  PC.SortAscending(&quot;GAS Patient Scores&quot;&#xA;    union &quot;GAS Practitioner Scores&quot;&#xA;    union &quot;GAS Caregiver Scores&quot;&#xA;  )"/>
+          <valueString value="// Observations containing a GAS score.&#xA;define &quot;GAS Scores&quot;:&#xA;  [Observation: &quot;Goal Attainment Scaling (GAS) Score&quot;]"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="8"/>
+          <valueInteger value="4"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1739,7 +1432,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Observations containing a PROM score.&#xA;define &quot;PROM Scores&quot;:&#xA;  [Observation: &quot;PROM Target Measures&quot;]"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="9"/>
+          <valueInteger value="5"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1753,7 +1446,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/* &#xA;Baseline Scares are PCO score observations taken during the Measurement Period,&#xA;but before the follow-up period for its Goal. Default follow-up period is &#xA;2 weeks to 6 months following the goal startDate.&#xA;*/&#xA;define &quot;Baseline Scores Before Follow-Up Period&quot;:&#xA;  flatten( &quot;PCO Goals During Measurement Period&quot; goal&#xA;    let pcoScores: goal.pcoScores()&#xA;      return pcoScores score &#xA;        let scoreDate: score.effective as FHIR.dateTime&#xA;        where (scoreDate during &quot;Measurement Period&quot;)&#xA;          and (scoreDate before start of &quot;Follow-Up Interval For&quot;(goal))&#xA;  )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="10"/>
+          <valueInteger value="6"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1767,7 +1460,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/* &#xA;... has a PCO goal identified resulting in completion of goal attainment scaling (GAS)&#xA;or a Patient-Reported Outcome Measure (PROM) and development of an action plan.&#xA;*/&#xA;define &quot;Numerator&quot;:&#xA;  &quot;Denominator&quot; person where&#xA;    exists PCOLogic.&quot;PCO Goals During Measurement Period&quot;&#xA;      and exists PCOLogic.&quot;Baseline Scores Before Follow-Up Period&quot;"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="11"/>
+          <valueInteger value="7"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1781,7 +1474,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define &quot;Denominator Exclusions&quot;:&#xA;  null"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="12"/>
+          <valueInteger value="8"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1795,7 +1488,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define &quot;Denominator Exceptions&quot;:&#xA;  null"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="13"/>
+          <valueInteger value="9"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1809,7 +1502,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/*&#xA;@description: Converts the given FHIR [CodeableConcept](https://hl7.org/fhir/datatypes.html#CodeableConcept) value to a CQL Concept.&#xA;*/&#xA;define function ToConcept(concept FHIR.CodeableConcept):&#xA;    if concept is null then&#xA;        null&#xA;    else&#xA;        System.Concept {&#xA;            codes: concept.coding C return ToCode(C),&#xA;            display: concept.text.value&#xA;        }"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="14"/>
+          <valueInteger value="10"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1823,7 +1516,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define function ToDate(value date): value.value"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="15"/>
+          <valueInteger value="11"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1834,10 +1527,10 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="hasGAS"/>
         </extension>
         <extension url="statement">
-          <valueString value="define fluent function hasGAS(goal Goal):&#xA;  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')"/>
+          <valueString value="// where exists obs.performer.resolveRelatedPersons()&#xA;&#xA;define fluent function hasGAS(goal Goal):&#xA;  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="16"/>
+          <valueInteger value="12"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1851,7 +1544,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/*&#xA;@description: Returns any extensions defined on the given resource with the specified url.&#xA;@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access&#xA;content that is defined by extensions but not yet surfaced in the&#xA;CQL model info.&#xA;*/&#xA;define fluent function extensions(domainResource DomainResource, url String):&#xA;  domainResource.extension E&#xA;&#x9;  where E.url = url&#xA;&#x9;&#x9;return E"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="17"/>
+          <valueInteger value="13"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1865,7 +1558,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define function ToString(value uri): value.value"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="18"/>
+          <valueInteger value="14"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1879,7 +1572,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/// Returns true if this Goal has a PROM code in its target.measure&#xA;define fluent function hasPROM(goal Goal):&#xA;  exists (goal.target target&#xA;    where target.measure in &quot;PROM Target Measures&quot;&#xA;  )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="19"/>
+          <valueInteger value="15"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1893,7 +1586,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of CarePlan that support this Goal.&#xA;define fluent function carePlans(goal Goal):&#xA;  [CarePlan] carePlan&#xA;    where exists ( carePlan.goal goalRef&#xA;        where goal.id = goalRef.reference.getId()&#xA;    )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="20"/>
+          <valueInteger value="16"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1907,7 +1600,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define fluent function getId(uri String):&#xA;  Last(Split(uri, '/'))"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="21"/>
+          <valueInteger value="17"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1921,7 +1614,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of Observation including both GAS and PROM scores&#xA;define fluent function pcoScores(goal Goal):&#xA;  goal.gasScores()&#xA;    union goal.promScores()"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="22"/>
+          <valueInteger value="18"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1935,63 +1628,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of Observation including only GAS scores&#xA;define fluent function gasScores(goal Goal):&#xA;  &quot;GAS Scores&quot; score&#xA;    where score.focusGoals() contains goal"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="23"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="PCOCommon"/>
-        </extension>
-        <extension url="name">
-          <valueString value="SortAscending"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="define function SortAscending(observations List&lt;Observation&gt;):&#xA;  observations O&#xA;    sort by Coalesce(&#xA;      (effective as FHIR.dateTime).value,&#xA;      (effective as FHIR.instant).value,&#xA;      (effective as FHIR.Period).&quot;end&quot;.value,&#xA;      (effective as FHIR.Period).&quot;start&quot;.value) ascending"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="24"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="PCOCommon"/>
-        </extension>
-        <extension url="name">
-          <valueString value="resolvePatients"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="define fluent function resolvePatients(references List&lt;Reference&gt;):&#xA;  flatten( references ref&#xA;    return [Patient] resource&#xA;      where resource.id = ref.reference.getId()&#xA;  )"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="25"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="PCOCommon"/>
-        </extension>
-        <extension url="name">
-          <valueString value="resolvePractitioners"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="define fluent function resolvePractitioners(references List&lt;Reference&gt;):&#xA;  flatten( references ref&#xA;    return [Practitioner] resource&#xA;      where resource.id = ref.reference.getId()&#xA;  )"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="26"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="PCOCommon"/>
-        </extension>
-        <extension url="name">
-          <valueString value="resolveRelatedPersons"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="define fluent function resolveRelatedPersons(references List&lt;Reference&gt;):&#xA;  flatten( references ref&#xA;    return [RelatedPerson] resource&#xA;      where resource.id = ref.reference.getId()&#xA;  )"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="27"/>
+          <valueInteger value="19"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -2005,7 +1642,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of Goal where focus includes the given Observation.&#xA;define fluent function focusGoals(obs Observation):&#xA;  obs.focus.resolveGoals()"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="28"/>
+          <valueInteger value="20"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -2019,7 +1656,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define fluent function resolveGoals(references List&lt;Reference&gt;):&#xA;  flatten( references ref&#xA;    return [Goal] resource&#xA;      where resource.id = ref.reference.getId()&#xA;  )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="29"/>
+          <valueInteger value="21"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -2033,7 +1670,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of Observation including only PROM scores&#xA;define fluent function promScores(goal Goal):&#xA;  &quot;PROM Scores&quot; score&#xA;    where score.focusGoals() contains goal"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="30"/>
+          <valueInteger value="22"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -2047,7 +1684,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define function ToDateTime(value dateTime): value.value"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="31"/>
+          <valueInteger value="23"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -2061,7 +1698,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/*&#xA;Computes the follow-up interval for a Goal based on this measure's &quot;Follow-Up Interval&quot; parameter.&#xA;@return Interval&lt;DateTime&gt;&#xA;*/&#xA;define function &quot;Follow-Up Interval For&quot; (goal Goal):&#xA;  goal goal&#xA;    let startDate: ToDateTime(goal.start as FHIR.date)&#xA;      return Interval(startDate + start of &quot;Follow-Up Interval&quot;, startDate + end of &quot;Follow-Up Interval&quot;)"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="32"/>
+          <valueInteger value="24"/>
         </extension>
       </extension>
       <name value="EffectiveDataRequirements"/>
@@ -2089,11 +1726,6 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
-        <display value="Code system PCO GAS Codes"/>
-        <resource value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-      </relatedArtifact>
-      <relatedArtifact>
-        <type value="depends-on"/>
         <display value="Value set PCO Categories"/>
         <resource value="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"/>
       </relatedArtifact>
@@ -2101,6 +1733,11 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
         <type value="depends-on"/>
         <display value="Value set PROM Target Measures"/>
         <resource value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Goal Attainment Scaling (GAS) Score"/>
+        <resource value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
       </relatedArtifact>
       <parameter>
         <name value="Measurement Period"/>
@@ -2154,7 +1791,6 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       <dataRequirement>
         <type value="Patient"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <mustSupport value="id"/>
       </dataRequirement>
       <dataRequirement>
         <type value="Goal"/>
@@ -2173,14 +1809,9 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
         <type value="Observation"/>
         <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <mustSupport value="code"/>
-        <mustSupport value="performer"/>
         <codeFilter>
           <path value="code"/>
-          <code>
-            <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-            <code value="goal-attainment-scaling"/>
-            <display value="Goal Attainment Scaling (GAS)"/>
-          </code>
+          <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
         </codeFilter>
       </dataRequirement>
       <dataRequirement>
@@ -2191,16 +1822,6 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <path value="code"/>
           <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
         </codeFilter>
-      </dataRequirement>
-      <dataRequirement>
-        <type value="Practitioner"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <mustSupport value="id"/>
-      </dataRequirement>
-      <dataRequirement>
-        <type value="RelatedPerson"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-        <mustSupport value="id"/>
       </dataRequirement>
     </Library>
   </contained>
@@ -2267,7 +1888,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
   <title value="Person-Centered Goal Identification"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-08-27T18:09:14+00:00"/>
+  <date value="2024-09-06T21:10:55+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>

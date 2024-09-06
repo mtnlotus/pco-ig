@@ -1,85 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="1fe2883d-f05f-4b54-a744-eeda7f4a13ef"/>
+  <id value="d21b0ce5-a4ea-4766-a46a-6255311f7e0c"/>
   <meta>
-    <lastUpdated value="2024-09-06T16:42:31.264+00:00"/>
+    <lastUpdated value="2024-09-06T21:25:34.320+00:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/gas-followup-score"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.78</p>
-            <p>This value set contains 0 concepts</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://mtnlotus.com/uv/pco/ValueSet/gas-followup-score"/>
-        <version value="0.1.0"/>
-        <name value="GASFFollowupScore"/>
-        <title value="Follow-Up GAS Score"/>
-        <status value="draft"/>
-        <experimental value="false"/>
-        <date value="2024-09-06T16:42:31+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-            <code value="001"/>
-            <display value="World"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:8965b243-63cf-463c-84df-2c959d2eb675"/>
-          <timestamp value="2024-09-06T16:43:46+00:00"/>
-          <total value="0"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="used-valueset"/>
-            <valueUri value="null"/>
-          </parameter>
-          <parameter>
-            <name value="used-codesystem"/>
-            <valueUri value="http://loinc.org|2.78"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://loinc.org|2.78"/>
-          </parameter>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
   <entry>
     <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers"/>
     <resource>
@@ -113,7 +39,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-09-06T16:42:31+00:00"/>
+        <date value="2024-09-06T21:25:34+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -122,8 +48,82 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a7858443-6d56-4740-bfe0-cde887a4f3ce"/>
-          <timestamp value="2024-09-06T16:43:47+00:00"/>
+          <identifier value="urn:uuid:c8ab0067-b6f1-4e83-a648-a82907ed2da1"/>
+          <timestamp value="2024-09-06T21:26:50+00:00"/>
+          <total value="0"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://loinc.org|2.78"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://loinc.org|2.78"/>
+          </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.78</p>
+            <p>This value set contains 0 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
+        <version value="0.1.0"/>
+        <name value="GoalAttainmentScalingScore"/>
+        <title value="Goal Attainment Scaling (GAS) Score"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-09-06T21:25:34+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+            <display value="World"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:3ea82b81-322e-4c2e-ac60-b4069d9b9da2"/>
+          <timestamp value="2024-09-06T21:26:51+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -485,7 +485,7 @@
         <title value="PCO Categories"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-09-06T16:42:31+00:00"/>
+        <date value="2024-09-06T21:25:34+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -494,8 +494,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2f55bfc0-05e4-42df-bf93-ffc5e6ac1dac"/>
-          <timestamp value="2024-09-06T16:43:47+00:00"/>
+          <identifier value="urn:uuid:f8529345-9a6a-4d25-a2b9-2a8a5d86f961"/>
+          <timestamp value="2024-09-06T21:26:51+00:00"/>
           <total value="21"/>
           <offset value="0"/>
           <parameter>
@@ -638,7 +638,7 @@
               <b>Generated Narrative: ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.78</p>
-            <p>This value set contains 2 concepts</p>
+            <p>This value set contains 12 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -667,6 +667,86 @@
                 <td>http://loinc.org</td>
                 <td>Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]</td>
               </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-91614-8"> </a>  
+                  <a href="https://loinc.org/91614-8/">91614-8</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS mobility - version 2.0 T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-89676-1"> </a>  
+                  <a href="https://loinc.org/89676-1/">89676-1</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS cancer fatigue - version 1.0 T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71969-0"> </a>  
+                  <a href="https://loinc.org/71969-0/">71969-0</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-10 Global Mental Health (GMH) score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71971-6"> </a>  
+                  <a href="https://loinc.org/71971-6/">71971-6</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-10 Global Physical Health (GPH) score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71955-9"> </a>  
+                  <a href="https://loinc.org/71955-9/">71955-9</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-29 Sleep disturbance score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71957-5"> </a>  
+                  <a href="https://loinc.org/71957-5/">71957-5</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-29 Satisfaction with participation in social roles score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71959-1"> </a>  
+                  <a href="https://loinc.org/71959-1/">71959-1</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-29 Physical function score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71961-7"> </a>  
+                  <a href="https://loinc.org/71961-7/">71961-7</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-29 Pain interference score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71963-3"> </a>  
+                  <a href="https://loinc.org/71963-3/">71963-3</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-29 Fatigue score T-score</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://loinc.org-71965-8"> </a>  
+                  <a href="https://loinc.org/71965-8/">71965-8</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>PROMIS-29 Depression score T-score</td>
+              </tr>
             </table>
           </div>
         </text>
@@ -676,7 +756,7 @@
         <title value="PROM Target Measures"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-09-06T16:42:31+00:00"/>
+        <date value="2024-09-06T21:25:34+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -685,9 +765,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:dc23c325-b902-4804-8bb7-26b70c67c4c8"/>
-          <timestamp value="2024-09-06T16:43:48+00:00"/>
-          <total value="2"/>
+          <identifier value="urn:uuid:ef060477-d34f-4d6f-bab3-9fb6e3d957a6"/>
+          <timestamp value="2024-09-06T21:26:52+00:00"/>
+          <total value="12"/>
           <offset value="0"/>
           <parameter>
             <name value="count"/>
@@ -722,6 +802,56 @@
             <system value="http://loinc.org"/>
             <code value="44261-6"/>
             <display value="Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="91614-8"/>
+            <display value="PROMIS mobility - version 2.0 T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="89676-1"/>
+            <display value="PROMIS cancer fatigue - version 1.0 T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71969-0"/>
+            <display value="PROMIS-10 Global Mental Health (GMH) score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71971-6"/>
+            <display value="PROMIS-10 Global Physical Health (GPH) score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71955-9"/>
+            <display value="PROMIS-29 Sleep disturbance score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71957-5"/>
+            <display value="PROMIS-29 Satisfaction with participation in social roles score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71959-1"/>
+            <display value="PROMIS-29 Physical function score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71961-7"/>
+            <display value="PROMIS-29 Pain interference score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71963-3"/>
+            <display value="PROMIS-29 Fatigue score T-score"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="71965-8"/>
+            <display value="PROMIS-29 Depression score T-score"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -891,7 +1021,7 @@
         <title value="What Matters Focus Areas"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-09-06T16:42:31+00:00"/>
+        <date value="2024-09-06T21:25:34+00:00"/>
         <jurisdiction>
           <coding>
             <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -900,8 +1030,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b01aeeaa-cdc8-4ccd-91a9-e0346bb9b7e6"/>
-          <timestamp value="2024-09-06T16:43:48+00:00"/>
+          <identifier value="urn:uuid:27252fbe-1d91-4b86-a8d0-1eb73b2a9b56"/>
+          <timestamp value="2024-09-06T21:26:53+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>

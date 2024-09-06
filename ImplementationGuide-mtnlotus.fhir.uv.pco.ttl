@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-09-06T16:42:31+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-09-06T21:25:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -727,18 +727,6 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/gas-followup-score> ;
-         fhir:reference [ fhir:v "ValueSet/gas-followup-score" ]
-       ] ;
-       fhir:name [ fhir:v "Follow-Up GAS Score" ] ;
-       fhir:description [ fhir:v "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
          fhir:link <http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers> ;
          fhir:reference [ fhir:v "ValueSet/gas-score-answers" ]
        ] ;
@@ -759,6 +747,21 @@
        fhir:example [
          fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score"^^xsd:anyURI ;
          fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoGASScoretBaselineExample> ;
+         fhir:reference [ fhir:v "Observation/pcoGASScoretBaselineExample" ]
+       ] ;
+       fhir:name [ fhir:v "GAS Baseline Score" ] ;
+       fhir:description [ fhir:v "Baseline GAS score observation at start of goal." ] ;
+       fhir:example [
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation>
        ]
      ] [
        fhir:extension ( [
@@ -786,6 +789,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score> ;
+         fhir:reference [ fhir:v "ValueSet/goal-attainment-scaling-score" ]
+       ] ;
+       fhir:name [ fhir:v "Goal Attainment Scaling (GAS) Score" ] ;
+       fhir:description [ fhir:v "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Goal" ]
        ] ) ;
        fhir:reference [
@@ -795,8 +810,8 @@
        fhir:name [ fhir:v "Goal for GAD-7 PROM Outcome" ] ;
        fhir:description [ fhir:v "Person-centered goal with a PROM outcome target for GAD-7 score." ] ;
        fhir:example [
-         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile"^^xsd:anyURI ;
-         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile>
+         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile"^^xsd:anyURI ;
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile>
        ]
      ] [
        fhir:extension ( [
@@ -891,21 +906,6 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoGASScorePatientBaselineExample> ;
-         fhir:reference [ fhir:v "Observation/pcoGASScorePatientBaselineExample" ]
-       ] ;
-       fhir:name [ fhir:v "Patient GAS Baseline Score" ] ;
-       fhir:description [ fhir:v "Baseline GAS score observation recorded by a Patient at start of goal." ] ;
-       fhir:example [
-         fhir:v "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
-         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
-       ] ) ;
-       fhir:reference [
          fhir:link <http://mtnlotus.com/uv/pco/Observation/pcoGASScorePatientFollowupExample> ;
          fhir:reference [ fhir:v "Observation/pcoGASScorePatientFollowupExample" ]
        ] ;
@@ -980,11 +980,11 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-goal-profile" ]
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-goal-profile> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-gas-goal-profile" ]
        ] ;
-       fhir:name [ fhir:v "Person-Centered Goal" ] ;
-       fhir:description [ fhir:v "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment." ] ;
+       fhir:name [ fhir:v "Person-Centered GAS Goal" ] ;
+       fhir:description [ fhir:v "Person-centered goal with goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -992,11 +992,11 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-goal-profile> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-gas-goal-profile" ]
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-goal-profile" ]
        ] ;
-       fhir:name [ fhir:v "Person-Centered Goal Attainment" ] ;
-       fhir:description [ fhir:v "Person-centered goal with goal attainment scaling." ] ;
+       fhir:name [ fhir:v "Person-Centered Goal" ] ;
+       fhir:description [ fhir:v "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1009,18 +1009,6 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal Follow-Up" ] ;
        fhir:description [ fhir:v "NCQA Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-goal-prom-profile" ]
-       ] ;
-       fhir:name [ fhir:v "Person-Centered Goal for PROMs" ] ;
-       fhir:description [ fhir:v "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1045,6 +1033,18 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Progress Score" ] ;
        fhir:description [ fhir:v "A progress score observation for a person-centered goal." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-prom-goal-profile" ]
+       ] ;
+       fhir:name [ fhir:v "Person-Centered PROM Goal" ] ;
+       fhir:description [ fhir:v "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [

@@ -1,18 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/gas-followup-score",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "GASFFollowupScore",
-      "title" : "Follow-Up GAS Score",
-      "description" : "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
-      "systems" : ["http://loinc.org"],
-      "uses" : {
-      },
-      "StructureDefinition-pco-gas-score-observation.html" : "PCO Goal Attainment Scaling (GAS) score"
-    },
-    {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers",
       "version" : "0.1.0",
       "status" : "draft",
@@ -22,7 +10,19 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
+      "StructureDefinition-pco-gas-score-observation.html" : "PCO Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
+    },
+    {
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GoalAttainmentScalingScore",
+      "title" : "Goal Attainment Scaling (GAS) Score",
+      "description" : "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
       "StructureDefinition-pco-gas-score-observation.html" : "PCO Goal Attainment Scaling (GAS) score"
     },
     {
@@ -38,8 +38,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
+      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
@@ -52,7 +52,7 @@
       "uses" : {
       },
       "StructureDefinition-pco-prom-score.html" : "Patient-Reported Outcome Measure (PROM) score",
-      "StructureDefinition-pco-goal-prom-profile.html" : "Person-Centered Goal for PROMs"
+      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal"
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas",

@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-09-06T16:42:31+00:00"/>
+  <date value="2024-09-06T21:25:34+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -627,17 +627,6 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/gas-followup-score"/>
-      </reference>
-      <name value="Follow-Up GAS Score"/>
-      <description value="The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
         <reference value="ValueSet/gas-score-answers"/>
       </reference>
       <name value="Follow-Up GAS Score Answers"/>
@@ -654,6 +643,17 @@
       <name value="GAD-7 PROM Follow-up Score"/>
       <description value="Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress."/>
       <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoGASScoretBaselineExample"/>
+      </reference>
+      <name value="GAS Baseline Score"/>
+      <description value="Baseline GAS score observation at start of goal."/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -678,6 +678,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/goal-attainment-scaling-score"/>
+      </reference>
+      <name value="Goal Attainment Scaling (GAS) Score"/>
+      <description value="The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Goal"/>
       </extension>
       <reference>
@@ -685,7 +696,7 @@
       </reference>
       <name value="Goal for GAD-7 PROM Outcome"/>
       <description value="Person-centered goal with a PROM outcome target for GAD-7 score."/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile"/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -766,17 +777,6 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/pcoGASScorePatientBaselineExample"/>
-      </reference>
-      <name value="Patient GAS Baseline Score"/>
-      <description value="Baseline GAS score observation recorded by a Patient at start of goal."/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
         <reference value="Observation/pcoGASScorePatientFollowupExample"/>
       </reference>
       <name value="Patient GAS Follow-up Score"/>
@@ -842,10 +842,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-goal-profile"/>
+        <reference value="StructureDefinition/pco-gas-goal-profile"/>
       </reference>
-      <name value="Person-Centered Goal"/>
-      <description value="Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."/>
+      <name value="Person-Centered GAS Goal"/>
+      <description value="Person-centered goal with goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -853,10 +853,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-gas-goal-profile"/>
+        <reference value="StructureDefinition/pco-goal-profile"/>
       </reference>
-      <name value="Person-Centered Goal Attainment"/>
-      <description value="Person-centered goal with goal attainment scaling."/>
+      <name value="Person-Centered Goal"/>
+      <description value="Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -868,17 +868,6 @@
       </reference>
       <name value="Person-Centered Goal Follow-Up"/>
       <description value="NCQA Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-goal-prom-profile"/>
-      </reference>
-      <name value="Person-Centered Goal for PROMs"/>
-      <description value="Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -901,6 +890,17 @@
       </reference>
       <name value="Person-Centered Progress Score"/>
       <description value="A progress score observation for a person-centered goal."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-prom-goal-profile"/>
+      </reference>
+      <name value="Person-Centered PROM Goal"/>
+      <description value="Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

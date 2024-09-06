@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="goal-attainment-scaling-score"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet goal-attainment-scaling-score</b></p><a name="goal-attainment-scaling-score"> </a><a name="hcgoal-attainment-scaling-score"> </a><a name="goal-attainment-scaling-score-en-US"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/68489/">68489</a></td><td>Goal attainment scale</td></tr><tr><td><a href="https://loinc.org/68490/">68490</a></td><td>Practitioner follow-up goal attainment scaling score</td></tr><tr><td><a href="https://loinc.org/68491/">68491</a></td><td>Patient follow-up goal attainment scaling score</td></tr><tr><td><a href="https://loinc.org/68492/">68492</a></td><td>Caregiver follow-up goal attainment scaling score</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
+  <version value="0.1.0"/>
+  <name value="GoalAttainmentScalingScore"/>
+  <title value="Goal Attainment Scaling (GAS) Score"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-09-06T21:25:34+00:00"/>
+  <publisher value="Mountain Lotus WellBeing LLC"/>
+  <contact>
+    <name value="Mountain Lotus WellBeing LLC"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://mtnlotus.com"/>
+    </telecom>
+  </contact>
+  <description value="The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="68489"/>
+        <display value="Goal attainment scale"/>
+      </concept>
+      <concept>
+        <code value="68490"/>
+        <display value="Practitioner follow-up goal attainment scaling score"/>
+      </concept>
+      <concept>
+        <code value="68491"/>
+        <display value="Patient follow-up goal attainment scaling score"/>
+      </concept>
+      <concept>
+        <code value="68492"/>
+        <display value="Caregiver follow-up goal attainment scaling score"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

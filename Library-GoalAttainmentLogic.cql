@@ -6,13 +6,17 @@ include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
 codesystem "LOINC": 'http://loinc.org'
-codesystem "PCO GAS Codes": 'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'
+// codesystem "PCO GAS Codes": 'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'
 
 valueset "PCO Categories": 'http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset'
-valueset "Patient Follow-Up GAS Score": 'http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup'
+valueset "Goal Attainment Scaling (GAS) Score": 'http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score'
+valueset "Follow-Up GAS Score Answers": 'http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers'
 valueset "PROM Target Measures": 'http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures'
 
-code "Goal attainment scaling score": 'goal-attainment-scaling' from "PCO GAS Codes" display 'Goal Attainment Scaling (GAS)'
+code "Goal attainment scale": '68489' from "LOINC" display 'Goal attainment scale'
+code "Practitioner follow-up goal attainment scaling score": '68490' from "LOINC" display 'Practitioner follow-up goal attainment scaling score'
+code "Patient follow-up goal attainment scaling score": '68491' from "LOINC" display 'Patient follow-up goal attainment scaling score'
+code "Caregiver follow-up goal attainment scaling score": '68492' from "LOINC" display 'Caregiver follow-up goal attainment scaling score'
 
 parameter "Measurement Period" Interval<DateTime>
     default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
@@ -83,29 +87,25 @@ define "PROM Scores":
 
 // Observations containing a GAS score.
 define "GAS Scores":
-  PC.SortAscending("GAS Patient Scores"
-    union "GAS Practitioner Scores"
-    union "GAS Caregiver Scores"
-  )
-
-// All observations containing a Goal Attainment Scaling (GAS) score.
-define "All GAS Score Observations":
-  [Observation: "Goal attainment scaling score"]
+  [Observation: "Goal Attainment Scaling (GAS) Score"]
 
 // Returns a collection of Observations with a patient's GAS scores.
 define "GAS Patient Scores":
-  "All GAS Score Observations" obs
-    where exists obs.performer.resolvePatients()
+  "GAS Scores" obs
+    where obs.code = "Patient follow-up goal attainment scaling score"
+    // where exists obs.performer.resolvePatients()
 
 // Returns a collection of Observations with a practitioner's GAS scores.
 define "GAS Practitioner Scores":
-  "All GAS Score Observations" obs
-    where exists obs.performer.resolvePractitioners()
+  "GAS Scores" obs
+    where obs.code = "Practitioner follow-up goal attainment scaling score"
+    // where exists obs.performer.resolvePractitioners()
 
 // Returns a collection of Observations with a caregiver's GAS scores.
 define "GAS Caregiver Scores":
-  "All GAS Score Observations" obs
-    where exists obs.performer.resolveRelatedPersons()
+  "GAS Scores" obs
+    where obs.code = "Caregiver follow-up goal attainment scaling score"
+    // where exists obs.performer.resolveRelatedPersons()
 
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')

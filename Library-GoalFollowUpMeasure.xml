@@ -73,7 +73,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-09-06 16:42:31+0000</td>
+            <td style="padding-left: 4px;">2024-09-06 21:25:34+0000</td>
         </tr>
         
 
@@ -129,11 +129,11 @@
                   
                     <li><a href="Library-GoalAttainmentLogic.html">GoalAttainmentLogicversion: {0}0.1.0)</a></li>
                   
-                    <li><code>http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</code></li>
-                  
                     <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                   
                     <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
+                  
+                    <li><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></li>
                   
                 </ul>
                 
@@ -183,7 +183,7 @@
                 <tr>
                   <th>Patient</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Patient</th>
-                  <th>;</th>
+                  <th/>
                   <th>
                     
                   </th>
@@ -210,7 +210,7 @@
                 <tr>
                   <th>Observation</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
-                  <th>;;</th>
+                  <th>;</th>
                   <th>
                     
                       <b>code filter: </b>
@@ -226,22 +226,10 @@
                       
                       
                       
+                      <span style="padding-left: 4px;">
+                          <b>value set: </b><span>http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score</span>
+                      </span>
                       
-                          
-                          <p style="margin-bottom: 5px;">
-                              <b>system: </b> <span><a href="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary">http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary</a></span>
-                          </p>
-                          
-                          
-                          <p style="margin-bottom: 5px;">
-                              <b>code: </b> <span>goal-attainment-scaling</span>
-                          </p>
-                          
-                          
-                          <p style="margin-bottom: 5px;">
-                              <b>display: </b> <span>Goal Attainment Scaling (GAS)</span>
-                          </p>
-                          
                       
                     
                   </th>
@@ -271,24 +259,6 @@
                       </span>
                       
                       
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>Practitioner</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Practitioner</th>
-                  <th>;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>RelatedPerson</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/RelatedPerson</th>
-                  <th>;</th>
-                  <th>
                     
                   </th>
                 </tr>
@@ -416,11 +386,11 @@ define &quot;Numerator&quot;:
       </parameter>
       <parameter>
         <name value="format"/>
-        <valueString value="XML"/>
+        <valueString value="JSON"/>
       </parameter>
       <parameter>
         <name value="format"/>
-        <valueString value="JSON"/>
+        <valueString value="XML"/>
       </parameter>
       <parameter>
         <name value="analyzeDataRequirements"/>
@@ -476,7 +446,7 @@ define &quot;Numerator&quot;:
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2024-09-06T16:42:31+00:00"/>
+  <date value="2024-09-06T21:25:34+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -514,11 +484,6 @@ define &quot;Numerator&quot;:
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <display value="Code system PCO GAS Codes"/>
-    <resource value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-  </relatedArtifact>
-  <relatedArtifact>
-    <type value="depends-on"/>
     <display value="Value set PCO Categories"/>
     <resource value="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"/>
   </relatedArtifact>
@@ -526,6 +491,11 @@ define &quot;Numerator&quot;:
     <type value="depends-on"/>
     <display value="Value set PROM Target Measures"/>
     <resource value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="depends-on"/>
+    <display value="Value set Goal Attainment Scaling (GAS) Score"/>
+    <resource value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
   </relatedArtifact>
   <parameter>
     <name value="Measurement Period"/>
@@ -586,7 +556,6 @@ define &quot;Numerator&quot;:
   <dataRequirement>
     <type value="Patient"/>
     <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-    <mustSupport value="id"/>
   </dataRequirement>
   <dataRequirement>
     <type value="Goal"/>
@@ -605,14 +574,9 @@ define &quot;Numerator&quot;:
     <type value="Observation"/>
     <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
     <mustSupport value="code"/>
-    <mustSupport value="performer"/>
     <codeFilter>
       <path value="code"/>
-      <code>
-        <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-        <code value="goal-attainment-scaling"/>
-        <display value="Goal Attainment Scaling (GAS)"/>
-      </code>
+      <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
     </codeFilter>
   </dataRequirement>
   <dataRequirement>
@@ -623,16 +587,6 @@ define &quot;Numerator&quot;:
       <path value="code"/>
       <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
     </codeFilter>
-  </dataRequirement>
-  <dataRequirement>
-    <type value="Practitioner"/>
-    <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-    <mustSupport value="id"/>
-  </dataRequirement>
-  <dataRequirement>
-    <type value="RelatedPerson"/>
-    <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-    <mustSupport value="id"/>
   </dataRequirement>
   <content>
     <contentType value="text/cql"/>

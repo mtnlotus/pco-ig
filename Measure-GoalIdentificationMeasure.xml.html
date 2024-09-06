@@ -174,7 +174,7 @@
         
           Active
           
-            as of 2024-08-27
+            as of 2024-09-06
           
         
       </td>
@@ -557,11 +557,11 @@
                         
                             &lt;li&gt;&lt;a href=&quot;Library-PCOCommon.html&quot;&gt;PCOCommonversion: {0}0.1.0)&lt;/a&gt;&lt;/li&gt;
                         
-                            &lt;li&gt;&lt;code&gt;http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary&lt;/code&gt;&lt;/li&gt;
-                        
                             &lt;li&gt;&lt;a href=&quot;ValueSet-pco-category-valueset.html&quot;&gt;PCO Categories&lt;/a&gt;&lt;/li&gt;
                         
                             &lt;li&gt;&lt;a href=&quot;ValueSet-prom-target-measures.html&quot;&gt;PROM Target Measures&lt;/a&gt;&lt;/li&gt;
+                        
+                            &lt;li&gt;&lt;a href=&quot;ValueSet-goal-attainment-scaling-score.html&quot;&gt;Goal Attainment Scaling (GAS) Score&lt;/a&gt;&lt;/li&gt;
                         
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -652,8 +652,6 @@
                                     &lt;td&gt;Patient(&lt;a href=&quot;http://hl7.org/fhir/R4/patient.html&quot;&gt;Patient&lt;/a&gt;)&lt;/td&gt;
                                     &lt;td&gt;
                                         
-                                            id
-                                        
                                     &lt;/td&gt;
                                     &lt;td&gt;
                                         
@@ -699,13 +697,15 @@
                                         
                                             code
                                         
-                                            performer
-                                        
                                     &lt;/td&gt;
                                     &lt;td&gt;
                                         
+                                            
+                                                 Goal Attainment Scaling (GAS) Score
+                                            
+                                        
                                     &lt;/td&gt;
-                                    &lt;td/&gt;
+                                    &lt;td&gt;&lt;a href=&quot;ValueSet-goal-attainment-scaling-score.html&quot;&gt;Goal Attainment Scaling (GAS) Score&lt;/a&gt;&lt;/td&gt;
                                 &lt;/tr&gt;
                             
                                 &lt;tr&gt;
@@ -725,56 +725,10 @@
                                     &lt;td&gt;&lt;a href=&quot;ValueSet-prom-target-measures.html&quot;&gt;PROM Target Measures&lt;/a&gt;&lt;/td&gt;
                                 &lt;/tr&gt;
                             
-                                &lt;tr&gt;
-                                    &lt;td&gt;Practitioner(&lt;a href=&quot;http://hl7.org/fhir/R4/practitioner.html&quot;&gt;Practitioner&lt;/a&gt;)&lt;/td&gt;
-                                    &lt;td&gt;
-                                        
-                                            id
-                                        
-                                    &lt;/td&gt;
-                                    &lt;td&gt;
-                                        
-                                    &lt;/td&gt;
-                                    &lt;td/&gt;
-                                &lt;/tr&gt;
-                            
-                                &lt;tr&gt;
-                                    &lt;td&gt;RelatedPerson(&lt;a href=&quot;http://hl7.org/fhir/R4/relatedperson.html&quot;&gt;RelatedPerson&lt;/a&gt;)&lt;/td&gt;
-                                    &lt;td&gt;
-                                        
-                                            id
-                                        
-                                    &lt;/td&gt;
-                                    &lt;td&gt;
-                                        
-                                    &lt;/td&gt;
-                                    &lt;td/&gt;
-                                &lt;/tr&gt;
-                            
                         &lt;/table&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
 
-                
-                    &lt;tr&gt;
-                        &lt;th scope=&quot;row&quot;&gt;&lt;b&gt;Direct Reference Codes:&lt;/b&gt;&lt;/th&gt;
-                        &lt;td style=&quot;padding-left: 4px;&quot;&gt;
-                            &lt;table class=&quot;grid-dict&quot;&gt;
-                                &lt;tr&gt;
-                                    &lt;th&gt;&lt;b&gt;display&lt;/b&gt;&lt;/th&gt;
-                                    &lt;th&gt;&lt;b&gt;code&lt;/b&gt;&lt;/th&gt;
-                                    &lt;th&gt;&lt;b&gt;system&lt;/b&gt;&lt;/th&gt;
-                                &lt;/tr&gt;
-                                
-                                    &lt;tr&gt;
-                                        &lt;td&gt;Goal Attainment Scaling (GAS)&lt;/td&gt;
-                                        &lt;td&gt;goal-attainment-scaling&lt;/td&gt;
-                                        &lt;td&gt;&lt;a href=&quot;http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary&quot;&gt;http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary&lt;/a&gt;&lt;/td&gt;
-                                    &lt;/tr&gt;
-                                
-                            &lt;/table&gt;
-                        &lt;/td&gt;
-                    &lt;/tr&gt;
                 
 
                 
@@ -1069,101 +1023,6 @@ define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
                                 &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
                             
                             
-                                &lt;td&gt;All GAS Score Observations&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// All observations containing a Goal Attainment Scaling (GAS) score.
-define &amp;quot;All GAS Score Observations&amp;quot;:
-  [Observation: &amp;quot;Goal attainment scaling score&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;GAS Patient Scores&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a collection of Observations with a patient's GAS scores.
-define &amp;quot;GAS Patient Scores&amp;quot;:
-  &amp;quot;All GAS Score Observations&amp;quot; obs
-    where exists obs.performer.resolvePatients()&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;GAS Practitioner Scores&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a collection of Observations with a practitioner's GAS scores.
-define &amp;quot;GAS Practitioner Scores&amp;quot;:
-  &amp;quot;All GAS Score Observations&amp;quot; obs
-    where exists obs.performer.resolvePractitioners()&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;GAS Caregiver Scores&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a collection of Observations with a caregiver's GAS scores.
-define &amp;quot;GAS Caregiver Scores&amp;quot;:
-  &amp;quot;All GAS Score Observations&amp;quot; obs
-    where exists obs.performer.resolveRelatedPersons()&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
-                            
-                            
                                 &lt;td&gt;GAS Scores&lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1173,10 +1032,7 @@ define &amp;quot;GAS Caregiver Scores&amp;quot;:
                                 &lt;td&gt;
                                     &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Observations containing a GAS score.
 define &amp;quot;GAS Scores&amp;quot;:
-  PC.SortAscending(&amp;quot;GAS Patient Scores&amp;quot;
-    union &amp;quot;GAS Practitioner Scores&amp;quot;
-    union &amp;quot;GAS Caregiver Scores&amp;quot;
-  )&lt;/code&gt;&lt;/pre&gt;
+  [Observation: &amp;quot;Goal Attainment Scaling (GAS) Score&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1377,7 +1233,9 @@ define function ToConcept(concept FHIR.CodeableConcept):
                             
                                 &lt;td/&gt;
                                 &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define fluent function hasGAS(goal Goal):
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// where exists obs.performer.resolveRelatedPersons()
+
+define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
@@ -1561,108 +1419,6 @@ define fluent function gasScores(goal Goal):
                         &lt;/tr&gt;
                         &lt;tr&gt;
                             
-                                &lt;td&gt;PCOCommon&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;SortAscending&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define function SortAscending(observations List&amp;lt;Observation&amp;gt;):
-  observations O
-    sort by Coalesce(
-      (effective as FHIR.dateTime).value,
-      (effective as FHIR.instant).value,
-      (effective as FHIR.Period).&amp;quot;end&amp;quot;.value,
-      (effective as FHIR.Period).&amp;quot;start&amp;quot;.value) ascending&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;PCOCommon&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;resolvePatients&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define fluent function resolvePatients(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [Patient] resource
-      where resource.id = ref.reference.getId()
-  )&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;PCOCommon&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;resolvePractitioners&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define fluent function resolvePractitioners(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [Practitioner] resource
-      where resource.id = ref.reference.getId()
-  )&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;PCOCommon&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;resolveRelatedPersons&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define fluent function resolveRelatedPersons(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [RelatedPerson] resource
-      where resource.id = ref.reference.getId()
-  )&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
                                 &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
                             
                             
@@ -1792,15 +1548,6 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
     &lt;<a href="http://hl7.org/fhir/R4/library.html#Library">Library</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;effective-data-requirements&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCoding</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;goal-attainment-scaling&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Goal Attainment Scaling (GAS)&quot;/&gt;
-        &lt;/valueCoding&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalIdentificationMeasure&quot;/&gt;
@@ -1900,94 +1647,16 @@ define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;All GAS Score Observations&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// All observations containing a Goal Attainment Scaling (GAS) score.
-define &amp;quot;All GAS Score Observations&amp;quot;:
-  [Observation: &amp;quot;Goal attainment scaling score&amp;quot;]&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAS Patient Scores&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a collection of Observations with a patient's GAS scores.
-define &amp;quot;GAS Patient Scores&amp;quot;:
-  &amp;quot;All GAS Score Observations&amp;quot; obs
-    where exists obs.performer.resolvePatients()&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;5&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAS Practitioner Scores&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a collection of Observations with a practitioner's GAS scores.
-define &amp;quot;GAS Practitioner Scores&amp;quot;:
-  &amp;quot;All GAS Score Observations&amp;quot; obs
-    where exists obs.performer.resolvePractitioners()&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;6&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAS Caregiver Scores&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a collection of Observations with a caregiver's GAS scores.
-define &amp;quot;GAS Caregiver Scores&amp;quot;:
-  &amp;quot;All GAS Score Observations&amp;quot; obs
-    where exists obs.performer.resolveRelatedPersons()&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;7&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAS Scores&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Observations containing a GAS score.
 define &amp;quot;GAS Scores&amp;quot;:
-  PC.SortAscending(&amp;quot;GAS Patient Scores&amp;quot;
-    union &amp;quot;GAS Practitioner Scores&amp;quot;
-    union &amp;quot;GAS Caregiver Scores&amp;quot;
-  )&quot;/&gt;
+  [Observation: &amp;quot;Goal Attainment Scaling (GAS) Score&amp;quot;]&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;8&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2005,7 +1674,7 @@ define &amp;quot;PROM Scores&amp;quot;:
   [Observation: &amp;quot;PROM Target Measures&amp;quot;]&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;9&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;5&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2033,7 +1702,7 @@ define &amp;quot;Baseline Scores Before Follow-Up Period&amp;quot;:
   )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;10&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;6&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2056,7 +1725,7 @@ define &amp;quot;Numerator&amp;quot;:
       and exists PCOLogic.&amp;quot;Baseline Scores Before Follow-Up Period&amp;quot;&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;11&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;7&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2073,7 +1742,7 @@ define &amp;quot;Numerator&amp;quot;:
   null&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;12&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;8&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2090,7 +1759,7 @@ define &amp;quot;Numerator&amp;quot;:
   null&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;13&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;9&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2116,7 +1785,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
         }&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;14&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;10&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2132,7 +1801,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define function ToDate(value date): value.value&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;15&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;11&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2145,11 +1814,13 @@ define function ToConcept(concept FHIR.CodeableConcept):
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function hasGAS(goal Goal):
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// where exists obs.performer.resolveRelatedPersons()
+
+define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;16&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;12&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2174,7 +1845,7 @@ define fluent function extensions(domainResource DomainResource, url String):
 		return E&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;17&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;13&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2190,7 +1861,7 @@ define fluent function extensions(domainResource DomainResource, url String):
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define function ToString(value uri): value.value&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;18&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;14&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2210,7 +1881,7 @@ define fluent function hasPROM(goal Goal):
   )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;19&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;15&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2231,7 +1902,7 @@ define fluent function carePlans(goal Goal):
     )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;20&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;16&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2248,7 +1919,7 @@ define fluent function carePlans(goal Goal):
   Last(Split(uri, '/'))&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;21&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;17&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2267,7 +1938,7 @@ define fluent function pcoScores(goal Goal):
     union goal.promScores()&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;22&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;18&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2286,89 +1957,7 @@ define fluent function gasScores(goal Goal):
     where score.focusGoals() contains goal&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;23&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SortAscending&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define function SortAscending(observations List&amp;lt;Observation&amp;gt;):
-  observations O
-    sort by Coalesce(
-      (effective as FHIR.dateTime).value,
-      (effective as FHIR.instant).value,
-      (effective as FHIR.Period).&amp;quot;end&amp;quot;.value,
-      (effective as FHIR.Period).&amp;quot;start&amp;quot;.value) ascending&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;24&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;resolvePatients&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function resolvePatients(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [Patient] resource
-      where resource.id = ref.reference.getId()
-  )&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;25&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;resolvePractitioners&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function resolvePractitioners(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [Practitioner] resource
-      where resource.id = ref.reference.getId()
-  )&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;26&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;resolveRelatedPersons&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function resolveRelatedPersons(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [RelatedPerson] resource
-      where resource.id = ref.reference.getId()
-  )&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;27&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;19&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2386,7 +1975,7 @@ define fluent function focusGoals(obs Observation):
   obs.focus.resolveGoals()&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;28&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;20&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2406,7 +1995,7 @@ define fluent function focusGoals(obs Observation):
   )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;29&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;21&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2425,7 +2014,7 @@ define fluent function promScores(goal Goal):
     where score.focusGoals() contains goal&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;30&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;22&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2441,7 +2030,7 @@ define fluent function promScores(goal Goal):
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define function ToDateTime(value dateTime): value.value&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;31&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;23&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -2464,7 +2053,7 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
       return Interval(startDate + start of &amp;quot;Follow-Up Interval&amp;quot;, startDate + end of &amp;quot;Follow-Up Interval&amp;quot;)&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;32&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;24&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EffectiveDataRequirements&quot;/&gt;
@@ -2494,12 +2083,6 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
       &lt;/relatedArtifact&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Code system PCO GAS Codes&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-                  <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary&quot;/&gt;
-      &lt;/relatedArtifact&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PCO Categories&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset&quot;/&gt;
@@ -2509,6 +2092,12 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PROM Target Measures&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures&quot;/&gt;
+      &lt;/relatedArtifact&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set Goal Attainment Scaling (GAS) Score&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score&quot;/&gt;
       &lt;/relatedArtifact&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.parameter">parameter</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Measurement Period&quot;/&gt;
@@ -2562,7 +2151,6 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;id&quot;/&gt;
       &lt;/dataRequirement&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Goal&quot;/&gt;
@@ -2581,15 +2169,10 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Observation&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Observation&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;performer&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter">codeFilter</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.code">code</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
-                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;goal-attainment-scaling&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Goal Attainment Scaling (GAS)&quot;/&gt;
-          &lt;/code&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.valueSet">valueSet</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score&quot;/&gt;
         &lt;/codeFilter&gt;
       &lt;/dataRequirement&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
@@ -2601,18 +2184,6 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
           &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.valueSet">valueSet</a>
                     <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures&quot;/&gt;
         &lt;/codeFilter&gt;
-      &lt;/dataRequirement&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Practitioner&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Practitioner&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;id&quot;/&gt;
-      &lt;/dataRequirement&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;RelatedPerson&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/RelatedPerson&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;id&quot;/&gt;
       &lt;/dataRequirement&gt;
     &lt;/Library&gt;
   &lt;/contained&gt;
@@ -2685,7 +2256,7 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Person-Centered Goal Identification&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-08-27T18:09:14+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-09-06T21:10:55+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
@@ -2868,7 +2439,7 @@ LOINC(R) copyright 2004-2023 Regenstrief Institute, Inc. This material contains 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 16:42+0000">2024-09-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 21:25+0000">2024-09-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

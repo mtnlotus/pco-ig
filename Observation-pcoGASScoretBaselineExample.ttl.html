@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Patient GAS Baseline Score - TTL Representation - Person-Centered Outcomes v0.1.0</title>
+    <title>GAS Baseline Score - TTL Representation - Person-Centered Outcomes v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.42"}
-    h3,h4,h5,h6{--heading-prefix:"2.42"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.38"}
+    h3,h4,h5,h6{--heading-prefix:"2.38"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -106,7 +106,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Patient GAS Baseline Score</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>GAS Baseline Score</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -132,21 +132,21 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="Observation-pcoGASScorePatientBaselineExample.html">Narrative Content</a>
+    <a href="Observation-pcoGASScoretBaselineExample.html">Narrative Content</a>
   </li>
 
 
 
   
     <li>
-      <a href="Observation-pcoGASScorePatientBaselineExample.xml.html">XML</a>
+      <a href="Observation-pcoGASScoretBaselineExample.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Observation-pcoGASScorePatientBaselineExample.json.html">JSON</a>
+      <a href="Observation-pcoGASScoretBaselineExample.json.html">JSON</a>
     </li>
   
 
@@ -165,10 +165,10 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Patient GAS Baseline Score - TTL Representation</h2>
+<h2 id="root">: GAS Baseline Score - TTL Representation</h2>
 
 
-<p><a href="Observation-pcoGASScorePatientBaselineExample.ttl" no-download="true">Raw ttl</a> | <a href="Observation-pcoGASScorePatientBaselineExample.ttl" download>Download</a></p>
+<p><a href="Observation-pcoGASScoretBaselineExample.ttl" no-download="true">Raw ttl</a> | <a href="Observation-pcoGASScoretBaselineExample.ttl" download>Download</a></p>
 
   <!-- insert intro if present -->
   
@@ -186,10 +186,10 @@
 
  a fhir:Observation ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/observation.html#Observation.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;pcoGASScorePatientBaselineExample&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/observation.html#Observation.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;pcoGASScoretBaselineExample&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation pcoGASScorePatientBaselineExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;pcoGASScorePatientBaselineExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpcoGASScorePatientBaselineExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;pcoGASScorePatientBaselineExample-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\&quot;&gt;Survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 68491}\&quot;&gt;Patient follow-up goal attainment scaling score&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-pcoPatientJones.html\&quot;&gt;Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Goal-pcoGoalWalkDogExample.html\&quot;&gt;Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Physical Function; description = ; start[x] = 2024-04-03&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-04-03 10:15:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a href=\&quot;Patient-pcoPatientJones.html\&quot;&gt;Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org gas-less-than-expected}\&quot;&gt;Less than expected&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation pcoGASScoretBaselineExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;pcoGASScoretBaselineExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpcoGASScoretBaselineExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;pcoGASScoretBaselineExample-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\&quot;&gt;Survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 68489}\&quot;&gt;Goal attainment scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-pcoPatientJones.html\&quot;&gt;Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Goal-pcoGoalWalkDogExample.html\&quot;&gt;Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Physical Function; description = ; start[x] = 2024-04-03&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-04-03 10:15:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a href=\&quot;Practitioner-pcoPractitionerGonzalez.html\&quot;&gt;Practitioner Maria Gonzalez, NBC-HWC&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org gas-less-than-expected}\&quot;&gt;Less than expected&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&quot;
   ] ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;final&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.category">fhir:category</a> ( [
@@ -199,10 +199,10 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.code">fhir:code</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-a loinc:68491 ;
+a loinc:68489 ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://loinc.org&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;68491&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient follow-up goal attainment scaling score&quot; ]     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;68489&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Goal attainment scale&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">fhir:subject</a> [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/pcoPatientJones&quot; ]
@@ -212,7 +212,7 @@ a loinc:68491 ;
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">fhir:effective</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2024-04-03T10:15:00Z&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.performer">fhir:performer</a> ( [
-<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/pcoPatientJones&quot; ]
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/pcoPractitionerGonzalez&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
@@ -248,7 +248,7 @@ a loinc:GAS-LESS-THAN-EXPECTED ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 16:42+0000">2024-09-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 21:25+0000">2024-09-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

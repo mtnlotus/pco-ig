@@ -1,5 +1,3 @@
-<!-- get modelType -->
-
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Person-Centered Goal for PROMs - Mappings - Person-Centered Outcomes v0.1.0</title>
+    <title>GAS Baseline Score - JSON Representation - Person-Centered Outcomes v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.16"}
-    h3,h4,h5,h6{--heading-prefix:"2.16"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.38"}
+    h3,h4,h5,h6{--heading-prefix:"2.38"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -108,7 +106,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Person-Centered Goal for PROMs</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>GAS Baseline Score</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -120,11 +118,8 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  
-
-
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -137,134 +132,101 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="StructureDefinition-pco-goal-prom-profile.html">Content</a>
+    <a href="Observation-pcoGASScoretBaselineExample.html">Narrative Content</a>
   </li>
 
 
 
-  <li>
-    <a href="StructureDefinition-pco-goal-prom-profile-definitions.html">Detailed Descriptions</a>
-  </li>
-
+  
+    <li>
+      <a href="Observation-pcoGASScoretBaselineExample.xml.html">XML</a>
+    </li>
+  
 
 
   
     <li class="active">
-      <a href="#">Mappings</a>
-    </li>
-  
-
-
-
-
-
-
-  
-    
-      <li>
-        <a href="StructureDefinition-pco-goal-prom-profile-examples.html">Examples</a>
-      </li>
-    
-  
-
-
-
-
-  
-    <li>
-      <a href="StructureDefinition-pco-goal-prom-profile.profile.xml.html">XML</a>
+      <a href="#">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="StructureDefinition-pco-goal-prom-profile.profile.json.html">JSON</a>
+      <a href="Observation-pcoGASScoretBaselineExample.ttl.html">TTL</a>
     </li>
   
 
-
-  
-    <li>
-      <a href="StructureDefinition-pco-goal-prom-profile.profile.ttl.html">TTL</a>
-    </li>
-  
 
 
 </ul>
 
 
 <a name="root"> </a>
-<h2 id="root">Resource Profile: PCOGoalOutcomeMeasureProfile - Mappings</h2>
-
-  <table class="colsd">
-    <tr>
-
-      <td colspan="2">
-        
-          Draft
-          
-            as of 2024-09-06
-          
-        
-      </td>
-
-    </tr>
-  </table>
 
 
-<p>Mappings for the pco-goal-prom-profile resource profile.</p>
+<h2 id="root">: GAS Baseline Score - JSON Representation</h2>
+
+
+<p><a href="Observation-pcoGASScoretBaselineExample.json" no-download="true">Raw json</a> | <a href="Observation-pcoGASScoretBaselineExample.json" download>Download</a></p>
 
   <!-- insert intro if present -->
   
 
 
 
-  <a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>PCOGoalOutcomeMeasureProfile</b></td></tr>
- <tr><td>Goal</td><td>GOL.1</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;lifecycleStatus</td><td>GOL-18-goal life cycle status</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>GOL-3.2-goal ID.text</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3-patient ID list</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>GOL-16-goal evaluation + NTE?</td> </tr>
-</table>
-<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>PCOGoalOutcomeMeasureProfile</b></td></tr>
- <tr><td>Goal</td><td>Entity. Role, or Act, .outboundRelationship[typeCode&lt;=OBJ].</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;lifecycleStatus</td><td>.statusCode in-progress = active (classCode = OBJ) cancelled = aborted</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;achievementStatus</td><td>.statusCode achieved = complete sustaining = active</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>.priorityCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>.text</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=PAT].role[classCode=PAT]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;target</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>.outboundRelationship[typeCode=SUBJ].target[classCode=CONC]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value</td> </tr>
-</table>
-<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
- <tr><td colspan="3"><b>PCOGoalOutcomeMeasureProfile</b></td></tr>
- <tr><td>Goal</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;lifecycleStatus</td><td>FiveWs.status</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;category (pcoCategory)</td><td>FiveWs.class</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>FiveWs.grade</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>FiveWs.what[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;start[x]</td><td>FiveWs.planned</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;target</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;due[x]</td><td>FiveWs.done[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;statusDate</td><td>FiveWs.recorded</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;expressedBy</td><td>FiveWs.source</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>FiveWs.why[x]</td> </tr>
-</table>
+  <pre class="json" style="white-space: pre; text-wrap: nowrap;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">
+{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "pcoGASScoretBaselineExample",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation pcoGASScoretBaselineExample&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;pcoGASScoretBaselineExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpcoGASScoretBaselineExample\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;pcoGASScoretBaselineExample-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\&quot;&gt;Survey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 68489}\&quot;&gt;Goal attainment scale&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-pcoPatientJones.html\&quot;&gt;Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Goal-pcoGoalWalkDogExample.html\&quot;&gt;Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Physical Function; description = ; start[x] = 2024-04-03&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2024-04-03 10:15:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;: &lt;a href=\&quot;Practitioner-pcoPractitionerGonzalez.html\&quot;&gt;Practitioner Maria Gonzalez, NBC-HWC&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org gas-less-than-expected}\&quot;&gt;Less than expected&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "survey"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "68489",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Goal attainment scale"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    <a href="Patient-pcoPatientJones.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/pcoPatientJones"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.focus">focus</a>" : [
+    {
+      <a href="Goal-pcoGoalWalkDogExample.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Goal/pcoGoalWalkDogExample"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2024-04-03T10:15:00Z",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.performer">performer</a>" : [
+    {
+      <a href="Practitioner-pcoPractitionerGonzalez.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/pcoPractitionerGonzalez"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "gas-less-than-expected",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Less than expected"
+      }
+    ]
+  }
+}</code></pre>
 
 
   <!-- insert notes if present -->
@@ -273,7 +235,6 @@
 
 
 </div>
-
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -282,8 +243,6 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
-
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
@@ -291,7 +250,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 16:42+0000">2024-09-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 21:25+0000">2024-09-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

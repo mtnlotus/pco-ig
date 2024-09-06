@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-09-06T16:42:31+00:00",
+  "date" : "2024-09-06T21:25:34+00:00",
   "publisher" : "Mountain Lotus WellBeing LLC",
   "contact" : [{
     "name" : "Mountain Lotus WellBeing LLC",
@@ -809,18 +809,6 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/gas-followup-score"
-      },
-      "name" : "Follow-Up GAS Score",
-      "description" : "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
         "reference" : "ValueSet/gas-score-answers"
       },
       "name" : "Follow-Up GAS Score Answers",
@@ -838,6 +826,18 @@
       "name" : "GAD-7 PROM Follow-up Score",
       "description" : "Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress.",
       "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoGASScoretBaselineExample"
+      },
+      "name" : "GAS Baseline Score",
+      "description" : "Baseline GAS score observation at start of goal.",
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"
     },
     {
       "extension" : [{
@@ -865,6 +865,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/goal-attainment-scaling-score"
+      },
+      "name" : "Goal Attainment Scaling (GAS) Score",
+      "description" : "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
       }],
       "reference" : {
@@ -872,7 +884,7 @@
       },
       "name" : "Goal for GAD-7 PROM Outcome",
       "description" : "Person-centered goal with a PROM outcome target for GAD-7 score.",
-      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-prom-profile"
+      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile"
     },
     {
       "extension" : [{
@@ -961,18 +973,6 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/pcoGASScorePatientBaselineExample"
-      },
-      "name" : "Patient GAS Baseline Score",
-      "description" : "Baseline GAS score observation recorded by a Patient at start of goal.",
-      "exampleCanonical" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
         "reference" : "Observation/pcoGASScorePatientFollowupExample"
       },
       "name" : "Patient GAS Follow-up Score",
@@ -1044,10 +1044,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-goal-profile"
+        "reference" : "StructureDefinition/pco-gas-goal-profile"
       },
-      "name" : "Person-Centered Goal",
-      "description" : "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.",
+      "name" : "Person-Centered GAS Goal",
+      "description" : "Person-centered goal with goal attainment scaling.",
       "exampleBoolean" : false
     },
     {
@@ -1056,10 +1056,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-gas-goal-profile"
+        "reference" : "StructureDefinition/pco-goal-profile"
       },
-      "name" : "Person-Centered Goal Attainment",
-      "description" : "Person-centered goal with goal attainment scaling.",
+      "name" : "Person-Centered Goal",
+      "description" : "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.",
       "exampleBoolean" : false
     },
     {
@@ -1072,18 +1072,6 @@
       },
       "name" : "Person-Centered Goal Follow-Up",
       "description" : "NCQA Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-goal-prom-profile"
-      },
-      "name" : "Person-Centered Goal for PROMs",
-      "description" : "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target.",
       "exampleBoolean" : false
     },
     {
@@ -1108,6 +1096,18 @@
       },
       "name" : "Person-Centered Progress Score",
       "description" : "A progress score observation for a person-centered goal.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-prom-goal-profile"
+      },
+      "name" : "Person-Centered PROM Goal",
+      "description" : "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target.",
       "exampleBoolean" : false
     },
     {
