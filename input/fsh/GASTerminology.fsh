@@ -1,9 +1,10 @@
 
-ValueSet: GASFFollowupScore
-Id: gas-followup-score
-Title: "Follow-Up GAS Score"
-Description: "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."
+ValueSet: GoalAttainmentScalingScore
+Id: goal-attainment-scaling-score
+Title: "Goal Attainment Scaling (GAS) Score"
+Description: "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."
 * ^experimental = false
+* $LNC#68489 "Goal attainment scale"
 * $LNC#68490 "Practitioner follow-up goal attainment scaling score"
 * $LNC#68491 "Patient follow-up goal attainment scaling score"
 * $LNC#68492 "Caregiver follow-up goal attainment scaling score"

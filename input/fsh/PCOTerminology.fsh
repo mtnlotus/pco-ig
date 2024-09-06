@@ -13,66 +13,6 @@ Description: "Codes to identify content associated with this IG"
 * #pco-data-submission-bundle "PCO Bundle"
 * #pco-data-submission-standing-order "PCO Submission Standing Order"
 
-/*
-CodeSystem: PCOGASCodesTemporary
-Id: pco-gas-codes-temporary
-Title: "Goal Attainment Scaling (GAS) Codes"
-Description: "Temporary code system for GAS codes until publication by LOINC. All of these codes have been submitted to LOINC."
-* ^caseSensitive = true
-* ^experimental = false
-* ^status = #active
-* #goal-attainment-scaling "Goal Attainment Scaling (GAS)"
-* #patient-gas-much-better-than-expected "Much better than expected"
-* #patient-gas-better-than-expected "Better than expected"
-* #patient-gas-expected-outcome "Expected outcome"
-* #patient-gas-less-than-expected "Less than expected"
-* #patient-gas-much-less-than-expected "Much less than expected"
-* #caregiver-gas-much-better-than-expected "Much better than expected"
-* #caregiver-gas-better-than-expected "Better than expected"
-* #caregiver-gas-expected-outcome "Expected outcome"
-* #caregiver-gas-less-than-expected "Less than expected"
-* #caregiver-gas-much-less-than-expected "Much less than expected"
-* #practitioner-gas-much-better-than-expected "Much better than expected"
-* #practitioner-gas-better-than-expected "Better than expected"
-* #practitioner-gas-expected-outcome "Expected outcome"
-* #practitioner-gas-less-than-expected "Less than expected"
-* #practitioner-gas-much-less-than-expected "Much less than expected"
-
-ValueSet: PatientGASFollowup
-Id: patient-gas-followup
-Title: "Patient Follow-Up GAS Score"
-Description: "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling."
-* ^experimental = false
-* PCOGASCodesTemporary#patient-gas-much-better-than-expected "Much better than expected"
-* PCOGASCodesTemporary#patient-gas-better-than-expected "Better than expected"
-* PCOGASCodesTemporary#patient-gas-expected-outcome "Expected outcome"
-* PCOGASCodesTemporary#patient-gas-less-than-expected "Less than expected"
-* PCOGASCodesTemporary#patient-gas-much-less-than-expected "Much less than expected"
-
-ValueSet: CaregiverGASFollowup
-Id: caregiver-gas-followup
-Title: "Caregiver Follow-Up GAS Score"
-Description: "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling."
-* ^experimental = false
-* PCOGASCodesTemporary#caregiver-gas-much-better-than-expected "Much better than expected"
-* PCOGASCodesTemporary#caregiver-gas-better-than-expected "Better than expected"
-* PCOGASCodesTemporary#caregiver-gas-expected-outcome "Expected outcome"
-* PCOGASCodesTemporary#caregiver-gas-less-than-expected "Less than expected"
-* PCOGASCodesTemporary#caregiver-gas-much-less-than-expected "Much less than expected"
-
-ValueSet: PractitionerGASFollowup
-Id: practitioner-gas-followup
-Title: "Practitioner Follow-Up GAS Score"
-Description: "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."
-* ^experimental = false
-* PCOGASCodesTemporary#practitioner-gas-much-better-than-expected "Much better than expected"
-* PCOGASCodesTemporary#practitioner-gas-better-than-expected "Better than expected"
-* PCOGASCodesTemporary#practitioner-gas-expected-outcome "Expected outcome"
-* PCOGASCodesTemporary#practitioner-gas-less-than-expected "Less than expected"
-* PCOGASCodesTemporary#practitioner-gas-much-less-than-expected "Much less than expected"
-
-*/
-
 ValueSet: PROMTargetMeasures
 Id: prom-target-measures
 Title: "PROM Target Measures"
@@ -80,3 +20,14 @@ Description: "Target measure codes used to track progress on patient-reported ou
 * ^experimental = false
 * $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score"
 * $LNC#44261-6 "Patient health questionnaire 9 item (PHQ-9) total score"
+* $LNC#91614-8 "PROMIS mobility - version 2.0 T-score"
+* $LNC#89676-1 "PROMIS cancer fatigue - version 1.0 T-score"
+* $LNC#71969-0 "PROMIS-10 Global Health, GMH, T score"
+* $LNC#71971-6 "PROMIS-10 Global Health, GPH, T score"
+* $LNC#71955-9 "PROMIS-29 Sleep Disturbance, T score"
+* $LNC#71957-5 "PROMIS-29 Satisfaction with Participation in Social Roles, T score"
+* $LNC#71959-1 "PROMIS-29 Physical Function, T score"
+* $LNC#71961-7 "PROMIS-29 Pain Interference, T score"
+* $LNC#71963-3 "PROMIS-29 Fatigue, T score"
+* $LNC#71965-8 "PROMIS-29 Depression, T score"
+* $LNC#71965-8 "PROMIS-29 Depression, T score"

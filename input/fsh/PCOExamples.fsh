@@ -81,16 +81,16 @@ Usage: #example
 * extension[gas-scaling][4].extension[level].valueCoding = $LNC#gas-much-less-than-expected "Much less than expected"
 * extension[gas-scaling][4].extension[text].valueString = "Unable to go outside with dog"
 
-Instance: pcoGASScorePatientBaselineExample
+Instance: pcoGASScoretBaselineExample
 InstanceOf: PCOGoalAttainmentScoreObservation
-Title: "Patient GAS Baseline Score"
-Description: "Baseline GAS score observation recorded by a Patient at start of goal."
+Title: "GAS Baseline Score"
+Description: "Baseline GAS score observation at start of goal."
 Usage: #example
 * status = #final 
 * subject = Reference(pcoPatientJones)
-* performer = Reference(pcoPatientJones)
+* performer = Reference(pcoPractitionerGonzalez)
 * effectiveDateTime = "2024-04-03T10:15:00Z"
-* code = $LNC#68491 "Patient follow-up goal attainment scaling score"
+* code = $LNC#68489 "Goal attainment scale"
 * focus = Reference(pcoGoalWalkDogExample)
 * valueCodeableConcept = $LNC#gas-less-than-expected "Less than expected"
 

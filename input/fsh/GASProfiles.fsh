@@ -18,7 +18,7 @@ Description: "Goal Attainment Scaling (GAS) is an extension used to specify five
 Profile: PCOGoalAttainmentScaleProfile
 Parent: PCOGoalProfile
 Id: pco-gas-goal-profile
-Title: "Person-Centered Goal Attainment"
+Title: "Person-Centered GAS Goal"
 Description: "Person-centered goal with goal attainment scaling."
 * extension contains
     PCOGoalAttainmentScaling named gas-scaling 5..5 MS
@@ -30,7 +30,7 @@ Parent: PCOProgressScoreObservation
 Id: pco-gas-score-observation
 Title: "PCO Goal Attainment Scaling (GAS) score"
 Description: "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."
-* code from GASFFollowupScore (extensible)
+* code from GoalAttainmentScalingScore (extensible)
   * ^short = "Code for Goal Attainment Scaling (GAS) score observation"
 * focus only Reference(PCOGoalAttainmentScaleProfile)
 * value[x] only CodeableConcept
