@@ -13,6 +13,7 @@ Description: "Codes to identify content associated with this IG"
 * #pco-data-submission-bundle "PCO Bundle"
 * #pco-data-submission-standing-order "PCO Submission Standing Order"
 
+/*
 CodeSystem: PCOGASCodesTemporary
 Id: pco-gas-codes-temporary
 Title: "Goal Attainment Scaling (GAS) Codes"
@@ -69,6 +70,8 @@ Description: "The practitioner follow-up score indicates how the practitioner ra
 * PCOGASCodesTemporary#practitioner-gas-expected-outcome "Expected outcome"
 * PCOGASCodesTemporary#practitioner-gas-less-than-expected "Less than expected"
 * PCOGASCodesTemporary#practitioner-gas-much-less-than-expected "Much less than expected"
+
+*/
 
 ValueSet: PROMTargetMeasures
 Id: prom-target-measures
