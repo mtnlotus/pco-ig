@@ -15,13 +15,6 @@ Description: "Goal Attainment Scaling (GAS) is an extension used to specify five
 * extension[text].value[x] only string
 * extension[text].valueString 1..1
 
-// RuleSet: GASScoreObservationBase
-// * code from GASFFollowupScore
-//   * ^short = "Code for Goal Attainment Scaling (GAS) score observation"
-// * focus only Reference(PCOGoalAttainmentScaleProfile)
-// * value[x] only CodeableConcept
-// * valueCodeableConcept 1..1 MS
-
 Profile: PCOGoalAttainmentScaleProfile
 Parent: PCOGoalProfile
 Id: pco-gas-goal-profile
@@ -43,25 +36,3 @@ Description: "The follow-up score indicates how a patient, caregiver, or practit
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from GASScoreAnswers (required)
-
-/*
-Profile: PCOPractitionerGASScore
-Parent: PCOProgressScoreObservation
-Id: pco-practitioner-gas-score
-Title: "Practitioner Goal Attainment Scaling (GAS) score"
-Description: "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."
-* insert GASScoreObservationBase
-* performer only Reference(USCorePractitionerProfile)
-* valueCodeableConcept from PractitionerGASFollowup 
-
-// TODO: How to represent that a caregiver reported their own progress?  Cannot have subject=RelatedPerson
-Profile: PCOCaregiverGASScore
-Parent: PCOProgressScoreObservation
-Id: pco-caregiver-gas-score
-Title: "Caregiver Goal Attainment Scaling (GAS) score"
-Description: "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling."
-* insert GASScoreObservationBase
-* performer only Reference(USCoreRelatedPersonProfile)
-* valueCodeableConcept from CaregiverGASFollowup 
-
-*/
