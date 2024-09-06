@@ -81,8 +81,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Goal.target.measure","Goal.target.measure","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","The parameter whose value is being tracked","The parameter whose value is being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.","","","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary""/>
-    <code value=""goal-attainment-scaling""/>
+    <system value=""http://loinc.org""/>
+    <code value=""68489""/>
+    <display value=""Goal attainment scale""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes to identify the value being tracked, e.g. body weight, blood pressure, or hemoglobin A1c level.","http://hl7.org/fhir/ValueSet/observation-codes","",,,,"Goal.target.measure",0,1,"gol-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

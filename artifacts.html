@@ -261,20 +261,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-caregiver-gas-score.html"
-                  title="StructureDefinition/pco-caregiver-gas-score">Caregiver Goal Attainment Scaling (GAS) score</a>
+               <a href="StructureDefinition-pco-gas-score-observation.html"
+                  title="StructureDefinition/pco-gas-score-observation">PCO Goal Attainment Scaling (GAS) score</a>
             </td>
             <td>
-<p>The caregiver follow-up score indicates how the caregiver rated either the patient’s progress or their own progress on goal attainment scaling.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-pco-patient-gas-score.html"
-                  title="StructureDefinition/pco-patient-gas-score">Patient Goal Attainment Scaling (GAS) score</a>
-            </td>
-            <td>
-<p>The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.</p>
+<p>The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.</p>
 </td>
          </tr>
          <tr>
@@ -333,15 +324,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-practitioner-gas-score.html"
-                  title="StructureDefinition/pco-practitioner-gas-score">Practitioner Goal Attainment Scaling (GAS) score</a>
-            </td>
-            <td>
-<p>The practitioner follow-up score indicates how the practitioner rated the patient’s progress on goal attainment scaling.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-pco-what-matters-assessment.html"
                   title="StructureDefinition/pco-what-matters-assessment">What Matters Assessment</a>
             </td>
@@ -376,11 +358,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-caregiver-gas-followup.html"
-                  title="ValueSet/caregiver-gas-followup">Caregiver Follow-Up GAS Score</a>
+               <a href="ValueSet-gas-followup-score.html"
+                  title="ValueSet/gas-followup-score">Follow-Up GAS Score</a>
             </td>
             <td>
-<p>The caregiver follow-up score indicates how the caregiver rated either the patient’s progress or their own progress on goal attainment scaling.</p>
+<p>The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-gas-score-answers.html"
+                  title="ValueSet/gas-score-answers">Follow-Up GAS Score Answers</a>
+            </td>
+            <td>
+<p>The progress rating on goal attainment scaling.</p>
 </td>
          </tr>
          <tr>
@@ -399,24 +390,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Target measure codes used to track progress on patient-reported outcome measures (PROMs).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-patient-gas-followup.html"
-                  title="ValueSet/patient-gas-followup">Patient Follow-Up GAS Score</a>
-            </td>
-            <td>
-<p>The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-practitioner-gas-followup.html"
-                  title="ValueSet/practitioner-gas-followup">Practitioner Follow-Up GAS Score</a>
-            </td>
-            <td>
-<p>The practitioner follow-up score indicates how the practitioner rated the patient’s progress on goal attainment scaling.</p>
 </td>
          </tr>
          <tr>
@@ -442,24 +415,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Codes to identify content associated with this IG</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-pco-gas-codes-temporary.html"
-                  title="CodeSystem/pco-gas-codes-temporary">Goal Attainment Scaling (GAS) Codes</a>
-            </td>
-            <td>
-<p>Temporary code system for GAS codes until publication by LOINC. All of these codes have been submitted to LOINC.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-mtnlotus-concepts.html"
-                  title="CodeSystem/mtnlotus-concepts">My Lotus Lifestyle Concepts</a>
-            </td>
-            <td>
-<p>Code system to identify “What Matters” concepts from Mountain Lotus WellBeing.</p>
 </td>
          </tr>
          <tr>
@@ -699,7 +654,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 15:21+0000">2024-09-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 6, 2024 16:42+0000">2024-09-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

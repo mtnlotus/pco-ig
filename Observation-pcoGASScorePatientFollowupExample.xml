@@ -3,7 +3,7 @@
 <Observation xmlns="http://hl7.org/fhir">
   <id value="pcoGASScorePatientFollowupExample"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation pcoGASScorePatientFollowupExample</b></p><a name="pcoGASScorePatientFollowupExample"> </a><a name="hcpcoGASScorePatientFollowupExample"> </a><a name="pcoGASScorePatientFollowupExample-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary goal-attainment-scaling}">Goal Attainment Scaling (GAS)</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>focus</b>: <a href="Goal-pcoGoalWalkDogExample.html">Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Physical Function; description = ; start[x] = 2024-04-03</a></p><p><b>effective</b>: 2024-05-10 10:15:00+0000</p><p><b>performer</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>value</b>: <span title="Codes:{http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary patient-gas-better-than-expected}">Better than expected</span></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation pcoGASScorePatientFollowupExample</b></p><a name="pcoGASScorePatientFollowupExample"> </a><a name="hcpcoGASScorePatientFollowupExample"> </a><a name="pcoGASScorePatientFollowupExample-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 68491}">Patient follow-up goal attainment scaling score</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>focus</b>: <a href="Goal-pcoGoalWalkDogExample.html">Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = Physical Function; description = ; start[x] = 2024-04-03</a></p><p><b>effective</b>: 2024-05-10 10:15:00+0000</p><p><b>performer</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>value</b>: <span title="Codes:{http://loinc.org gas-better-than-expected}">Better than expected</span></p></div>
   </text>
   <status value="final"/>
   <category>
@@ -14,8 +14,9 @@
   </category>
   <code>
     <coding>
-      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-      <code value="goal-attainment-scaling"/>
+      <system value="http://loinc.org"/>
+      <code value="68491"/>
+      <display value="Patient follow-up goal attainment scaling score"/>
     </coding>
   </code>
   <subject>
@@ -30,8 +31,8 @@
   </performer>
   <valueCodeableConcept>
     <coding>
-      <system value="http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"/>
-      <code value="patient-gas-better-than-expected"/>
+      <system value="http://loinc.org"/>
+      <code value="gas-better-than-expected"/>
       <display value="Better than expected"/>
     </coding>
   </valueCodeableConcept>

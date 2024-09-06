@@ -1,26 +1,22 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/caregiver-gas-followup",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/gas-followup-score",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "CaregiverGASFollowup",
-      "title" : "Caregiver Follow-Up GAS Score",
-      "description" : "The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling.",
-      "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
-      ]
+      "name" : "GASFFollowupScore",
+      "title" : "Follow-Up GAS Score",
+      "description" : "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
+      "systems" : ["http://loinc.org"]
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/patient-gas-followup",
+      "url" : "http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "PatientGASFollowup",
-      "title" : "Patient Follow-Up GAS Score",
-      "description" : "The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling.",
-      "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
-      ]
+      "name" : "GASScoreAnswers",
+      "title" : "Follow-Up GAS Score Answers",
+      "description" : "The progress rating on goal attainment scaling.",
+      "systems" : ["http://loinc.org"]
     },
     {
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
@@ -32,17 +28,6 @@
       "systems" : [
         "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
         "http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"
-      ]
-    },
-    {
-      "url" : "http://mtnlotus.com/uv/pco/ValueSet/practitioner-gas-followup",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PractitionerGASFollowup",
-      "title" : "Practitioner Follow-Up GAS Score",
-      "description" : "The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling.",
-      "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
       ]
     },
     {
@@ -61,10 +46,7 @@
       "name" : "WhatMattersFocusAreas",
       "title" : "What Matters Focus Areas",
       "description" : "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals.",
-      "systems" : [
-        "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
-        "http://mtnlotus.com/uv/pco/CodeSystem/mtnlotus-concepts"
-      ]
+      "systems" : ["http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health"]
     }
   ]
 }

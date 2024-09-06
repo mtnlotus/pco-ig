@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-09-06T15:21:17+00:00"/>
+  <date value="2024-09-06T16:42:31+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -571,28 +571,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/caregiver-gas-followup"/>
-      </reference>
-      <name value="Caregiver Follow-Up GAS Score"/>
-      <description value="The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-caregiver-gas-score"/>
-      </reference>
-      <name value="Caregiver Goal Attainment Scaling (GAS) score"/>
-      <description value="The caregiver follow-up score indicates how the caregiver rated either the patient's progress or their own progress on goal attainment scaling."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -646,6 +624,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/gas-followup-score"/>
+      </reference>
+      <name value="Follow-Up GAS Score"/>
+      <description value="The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/gas-score-answers"/>
+      </reference>
+      <name value="Follow-Up GAS Score Answers"/>
+      <description value="The progress rating on goal attainment scaling."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -674,17 +674,6 @@
       </reference>
       <name value="Goal Attainment Scaling"/>
       <description value="Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/pco-gas-codes-temporary"/>
-      </reference>
-      <name value="Goal Attainment Scaling (GAS) Codes"/>
-      <description value="Temporary code system for GAS codes until publication by LOINC. All of these codes have been submitted to LOINC."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -766,32 +755,10 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/mtnlotus-concepts"/>
-      </reference>
-      <name value="My Lotus Lifestyle Concepts"/>
-      <description value="Code system to identify &quot;What Matters&quot; concepts from Mountain Lotus WellBeing."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
         <reference value="CodeSystem/ncqa-goal-domains"/>
       </reference>
       <name value="NCQA Goal Domains"/>
       <description value="NCQA goal domain codes used to identify the category for PCO resources."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/patient-gas-followup"/>
-      </reference>
-      <name value="Patient Follow-Up GAS Score"/>
-      <description value="The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -803,7 +770,7 @@
       </reference>
       <name value="Patient GAS Baseline Score"/>
       <description value="Baseline GAS score observation recorded by a Patient at start of goal."/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score"/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -814,18 +781,7 @@
       </reference>
       <name value="Patient GAS Follow-up Score"/>
       <description value="Follow-up GAS score observation recorded by a Patient showing goal progress."/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-patient-gas-score"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-patient-gas-score"/>
-      </reference>
-      <name value="Patient Goal Attainment Scaling (GAS) score"/>
-      <description value="The patient follow-up score indicates how the patient rated their own progress on goal attainment scaling."/>
-      <exampleBoolean value="false"/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -847,6 +803,17 @@
       </reference>
       <name value="PCO Categories"/>
       <description value="Example value set to identify the category for PCO resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-gas-score-observation"/>
+      </reference>
+      <name value="PCO Goal Attainment Scaling (GAS) score"/>
+      <description value="The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -948,17 +915,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/practitioner-gas-followup"/>
-      </reference>
-      <name value="Practitioner Follow-Up GAS Score"/>
-      <description value="The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -966,18 +922,7 @@
       </reference>
       <name value="Practitioner GAS Follow-up Score"/>
       <description value="Follow-up GAS score observation recorded by a Practitioner showing goal progress."/>
-      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-practitioner-gas-score"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-practitioner-gas-score"/>
-      </reference>
-      <name value="Practitioner Goal Attainment Scaling (GAS) score"/>
-      <description value="The practitioner follow-up score indicates how the practitioner rated the patient's progress on goal attainment scaling."/>
-      <exampleBoolean value="false"/>
+      <exampleCanonical value="http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
