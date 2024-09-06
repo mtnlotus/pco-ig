@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "pcoGASScorePatientBaselineExample",
+  "id": "pcoGASScoretBaselineExample",
   "performer": [
     {
-      "reference": "Patient/pcoPatientJones"
+      "reference": "Practitioner/pcoPractitionerGonzalez"
     }
   ],
   "focus": [
@@ -21,24 +21,25 @@
       ]
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "goal-attainment-scaling",
-        "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
-      }
-    ]
-  },
   "status": "final",
   "subject": {
     "reference": "Patient/pcoPatientJones"
   },
   "effectiveDateTime": "2024-04-03T10:15:00Z",
+  "code": {
+    "coding": [
+      {
+        "code": "68489",
+        "system": "http://loinc.org",
+        "display": "Goal attainment scale"
+      }
+    ]
+  },
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "patient-gas-less-than-expected",
-        "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
+        "code": "gas-less-than-expected",
+        "system": "http://loinc.org",
         "display": "Less than expected"
       }
     ]

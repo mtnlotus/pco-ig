@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "goal-attainment-scaling-score",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+  },
+  "extension": [ {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueString": "executable"
+  }, {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueString": "executable"
+  } ],
+  "url": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score",
+  "name": "GoalAttainmentScalingScore",
+  "title": "Goal Attainment Scaling (GAS) Score",
+  "status": "draft",
+  "experimental": false,
+  "description": "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "68489",
+        "display": "Goal attainment scale"
+      }, {
+        "code": "68490",
+        "display": "Practitioner follow-up goal attainment scaling score"
+      }, {
+        "code": "68491",
+        "display": "Patient follow-up goal attainment scaling score"
+      }, {
+        "code": "68492",
+        "display": "Caregiver follow-up goal attainment scaling score"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-06T14:33:22-06:00",
+    "parameter": [ {
+      "name": "naive",
+      "valueBoolean": true
+    } ],
+    "contains": [ {
+      "system": "http://loinc.org",
+      "code": "68489",
+      "display": "Goal attainment scale"
+    }, {
+      "system": "http://loinc.org",
+      "code": "68490",
+      "display": "Practitioner follow-up goal attainment scaling score"
+    }, {
+      "system": "http://loinc.org",
+      "code": "68491",
+      "display": "Patient follow-up goal attainment scaling score"
+    }, {
+      "system": "http://loinc.org",
+      "code": "68492",
+      "display": "Caregiver follow-up goal attainment scaling score"
+    } ]
+  }
+}

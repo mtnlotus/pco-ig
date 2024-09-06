@@ -1,0 +1,69 @@
+{
+  "resourceType": "ValueSet",
+  "id": "gas-score-answers",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+  },
+  "extension": [ {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueString": "executable"
+  }, {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueString": "executable"
+  } ],
+  "url": "http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers",
+  "name": "GASScoreAnswers",
+  "title": "Follow-Up GAS Score Answers",
+  "status": "draft",
+  "experimental": false,
+  "description": "The progress rating on goal attainment scaling.",
+  "compose": {
+    "include": [ {
+      "system": "http://loinc.org",
+      "concept": [ {
+        "code": "gas-much-better-than-expected",
+        "display": "Much better than expected"
+      }, {
+        "code": "gas-better-than-expected",
+        "display": "Better than expected"
+      }, {
+        "code": "gas-expected-outcome",
+        "display": "Expected outcome"
+      }, {
+        "code": "gas-less-than-expected",
+        "display": "Less than expected"
+      }, {
+        "code": "gas-much-less-than-expected",
+        "display": "Much less than expected"
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2024-09-06T14:33:22-06:00",
+    "parameter": [ {
+      "name": "naive",
+      "valueBoolean": true
+    } ],
+    "contains": [ {
+      "system": "http://loinc.org",
+      "code": "gas-much-better-than-expected",
+      "display": "Much better than expected"
+    }, {
+      "system": "http://loinc.org",
+      "code": "gas-better-than-expected",
+      "display": "Better than expected"
+    }, {
+      "system": "http://loinc.org",
+      "code": "gas-expected-outcome",
+      "display": "Expected outcome"
+    }, {
+      "system": "http://loinc.org",
+      "code": "gas-less-than-expected",
+      "display": "Less than expected"
+    }, {
+      "system": "http://loinc.org",
+      "code": "gas-much-less-than-expected",
+      "display": "Much less than expected"
+    } ]
+  }
+}

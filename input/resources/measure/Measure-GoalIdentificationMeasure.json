@@ -8,13 +8,6 @@
     "resourceType": "Library",
     "id": "effective-data-requirements",
     "extension": [ {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode",
-      "valueCoding": {
-        "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-        "code": "goal-attainment-scaling",
-        "display": "Goal Attainment Scaling (GAS)"
-      }
-    }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
       "extension": [ {
         "url": "libraryName",
@@ -81,73 +74,13 @@
         "valueString": "GoalAttainmentLogic"
       }, {
         "url": "name",
-        "valueString": "All GAS Score Observations"
-      }, {
-        "url": "statement",
-        "valueString": "// All observations containing a Goal Attainment Scaling (GAS) score.\ndefine \"All GAS Score Observations\":\n  [Observation: \"Goal attainment scaling score\"]"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 4
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
-      }, {
-        "url": "name",
-        "valueString": "GAS Patient Scores"
-      }, {
-        "url": "statement",
-        "valueString": "// Returns a collection of Observations with a patient's GAS scores.\ndefine \"GAS Patient Scores\":\n  \"All GAS Score Observations\" obs\n    where exists obs.performer.resolvePatients()"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 5
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
-      }, {
-        "url": "name",
-        "valueString": "GAS Practitioner Scores"
-      }, {
-        "url": "statement",
-        "valueString": "// Returns a collection of Observations with a practitioner's GAS scores.\ndefine \"GAS Practitioner Scores\":\n  \"All GAS Score Observations\" obs\n    where exists obs.performer.resolvePractitioners()"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 6
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
-      }, {
-        "url": "name",
-        "valueString": "GAS Caregiver Scores"
-      }, {
-        "url": "statement",
-        "valueString": "// Returns a collection of Observations with a caregiver's GAS scores.\ndefine \"GAS Caregiver Scores\":\n  \"All GAS Score Observations\" obs\n    where exists obs.performer.resolveRelatedPersons()"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 7
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
-      }, {
-        "url": "name",
         "valueString": "GAS Scores"
       }, {
         "url": "statement",
-        "valueString": "// Observations containing a GAS score.\ndefine \"GAS Scores\":\n  PC.SortAscending(\"GAS Patient Scores\"\n    union \"GAS Practitioner Scores\"\n    union \"GAS Caregiver Scores\"\n  )"
+        "valueString": "// Observations containing a GAS score.\ndefine \"GAS Scores\":\n  [Observation: \"Goal Attainment Scaling (GAS) Score\"]"
       }, {
         "url": "displaySequence",
-        "valueInteger": 8
+        "valueInteger": 4
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -162,7 +95,7 @@
         "valueString": "// Observations containing a PROM score.\ndefine \"PROM Scores\":\n  [Observation: \"PROM Target Measures\"]"
       }, {
         "url": "displaySequence",
-        "valueInteger": 9
+        "valueInteger": 5
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -177,7 +110,7 @@
         "valueString": "/* \nBaseline Scares are PCO score observations taken during the Measurement Period,\nbut before the follow-up period for its Goal. Default follow-up period is \n2 weeks to 6 months following the goal startDate.\n*/\ndefine \"Baseline Scores Before Follow-Up Period\":\n  flatten( \"PCO Goals During Measurement Period\" goal\n    let pcoScores: goal.pcoScores()\n      return pcoScores score \n        let scoreDate: score.effective as FHIR.dateTime\n        where (scoreDate during \"Measurement Period\")\n          and (scoreDate before start of \"Follow-Up Interval For\"(goal))\n  )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 10
+        "valueInteger": 6
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -192,7 +125,7 @@
         "valueString": "/* \n... has a PCO goal identified resulting in completion of goal attainment scaling (GAS)\nor a Patient-Reported Outcome Measure (PROM) and development of an action plan.\n*/\ndefine \"Numerator\":\n  \"Denominator\" person where\n    exists PCOLogic.\"PCO Goals During Measurement Period\"\n      and exists PCOLogic.\"Baseline Scores Before Follow-Up Period\""
       }, {
         "url": "displaySequence",
-        "valueInteger": 11
+        "valueInteger": 7
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -207,7 +140,7 @@
         "valueString": "define \"Denominator Exclusions\":\n  null"
       }, {
         "url": "displaySequence",
-        "valueInteger": 12
+        "valueInteger": 8
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -222,7 +155,7 @@
         "valueString": "define \"Denominator Exceptions\":\n  null"
       }, {
         "url": "displaySequence",
-        "valueInteger": 13
+        "valueInteger": 9
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -237,7 +170,7 @@
         "valueString": "/*\n@description: Converts the given FHIR [CodeableConcept](https://hl7.org/fhir/datatypes.html#CodeableConcept) value to a CQL Concept.\n*/\ndefine function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }"
       }, {
         "url": "displaySequence",
-        "valueInteger": 14
+        "valueInteger": 10
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -252,7 +185,7 @@
         "valueString": "define function ToDate(value date): value.value"
       }, {
         "url": "displaySequence",
-        "valueInteger": 15
+        "valueInteger": 11
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -264,10 +197,10 @@
         "valueString": "hasGAS"
       }, {
         "url": "statement",
-        "valueString": "define fluent function hasGAS(goal Goal):\n  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')"
+        "valueString": "// where exists obs.performer.resolveRelatedPersons()\n\ndefine fluent function hasGAS(goal Goal):\n  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')"
       }, {
         "url": "displaySequence",
-        "valueInteger": 16
+        "valueInteger": 12
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -282,7 +215,7 @@
         "valueString": "/*\n@description: Returns any extensions defined on the given resource with the specified url.\n@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info.\n*/\ndefine fluent function extensions(domainResource DomainResource, url String):\n  domainResource.extension E\n\t  where E.url = url\n\t\treturn E"
       }, {
         "url": "displaySequence",
-        "valueInteger": 17
+        "valueInteger": 13
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -297,7 +230,7 @@
         "valueString": "define function ToString(value uri): value.value"
       }, {
         "url": "displaySequence",
-        "valueInteger": 18
+        "valueInteger": 14
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -312,7 +245,7 @@
         "valueString": "/// Returns true if this Goal has a PROM code in its target.measure\ndefine fluent function hasPROM(goal Goal):\n  exists (goal.target target\n    where target.measure in \"PROM Target Measures\"\n  )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 19
+        "valueInteger": 15
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -327,7 +260,7 @@
         "valueString": "// Returns a list of CarePlan that support this Goal.\ndefine fluent function carePlans(goal Goal):\n  [CarePlan] carePlan\n    where exists ( carePlan.goal goalRef\n        where goal.id = goalRef.reference.getId()\n    )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 20
+        "valueInteger": 16
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -342,7 +275,7 @@
         "valueString": "define fluent function getId(uri String):\n  Last(Split(uri, '/'))"
       }, {
         "url": "displaySequence",
-        "valueInteger": 21
+        "valueInteger": 17
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -357,7 +290,7 @@
         "valueString": "// Returns a list of Observation including both GAS and PROM scores\ndefine fluent function pcoScores(goal Goal):\n  goal.gasScores()\n    union goal.promScores()"
       }, {
         "url": "displaySequence",
-        "valueInteger": 22
+        "valueInteger": 18
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -372,67 +305,7 @@
         "valueString": "// Returns a list of Observation including only GAS scores\ndefine fluent function gasScores(goal Goal):\n  \"GAS Scores\" score\n    where score.focusGoals() contains goal"
       }, {
         "url": "displaySequence",
-        "valueInteger": 23
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "PCOCommon"
-      }, {
-        "url": "name",
-        "valueString": "SortAscending"
-      }, {
-        "url": "statement",
-        "valueString": "define function SortAscending(observations List<Observation>):\n  observations O\n    sort by Coalesce(\n      (effective as FHIR.dateTime).value,\n      (effective as FHIR.instant).value,\n      (effective as FHIR.Period).\"end\".value,\n      (effective as FHIR.Period).\"start\".value) ascending"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 24
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "PCOCommon"
-      }, {
-        "url": "name",
-        "valueString": "resolvePatients"
-      }, {
-        "url": "statement",
-        "valueString": "define fluent function resolvePatients(references List<Reference>):\n  flatten( references ref\n    return [Patient] resource\n      where resource.id = ref.reference.getId()\n  )"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 25
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "PCOCommon"
-      }, {
-        "url": "name",
-        "valueString": "resolvePractitioners"
-      }, {
-        "url": "statement",
-        "valueString": "define fluent function resolvePractitioners(references List<Reference>):\n  flatten( references ref\n    return [Practitioner] resource\n      where resource.id = ref.reference.getId()\n  )"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 26
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "PCOCommon"
-      }, {
-        "url": "name",
-        "valueString": "resolveRelatedPersons"
-      }, {
-        "url": "statement",
-        "valueString": "define fluent function resolveRelatedPersons(references List<Reference>):\n  flatten( references ref\n    return [RelatedPerson] resource\n      where resource.id = ref.reference.getId()\n  )"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 27
+        "valueInteger": 19
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -447,7 +320,7 @@
         "valueString": "// Returns a list of Goal where focus includes the given Observation.\ndefine fluent function focusGoals(obs Observation):\n  obs.focus.resolveGoals()"
       }, {
         "url": "displaySequence",
-        "valueInteger": 28
+        "valueInteger": 20
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -462,7 +335,7 @@
         "valueString": "define fluent function resolveGoals(references List<Reference>):\n  flatten( references ref\n    return [Goal] resource\n      where resource.id = ref.reference.getId()\n  )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 29
+        "valueInteger": 21
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -477,7 +350,7 @@
         "valueString": "// Returns a list of Observation including only PROM scores\ndefine fluent function promScores(goal Goal):\n  \"PROM Scores\" score\n    where score.focusGoals() contains goal"
       }, {
         "url": "displaySequence",
-        "valueInteger": 30
+        "valueInteger": 22
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -492,7 +365,7 @@
         "valueString": "define function ToDateTime(value dateTime): value.value"
       }, {
         "url": "displaySequence",
-        "valueInteger": 31
+        "valueInteger": 23
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -507,7 +380,7 @@
         "valueString": "/*\nComputes the follow-up interval for a Goal based on this measure's \"Follow-Up Interval\" parameter.\n@return Interval<DateTime>\n*/\ndefine function \"Follow-Up Interval For\" (goal Goal):\n  goal goal\n    let startDate: ToDateTime(goal.start as FHIR.date)\n      return Interval(startDate + start of \"Follow-Up Interval\", startDate + end of \"Follow-Up Interval\")"
       }, {
         "url": "displaySequence",
-        "valueInteger": 32
+        "valueInteger": 24
       } ]
     } ],
     "name": "EffectiveDataRequirements",
@@ -532,16 +405,16 @@
       "resource": "http://mtnlotus.com/uv/pco/Library/PCOCommon|0.1.0"
     }, {
       "type": "depends-on",
-      "display": "Code system PCO GAS Codes",
-      "resource": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
-    }, {
-      "type": "depends-on",
       "display": "Value set PCO Categories",
       "resource": "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"
     }, {
       "type": "depends-on",
       "display": "Value set PROM Target Measures",
       "resource": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"
+    }, {
+      "type": "depends-on",
+      "display": "Value set Goal Attainment Scaling (GAS) Score",
+      "resource": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"
     } ],
     "parameter": [ {
       "name": "Measurement Period",
@@ -588,8 +461,7 @@
     } ],
     "dataRequirement": [ {
       "type": "Patient",
-      "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ],
-      "mustSupport": [ "id" ]
+      "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
     }, {
       "type": "Goal",
       "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
@@ -601,14 +473,10 @@
     }, {
       "type": "Observation",
       "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
-      "mustSupport": [ "code", "performer" ],
+      "mustSupport": [ "code" ],
       "codeFilter": [ {
         "path": "code",
-        "code": [ {
-          "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-          "code": "goal-attainment-scaling",
-          "display": "Goal Attainment Scaling (GAS)"
-        } ]
+        "valueSet": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"
       } ]
     }, {
       "type": "Observation",
@@ -618,14 +486,6 @@
         "path": "code",
         "valueSet": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"
       } ]
-    }, {
-      "type": "Practitioner",
-      "profile": [ "http://hl7.org/fhir/StructureDefinition/Practitioner" ],
-      "mustSupport": [ "id" ]
-    }, {
-      "type": "RelatedPerson",
-      "profile": [ "http://hl7.org/fhir/StructureDefinition/RelatedPerson" ],
-      "mustSupport": [ "id" ]
     } ]
   } ],
   "extension": [ {
@@ -690,7 +550,7 @@
   "title": "Person-Centered Goal Identification",
   "status": "active",
   "experimental": false,
-  "date": "2024-08-27T18:09:14+00:00",
+  "date": "2024-09-06T21:10:55+00:00",
   "publisher": "Mountain Lotus WellBeing LLC",
   "contact": [ {
     "telecom": [ {

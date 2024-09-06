@@ -21,10 +21,10 @@
       "valueString": "DisableListPromotion"
     }, {
       "name": "format",
-      "valueString": "XML"
+      "valueString": "JSON"
     }, {
       "name": "format",
-      "valueString": "JSON"
+      "valueString": "XML"
     }, {
       "name": "analyzeDataRequirements",
       "valueBoolean": false
@@ -89,16 +89,16 @@
     "resource": "http://mtnlotus.com/uv/pco/Library/GoalAttainmentLogic|0.1.0"
   }, {
     "type": "depends-on",
-    "display": "Code system PCO GAS Codes",
-    "resource": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary"
-  }, {
-    "type": "depends-on",
     "display": "Value set PCO Categories",
     "resource": "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"
   }, {
     "type": "depends-on",
     "display": "Value set PROM Target Measures",
     "resource": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"
+  }, {
+    "type": "depends-on",
+    "display": "Value set Goal Attainment Scaling (GAS) Score",
+    "resource": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"
   } ],
   "parameter": [ {
     "name": "Measurement Period",
@@ -151,8 +151,7 @@
   } ],
   "dataRequirement": [ {
     "type": "Patient",
-    "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ],
-    "mustSupport": [ "id" ]
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
   }, {
     "type": "Goal",
     "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
@@ -164,14 +163,10 @@
   }, {
     "type": "Observation",
     "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
-    "mustSupport": [ "code", "performer" ],
+    "mustSupport": [ "code" ],
     "codeFilter": [ {
       "path": "code",
-      "code": [ {
-        "system": "http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary",
-        "code": "goal-attainment-scaling",
-        "display": "Goal Attainment Scaling (GAS)"
-      } ]
+      "valueSet": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"
     } ]
   }, {
     "type": "Observation",
@@ -181,14 +176,6 @@
       "path": "code",
       "valueSet": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"
     } ]
-  }, {
-    "type": "Practitioner",
-    "profile": [ "http://hl7.org/fhir/StructureDefinition/Practitioner" ],
-    "mustSupport": [ "id" ]
-  }, {
-    "type": "RelatedPerson",
-    "profile": [ "http://hl7.org/fhir/StructureDefinition/RelatedPerson" ],
-    "mustSupport": [ "id" ]
   } ],
   "content": [ {
     "contentType": "text/cql",
