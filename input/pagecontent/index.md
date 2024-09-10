@@ -2,7 +2,7 @@
 
 Person-Centered Outcomes (PCO) focus on setting and achieving specific, personalized goals that prioritize an individual's well-being and "What Matters Most" to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. After goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual's needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness. Goal Attainment Scaling (GAS) and Patient-Reported Outcome Measures (PROMs) are two approaches used to establish goal targets and track achievement progress.
 
-[Goal Attainment Scaling (GAS)](https://www.ncqa.org/wp-content/uploads/NCQA-GAS-Whitepaper-WEB.pdf) in healthcare measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.
+[Person-centered outcome measures](https://www.ncqa.org/hedis/reports-and-research/pco-measures/) and [Goal Attainment Scaling (GAS)](https://www.ncqa.org/wp-content/uploads/NCQA-GAS-Whitepaper-WEB.pdf) in healthcare measure the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.
 
 Based in psychometric science, [Patient-Reported Outcome Measures (PROMs)](https://mmshub.cms.gov/sites/default/files/Patient-Reported-Outcome-Measures.pdf) are standardized questionnaires that contain multiple questions, or items, patients answer on their own to generate numerical scores measuring symptoms, function, perceived health status. Two examples of commonly used PROMs are [PHQ-9 quick depression assessment panel](Questionnaire-44249-1.html) and [Generalized Anxiety Disorder (GAD-7)](Questionnaire-69737-5.html).
 
@@ -38,7 +38,7 @@ This goal includes five levels of achievement that can be used to evaluate Dorot
 ##### Goals using Patient-Reported Outcome Measures (PROMs)
 Dorothy is working with her primary care provider to manage anxiety related to her complex care needs and Dr. Anderson recommends creating a goal measured by the Generalized Anxiety Disorder (GAS-7) assessment questionnaire. Dr. Anderson sets the goal target to be a GAD-7 score < 6, which indicates mild anxiety.
 
-**☛ See [Profile: Person-Centered Goal using PROM](StructureDefinition-pco-goal-prom-profile.html#profile)**
+**☛ See [Profile: Person-Centered Goal using PROM](StructureDefinition-pco-prom-goal-profile.html#profile)**
 
 **☛ See [Example: PROM Goal for Anxiety](Goal-pcoGoalAnxietyExample.html#root)**
 
@@ -50,7 +50,7 @@ If the health coaching role is performed by Dorothy's primary care physician or 
 ##### Track progress using using Goal Attainment Scaling (GAS)
 Dorothy's mobile app prompts her once each month to record progress on attainment of her goals. For goals using Goal Attainment Scaling (GAS), the app displays a slider where Dorothy can rate herself using the five pre-defined goal attainment levels. Similarly, Dorothy's health & wellness coach or her primary care doctor can use their PCO apps to rate Dorothy's progress from their perspectives.
 
-**☛ See [Profile: Goal Attainment Scaling (GAS) score by patient](StructureDefinition-pco-patient-gas-score.html#profile)**
+**☛ See [Profile: Goal Attainment Scaling (GAS) score by patient](StructureDefinition-pco-gas-score-observation.html#profile)**
 
 **☛ See [Example: GAS score by patient](Observation-pcoGASScorePatientFollowupExample.html#root)**
 
