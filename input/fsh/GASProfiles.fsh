@@ -21,8 +21,8 @@ Id: pco-gas-goal-profile
 Title: "Person-Centered GAS Goal"
 Description: "Person-centered goal with goal attainment scaling."
 * extension contains
-    PCOGoalAttainmentScaling named gas-scaling 5..5 MS
-* target 0..1 MS
+    PCOGoalAttainmentScaling named gas-scaling 0..5 MS
+* target 1..1 MS
   * measure = $LNC#68489 "Goal attainment scale"
 
 Profile: PCOGoalAttainmentScoreObservation
