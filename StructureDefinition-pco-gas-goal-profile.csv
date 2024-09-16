@@ -20,11 +20,11 @@ htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
 "Goal.contained","Goal.contained","","inline resources
 anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
-"Goal.extension","Goal.extension","","","",5,*,"","","","Extension {[]} {[]}
+"Goal.extension","Goal.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Goal.extension:gas-scaling","Goal.extension","gas-scaling","","",5,5,"Y","","","Extension {[CanonicalType[http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling]]} {[]}
+"Goal.extension:gas-scaling","Goal.extension","gas-scaling","","",0,5,"Y","","","Extension {[CanonicalType[http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling]]} {[]}
 ","Goal Attainment Scaling","Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -62,7 +62,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Goal.start[x]","Goal.start[x]","","","",1,1,"Y","","Y","date {[]} {[]}
 ","(USCDI) When goal pursuit begins","The date or event after which the goal should begin being pursued.","","Goals can be established prior to there being an intention to start pursuing them; e.g. Goals for post-surgical recovery established prior to surgery.","","","","","","","",,,,,"",,,,"Goal.start[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.planned"
-"Goal.target","Goal.target","","","",0,1,"Y","","","BackboneElement {[]} {[]}
+"Goal.target","Goal.target","","","",1,1,"Y","","","BackboneElement {[]} {[]}
 ","(USCDI) Target outcome for the goal","Indicates what should be done by when.","When multiple targets are present for a single goal instance, all targets must be met for the overall goal to be met.","Allows the progress of the goal to be monitored against an observation or due date.  Target is 0..* to support Observations with multiple components, such as blood pressure goals with both a systolic and diastolic target.","","","","","","","",,,,,"",,,,"Goal.target",0,*,"gol-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 gol-1:Goal.target.measure is required if Goal.target.detail is populated {(detail.exists() and measure.exists()) or detail.exists().not()}"
