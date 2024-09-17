@@ -36,6 +36,13 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
+
+pages:
+  index.md:
+    title: Home
+  feedback.md:
+    title: Feedback
+
 # pages:
 #   index.md:
 #     title: Example Home
@@ -80,8 +87,17 @@ parameters:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   Specification: index.html
+#   Artifacts: artifacts.html
+#   Feedback: feedback.html
+
 menu:
-  Specification: index.html
+  Home: index.html
+  # Use cases:
+  #   Use case 1: usecase-1.html
+  #   Use case 2: usecase-2.html
+  Feedback: feedback.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
