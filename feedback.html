@@ -1,13 +1,9 @@
-<!-- layouts\layout-changehistory.html -->
-<!-- get modelType -->
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title> - Person-Centered Outcomes v0.1.0</title>
+    <title>Feedback - Person-Centered Outcomes v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:""}
-    h3,h4,h5,h6{--heading-prefix:""}</style>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -111,7 +107,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Feedback</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -123,9 +119,16 @@
         <div class="row">
           <div class="inner-wrapper">
 
-
-<div style="counter-reset: section 10" class="col-12">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Feedback</h2>
   
 
 
@@ -135,47 +138,90 @@
 
 
 
-<ul class="nav nav-tabs">
-
-  <li>
-    <a href="Observation-pcoWhatMattersRelationshipsExample.html">Narrative Content</a>
-  </li>
 
 
 
-  
-    <li>
-      <a href="Observation-pcoWhatMattersRelationshipsExample.xml.html">XML</a>
-    </li>
-  
 
-
-  
-    <li>
-      <a href="Observation-pcoWhatMattersRelationshipsExample.json.html">JSON</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="Observation-pcoWhatMattersRelationshipsExample.ttl.html">TTL</a>
-    </li>
-  
-
-
-
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#user-stories" id="markdown-toc-user-stories">User Stories</a></li>
+  <li><a href="#profiles" id="markdown-toc-profiles">Profiles</a></li>
+  <li><a href="#ncqa-measures" id="markdown-toc-ncqa-measures">NCQA Measures</a></li>
 </ul>
-
-
-  <a name="root"> </a>
-  <h2 id="root">: Observation/pcoWhatMattersRelationshipsExample - Change History</h2>
-  <p>History of changes for pcoWhatMattersRelationshipsExample .</p>
-
-  
 
 </div>
 
+<p>This is a draft FHIR IG based on investigation and testing at two HL7 FHIR Connectathons.</p>
+<ul>
+  <li><a href="https://confluence.hl7.org/display/FHIR/2024+-+05+Goal-Directed+Care+Planning">Goal-Directed Care Planning, May 2024</a></li>
+  <li><a href="https://confluence.hl7.org/display/FHIR/2024+-+09+Goal-Directed+Care+Planning">Goal-Directed Care Planning, September 2024</a></li>
+</ul>
+
+<p>We plan to submit a proposal to HL7 workgroup(s) for migrating this work into an HL7 published FHIR IG.  Until then, please add an Issue on the <a href="https://github.com/mtnlotus/pco-ig/issues">GitHub repository</a> or send feedback to Dave Carlson at <a href="mailto:dave@mtnlotus.com">dave@mtnlotus.com</a>.</p>
+
+<h3 id="user-stories">User Stories</h3>
+
+<p>Any feedback on <a href="index.html#user-stories">User Stories</a> or suggestions for additional stories?</p>
+
+<h3 id="profiles">Profiles</h3>
+
+<p>Questions for FHIR Connectathon participants on distinctions needed to select data for the quality measures shown below.</p>
+
+<ol>
+  <li>
+    <p><strong>How do we determine that a person has “a complex care need?”</strong></p>
+  </li>
+  <li><strong>How do we distiguish a “PCO Goal” from other kinds of FHIR Goals?</strong>
+    <ul>
+      <li>Require a category from <a href="ValueSet-pco-category-valueset.html">PCO Category</a> value set defined by this IG?</li>
+      <li>Or, check for Goal.addresses relationship with a <a href="StructureDefinition-pco-what-matters-assessment.html#profile">What Matters Assessment</a> observation?</li>
+      <li>Or, check that a Goal satisfies either the GAS Goal or PROM Goal criteria listed below?</li>
+    </ul>
+  </li>
+  <li><strong>How do we distinguish a Goal with GAS from a Goal with PROM as measurement?</strong>
+    <ul>
+      <li><a href="StructureDefinition-pco-gas-goal-profile.html">GAS Goal</a>
+        <ul>
+          <li>Require 5 <a href="StructureDefinition-pco-goal-attainment-scaling.html">GAS extensions</a> on each Goal?</li>
+          <li>Or, require Goal.target.measure = “Goal attainment scale” LOINC code?</li>
+        </ul>
+      </li>
+      <li><a href="StructureDefinition-pco-prom-goal-profile.html">PROM Goal</a>
+        <ul>
+          <li>Require Goal.target.measure from a value set of <a href="ValueSet-prom-target-measures.html">PROM score LOINC codes</a>?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>How do we associate a PCO Goal with its progress score observations?</strong>
+    <ul>
+      <li>Require an Observation.focus relationship to a PCO Goal?</li>
+      <li>Or, require that the Observation.code SHALL equal the Goal.target.measure?  Which would require that both GAS and PROM goals include a target measure code.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="ncqa-measures">NCQA Measures</h3>
+
+<h4 id="measure-1-goal-identification">Measure 1: Goal Identification</h4>
+<p>% of individuals 18 years of age and older with a complex care need 
+who had a PCO goal identified 
+resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) 
+and development of an action plan.</p>
+
+<h4 id="measure-2-goal-follow-up">Measure 2: Goal Follow-up</h4>
+<p>% of individuals 18 years of age or older with a complex care need 
+who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.</p>
+
+<h4 id="measure-3-goal-achievement">Measure 3: Goal Achievement</h4>
+<p>% of individuals 18 years of age or older with a complex care need 
+who achieved their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.</p>
+
+
+
+
+</div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -183,8 +229,6 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
