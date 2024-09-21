@@ -73,7 +73,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-09-17 23:38:01+0000</td>
+            <td style="padding-left: 4px;">2024-09-21 00:47:01+0000</td>
         </tr>
         
 
@@ -129,11 +129,13 @@
                   
                     <li><a href="Library-GoalAttainmentLogic.html">GoalAttainmentLogicversion: {0}0.1.0)</a></li>
                   
+                    <li><a href="http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
+                  
                     <li><a href="ValueSet-pco-category-valueset.html">PCO Categories</a></li>
                   
-                    <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
-                  
                     <li><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></li>
+                  
+                    <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
                   
                 </ul>
                 
@@ -199,15 +201,6 @@
                 </tr>
               
                 <tr>
-                  <th>CarePlan</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
-                  <th>;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
-                <tr>
                   <th>Observation</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
                   <th>;</th>
@@ -259,6 +252,15 @@
                       </span>
                       
                       
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>CarePlan</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
+                  <th>;</th>
+                  <th>
                     
                   </th>
                 </tr>
@@ -444,7 +446,7 @@ define &quot;Numerator&quot;:
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2024-09-17T23:38:01+00:00"/>
+  <date value="2024-09-21T00:47:01+00:00"/>
   <publisher value="Mountain Lotus WellBeing LLC"/>
   <contact>
     <name value="Mountain Lotus WellBeing LLC"/>
@@ -482,18 +484,23 @@ define &quot;Numerator&quot;:
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
+    <display value="Code system LOINC"/>
+    <resource value="http://loinc.org"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="depends-on"/>
     <display value="Value set PCO Categories"/>
     <resource value="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <display value="Value set PROM Target Measures"/>
-    <resource value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+    <display value="Value set Goal Attainment Scaling (GAS) Score"/>
+    <resource value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <display value="Value set Goal Attainment Scaling (GAS) Score"/>
-    <resource value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
+    <display value="Value set PROM Target Measures"/>
+    <resource value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
   </relatedArtifact>
   <parameter>
     <name value="Measurement Period"/>
@@ -564,11 +571,6 @@ define &quot;Numerator&quot;:
     <mustSupport value="id"/>
   </dataRequirement>
   <dataRequirement>
-    <type value="CarePlan"/>
-    <profile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
-    <mustSupport value="goal"/>
-  </dataRequirement>
-  <dataRequirement>
     <type value="Observation"/>
     <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
     <mustSupport value="code"/>
@@ -585,6 +587,11 @@ define &quot;Numerator&quot;:
       <path value="code"/>
       <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
     </codeFilter>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="CarePlan"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+    <mustSupport value="goal"/>
   </dataRequirement>
   <content>
     <contentType value="text/cql"/>

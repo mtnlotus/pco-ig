@@ -177,7 +177,7 @@
         
           Active
           
-            as of 2024-09-17
+            as of 2024-09-21
           
         
       </td>
@@ -560,11 +560,13 @@
                         
                             &lt;li&gt;&lt;a href=&quot;Library-PCOCommon.html&quot;&gt;PCOCommonversion: {0}0.1.0)&lt;/a&gt;&lt;/li&gt;
                         
+                            &lt;li&gt;&lt;a href=&quot;http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html&quot;&gt;Logical Observation Identifiers, Names and Codes (LOINC)&lt;/a&gt;&lt;/li&gt;
+                        
                             &lt;li&gt;&lt;a href=&quot;ValueSet-pco-category-valueset.html&quot;&gt;PCO Categories&lt;/a&gt;&lt;/li&gt;
                         
-                            &lt;li&gt;&lt;a href=&quot;ValueSet-prom-target-measures.html&quot;&gt;PROM Target Measures&lt;/a&gt;&lt;/li&gt;
-                        
                             &lt;li&gt;&lt;a href=&quot;ValueSet-goal-attainment-scaling-score.html&quot;&gt;Goal Attainment Scaling (GAS) Score&lt;/a&gt;&lt;/li&gt;
+                        
+                            &lt;li&gt;&lt;a href=&quot;ValueSet-prom-target-measures.html&quot;&gt;PROM Target Measures&lt;/a&gt;&lt;/li&gt;
                         
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -682,19 +684,6 @@
                                 &lt;/tr&gt;
                             
                                 &lt;tr&gt;
-                                    &lt;td&gt;CarePlan(&lt;a href=&quot;http://hl7.org/fhir/R4/careplan.html&quot;&gt;CarePlan&lt;/a&gt;)&lt;/td&gt;
-                                    &lt;td&gt;
-                                        
-                                            goal
-                                        
-                                    &lt;/td&gt;
-                                    &lt;td&gt;
-                                        
-                                    &lt;/td&gt;
-                                    &lt;td/&gt;
-                                &lt;/tr&gt;
-                            
-                                &lt;tr&gt;
                                     &lt;td&gt;Observation(&lt;a href=&quot;http://hl7.org/fhir/R4/observation.html&quot;&gt;Observation&lt;/a&gt;)&lt;/td&gt;
                                     &lt;td&gt;
                                         
@@ -728,10 +717,43 @@
                                     &lt;td&gt;&lt;a href=&quot;ValueSet-prom-target-measures.html&quot;&gt;PROM Target Measures&lt;/a&gt;&lt;/td&gt;
                                 &lt;/tr&gt;
                             
+                                &lt;tr&gt;
+                                    &lt;td&gt;CarePlan(&lt;a href=&quot;http://hl7.org/fhir/R4/careplan.html&quot;&gt;CarePlan&lt;/a&gt;)&lt;/td&gt;
+                                    &lt;td&gt;
+                                        
+                                            goal
+                                        
+                                    &lt;/td&gt;
+                                    &lt;td&gt;
+                                        
+                                    &lt;/td&gt;
+                                    &lt;td/&gt;
+                                &lt;/tr&gt;
+                            
                         &lt;/table&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
 
+                
+                    &lt;tr&gt;
+                        &lt;th scope=&quot;row&quot;&gt;&lt;b&gt;Direct Reference Codes:&lt;/b&gt;&lt;/th&gt;
+                        &lt;td style=&quot;padding-left: 4px;&quot;&gt;
+                            &lt;table class=&quot;grid-dict&quot;&gt;
+                                &lt;tr&gt;
+                                    &lt;th&gt;&lt;b&gt;display&lt;/b&gt;&lt;/th&gt;
+                                    &lt;th&gt;&lt;b&gt;code&lt;/b&gt;&lt;/th&gt;
+                                    &lt;th&gt;&lt;b&gt;system&lt;/b&gt;&lt;/th&gt;
+                                &lt;/tr&gt;
+                                
+                                    &lt;tr&gt;
+                                        &lt;td&gt;Goal attainment scale&lt;/td&gt;
+                                        &lt;td&gt;68489&lt;/td&gt;
+                                        &lt;td&gt;&lt;a href=&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html&quot;&gt;http://loinc.org&lt;/a&gt;&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                
+                            &lt;/table&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
                 
 
                 
@@ -1000,19 +1022,16 @@ define &amp;quot;PCO Goals&amp;quot;:
                                 &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
                             
                             
-                                &lt;td&gt;PCO Goals During Measurement Period&lt;/td&gt;
+                                &lt;td&gt;GAS Scores&lt;/td&gt;
                             
                         &lt;/tr&gt;
                         &lt;tr&gt;
                             
                                 &lt;td/&gt;
                                 &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// PCO Goals whose startDate falls within the Measurement Period
-define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
-  &amp;quot;PCO Goals&amp;quot; goal
-    where (ToDateTime(goal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;)
-      and (goal.hasGAS() or goal.hasPROM())
-      and exists goal.carePlans()&lt;/code&gt;&lt;/pre&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Observations containing a GAS score.
+define &amp;quot;GAS Scores&amp;quot;:
+  [Observation: &amp;quot;Goal Attainment Scaling (GAS) Score&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1026,16 +1045,19 @@ define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
                                 &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
                             
                             
-                                &lt;td&gt;GAS Scores&lt;/td&gt;
+                                &lt;td&gt;PCO Goals During Measurement Period&lt;/td&gt;
                             
                         &lt;/tr&gt;
                         &lt;tr&gt;
                             
                                 &lt;td/&gt;
                                 &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Observations containing a GAS score.
-define &amp;quot;GAS Scores&amp;quot;:
-  [Observation: &amp;quot;Goal Attainment Scaling (GAS) Score&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// PCO Goals whose startDate falls within the Measurement Period
+define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
+  &amp;quot;PCO Goals&amp;quot; goal
+    where (ToDateTime(goal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;)
+      and (goal.hasGAS() or goal.hasPROM())
+      and exists goal.carePlans()&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1239,7 +1261,11 @@ define function ToConcept(concept FHIR.CodeableConcept):
                                     &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// where exists obs.performer.resolveRelatedPersons()
 
 define fluent function hasGAS(goal Goal):
-  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')&lt;/code&gt;&lt;/pre&gt;
+  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+    or exists (goal.target target
+      where target.measure = &amp;quot;Goal attainment scale&amp;quot;
+    )
+    or exists goal.gasScores()&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1291,103 +1317,6 @@ define fluent function extensions(domainResource DomainResource, url String):
                                 &lt;td/&gt;
                                 &lt;td&gt;
                                     &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define function ToString(value uri): value.value&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;hasPROM&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;/// Returns true if this Goal has a PROM code in its target.measure
-define fluent function hasPROM(goal Goal):
-  exists (goal.target target
-    where target.measure in &amp;quot;PROM Target Measures&amp;quot;
-  )&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;PCOCommon&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;carePlans&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a list of CarePlan that support this Goal.
-define fluent function carePlans(goal Goal):
-  [CarePlan] carePlan
-    where exists ( carePlan.goal goalRef
-        where goal.id = goalRef.reference.getId()
-    )&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;PCOCommon&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;getId&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define fluent function getId(uri String):
-  Last(Split(uri, '/'))&lt;/code&gt;&lt;/pre&gt;
-                                &lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                    
-                        &lt;tr&gt;
-                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
-                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
-                            
-                            
-                                &lt;td&gt;pcoScores&lt;/td&gt;
-                            
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            
-                                &lt;td/&gt;
-                                &lt;td&gt;
-                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a list of Observation including both GAS and PROM scores
-define fluent function pcoScores(goal Goal):
-  goal.gasScores()
-    union goal.promScores()&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1460,6 +1389,103 @@ define fluent function focusGoals(obs Observation):
     return [Goal] resource
       where resource.id = ref.reference.getId()
   )&lt;/code&gt;&lt;/pre&gt;
+                                &lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                    
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td&gt;PCOCommon&lt;/td&gt;
+                            
+                            
+                                &lt;td&gt;getId&lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td/&gt;
+                                &lt;td&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;define fluent function getId(uri String):
+  Last(Split(uri, '/'))&lt;/code&gt;&lt;/pre&gt;
+                                &lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                    
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
+                            
+                            
+                                &lt;td&gt;hasPROM&lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td/&gt;
+                                &lt;td&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;/// Returns true if this Goal has a PROM code in its target.measure
+define fluent function hasPROM(goal Goal):
+  exists (goal.target target
+    where target.measure in &amp;quot;PROM Target Measures&amp;quot;
+  )&lt;/code&gt;&lt;/pre&gt;
+                                &lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                    
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td&gt;PCOCommon&lt;/td&gt;
+                            
+                            
+                                &lt;td&gt;carePlans&lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td/&gt;
+                                &lt;td&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a list of CarePlan that support this Goal.
+define fluent function carePlans(goal Goal):
+  [CarePlan] carePlan
+    where exists ( carePlan.goal goalRef
+        where goal.id = goalRef.reference.getId()
+    )&lt;/code&gt;&lt;/pre&gt;
+                                &lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                    
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;b&gt;Library Name&lt;/b&gt;&lt;/th&gt;
+                            &lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td&gt;GoalAttainmentLogic&lt;/td&gt;
+                            
+                            
+                                &lt;td&gt;pcoScores&lt;/td&gt;
+                            
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            
+                                &lt;td/&gt;
+                                &lt;td&gt;
+                                    &lt;pre class=&quot;highlight language-cql&quot;&gt;&lt;code class=&quot;language-cql&quot;&gt;// Returns a list of Observation including both GAS and PROM scores
+define fluent function pcoScores(goal Goal):
+  goal.gasScores()
+    union goal.promScores()&lt;/code&gt;&lt;/pre&gt;
                                 &lt;/td&gt;
                             
                         &lt;/tr&gt;
@@ -1551,6 +1577,14 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
     &lt;<a href="http://hl7.org/fhir/R4/library.html#Library">Library</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;effective-data-requirements&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCoding</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;68489&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Goal attainment scale&quot;/&gt;
+        &lt;/valueCoding&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalIdentificationMeasure&quot;/&gt;
@@ -1629,16 +1663,13 @@ define &amp;quot;PCO Goals&amp;quot;:
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCO Goals During Measurement Period&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAS Scores&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// PCO Goals whose startDate falls within the Measurement Period
-define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
-  &amp;quot;PCO Goals&amp;quot; goal
-    where (ToDateTime(goal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;)
-      and (goal.hasGAS() or goal.hasPROM())
-      and exists goal.carePlans()&quot;/&gt;
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Observations containing a GAS score.
+define &amp;quot;GAS Scores&amp;quot;:
+  [Observation: &amp;quot;Goal Attainment Scaling (GAS) Score&amp;quot;]&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;3&quot;/&gt;
@@ -1650,13 +1681,16 @@ define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GAS Scores&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCO Goals During Measurement Period&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Observations containing a GAS score.
-define &amp;quot;GAS Scores&amp;quot;:
-  [Observation: &amp;quot;Goal Attainment Scaling (GAS) Score&amp;quot;]&quot;/&gt;
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// PCO Goals whose startDate falls within the Measurement Period
+define &amp;quot;PCO Goals During Measurement Period&amp;quot;:
+  &amp;quot;PCO Goals&amp;quot; goal
+    where (ToDateTime(goal.start as FHIR.date) during &amp;quot;Measurement Period&amp;quot;)
+      and (goal.hasGAS() or goal.hasPROM())
+      and exists goal.carePlans()&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
@@ -1820,7 +1854,11 @@ define function ToConcept(concept FHIR.CodeableConcept):
                        <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// where exists obs.performer.resolveRelatedPersons()
 
 define fluent function hasGAS(goal Goal):
-  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')&quot;/&gt;
+  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+    or exists (goal.target target
+      where target.measure = &amp;quot;Goal attainment scale&amp;quot;
+    )
+    or exists goal.gasScores()&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;12&quot;/&gt;
@@ -1873,6 +1911,80 @@ define fluent function extensions(domainResource DomainResource, url String):
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;gasScores&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a list of Observation including only GAS scores
+define fluent function gasScores(goal Goal):
+  &amp;quot;GAS Scores&amp;quot; score
+    where score.focusGoals() contains goal&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;15&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;focusGoals&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a list of Goal where focus includes the given Observation.
+define fluent function focusGoals(obs Observation):
+  obs.focus.resolveGoals()&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;16&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;resolveGoals&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function resolveGoals(references List&amp;lt;Reference&amp;gt;):
+  flatten( references ref
+    return [Goal] resource
+      where resource.id = ref.reference.getId()
+  )&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;17&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;getId&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function getId(uri String):
+  Last(Split(uri, '/'))&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;18&quot;/&gt;
+        &lt;/extension&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;hasPROM&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
@@ -1884,7 +1996,7 @@ define fluent function hasPROM(goal Goal):
   )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;15&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;19&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -1905,24 +2017,7 @@ define fluent function carePlans(goal Goal):
     )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;16&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;getId&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function getId(uri String):
-  Last(Split(uri, '/'))&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;17&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;20&quot;/&gt;
         &lt;/extension&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
@@ -1939,63 +2034,6 @@ define fluent function carePlans(goal Goal):
 define fluent function pcoScores(goal Goal):
   goal.gasScores()
     union goal.promScores()&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;18&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;gasScores&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a list of Observation including only GAS scores
-define fluent function gasScores(goal Goal):
-  &amp;quot;GAS Scores&amp;quot; score
-    where score.focusGoals() contains goal&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;19&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GoalAttainmentLogic&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;focusGoals&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;// Returns a list of Goal where focus includes the given Observation.
-define fluent function focusGoals(obs Observation):
-  obs.focus.resolveGoals()&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;20&quot;/&gt;
-        &lt;/extension&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;libraryName&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PCOCommon&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;name&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;resolveGoals&quot;/&gt;
-        &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;statement&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
-                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;define fluent function resolveGoals(references List&amp;lt;Reference&amp;gt;):
-  flatten( references ref
-    return [Goal] resource
-      where resource.id = ref.reference.getId()
-  )&quot;/&gt;
         &lt;/extension&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;displaySequence&quot;&gt;
           &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;21&quot;/&gt;
@@ -2086,21 +2124,26 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
       &lt;/relatedArtifact&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Code system LOINC&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;/relatedArtifact&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PCO Categories&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset&quot;/&gt;
       &lt;/relatedArtifact&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PROM Target Measures&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-                  <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures&quot;/&gt;
-      &lt;/relatedArtifact&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set Goal Attainment Scaling (GAS) Score&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score&quot;/&gt;
+      &lt;/relatedArtifact&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PROM Target Measures&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures&quot;/&gt;
       &lt;/relatedArtifact&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.parameter">parameter</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Measurement Period&quot;/&gt;
@@ -2164,11 +2207,6 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;id&quot;/&gt;
       &lt;/dataRequirement&gt;
       &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CarePlan&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/CarePlan&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;goal&quot;/&gt;
-      &lt;/dataRequirement&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Observation&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Observation&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
@@ -2187,6 +2225,11 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
           &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.valueSet">valueSet</a>
                     <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures&quot;/&gt;
         &lt;/codeFilter&gt;
+      &lt;/dataRequirement&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CarePlan&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/CarePlan&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;goal&quot;/&gt;
       &lt;/dataRequirement&gt;
     &lt;/Library&gt;
   &lt;/contained&gt;
@@ -2259,7 +2302,7 @@ define function &amp;quot;Follow-Up Interval For&amp;quot; (goal Goal):
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Person-Centered Goal Identification&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-09-17T17:52:29+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-09-21T00:34:22+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/measure.html#Measure.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
@@ -2442,7 +2485,7 @@ LOINC(R) copyright 2004-2023 Regenstrief Institute, Inc. This material contains 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 17, 2024 23:38+0000">2024-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Sep 21, 2024 00:47+0000">2024-09-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

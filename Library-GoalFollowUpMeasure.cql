@@ -37,6 +37,7 @@ define "Initial Population": {
 define "Denominator":
   "Initial Population" person
     where exists PCOLogic."PCO Goals"
+      and exists PCOLogic."Baseline Scores Before Follow-Up Period"
 
 define "Denominator Exclusions":
   null

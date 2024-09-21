@@ -1,7 +1,7 @@
 PCO : Validation Results
 =========================================
 
-err = 47, warn = 43, info = 8
+err = 51, warn = 43, info = 10
 $--
 Generated $--. FHIR version $-- for mtnlotus.fhir.uv.pco#$-- (canonical = http://mtnlotus.com/uv/pco)
  Build Errors : 0 / 21 / 0
@@ -50,8 +50,8 @@ Generated $--. FHIR version $-- for mtnlotus.fhir.uv.pco#$-- (canonical = http:/
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/PCOCommon : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 0 / 1 / 9
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 0 / 1 / 9
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 2 / 1 / 10
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 2 / 1 / 10
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7 : 10 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9 : 13 / 0 / 1
 </table>
@@ -171,10 +171,16 @@ ERROR: /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers: URL 
 == input/resources/library/PCOCommon.json ==
 == input/resources/library/WhatMattersLogic.json ==
 == input/resources/measure/Measure-GoalFollowUpMeasure.json ==
+ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
+ERROR: Measure/GoalFollowUpMeasure: Measure.extension[1].value.ofType(Reference): Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm
+INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1].value.ofType(Reference): Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0
 WARNING: Measure/GoalFollowUpMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == input/resources/measure/Measure-GoalIdentificationMeasure.json ==
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
+ERROR: Measure/GoalIdentificationMeasure: Measure.extension[1].value.ofType(Reference): Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm
+INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1].value.ofType(Reference): Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0
 WARNING: Measure/GoalIdentificationMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)

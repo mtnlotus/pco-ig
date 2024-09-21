@@ -190,7 +190,7 @@
         
           Draft
           
-            as of 2024-09-17
+            as of 2024-09-21
           
         
       </td>
@@ -289,7 +289,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-09-17 23:38:01+0000</td>
+            <td style="padding-left: 4px;">2024-09-21 00:47:01+0000</td>
         </tr>
         
 
@@ -376,6 +376,8 @@
               
                 <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>Out</th></tr>
               
+                <tr><th>GAS Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
+              
                 <tr><th>GoalSummary</th><th>Resource</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>PCO Goals</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
@@ -393,8 +395,6 @@
                 <tr><th>PCO Goals with GAS and Action Plan</th><th>Goal</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>PROM Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
-              
-                <tr><th>GAS Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
                 <tr><th>GAS Patient Scores</th><th>Observation</th><th>0</th><th>*</th><th>Out</th></tr>
               
@@ -424,24 +424,6 @@
                   <th>Patient</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Patient</th>
                   <th/>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>CarePlan</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
-                  <th>;;;;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>Goal</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;;;;;</th>
                   <th>
                     
                   </th>
@@ -499,6 +481,24 @@
                       </span>
                       
                       
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>Goal</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
+                  <th>;;;;;;;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>CarePlan</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/CarePlan</th>
+                  <th>;;;;</th>
+                  <th>
                     
                   </th>
                 </tr>
@@ -625,6 +625,10 @@ define &quot;GAS Caregiver Scores&quot;:
 
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+    or exists (goal.target target
+      where target.measure = &quot;Goal attainment scale&quot;
+    )
+    or exists goal.gasScores()
 
 /// Returns true if this Goal has a PROM code in its target.measure
 define fluent function hasPROM(goal Goal):
@@ -715,7 +719,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (137836 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (144616 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -727,7 +731,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (254552 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (267688 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -759,7 +763,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 17, 2024 23:38+0000">2024-09-17</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Sep 21, 2024 00:47+0000">2024-09-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
