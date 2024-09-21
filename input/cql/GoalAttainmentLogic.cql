@@ -109,6 +109,10 @@ define "GAS Caregiver Scores":
 
 define fluent function hasGAS(goal Goal):
   exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+    or exists (goal.target target
+      where target.measure = "Goal attainment scale"
+    )
+    or exists goal.gasScores()
 
 /// Returns true if this Goal has a PROM code in its target.measure
 define fluent function hasPROM(goal Goal):
