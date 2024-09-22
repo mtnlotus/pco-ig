@@ -30,4 +30,3 @@ Description: "Target measure codes used to track progress on patient-reported ou
 * $LNC#71961-7 "PROMIS-29 Pain Interference, T score"
 * $LNC#71963-3 "PROMIS-29 Fatigue, T score"
 * $LNC#71965-8 "PROMIS-29 Depression, T score"
-* $LNC#71965-8 "PROMIS-29 Depression, T score"
