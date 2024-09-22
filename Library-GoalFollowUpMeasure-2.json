@@ -16,7 +16,7 @@
             "value" : "Mountain Lotus WellBeing LLC"
          } ],
          "s" : {
-            "r" : "285",
+            "r" : "274",
             "s" : [ {
                "value" : [ "/*\n@description: Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with\na complex care need who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were\nidentified.\n\n@author: Mountain Lotus WellBeing LLC\n*/\n","library GoalFollowUpMeasure version '0.1.0'" ]
             } ]
@@ -559,7 +559,7 @@
             }
          }, {
             "localId" : "265",
-            "locator" : "37:1-40:67",
+            "locator" : "37:1-38:22",
             "name" : "Denominator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -577,179 +577,64 @@
                   "s" : [ {
                      "value" : [ "/*\n@description: Initial Population individuals with a complex care need and has a PCO Goal.\n@comment: TODO - How do we determine \"complex care need?\"\n*/\n","define ","\"Denominator\"",":\n  " ]
                   }, {
-                     "r" : "277",
+                     "r" : "266",
                      "s" : [ {
-                        "s" : [ {
-                           "r" : "266",
-                           "s" : [ {
-                              "r" : "267",
-                              "s" : [ {
-                                 "s" : [ {
-                                    "value" : [ "\"Initial Population\"" ]
-                                 } ]
-                              } ]
-                           }, {
-                              "value" : [ " ","person" ]
-                           } ]
-                        } ]
-                     }, {
-                        "value" : [ "\n    " ]
-                     }, {
-                        "r" : "268",
-                        "s" : [ {
-                           "value" : [ "where " ]
-                        }, {
-                           "r" : "268",
-                           "s" : [ {
-                              "r" : "269",
-                              "s" : [ {
-                                 "value" : [ "exists " ]
-                              }, {
-                                 "r" : "271",
-                                 "s" : [ {
-                                    "r" : "270",
-                                    "s" : [ {
-                                       "value" : [ "PCOLogic" ]
-                                    } ]
-                                 }, {
-                                    "value" : [ "." ]
-                                 }, {
-                                    "r" : "271",
-                                    "s" : [ {
-                                       "value" : [ "\"PCO Goals\"" ]
-                                    } ]
-                                 } ]
-                              } ]
-                           }, {
-                              "value" : [ "\n      and " ]
-                           }, {
-                              "r" : "272",
-                              "s" : [ {
-                                 "value" : [ "exists " ]
-                              }, {
-                                 "r" : "274",
-                                 "s" : [ {
-                                    "r" : "273",
-                                    "s" : [ {
-                                       "value" : [ "PCOLogic" ]
-                                    } ]
-                                 }, {
-                                    "value" : [ "." ]
-                                 }, {
-                                    "r" : "274",
-                                    "s" : [ {
-                                       "value" : [ "\"Baseline Scores Before Follow-Up Period\"" ]
-                                    } ]
-                                 } ]
-                              } ]
-                           } ]
-                        } ]
+                        "value" : [ "\"Initial Population\"" ]
                      } ]
                   } ]
                }
             } ],
             "expression" : {
-               "localId" : "277",
-               "locator" : "38:3-40:67",
-               "type" : "Query",
-               "source" : [ {
-                  "localId" : "266",
-                  "locator" : "38:3-38:29",
-                  "alias" : "person",
-                  "expression" : {
-                     "localId" : "267",
-                     "locator" : "38:3-38:22",
-                     "name" : "Initial Population",
-                     "type" : "ExpressionRef"
-                  }
-               } ],
-               "let" : [ ],
-               "relationship" : [ ],
-               "where" : {
-                  "localId" : "268",
-                  "locator" : "39:5-40:67",
-                  "type" : "And",
-                  "signature" : [ ],
-                  "operand" : [ {
-                     "localId" : "269",
-                     "locator" : "39:11-39:37",
-                     "type" : "Exists",
-                     "signature" : [ ],
-                     "operand" : {
-                        "localId" : "271",
-                        "locator" : "39:18-39:37",
-                        "name" : "PCO Goals",
-                        "libraryName" : "PCOLogic",
-                        "type" : "ExpressionRef"
-                     }
-                  }, {
-                     "localId" : "272",
-                     "locator" : "40:11-40:67",
-                     "type" : "Exists",
-                     "signature" : [ {
-                        "localId" : "275",
-                        "type" : "ListTypeSpecifier",
-                        "elementType" : {
-                           "localId" : "276",
-                           "name" : "{http://hl7.org/fhir}Observation",
-                           "type" : "NamedTypeSpecifier"
-                        }
-                     } ],
-                     "operand" : {
-                        "localId" : "274",
-                        "locator" : "40:18-40:67",
-                        "name" : "Baseline Scores Before Follow-Up Period",
-                        "libraryName" : "PCOLogic",
-                        "type" : "ExpressionRef"
-                     }
-                  } ]
-               }
+               "localId" : "266",
+               "locator" : "38:3-38:22",
+               "name" : "Initial Population",
+               "type" : "ExpressionRef"
             }
          }, {
-            "localId" : "279",
-            "locator" : "42:1-43:6",
+            "localId" : "268",
+            "locator" : "40:1-41:6",
             "name" : "Denominator Exclusions",
             "context" : "Patient",
             "accessLevel" : "Public",
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "279",
+                  "r" : "268",
                   "s" : [ {
-                     "r" : "280",
+                     "r" : "269",
                      "value" : [ "","define ","\"Denominator Exclusions\"",":\n  ","null" ]
                   } ]
                }
             } ],
             "expression" : {
-               "localId" : "280",
-               "locator" : "43:3-43:6",
+               "localId" : "269",
+               "locator" : "41:3-41:6",
                "type" : "Null"
             }
          }, {
-            "localId" : "282",
-            "locator" : "45:1-46:6",
+            "localId" : "271",
+            "locator" : "43:1-44:6",
             "name" : "Denominator Exceptions",
             "context" : "Patient",
             "accessLevel" : "Public",
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "282",
+                  "r" : "271",
                   "s" : [ {
-                     "r" : "283",
+                     "r" : "272",
                      "value" : [ "","define ","\"Denominator Exceptions\"",":\n  ","null" ]
                   } ]
                }
             } ],
             "expression" : {
-               "localId" : "283",
-               "locator" : "46:3-46:6",
+               "localId" : "272",
+               "locator" : "44:3-44:6",
                "type" : "Null"
             }
          }, {
-            "localId" : "285",
-            "locator" : "52:1-54:70",
+            "localId" : "274",
+            "locator" : "50:1-52:70",
             "name" : "Numerator",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -760,16 +645,16 @@
                   "value" : "Indivuals who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were identified."
                } ],
                "s" : {
-                  "r" : "285",
+                  "r" : "274",
                   "s" : [ {
                      "value" : [ "/*\n@description: Indivuals who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were identified.\n*/\n","define ","\"Numerator\"",":\n  " ]
                   }, {
-                     "r" : "293",
+                     "r" : "280",
                      "s" : [ {
                         "s" : [ {
-                           "r" : "286",
+                           "r" : "275",
                            "s" : [ {
-                              "r" : "287",
+                              "r" : "276",
                               "s" : [ {
                                  "s" : [ {
                                     "value" : [ "\"Denominator\"" ]
@@ -782,24 +667,24 @@
                      }, {
                         "value" : [ "\n    " ]
                      }, {
-                        "r" : "288",
+                        "r" : "277",
                         "s" : [ {
                            "value" : [ "where " ]
                         }, {
-                           "r" : "288",
+                           "r" : "277",
                            "s" : [ {
                               "value" : [ "exists " ]
                            }, {
-                              "r" : "290",
+                              "r" : "279",
                               "s" : [ {
-                                 "r" : "289",
+                                 "r" : "278",
                                  "s" : [ {
                                     "value" : [ "PCOLogic" ]
                                  } ]
                               }, {
                                  "value" : [ "." ]
                               }, {
-                                 "r" : "290",
+                                 "r" : "279",
                                  "s" : [ {
                                     "value" : [ "\"Follow-Up Scores During Measurement Period\"" ]
                                  } ]
@@ -811,16 +696,16 @@
                }
             } ],
             "expression" : {
-               "localId" : "293",
-               "locator" : "53:3-54:70",
+               "localId" : "280",
+               "locator" : "51:3-52:70",
                "type" : "Query",
                "source" : [ {
-                  "localId" : "286",
-                  "locator" : "53:3-53:22",
+                  "localId" : "275",
+                  "locator" : "51:3-51:22",
                   "alias" : "person",
                   "expression" : {
-                     "localId" : "287",
-                     "locator" : "53:3-53:15",
+                     "localId" : "276",
+                     "locator" : "51:3-51:15",
                      "name" : "Denominator",
                      "type" : "ExpressionRef"
                   }
@@ -828,21 +713,13 @@
                "let" : [ ],
                "relationship" : [ ],
                "where" : {
-                  "localId" : "288",
-                  "locator" : "54:5-54:70",
+                  "localId" : "277",
+                  "locator" : "52:5-52:70",
                   "type" : "Exists",
-                  "signature" : [ {
-                     "localId" : "291",
-                     "type" : "ListTypeSpecifier",
-                     "elementType" : {
-                        "localId" : "292",
-                        "name" : "{http://hl7.org/fhir}Observation",
-                        "type" : "NamedTypeSpecifier"
-                     }
-                  } ],
+                  "signature" : [ ],
                   "operand" : {
-                     "localId" : "290",
-                     "locator" : "54:18-54:70",
+                     "localId" : "279",
+                     "locator" : "52:18-52:70",
                      "name" : "Follow-Up Scores During Measurement Period",
                      "libraryName" : "PCOLogic",
                      "type" : "ExpressionRef"

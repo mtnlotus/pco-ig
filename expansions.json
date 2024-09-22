@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "00c95134-349e-4d12-b64a-60d2155938bd",
+  "id" : "6ef116cd-efe7-4d58-be58-43026317b3e6",
   "meta" : {
-    "lastUpdated" : "2024-09-21T00:47:01.483+00:00"
+    "lastUpdated" : "2024-09-22T11:40:07.842+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -11,7 +11,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.78</p><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.78</p><p>This value set contains 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-LA6113-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/LA6113-0/\">LA6113-0</a></td><td>http://loinc.org</td><td>2 or more</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-LA6112-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/LA6112-2/\">LA6112-2</a></td><td>http://loinc.org</td><td>1</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-LA6111-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/LA6111-4/\">LA6111-4</a></td><td>http://loinc.org</td><td>0</td></tr></table></div>"
       },
       "url" : "http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers",
       "version" : "0.1.0",
@@ -19,7 +19,7 @@
       "title" : "Follow-Up GAS Score Answers",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-09-21T00:47:01+00:00",
+      "date" : "2024-09-22T11:40:07+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -28,9 +28,9 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:7a5ef3a7-f26b-45a1-a743-a5008f9e8b29",
-        "timestamp" : "2024-09-21T00:48:01+00:00",
-        "total" : 0,
+        "identifier" : "urn:uuid:15f0c8d7-1566-4d36-b98b-5ac559a62fc4",
+        "timestamp" : "2024-09-22T11:41:21+00:00",
+        "total" : 3,
         "offset" : 0,
         "parameter" : [{
           "name" : "count",
@@ -55,6 +55,21 @@
         {
           "name" : "version",
           "valueUri" : "http://loinc.org|2.78"
+        }],
+        "contains" : [{
+          "system" : "http://loinc.org",
+          "code" : "LA6113-0",
+          "display" : "2 or more"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "LA6112-2",
+          "display" : "1"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "LA6111-4",
+          "display" : "0"
         }]
       }
     }
@@ -73,7 +88,7 @@
       "title" : "Goal Attainment Scaling (GAS) Score",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-09-21T00:47:01+00:00",
+      "date" : "2024-09-22T11:40:07+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -82,8 +97,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:7b39d7b7-8984-4baa-8aaf-421381eef7ec",
-        "timestamp" : "2024-09-21T00:48:01+00:00",
+        "identifier" : "urn:uuid:edaf5a48-2d2e-4d74-9e34-9b6357f99c18",
+        "timestamp" : "2024-09-22T11:41:21+00:00",
         "total" : 0,
         "offset" : 0,
         "parameter" : [{
@@ -127,7 +142,7 @@
       "title" : "PCO Categories",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-09-21T00:47:01+00:00",
+      "date" : "2024-09-22T11:40:07+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -136,8 +151,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:177a2147-9dc4-46eb-970a-953a76207c9a",
-        "timestamp" : "2024-09-21T00:48:02+00:00",
+        "identifier" : "urn:uuid:624e3788-32b8-42b9-b0f8-34b63c6b1aa2",
+        "timestamp" : "2024-09-22T11:41:22+00:00",
         "total" : 21,
         "offset" : 0,
         "parameter" : [{
@@ -282,7 +297,7 @@
       "title" : "PROM Target Measures",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-09-21T00:47:01+00:00",
+      "date" : "2024-09-22T11:40:07+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -291,8 +306,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5ff16efc-9075-49f6-8eed-13caad6e158a",
-        "timestamp" : "2024-09-21T00:48:02+00:00",
+        "identifier" : "urn:uuid:d0765f79-1711-47f7-a465-8f66ccefb5a5",
+        "timestamp" : "2024-09-22T11:41:23+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -396,7 +411,7 @@
       "title" : "What Matters Focus Areas",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2024-09-21T00:47:01+00:00",
+      "date" : "2024-09-22T11:40:07+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -405,8 +420,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:bc85fac7-98a4-4674-ad69-894fec793e77",
-        "timestamp" : "2024-09-21T00:48:03+00:00",
+        "identifier" : "urn:uuid:12adf86e-b7f3-4de2-838e-d73237c74055",
+        "timestamp" : "2024-09-22T11:41:23+00:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{

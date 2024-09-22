@@ -4,7 +4,7 @@
    <annotation xsi:type="a:Annotation">
       <a:t name="description" value="Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with&#xa;a complex care need who received follow-up on their PCO goal within two&#xa;weeks to six months of when the PCO goal and GAS or PROM were&#xa;identified."/>
       <a:t name="author" value="Mountain Lotus WellBeing LLC"/>
-      <a:s r="285">
+      <a:s r="274">
          <a:s>/*
 @description: Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with
 a complex care need who received follow-up on their PCO goal within two
@@ -228,7 +228,7 @@ define &quot;Initial Population&quot;: </a:s>
             </element>
          </expression>
       </def>
-      <def localId="265" locator="37:1-40:67" name="Denominator" context="Patient" accessLevel="Public">
+      <def localId="265" locator="37:1-38:22" name="Denominator" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
             <a:t name="description" value="Initial Population individuals with a complex care need and has a PCO Goal."/>
             <a:t name="comment" value="&quot;complex care need?&quot;"/>
@@ -239,102 +239,45 @@ define &quot;Initial Population&quot;: </a:s>
 */
 define &quot;Denominator&quot;:
   </a:s>
-               <a:s r="277">
-                  <a:s>
-                     <a:s r="266">
-                        <a:s r="267">
-                           <a:s>
-                              <a:s>&quot;Initial Population&quot;</a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s> person</a:s>
-                     </a:s>
-                  </a:s>
-                  <a:s>
-    </a:s>
-                  <a:s r="268">
-                     <a:s>where </a:s>
-                     <a:s r="268">
-                        <a:s r="269">
-                           <a:s>exists </a:s>
-                           <a:s r="271">
-                              <a:s r="270">
-                                 <a:s>PCOLogic</a:s>
-                              </a:s>
-                              <a:s>.</a:s>
-                              <a:s r="271">
-                                 <a:s>&quot;PCO Goals&quot;</a:s>
-                              </a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-      and </a:s>
-                        <a:s r="272">
-                           <a:s>exists </a:s>
-                           <a:s r="274">
-                              <a:s r="273">
-                                 <a:s>PCOLogic</a:s>
-                              </a:s>
-                              <a:s>.</a:s>
-                              <a:s r="274">
-                                 <a:s>&quot;Baseline Scores Before Follow-Up Period&quot;</a:s>
-                              </a:s>
-                           </a:s>
-                        </a:s>
-                     </a:s>
-                  </a:s>
+               <a:s r="266">
+                  <a:s>&quot;Initial Population&quot;</a:s>
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="277" locator="38:3-40:67" xsi:type="Query">
-            <source localId="266" locator="38:3-38:29" alias="person">
-               <expression localId="267" locator="38:3-38:22" name="Initial Population" xsi:type="ExpressionRef"/>
-            </source>
-            <where localId="268" locator="39:5-40:67" xsi:type="And">
-               <operand localId="269" locator="39:11-39:37" xsi:type="Exists">
-                  <operand localId="271" locator="39:18-39:37" name="PCO Goals" libraryName="PCOLogic" xsi:type="ExpressionRef"/>
-               </operand>
-               <operand localId="272" locator="40:11-40:67" xsi:type="Exists">
-                  <signature localId="275" xsi:type="ListTypeSpecifier">
-                     <elementType localId="276" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-                  </signature>
-                  <operand localId="274" locator="40:18-40:67" name="Baseline Scores Before Follow-Up Period" libraryName="PCOLogic" xsi:type="ExpressionRef"/>
-               </operand>
-            </where>
-         </expression>
+         <expression localId="266" locator="38:3-38:22" name="Initial Population" xsi:type="ExpressionRef"/>
       </def>
-      <def localId="279" locator="42:1-43:6" name="Denominator Exclusions" context="Patient" accessLevel="Public">
+      <def localId="268" locator="40:1-41:6" name="Denominator Exclusions" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="279">
-               <a:s r="280">define &quot;Denominator Exclusions&quot;:
+            <a:s r="268">
+               <a:s r="269">define &quot;Denominator Exclusions&quot;:
   null</a:s>
             </a:s>
          </annotation>
-         <expression localId="280" locator="43:3-43:6" xsi:type="Null"/>
+         <expression localId="269" locator="41:3-41:6" xsi:type="Null"/>
       </def>
-      <def localId="282" locator="45:1-46:6" name="Denominator Exceptions" context="Patient" accessLevel="Public">
+      <def localId="271" locator="43:1-44:6" name="Denominator Exceptions" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
-            <a:s r="282">
-               <a:s r="283">define &quot;Denominator Exceptions&quot;:
+            <a:s r="271">
+               <a:s r="272">define &quot;Denominator Exceptions&quot;:
   null</a:s>
             </a:s>
          </annotation>
-         <expression localId="283" locator="46:3-46:6" xsi:type="Null"/>
+         <expression localId="272" locator="44:3-44:6" xsi:type="Null"/>
       </def>
-      <def localId="285" locator="52:1-54:70" name="Numerator" context="Patient" accessLevel="Public">
+      <def localId="274" locator="50:1-52:70" name="Numerator" context="Patient" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
             <a:t name="description" value="Indivuals who received follow-up on their PCO goal within two&#xa;weeks to six months of when the PCO goal and GAS or PROM were identified."/>
-            <a:s r="285">
+            <a:s r="274">
                <a:s>/*
 @description: Indivuals who received follow-up on their PCO goal within two
 weeks to six months of when the PCO goal and GAS or PROM were identified.
 */
 define &quot;Numerator&quot;:
   </a:s>
-               <a:s r="293">
+               <a:s r="280">
                   <a:s>
-                     <a:s r="286">
-                        <a:s r="287">
+                     <a:s r="275">
+                        <a:s r="276">
                            <a:s>
                               <a:s>&quot;Denominator&quot;</a:s>
                            </a:s>
@@ -344,16 +287,16 @@ define &quot;Numerator&quot;:
                   </a:s>
                   <a:s>
     </a:s>
-                  <a:s r="288">
+                  <a:s r="277">
                      <a:s>where </a:s>
-                     <a:s r="288">
+                     <a:s r="277">
                         <a:s>exists </a:s>
-                        <a:s r="290">
-                           <a:s r="289">
+                        <a:s r="279">
+                           <a:s r="278">
                               <a:s>PCOLogic</a:s>
                            </a:s>
                            <a:s>.</a:s>
-                           <a:s r="290">
+                           <a:s r="279">
                               <a:s>&quot;Follow-Up Scores During Measurement Period&quot;</a:s>
                            </a:s>
                         </a:s>
@@ -362,15 +305,12 @@ define &quot;Numerator&quot;:
                </a:s>
             </a:s>
          </annotation>
-         <expression localId="293" locator="53:3-54:70" xsi:type="Query">
-            <source localId="286" locator="53:3-53:22" alias="person">
-               <expression localId="287" locator="53:3-53:15" name="Denominator" xsi:type="ExpressionRef"/>
+         <expression localId="280" locator="51:3-52:70" xsi:type="Query">
+            <source localId="275" locator="51:3-51:22" alias="person">
+               <expression localId="276" locator="51:3-51:15" name="Denominator" xsi:type="ExpressionRef"/>
             </source>
-            <where localId="288" locator="54:5-54:70" xsi:type="Exists">
-               <signature localId="291" xsi:type="ListTypeSpecifier">
-                  <elementType localId="292" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-               </signature>
-               <operand localId="290" locator="54:18-54:70" name="Follow-Up Scores During Measurement Period" libraryName="PCOLogic" xsi:type="ExpressionRef"/>
+            <where localId="277" locator="52:5-52:70" xsi:type="Exists">
+               <operand localId="279" locator="52:18-52:70" name="Follow-Up Scores During Measurement Period" libraryName="PCOLogic" xsi:type="ExpressionRef"/>
             </where>
          </expression>
       </def>
