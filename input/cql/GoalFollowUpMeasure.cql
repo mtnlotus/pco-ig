@@ -35,9 +35,7 @@ define "Initial Population": {
 @comment: TODO - How do we determine "complex care need?"
 */
 define "Denominator":
-  "Initial Population" person
-    where exists PCOLogic."PCO Goals"
-      and exists PCOLogic."Baseline Scores Before Follow-Up Period"
+  "Initial Population"
 
 define "Denominator Exclusions":
   null

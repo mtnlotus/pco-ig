@@ -70,11 +70,11 @@ Usage: #example
 * addresses[0] = Reference(pcoWhatMattersBodyExample) "What Matters: Moving the Body"
 * addresses[1] = Reference(pcoWhatMattersRelationshipsExample) "What Matters: Family & Friends"
 * description.text = "Walk dog outside once a week"
-* extension[gas-scaling][0].extension[level].valueCoding = $LNC#gas-much-better-than-expected "Much better than expected"
+* extension[gas-scaling][0].extension[level].valueCoding = $LNC#LA6113-0 "Much better than expected"
 * extension[gas-scaling][0].extension[text].valueString = "Walk dog outside three times a week"
-* extension[gas-scaling][1].extension[level].valueCoding = $LNC#gas-better-than-expected "Better than expected"
+* extension[gas-scaling][1].extension[level].valueCoding = $LNC#LA6112-2 "Better than expected"
 * extension[gas-scaling][1].extension[text].valueString = "Walk dog outside twice a week"
-* extension[gas-scaling][2].extension[level].valueCoding = $LNC#gas-expected-outcome "Expected outcome"
+* extension[gas-scaling][2].extension[level].valueCoding = $LNC#LA6111-4 "Expected outcome"
 * extension[gas-scaling][2].extension[text].valueString = "Walk dog outside once a week"
 * extension[gas-scaling][3].extension[level].valueCoding = $LNC#gas-less-than-expected "Less than expected"
 * extension[gas-scaling][3].extension[text].valueString = "Does not walk dog but goes outside with dog"
@@ -105,7 +105,7 @@ Usage: #example
 * effectiveDateTime = "2024-05-10T10:15:00Z"
 * code = $LNC#68491 "Patient follow-up goal attainment scaling score"
 * focus = Reference(pcoGoalWalkDogExample)
-* valueCodeableConcept = $LNC#gas-better-than-expected "Better than expected"
+* valueCodeableConcept = $LNC#LA6112-2 "Better than expected"
 
 Instance: pcoGASScorePractitionerFollowupExample
 InstanceOf: PCOGoalAttainmentScoreObservation
@@ -118,4 +118,4 @@ Usage: #example
 * effectiveDateTime = "2024-05-22T10:15:00Z"
 * code = $LNC#68490 "Practitioner follow-up goal attainment scaling score"
 * focus = Reference(pcoGoalWalkDogExample)
-* valueCodeableConcept = $LNC#gas-expected-outcome "Expected outcome"
+* valueCodeableConcept = $LNC#LA6111-4 "Expected outcome"

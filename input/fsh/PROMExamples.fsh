@@ -40,7 +40,7 @@ Usage: #example
 * effectiveDateTime = "2024-09-19T13:15:00Z"
 * focus = Reference(pcoGoalAnxietyExample)
 * code = $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"
-* valueQuantity = 10 '{score}' "score"
+* valueInteger = 10
 
 Instance: pcoAnxietyCarePlanExample
 InstanceOf: PCOCarePlan
