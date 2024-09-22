@@ -61,7 +61,7 @@ Title: "Person-Centered Progress Score"
 Description: "A progress score observation for a person-centered goal."
 * effectiveDateTime 1..1 MS
   * ^short = "When the score was assessed"
-* focus 1..1 MS
+* focus 0..1 MS
 * focus only Reference(PCOGoalProfile)
   * ^short = "The goal whose progress was scored"
 /*
@@ -87,5 +87,5 @@ Description: "This observation records how a patient rated their own progress sc
 * code from PROMTargetMeasures (extensible)
   * ^short = "Code for PROM score observation"
 * focus only Reference(PCOGoalOutcomeMeasureProfile)
-* value[x] only Quantity
-* valueQuantity 1..1 MS
+* value[x] only integer
+* valueInteger 1..1 MS
