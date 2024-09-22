@@ -14,8 +14,8 @@ Id: gas-score-answers
 Title: "Follow-Up GAS Score Answers"
 Description: "The progress rating on goal attainment scaling."
 * ^experimental = false
-* $LNC#gas-much-better-than-expected "Much better than expected"
-* $LNC#gas-better-than-expected "Better than expected"
-* $LNC#gas-expected-outcome "Expected outcome"
+* $LNC#LA6113-0 "Much better than expected"
+* $LNC#LA6112-2 "Better than expected"
+* $LNC#LA6111-4 "Expected outcome"
 * $LNC#gas-less-than-expected "Less than expected"
 * $LNC#gas-much-less-than-expected "Much less than expected"
