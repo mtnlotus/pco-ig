@@ -87,5 +87,5 @@ Description: "This observation records how a patient rated their own progress sc
 * code from PROMTargetMeasures (extensible)
   * ^short = "Code for PROM score observation"
 * focus only Reference(PCOGoalOutcomeMeasureProfile)
-* value[x] only integer
-* valueInteger 1..1 MS
+* value[x] 1..1 MS
+* value[x] only Quantity or integer
