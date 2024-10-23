@@ -13,11 +13,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide mtnlotus.fhir.uv.pco</b></p><a name=\"mtnlotus.fhir.uv.pco\"> </a><a name=\"hcmtnlotus.fhir.uv.pco\"> </a><a name=\"mtnlotus.fhir.uv.pco-en-US\"> </a><h2>PCO</h2><p>The official URL for this implementation guide is: </p><pre>http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco</pre><div><p>Person-Centered Outcomes (PCO) FHIR Implementation Guide</p>\n</div></div>"
   ] ; # 
   fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-10-22T17:59:45+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-23T15:58:47+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
@@ -111,15 +111,6 @@
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ci-build" ]
-       ] ) ;
-       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-data" ]
-       ] [
-         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/_data" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -357,15 +348,6 @@
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ci-build" ]
-       ] ) ;
-       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-data" ]
-       ] [
-         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/_data" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -1205,10 +1187,50 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "feedback.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "feedback.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Feedback" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "formal_specification.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "formal_specification.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Formal Specification" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "underlying_technologies.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "underlying_technologies.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Underlying Technologies" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "use_cases.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "use_cases.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Use Cases" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "user_stories.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "user_stories.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "User Stories" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

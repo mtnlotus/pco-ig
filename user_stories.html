@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>User Stories - Person-Centered Outcomes v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Person-Centered Outcomes</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="formal_specification.html">Formal Specification</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="user_stories.html">User Stories</a>
+      </li>
+      <li>
+        <a href="underlying_technologies.html">Underlying Technologies</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#structures-resource-profiles">Profiles</a>
+      </li>
+      <li>
+        <a href="artifacts.html#structures-extension-definitions">Extensions</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-value-sets">Value Sets</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-code-systems">Code Systems</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Examples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#knowledge-artifacts-measure">Measures</a>
+      </li>
+      <li>
+        <a href="artifacts.html#knowledge-artifacts-libraries">CQL Libraries</a>
+      </li>
+      <li>
+        <a href="artifacts.html#structures-questionnaires">Questionnaires</a>
+      </li>
+      <li>
+        <a href="artifacts.html#example-example-instances">Example Instances</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>User Stories</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>User Stories</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#person-completes-assessment-of-what-matters-most" id="markdown-toc-person-completes-assessment-of-what-matters-most">Person completes assessment of What Matters Most</a></li>
+  <li><a href="#person-works-with-health-coach-to-create-goals-and-action-steps" id="markdown-toc-person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</a></li>
+  <li><a href="#person-or-member-of-care-team-records-goal-attainment-progress" id="markdown-toc-person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</a></li>
+  <li><a href="#person-or-member-of-care-team-shares-a-pco-data-bundle" id="markdown-toc-person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</a></li>
+</ul>
+
+</div>
+
+<h3 id="person-completes-assessment-of-what-matters-most">Person completes assessment of What Matters Most</h3>
+
+<p>Dorothy uses a dedicated mobile app that presents a list of several areas for health &amp; well-being where she can think about What Matters Most to her. She can assign two ratings to each area: 1) Where am I now? and 2) Where would I like to be?  Dorothy rates each question on a scale of 1 to 10, where 1 is “low” and 10 is “high”. She can then select one or two areas as her current focus for creating person-centered goals and action steps, and for tracking progress toward her desired outcomes. Dorothy also works with her health &amp; wellness coach and her primary care physician to create a care plan that helps mitigate barriers and achieve her goals.</p>
+
+<p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA’s approach, but can be adapted to other asseessments used by different organizations.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-what-matters-assessment.html#profile">Profile: What Matters Assessment</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoWhatMattersRelationshipsExample.html#root">Example: Assessment Observation</a></strong></p>
+
+<h3 id="person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</h3>
+
+<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy’s responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. The health coach role also may be performed by Dorothy’s primary care physician or others on her care team.</p>
+
+<h4 id="goals-using-goal-attainment-scaling-gas">Goals using Goal Attainment Scaling (GAS)</h4>
+<p>This goal includes five levels of achievement that can be used to evaluate Dorothy’s progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
+
+<p>🎯 Goal: <em>Walk Dog Outside Once a Week</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Much Less Than <br />Expected (-2)</th>
+      <th style="text-align: center">Less Than Expected <br />(-1)</th>
+      <th style="text-align: center">Expected Outcome <br />(0)</th>
+      <th style="text-align: center">Better Than <br />Expected (+1)</th>
+      <th style="text-align: center">Much Better Than <br />Expected (+2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Unable to go outside <br />with dog</td>
+      <td style="text-align: center">Does not walk dog <br />but goes outside <br />with dog</td>
+      <td style="text-align: center">Walk dog outside <br />once a week</td>
+      <td style="text-align: center">Walk dog outside <br />twice a week</td>
+      <td style="text-align: center">Walk dog outside <br />three times a week</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-gas-goal-profile.html#profile">Profile: Person-Centered Goal using GAS</a></strong></p>
+
+<p><strong>☛ See <a href="Goal-pcoGoalWalkDogExample.html#root">Example: GAS Goal</a></strong></p>
+
+<h4 id="goals-using-patient-reported-outcome-measures-proms">Goals using Patient-Reported Outcome Measures (PROMs)</h4>
+<p>Dorothy is working with her primary care provider to manage anxiety related to her complex care needs and Dr. Anderson recommends creating a goal measured by the Generalized Anxiety Disorder (GAS-7) assessment questionnaire. Dr. Anderson sets the goal target to be a GAD-7 score &lt; 6, which indicates mild anxiety.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-prom-goal-profile.html#profile">Profile: Person-Centered Goal using PROM</a></strong></p>
+
+<p><strong>☛ See <a href="Goal-pcoGoalAnxietyExample.html#root">Example: PROM Goal for Anxiety</a></strong></p>
+
+<h3 id="person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</h3>
+<p>Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy’s health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy’s goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.</p>
+
+<p>If the health coaching role is performed by Dorothy’s primary care physician or other member of that provider’s organization, they also can use a dedicated SMART on FHIR app launched from within their EHR system to record and view Dorothy’s priorities, goals, and progress on outcomes that matter most to her.</p>
+
+<h4 id="track-progress-using-using-goal-attainment-scaling-gas">Track progress using using Goal Attainment Scaling (GAS)</h4>
+<p>Dorothy’s mobile app prompts her once each month to record progress on attainment of her goals. For goals using Goal Attainment Scaling (GAS), the app displays a slider where Dorothy can rate herself using the five pre-defined goal attainment levels. Similarly, Dorothy’s health &amp; wellness coach or her primary care doctor can use their PCO apps to rate Dorothy’s progress from their perspectives.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-gas-score-observation.html#profile">Profile: Goal Attainment Scaling (GAS) score by patient</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoGASScorePatientFollowupExample.html#root">Example: GAS score by patient</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoGASScorePractitionerFollowupExample.html#root">Example: GAS score by a practitioner</a></strong></p>
+
+<h4 id="track-progress-using-using-proms">Track progress using using PROMs</h4>
+<p>Dorothy’s mobile app prompts her to complete the GAD-7 anxiety assessment once each month and shares that Observation with the rest of her care team, where they all can track progress on attainment of Dorothy’s PROM goal to achieve a GAD-7 score of less than 6.</p>
+
+<p><strong>☛ See <a href="StructureDefinition-pco-prom-score.html#profile">Profile: PROM progress score</a></strong></p>
+
+<p><strong>☛ See <a href="Observation-pcoPROMScoreAnxietyExample.html#root">Example: PROM score by patient</a></strong></p>
+
+<h3 id="person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</h3>
+
+<p>If the applications used by Dorothy and her health coach are separate from her provider organization’s EHR system, either Dorothy or her health &amp; wellness coach can export and submit a complete bundle of standardized data to share with Dorothy’s extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
+
+<p>This same bundle of person-centered goals, care plans and outcome scores can be submitted to an independent organization that uses these data to compute digital quality measures over a large population of individuals.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 23, 2024 15:58+0000">2024-10-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://mtnlotus.com/uv/pco/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

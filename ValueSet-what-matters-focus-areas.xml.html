@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>What Matters Focus Areas - XML Representation - Person-Centered Outcomes v0.1.0</title>
+    <title>What Matters Focus Areas - XML Representation - Person-Centered Outcomes v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.24"}
-    h3,h4,h5,h6{--heading-prefix:"3.24"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.24"}
+    h3,h4,h5,h6{--heading-prefix:"8.24"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -57,7 +57,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Person-Centered Outcomes</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">0.2.0 - ci-build
 
 
 
@@ -92,10 +92,67 @@
     <a href="index.html">Home</a>
   </li>
   <li>
-    <a href="feedback.html">Feedback</a>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="formal_specification.html">Formal Specification</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="user_stories.html">User Stories</a>
+      </li>
+      <li>
+        <a href="underlying_technologies.html">Underlying Technologies</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#structures-resource-profiles">Profiles</a>
+      </li>
+      <li>
+        <a href="artifacts.html#structures-extension-definitions">Extensions</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-value-sets">Value Sets</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-code-systems">Code Systems</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Examples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#knowledge-artifacts-measure">Measures</a>
+      </li>
+      <li>
+        <a href="artifacts.html#knowledge-artifacts-libraries">CQL Libraries</a>
+      </li>
+      <li>
+        <a href="artifacts.html#structures-questionnaires">Questionnaires</a>
+      </li>
+      <li>
+        <a href="artifacts.html#example-example-instances">Example Instances</a>
+      </li>
+    </ul>
   </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="downloads.html">Downloads</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -122,7 +179,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -177,7 +234,7 @@
         
           Draft
           
-            as of 2024-10-22
+            as of 2024-10-23
           
         
       </td>
@@ -201,12 +258,12 @@
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet what-matters-focus-areas&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;what-matters-focus-areas&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcwhat-matters-focus-areas&quot;&gt; &lt;/a&gt;&lt;a name=&quot;what-matters-focus-areas-en-US&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=&quot;CodeSystem-va-whole-health.html&quot;&gt;&lt;code&gt;http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health&lt;/code&gt;&lt;/a&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-body&quot;&gt;body&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Moving the Body&lt;/td&gt;&lt;td&gt;Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-mind&quot;&gt;mind&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Power of the Mind&lt;/td&gt;&lt;td&gt;Our thoughts are powerful and can affect our physical, mental, and emotional health. Changing our mindset can aid in healing and coping. Breathing techniques, guided imagery, Tai Chi, yoga, or gratitude can buffer the impact of stress and other emotions.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-nourishment&quot;&gt;nourishment&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Food &amp;amp; Drink&lt;/td&gt;&lt;td&gt;What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-recharge&quot;&gt;recharge&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Recharge&lt;/td&gt;&lt;td&gt;Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night's rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-surroundings&quot;&gt;surroundings&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Surroundings&lt;/td&gt;&lt;td&gt;Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-personal-development&quot;&gt;personal-development&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Personal Development&lt;/td&gt;&lt;td&gt;Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-spirit-and-soul&quot;&gt;spirit-and-soul&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Spirit &amp;amp; Soul&lt;/td&gt;&lt;td&gt;Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-relationships&quot;&gt;relationships&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Family, Friends &amp;amp; Co-Workers&lt;/td&gt;&lt;td&gt;Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that &amp;quot;fuel&amp;quot; us and less in relationships that &amp;quot;drain&amp;quot; us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;CodeSystem-va-whole-health.html#va-whole-health-professional-care&quot;&gt;professional-care&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Professional Care&lt;/td&gt;&lt;td&gt;Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.2.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;WhatMattersFocusAreas&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;What Matters Focus Areas&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-10-22T17:59:45+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-10-23T15:58:47+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mountain Lotus WellBeing LLC&quot;/&gt;
@@ -289,7 +346,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 22, 2024 17:59+0000">2024-10-22</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 23, 2024 15:58+0000">2024-10-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

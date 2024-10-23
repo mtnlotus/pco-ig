@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - Person-Centered Outcomes v0.1.0</title>
+    <title>Home - Person-Centered Outcomes v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -55,7 +55,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Person-Centered Outcomes</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">0.2.0 - ci-build
 
 
 
@@ -90,10 +90,67 @@
     <a href="index.html">Home</a>
   </li>
   <li>
-    <a href="feedback.html">Feedback</a>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="formal_specification.html">Formal Specification</a>
+      </li>
+      <li>
+        <a href="use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="user_stories.html">User Stories</a>
+      </li>
+      <li>
+        <a href="underlying_technologies.html">Underlying Technologies</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Conformance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#structures-resource-profiles">Profiles</a>
+      </li>
+      <li>
+        <a href="artifacts.html#structures-extension-definitions">Extensions</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-value-sets">Value Sets</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-code-systems">Code Systems</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Examples
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#knowledge-artifacts-measure">Measures</a>
+      </li>
+      <li>
+        <a href="artifacts.html#knowledge-artifacts-libraries">CQL Libraries</a>
+      </li>
+      <li>
+        <a href="artifacts.html#structures-questionnaires">Questionnaires</a>
+      </li>
+      <li>
+        <a href="artifacts.html#example-example-instances">Example Instances</a>
+      </li>
+    </ul>
   </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="downloads.html">Downloads</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -127,7 +184,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -142,7 +199,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco|0.1.0"/></span>
+      <span class="copy-text">0.2.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco|0.2.0"/></span>
       </td>
     </tr>
 
@@ -158,7 +215,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2024-10-22
+            as of 2024-10-23
           
         
       </td>
@@ -184,155 +241,76 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#user-stories" id="markdown-toc-user-stories">User Stories</a></li>
-  <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
-  <li><a href="#nominal-workflow" id="markdown-toc-nominal-workflow">Nominal Workflow</a></li>
-  <li><a href="#pco-data-submission-bundles" id="markdown-toc-pco-data-submission-bundles">PCO Data Submission: Bundles</a></li>
-  <li><a href="#normative-vs-informative-content" id="markdown-toc-normative-vs-informative-content">Normative vs Informative Content</a></li>
-  <li><a href="#package-downloads" id="markdown-toc-package-downloads">Package Downloads</a></li>
+  <li><a href="#background" id="markdown-toc-background">Background</a></li>
+  <li><a href="#conformance-vs-example-content" id="markdown-toc-conformance-vs-example-content">Conformance vs Example Content</a></li>
+  <li><a href="#relationship-with-other-fhir-igs" id="markdown-toc-relationship-with-other-fhir-igs">Relationship with other FHIR IGs</a></li>
+  <li><a href="#how-to-read-this-guide" id="markdown-toc-how-to-read-this-guide">How to read this Guide</a></li>
 </ul>
 
 </div>
-<h3 id="introduction">Introduction</h3>
+<p>The Person-Centered Outcomes (PCO) HL7® FHIR® Implementation Guide (IG) supports the exchange of information related to a person’s goal-directed care guided by a person-centered outcomes approach, which includes the identification and tracking of health outcome goals that matter most to patients using either Goal Attainment Scaling (GAS) or patient-reported outcome measures (PROM).</p>
 
-<p>Person-Centered Outcomes (PCO) focus on setting and achieving specific, personalized goals that prioritize an individual’s well-being and “What Matters Most” to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. After goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual’s needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness. Goal Attainment Scaling (GAS) and Patient-Reported Outcome Measures (PROMs) are two approaches used to establish goal targets and track achievement progress.</p>
+<p>The PCO IG includes profiles for interoperable GAS Goals, support for GAS Goal editing tools, and PCO measures. GAS in healthcare, measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.</p>
 
-<p><a href="https://www.ncqa.org/hedis/reports-and-research/pco-measures/">Person-centered outcome measures</a> and <a href="https://www.ncqa.org/wp-content/uploads/NCQA-GAS-Whitepaper-WEB.pdf">Goal Attainment Scaling (GAS)</a> in healthcare measure the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.</p>
+<h3 id="background">Background</h3>
 
-<p>Based in psychometric science, <a href="https://mmshub.cms.gov/sites/default/files/Patient-Reported-Outcome-Measures.pdf">Patient-Reported Outcome Measures (PROMs)</a> are standardized questionnaires that contain multiple questions, or items, patients answer on their own to generate numerical scores measuring symptoms, function, perceived health status. Two examples of commonly used PROMs are <a href="Questionnaire-44249-1.html">PHQ-9 quick depression assessment panel</a> and <a href="Questionnaire-69737-5.html">Generalized Anxiety Disorder (GAD-7)</a>.</p>
+<p>Everyone deserves fair and just access to high-quality health care that addresses their unique needs, reflects their diverse background and culture, and is designed to deliver the outcomes they want. This is particularly true for people with complex health care needs, many of whom are older adults who often receive care that may be misaligned with their needs and goals. Nearly 30% of Medicare beneficiaries have complex health care needs, and more than 14 million people in the U.S. need long-term services and supports. <a href="https://www.aarp.org/content/dam/aarp/ppi/2019/08/long-term-services-and-supports.doi.10.26419-2Fppi.00079.001.pdf">These numbers are growing every year</a>.</p>
 
-<h3 id="user-stories">User Stories</h3>
+<p>Goal-directed care in healthcare centers on setting and achieving specific, personalized goals that prioritize an individual’s well-being and “What Matters Most” to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. Once goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual’s needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness.</p>
 
-<h4 id="person-or-member-of-care-team-performs-assessment-of-what-matters-most">Person or member of care team performs assessment of What Matters Most</h4>
+<p><a href="https://www.ncqa.org/wp-content/uploads/NCQA-Person-Centered-Outcomes-Approach-Toolkit_2024.pdf">The Person-Centered Outcomes (PCO) approach</a> focuses on setting and achieving specific, personalized, measurable goals that prioritize an individual’s well-being and “What Matters Most” to each person. Rather than just treating symptoms, this approach involves close collaboration between patients, caregivers, and healthcare providers to identify individual goals related to health outcomes, functional improvement, or symptom management. After goals are established, tailored care plans are developed, incorporating various treatments, therapies, and lifestyle adjustments to meet the individual’s needs and preferences. Continual monitoring and adjustment ensure alignment with evolving priorities, fostering patient engagement and satisfaction while enhancing overall healthcare effectiveness. Clinicians throughout the care continuum—from primary care to specialty care, to home and community-based services—can use this approach to identify what is important to a person (e.g., feeling well enough to visit grandchildren). This approach and its coordinating measures can help support and assess the quality of goal-directed care being implemented.</p>
 
-<p>Dorothy uses a dedicated mobile app that presents a list of several areas for health &amp; well-being where she can think about What Matters Most to her. She can assign two ratings to each area: 1) Where am I now? and 2) Where would I like to be?  Dorothy rates each question on a scale of 1 to 10, where 1 is “low” and 10 is “high”. She can then select one or two areas as her current focus for creating person-centered goals and action steps, and for tracking progress toward her desired outcomes. Dorothy also works with her health &amp; wellness coach and her primary care physician to create a care plan that helps mitigate barriers and achieve her goals.</p>
+<p>The need for the PCO IG was identified as a natural next step from the scope of the <a href="http://hl7.org/fhir/us/mcc/ImplementationGuide/hl7.fhir.us.mcc">MCC eCare Plan FHIR IG STU1</a> which provided high-level guidance for Goals and measuring outcomes. As goal-directed care is growing in use and being incorporated into payment programs, the need for data standards around implementation and reporting are necessary. This IG supports implementers, researchers, and evaluators of goal-directed care planning to improve health outcomes.</p>
 
-<p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA’s approach, but can be adapted to other asseessments used by different organizations.</p>
-
-<p><strong>☛ See <a href="StructureDefinition-pco-what-matters-assessment.html#profile">Profile: What Matters Assessment</a></strong></p>
-
-<p><strong>☛ See <a href="Observation-pcoWhatMattersRelationshipsExample.html#root">Example: Assessment Observation</a></strong></p>
-
-<h4 id="person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</h4>
-
-<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy’s responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. The health coach role also may be performed by Dorothy’s primary care physician or others on her care team.</p>
-
-<h5 id="goals-using-goal-attainment-scaling-gas">Goals using Goal Attainment Scaling (GAS)</h5>
-<p>This goal includes five levels of achievement that can be used to evaluate Dorothy’s progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
-
-<p>🎯 Goal: <em>Walk Dog Outside Once a Week</em></p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Much Less Than <br />Expected (-2)</th>
-      <th style="text-align: center">Less Than Expected <br />(-1)</th>
-      <th style="text-align: center">Expected Outcome <br />(0)</th>
-      <th style="text-align: center">Better Than <br />Expected (+1)</th>
-      <th style="text-align: center">Much Better Than <br />Expected (+2)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">Unable to go outside <br />with dog</td>
-      <td style="text-align: center">Does not walk dog <br />but goes outside <br />with dog</td>
-      <td style="text-align: center">Walk dog outside <br />once a week</td>
-      <td style="text-align: center">Walk dog outside <br />twice a week</td>
-      <td style="text-align: center">Walk dog outside <br />three times a week</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>☛ See <a href="StructureDefinition-pco-gas-goal-profile.html#profile">Profile: Person-Centered Goal using GAS</a></strong></p>
-
-<p><strong>☛ See <a href="Goal-pcoGoalWalkDogExample.html#root">Example: GAS Goal</a></strong></p>
-
-<h5 id="goals-using-patient-reported-outcome-measures-proms">Goals using Patient-Reported Outcome Measures (PROMs)</h5>
-<p>Dorothy is working with her primary care provider to manage anxiety related to her complex care needs and Dr. Anderson recommends creating a goal measured by the Generalized Anxiety Disorder (GAS-7) assessment questionnaire. Dr. Anderson sets the goal target to be a GAD-7 score &lt; 6, which indicates mild anxiety.</p>
-
-<p><strong>☛ See <a href="StructureDefinition-pco-prom-goal-profile.html#profile">Profile: Person-Centered Goal using PROM</a></strong></p>
-
-<p><strong>☛ See <a href="Goal-pcoGoalAnxietyExample.html#root">Example: PROM Goal for Anxiety</a></strong></p>
-
-<h4 id="person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</h4>
-<p>Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy’s health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy’s goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.</p>
-
-<p>If the health coaching role is performed by Dorothy’s primary care physician or other member of that provider’s organization, they also can use a dedicated SMART on FHIR app launched from within their EHR system to record and view Dorothy’s priorities, goals, and progress on outcomes that matter most to her.</p>
-
-<h5 id="track-progress-using-using-goal-attainment-scaling-gas">Track progress using using Goal Attainment Scaling (GAS)</h5>
-<p>Dorothy’s mobile app prompts her once each month to record progress on attainment of her goals. For goals using Goal Attainment Scaling (GAS), the app displays a slider where Dorothy can rate herself using the five pre-defined goal attainment levels. Similarly, Dorothy’s health &amp; wellness coach or her primary care doctor can use their PCO apps to rate Dorothy’s progress from their perspectives.</p>
-
-<p><strong>☛ See <a href="StructureDefinition-pco-gas-score-observation.html#profile">Profile: Goal Attainment Scaling (GAS) score by patient</a></strong></p>
-
-<p><strong>☛ See <a href="Observation-pcoGASScorePatientFollowupExample.html#root">Example: GAS score by patient</a></strong></p>
-
-<p><strong>☛ See <a href="Observation-pcoGASScorePractitionerFollowupExample.html#root">Example: GAS score by a practitioner</a></strong></p>
-
-<h5 id="track-progress-using-using-proms">Track progress using using PROMs</h5>
-<p>Dorothy’s mobile app prompts her to complete the GAD-7 anxiety assessment once each month and shares that Observation with the rest of her care team, where they all can track progress on attainment of Dorothy’s PROM goal to achieve a GAD-7 score of less than 6.</p>
-
-<p><strong>☛ See <a href="StructureDefinition-pco-prom-score.html#profile">Profile: PROM progress score</a></strong></p>
-
-<p><strong>☛ See <a href="Observation-pcoPROMScoreAnxietyExample.html#root">Example: PROM score by patient</a></strong></p>
-
-<h4 id="person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</h4>
-
-<p>If the applications used by Dorothy and her health coach are separate from her provider organization’s EHR system, either Dorothy or her health &amp; wellness coach can export and submit a complete bundle of standardized data to share with Dorothy’s extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
-
-<p>This same bundle of person-centered goals, care plans and outcome scores can be submitted to an independent organization that uses these data to compute digital quality measures over a large population of individuals.</p>
-
-<h3 id="actors">Actors</h3>
-
-<h4 id="pco-data-submitter">PCO Data Submitter</h4>
-
-<p>The data submitter is a software system that collects and manages PCO data. It typically incorporates a patient-facing app, and may also incorporate a clinician-facing EHR-integrated app and a cloud service.</p>
-
-<p>This IG also refers to Data Submitters as “<strong>apps</strong>”.</p>
-
-<h4 id="pco-data-receiver">PCO Data Receiver</h4>
-
-<p>The data receiver is a software system that receives and stores the PCO data submitted by the data submitter.</p>
-
-<p>This IG also refers to Data Receivers as “<strong>EHRs</strong>” or “<strong>PCO management platforms</strong>”.</p>
-
-<h4 id="pco-measure-performer">PCO Measure Performer</h4>
-
-<p>The measure performer is a software system that receives the PCO data and computes digital quality measures for a population of individuals.</p>
-
-<h3 id="nominal-workflow">Nominal Workflow</h3>
-
-<p>Under development.</p>
-
-<h3 id="pco-data-submission-bundles">PCO Data Submission: Bundles</h3>
-
-<p><em>Profile Specification and examples are still under development.</em></p>
-
-<p>This section is inspired by a similar data submission bundle in the draft <a href="https://build.fhir.org/ig/HL7/cgm/index.html#cgm-data-submission-bundles">Argo CCM Write</a> FHIR IG.</p>
-
-<p><strong>Technical Details</strong></p>
+<h3 id="conformance-vs-example-content">Conformance vs Example Content</h3>
 
 <ul>
-  <li>PCO Submitters and Receivers SHALL support bundle-based submission, and MAY support individual resource submission</li>
-  <li>PCO Receivers MAY choose to store only a subset of resources in a submitted bundle
+  <li>Profile and extension definitions in this IG are proposed as <strong>conformance</strong> content.</li>
+  <li>Measure, Library, and Questionnaire resources are <strong>example</strong> instances that illustrate concrete use cases for implementers.</li>
+</ul>
+
+<h3 id="relationship-with-other-fhir-igs">Relationship with other FHIR IGs</h3>
+
+<p>The PCO IG is complementary in scope to the following related care planning IGs:</p>
+
+<p><a href="http://hl7.org/fhir/us/mcc/ImplementationGuide/hl7.fhir.us.mcc">MCC eCare Plan IG</a>: The scope of the PCO IG is distinct from MCC IG in that it goes into more detail on the use of FHIR resources to support Goal Outcomes and Progress.</p>
+
+<p><a href="http://hl7.org/fhir/us/eltss/ImplementationGuide/hl7.fhir.us.eltss">eLTSS FHIR IG</a>: The eLTSS IG focuses on being able to package eLTSS data in a CarePlan. PCO IG will go into further detail on setting Goal targets using PROM or GAS measures.</p>
+
+<p><a href="https://build.fhir.org/ig/HL7/fhir-pacio-pfe/">PACIO Personal Functioning and Engagement (PFE) IG</a>: The PFE IG defines how to exchange data related to an individual’s functioning and engagement in daily life, primarily in the context of post-acute and long-term care. The PCO IG focuses on defining the use of Observation profiles in the context of goal-directed care planning.</p>
+
+<h3 id="how-to-read-this-guide">How to read this Guide</h3>
+
+<p>This IG is divided into several sections that are listed at the top of each page in the menu bar.</p>
+<ul>
+  <li><a href="index.html">Home</a>: The home page provides the introduction and background information to set context for the use of the HL7® FHIR Person-Centered Outcomes IG.</li>
+  <li>Guidance: These pages provide overall guidance in using the profiles and transactions defined in this guide.
     <ul>
-      <li>Each entry in the <code class="language-plaintext highlighter-rouge">batch-response</code> bundle SHALL provide a status code indicating whether the submission was accepted</li>
-      <li>Accepted entries SHOULD be available for read/search immediately after submission, but MAY be subjected to additional ingestion workflow steps</li>
+      <li><a href="formal_specification.html">Formal Specification</a>: Information about conformance to the IG, including Must Support requirements.</li>
+      <li><a href="use_cases.html">Use Cases</a>: Detailed scenarios in which the Person-Centered Outcomes IG could be used.</li>
+      <li><a href="user_stories.html">User Stories</a>: Brief scenarios from the perspective of individuals using applications based on this IG.</li>
+      <li><a href="underlying_technologies.html">Underlying Technologies</a>: Information about the terminologies, notations, and design principles, specific to FHIR, that this specification uses.</li>
     </ul>
   </li>
+  <li>Conformance: These sections provide detailed descriptions and formal definitions for FHIR artifacts defined in this IG that define conformance criteria.
+  <!-- - [Capability Statement](CapabilityStatement-pco-cap.html): This artifact defines the specific capabilities that different types of systems are expected to have in order to comply with this IG. Systems conforming to this IG are expected to declare conformance with this capability statement. -->
+    <ul>
+      <li><a href="artifacts.html#structures-resource-profiles">Profiles</a>: This section lists the set of Profiles defined in this IG to exchange person-centered information. Each linked Profile page includes a narrative introduction and a formal definition.</li>
+      <li><a href="artifacts.html#structures-extension-definitions">Extensions</a>: This section lists the set of Extensions defined in and used by the Profiles in this IG . Each linked Extension page includes a formal definition.</li>
+      <li><a href="artifacts.html#terminology-value-sets">Value Sets</a>: This section lists the value sets this IG defines.</li>
+      <li><a href="artifacts.html#terminology-code-systems">Code Systems</a>: This section lists the code systems this IG defines.</li>
+    </ul>
+  </li>
+  <li>Examples: These sections provide definitions for FHIR resources that are informative for IG implementers, but are not required for conformance testing with this IG.
+    <ul>
+      <li><a href="artifacts.html#knowledge-artifacts-measure">Measures</a>: This section lists example FHIR Measure resources for digial quality measures.</li>
+      <li><a href="artifacts.html#knowledge-artifacts-libraries">CQL Libraries</a>: This section lists example FHIR Library resources containing CQL logic for digial quality measures.</li>
+      <li><a href="artifacts.html#structures-questionnaires">Questionnaires</a>: This section lists FHIR Questionnaire resources used in example instances of PCO goals.</li>
+      <li><a href="artifacts.html#example-example-instances">Example Instances</a>: This section lists other example instances associated with this IG.</li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a>: This page provides links to downloadable artifacts.</li>
 </ul>
-
-<h3 id="normative-vs-informative-content">Normative vs Informative Content</h3>
-
-<ul>
-  <li>Profile and extension definitions in this IG are proposed as <strong>normative</strong> content.</li>
-  <li>CQL, Measure, and Questionnaire resources are <strong>informative</strong> resources that support illustrative use cases.</li>
-</ul>
-
-<h3 id="package-downloads">Package Downloads</h3>
-
-<p>This is an R4 IG. None of the features it uses are changed in R4B, so it can be used as is with R4B systems. Packages for both <a href="package.r4.tgz">R4 (mtnlotus.fhir.uv.pco.r4)</a> and <a href="package.r4b.tgz">R4B (mtnlotus.fhir.uv.pco.r4b)</a> are available.</p>
-<!--$$2$$-->
 
 
 
@@ -353,7 +331,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 22, 2024 17:59+0000">2024-10-22</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 23, 2024 15:58+0000">2024-10-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
