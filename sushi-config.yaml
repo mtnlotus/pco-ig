@@ -9,8 +9,8 @@ name: PCO
 title: Person-Centered Outcomes
 description: Person-Centered Outcomes (PCO) FHIR Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+version: 0.2.0
+fhirVersion: 4.0.1
 FSHOnly: false
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -25,34 +25,30 @@ dependencies:
   hl7.fhir.uv.cpg: 1.0.0
   fhir.cqf.common: 4.0.1
   hl7.fhir.us.cqfmeasures: 4.0.0
-# The pages property corresponds to IG.definition.page. SUSHI can
-# auto-generate the page list, but if the author includes pages in
-# this file, it is assumed that the author will fully manage the
-# pages section and SUSHI will not generate any page entries.
-# The page file name is used as the key. If title is not provided,
-# then the title will be generated from the file name.  If a
-# generation value is not provided, it will be inferred from the
-# file name extension.  Any subproperties that are valid filenames
-# with supported extensions (e.g., .md/.xml) will be treated as
-# sub-pages.
-#
 
-pages:
-  index.md:
-    title: Home
-  feedback.md:
-    title: Feedback
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Table of Contents: toc.html
+  Guidance:
+    Formal Specification: formal_specification.html
+    Use Cases: use_cases.html
+    User Stories: user_stories.html
+    Underlying Technologies: underlying_technologies.html
+  Conformance:
+    Profiles: artifacts.html#structures-resource-profiles
+    Extensions: artifacts.html#structures-extension-definitions
+    Value Sets: artifacts.html#terminology-value-sets
+    Code Systems: artifacts.html#terminology-code-systems
+  Examples:
+    Measures: artifacts.html#knowledge-artifacts-measure
+    CQL Libraries: artifacts.html#knowledge-artifacts-libraries
+    Questionnaires: artifacts.html#structures-questionnaires
+    Example Instances: artifacts.html#example-example-instances
+  Downloads: downloads.html
 
-# pages:
-#   index.md:
-#     title: Example Home
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
-#
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -70,7 +66,7 @@ parameters:
   #   - "Observation/*"
   #   - "Patient/*"
   #   - "ServiceRequest/*"
-  path-data: "input/_data"
+  # path-data: "input/_data"
   path-resource:
     - input/resources/device
     - input/resources/library
@@ -78,27 +74,6 @@ parameters:
     - input/resources/questionnaire
   path-liquid:
     - templates/liquid
-#
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
-# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
-# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
-# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
-# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
-# │ property below.                                                                                │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# menu:
-#   Specification: index.html
-#   Artifacts: artifacts.html
-#   Feedback: feedback.html
-
-menu:
-  Home: index.html
-  # Use cases:
-  #   Use case 1: usecase-1.html
-  #   Use case 2: usecase-2.html
-  Feedback: feedback.html
-  Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
