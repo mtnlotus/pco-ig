@@ -12,11 +12,6 @@ Goal-directed care in healthcare centers on setting and achieving specific, pers
 
 The need for the PCO IG was identified as a natural next step from the scope of the [MCC eCare Plan FHIR IG STU1](http://hl7.org/fhir/us/mcc/ImplementationGuide/hl7.fhir.us.mcc) which provided high-level guidance for Goals and measuring outcomes. As goal-directed care is growing in use and being incorporated into payment programs, the need for data standards around implementation and reporting are necessary. This IG supports implementers, researchers, and evaluators of goal-directed care planning to improve health outcomes.
 
-### Conformance vs Example Content
-
-* Profile and extension definitions in this IG are proposed as **conformance** content.
-* Measure, Library, and Questionnaire resources are **example** instances that illustrate concrete use cases for implementers.
-
 ### Relationship with other FHIR IGs
 
 The PCO IG is complementary in scope to the following related care planning IGs:
@@ -26,6 +21,11 @@ The PCO IG is complementary in scope to the following related care planning IGs:
 [eLTSS FHIR IG](http://hl7.org/fhir/us/eltss/ImplementationGuide/hl7.fhir.us.eltss): The eLTSS IG focuses on being able to package eLTSS data in a CarePlan. PCO IG will go into further detail on setting Goal targets using PROM or GAS measures. 
 
 [PACIO Personal Functioning and Engagement (PFE) IG](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/): The PFE IG defines how to exchange data related to an individual’s functioning and engagement in daily life, primarily in the context of post-acute and long-term care. The PCO IG focuses on defining the use of Observation profiles in the context of goal-directed care planning.
+
+### Conformance vs Example Content
+
+* Profile and extension definitions in this IG are proposed as **conformance** content.
+* Measure, Library, and Questionnaire resources are **example** instances that illustrate concrete use cases for implementers.
 
 ### How to read this Guide
 
