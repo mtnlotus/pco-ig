@@ -22,6 +22,8 @@ The PCO IG is complementary in scope to the following related care planning IGs:
 
 [PACIO Personal Functioning and Engagement (PFE) IG](https://build.fhir.org/ig/HL7/fhir-pacio-pfe/): The PFE IG defines how to exchange data related to an individual’s functioning and engagement in daily life, primarily in the context of post-acute and long-term care. The PCO IG focuses on defining the use of Observation profiles in the context of goal-directed care planning.
 
+[SDOH CC IG](https://hl7.org/fhir/us/sdoh-clinicalcare/STU2.2/): The SDOH CC IG focuses on representing goals to address an identified social risk or need. The PCO IG will be complementary to this since a goal that matters most to a person may fall in an SDOH domain and PCO goals can make use of Gravity terminologies and profile relationships described by the SDOH CC IG, and PCO IG profiles can be applied to enhance progress tracking for SDOH social need goals by using Goal Attainment Scaling.
+
 ### Conformance vs Example Content
 
 * Profile and extension definitions in this IG are proposed as **conformance** content.
