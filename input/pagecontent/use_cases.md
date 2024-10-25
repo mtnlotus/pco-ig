@@ -1,18 +1,29 @@
 
 ### Identifying What Matters Most
 
-Coming soon!
+More detail coming soon!
+
+Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health & well-being. One example is the U.S. Department of Veterns Affairs [Whole Health appoach to care](https://va.gov/wholehealth) that includes a [Circle of Health](https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp) and [Personal Health Inventory](https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf). The examples in this FHIR IG are based on VA's approach, but can be adapted to other asseessments used by different organizations.
 
 ### Goal Attainment Scaling (GAS)
 
-Coming soon!
+More detail coming soon!
+
+Goal Attainment Scaling (GAS) in healthcare, measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.
+
+#### Goals with GAS from real-world NCQA pilot testing
+
+{% include gas-examples.md %}
 
 ### Goals using Patient-Reported Outcome Measures (PROM)
+
+More detail coming soon!
 
 Based in psychometric science, [Patient-Reported Outcome Measures (PROMs)](https://mmshub.cms.gov/sites/default/files/Patient-Reported-Outcome-Measures.pdf) are standardized questionnaires that contain multiple questions, or items, patients answer on their own to generate numerical scores measuring symptoms, function, perceived health status. Two examples of commonly used PROMs are [PHQ-9 quick depression assessment panel](Questionnaire-44249-1.html) and [Generalized Anxiety Disorder (GAD-7)](Questionnaire-69737-5.html).
 
 ### PCO Digital Quality Measures (dQM)
 
+More detail coming soon!
 
 Examples of PCO dQMs:
 
