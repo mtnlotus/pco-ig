@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/ServiceRequest/pcoMindfulnessSupportProgram> a fhir:ServiceRequest ;
+<http://hl7.org/fhir/us/pco/ServiceRequest/pcoMindfulnessSupportProgram> a fhir:ServiceRequest ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "pcoMindfulnessSupportProgram"] ; # 
   fhir:text [
@@ -17,7 +17,7 @@
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal"^^xsd:anyURI ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:link <http://mtnlotus.com/uv/pco/Goal/pcoGoalAnxietyExample> ;
+       fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalAnxietyExample> ;
        fhir:reference [ fhir:v "Goal/pcoGoalAnxietyExample" ]
      ]
   ] ) ; # 
@@ -32,7 +32,7 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientLopez> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> ;
      fhir:reference [ fhir:v "Patient/pcoPatientLopez" ]
   ] ; # 
   fhir:occurrence [
@@ -49,12 +49,18 @@
   ] ; # 
   fhir:authoredOn [ fhir:v "2024-08-11"^^xsd:date] ; # 
   fhir:requester [
-     fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerAnderson> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> ;
      fhir:reference [ fhir:v "Practitioner/pcoPractitionerAnderson" ]
   ] ; # 
   fhir:note ( [
      fhir:text [ fhir:v "Trial of mindfulness coaching to support anxiety management" ]
   ] ) . # 
+
+<http://hl7.org/fhir/us/pco/Goal/pcoGoalAnxietyExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> a fhir:us .
 
 # -------------------------------------------------------------------------------------
 

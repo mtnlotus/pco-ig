@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/ServiceRequest/pcoPhysicalTherapyReferral> a fhir:ServiceRequest ;
+<http://hl7.org/fhir/us/pco/ServiceRequest/pcoPhysicalTherapyReferral> a fhir:ServiceRequest ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "pcoPhysicalTherapyReferral"] ; # 
   fhir:text [
@@ -17,7 +17,7 @@
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal"^^xsd:anyURI ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:link <http://mtnlotus.com/uv/pco/Goal/pcoGoalWalkDogExample> ;
+       fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> ;
        fhir:reference [ fhir:v "Goal/pcoGoalWalkDogExample" ]
      ]
   ] ) ; # 
@@ -32,7 +32,7 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ; # 
   fhir:occurrence [
@@ -49,12 +49,18 @@
   ] ; # 
   fhir:authoredOn [ fhir:v "2024-02-22"^^xsd:date] ; # 
   fhir:requester [
-     fhir:link <http://mtnlotus.com/uv/pco/Practitioner/pcoPractitionerAnderson> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> ;
      fhir:reference [ fhir:v "Practitioner/pcoPractitionerAnderson" ]
   ] ; # 
   fhir:note ( [
      fhir:text [ fhir:v "Trial of physical therapy focused on strengthening" ]
   ] ) . # 
+
+<http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> a fhir:us .
 
 # -------------------------------------------------------------------------------------
 

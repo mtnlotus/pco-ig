@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for PCO</h1>
- <p>Generated Fri Oct 25 20:08:22 UTC 2024, FHIR version 4.0.1 for mtnlotus.fhir.uv.pco#0.2.0 (canonical = <a href="http://mtnlotus.com/uv/pco">http://mtnlotus.com/uv/pco</a> (<a href="http://mtnlotus.com/uv/pco/history.html">history</a>))</p>
+ <p>Generated Mon Nov 25 08:42:54 UTC 2024, FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = <a href="http://hl7.org/fhir/us/pco">http://hl7.org/fhir/us/pco</a> (<a href="http://hl7.org/fhir/us/pco/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -38,6 +38,20 @@
     <td>
       <b>Choices</b>
     </td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -161,7 +175,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:02a866c1-5cf4-489f-9106-a1eb326e079f</td>
+    <td>urn:uuid:bb70b355-5c49-42b8-b22d-362711da8bac</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -175,7 +189,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:1790898a-6942-4b6c-8e29-3e0e208b14e6</td>
+    <td>urn:uuid:e2c86617-c3e6-4e41-8e2d-7e73dec59bd8</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -189,28 +203,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:37a6f255-4fa0-4dac-b504-6a7097ee2f6b</td>
-    <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
-    <td>urn:ietf:bcp:13</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
-  </tr>
-  <tr>
-    <td>Found candidate server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:fc0a6b7f-29f6-48eb-a066-6293b48f75f8</td>
+    <td>urn:uuid:a436c929-8f88-492a-8f7a-81fec38086a7</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
@@ -231,9 +224,16 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
+    <td>urn:uuid:aa7cfa6f-a770-405e-ad6e-70d233d9ecf7</td>
+    <td>urn:ietf:bcp:13</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
+    <td>urn:ietf:bcp:13</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -427,7 +427,21 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures--0|0.2.0</td>
+    <td>null</td>
+    <td>http://loinc.org</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -448,7 +462,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -462,7 +476,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -476,7 +490,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -490,7 +504,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -504,7 +518,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -525,7 +539,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score--0|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -539,7 +553,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers--0|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -553,7 +567,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score--0|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -567,14 +581,14 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers--0|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score--0|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -588,7 +602,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers--0|0.2.0</td>
+    <td>http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers--0|0.2.0</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
@@ -641,10 +655,38 @@
     <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
     <td>[auth = , candidates=http://tx.fhir.org/r4, auth = , candidates=http://tx.fhir.org/r4, auth = , candidates=http://tx.fhir.org/r4]</td>
   </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>urn:iso:std:iso:3166:-2</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4</td>
+  </tr>
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 86. Code Systems used: </p>
+<p>Use Count: 91. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -659,6 +701,12 @@
     <th>
       <b>Details</b>
     </th>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
   </tr>
   <tr>
     <td>http://loinc.org</td>
@@ -706,7 +754,7 @@
   </tr>
   <tr>
     <td>urn:iso:std:iso:3166</td>
-    <td>0</td>
+    <td>3</td>
     <td>2</td>
     <td>
       <a href="http://terminology.hl7.org/5.2.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
@@ -714,7 +762,7 @@
   </tr>
   <tr>
     <td>urn:iso:std:iso:3166:-2</td>
-    <td>0</td>
+    <td>1</td>
     <td>2</td>
     <td>
       <a href="http://terminology.hl7.org/5.2.0/CodeSystem-ISO3166Part2.html">ISO 3166 Part 2 Country Subdivision Codes</a>

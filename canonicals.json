@@ -7,6 +7,196 @@
     "name" : "FHIRHelpers"
   },
   {
+    "id" : "ncqa-goal-domains",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains",
+    "version" : "0.2.0",
+    "name" : "NCQAGoalDomains"
+  },
+  {
+    "id" : "pco",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco",
+    "version" : "0.2.0",
+    "name" : "PCOCodes"
+  },
+  {
+    "id" : "va-whole-health",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
+    "version" : "0.2.0",
+    "name" : "VAWholeHealth"
+  },
+  {
+    "id" : "what-matters-rating",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating",
+    "version" : "0.2.0",
+    "name" : "WhatMattersRating"
+  },
+  {
+    "id" : "hl7.fhir.us.pco",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco",
+    "version" : "0.2.0",
+    "name" : "PCO"
+  },
+  {
+    "id" : "GoalAttainmentLogic",
+    "type" : "Library",
+    "url" : "http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic",
+    "version" : "0.2.0",
+    "name" : "GoalAttainmentLogic"
+  },
+  {
+    "id" : "GoalFollowUpMeasure",
+    "type" : "Library",
+    "url" : "http://hl7.org/fhir/us/pco/Library/GoalFollowUpMeasure",
+    "version" : "0.2.0",
+    "name" : "GoalFollowUpMeasure"
+  },
+  {
+    "id" : "GoalIdentificationMeasure",
+    "type" : "Library",
+    "url" : "http://hl7.org/fhir/us/pco/Library/GoalIdentificationMeasure",
+    "version" : "0.2.0",
+    "name" : "GoalIdentificationMeasure"
+  },
+  {
+    "id" : "PCOCommon",
+    "type" : "Library",
+    "url" : "http://hl7.org/fhir/us/pco/Library/PCOCommon",
+    "version" : "0.2.0",
+    "name" : "PCOCommon"
+  },
+  {
+    "id" : "WhatMattersLogic",
+    "type" : "Library",
+    "url" : "http://hl7.org/fhir/us/pco/Library/WhatMattersLogic",
+    "version" : "0.2.0",
+    "name" : "WhatMattersLogic"
+  },
+  {
+    "id" : "GoalFollowUpMeasure",
+    "type" : "Measure",
+    "url" : "http://hl7.org/fhir/us/pco/Measure/GoalFollowUpMeasure",
+    "version" : "0.2.0",
+    "name" : "GoalFollowUpMeasure",
+    "alt-urls" : [
+      "urn:uuid:bc80e4cf-d267-47bf-ad0d-4d37f8ae2328",
+      "urn:uuid:5c16a2fb-1882-49aa-802b-a0b73ed17c05"
+    ]
+  },
+  {
+    "id" : "GoalIdentificationMeasure",
+    "type" : "Measure",
+    "url" : "http://hl7.org/fhir/us/pco/Measure/GoalIdentificationMeasure",
+    "version" : "0.2.0",
+    "name" : "GoalIdentificationMeasure",
+    "alt-urls" : [
+      "urn:uuid:bc80e4cf-d267-47bf-ad0d-4d37f8ae2328",
+      "urn:uuid:5c16a2fb-1882-49aa-802b-a0b73ed17c05"
+    ]
+  },
+  {
+    "id" : "pco-care-plan",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
+    "version" : "0.2.0",
+    "name" : "PCOCarePlan"
+  },
+  {
+    "id" : "pco-gas-goal-profile",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile",
+    "version" : "0.2.0",
+    "name" : "PCOGoalAttainmentScaleProfile"
+  },
+  {
+    "id" : "pco-gas-score-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation",
+    "version" : "0.2.0",
+    "name" : "PCOGoalAttainmentScoreObservation"
+  },
+  {
+    "id" : "pco-goal-attainment-scaling",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling",
+    "version" : "0.2.0",
+    "name" : "PCOGoalAttainmentScaling"
+  },
+  {
+    "id" : "pco-goal-profile",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile",
+    "version" : "0.2.0",
+    "name" : "PCOGoalProfile"
+  },
+  {
+    "id" : "pco-progress-score-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-progress-score-observation",
+    "version" : "0.2.0",
+    "name" : "PCOProgressScoreObservation"
+  },
+  {
+    "id" : "pco-prom-goal-profile",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile",
+    "version" : "0.2.0",
+    "name" : "PCOGoalOutcomeMeasureProfile"
+  },
+  {
+    "id" : "pco-prom-score",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score",
+    "version" : "0.2.0",
+    "name" : "PCOPatientReportedOutcomeScore"
+  },
+  {
+    "id" : "pco-what-matters-assessment",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
+    "version" : "0.2.0",
+    "name" : "WhatMattersAssessment"
+  },
+  {
+    "id" : "gas-score-answers",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers",
+    "version" : "0.2.0",
+    "name" : "GASScoreAnswers"
+  },
+  {
+    "id" : "goal-attainment-scaling-score",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score",
+    "version" : "0.2.0",
+    "name" : "GoalAttainmentScalingScore"
+  },
+  {
+    "id" : "pco-category-valueset",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset",
+    "version" : "0.2.0",
+    "name" : "PCOCategoryValueSet"
+  },
+  {
+    "id" : "prom-target-measures",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures",
+    "version" : "0.2.0",
+    "name" : "PROMTargetMeasures"
+  },
+  {
+    "id" : "what-matters-focus-areas",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas",
+    "version" : "0.2.0",
+    "name" : "WhatMattersFocusAreas"
+  },
+  {
     "id" : "44249-1",
     "type" : "Questionnaire",
     "url" : "http://loinc.org/q/44249-1",
@@ -19,195 +209,5 @@
     "url" : "http://loinc.org/q/69737-5",
     "version" : "0.2.0",
     "name" : "Generalized_anxiety_disorder_item"
-  },
-  {
-    "id" : "ncqa-goal-domains",
-    "type" : "CodeSystem",
-    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains",
-    "version" : "0.2.0",
-    "name" : "NCQAGoalDomains"
-  },
-  {
-    "id" : "pco",
-    "type" : "CodeSystem",
-    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
-    "version" : "0.2.0",
-    "name" : "PCOCodes"
-  },
-  {
-    "id" : "va-whole-health",
-    "type" : "CodeSystem",
-    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
-    "version" : "0.2.0",
-    "name" : "VAWholeHealth"
-  },
-  {
-    "id" : "what-matters-rating",
-    "type" : "CodeSystem",
-    "url" : "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating",
-    "version" : "0.2.0",
-    "name" : "WhatMattersRating"
-  },
-  {
-    "id" : "mtnlotus.fhir.uv.pco",
-    "type" : "ImplementationGuide",
-    "url" : "http://mtnlotus.com/uv/pco/ImplementationGuide/mtnlotus.fhir.uv.pco",
-    "version" : "0.2.0",
-    "name" : "PCO"
-  },
-  {
-    "id" : "GoalAttainmentLogic",
-    "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/GoalAttainmentLogic",
-    "version" : "0.2.0",
-    "name" : "GoalAttainmentLogic"
-  },
-  {
-    "id" : "GoalFollowUpMeasure",
-    "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/GoalFollowUpMeasure",
-    "version" : "0.2.0",
-    "name" : "GoalFollowUpMeasure"
-  },
-  {
-    "id" : "GoalIdentificationMeasure",
-    "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/GoalIdentificationMeasure",
-    "version" : "0.2.0",
-    "name" : "GoalIdentificationMeasure"
-  },
-  {
-    "id" : "PCOCommon",
-    "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/PCOCommon",
-    "version" : "0.2.0",
-    "name" : "PCOCommon"
-  },
-  {
-    "id" : "WhatMattersLogic",
-    "type" : "Library",
-    "url" : "http://mtnlotus.com/uv/pco/Library/WhatMattersLogic",
-    "version" : "0.2.0",
-    "name" : "WhatMattersLogic"
-  },
-  {
-    "id" : "GoalFollowUpMeasure",
-    "type" : "Measure",
-    "url" : "http://mtnlotus.com/uv/pco/Measure/GoalFollowUpMeasure",
-    "version" : "0.2.0",
-    "name" : "GoalFollowUpMeasure",
-    "alt-urls" : [
-      "urn:uuid:bc80e4cf-d267-47bf-ad0d-4d37f8ae2328",
-      "urn:uuid:5c16a2fb-1882-49aa-802b-a0b73ed17c05"
-    ]
-  },
-  {
-    "id" : "GoalIdentificationMeasure",
-    "type" : "Measure",
-    "url" : "http://mtnlotus.com/uv/pco/Measure/GoalIdentificationMeasure",
-    "version" : "0.2.0",
-    "name" : "GoalIdentificationMeasure",
-    "alt-urls" : [
-      "urn:uuid:bc80e4cf-d267-47bf-ad0d-4d37f8ae2328",
-      "urn:uuid:5c16a2fb-1882-49aa-802b-a0b73ed17c05"
-    ]
-  },
-  {
-    "id" : "pco-care-plan",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan",
-    "version" : "0.2.0",
-    "name" : "PCOCarePlan"
-  },
-  {
-    "id" : "pco-gas-goal-profile",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-goal-profile",
-    "version" : "0.2.0",
-    "name" : "PCOGoalAttainmentScaleProfile"
-  },
-  {
-    "id" : "pco-gas-score-observation",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-gas-score-observation",
-    "version" : "0.2.0",
-    "name" : "PCOGoalAttainmentScoreObservation"
-  },
-  {
-    "id" : "pco-goal-attainment-scaling",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling",
-    "version" : "0.2.0",
-    "name" : "PCOGoalAttainmentScaling"
-  },
-  {
-    "id" : "pco-goal-profile",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-profile",
-    "version" : "0.2.0",
-    "name" : "PCOGoalProfile"
-  },
-  {
-    "id" : "pco-progress-score-observation",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-progress-score-observation",
-    "version" : "0.2.0",
-    "name" : "PCOProgressScoreObservation"
-  },
-  {
-    "id" : "pco-prom-goal-profile",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile",
-    "version" : "0.2.0",
-    "name" : "PCOGoalOutcomeMeasureProfile"
-  },
-  {
-    "id" : "pco-prom-score",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score",
-    "version" : "0.2.0",
-    "name" : "PCOPatientReportedOutcomeScore"
-  },
-  {
-    "id" : "pco-what-matters-assessment",
-    "type" : "StructureDefinition",
-    "url" : "http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment",
-    "version" : "0.2.0",
-    "name" : "WhatMattersAssessment"
-  },
-  {
-    "id" : "gas-score-answers",
-    "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers",
-    "version" : "0.2.0",
-    "name" : "GASScoreAnswers"
-  },
-  {
-    "id" : "goal-attainment-scaling-score",
-    "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score",
-    "version" : "0.2.0",
-    "name" : "GoalAttainmentScalingScore"
-  },
-  {
-    "id" : "pco-category-valueset",
-    "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset",
-    "version" : "0.2.0",
-    "name" : "PCOCategoryValueSet"
-  },
-  {
-    "id" : "prom-target-measures",
-    "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
-    "version" : "0.2.0",
-    "name" : "PROMTargetMeasures"
-  },
-  {
-    "id" : "what-matters-focus-areas",
-    "type" : "ValueSet",
-    "url" : "http://mtnlotus.com/uv/pco/ValueSet/what-matters-focus-areas",
-    "version" : "0.2.0",
-    "name" : "WhatMattersFocusAreas"
   }
 ]

@@ -21,8 +21,8 @@
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/cqf.css" rel="stylesheet"/>
-
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -42,16 +42,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"10.23"}
     h3,h4,h5,h6{--heading-prefix:"10.23"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
-<div id="family-nav">
-  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
-</div>
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
 
 
         <div id="ig-status">
@@ -61,7 +70,7 @@
 
 
 
-  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
 
 
             </span>
@@ -179,7 +188,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.org/fhir/us/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -234,7 +243,7 @@
         
           Draft
           
-            as of 2024-10-25
+            as of 2024-11-25
           
         
       </td>
@@ -257,21 +266,25 @@
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet prom-target-measures&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;prom-target-measures\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcprom-target-measures\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;prom-target-measures-en-US\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://loinc.org\&quot;&gt;&lt;code&gt;http://loinc.org&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/70274-6/\&quot;&gt;70274-6&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Generalized anxiety disorder 7 item (GAD-7) total score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/44261-6/\&quot;&gt;44261-6&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Patient health questionnaire 9 item (PHQ-9) total score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77854-8/\&quot;&gt;77854-8&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Ability to Participate in Social Roles and Activities - Short Form v2.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77848-0/\&quot;&gt;77848-0&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Alcohol Use - Short Form v1.0 - 7a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/89921-1/\&quot;&gt;89921-1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Anger - Short Form v1.1 -  (5a)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77862-1/\&quot;&gt;77862-1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Anxiety Short Form 7a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/81531-6/\&quot;&gt;81531-6&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Cognitive Function - Short Form v2.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71965-8/\&quot;&gt;71965-8&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Depression&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92149-4/\&quot;&gt;92149-4&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Dyspnea Severity - Short Form v1.0 - 10a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77864-7/\&quot;&gt;77864-7&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Fatigue - Short Form v1.0 - 7a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77851-4/\&quot;&gt;77851-4&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Informational Support - Short Form v2.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77850-6/\&quot;&gt;77850-6&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Instrumental Support- Short Form v2.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/91614-8/\&quot;&gt;91614-8&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Mobility Item Bank v2.1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77856-3/\&quot;&gt;77856-3&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Pain behavior – v1.0 - 7a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77865-4/\&quot;&gt;77865-4&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS - Pain Interference - Short Form v1.0 - 6a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/91721-1/\&quot;&gt;91721-1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Physical Function - Short Form v2.0 - 10a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77855-5/\&quot;&gt;77855-5&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Satisfaction with Participation in Social Roles - Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92391-2/\&quot;&gt;92391-2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Self-Efficacy for Managing Daily Activities - Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92329-2/\&quot;&gt;92329-2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Self-Efficacy for Managing Emotions - Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92418-3/\&quot;&gt;92418-3&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Self-Efficacy for Managing Medications and Treatments - Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92448-0/\&quot;&gt;92448-0&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Self-Efficacy for Managing Symptoms - Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77859-7/\&quot;&gt;77859-7&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Sleep-Related Impairment - Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92266-6/\&quot;&gt;92266-6&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Smoking: Negative Health Expectancies for All Smokers – Short Form v1.0 - 6a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92305-2/\&quot;&gt;92305-2&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Smoking: Nicotine Dependence for All Smokers – Short Form v1.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/77849-8/\&quot;&gt;77849-8&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS Social Isolation - Short Form v2.0 - 8a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/92213-8/\&quot;&gt;92213-8&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS_ Smoking: Coping Expectancies for All Smokers – Short Form v1.0 - 4a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/89676-1/\&quot;&gt;89676-1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS cancer fatigue - version 1.0 T-score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71969-0/\&quot;&gt;71969-0&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-10 Global Health, GMH, T score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71971-6/\&quot;&gt;71971-6&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-10 Global Health, GPH, T score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71955-9/\&quot;&gt;71955-9&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-29 Sleep Disturbance, T score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71957-5/\&quot;&gt;71957-5&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-29 Satisfaction with Participation in Social Roles, T score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71959-1/\&quot;&gt;71959-1&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-29 Physical Function, T score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71961-7/\&quot;&gt;71961-7&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-29 Pain Interference, T score&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;https://loinc.org/71963-3/\&quot;&gt;71963-3&lt;/a&gt;&lt;/td&gt;&lt;td&gt;PROMIS-29 Fatigue, T score&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
   },
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.2.0",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "PROMTargetMeasures",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "PROM Target Measures",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2024-10-25T20:06:08+00:00",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "Mountain Lotus WellBeing LLC",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2024-11-25T08:40:55+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "HL7 International / Patient Care",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Mountain Lotus WellBeing LLC",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 International / Patient Care",
       "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
         {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://mtnlotus.com"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.hl7.org/Special/committees/patientcare"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "patientcare@lists.HL7.org"
         }
       ]
     }
@@ -281,9 +294,8 @@
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
         {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "001",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "World"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "US"
         }
       ]
     }
@@ -457,15 +469,17 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 25, 2024 20:06+0000">2024-10-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 25, 2024 08:40+0000">2024-11-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
-                 | <a style="color: #81BEF7" target="_blank" href="http://mtnlotus.com/uv/pco/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/pco/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
                  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -476,7 +490,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -487,7 +501,6 @@
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

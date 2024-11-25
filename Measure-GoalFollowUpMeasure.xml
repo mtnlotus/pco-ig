@@ -136,14 +136,14 @@
         
             <tr>
                 <th scope="row"><b>Publisher: </b></th>
-                <td style="padding-left: 4px;">Mountain Lotus WellBeing LLC</td>
+                <td style="padding-left: 4px;">HL7 International / Patient Care</td>
             </tr>
         
 
         
         <tr>
             <th scope="row"><b>Author: </b></th>
-            <td style="padding-left: 4px;">Mountain Lotus WellBeing LLC</td>
+            <td style="padding-left: 4px;">HL7 International / Patient Care</td>
         </tr>
         
 
@@ -166,7 +166,7 @@
         
             <tr>
                 <th scope="row"><b>Jurisdiction: </b></th>
-                <td style="padding-left: 4px;">001</td>
+                <td style="padding-left: 4px;">US</td>
             </tr>
         
 
@@ -355,11 +355,11 @@
                     <th scope="row"><b>Terminology and Other Dependencies: </b></th>
                     <td style="padding-left: 4px;">
                         
-                            <li><code>http://mtnlotus.com/uv/pco/Library/GoalAttainmentLogic|0.1.0</code></li>
+                            <li><code>http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic|0.1.0</code></li>
                         
-                            <li><code>http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000</code></li>
+                            <li><code>http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000</code></li>
                         
-                            <li><code>http://mtnlotus.com/uv/pco/Library/PCOCommon|0.1.0</code></li>
+                            <li><code>http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0</code></li>
                         
                             <li><a href="http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
                         
@@ -549,7 +549,7 @@
                                     <tr>
                                         <td>Goal attainment scale</td>
                                         <td>68489</td>
-                                        <td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html">http://loinc.org</a></td>
+                                        <td><a href="http://terminology.hl7.org/6.1.0/CodeSystem-v3-loinc.html">http://loinc.org</a></td>
                                     </tr>
                                 
                             </table>
@@ -1048,7 +1048,7 @@ define function ToConcept(concept FHIR.CodeableConcept):
                                     <pre class="highlight language-cql"><code class="language-cql">// where exists obs.performer.resolveRelatedPersons()
 
 define fluent function hasGAS(goal Goal):
-  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')
     or exists (goal.target target
       where target.measure = &quot;Goal attainment scale&quot;
     )
@@ -1546,7 +1546,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="hasGAS"/>
         </extension>
         <extension url="statement">
-          <valueString value="// where exists obs.performer.resolveRelatedPersons()&#xA;&#xA;define fluent function hasGAS(goal Goal):&#xA;  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')&#xA;    or exists (goal.target target&#xA;      where target.measure = &quot;Goal attainment scale&quot;&#xA;    )&#xA;    or exists goal.gasScores()"/>
+          <valueString value="// where exists obs.performer.resolveRelatedPersons()&#xA;&#xA;define fluent function hasGAS(goal Goal):&#xA;  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')&#xA;    or exists (goal.target target&#xA;      where target.measure = &quot;Goal attainment scale&quot;&#xA;    )&#xA;    or exists goal.gasScores()"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="12"/>
@@ -1731,17 +1731,17 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       <relatedArtifact>
         <type value="depends-on"/>
         <display value="Library PCOLogic"/>
-        <resource value="http://mtnlotus.com/uv/pco/Library/GoalAttainmentLogic|0.1.0"/>
+        <resource value="http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic|0.1.0"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
         <display value="Library FHIRHelpers"/>
-        <resource value="http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000"/>
+        <resource value="http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
         <display value="Library PC"/>
-        <resource value="http://mtnlotus.com/uv/pco/Library/PCOCommon|0.1.0"/>
+        <resource value="http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
@@ -1751,17 +1751,17 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       <relatedArtifact>
         <type value="depends-on"/>
         <display value="Value set PCO Categories"/>
-        <resource value="http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
         <display value="Value set Goal Attainment Scaling (GAS) Score"/>
-        <resource value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
         <display value="Value set PROM Target Measures"/>
-        <resource value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"/>
       </relatedArtifact>
       <parameter>
         <name value="Measurement Period"/>
@@ -1830,7 +1830,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
         <mustSupport value="code"/>
         <codeFilter>
           <path value="code"/>
-          <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"/>
+          <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score"/>
         </codeFilter>
       </dataRequirement>
       <dataRequirement>
@@ -1839,7 +1839,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
         <mustSupport value="code"/>
         <codeFilter>
           <path value="code"/>
-          <valueSet value="http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"/>
+          <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"/>
         </codeFilter>
       </dataRequirement>
       <dataRequirement>
@@ -1859,7 +1859,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       <reference value="#effective-data-requirements"/>
     </valueReference>
   </extension>
-  <url value="http://mtnlotus.com/uv/pco/Measure/GoalFollowUpMeasure"/>
+  <url value="http://hl7.org/fhir/us/pco/Measure/GoalFollowUpMeasure"/>
   <identifier>
     <use value="usual"/>
     <type>
@@ -1912,21 +1912,24 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
   <title value="Person-Centered Goal Follow-Up"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-09-22T11:23:29+00:00"/>
-  <publisher value="Mountain Lotus WellBeing LLC"/>
+  <date value="2024-11-25T07:52:34+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
   <contact>
-    <name value="Mountain Lotus WellBeing LLC"/>
+    <name value="HL7 International / Patient Care"/>
     <telecom>
       <system value="url"/>
-      <value value="http://mtnlotus.com"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
     </telecom>
   </contact>
   <description value="Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified."/>
   <jurisdiction>
     <coding>
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="001"/>
-      <display value="World"/>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
     </coding>
   </jurisdiction>
   <purpose value="Goal Attainment Scaling (GAS) in healthcare measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient."/>
@@ -1937,13 +1940,13 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
     <end value="2024-12-31"/>
   </effectivePeriod>
   <author>
-    <name value="Mountain Lotus WellBeing LLC"/>
+    <name value="HL7 International / Patient Care"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.mtnlotus.com/"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
     </telecom>
   </author>
-  <library value="http://mtnlotus.com/uv/pco/Library/GoalFollowUpMeasure"/>
+  <library value="http://hl7.org/fhir/us/pco/Library/GoalFollowUpMeasure"/>
   <disclaimer value="These performance measures are not clinical guidelines and do not establish a standard of medical care, and have not been tested for all potential applications. The measures and specifications are provided without warranty."/>
   <scoring>
     <coding>

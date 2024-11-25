@@ -19,8 +19,8 @@
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/cqf.css" rel="stylesheet"/>
-
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -40,16 +40,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"9"}
     h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
-<div id="family-nav">
-  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
-</div>
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
 
 
         <div id="ig-status">
@@ -59,7 +68,7 @@
 
 
 
-  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
 
 
             </span>
@@ -184,7 +193,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://mtnlotus.com/uv/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Person-Centered Outcomes - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.org/fhir/us/pco/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>User Stories</h2>
   
 
@@ -212,9 +221,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="person-completes-assessment-of-what-matters-most">Person completes assessment of What Matters Most</h3>
 
-<p>Dorothy uses a dedicated mobile app that presents a list of several areas for health &amp; well-being where she can think about What Matters Most to her. She can assign two ratings to each area: 1) Where am I now? and 2) Where would I like to be?  Dorothy rates each question on a scale of 1 to 10, where 1 is “low” and 10 is “high”. She can then select one or two areas as her current focus for creating person-centered goals and action steps, and for tracking progress toward her desired outcomes. Dorothy also works with her health &amp; wellness coach and her primary care physician to create a care plan that helps mitigate barriers and achieve her goals.</p>
+<p>Dorothy uses a dedicated mobile app that presents a list of several areas for health &amp; well-being where she can think about What Matters Most to her. She can assign two ratings to each area: 1) Where am I now? and 2) Where would I like to be?  Dorothy rates each question on a scale of 1 to 10, where 1 is "low" and 10 is "high". She can then select one or two areas as her current focus for creating person-centered goals and action steps, and for tracking progress toward her desired outcomes. Dorothy also works with her health &amp; wellness coach and her primary care physician to create a care plan that helps mitigate barriers and achieve her goals.</p>
 
-<p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA’s approach, but can be adapted to other asseessments used by different organizations.</p>
+<p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA's approach, but can be adapted to other asseessments used by different organizations.</p>
 
 <p><strong>☛ See <a href="StructureDefinition-pco-what-matters-assessment.html#profile">Profile: What Matters Assessment</a></strong></p>
 
@@ -222,10 +231,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="person-works-with-health-coach-to-create-goals-and-action-steps">Person works with health coach to create goals and action steps</h3>
 
-<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy’s responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. The health coach role also may be performed by Dorothy’s primary care physician or others on her care team.</p>
+<p>Dorothy is working with her health &amp; wellness coach to identify priorities for what matters most to her and to create achievable goals and action steps. Her coach reviews Dorothy's responses to the What Matters Most assessment and guides her to define a goal for one of her focus areas to improve her physical health and social relationships by walking her dog. The health coach role also may be performed by Dorothy's primary care physician or others on her care team.</p>
 
 <h4 id="goals-using-goal-attainment-scaling-gas">Goals using Goal Attainment Scaling (GAS)</h4>
-<p>This goal includes five levels of achievement that can be used to evaluate Dorothy’s progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
+<p>This goal includes five levels of achievement that can be used to evaluate Dorothy's progress over time. The quantified attainment score observations record outcomes and support digital quality measures by her healthcare providers. This example illustrates use of goal attainment scaling for the goal of walking a dog. The definition of success for each point of the scale is defined beforehand and stored as interoperable extensions in a FHIR Goal resource.</p>
 
 <p>🎯 Goal: <em>Walk Dog Outside Once a Week</em></p>
 
@@ -262,12 +271,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>☛ See <a href="Goal-pcoGoalAnxietyExample.html#root">Example: PROM Goal for Anxiety</a></strong></p>
 
 <h3 id="person-or-member-of-care-team-records-goal-attainment-progress">Person or member of care team records goal attainment progress</h3>
-<p>Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy’s health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy’s goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.</p>
+<p>Dorothy uses a dedicated mobile app that helps her to set priorities, define goals and record goal attainment scores at monthly check-in intervals. Dorothy's health coach, Maria Gonzalez, uses a specialized person-centered care management platform that allows her to share care plan information with Dorothy. Maria used her application to enter goal attainment level details for Dorothy's goals during their shared decision-making session, and both Dorothy and Maria can use their applications to score goal attainment progress from their own perspectives.</p>
 
-<p>If the health coaching role is performed by Dorothy’s primary care physician or other member of that provider’s organization, they also can use a dedicated SMART on FHIR app launched from within their EHR system to record and view Dorothy’s priorities, goals, and progress on outcomes that matter most to her.</p>
+<p>If the health coaching role is performed by Dorothy's primary care physician or other member of that provider's organization, they also can use a dedicated SMART on FHIR app launched from within their EHR system to record and view Dorothy's priorities, goals, and progress on outcomes that matter most to her.</p>
 
 <h4 id="track-progress-using-using-goal-attainment-scaling-gas">Track progress using using Goal Attainment Scaling (GAS)</h4>
-<p>Dorothy’s mobile app prompts her once each month to record progress on attainment of her goals. For goals using Goal Attainment Scaling (GAS), the app displays a slider where Dorothy can rate herself using the five pre-defined goal attainment levels. Similarly, Dorothy’s health &amp; wellness coach or her primary care doctor can use their PCO apps to rate Dorothy’s progress from their perspectives.</p>
+<p>Dorothy's mobile app prompts her once each month to record progress on attainment of her goals. For goals using Goal Attainment Scaling (GAS), the app displays a slider where Dorothy can rate herself using the five pre-defined goal attainment levels. Similarly, Dorothy's health &amp; wellness coach or her primary care doctor can use their PCO apps to rate Dorothy's progress from their perspectives.</p>
 
 <p><strong>☛ See <a href="StructureDefinition-pco-gas-score-observation.html#profile">Profile: Goal Attainment Scaling (GAS) score by patient</a></strong></p>
 
@@ -276,7 +285,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>☛ See <a href="Observation-pcoGASScorePractitionerFollowupExample.html#root">Example: GAS score by a practitioner</a></strong></p>
 
 <h4 id="track-progress-using-using-proms">Track progress using using PROMs</h4>
-<p>Dorothy’s mobile app prompts her to complete the GAD-7 anxiety assessment once each month and shares that Observation with the rest of her care team, where they all can track progress on attainment of Dorothy’s PROM goal to achieve a GAD-7 score of less than 6.</p>
+<p>Dorothy's mobile app prompts her to complete the GAD-7 anxiety assessment once each month and shares that Observation with the rest of her care team, where they all can track progress on attainment of Dorothy's PROM goal to achieve a GAD-7 score of less than 6.</p>
 
 <p><strong>☛ See <a href="StructureDefinition-pco-prom-score.html#profile">Profile: PROM progress score</a></strong></p>
 
@@ -284,7 +293,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="person-or-member-of-care-team-shares-a-pco-data-bundle">Person or member of care team shares a PCO Data Bundle</h3>
 
-<p>If the applications used by Dorothy and her health coach are separate from her provider organization’s EHR system, either Dorothy or her health &amp; wellness coach can export and submit a complete bundle of standardized data to share with Dorothy’s extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
+<p>If the applications used by Dorothy and her health coach are separate from her provider organization's EHR system, either Dorothy or her health &amp; wellness coach can export and submit a complete bundle of standardized data to share with Dorothy's extended care team in whatever way that the EHR system is able to import those records, including a PDF summary to be added to a clinical note.</p>
 
 <p>This same bundle of person-centered goals, care plans and outcome scores can be submitted to an independent organization that uses these data to compute digital quality measures over a large population of individuals.</p>
 
@@ -307,15 +316,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://mtnlotus.com">Mountain Lotus WellBeing LLC</a>.  Package mtnlotus.fhir.uv.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 25, 2024 20:06+0000">2024-10-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 25, 2024 08:40+0000">2024-11-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
-                 | <a style="color: #81BEF7" target="_blank" href="http://mtnlotus.com/uv/pco/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/pco/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
                  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -326,7 +337,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -337,7 +348,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

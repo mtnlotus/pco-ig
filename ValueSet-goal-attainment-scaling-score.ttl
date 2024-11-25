@@ -5,34 +5,36 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score> a fhir:ValueSet ;
+<http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "goal-attainment-scaling-score"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet goal-attainment-scaling-score</b></p><a name=\"goal-attainment-scaling-score\"> </a><a name=\"hcgoal-attainment-scaling-score\"> </a><a name=\"goal-attainment-scaling-score-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/68489/\">68489</a></td><td>Goal attainment scale</td></tr><tr><td><a href=\"https://loinc.org/68490/\">68490</a></td><td>Practitioner follow-up goal attainment scaling score</td></tr><tr><td><a href=\"https://loinc.org/68491/\">68491</a></td><td>Patient follow-up goal attainment scaling score</td></tr><tr><td><a href=\"https://loinc.org/68492/\">68492</a></td><td>Caregiver follow-up goal attainment scaling score</td></tr></table></li></ul></div>"
   ] ; # 
-  fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "GoalAttainmentScalingScore"] ; # 
   fhir:title [ fhir:v "Goal Attainment Scaling (GAS) Score"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-10-25T20:06:08+00:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
+  fhir:date [ fhir:v "2024-11-25T08:40:55+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
-     fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://mtnlotus.com" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "patientcare@lists.HL7.org" ]
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
      ] )
   ] ) ; # 
   fhir:compose [

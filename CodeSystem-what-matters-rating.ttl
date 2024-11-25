@@ -5,34 +5,36 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating> a fhir:CodeSystem ;
+<http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "what-matters-rating"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem what-matters-rating</b></p><a name=\"what-matters-rating\"> </a><a name=\"hcwhat-matters-rating\"> </a><a name=\"what-matters-rating-en-US\"> </a><p>This case-sensitive code system <code>http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"what-matters-rating-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"what-matters-rating-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"what-matters-rating-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"what-matters-rating-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem what-matters-rating</b></p><a name=\"what-matters-rating\"> </a><a name=\"hcwhat-matters-rating\"> </a><a name=\"what-matters-rating-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"what-matters-rating-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"what-matters-rating-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"what-matters-rating-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"what-matters-rating-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
   ] ; # 
-  fhir:url [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/what-matters-rating"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "WhatMattersRating"] ; # 
   fhir:title [ fhir:v "What Matters Rating Concepts"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-10-25T20:06:08+00:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
+  fhir:date [ fhir:v "2024-11-25T08:40:55+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
-     fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://mtnlotus.com" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "patientcare@lists.HL7.org" ]
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Code system to identify \"What Matters\" rating concepts."] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
      ] )
   ] ) ; # 
   fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 

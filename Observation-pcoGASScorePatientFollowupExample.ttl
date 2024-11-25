@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/Observation/pcoGASScorePatientFollowupExample> a fhir:Observation ;
+<http://hl7.org/fhir/us/pco/Observation/pcoGASScorePatientFollowupExample> a fhir:Observation ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "pcoGASScorePatientFollowupExample"] ; # 
   fhir:text [
@@ -29,16 +29,16 @@
      ] )
   ] ; # 
   fhir:subject [
-     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ; # 
   fhir:focus ( [
-     fhir:link <http://mtnlotus.com/uv/pco/Goal/pcoGoalWalkDogExample> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> ;
      fhir:reference [ fhir:v "Goal/pcoGoalWalkDogExample" ]
   ] ) ; # 
   fhir:effective [ fhir:v "2024-05-10T10:15:00Z"^^xsd:dateTime] ; # 
   fhir:performer ( [
-     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ) ; # 
   fhir:value [
@@ -50,6 +50,10 @@
        fhir:display [ fhir:v "Better than expected" ]
      ] )
   ] . # 
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> a fhir:us .
 
 # -------------------------------------------------------------------------------------
 

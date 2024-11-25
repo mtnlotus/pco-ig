@@ -3,37 +3,40 @@
   "id" : "pco",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco</b></p><a name=\"pco\"> </a><a name=\"hcpco\"> </a><a name=\"pco-en-US\"> </a><p>This case-sensitive code system <code>http://mtnlotus.com/uv/pco/CodeSystem/pco</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered<a name=\"pco-person-centered\"> </a></td><td>Person-Centered</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-bundle<a name=\"pco-pco-data-submission-bundle\"> </a></td><td>PCO Bundle</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-standing-order<a name=\"pco-pco-data-submission-standing-order\"> </a></td><td>PCO Submission Standing Order</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco</b></p><a name=\"pco\"> </a><a name=\"hcpco\"> </a><a name=\"pco-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered-goal<a name=\"pco-person-centered-goal\"> </a></td><td>Person-Centered Goal</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-bundle<a name=\"pco-pco-data-submission-bundle\"> </a></td><td>PCO Bundle</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-standing-order<a name=\"pco-pco-data-submission-standing-order\"> </a></td><td>PCO Submission Standing Order</td></tr></table></div>"
   },
-  "url" : "http://mtnlotus.com/uv/pco/CodeSystem/pco",
+  "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco",
   "version" : "0.2.0",
   "name" : "PCOCodes",
   "title" : "Codes for PCO",
   "status" : "active",
   "experimental" : false,
-  "date" : "2024-10-25T20:06:08+00:00",
-  "publisher" : "Mountain Lotus WellBeing LLC",
+  "date" : "2024-11-25T08:40:55+00:00",
+  "publisher" : "HL7 International / Patient Care",
   "contact" : [{
-    "name" : "Mountain Lotus WellBeing LLC",
+    "name" : "HL7 International / Patient Care",
     "telecom" : [{
       "system" : "url",
-      "value" : "http://mtnlotus.com"
+      "value" : "http://www.hl7.org/Special/committees/patientcare"
+    },
+    {
+      "system" : "email",
+      "value" : "patientcare@lists.HL7.org"
     }]
   }],
   "description" : "Codes to identify content associated with this IG",
   "jurisdiction" : [{
     "coding" : [{
-      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-      "code" : "001",
-      "display" : "World"
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
     }]
   }],
   "caseSensitive" : true,
   "content" : "complete",
   "count" : 3,
   "concept" : [{
-    "code" : "person-centered",
-    "display" : "Person-Centered"
+    "code" : "person-centered-goal",
+    "display" : "Person-Centered Goal"
   },
   {
     "code" : "pco-data-submission-bundle",

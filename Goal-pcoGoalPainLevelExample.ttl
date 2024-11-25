@@ -5,12 +5,12 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/Goal/pcoGoalPainLevelExample> a fhir:Goal ;
+<http://hl7.org/fhir/us/pco/Goal/pcoGoalPainLevelExample> a fhir:Goal ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "pcoGoalPainLevelExample"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pcoGoalPainLevelExample</b></p><a name=\"pcoGoalPainLevelExample\"> </a><a name=\"hcpcoGoalPainLevelExample\"> </a><a name=\"pcoGoalPainLevelExample-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains physical-function}\">Physical Function</span></p><p><b>description</b>: <span title=\"Codes:\">Maintain pain level below 5 while walking</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>start</b>: 2024-02-15</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-06-30</td></tr></table><p><b>expressedBy</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pcoGoalPainLevelExample</b></p><a name=\"pcoGoalPainLevelExample\"> </a><a name=\"hcpcoGoalPainLevelExample\"> </a><a name=\"pcoGoalPainLevelExample-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains physical-function}\">Physical Function</span></p><p><b>description</b>: <span title=\"Codes:\">Maintain pain level below 5 while walking</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>start</b>: 2024-02-15</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-06-30</td></tr></table><p><b>expressedBy</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p></div>"
   ] ; # 
   fhir:lifecycleStatus [ fhir:v "active"] ; # 
   fhir:achievementStatus [
@@ -21,7 +21,7 @@
   ] ; # 
   fhir:category ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "physical-function" ] ;
        fhir:display [ fhir:v "Physical Function" ]
      ] )
@@ -30,7 +30,7 @@
      fhir:text [ fhir:v "Maintain pain level below 5 while walking" ]
   ] ; # 
   fhir:subject [
-     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ; # 
   fhir:start [ fhir:v "2024-02-15"^^xsd:date] ; # 
@@ -38,9 +38,11 @@
      fhir:due [ fhir:v "2024-06-30"^^xsd:date ]
   ] ) ; # 
   fhir:expressedBy [
-     fhir:link <http://mtnlotus.com/uv/pco/Patient/pcoPatientJones> ;
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] . # 
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
 
 # -------------------------------------------------------------------------------------
 

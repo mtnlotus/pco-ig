@@ -95,24 +95,7 @@
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-screening-assessment-observation-category.html" : "US Core Screening Assessment Observation Category"
     },
     {
-      "url" : "http://loinc.org",
-      "version" : "3.1.0",
-      "status" : "active",
-      "name" : "LOINC",
-      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
-      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
-      "oids" : ["2.16.840.1.113883.6.1"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
-      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-survey-codes.html" : "US Core Survey Codes"
-    },
-    {
-      "url" : "http://mtnlotus.com/uv/pco/CodeSystem/ncqa-goal-domains",
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains",
       "version" : "0.2.0",
       "status" : "active",
       "name" : "NCQAGoalDomains",
@@ -123,7 +106,7 @@
       "ValueSet-pco-category-valueset.html" : "PCO Categories"
     },
     {
-      "url" : "http://mtnlotus.com/uv/pco/CodeSystem/va-whole-health",
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
       "version" : "0.2.0",
       "status" : "active",
       "name" : "VAWholeHealth",
@@ -131,8 +114,25 @@
       "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",
       "uses" : {
       },
-      "ValueSet-pco-category-valueset.html" : "PCO Categories",
-      "ValueSet-what-matters-focus-areas.html" : "What Matters Focus Areas"
+      "ValueSet-what-matters-focus-areas.html" : "What Matters Focus Areas",
+      "ValueSet-pco-category-valueset.html" : "PCO Categories"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
+      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
+      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-survey-codes.html" : "US Core Survey Codes",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -144,14 +144,14 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
       "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
       "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
       "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes"
     },
     {

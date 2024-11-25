@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://mtnlotus.com/uv/pco/Questionnaire/44249-1> a fhir:Questionnaire ;
+<http://hl7.org/fhir/us/pco/Questionnaire/44249-1> a fhir:Questionnaire ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "44249-1"] ; # 
   fhir:meta [
@@ -24,20 +24,22 @@
   fhir:title [ fhir:v "PHQ-9 quick depression assessment panel"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:subjectType ( [ fhir:v "Patient"] ) ; # 
-  fhir:date [ fhir:v "2024-10-25T20:06:08+00:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "Mountain Lotus WellBeing LLC"] ; # 
+  fhir:date [ fhir:v "2024-11-25T08:40:55+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
-     fhir:name [ fhir:v "Mountain Lotus WellBeing LLC" ] ;
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://mtnlotus.com" ]
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "patientcare@lists.HL7.org" ]
      ] )
   ] ) ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "001" ] ;
-       fhir:display [ fhir:v "World" ]
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
      ] )
   ] ) ; # 
   fhir:copyright [ fhir:v "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at https://loinc.org/license/\r\nCopyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."] ; # 

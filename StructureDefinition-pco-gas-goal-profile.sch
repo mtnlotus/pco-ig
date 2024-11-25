@@ -12,7 +12,7 @@
   <sch:pattern>
     <sch:title>f:Goal</sch:title>
     <sch:rule context="f:Goal">
-      <sch:assert test="count(f:extension[@url = 'http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling']) &lt;= 5">extension with URL = 'http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling': maximum cardinality of 'extension' is 5</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling']) &lt;= 5">extension with URL = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling': maximum cardinality of 'extension' is 5</sch:assert>
       <sch:assert test="count(f:target) &lt;= 1">target: maximum cardinality of 'target' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

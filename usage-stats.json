@@ -1,11 +1,11 @@
 {
-  "package": "mtnlotus.fhir.uv.pco",
+  "package": "hl7.fhir.us.pco",
   "version": "0.2.0",
   "fhirVersion": "4.0.1",
-  "jurisdiction": "001",
+  "jurisdiction": "US",
   "extensions": [
     {
-      "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling",
+      "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling",
       "title": "Goal Attainment Scaling",
       "types": [
         "Coding",
@@ -66,23 +66,23 @@
   "profiles": {
     "CarePlan": [
       {
-        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-care-plan",
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
         "title": "Person-Centered Care Plan"
       }
     ],
     "Goal": [
       {
-        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-goal-profile",
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile",
         "title": "Person-Centered PROM Goal"
       }
     ],
     "Observation": [
       {
-        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-prom-score",
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score",
         "title": "Patient-Reported Outcome Measure (PROM) score"
       },
       {
-        "url": "http://mtnlotus.com/uv/pco/StructureDefinition/pco-what-matters-assessment",
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
         "title": "What Matters Assessment"
       }
     ]
@@ -164,7 +164,7 @@
     "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-type": [
       "Measure.group"
     ],
-    "http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling": [
+    "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling": [
       "Goal"
     ]
   }
