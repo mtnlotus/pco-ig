@@ -204,7 +204,7 @@
         "valueString": "hasGAS"
       }, {
         "url": "statement",
-        "valueString": "// where exists obs.performer.resolveRelatedPersons()\n\ndefine fluent function hasGAS(goal Goal):\n  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')\n    or exists (goal.target target\n      where target.measure = \"Goal attainment scale\"\n    )\n    or exists goal.gasScores()"
+        "valueString": "// where exists obs.performer.resolveRelatedPersons()\n\ndefine fluent function hasGAS(goal Goal):\n  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')\n    or exists (goal.target target\n      where target.measure = \"Goal attainment scale\"\n    )\n    or exists goal.gasScores()"
       }, {
         "url": "displaySequence",
         "valueInteger": 12
@@ -401,15 +401,15 @@
     "relatedArtifact": [ {
       "type": "depends-on",
       "display": "Library PCOLogic",
-      "resource": "http://mtnlotus.com/uv/pco/Library/GoalAttainmentLogic|0.1.0"
+      "resource": "http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic|0.1.0"
     }, {
       "type": "depends-on",
       "display": "Library FHIRHelpers",
-      "resource": "http://mtnlotus.com/uv/pco/Library/FHIRHelpers|4.4.000"
+      "resource": "http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000"
     }, {
       "type": "depends-on",
       "display": "Library PC",
-      "resource": "http://mtnlotus.com/uv/pco/Library/PCOCommon|0.1.0"
+      "resource": "http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0"
     }, {
       "type": "depends-on",
       "display": "Code system LOINC",
@@ -417,15 +417,15 @@
     }, {
       "type": "depends-on",
       "display": "Value set PCO Categories",
-      "resource": "http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset"
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset"
     }, {
       "type": "depends-on",
       "display": "Value set Goal Attainment Scaling (GAS) Score",
-      "resource": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score"
     }, {
       "type": "depends-on",
       "display": "Value set PROM Target Measures",
-      "resource": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"
     } ],
     "parameter": [ {
       "name": "Measurement Period",
@@ -483,7 +483,7 @@
       "mustSupport": [ "code" ],
       "codeFilter": [ {
         "path": "code",
-        "valueSet": "http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score"
+        "valueSet": "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score"
       } ]
     }, {
       "type": "Observation",
@@ -491,7 +491,7 @@
       "mustSupport": [ "code" ],
       "codeFilter": [ {
         "path": "code",
-        "valueSet": "http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures"
+        "valueSet": "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"
       } ]
     }, {
       "type": "CarePlan",
@@ -511,7 +511,7 @@
       "reference": "#effective-data-requirements"
     }
   } ],
-  "url": "http://mtnlotus.com/uv/pco/Measure/GoalFollowUpMeasure",
+  "url": "http://hl7.org/fhir/us/pco/Measure/GoalFollowUpMeasure",
   "identifier": [ {
     "use": "usual",
     "type": {
@@ -561,12 +561,12 @@
   "title": "Person-Centered Goal Follow-Up",
   "status": "active",
   "experimental": false,
-  "date": "2024-09-22T11:23:29+00:00",
-  "publisher": "Mountain Lotus WellBeing LLC",
+  "date": "2024-11-25T07:52:34+00:00",
+  "publisher": "HL7 International / Patient Care",
   "contact": [ {
     "telecom": [ {
       "system": "url",
-      "value": "https://www.mtnlotus.com/"
+      "value": "http://www.hl7.org/Special/committees/patientcare"
     } ]
   } ],
   "description": "Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.",
@@ -578,13 +578,13 @@
     "end": "2024-12-31"
   },
   "author": [ {
-    "name": "Mountain Lotus WellBeing LLC",
+    "name": "HL7 International / Patient Care",
     "telecom": [ {
       "system": "url",
-      "value": "https://www.mtnlotus.com/"
+      "value": "http://www.hl7.org/Special/committees/patientcare"
     } ]
   } ],
-  "library": [ "http://mtnlotus.com/uv/pco/Library/GoalFollowUpMeasure" ],
+  "library": [ "http://hl7.org/fhir/us/pco/Library/GoalFollowUpMeasure" ],
   "disclaimer": "These performance measures are not clinical guidelines and do not establish a standard of medical care, and have not been tested for all potential applications. The measures and specifications are provided without warranty.",
   "scoring": {
     "coding": [ {

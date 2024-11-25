@@ -6,12 +6,12 @@ include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
 codesystem "LOINC": 'http://loinc.org'
-// codesystem "PCO GAS Codes": 'http://mtnlotus.com/uv/pco/CodeSystem/pco-gas-codes-temporary'
+// codesystem "PCO GAS Codes": 'http://hl7.org/fhir/us/pco/CodeSystem/pco-gas-codes-temporary'
 
-valueset "PCO Categories": 'http://mtnlotus.com/uv/pco/ValueSet/pco-category-valueset'
-valueset "Goal Attainment Scaling (GAS) Score": 'http://mtnlotus.com/uv/pco/ValueSet/goal-attainment-scaling-score'
-valueset "Follow-Up GAS Score Answers": 'http://mtnlotus.com/uv/pco/ValueSet/gas-score-answers'
-valueset "PROM Target Measures": 'http://mtnlotus.com/uv/pco/ValueSet/prom-target-measures'
+valueset "PCO Categories": 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset'
+valueset "Goal Attainment Scaling (GAS) Score": 'http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score'
+valueset "Follow-Up GAS Score Answers": 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers'
+valueset "PROM Target Measures": 'http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures'
 
 code "Goal attainment scale": '68489' from "LOINC" display 'Goal attainment scale'
 code "Practitioner follow-up goal attainment scaling score": '68490' from "LOINC" display 'Practitioner follow-up goal attainment scaling score'
@@ -108,7 +108,7 @@ define "GAS Caregiver Scores":
     // where exists obs.performer.resolveRelatedPersons()
 
 define fluent function hasGAS(goal Goal):
-  exists goal.extensions('http://mtnlotus.com/uv/pco/StructureDefinition/pco-goal-attainment-scaling')
+  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')
     or exists (goal.target target
       where target.measure = "Goal attainment scale"
     )
