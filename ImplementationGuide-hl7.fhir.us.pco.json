@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-11-25T08:40:55+00:00",
+  "date" : "2024-12-09T23:33:01+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -732,7 +732,7 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/pco"
+        "reference" : "CodeSystem/pco-codes"
       },
       "name" : "Codes for PCO",
       "description" : "Codes to identify content associated with this IG",
@@ -841,6 +841,18 @@
       },
       "name" : "Goal Attainment Scaling",
       "description" : "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-gas-score-observation"
+      },
+      "name" : "Goal Attainment Scaling (GAS) score",
+      "description" : "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
       "exampleBoolean" : false
     },
     {
@@ -969,7 +981,7 @@
         "reference" : "StructureDefinition/pco-prom-score"
       },
       "name" : "Patient-Reported Outcome Measure (PROM) score",
-      "description" : "This observation records how a patient rated their own progress score using a PROM assessment.",
+      "description" : "This observation records how a patient's progress score is rated using a PROM assessment.",
       "exampleBoolean" : false
     },
     {
@@ -978,22 +990,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/pco-category-valueset"
+        "reference" : "ValueSet/pco-domain-category-valueset"
       },
-      "name" : "PCO Categories",
-      "description" : "Example value set to identify the category for PCO resources.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-gas-score-observation"
-      },
-      "name" : "PCO Goal Attainment Scaling (GAS) score",
-      "description" : "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
+      "name" : "PCO Domain Categories",
+      "description" : "Example value set to identify the domains category for PCO resources.",
       "exampleBoolean" : false
     },
     {
@@ -1017,6 +1017,18 @@
       },
       "name" : "Person-Centered Care Plan",
       "description" : "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-category-vs"
+      },
+      "name" : "Person-Centered Category Value Set",
+      "description" : "Used to categorize resources as being Person-Centered",
       "exampleBoolean" : false
     },
     {
@@ -1070,13 +1082,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-progress-score-observation"
+        "reference" : "ValueSet/pco-survey-category-vs"
       },
-      "name" : "Person-Centered Progress Score",
-      "description" : "A progress score observation for a person-centered goal.",
+      "name" : "Person-Centered Outcomes Survey Value Set",
+      "description" : "Used to indicate that all PCO observations of of type Survey",
       "exampleBoolean" : false
     },
     {
@@ -1165,6 +1177,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-what-matters-focus-area"
+      },
+      "name" : "What Matters Focus Area",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1184,6 +1208,18 @@
       },
       "name" : "What Matters Rating Concepts",
       "description" : "Code system to identify \"What Matters\" rating concepts.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-what-matters-statement"
+      },
+      "name" : "What Matters Statement",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area.",
       "exampleBoolean" : false
     },
     {

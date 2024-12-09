@@ -9,7 +9,18 @@
       "description" : "NCQA goal domain codes used to identify the category for PCO resources.",
       "uses" : {
       },
-      "ValueSet-pco-category-valueset.html" : "PCO Categories"
+      "ValueSet-pco-domain-category-valueset.html" : "PCO Domain Categories"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PCOCodes",
+      "title" : "Codes for PCO",
+      "description" : "Codes to identify content associated with this IG",
+      "uses" : {
+      },
+      "ValueSet-pco-category-vs.html" : "Person-Centered Category Value Set"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
@@ -20,8 +31,7 @@
       "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",
       "uses" : {
       },
-      "ValueSet-what-matters-focus-areas.html" : "What Matters Focus Areas",
-      "ValueSet-pco-category-valueset.html" : "PCO Categories"
+      "ValueSet-what-matters-focus-areas.html" : "What Matters Focus Areas"
     },
     {
       "url" : "http://loinc.org",
@@ -33,9 +43,21 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
       "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
-      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score"
+      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1125"],
+      "uses" : {
+      },
+      "ValueSet-pco-survey-category-vs.html" : "Person-Centered Outcomes Survey Value Set"
     }
   ]
 }

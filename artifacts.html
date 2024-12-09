@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7.css" rel="stylesheet"/>
     <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
@@ -331,7 +332,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="StructureDefinition-pco-gas-score-observation.html"
-                  title="StructureDefinition/pco-gas-score-observation">PCO Goal Attainment Scaling (GAS) score</a>
+                  title="StructureDefinition/pco-gas-score-observation">Goal Attainment Scaling (GAS) score</a>
             </td>
             <td>
 <p>The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.</p>
@@ -343,7 +344,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/pco-prom-score">Patient-Reported Outcome Measure (PROM) score</a>
             </td>
             <td>
-<p>This observation records how a patient rated their own progress score using a PROM assessment.</p>
+<p>This observation records how a patient's progress score is rated using a PROM assessment.</p>
 </td>
          </tr>
          <tr>
@@ -384,20 +385,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-progress-score-observation.html"
-                  title="StructureDefinition/pco-progress-score-observation">Person-Centered Progress Score</a>
-            </td>
-            <td>
-<p>A progress score observation for a person-centered goal.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-pco-what-matters-assessment.html"
                   title="StructureDefinition/pco-what-matters-assessment">What Matters Assessment</a>
             </td>
             <td>
 <p>Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-what-matters-focus-area.html"
+                  title="StructureDefinition/pco-what-matters-focus-area">What Matters Focus Area</a>
+            </td>
+            <td>
+<p>Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-what-matters-statement.html"
+                  title="StructureDefinition/pco-what-matters-statement">What Matters Statement</a>
+            </td>
+            <td>
+<p>Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area.</p>
 </td>
          </tr>
       </tbody>
@@ -445,11 +455,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-pco-category-valueset.html"
-                  title="ValueSet/pco-category-valueset">PCO Categories</a>
+               <a href="ValueSet-pco-domain-category-valueset.html"
+                  title="ValueSet/pco-domain-category-valueset">PCO Domain Categories</a>
             </td>
             <td>
-<p>Example value set to identify the category for PCO resources.</p>
+<p>Example value set to identify the domains category for PCO resources.</p>
 </td>
          </tr>
          <tr>
@@ -459,6 +469,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Target measure codes used to track progress on patient-reported outcome measures (PROMs).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pco-category-vs.html" title="ValueSet/pco-category-vs">Person-Centered Category Value Set</a>
+            </td>
+            <td>
+<p>Used to categorize resources as being Person-Centered</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pco-survey-category-vs.html"
+                  title="ValueSet/pco-survey-category-vs">Person-Centered Outcomes Survey Value Set</a>
+            </td>
+            <td>
+<p>Used to indicate that all PCO observations of of type Survey</p>
 </td>
          </tr>
          <tr>
@@ -480,7 +507,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-pco.html" title="CodeSystem/pco">Codes for PCO</a>
+               <a href="CodeSystem-pco-codes.html" title="CodeSystem/pco-codes">Codes for PCO</a>
             </td>
             <td>
 <p>Codes to identify content associated with this IG</p>
@@ -723,7 +750,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 25, 2024 08:40+0000">2024-11-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 9, 2024 23:33+0000">2024-12-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

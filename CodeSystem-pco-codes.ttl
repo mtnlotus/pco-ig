@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/pco/CodeSystem/pco-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pco-codes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco-codes</b></p><a name=\"pco-codes\"> </a><a name=\"hcpco-codes\"> </a><a name=\"pco-codes-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered<a name=\"pco-codes-person-centered\"> </a></td><td>Person-Centered</td></tr><tr><td style=\"white-space:nowrap\">person-centered-goal<a name=\"pco-codes-person-centered-goal\"> </a></td><td>Person-Centered Goal</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-bundle<a name=\"pco-codes-pco-data-submission-bundle\"> </a></td><td>PCO Bundle</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-standing-order<a name=\"pco-codes-pco-data-submission-standing-order\"> </a></td><td>PCO Submission Standing Order</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "PCOCodes"] ; # 
+  fhir:title [ fhir:v "Codes for PCO"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-12-09T23:33:01+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "patientcare@lists.HL7.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes to identify content associated with this IG"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "person-centered" ] ;
+     fhir:display [ fhir:v "Person-Centered" ]
+  ] [
+     fhir:code [ fhir:v "person-centered-goal" ] ;
+     fhir:display [ fhir:v "Person-Centered Goal" ]
+  ] [
+     fhir:code [ fhir:v "pco-data-submission-bundle" ] ;
+     fhir:display [ fhir:v "PCO Bundle" ]
+  ] [
+     fhir:code [ fhir:v "pco-data-submission-standing-order" ] ;
+     fhir:display [ fhir:v "PCO Submission Standing Order" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

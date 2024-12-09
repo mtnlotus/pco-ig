@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="009e2c89-5442-4038-84e5-a8e3366b4e09"/>
+  <id value="3c0d49b4-a46c-4e32-8c5d-293249cfed7e"/>
   <meta>
-    <lastUpdated value="2024-11-25T08:40:55.624+00:00"/>
+    <lastUpdated value="2024-12-09T23:33:01.647+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -63,7 +63,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-11-25T08:40:55+00:00"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71,8 +71,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:dc54e204-7a05-40bf-8e29-c4508f7558a4"/>
-          <timestamp value="2024-11-25T08:42:05+00:00"/>
+          <identifier value="urn:uuid:1fb829b7-6ee1-47b4-8330-72ad68cbb0a3"/>
+          <timestamp value="2024-12-09T23:34:18+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -151,7 +151,7 @@
         <title value="Goal Attainment Scaling (GAS) Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-11-25T08:40:55+00:00"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -159,8 +159,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4017e3c6-c461-44ae-a997-7e26fa97b362"/>
-          <timestamp value="2024-11-25T08:42:06+00:00"/>
+          <identifier value="urn:uuid:656237df-2c10-47fd-8945-c1cfc06bc098"/>
+          <timestamp value="2024-12-09T23:34:19+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -192,7 +192,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset"/>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
     <resource>
       <ValueSet>
         <text>
@@ -201,18 +201,90 @@
             <p class="res-header-id">
               <b>Generated Narrative: ValueSet </b>
             </p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on:</p>
-              <ul>
-                <li>
-                  <a href="CodeSystem-ncqa-goal-domains.html">codesystem NCQA Goal Domains v0.2.0 (CodeSystem)</a>
-                </li>
-                <li>
-                  <a href="CodeSystem-va-whole-health.html">codesystem VA Whole Health Concepts v0.2.0 (CodeSystem)</a>
-                </li>
-              </ul>
-            </div>
-            <p>This value set contains 21 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-pco-codes.html">codesystem Codes for PCO v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-codes-person-centered"> </a>  
+                  <a href="CodeSystem-pco-codes.html#pco-codes-person-centered">person-centered</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-codes</td>
+                <td>Person-Centered</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+        <version value="0.2.0"/>
+        <name value="PCOCategoryValueSet"/>
+        <title value="Person-Centered Category Value Set"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:d4f93aea-4faa-43d8-bb42-b1e41f564231"/>
+          <timestamp value="2024-12-09T23:34:19+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"/>
+            <code value="person-centered"/>
+            <display value="Person-Centered"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-ncqa-goal-domains.html">codesystem NCQA Goal Domains v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 12 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -387,142 +459,16 @@
                   <div/>
                 </td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-body"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-body">body</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Moving the Body</td>
-                <td>
-                  <div>
-                    <p>Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-mind"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-mind">mind</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Power of the Mind</td>
-                <td>
-                  <div>
-                    <p>Our thoughts are powerful and can affect our physical, mental, and emotional health. Changing our mindset can aid in healing and coping. Breathing techniques, guided imagery, Tai Chi, yoga, or gratitude can buffer the impact of stress and other emotions.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-nourishment"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-nourishment">nourishment</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Food &amp; Drink</td>
-                <td>
-                  <div>
-                    <p>What we eat and drink can have a huge effect on how we experience life, both physically and mentally. Energy, mood, weight, how long we live, and overall health are all impacted by what and how we choose to eat and drink.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-recharge"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-recharge">recharge</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Recharge</td>
-                <td>
-                  <div>
-                    <p>Our bodies and minds must rest and recharge in order to optimize our health. Getting a good night's rest, as well as recharging our mental and physical energy throughout the day, are vital to well-being. Taking short breaks or doing something you enjoy or feels good for moments throughout the day are examples of ways to refresh.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-surroundings"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-surroundings">surroundings</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Surroundings</td>
-                <td>
-                  <div>
-                    <p>Our surroundings, both at work and where we live, indoors and out, can affect our health and outlook on life. Changes within our control such as organizing, decluttering, adding a plant or artwork can improve mood and health.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-personal-development"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-personal-development">personal-development</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Personal Development</td>
-                <td>
-                  <div>
-                    <p>Our health is impacted by how we choose to spend our time. Aligning our work and personal activities with what really matters to us, or what brings us joy, can have a big effect on our health and outlook on life.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-spirit-and-soul"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-spirit-and-soul">spirit-and-soul</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Spirit &amp; Soul</td>
-                <td>
-                  <div>
-                    <p>Connecting with something greater than ourselves may provide a sense of meaning and purpose, peace, or comfort. Connecting and aligning spiritually is very individual and may take the form of religious affiliation, connection to nature, or engaging in things like music or art.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-relationships"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-relationships">relationships</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Family, Friends &amp; Co-Workers</td>
-                <td>
-                  <div>
-                    <p>Our relationships, including those with pets, have as significant an effect on our physical and emotional health as any other factor associated with well-being. Spending more time in relationships that &quot;fuel&quot; us and less in relationships that &quot;drain&quot; us is one potential option. Improving our relationship skills or creating new relationships through community activities are other options to consider.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-professional-care"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-professional-care">professional-care</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
-                <td>Professional Care</td>
-                <td>
-                  <div>
-                    <p>Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health.</p>
-
-                  </div>
-                </td>
-              </tr>
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset"/>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
         <version value="0.2.0"/>
-        <name value="PCOCategoryValueSet"/>
-        <title value="PCO Categories"/>
+        <name value="PCODomainCategoryValueSet"/>
+        <title value="PCO Domain Categories"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-11-25T08:40:55+00:00"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -530,9 +476,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9a114d3d-d917-4942-b241-4dc77506aebe"/>
-          <timestamp value="2024-11-25T08:42:06+00:00"/>
-          <total value="21"/>
+          <identifier value="urn:uuid:86c7e870-c5a2-41a0-af96-65d4b8475d14"/>
+          <timestamp value="2024-12-09T23:34:19+00:00"/>
+          <total value="12"/>
           <offset value="0"/>
           <parameter>
             <name value="count"/>
@@ -549,10 +495,6 @@
           <parameter>
             <name value="used-codesystem"/>
             <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains|0.2.0"/>
-          </parameter>
-          <parameter>
-            <name value="used-codesystem"/>
-            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health|0.2.0"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains"/>
@@ -614,50 +556,94 @@
             <code value="emotional-and-mental-health"/>
             <display value="Emotional And Mental Health"/>
           </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://terminology.hl7.org/6.1.0/CodeSystem-observation-category.html">codesystem Observation Category Codes v1.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://terminology.hl7.org/CodeSystem/observation-category-survey"> </a>  
+                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-observation-category.html#observation-category-survey">survey</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Survey</td>
+                <td>
+                  <div>
+                    <p>Assessment tool/survey instrument observations (e.g., Apgar Scores, Montreal Cognitive Assessment (MoCA)).</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs"/>
+        <version value="0.2.0"/>
+        <name value="PCOSurveyCategoryVS"/>
+        <title value="Person-Centered Outcomes Survey Value Set"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:a0ede571-605f-4619-b1b2-5a48583abf52"/>
+          <timestamp value="2024-12-09T23:34:20+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/observation-category|1.0.1"/>
+          </parameter>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="body"/>
-            <display value="Moving the Body"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="mind"/>
-            <display value="Power of the Mind"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="nourishment"/>
-            <display value="Food &amp; Drink"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="recharge"/>
-            <display value="Recharge"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="surroundings"/>
-            <display value="Surroundings"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="personal-development"/>
-            <display value="Personal Development"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="spirit-and-soul"/>
-            <display value="Spirit &amp; Soul"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="relationships"/>
-            <display value="Family, Friends &amp; Co-Workers"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
-            <code value="professional-care"/>
-            <display value="Professional Care"/>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -968,7 +954,7 @@
         <title value="PROM Target Measures"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-11-25T08:40:55+00:00"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -976,8 +962,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6a8b7e04-71d2-4dab-b8e7-97e4e8ebecb0"/>
-          <timestamp value="2024-11-25T08:42:07+00:00"/>
+          <identifier value="urn:uuid:f2d3717c-d7e3-4c98-8f56-70458d6f2258"/>
+          <timestamp value="2024-12-09T23:34:20+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -1342,7 +1328,7 @@
         <title value="What Matters Focus Areas"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-11-25T08:40:55+00:00"/>
+        <date value="2024-12-09T23:33:01+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1350,8 +1336,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:3ba7f907-b33e-49d7-ae5a-bf92ad7d8ec2"/>
-          <timestamp value="2024-11-25T08:42:08+00:00"/>
+          <identifier value="urn:uuid:ada5c8e6-ed1c-4595-b876-cc3571ad0389"/>
+          <timestamp value="2024-12-09T23:34:21+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>

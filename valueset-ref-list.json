@@ -10,7 +10,7 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-gas-score-observation.html" : "PCO Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score",
       "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
     },
     {
@@ -23,23 +23,47 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-gas-score-observation.html" : "PCO Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs",
       "version" : "0.2.0",
       "status" : "draft",
       "name" : "PCOCategoryValueSet",
-      "title" : "PCO Categories",
-      "description" : "Example value set to identify the category for PCO resources.",
-      "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
-        "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains"
-      ],
+      "title" : "Person-Centered Category Value Set",
+      "description" : "Used to categorize resources as being Person-Centered",
+      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PCODomainCategoryValueSet",
+      "title" : "PCO Domain Categories",
+      "description" : "Example value set to identify the domains category for PCO resources.",
+      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PCOSurveyCategoryVS",
+      "title" : "Person-Centered Outcomes Survey Value Set",
+      "description" : "Used to indicate that all PCO observations of of type Survey",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-what-matters-focus-area.html" : "What Matters Focus Area",
+      "StructureDefinition-pco-prom-score.html" : "Patient-Reported Outcome Measure (PROM) score",
+      "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
+      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures",
@@ -51,8 +75,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-prom-score.html" : "Patient-Reported Outcome Measure (PROM) score",
-      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal"
+      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal",
+      "StructureDefinition-pco-prom-score.html" : "Patient-Reported Outcome Measure (PROM) score"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas",
@@ -64,7 +88,9 @@
       "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"],
       "uses" : {
       },
-      "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment"
+      "StructureDefinition-pco-what-matters-focus-area.html" : "What Matters Focus Area",
+      "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
+      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement"
     }
   ]
 }

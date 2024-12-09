@@ -19,16 +19,31 @@
       "systems" : ["http://loinc.org"]
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs",
       "version" : "0.2.0",
       "status" : "draft",
       "name" : "PCOCategoryValueSet",
-      "title" : "PCO Categories",
-      "description" : "Example value set to identify the category for PCO resources.",
-      "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
-        "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains"
-      ]
+      "title" : "Person-Centered Category Value Set",
+      "description" : "Used to categorize resources as being Person-Centered",
+      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PCODomainCategoryValueSet",
+      "title" : "PCO Domain Categories",
+      "description" : "Example value set to identify the domains category for PCO resources.",
+      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PCOSurveyCategoryVS",
+      "title" : "Person-Centered Outcomes Survey Value Set",
+      "description" : "Used to indicate that all PCO observations of of type Survey",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"]
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures",

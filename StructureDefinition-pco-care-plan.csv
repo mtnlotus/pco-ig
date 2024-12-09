@@ -84,9 +84,6 @@ This element is labeled as a modifier because the status contains the code enter
   </coding>
 </valueCodeableConcept>","","","",,"example","Identifies what ""kind"" of plan this is to support differentiation between multiple co-existing plans; e.g. ""Home health"", ""psychiatric"", ""asthma"", ""disease management"", etc.","http://hl7.org/fhir/ValueSet/care-plan-category","",,,,"CarePlan.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
-"CarePlan.category:pcoCategory","CarePlan.category","pcoCategory","","",0,*,"Y","","Y","CodeableConcept {[]} {[]}
-","Person-Centered Outcome category","Type of plan.","There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern.","Identifies what ""kind"" of plan this is to support differentiation between multiple co-existing plans; e.g. ""Home health"", ""psychiatric"", ""asthma"", ""disease management"", ""wellness plan"", etc.","","","","","","","",,"required","Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)","http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset","",,,,"CarePlan.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","FiveWs.class"
 "CarePlan.title","CarePlan.title","","","",0,1,"","","Y","string {[]} {[]}
 ","Human-friendly name for the care plan","Human-friendly name for the care plan.","","","","","","","","","",,,,,"",,,,"CarePlan.title",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -123,7 +120,11 @@ This element is labeled as a modifier because the status contains the code enter
 "CarePlan.supportingInfo","CarePlan.supportingInfo","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}
 ","Information considered as part of plan","Identifies portions of the patient's record that specifically influenced the formation of the plan.  These might include comorbidities, recent procedures, limitations, recent assessments, etc.","Use ""concern"" to identify specific conditions addressed by the care plan.","Identifies barriers and other considerations associated with the care plan.","","","","","","","",,,,,"",,,,"CarePlan.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.supportingInfo"
-"CarePlan.goal","CarePlan.goal","","","",1,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile]]}
+"CarePlan.goal","CarePlan.goal","","","",1,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Goal]]}
+","Desired outcome of plan","Describes the intended objective(s) of carrying out the care plan.","Goal can be achieving a particular change or merely maintaining a current state or even slowing a decline.","Provides context for plan.  Allows plan effectiveness to be evaluated by clinicians.","","","","","","","",,,,,"","profile:resolve()}
+","",,"open","CarePlan.goal",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".outboundRelationship[typeCode<=OBJ].","GOL.1"
+"CarePlan.goal:SupportedGoals","CarePlan.goal","SupportedGoals","","",1,*,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile]]}
 ","Person-centered goals supported by this plan","Describes the intended objective(s) of carrying out the care plan.","Goal can be achieving a particular change or merely maintaining a current state or even slowing a decline.","Provides context for plan.  Allows plan effectiveness to be evaluated by clinicians.","","","","","","","",,,,,"",,,,"CarePlan.goal",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode<=OBJ].","GOL.1"
 "CarePlan.activity","CarePlan.activity","","","",1,*,"","","","BackboneElement {[]} {[]}

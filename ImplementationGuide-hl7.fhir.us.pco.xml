@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-11-25T08:40:55+00:00"/>
+  <date value="2024-12-09T23:33:01+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -561,7 +561,7 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/pco"/>
+        <reference value="CodeSystem/pco-codes"/>
       </reference>
       <name value="Codes for PCO"/>
       <description value="Codes to identify content associated with this IG"/>
@@ -661,6 +661,17 @@
       </reference>
       <name value="Goal Attainment Scaling"/>
       <description value="Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-gas-score-observation"/>
+      </reference>
+      <name value="Goal Attainment Scaling (GAS) score"/>
+      <description value="The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -778,7 +789,7 @@
         <reference value="StructureDefinition/pco-prom-score"/>
       </reference>
       <name value="Patient-Reported Outcome Measure (PROM) score"/>
-      <description value="This observation records how a patient rated their own progress score using a PROM assessment."/>
+      <description value="This observation records how a patient's progress score is rated using a PROM assessment."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -786,21 +797,10 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/pco-category-valueset"/>
+        <reference value="ValueSet/pco-domain-category-valueset"/>
       </reference>
-      <name value="PCO Categories"/>
-      <description value="Example value set to identify the category for PCO resources."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-gas-score-observation"/>
-      </reference>
-      <name value="PCO Goal Attainment Scaling (GAS) score"/>
-      <description value="The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
+      <name value="PCO Domain Categories"/>
+      <description value="Example value set to identify the domains category for PCO resources."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -822,6 +822,17 @@
       </reference>
       <name value="Person-Centered Care Plan"/>
       <description value="A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-category-vs"/>
+      </reference>
+      <name value="Person-Centered Category Value Set"/>
+      <description value="Used to categorize resources as being Person-Centered"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -870,13 +881,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-progress-score-observation"/>
+        <reference value="ValueSet/pco-survey-category-vs"/>
       </reference>
-      <name value="Person-Centered Progress Score"/>
-      <description value="A progress score observation for a person-centered goal."/>
+      <name value="Person-Centered Outcomes Survey Value Set"/>
+      <description value="Used to indicate that all PCO observations of of type Survey"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -957,6 +968,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-what-matters-focus-area"/>
+      </reference>
+      <name value="What Matters Focus Area"/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -975,6 +997,17 @@
       </reference>
       <name value="What Matters Rating Concepts"/>
       <description value="Code system to identify &quot;What Matters&quot; rating concepts."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-what-matters-statement"/>
+      </reference>
+      <name value="What Matters Statement"/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
