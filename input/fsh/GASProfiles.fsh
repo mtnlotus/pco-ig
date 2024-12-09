@@ -26,13 +26,18 @@ Description: "Person-centered goal with goal attainment scaling."
   * measure = $LNC#68489 "Goal attainment scale"
 
 Profile: PCOGoalAttainmentScoreObservation
-Parent: PCOProgressScoreObservation
+Parent: USCoreSimpleObservationProfile
 Id: pco-gas-score-observation
-Title: "PCO Goal Attainment Scaling (GAS) score"
+Title: "Goal Attainment Scaling (GAS) score"
 Description: "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."
+* insert PCOSurveyCategory
+* effectiveDateTime 1..1 MS
+  * ^short = "When the score was assessed"
 * code from GoalAttainmentScalingScore (extensible)
   * ^short = "Code for Goal Attainment Scaling (GAS) score observation"
+* focus 0..1 MS
 * focus only Reference(PCOGoalAttainmentScaleProfile)
+  * ^short = "The goal whose progress was scored"
+* value[x] 1..1 MS
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
 * valueCodeableConcept from GASScoreAnswers (required)

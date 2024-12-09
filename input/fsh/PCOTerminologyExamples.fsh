@@ -34,10 +34,10 @@ Description: "NCQA goal domain codes used to identify the category for PCO resou
 * #emotional-and-mental-health "Emotional And Mental Health"
     ""
 
-ValueSet: PCOCategoryValueSet
-Id: pco-category-valueset
-Title: "PCO Categories"
-Description: "Example value set to identify the category for PCO resources."
+ValueSet: PCODomainCategoryValueSet
+Id: pco-domain-category-valueset
+Title: "PCO Domain Categories"
+Description: "Example value set to identify the domains category for PCO resources."
 * ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
 // * include codes from system NCQAGoalDomains
@@ -53,12 +53,3 @@ Description: "Example value set to identify the category for PCO resources."
 * NCQAGoalDomains#physical-function "Physical Function"
 * NCQAGoalDomains#social-functioning "Social Functioning"
 * NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
-* VAWholeHealth#body "Moving the Body"
-* VAWholeHealth#mind "Power of the Mind"
-* VAWholeHealth#nourishment "Food & Drink"
-* VAWholeHealth#recharge "Recharge"
-* VAWholeHealth#surroundings "Surroundings"
-* VAWholeHealth#personal-development "Personal Development"
-* VAWholeHealth#spirit-and-soul "Spirit & Soul"
-* VAWholeHealth#relationships "Family, Friends & Co-Workers"
-* VAWholeHealth#professional-care "Professional Care"

@@ -1,9 +1,34 @@
+Profile: WhatMattersFocusArea
+Parent: USCoreSimpleObservationProfile
+Id: pco-what-matters-focus-area
+Title: "What Matters Focus Area"
+Description: "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority."
+* insert PCOSurveyCategory
+// Must have preferred binding because parent profile has a preferred binding.
+* code from WhatMattersFocusAreas (preferred)
+  * ^short = "Focus area for What Matters assessment"
+* value[x] 1..1 MS
+* value[x] only boolean
+  * ^short = "Indicates if focus area is a current priority"
+
+Profile: WhatMattersStatement
+Parent: USCoreSimpleObservationProfile
+Id: pco-what-matters-statement
+Title: "What Matters Statement"
+Description: "Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area."
+* insert PCOSurveyCategory
+* code from WhatMattersFocusAreas (preferred)
+  * ^short = "Focus area for What Matters assessment"
+* value[x] 1..1 MS
+* value[x] only string
+  * ^short = "Description of what matters for this focus area"
 
 Profile: WhatMattersAssessment
-Parent: USCoreObservationScreeningAssessmentProfile
+Parent: USCoreSimpleObservationProfile
 Id: pco-what-matters-assessment
 Title: "What Matters Assessment"
 Description: "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."
+* insert PCOSurveyCategory
 * code from WhatMattersFocusAreas (preferred)
   * ^short = "Focus area for What Matters assessment"
 * component
@@ -19,28 +44,28 @@ Description: "Assessment observation for one aspect of What Matters Most to a pe
 * component[nowRating]
   * code = WhatMattersRating#now-rating
     * ^short = "Where are you now?"
-  * insert ValueInteger
+  * insert RatingValueInteger
 * component[nowReasons]
   * code = WhatMattersRating#now-reasons
     * ^short = "What are the reasons you chose this number?"
-  * insert ValueString
+  * insert RatingValueString
 * component[futureRating]
   * code = WhatMattersRating#future-rating
     * ^short = "Where would you like to be?"
-  * insert ValueInteger
+  * insert RatingValueInteger
 * component[futureChanges]
   * code = WhatMattersRating#future-changes
     * ^short = "What changes could you make to help you get there?"
-  * insert ValueString
+  * insert RatingValueString
 
-RuleSet: ValueInteger
+RuleSet: RatingValueInteger
+* value[x] 1..1 MS
 * value[x] only integer
-* valueInteger 1..1 MS
-  * ^short = "Rating on scale of 1 (low) to 10 (high)"
+  * ^short = "Rating on scale from low to high"
 
-RuleSet: ValueString
+RuleSet: RatingValueString
+* value[x] 1..1 MS
 * value[x] only string
-* valueString 1..1 MS
   * ^short = "Reasons for your rating"
 
 CodeSystem: WhatMattersRating

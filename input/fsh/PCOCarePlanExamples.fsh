@@ -10,8 +10,6 @@ Usage: #example
 * status = #active
 * intent = #plan
 * subject = Reference(pcoPatientJones)
-* category[pcoCategory][0] = NCQAGoalDomains#physical-function "Physical Function"
-* category[pcoCategory][1] = NCQAGoalDomains#independence "Independence"
 * goal = Reference(pcoGoalWalkDogExample)
 * activity[0].reference = Reference(pcoWalkOutsideActionStep)
 * activity[1].reference = Reference(pcoPhysicalTherapyReferral)
@@ -47,7 +45,7 @@ Usage: #example
 * intent = #plan
 * subject = Reference(pcoPatientJones)
 * requester = Reference(pcoPractitionerAnderson)
-* code.coding = $SNOMED#91251008 "Physical therapy procedure (regime/therapy)"
+* code.coding = $SCT#91251008 "Physical therapy procedure (regime/therapy)"
 * extension[pertainsToGoal].valueReference = Reference(pcoGoalWalkDogExample)
 * authoredOn = "2024-02-22"
 * occurrenceTiming.repeat.boundsPeriod.start = "2024-03-01"

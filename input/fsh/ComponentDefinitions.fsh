@@ -1,7 +1,5 @@
 
-Alias: $compliesWithProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile
-
-RuleSet: QuantityPercent
+RuleSet: ValueQuantityPercent
 * value[x] only Quantity
 * valueQuantity 1..1 MS
 * valueQuantity = '%' "%"

@@ -5,6 +5,7 @@ Title: "What Matters: Moving the Body"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
 * status = #final 
+* category[survey] = OBSCAT#survey "Survey"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:10:00Z"
@@ -18,6 +19,7 @@ InstanceOf: WhatMattersAssessment
 Title: "What Matters: Family & Friends"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
+* category[survey] = OBSCAT#survey "Survey"
 * status = #final 
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)

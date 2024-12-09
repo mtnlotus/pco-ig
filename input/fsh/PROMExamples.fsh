@@ -19,7 +19,8 @@ Description: "Person-centered goal with a PROM outcome target for GAD-7 score."
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[pcoCategory] = VAWholeHealth#mind "Power of the Mind"
+* category[pcoCategory] = PCOCodes#person-centered "Person-Centered"
+* category[domainCategory] = NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
 * subject = Reference(pcoPatientLopez)
 * expressedBy = Reference(pcoPractitionerAnderson)
 * startDate = "2024-08-11"
@@ -35,6 +36,7 @@ Title: "GAD-7 PROM Follow-up Score"
 Description: "Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress."
 Usage: #example
 * status = #final 
+* category[survey] = OBSCAT#survey "Survey"
 * subject = Reference(pcoPatientLopez)
 * performer = Reference(pcoPatientLopez)
 * effectiveDateTime = "2024-09-19T13:15:00Z"
@@ -50,8 +52,6 @@ Usage: #example
 * status = #active
 * intent = #plan
 * subject = Reference(pcoPatientLopez)
-* category[pcoCategory][0] = VAWholeHealth#mind "Power of the Mind"
-* category[pcoCategory][1] = NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
 * goal = Reference(pcoGoalAnxietyExample)
 * activity[0].reference = Reference(pcoMindfulnessSupportProgram)
 * period.start = "2024-08-11"
@@ -66,7 +66,7 @@ Usage: #example
 * intent = #plan
 * subject = Reference(pcoPatientLopez)
 * requester = Reference(pcoPractitionerAnderson)
-* code.coding = $SNOMED#1259023009 "Mindfulness Based Stress Reduction program (regime/therapy)"
+* code.coding = $SCT#1259023009 "Mindfulness Based Stress Reduction program (regime/therapy)"
 * extension[pertainsToGoal].valueReference = Reference(pcoGoalAnxietyExample)
 * authoredOn = "2024-08-11"
 * occurrenceTiming.repeat.boundsPeriod.start = "2024-08-11"
