@@ -2,10 +2,10 @@
  * Terminology used for example bindings in this specification.
 */
 
-CodeSystem: NCQAGoalDomains
-Id: ncqa-goal-domains
+CodeSystem: PCOGoalDomains
+Id: pco-goal-domains
 Title: "NCQA Goal Domains"
-Description: "NCQA goal domain codes used to identify the category for PCO resources."
+Description: "Goal domain codes used to identify the category for PCO resources."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
@@ -40,16 +40,16 @@ Title: "PCO Domain Categories"
 Description: "Example value set to identify the domains category for PCO resources."
 * ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-// * include codes from system NCQAGoalDomains
-* NCQAGoalDomains#housing "Housing"
-* NCQAGoalDomains#access-to-services "Access To Services"
-* NCQAGoalDomains#caregiver-needs "Caregiver Needs"
-* NCQAGoalDomains#end-of-life "End Of Life"
-* NCQAGoalDomains#independence "Independence"
-* NCQAGoalDomains#legal "Legal"
-* NCQAGoalDomains#managing-conditions "Managing Conditions"
-* NCQAGoalDomains#medication-management "Medication Management"
-* NCQAGoalDomains#improving-health-and-wellness "Improving Health And Wellness"
-* NCQAGoalDomains#physical-function "Physical Function"
-* NCQAGoalDomains#social-functioning "Social Functioning"
-* NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
+// * include codes from system PCOGoalDomains
+* PCOGoalDomains#housing "Housing"
+* PCOGoalDomains#access-to-services "Access To Services"
+* PCOGoalDomains#caregiver-needs "Caregiver Needs"
+* PCOGoalDomains#end-of-life "End Of Life"
+* PCOGoalDomains#independence "Independence"
+* PCOGoalDomains#legal "Legal"
+* PCOGoalDomains#managing-conditions "Managing Conditions"
+* PCOGoalDomains#medication-management "Medication Management"
+* PCOGoalDomains#improving-health-and-wellness "Improving Health And Wellness"
+* PCOGoalDomains#physical-function "Physical Function"
+* PCOGoalDomains#social-functioning "Social Functioning"
+* PCOGoalDomains#emotional-and-mental-health "Emotional And Mental Health"

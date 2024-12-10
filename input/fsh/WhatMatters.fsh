@@ -1,8 +1,8 @@
-Profile: WhatMattersFocusArea
+Profile: WhatMattersPriority
 Parent: USCoreSimpleObservationProfile
-Id: pco-what-matters-focus-area
-Title: "What Matters Focus Area"
-Description: "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority."
+Id: pco-what-matters-priority
+Title: "What Matters Priority Flag"
+Description: "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."
 * insert PCOSurveyCategory
 // Must have preferred binding because parent profile has a preferred binding.
 * code from WhatMattersFocusAreas (preferred)
@@ -111,7 +111,7 @@ Description: "Code system to identify \"What Matters\" concepts from the VA Whol
     "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health."
 
 /*
- * TODO: ConceptMap between VAWholeHealth amd NCQAGoalDomains.
+ * TODO: ConceptMap between VAWholeHealth amd PCOGoalDomains.
 */
 
 ValueSet: WhatMattersFocusAreas

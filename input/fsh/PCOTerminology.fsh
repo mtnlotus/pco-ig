@@ -11,15 +11,15 @@ Description: "Codes to identify content associated with this IG"
 * #pco-data-submission-standing-order "PCO Submission Standing Order"
 
 ValueSet: PCOCategoryValueSet
-Title: "Person-Centered Category Value Set"
+Title: "Person-Centered Goal Category Value Set"
 Id: pco-category-vs
-Description: "Used to categorize resources as being Person-Centered"
+Description: "Used to categorize resources as being a Person-Centered Goal"
 * ^experimental = false
-* PCOCodes#person-centered "Person-Centered"
+* PCOCodes#person-centered-goal "Person-Centered Goal"
 
 ValueSet: PCOSurveyCategoryVS
 Title: "Person-Centered Outcomes Survey Value Set"
 Id: pco-survey-category-vs
-Description: "Used to indicate that all PCO observations of of type Survey"
+Description: "Used to indicate that PCO observations of of type Survey, as defined by US-Core."
 * ^experimental = false
 * OBSCAT#survey "Survey"

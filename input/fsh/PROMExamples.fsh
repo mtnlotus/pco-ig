@@ -19,8 +19,8 @@ Description: "Person-centered goal with a PROM outcome target for GAD-7 score."
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[pcoCategory] = PCOCodes#person-centered "Person-Centered"
-* category[domainCategory] = NCQAGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
+* category[pcoCategory] = PCOCodes#person-centered-goal "Person-Centered Goal"
+* category[domainCategory] = PCOGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
 * subject = Reference(pcoPatientLopez)
 * expressedBy = Reference(pcoPractitionerAnderson)
 * startDate = "2024-08-11"

@@ -1,16 +1,16 @@
 
 RuleSet: PCOCategory
-* category
+* category MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * category contains
-    pcoCategory 1..1 MS
+    pcoCategory 0..1 MS
 * category[pcoCategory] from PCOCategoryValueSet (required)
-  * ^short = "Person-Centered category"
+  * ^short = "Person-Centered Goal category"
 
 RuleSet: PCODomainCategory
-* category
+* category MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
@@ -29,9 +29,11 @@ RuleSet: PCOSurveyCategory
 * category ^slicing.rules = #open
 * category ^requirements = "To identify that observation is derived from a questionnaire or other assessment instrument."
 * category contains
-	survey 1..1 MS
-* category[survey] from PCOSurveyCategoryVS 
+	  survey 1..1 MS
+* category[survey] from PCOSurveyCategoryVS (required)
 * category[survey] ^requirements = "Indicates the person-centered outcomes observation is of type survey"
+* category[survey]
+  * ^binding.description = "Include 'survey' category to facilitate searching for this Observation as a kind of Assessment"
 
 Profile: PCOGoalProfile
 Parent: USCoreGoalProfile
