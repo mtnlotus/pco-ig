@@ -15,7 +15,7 @@
   <name value="PCOGoalOutcomeMeasureProfile"/>
   <title value="Person-Centered PROM Goal"/>
   <status value="draft"/>
-  <date value="2024-12-09T23:33:01+00:00"/>
+  <date value="2024-12-10T23:26:43+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -522,7 +522,7 @@
       <short value="E.g. Treatment, dietary, behavioral, etc."/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="*"/>
       <base>
         <path value="Goal.category"/>
@@ -540,6 +540,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
@@ -558,10 +559,10 @@
     <element id="Goal.category:pcoCategory">
       <path value="Goal.category"/>
       <sliceName value="pcoCategory"/>
-      <short value="Person-Centered category"/>
+      <short value="Person-Centered Goal category"/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <base>
         <path value="Goal.category"/>

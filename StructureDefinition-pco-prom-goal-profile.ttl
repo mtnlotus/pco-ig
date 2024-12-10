@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCOGoalOutcomeMeasureProfile"] ; # 
   fhir:title [ fhir:v "Person-Centered PROM Goal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-09T23:33:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-10T23:26:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -570,7 +570,7 @@
        fhir:short [ fhir:v "E.g. Treatment, dietary, behavioral, etc." ] ;
        fhir:definition [ fhir:v "Indicates a category the goal falls within." ] ;
        fhir:requirements [ fhir:v "Allows goals to be filtered and sorted." ] ;
-       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
          fhir:path [ fhir:v "Goal.category" ] ;
@@ -591,6 +591,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
+       fhir:mustSupport [ fhir:v "true"^^xsd:boolean ] ;
        fhir:isModifier [ fhir:v "false"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:binding [
@@ -613,10 +614,10 @@
        fhir:id [ fhir:v "Goal.category:pcoCategory" ] ;
        fhir:path [ fhir:v "Goal.category" ] ;
        fhir:sliceName [ fhir:v "pcoCategory" ] ;
-       fhir:short [ fhir:v "Person-Centered category" ] ;
+       fhir:short [ fhir:v "Person-Centered Goal category" ] ;
        fhir:definition [ fhir:v "Indicates a category the goal falls within." ] ;
        fhir:requirements [ fhir:v "Allows goals to be filtered and sorted." ] ;
-       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
          fhir:path [ fhir:v "Goal.category" ] ;

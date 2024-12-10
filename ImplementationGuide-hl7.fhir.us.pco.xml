@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-09T23:33:01+00:00"/>
+  <date value="2024-12-10T23:26:43+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -764,10 +764,10 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/ncqa-goal-domains"/>
+        <reference value="CodeSystem/pco-goal-domains"/>
       </reference>
       <name value="NCQA Goal Domains"/>
-      <description value="NCQA goal domain codes used to identify the category for PCO resources."/>
+      <description value="Goal domain codes used to identify the category for PCO resources."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -826,17 +826,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/pco-category-vs"/>
-      </reference>
-      <name value="Person-Centered Category Value Set"/>
-      <description value="Used to categorize resources as being Person-Centered"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -855,6 +844,17 @@
       </reference>
       <name value="Person-Centered Goal"/>
       <description value="Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-category-vs"/>
+      </reference>
+      <name value="Person-Centered Goal Category Value Set"/>
+      <description value="Used to categorize resources as being a Person-Centered Goal"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -887,7 +887,7 @@
         <reference value="ValueSet/pco-survey-category-vs"/>
       </reference>
       <name value="Person-Centered Outcomes Survey Value Set"/>
-      <description value="Used to indicate that all PCO observations of of type Survey"/>
+      <description value="Used to indicate that PCO observations of of type Survey, as defined by US-Core."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -968,17 +968,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-what-matters-focus-area"/>
-      </reference>
-      <name value="What Matters Focus Area"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -986,6 +975,17 @@
       </reference>
       <name value="What Matters Focus Areas"/>
       <description value="Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-what-matters-priority"/>
+      </reference>
+      <name value="What Matters Priority Flag"/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

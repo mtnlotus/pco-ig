@@ -3,7 +3,7 @@
   "id" : "pcoGoalAnxietyExample",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pcoGoalAnxietyExample</b></p><a name=\"pcoGoalAnxietyExample\"> </a><a name=\"hcpcoGoalAnxietyExample\"> </a><a name=\"pcoGoalAnxietyExample-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-codes person-centered}\">Person-Centered</span>, <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains emotional-and-mental-health}\">Emotional And Mental Health</span></p><p><b>description</b>: <span title=\"Codes:\">Reduce to mild anxiety level score</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientLopez.html\">Camila Lopez  Female, DoB: 1959-07-16 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1ge3\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>start</b>: 2024-08-11</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 70274-6}\">Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]</span></td><td>&lt;6 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></td><td>2024-12-31</td></tr></table><p><b>expressedBy</b>: <a href=\"Practitioner-pcoPractitionerAnderson.html\">Practitioner John Anderson, MD</a></p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pcoGoalAnxietyExample</b></p><a name=\"pcoGoalAnxietyExample\"> </a><a name=\"hcpcoGoalAnxietyExample\"> </a><a name=\"pcoGoalAnxietyExample-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-codes person-centered-goal}\">Person-Centered Goal</span>, <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains emotional-and-mental-health}\">Emotional And Mental Health</span></p><p><b>description</b>: <span title=\"Codes:\">Reduce to mild anxiety level score</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientLopez.html\">Camila Lopez  Female, DoB: 1959-07-16 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1ge3\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>start</b>: 2024-08-11</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 70274-6}\">Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]</span></td><td>&lt;6 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></td><td>2024-12-31</td></tr></table><p><b>expressedBy</b>: <a href=\"Practitioner-pcoPractitionerAnderson.html\">Practitioner John Anderson, MD</a></p></div>"
   },
   "lifecycleStatus" : "active",
   "achievementStatus" : {
@@ -15,13 +15,13 @@
   "category" : [{
     "coding" : [{
       "system" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes",
-      "code" : "person-centered",
-      "display" : "Person-Centered"
+      "code" : "person-centered-goal",
+      "display" : "Person-Centered Goal"
     }]
   },
   {
     "coding" : [{
-      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains",
+      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
       "code" : "emotional-and-mental-health",
       "display" : "Emotional And Mental Health"
     }]

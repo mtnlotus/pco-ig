@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-09T23:33:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-10T23:26:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -890,11 +890,11 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains> ;
-         fhir:reference [ fhir:v "CodeSystem/ncqa-goal-domains" ]
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains> ;
+         fhir:reference [ fhir:v "CodeSystem/pco-goal-domains" ]
        ] ;
        fhir:name [ fhir:v "NCQA Goal Domains" ] ;
-       fhir:description [ fhir:v "NCQA goal domain codes used to identify the category for PCO resources." ] ;
+       fhir:description [ fhir:v "Goal domain codes used to identify the category for PCO resources." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -961,18 +961,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs> ;
-         fhir:reference [ fhir:v "ValueSet/pco-category-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Person-Centered Category Value Set" ] ;
-       fhir:description [ fhir:v "Used to categorize resources as being Person-Centered" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -993,6 +981,18 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs> ;
+         fhir:reference [ fhir:v "ValueSet/pco-category-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Person-Centered Goal Category Value Set" ] ;
+       fhir:description [ fhir:v "Used to categorize resources as being a Person-Centered Goal" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1028,7 +1028,7 @@
          fhir:reference [ fhir:v "ValueSet/pco-survey-category-vs" ]
        ] ;
        fhir:name [ fhir:v "Person-Centered Outcomes Survey Value Set" ] ;
-       fhir:description [ fhir:v "Used to indicate that all PCO observations of of type Survey" ] ;
+       fhir:description [ fhir:v "Used to indicate that PCO observations of of type Survey, as defined by US-Core." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1119,18 +1119,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-focus-area> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-focus-area" ]
-       ] ;
-       fhir:name [ fhir:v "What Matters Focus Area" ] ;
-       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -1139,6 +1127,18 @@
        ] ;
        fhir:name [ fhir:v "What Matters Focus Areas" ] ;
        fhir:description [ fhir:v "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-priority" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Priority Flag" ] ;
+       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1395,7 +1395,7 @@
 
 <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerGonzalez> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains> a fhir:us .
+<http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePatientFollowupExample> a fhir:us .
 
@@ -1407,11 +1407,11 @@
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Measure/GoalFollowUpMeasure> a fhir:us .
 
@@ -1433,9 +1433,9 @@
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-focus-area> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating> a fhir:us .
 

@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-12-09T23:33:01+00:00",
+  "date" : "2024-12-10T23:26:43+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -954,10 +954,10 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/ncqa-goal-domains"
+        "reference" : "CodeSystem/pco-goal-domains"
       },
       "name" : "NCQA Goal Domains",
-      "description" : "NCQA goal domain codes used to identify the category for PCO resources.",
+      "description" : "Goal domain codes used to identify the category for PCO resources.",
       "exampleBoolean" : false
     },
     {
@@ -1022,18 +1022,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pco-category-vs"
-      },
-      "name" : "Person-Centered Category Value Set",
-      "description" : "Used to categorize resources as being Person-Centered",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1053,6 +1041,18 @@
       },
       "name" : "Person-Centered Goal",
       "description" : "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-category-vs"
+      },
+      "name" : "Person-Centered Goal Category Value Set",
+      "description" : "Used to categorize resources as being a Person-Centered Goal",
       "exampleBoolean" : false
     },
     {
@@ -1088,7 +1088,7 @@
         "reference" : "ValueSet/pco-survey-category-vs"
       },
       "name" : "Person-Centered Outcomes Survey Value Set",
-      "description" : "Used to indicate that all PCO observations of of type Survey",
+      "description" : "Used to indicate that PCO observations of of type Survey, as defined by US-Core.",
       "exampleBoolean" : false
     },
     {
@@ -1177,18 +1177,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-focus-area"
-      },
-      "name" : "What Matters Focus Area",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating if this is a current priority.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1196,6 +1184,18 @@
       },
       "name" : "What Matters Focus Areas",
       "description" : "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-what-matters-priority"
+      },
+      "name" : "What Matters Priority Flag",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority.",
       "exampleBoolean" : false
     },
     {

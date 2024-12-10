@@ -10,7 +10,7 @@
   "name" : "PCOGoalAttainmentScaleProfile",
   "title" : "Person-Centered GAS Goal",
   "status" : "draft",
-  "date" : "2024-12-09T23:33:01+00:00",
+  "date" : "2024-12-10T23:26:43+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -575,7 +575,7 @@
       "short" : "E.g. Treatment, dietary, behavioral, etc.",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
-      "min" : 1,
+      "min" : 0,
       "max" : "*",
       "base" : {
         "path" : "Goal.category",
@@ -593,6 +593,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -613,10 +614,10 @@
       "id" : "Goal.category:pcoCategory",
       "path" : "Goal.category",
       "sliceName" : "pcoCategory",
-      "short" : "Person-Centered category",
+      "short" : "Person-Centered Goal category",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
-      "min" : 1,
+      "min" : 0,
       "max" : "1",
       "base" : {
         "path" : "Goal.category",

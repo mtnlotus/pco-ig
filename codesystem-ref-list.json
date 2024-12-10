@@ -1,17 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ncqa-goal-domains",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "NCQAGoalDomains",
-      "title" : "NCQA Goal Domains",
-      "description" : "NCQA goal domain codes used to identify the category for PCO resources.",
-      "uses" : {
-      },
-      "ValueSet-pco-domain-category-valueset.html" : "PCO Domain Categories"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes",
       "version" : "0.2.0",
       "status" : "active",
@@ -20,7 +9,18 @@
       "description" : "Codes to identify content associated with this IG",
       "uses" : {
       },
-      "ValueSet-pco-category-vs.html" : "Person-Centered Category Value Set"
+      "ValueSet-pco-category-vs.html" : "Person-Centered Goal Category Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PCOGoalDomains",
+      "title" : "NCQA Goal Domains",
+      "description" : "Goal domain codes used to identify the category for PCO resources.",
+      "uses" : {
+      },
+      "ValueSet-pco-domain-category-valueset.html" : "PCO Domain Categories"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
@@ -44,8 +44,8 @@
       "uses" : {
       },
       "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
-      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures"
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
+      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/observation-category",

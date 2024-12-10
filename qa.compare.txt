@@ -7,8 +7,8 @@ Generated $--. FHIR version $-- for hl7.fhir.us.pco#$-- (canonical = http://hl7.
  Build Errors : 3 / 13 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 1 / 0 / 3
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-ncqa-goal-domains : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-codes : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-goal-domains : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-va-whole-health : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-what-matters-rating : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalAnxietyExample : 2 / 1 / 1
@@ -37,7 +37,7 @@ Generated $--. FHIR version $-- for hl7.fhir.us.pco#$-- (canonical = http://hl7.
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-goal-profile : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-score : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-focus-area : 1 / 1 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-priority : 1 / 1 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-statement : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-gas-score-answers : 1 / 2 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-goal-attainment-scaling-score : 1 / 4 / 2
@@ -73,7 +73,7 @@ ERROR: /home/runner/work/pco-ig/pco-ig/output/feedback.html#/html/body/div/div/d
 ERROR: /home/runner/work/pco-ig/pco-ig/output/feedback.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 244, column 36: The link 'ValueSet-pco-category-valueset.html' for "PCO Category" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
-WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample.json ==
 INFORMATION: CarePlan/pcoAnxietyCarePlanExample: CarePlan.goal[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -83,12 +83,12 @@ INFORMATION: CarePlan/pcoAnxietyCarePlanExample: CarePlan.text.status: Reference
 INFORMATION: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan.goal[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan: Slice 'CarePlan.goal:SupportedGoals': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0). Note that other slices are allowed in addition to this required slice
 INFORMATION: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
-== fsh-generated/resources/CodeSystem-ncqa-goal-domains.json ==
-ERROR: CodeSystem/ncqa-goal-domains: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-INFORMATION: CodeSystem/ncqa-goal-domains: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-pco-codes.json ==
 ERROR: CodeSystem/pco-codes: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: CodeSystem/pco-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-pco-goal-domains.json ==
+ERROR: CodeSystem/pco-goal-domains: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: CodeSystem/pco-goal-domains: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/CodeSystem-va-whole-health.json ==
 ERROR: CodeSystem/va-whole-health: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: CodeSystem/va-whole-health: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
@@ -176,10 +176,10 @@ INFORMATION: StructureDefinition/pco-prom-score: StructureDefinition.snapshot.el
 == fsh-generated/resources/StructureDefinition-pco-what-matters-assessment.json ==
 ERROR: StructureDefinition/pco-what-matters-assessment: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: StructureDefinition/pco-what-matters-assessment: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-== fsh-generated/resources/StructureDefinition-pco-what-matters-focus-area.json ==
-ERROR: StructureDefinition/pco-what-matters-focus-area: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-INFORMATION: StructureDefinition/pco-what-matters-focus-area: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-focus-area'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-pco-what-matters-priority.json ==
+ERROR: StructureDefinition/pco-what-matters-priority: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: StructureDefinition/pco-what-matters-priority: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pco-what-matters-statement.json ==
 ERROR: StructureDefinition/pco-what-matters-statement: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: StructureDefinition/pco-what-matters-statement: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
