@@ -8,7 +8,7 @@ include PCOCommon version '0.1.0' called PC
 codesystem "LOINC": 'http://loinc.org'
 // codesystem "PCO GAS Codes": 'http://hl7.org/fhir/us/pco/CodeSystem/pco-gas-codes-temporary'
 
-valueset "PCO Categories": 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset'
+valueset "PCO Categories": 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset'
 valueset "Goal Attainment Scaling (GAS) Score": 'http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score'
 valueset "Follow-Up GAS Score Answers": 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers'
 valueset "PROM Target Measures": 'http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures'
