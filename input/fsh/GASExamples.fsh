@@ -26,6 +26,24 @@ Usage: #example
 * extension[gas-scaling][4].extension[level].valueCoding = $LNC#gas-much-less-than-expected "Much less than expected"
 * extension[gas-scaling][4].extension[text].valueString = "Unable to go outside with dog"
 
+Instance: pcoGoalWalkDogExampleWithoutExtensions
+InstanceOf: PCOGoalAttainmentScaleProfile
+Title: "Goal without GAS Extensions"
+Description: "Person-centered goal with GAS target measure and without GAS extensions"
+Usage: #example
+* lifecycleStatus = #active
+* achievementStatus = $GoalAchievement#in-progress
+* category[pcoCategory] = PCOCodes#person-centered-goal "Person-Centered Goal"
+* category[domainCategory] = PCOGoalDomains#physical-function "Physical Function"
+* subject = Reference(pcoPatientJones)
+* expressedBy = Reference(pcoPatientJones)
+* startDate = "2024-04-03"
+* target.dueDate = "2024-09-30"
+* addresses[0] = Reference(pcoWhatMattersBodyExample) "What Matters: Moving the Body"
+* addresses[1] = Reference(pcoWhatMattersRelationshipsExample) "What Matters: Family & Friends"
+* description.text = "Walk dog outside once a week"
+* target.measure = $LNC#68489 "Goal attainment scale"
+
 Instance: pcoGASScoretBaselineExample
 InstanceOf: PCOGoalAttainmentScoreObservation
 Title: "GAS Baseline Score"
