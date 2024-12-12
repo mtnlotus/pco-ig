@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-11T00:46:43+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-12T02:30:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -830,6 +830,21 @@
          fhir:value [ fhir:v "Goal" ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExampleWithoutExtensions> ;
+         fhir:reference [ fhir:v "Goal/pcoGoalWalkDogExampleWithoutExtensions" ]
+       ] ;
+       fhir:name [ fhir:v "Goal without GAS Extensions" ] ;
+       fhir:description [ fhir:v "Person-centered goal with GAS target measure and without GAS extensions" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Goal" ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalPainLevelExample> ;
          fhir:reference [ fhir:v "Goal/pcoGoalPainLevelExample" ]
        ] ;
@@ -1384,6 +1399,8 @@
 <http://hl7.org/fhir/us/pco/Goal/pcoGoalAnxietyExample> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExampleWithoutExtensions> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Goal/pcoGoalPainLevelExample> a fhir:us .
 

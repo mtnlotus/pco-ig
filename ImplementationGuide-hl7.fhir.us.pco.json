@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-12-11T00:46:43+00:00",
+  "date" : "2024-12-12T02:30:34+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -889,6 +889,18 @@
       },
       "name" : "Goal with GAS",
       "description" : "Person-centered goal with attainment scaling extensions",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      }],
+      "reference" : {
+        "reference" : "Goal/pcoGoalWalkDogExampleWithoutExtensions"
+      },
+      "name" : "Goal without GAS Extensions",
+      "description" : "Person-centered goal with GAS target measure and without GAS extensions",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"
     },
     {

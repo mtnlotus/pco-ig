@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-11T00:46:43+00:00"/>
+  <date value="2024-12-12T02:30:34+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -705,6 +705,17 @@
       </reference>
       <name value="Goal with GAS"/>
       <description value="Person-centered goal with attainment scaling extensions"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/pcoGoalWalkDogExampleWithoutExtensions"/>
+      </reference>
+      <name value="Goal without GAS Extensions"/>
+      <description value="Person-centered goal with GAS target measure and without GAS extensions"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"/>
     </resource>
     <resource>
