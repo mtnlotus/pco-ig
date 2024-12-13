@@ -10,7 +10,7 @@
   "name" : "PCOGoalOutcomeMeasureProfile",
   "title" : "Person-Centered PROM Goal",
   "status" : "draft",
-  "date" : "2024-12-12T02:30:34+00:00",
+  "date" : "2024-12-13T23:01:09+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -537,7 +537,7 @@
       "short" : "E.g. Treatment, dietary, behavioral, etc.",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
-      "min" : 0,
+      "min" : 1,
       "max" : "*",
       "base" : {
         "path" : "Goal.category",
@@ -573,13 +573,13 @@
       }]
     },
     {
-      "id" : "Goal.category:pcoCategory",
+      "id" : "Goal.category:pco-goal",
       "path" : "Goal.category",
-      "sliceName" : "pcoCategory",
+      "sliceName" : "pco-goal",
       "short" : "Person-Centered Goal category",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Goal.category",
@@ -589,6 +589,12 @@
       "type" : [{
         "code" : "CodeableConcept"
       }],
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes",
+          "code" : "person-centered-goal"
+        }]
+      },
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -601,8 +607,13 @@
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
-        "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "GoalCategory"
+        }],
+        "strength" : "example",
+        "description" : "Codes for grouping and sorting goals.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/goal-category"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -610,9 +621,9 @@
       }]
     },
     {
-      "id" : "Goal.category:domainCategory",
+      "id" : "Goal.category:goal-domain",
       "path" : "Goal.category",
-      "sliceName" : "domainCategory",
+      "sliceName" : "goal-domain",
       "short" : "Person-Centered Outcome domain category",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
@@ -639,7 +650,6 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "preferred",
-        "description" : "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
         "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"
       },
       "mapping" : [{

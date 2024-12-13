@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-12T02:30:34+00:00"/>
+  <date value="2024-12-13T23:01:09+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -629,7 +629,7 @@
       </reference>
       <name value="GAD-7 PROM Follow-up Score"/>
       <description value="Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress."/>
-      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -772,17 +772,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/pco-goal-domains"/>
-      </reference>
-      <name value="NCQA Goal Domains"/>
-      <description value="Goal domain codes used to identify the category for PCO resources."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -797,7 +786,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-prom-score"/>
+        <reference value="StructureDefinition/pco-prom-score-observation"/>
       </reference>
       <name value="Patient-Reported Outcome Measure (PROM) score"/>
       <description value="This observation records how a patient's progress score is rated using a PROM assessment."/>
@@ -812,6 +801,17 @@
       </reference>
       <name value="PCO Domain Categories"/>
       <description value="Example value set to identify the domains category for PCO resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pco-goal-domains"/>
+      </reference>
+      <name value="PCO Goal Domains"/>
+      <description value="Goal domain codes used to identify the category for PCO resources."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -859,17 +859,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/pco-category-vs"/>
-      </reference>
-      <name value="Person-Centered Goal Category Value Set"/>
-      <description value="Used to categorize resources as being a Person-Centered Goal"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Measure"/>
       </extension>
       <reference>
@@ -888,17 +877,6 @@
       </reference>
       <name value="Person-Centered Goal Identification"/>
       <description value="Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/pco-survey-category-vs"/>
-      </reference>
-      <name value="Person-Centered Outcomes Survey Value Set"/>
-      <description value="Used to indicate that PCO observations of of type Survey, as defined by US-Core."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -968,6 +946,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/wellbeing-concepts"/>
+      </reference>
+      <name value="Well-Being Concepts"/>
+      <description value="Code system to identify resource codes and category domains for &quot;What Matters&quot;."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/wellbeing-domains-example-vs"/>
+      </reference>
+      <name value="Well-Being Domains Example"/>
+      <description value="Example value set containing well-being domains from the VA Circle of Health."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -979,36 +979,25 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/what-matters-focus-areas"/>
-      </reference>
-      <name value="What Matters Focus Areas"/>
-      <description value="Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/pco-what-matters-priority"/>
       </reference>
-      <name value="What Matters Priority Flag"/>
+      <name value="What Matters Priority"/>
       <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/what-matters-rating"/>
+        <reference value="Observation/pcoWhatMattersPriorityExample"/>
       </reference>
-      <name value="What Matters Rating Concepts"/>
-      <description value="Code system to identify &quot;What Matters&quot; rating concepts."/>
-      <exampleBoolean value="false"/>
+      <name value="What Matters Priority: Moving the Body"/>
+      <description value="What Matters observation recorded by a Patient to indicate their priority for well-being."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1020,6 +1009,17 @@
       <name value="What Matters Statement"/>
       <description value="Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoWhatMattersStatementExample"/>
+      </reference>
+      <name value="What Matters Statement: Family &amp; Friends"/>
+      <description value="What Matters observation added by a Patient to record a statement about a well-being focus area."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

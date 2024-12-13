@@ -1,28 +1,30 @@
 PCO : Validation Results
 =========================================
 
-err = 113, warn = 24, info = 26
+err = 110, warn = 23, info = 30
 $--
 Generated $--. FHIR version $-- for hl7.fhir.us.pco#$-- (canonical = http://hl7.org/fhir/us/pco)
- Build Errors : 3 / 13 / 0
+ Build Errors : 4 / 13 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-codes : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-goal-domains : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-va-whole-health : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-what-matters-rating : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-wellbeing-concepts : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalAnxietyExample : 2 / 1 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalPainLevelExample : 2 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExample : 9 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions : 3 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco : 1 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample : 5 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample : 5 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScoretBaselineExample : 5 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoPROMScoreAnxietyExample : 2 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersBodyExample : 2 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample : 2 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample : 3 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample : 4 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScoretBaselineExample : 3 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoPROMScoreAnxietyExample : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersBodyExample : 2 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersPriorityExample : 2 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample : 2 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersStatementExample : 2 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientJones : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientLopez : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerAnderson : 0 / 0 / 1
@@ -36,24 +38,22 @@ Generated $--. FHIR version $-- for hl7.fhir.us.pco#$-- (canonical = http://hl7.
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling : 1 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-profile : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-goal-profile : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-score : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-score-observation : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-priority : 1 / 1 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-statement : 1 / 0 / 3
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-priority : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-statement : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-gas-score-answers : 1 / 2 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-goal-attainment-scaling-score : 1 / 4 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-category-vs : 1 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-domain-category-valueset : 1 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-survey-category-vs : 1 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-prom-target-measures : 1 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-what-matters-focus-areas : 1 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-domains-example-vs : 1 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/device/cqf-tooling : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalFollowUpMeasure : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/PCOCommon : 2 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 2 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 4 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 5 / 1 / 10
  /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 5 / 1 / 10
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7 : 10 / 0 / 1
@@ -72,6 +72,7 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 ERROR: There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
 ERROR: /home/runner/work/pco-ig/pco-ig/output/feedback.html#/html/body/div/div/div/div/div/p/a at Line 232, column 21: The link 'index.html#user-stories' for "User Stories" cannot be resolved (valid targets: [markdown-toc-conformance-vs-example-content, conformance-vs-example-content, publish-box, segment-post-footer, hl7-search, hl7-search-lnk, family-logo, top, stripe, segment-footer, how-to-read-this-guide, segment-content, relationship-with-other-fhir-igs, segment-header, bottom, hl7-logo, markdown-toc-relationship-with-other-fhir-igs, home, markdown-toc-background, family-nav, ig-status, markdown-toc-how-to-read-this-guide, markdown-toc, background, hl7-nav, segment-navbar, segment-breadcrumb])
 ERROR: /home/runner/work/pco-ig/pco-ig/output/feedback.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 244, column 36: The link 'ValueSet-pco-category-valueset.html' for "PCO Category" cannot be resolved
+ERROR: /home/runner/work/pco-ig/pco-ig/output/user_stories.html#/html/body/div/div/div/div/div/p/strong/a at Line 291, column 19: The link 'StructureDefinition-pco-prom-score.html#profile' for "Profile: PROM progress score" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -93,19 +94,19 @@ INFORMATION: CodeSystem/pco-goal-domains: CodeSystem: Most code systems defined 
 == fsh-generated/resources/CodeSystem-va-whole-health.json ==
 ERROR: CodeSystem/va-whole-health: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: CodeSystem/va-whole-health: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-== fsh-generated/resources/CodeSystem-what-matters-rating.json ==
-ERROR: CodeSystem/what-matters-rating: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-INFORMATION: CodeSystem/what-matters-rating: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+== fsh-generated/resources/CodeSystem-wellbeing-concepts.json ==
+ERROR: CodeSystem/wellbeing-concepts: CodeSystem: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: CodeSystem/wellbeing-concepts: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 == fsh-generated/resources/Goal-pcoGoalAnxietyExample.json ==
-ERROR: Goal/pcoGoalAnxietyExample: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
-ERROR: Goal/pcoGoalAnxietyExample: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalAnxietyExample: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalAnxietyExample: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
 WARNING: Goal/pcoGoalAnxietyExample: Goal.target[0].detail.ofType(Quantity): UCUM Codes that contain human readable annotations like {score} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 == fsh-generated/resources/Goal-pcoGoalPainLevelExample.json ==
-ERROR: Goal/pcoGoalPainLevelExample: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
-ERROR: Goal/pcoGoalPainLevelExample: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalPainLevelExample: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalPainLevelExample: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
 == fsh-generated/resources/Goal-pcoGoalWalkDogExample.json ==
-ERROR: Goal/pcoGoalWalkDogExample: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
-ERROR: Goal/pcoGoalWalkDogExample: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalWalkDogExample: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalWalkDogExample: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
 ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[0].extension[0].value.ofType(Coding).display: Wrong Display Name 'Much better than expected' for http://loinc.org#LA6113-0. There are no valid display names found for language(s) 'en'. Default display is '2 or more'
 ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[1].extension[0].value.ofType(Coding).display: Wrong Display Name 'Better than expected' for http://loinc.org#LA6112-2. There are no valid display names found for language(s) 'en'. Default display is '1'
 ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[2].extension[0].value.ofType(Coding).display: Wrong Display Name 'Expected outcome' for http://loinc.org#LA6111-4. There are no valid display names found for language(s) 'en'. Default display is '0'
@@ -114,39 +115,43 @@ ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[3].extension[0].value.ofType(C
 ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[4].extension[0].value.ofType(Coding).code: Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[4].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'
 == fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions.json ==
-ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
-ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:domainCategory - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Goal.category:goal-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile|0.2.0 does not have fixed value, binding or existence assertions
 ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.target[0].measure.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco.json ==
 ERROR: ImplementationGuide/hl7.fhir.us.pco: ImplementationGuide: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 == fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication.json ==
 == fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json ==
-ERROR: Observation/pcoGASScorePatientFollowupExample: Observation.category[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0, Element matches more than one slice - us-core, survey
-ERROR: Observation/pcoGASScorePatientFollowupExample: Observation: Slice 'Observation.category:survey': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0). Note that other slices are allowed in addition to this required slice
 ERROR: Observation/pcoGASScorePatientFollowupExample: Observation.code.coding[0].code: Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Observation/pcoGASScorePatientFollowupExample: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Better than expected' for http://loinc.org#LA6112-2. There are no valid display names found for language(s) 'en'. Default display is '1'
 ERROR: Observation/pcoGASScorePatientFollowupExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#LA6112-2)
 == fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json ==
-ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.category[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0, Element matches more than one slice - us-core, survey
-ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation: Slice 'Observation.category:survey': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0). Note that other slices are allowed in addition to this required slice
+INFORMATION: Observation/pcoGASScorePractitionerFollowupExample: Observation.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.category[0].coding[0].code: Unknown code 'functional-status' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/observation-category' version '1.0.1'
 ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.code.coding[0].code: Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Expected outcome' for http://loinc.org#LA6111-4. There are no valid display names found for language(s) 'en'. Default display is '0'
 ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#LA6111-4)
 == fsh-generated/resources/Observation-pcoGASScoretBaselineExample.json ==
-ERROR: Observation/pcoGASScoretBaselineExample: Observation.category[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0, Element matches more than one slice - us-core, survey
-ERROR: Observation/pcoGASScoretBaselineExample: Observation: Slice 'Observation.category:survey': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0). Note that other slices are allowed in addition to this required slice
 ERROR: Observation/pcoGASScoretBaselineExample: Observation.code.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Observation/pcoGASScoretBaselineExample: Observation.value.ofType(CodeableConcept).coding[0].code: Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Observation/pcoGASScoretBaselineExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)
 == fsh-generated/resources/Observation-pcoPROMScoreAnxietyExample.json ==
-ERROR: Observation/pcoPROMScoreAnxietyExample: Observation.category[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score|0.2.0, Element matches more than one slice - us-core, survey
-ERROR: Observation/pcoPROMScoreAnxietyExample: Observation: Slice 'Observation.category:survey': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score|0.2.0). Note that other slices are allowed in addition to this required slice
 == fsh-generated/resources/Observation-pcoWhatMattersBodyExample.json ==
-ERROR: Observation/pcoWhatMattersBodyExample: Observation.category[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0, Element matches more than one slice - us-core, survey
-ERROR: Observation/pcoWhatMattersBodyExample: Observation: Slice 'Observation.category:survey': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0). Note that other slices are allowed in addition to this required slice
+ERROR: Observation/pcoWhatMattersBodyExample: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Observation/pcoWhatMattersBodyExample: Observation.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0 does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pcoWhatMattersBodyExample: Observation: Observation.category:wellbeing-domain: Found 0 matches, but unable to check minimum required (Observation.category) due to lack of slicing validation (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0)
+== fsh-generated/resources/Observation-pcoWhatMattersPriorityExample.json ==
+ERROR: Observation/pcoWhatMattersPriorityExample: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Observation/pcoWhatMattersPriorityExample: Observation.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority|0.2.0 does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pcoWhatMattersPriorityExample: Observation: Observation.category:wellbeing-domain: Found 0 matches, but unable to check minimum required (Observation.category) due to lack of slicing validation (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority|0.2.0)
 == fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample.json ==
-ERROR: Observation/pcoWhatMattersRelationshipsExample: Observation.category[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0, Element matches more than one slice - us-core, survey
-ERROR: Observation/pcoWhatMattersRelationshipsExample: Observation: Slice 'Observation.category:survey': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0). Note that other slices are allowed in addition to this required slice
+ERROR: Observation/pcoWhatMattersRelationshipsExample: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Observation/pcoWhatMattersRelationshipsExample: Observation.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0 does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pcoWhatMattersRelationshipsExample: Observation: Observation.category:wellbeing-domain: Found 0 matches, but unable to check minimum required (Observation.category) due to lack of slicing validation (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment|0.2.0)
+== fsh-generated/resources/Observation-pcoWhatMattersStatementExample.json ==
+ERROR: Observation/pcoWhatMattersStatementExample: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement|0.2.0 does not have fixed value, binding or existence assertions
+ERROR: Observation/pcoWhatMattersStatementExample: Observation.category[1]: Slicing cannot be evaluated: Could not match discriminator (1) for slice [$this] in profile Observation.category:wellbeing-domain - the discriminator http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement|0.2.0 does not have fixed value, binding or existence assertions
+INFORMATION: Observation/pcoWhatMattersStatementExample: Observation: Observation.category:wellbeing-domain: Found 0 matches, but unable to check minimum required (Observation.category) due to lack of slicing validation (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement|0.2.0)
 == fsh-generated/resources/Patient-pcoPatientJones.json ==
 == fsh-generated/resources/Patient-pcoPatientLopez.json ==
 == fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json ==
@@ -175,20 +180,18 @@ INFORMATION: StructureDefinition/pco-goal-profile: StructureDefinition.snapshot.
 == fsh-generated/resources/StructureDefinition-pco-prom-goal-profile.json ==
 ERROR: StructureDefinition/pco-prom-goal-profile: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: StructureDefinition/pco-prom-goal-profile: StructureDefinition.snapshot.element[12].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-== fsh-generated/resources/StructureDefinition-pco-prom-score.json ==
-ERROR: StructureDefinition/pco-prom-score: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-INFORMATION: StructureDefinition/pco-prom-score: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+== fsh-generated/resources/StructureDefinition-pco-prom-score-observation.json ==
+ERROR: StructureDefinition/pco-prom-score-observation: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+INFORMATION: StructureDefinition/pco-prom-score-observation: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-pco-what-matters-assessment.json ==
 ERROR: StructureDefinition/pco-what-matters-assessment: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: StructureDefinition/pco-what-matters-assessment: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 == fsh-generated/resources/StructureDefinition-pco-what-matters-priority.json ==
 ERROR: StructureDefinition/pco-what-matters-priority: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: StructureDefinition/pco-what-matters-priority: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pco-what-matters-statement.json ==
 ERROR: StructureDefinition/pco-what-matters-statement: StructureDefinition: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 INFORMATION: StructureDefinition/pco-what-matters-statement: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement'): The Implementation Guide contains no explicitly linked examples for this profile
 == fsh-generated/resources/ValueSet-gas-score-answers.json ==
 ERROR: ValueSet/gas-score-answers: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 WARNING: ValueSet/gas-score-answers: ValueSet.compose.include[0].concept[3]: The code 'gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')
@@ -200,16 +203,12 @@ INFORMATION: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0]
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[1]: The code '68490' is not valid in the system http://loinc.org (Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78')
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[2]: The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[3]: The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')
-== fsh-generated/resources/ValueSet-pco-category-vs.json ==
-ERROR: ValueSet/pco-category-vs: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 == fsh-generated/resources/ValueSet-pco-domain-category-valueset.json ==
 ERROR: ValueSet/pco-domain-category-valueset: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-== fsh-generated/resources/ValueSet-pco-survey-category-vs.json ==
-ERROR: ValueSet/pco-survey-category-vs: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 == fsh-generated/resources/ValueSet-prom-target-measures.json ==
 ERROR: ValueSet/prom-target-measures: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
-== fsh-generated/resources/ValueSet-what-matters-focus-areas.json ==
-ERROR: ValueSet/what-matters-focus-areas: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+== fsh-generated/resources/ValueSet-wellbeing-domains-example-vs.json ==
+ERROR: ValueSet/wellbeing-domains-example-vs: ValueSet: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 == input/resources/device/cqf-tooling.json ==
 == input/resources/library/FHIRHelpers.json ==
 ERROR: Library.where(url = 'http://hl7.org/fhir/Library/FHIRHelpers'): Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers.json - the canonical URL (http://hl7.org/fhir/us/pco/Library/FHIRHelpers) does not match the URL (http://hl7.org/fhir/Library/FHIRHelpers)
@@ -232,6 +231,8 @@ ERROR: Library/PCOCommon: Library.relatedArtifact[1].resource: Canonical URL 'ht
 ERROR: Library/PCOCommon: Library: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 == input/resources/library/WhatMattersLogic.json ==
 ERROR: Library/WhatMattersLogic: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
+ERROR: Library/WhatMattersLogic: Library.relatedArtifact[3].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas' does not resolve
+ERROR: Library/WhatMattersLogic: Library.dataRequirement[1].codeFilter[0].valueSet: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas' does not resolve
 ERROR: Library/WhatMattersLogic: Library: When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
 == input/resources/measure/Measure-GoalFollowUpMeasure.json ==
 ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'

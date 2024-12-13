@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PCOGoalOutcomeMeasureProfile"] ; # 
   fhir:title [ fhir:v "Person-Centered PROM Goal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-12T02:30:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-13T23:01:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -570,7 +570,7 @@
        fhir:short [ fhir:v "E.g. Treatment, dietary, behavioral, etc." ] ;
        fhir:definition [ fhir:v "Indicates a category the goal falls within." ] ;
        fhir:requirements [ fhir:v "Allows goals to be filtered and sorted." ] ;
-       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
          fhir:path [ fhir:v "Goal.category" ] ;
@@ -611,13 +611,13 @@
          fhir:map [ fhir:v "FiveWs.class" ]
        ] )
      ] [
-       fhir:id [ fhir:v "Goal.category:pcoCategory" ] ;
+       fhir:id [ fhir:v "Goal.category:pco-goal" ] ;
        fhir:path [ fhir:v "Goal.category" ] ;
-       fhir:sliceName [ fhir:v "pcoCategory" ] ;
+       fhir:sliceName [ fhir:v "pco-goal" ] ;
        fhir:short [ fhir:v "Person-Centered Goal category" ] ;
        fhir:definition [ fhir:v "Indicates a category the goal falls within." ] ;
        fhir:requirements [ fhir:v "Allows goals to be filtered and sorted." ] ;
-       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
          fhir:path [ fhir:v "Goal.category" ] ;
@@ -627,6 +627,13 @@
        fhir:type ( [
          fhir:code [ fhir:v "CodeableConcept"^^xsd:anyURI ]
        ] ) ;
+       fhir:pattern [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "person-centered-goal" ]
+         ] )
+       ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
          fhir:severity [ fhir:v "error" ] ;
@@ -642,10 +649,15 @@
        fhir:isModifier [ fhir:v "false"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:binding [
-         fhir:strength [ fhir:v "required" ] ;
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "GoalCategory" ]
+         ] ) ;
+         fhir:strength [ fhir:v "example" ] ;
+         fhir:description [ fhir:v "Codes for grouping and sorting goals." ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs>
+           fhir:v "http://hl7.org/fhir/ValueSet/goal-category"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/goal-category>
          ]
        ] ;
        fhir:mapping ( [
@@ -653,9 +665,9 @@
          fhir:map [ fhir:v "FiveWs.class" ]
        ] )
      ] [
-       fhir:id [ fhir:v "Goal.category:domainCategory" ] ;
+       fhir:id [ fhir:v "Goal.category:goal-domain" ] ;
        fhir:path [ fhir:v "Goal.category" ] ;
-       fhir:sliceName [ fhir:v "domainCategory" ] ;
+       fhir:sliceName [ fhir:v "goal-domain" ] ;
        fhir:short [ fhir:v "Person-Centered Outcome domain category" ] ;
        fhir:definition [ fhir:v "Indicates a category the goal falls within." ] ;
        fhir:requirements [ fhir:v "Allows goals to be filtered and sorted." ] ;
@@ -685,7 +697,6 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:binding [
          fhir:strength [ fhir:v "preferred" ] ;
-         fhir:description [ fhir:v "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)" ] ;
          fhir:valueSet [
            fhir:v "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"^^xsd:anyURI ;
            fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset>

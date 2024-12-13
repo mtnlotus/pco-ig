@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="9208825d-909d-4c21-abdc-fdcd5344c0ed"/>
+  <id value="82e76ace-a026-4372-bdcc-698291df0861"/>
   <meta>
-    <lastUpdated value="2024-12-12T02:30:34.316+00:00"/>
+    <lastUpdated value="2024-12-13T23:01:09.032+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -63,7 +63,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
+        <date value="2024-12-13T23:01:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71,8 +71,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:57ba42b9-898f-466a-8bbd-e37d17ec0475"/>
-          <timestamp value="2024-12-12T02:33:02+00:00"/>
+          <identifier value="urn:uuid:fb41273c-ed11-4bdf-af93-b4c671aedec8"/>
+          <timestamp value="2024-12-13T23:02:35+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -151,7 +151,7 @@
         <title value="Goal Attainment Scaling (GAS) Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
+        <date value="2024-12-13T23:01:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -159,8 +159,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1d2a182b-f5b8-489a-946b-9f3d27608b5a"/>
-          <timestamp value="2024-12-12T02:33:03+00:00"/>
+          <identifier value="urn:uuid:8dd01c53-ce7b-4358-8c05-a05399adcc85"/>
+          <timestamp value="2024-12-13T23:02:36+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -192,86 +192,6 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-pco-codes.html">codesystem Codes for PCO v0.2.0 (CodeSystem)</a>
-            </p>
-            <p>This value set contains 1 concepts</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-codes-person-centered-goal"> </a>  
-                  <a href="CodeSystem-pco-codes.html#pco-codes-person-centered-goal">person-centered-goal</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-codes</td>
-                <td>Person-Centered Goal</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
-        <version value="0.2.0"/>
-        <name value="PCOCategoryValueSet"/>
-        <title value="Person-Centered Goal Category Value Set"/>
-        <status value="draft"/>
-        <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="US"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:4c336400-ca81-405b-9bd4-2b9cf10e0674"/>
-          <timestamp value="2024-12-12T02:33:03+00:00"/>
-          <total value="1"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="used-codesystem"/>
-            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes|0.2.0"/>
-          </parameter>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"/>
-            <code value="person-centered-goal"/>
-            <display value="Person-Centered Goal"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
     <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
     <resource>
       <ValueSet>
@@ -282,7 +202,7 @@
               <b>Generated Narrative: ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-pco-goal-domains.html">codesystem NCQA Goal Domains v0.2.0 (CodeSystem)</a>
+              <a href="CodeSystem-pco-goal-domains.html">codesystem PCO Goal Domains v0.2.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 12 concepts</p>
             <table class="codes">
@@ -468,7 +388,7 @@
         <title value="PCO Domain Categories"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
+        <date value="2024-12-13T23:01:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -476,8 +396,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8ef9ac9e-4485-4ec3-aa91-28211d6525a6"/>
-          <timestamp value="2024-12-12T02:33:04+00:00"/>
+          <identifier value="urn:uuid:70caccde-28ab-4885-9694-0e96063f7f59"/>
+          <timestamp value="2024-12-13T23:02:37+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -555,95 +475,6 @@
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains"/>
             <code value="emotional-and-mental-health"/>
             <display value="Emotional And Mental Health"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="http://terminology.hl7.org/6.1.0/CodeSystem-observation-category.html">codesystem Observation Category Codes v1.0.1 (CodeSystem)</a>
-            </p>
-            <p>This value set contains 1 concepts</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://terminology.hl7.org/CodeSystem/observation-category-survey"> </a>  
-                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-observation-category.html#observation-category-survey">survey</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
-                <td>Survey</td>
-                <td>
-                  <div>
-                    <p>Assessment tool/survey instrument observations (e.g., Apgar Scores, Montreal Cognitive Assessment (MoCA)).</p>
-
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs"/>
-        <version value="0.2.0"/>
-        <name value="PCOSurveyCategoryVS"/>
-        <title value="Person-Centered Outcomes Survey Value Set"/>
-        <status value="draft"/>
-        <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="US"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:14e0118e-6b0a-4feb-bbf8-e0036b1502fd"/>
-          <timestamp value="2024-12-12T02:33:04+00:00"/>
-          <total value="1"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="used-codesystem"/>
-            <valueUri value="http://terminology.hl7.org/CodeSystem/observation-category|1.0.1"/>
-          </parameter>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-            <code value="survey"/>
-            <display value="Survey"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -954,7 +785,7 @@
         <title value="PROM Target Measures"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
+        <date value="2024-12-13T23:01:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -962,8 +793,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:3bda1f06-1808-48b8-b2a9-d25817c2541a"/>
-          <timestamp value="2024-12-12T02:33:05+00:00"/>
+          <identifier value="urn:uuid:5ddcbeff-8683-4422-9726-a6b974809fc7"/>
+          <timestamp value="2024-12-13T23:02:37+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -1165,7 +996,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas"/>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs"/>
     <resource>
       <ValueSet>
         <text>
@@ -1322,13 +1153,13 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas"/>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs"/>
         <version value="0.2.0"/>
-        <name value="WhatMattersFocusAreas"/>
-        <title value="What Matters Focus Areas"/>
+        <name value="WellBeingDomainValueSet"/>
+        <title value="Well-Being Domains Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-12T02:30:34+00:00"/>
+        <date value="2024-12-13T23:01:09+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1336,8 +1167,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6dd3f9b2-2d05-40a7-8300-3f11c31161f5"/>
-          <timestamp value="2024-12-12T02:33:05+00:00"/>
+          <identifier value="urn:uuid:a8f9a56c-58bd-4eee-b721-4d7491d55dea"/>
+          <timestamp value="2024-12-13T23:02:38+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>

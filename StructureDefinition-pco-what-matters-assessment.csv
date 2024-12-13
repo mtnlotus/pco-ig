@@ -45,19 +45,29 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Observation.status","Observation.status","","","",1,1,"Y","Y","Y","code {[]} {[]}
 ","(USCDI) registered | preliminary | final | amended +","The status of the result value.","This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.","Need to track the status of individual results. Some results are finalized before the whole report is finalized.","","","","","","","",,"required","Codes providing the status of an observation.","http://hl7.org/fhir/ValueSet/observation-status|4.0.1","",,,,"Observation.status",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.status","< 445584004 |Report by finality status|","OBX-11","status  Amended & Final are differentiated by whether it is the subject of a ControlAct event with a type of ""revise""","FiveWs.status"
-"Observation.category","Observation.category","","","",1,*,"Y","","","CodeableConcept {[]} {[]}
-","(USCDI) Classification of  type of observation","A code that classifies the general type of observation being made.","In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.","To identify that observation is derived from a questionnaire or other assessment instrument.","","","","","","","",,"preferred","Codes for high level observation categories.","http://hl7.org/fhir/ValueSet/observation-category","","pattern:$this}
+"Observation.category","Observation.category","","","",2,*,"Y","","","CodeableConcept {[]} {[]}
+","(USCDI) Classification of  type of observation","A code that classifies the general type of observation being made.","In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.","Used for filtering what observations are retrieved and displayed.","","","","","","","",,"preferred","Codes for high level observation categories.","http://hl7.org/fhir/ValueSet/observation-category","","pattern:$this}
 ","",,"open","Observation.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode=""COMP].target[classCode=""LIST"", moodCode=""EVN""].code","FiveWs.class"
-"Observation.category:us-core","Observation.category","us-core","","",0,*,"Y","","","CodeableConcept {[]} {[]}
-","(USCDI) Classification of  type of observation","A code that classifies the general type of observation being made.","In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.","Used for filtering what observations are retrieved and displayed.","","","","","","","",,"required","Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)","http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category","",,,,"Observation.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"Observation.category:us-core","Observation.category","us-core","","",1,1,"Y","","","CodeableConcept {[]} {[]}
+","(USCDI) Classification of  type of observation","A code that classifies the general type of observation being made.","In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.","Used for filtering what observations are retrieved and displayed.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+  <coding>
+    <system value=""http://terminology.hl7.org/CodeSystem/observation-category""/>
+    <code value=""survey""/>
+  </coding>
+</valueCodeableConcept>","","","",,"required","Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)","http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category","",,,,"Observation.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode=""COMP].target[classCode=""LIST"", moodCode=""EVN""].code","FiveWs.class"
-"Observation.category:survey","Observation.category","survey","","",1,1,"Y","","","CodeableConcept {[]} {[]}
-","(USCDI) Classification of  type of observation","A code that classifies the general type of observation being made.","In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.","Indicates the person-centered outcomes observation is of type survey","","","","","","","",,"required","Include 'survey' category to facilitate searching for this Observation as a kind of Assessment","http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs","",,,,"Observation.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"Observation.category:wellbeing-domain","Observation.category","wellbeing-domain","","",1,*,"Y","","","CodeableConcept {[]} {[]}
+","Well-Being domain category","A code that classifies the general type of observation being made.","In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.","Used for filtering what observations are retrieved and displayed.","","","","","","","",,"preferred","","http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs","",,,,"Observation.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".outboundRelationship[typeCode=""COMP].target[classCode=""LIST"", moodCode=""EVN""].code","FiveWs.class"
 "Observation.code","Observation.code","","Name
 ","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
-","Focus area for What Matters assessment","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","","","","",,"preferred","","http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas","",,,,"Observation.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Assessment rating for this category of well-being","Describes what was observed. Sometimes this is called the observation ""name"".","*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
+  <coding>
+    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts""/>
+    <code value=""wellbeing-assessment""/>
+  </coding>
+</valueCodeableConcept>","","","",,"preferred","","http://hl7.org/fhir/ValueSet/observation-codes","",,,,"Observation.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.code","< 363787002 |Observable entity| OR < 386053000 |Evaluation procedure|","OBX-3","code","FiveWs.what[x]","116680003 |Is a|"
 "Observation.subject","Observation.subject","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient]]}
 ","(USCDI) Who and/or what the observation is about","The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.","One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.","Observations have no value if you don't know who or what they're about.","","","","","","","",,,,,"",,,,"Observation.subject",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -204,7 +214,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Observation.component:nowRating.code","Observation.component.code","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","Where are you now?","Describes what was observed. Sometimes this is called the observation ""code"".","*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating""/>
+    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts""/>
     <code value=""now-rating""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes identifying names of simple observations.","http://hl7.org/fhir/ValueSet/observation-codes","",,,,"Observation.component.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -243,7 +253,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Observation.component:nowReasons.code","Observation.component.code","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","What are the reasons you chose this number?","Describes what was observed. Sometimes this is called the observation ""code"".","*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating""/>
+    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts""/>
     <code value=""now-reasons""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes identifying names of simple observations.","http://hl7.org/fhir/ValueSet/observation-codes","",,,,"Observation.component.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -282,7 +292,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Observation.component:futureRating.code","Observation.component.code","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","Where would you like to be?","Describes what was observed. Sometimes this is called the observation ""code"".","*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating""/>
+    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts""/>
     <code value=""future-rating""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes identifying names of simple observations.","http://hl7.org/fhir/ValueSet/observation-codes","",,,,"Observation.component.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -321,7 +331,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Observation.component:futureChanges.code","Observation.component.code","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","What changes could you make to help you get there?","Describes what was observed. Sometimes this is called the observation ""code"".","*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.","Knowing what kind of observation is being made is essential to understanding the observation.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
-    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/what-matters-rating""/>
+    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts""/>
     <code value=""future-changes""/>
   </coding>
 </valueCodeableConcept>","","","",,"example","Codes identifying names of simple observations.","http://hl7.org/fhir/ValueSet/observation-codes","",,,,"Observation.component.code",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

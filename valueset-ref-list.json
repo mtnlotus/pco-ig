@@ -10,8 +10,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
-      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score"
+      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score",
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score",
@@ -26,18 +26,6 @@
       "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "PCOCategoryValueSet",
-      "title" : "Person-Centered Goal Category Value Set",
-      "description" : "Used to categorize resources as being a Person-Centered Goal",
-      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"],
-      "uses" : {
-      },
-      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
       "version" : "0.2.0",
       "status" : "draft",
@@ -50,22 +38,6 @@
       "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "PCOSurveyCategoryVS",
-      "title" : "Person-Centered Outcomes Survey Value Set",
-      "description" : "Used to indicate that PCO observations of of type Survey, as defined by US-Core.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
-      "uses" : {
-      },
-      "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
-      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority Flag",
-      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement",
-      "StructureDefinition-pco-prom-score.html" : "Patient-Reported Outcome Measure (PROM) score"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures",
       "version" : "0.2.0",
       "status" : "draft",
@@ -76,21 +48,21 @@
       "uses" : {
       },
       "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal",
-      "StructureDefinition-pco-prom-score.html" : "Patient-Reported Outcome Measure (PROM) score"
+      "StructureDefinition-pco-prom-score-observation.html" : "Patient-Reported Outcome Measure (PROM) score"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-focus-areas",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs",
       "version" : "0.2.0",
       "status" : "draft",
-      "name" : "WhatMattersFocusAreas",
-      "title" : "What Matters Focus Areas",
-      "description" : "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals.",
+      "name" : "WellBeingDomainValueSet",
+      "title" : "Well-Being Domains Example",
+      "description" : "Example value set containing well-being domains from the VA Circle of Health.",
       "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"],
       "uses" : {
       },
+      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement",
       "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
-      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority Flag",
-      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement"
+      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority"
     }
   ]
 }

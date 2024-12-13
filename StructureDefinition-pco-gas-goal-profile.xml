@@ -19,7 +19,7 @@
   <name value="PCOGoalAttainmentScaleProfile"/>
   <title value="Person-Centered GAS Goal"/>
   <status value="draft"/>
-  <date value="2024-12-12T02:30:34+00:00"/>
+  <date value="2024-12-13T23:01:09+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -563,7 +563,7 @@
       <short value="E.g. Treatment, dietary, behavioral, etc."/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
-      <min value="0"/>
+      <min value="1"/>
       <max value="*"/>
       <base>
         <path value="Goal.category"/>
@@ -597,13 +597,13 @@
         <map value="FiveWs.class"/>
       </mapping>
     </element>
-    <element id="Goal.category:pcoCategory">
+    <element id="Goal.category:pco-goal">
       <path value="Goal.category"/>
-      <sliceName value="pcoCategory"/>
+      <sliceName value="pco-goal"/>
       <short value="Person-Centered Goal category"/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
-      <min value="0"/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Goal.category"/>
@@ -613,6 +613,12 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"/>
+          <code value="person-centered-goal"/>
+        </coding>
+      </patternCodeableConcept>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -625,17 +631,21 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <strength value="required"/>
-        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="GoalCategory"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Codes for grouping and sorting goals."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/goal-category"/>
       </binding>
       <mapping>
         <identity value="w5"/>
         <map value="FiveWs.class"/>
       </mapping>
     </element>
-    <element id="Goal.category:domainCategory">
+    <element id="Goal.category:goal-domain">
       <path value="Goal.category"/>
-      <sliceName value="domainCategory"/>
+      <sliceName value="goal-domain"/>
       <short value="Person-Centered Outcome domain category"/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
@@ -662,7 +672,6 @@
       <isSummary value="true"/>
       <binding>
         <strength value="preferred"/>
-        <description value="Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"/>
         <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
       </binding>
       <mapping>
