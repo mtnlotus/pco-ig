@@ -4,7 +4,7 @@
 
 CodeSystem: PCOGoalDomains
 Id: pco-goal-domains
-Title: "NCQA Goal Domains"
+Title: "PCO Goal Domains"
 Description: "Goal domain codes used to identify the category for PCO resources."
 * ^caseSensitive = true
 * ^experimental = false

@@ -1,12 +1,26 @@
+
+RuleSet: WellBeingDomainCategory
+* category MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* category contains
+    wellbeing-domain 1..* MS
+* category[wellbeing-domain] from WellBeingDomainValueSet (preferred)
+  * ^short = "Well-Being domain category"
+// Must have preferred binding because parent profile has a preferred binding.
+
 Profile: WhatMattersPriority
 Parent: USCoreSimpleObservationProfile
 Id: pco-what-matters-priority
-Title: "What Matters Priority Flag"
+Title: "What Matters Priority"
 Description: "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."
-* insert PCOSurveyCategory
-// Must have preferred binding because parent profile has a preferred binding.
-* code from WhatMattersFocusAreas (preferred)
-  * ^short = "Focus area for What Matters assessment"
+// Satisfies US Core required binding for category
+* category[us-core] 1..1 MS
+* category[us-core] = OBSCAT#survey
+* insert WellBeingDomainCategory
+* code = WellBeingConcepts#wellbeing-priority
+  * ^short = "Priority for this category of well-being"
 * value[x] 1..1 MS
 * value[x] only boolean
   * ^short = "Indicates if focus area is a current priority"
@@ -16,9 +30,11 @@ Parent: USCoreSimpleObservationProfile
 Id: pco-what-matters-statement
 Title: "What Matters Statement"
 Description: "Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area."
-* insert PCOSurveyCategory
-* code from WhatMattersFocusAreas (preferred)
-  * ^short = "Focus area for What Matters assessment"
+* category[us-core] 1..1 MS
+* category[us-core] = OBSCAT#survey
+* insert WellBeingDomainCategory
+* code = WellBeingConcepts#wellbeing-statement
+  * ^short = "Statement about this category of well-being"
 * value[x] 1..1 MS
 * value[x] only string
   * ^short = "Description of what matters for this focus area"
@@ -28,9 +44,11 @@ Parent: USCoreSimpleObservationProfile
 Id: pco-what-matters-assessment
 Title: "What Matters Assessment"
 Description: "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."
-* insert PCOSurveyCategory
-* code from WhatMattersFocusAreas (preferred)
-  * ^short = "Focus area for What Matters assessment"
+* category[us-core] 1..1 MS
+* category[us-core] = OBSCAT#survey
+* insert WellBeingDomainCategory
+* code = WellBeingConcepts#wellbeing-assessment
+  * ^short = "Assessment rating for this category of well-being"
 * component
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
@@ -42,19 +60,19 @@ Description: "Assessment observation for one aspect of What Matters Most to a pe
     futureChanges 0..1 MS
   * ^short = "Components representing What Matters rating"
 * component[nowRating]
-  * code = WhatMattersRating#now-rating
+  * code = WellBeingConcepts#now-rating
     * ^short = "Where are you now?"
   * insert RatingValueInteger
 * component[nowReasons]
-  * code = WhatMattersRating#now-reasons
+  * code = WellBeingConcepts#now-reasons
     * ^short = "What are the reasons you chose this number?"
   * insert RatingValueString
 * component[futureRating]
-  * code = WhatMattersRating#future-rating
+  * code = WellBeingConcepts#future-rating
     * ^short = "Where would you like to be?"
   * insert RatingValueInteger
 * component[futureChanges]
-  * code = WhatMattersRating#future-changes
+  * code = WellBeingConcepts#future-changes
     * ^short = "What changes could you make to help you get there?"
   * insert RatingValueString
 
@@ -68,13 +86,19 @@ RuleSet: RatingValueString
 * value[x] only string
   * ^short = "Reasons for your rating"
 
-CodeSystem: WhatMattersRating
-Id: what-matters-rating
-Title: "What Matters Rating Concepts"
-Description: "Code system to identify \"What Matters\" rating concepts."
+CodeSystem: WellBeingConcepts
+Id: wellbeing-concepts
+Title: "Well-Being Concepts"
+Description: "Code system to identify resource codes and category domains for \"What Matters\"."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* #wellbeing-priority "Well-Being Priority"
+    "Priority for one area of well-being"
+* #wellbeing-statement "Well-Being Statement"
+    "Statement about one area of well-being"
+* #wellbeing-assessment "Well-Being Assessment"
+    "Assessment rating about one area of well-being"
 * #now-rating "Now Rating"
     "Where are you now?"
 * #now-reasons "Now Reasons"
@@ -110,14 +134,10 @@ Description: "Code system to identify \"What Matters\" concepts from the VA Whol
 * #professional-care "Professional Care"
     "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health."
 
-/*
- * TODO: ConceptMap between VAWholeHealth amd PCOGoalDomains.
-*/
-
-ValueSet: WhatMattersFocusAreas
-Id: what-matters-focus-areas
-Title: "What Matters Focus Areas"
-Description: "Example value set to identify focus areas from the VA Circle of Health. Whole Health is VA's approach to care that supports your health and well-being. Whole Health centers around What Matters to you, not what is the matter with you. This means your health team will get to know you as a person, before working with you to develop a personalized health plan based on your values, needs, and goals."
+ValueSet: WellBeingDomainValueSet
+Id: wellbeing-domains-example-vs
+Title: "Well-Being Domains Example"
+Description: "Example value set containing well-being domains from the VA Circle of Health."
 * ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
 // * include codes from system VAWholeHealth

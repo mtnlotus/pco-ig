@@ -6,8 +6,7 @@ Description: "Person-centered goal with attainment scaling extensions"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[pcoCategory] = PCOCodes#person-centered-goal "Person-Centered Goal"
-* category[domainCategory] = PCOGoalDomains#physical-function "Physical Function"
+* category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-04-03"
@@ -33,8 +32,7 @@ Description: "Person-centered goal with GAS target measure and without GAS exten
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[pcoCategory] = PCOCodes#person-centered-goal "Person-Centered Goal"
-* category[domainCategory] = PCOGoalDomains#physical-function "Physical Function"
+* category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
 * startDate = "2024-04-03"
@@ -50,7 +48,7 @@ Title: "GAS Baseline Score"
 Description: "Baseline GAS score observation at start of goal."
 Usage: #example
 * status = #final 
-* category[survey] = OBSCAT#survey "Survey"
+// * category[survey] = OBSCAT#survey "Survey"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPractitionerGonzalez)
 * effectiveDateTime = "2024-04-03T10:15:00Z"
@@ -64,7 +62,6 @@ Title: "Patient GAS Follow-up Score"
 Description: "Follow-up GAS score observation recorded by a Patient showing goal progress."
 Usage: #example
 * status = #final 
-* category[survey] = OBSCAT#survey "Survey"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-05-10T10:15:00Z"
@@ -78,7 +75,7 @@ Title: "Practitioner GAS Follow-up Score"
 Description: "Follow-up GAS score observation recorded by a Practitioner showing goal progress."
 Usage: #example
 * status = #final 
-* category[survey] = OBSCAT#survey "Survey"
+* category = OBSCAT#functional-status "Functional Status"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPractitionerGonzalez)
 * effectiveDateTime = "2024-05-22T10:15:00Z"

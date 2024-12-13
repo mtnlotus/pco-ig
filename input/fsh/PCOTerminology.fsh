@@ -10,6 +10,8 @@ Description: "Codes to identify content associated with this IG"
 * #pco-data-submission-bundle "PCO Bundle"
 * #pco-data-submission-standing-order "PCO Submission Standing Order"
 
+// Not used at this time
+/*
 ValueSet: PCOCategoryValueSet
 Title: "Person-Centered Goal Category Value Set"
 Id: pco-category-vs
@@ -23,3 +25,5 @@ Id: pco-survey-category-vs
 Description: "Used to indicate that PCO observations of of type Survey, as defined by US-Core."
 * ^experimental = false
 * OBSCAT#survey "Survey"
+
+*/

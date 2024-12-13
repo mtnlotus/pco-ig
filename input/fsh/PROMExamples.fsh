@@ -19,8 +19,7 @@ Description: "Person-centered goal with a PROM outcome target for GAD-7 score."
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[pcoCategory] = PCOCodes#person-centered-goal "Person-Centered Goal"
-* category[domainCategory] = PCOGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
+* category[goal-domain] = PCOGoalDomains#emotional-and-mental-health "Emotional And Mental Health"
 * subject = Reference(pcoPatientLopez)
 * expressedBy = Reference(pcoPractitionerAnderson)
 * startDate = "2024-08-11"
@@ -36,7 +35,6 @@ Title: "GAD-7 PROM Follow-up Score"
 Description: "Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress."
 Usage: #example
 * status = #final 
-* category[survey] = OBSCAT#survey "Survey"
 * subject = Reference(pcoPatientLopez)
 * performer = Reference(pcoPatientLopez)
 * effectiveDateTime = "2024-09-19T13:15:00Z"

@@ -1,27 +1,26 @@
 
-RuleSet: PCOCategory
+RuleSet: PCOGoalCategory
 * category MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * category contains
-    pcoCategory 0..1 MS
-* category[pcoCategory] from PCOCategoryValueSet (required)
+    pco-goal 1..1 MS
+// * category[pco-goal] from PCOCategoryValueSet (required)
+* category[pco-goal] = PCOCodes#person-centered-goal
   * ^short = "Person-Centered Goal category"
 
-RuleSet: PCODomainCategory
+RuleSet: PCOGoalDomainCategory
 * category MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * category contains
-    domainCategory 0..* MS
-* category[domainCategory] from PCODomainCategoryValueSet (preferred)
+    goal-domain 0..* MS
+* category[goal-domain] from PCODomainCategoryValueSet (preferred)
   * ^short = "Person-Centered Outcome domain category"
-// Include same binding description as in US Core profiles.
-* category[domainCategory]
-  * ^binding.description = "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"
-
+  
+/*
 RuleSet: PCOSurveyCategory
 * category MS
 * category ^slicing.discriminator.type = #pattern
@@ -30,18 +29,20 @@ RuleSet: PCOSurveyCategory
 * category ^requirements = "To identify that observation is derived from a questionnaire or other assessment instrument."
 * category contains
 	  survey 1..1 MS
-* category[survey] from PCOSurveyCategoryVS (required)
+// * category[survey] from PCOSurveyCategoryVS (required)
+* category[survey] = OBSCAT#survey
 * category[survey] ^requirements = "Indicates the person-centered outcomes observation is of type survey"
 * category[survey]
-  * ^binding.description = "Include 'survey' category to facilitate searching for this Observation as a kind of Assessment"
+  * ^binding.description = "Required by US Core"
+*/
 
 Profile: PCOGoalProfile
 Parent: USCoreGoalProfile
 Id: pco-goal-profile
 Title: "Person-Centered Goal"
 Description: "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."
-* insert PCOCategory
-* insert PCODomainCategory
+* insert PCOGoalCategory
+* insert PCOGoalDomainCategory
 * expressedBy 0..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
 * start[x] 1..1 MS
