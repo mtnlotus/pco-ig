@@ -1,7 +1,4 @@
 
-Alias: $pertainsToGoal = http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal
-Alias: $rxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
-
 Instance: pcoPhyicalFunctionCarePlanExample
 InstanceOf: PCOCarePlan
 Title: "Care Plan for person-centered goal"

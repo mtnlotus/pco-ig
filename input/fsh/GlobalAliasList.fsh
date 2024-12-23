@@ -2,6 +2,8 @@
 // NOTE: use a code system (not value set) in instances
 Alias: $LNC = http://loinc.org
 Alias: $SCT = http://snomed.info/sct
+Alias: $rxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
+
 Alias: CAT = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: UOM = http://unitsofmeasure.org
 Alias: DAR = http://terminology.hl7.org/CodeSystem/data-absent-reason
@@ -18,6 +20,9 @@ Alias: CATVS = http://hl7.org/fhir/ValueSet/observation-category
 Alias: $compliesWithProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile
 
 Alias: $GoalAchievement = http://terminology.hl7.org/CodeSystem/goal-achievement
+
+// Extensions
+Alias: PertainsToGoalExtension = http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal
 
 // Misc
 // Alias: USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient

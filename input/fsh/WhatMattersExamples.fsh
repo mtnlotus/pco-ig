@@ -1,11 +1,12 @@
 
 Instance: pcoWhatMattersPriorityExample
-InstanceOf: WhatMattersPriority
+InstanceOf: WhatMattersPriorityOrFocus
 Title: "What Matters Priority: Moving the Body"
 Description: "What Matters observation recorded by a Patient to indicate their priority for well-being."
 Usage: #example
 * status = #final 
-* category[wellbeing-domain] = VAWholeHealth#body "Moving the Body"
+* category[wellbeing-category] = WellBeingConcepts#wellbeing-priority "Well-Being Priority"
+* code = VAWholeHealth#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:05:00Z"
@@ -17,7 +18,8 @@ Title: "What Matters Statement: Family & Friends"
 Description: "What Matters observation added by a Patient to record a statement about a well-being focus area."
 Usage: #example
 * status = #final 
-* category[wellbeing-domain] = VAWholeHealth#relationships "Family, Friends & Co-Workers"
+* category[wellbeing-category] = WellBeingConcepts#wellbeing-statement "Well-Being Statement"
+* code = VAWholeHealth#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T14:30:00Z"
@@ -29,7 +31,8 @@ Title: "What Matters: Moving the Body"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
 * status = #final 
-* category[wellbeing-domain] = VAWholeHealth#body "Moving the Body"
+* category[wellbeing-category] = WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
+* code = VAWholeHealth#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:10:00Z"
@@ -42,7 +45,8 @@ InstanceOf: WhatMattersAssessment
 Title: "What Matters: Family & Friends"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
-* category[wellbeing-domain] = VAWholeHealth#relationships "Family, Friends & Co-Workers"
+// * category[wellbeing-category] = WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
+* code = VAWholeHealth#relationships "Family, Friends & Co-Workers"
 * status = #final 
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
