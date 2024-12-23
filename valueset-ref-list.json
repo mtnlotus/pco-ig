@@ -10,8 +10,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
+      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score",
@@ -24,6 +24,48 @@
       "uses" : {
       },
       "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "BothersomeHealthConcernValueSet",
+      "title" : "Bothersome Health Concern Example ValueSet",
+      "description" : "Example value set containing types of bothersome symptoms or health concerns.",
+      "systems" : [
+        "http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pco-bothersome-health-concern.html" : "Bothersome Health Concern"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "CareTradeOffChoicesValueSet",
+      "title" : "Care Trade-off Choices ValueSet",
+      "description" : "Example value set containing options for a care trade-off.",
+      "systems" : [
+        "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-tradeoff.html" : "Care Trade-off Assessment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "CareTradeOffValueSet",
+      "title" : "Care Trade-off Example ValueSet",
+      "description" : "Example value set containing types of care trade-off.",
+      "systems" : [
+        "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-pco-care-tradeoff.html" : "Care Trade-off Assessment"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
@@ -47,8 +89,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal",
-      "StructureDefinition-pco-prom-score-observation.html" : "Patient-Reported Outcome Measure (PROM) score"
+      "StructureDefinition-pco-prom-score-observation.html" : "Patient-Reported Outcome Measure (PROM) score",
+      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs",
@@ -60,9 +102,21 @@
       "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"],
       "uses" : {
       },
-      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement",
+      "StructureDefinition-pco-what-matters-priority-focus.html" : "What Matters Priority or Focus Area",
       "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
-      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority"
+      "StructureDefinition-pco-what-matters-statement.html" : "What Matters Statement"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "WellBeingPriorityOrFocusValueSet",
+      "title" : "Well-Being Priority Or Focus",
+      "description" : "Value set containing well-being concepts for priority or focus area.",
+      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"],
+      "uses" : {
+      },
+      "StructureDefinition-pco-what-matters-priority-focus.html" : "What Matters Priority or Focus Area"
     }
   ]
 }

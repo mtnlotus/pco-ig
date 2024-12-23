@@ -10,7 +10,7 @@
   fhir:id [ fhir:v "wellbeing-concepts"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name=\"wellbeing-concepts\"> </a><a name=\"hcwellbeing-concepts\"> </a><a name=\"wellbeing-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">wellbeing-priority<a name=\"wellbeing-concepts-wellbeing-priority\"> </a></td><td>Well-Being Priority</td><td>Priority for one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">wellbeing-statement<a name=\"wellbeing-concepts-wellbeing-statement\"> </a></td><td>Well-Being Statement</td><td>Statement about one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">wellbeing-assessment<a name=\"wellbeing-concepts-wellbeing-assessment\"> </a></td><td>Well-Being Assessment</td><td>Assessment rating about one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"wellbeing-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"wellbeing-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"wellbeing-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"wellbeing-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name=\"wellbeing-concepts\"> </a><a name=\"hcwellbeing-concepts\"> </a><a name=\"wellbeing-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">wellbeing-vision<a name=\"wellbeing-concepts-wellbeing-vision\"> </a></td><td>Well-Being Vision</td><td>A peron's vision for well-being</td></tr><tr><td style=\"white-space:nowrap\">wellbeing-priority<a name=\"wellbeing-concepts-wellbeing-priority\"> </a></td><td>Well-Being Priority</td><td>Priority for one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">wellbeing-focus-area<a name=\"wellbeing-concepts-wellbeing-focus-area\"> </a></td><td>Well-Being Focus Area</td><td>Priority for one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">wellbeing-statement<a name=\"wellbeing-concepts-wellbeing-statement\"> </a></td><td>Well-Being Statement</td><td>Statement about one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">wellbeing-assessment<a name=\"wellbeing-concepts-wellbeing-assessment\"> </a></td><td>Well-Being Assessment</td><td>Assessment rating about one area of well-being</td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"wellbeing-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"wellbeing-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"wellbeing-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"wellbeing-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
   ] ; # 
   fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "Well-Being Concepts"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-12-13T23:01:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-23T14:45:33+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -39,10 +39,18 @@
   ] ) ; # 
   fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
   fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:count [ fhir:v "9"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
+     fhir:code [ fhir:v "wellbeing-vision" ] ;
+     fhir:display [ fhir:v "Well-Being Vision" ] ;
+     fhir:definition [ fhir:v "A peron's vision for well-being" ]
+  ] [
      fhir:code [ fhir:v "wellbeing-priority" ] ;
      fhir:display [ fhir:v "Well-Being Priority" ] ;
+     fhir:definition [ fhir:v "Priority for one area of well-being" ]
+  ] [
+     fhir:code [ fhir:v "wellbeing-focus-area" ] ;
+     fhir:display [ fhir:v "Well-Being Focus Area" ] ;
      fhir:definition [ fhir:v "Priority for one area of well-being" ]
   ] [
      fhir:code [ fhir:v "wellbeing-statement" ] ;

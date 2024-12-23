@@ -47,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"10.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -331,6 +332,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-pco-bothersome-health-concern.html"
+                  title="StructureDefinition/pco-bothersome-health-concern">Bothersome Health Concern</a>
+            </td>
+            <td>
+<p>Assessment observation about a bothersome symptom or health concern.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-pco-care-tradeoff.html"
+                  title="StructureDefinition/pco-care-tradeoff">Care Trade-off Assessment</a>
+            </td>
+            <td>
+<p>Assessment observation about a care trade-off that is helpful or burdensome (difficult, uncomfortable, or unhelpful).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-pco-gas-score-observation.html"
                   title="StructureDefinition/pco-gas-score-observation">Goal Attainment Scaling (GAS) score</a>
             </td>
@@ -394,11 +413,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-what-matters-priority.html"
-                  title="StructureDefinition/pco-what-matters-priority">What Matters Priority</a>
+               <a href="StructureDefinition-pco-what-matters-priority-focus.html"
+                  title="StructureDefinition/pco-what-matters-priority-focus">What Matters Priority or Focus Area</a>
             </td>
             <td>
-<p>Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority.</p>
+<p>Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area.</p>
 </td>
          </tr>
          <tr>
@@ -407,7 +426,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/pco-what-matters-statement">What Matters Statement</a>
             </td>
             <td>
-<p>Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area.</p>
+<p>Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain.</p>
 </td>
          </tr>
       </tbody>
@@ -435,6 +454,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pco-bothersome-health-concern-valueset.html"
+                  title="ValueSet/pco-bothersome-health-concern-valueset">Bothersome Health Concern Example ValueSet</a>
+            </td>
+            <td>
+<p>Example value set containing types of bothersome symptoms or health concerns.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pco-care-tradeoff-choices-valueset.html"
+                  title="ValueSet/pco-care-tradeoff-choices-valueset">Care Trade-off Choices ValueSet</a>
+            </td>
+            <td>
+<p>Example value set containing options for a care trade-off.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pco-care-tradeoff-valueset.html"
+                  title="ValueSet/pco-care-tradeoff-valueset">Care Trade-off Example ValueSet</a>
+            </td>
+            <td>
+<p>Example value set containing types of care trade-off.</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="ValueSet-gas-score-answers.html"
@@ -480,6 +526,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Example value set containing well-being domains from the VA Circle of Health.</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-wellbeing-priority-focus-vs.html"
+                  title="ValueSet/wellbeing-priority-focus-vs">Well-Being Priority Or Focus</a>
+            </td>
+            <td>
+<p>Value set containing well-being concepts for priority or focus area.</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="7"> </a>
@@ -488,6 +543,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-pco-bothersome-health-concern-concepts.html"
+                  title="CodeSystem/pco-bothersome-health-concern-concepts">Bothersome Health Concern Concepts</a>
+            </td>
+            <td>
+<p>Code system to identify bothersome symptoms or health concerns..</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-pco-care-tradeoff-choices.html"
+                  title="CodeSystem/pco-care-tradeoff-choices">Care Trade-off Choices</a>
+            </td>
+            <td>
+<p>Code system to identify care trade-off choices.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-pco-care-tradeoff-concepts.html"
+                  title="CodeSystem/pco-care-tradeoff-concepts">Care Trade-off Concepts</a>
+            </td>
+            <td>
+<p>Code system to identify care trade-off concepts.</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-pco-codes.html" title="CodeSystem/pco-codes">Codes for PCO</a>
@@ -760,7 +842,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 13, 2024 23:01+0000">2024-12-13</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 23, 2024 14:45+0000">2024-12-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -7,6 +7,27 @@
     "name" : "FHIRHelpers"
   },
   {
+    "id" : "pco-bothersome-health-concern-concepts",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts",
+    "version" : "0.2.0",
+    "name" : "BothersomeHealthConcernConcepts"
+  },
+  {
+    "id" : "pco-care-tradeoff-choices",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices",
+    "version" : "0.2.0",
+    "name" : "CareTradeOffChoices"
+  },
+  {
+    "id" : "pco-care-tradeoff-concepts",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts",
+    "version" : "0.2.0",
+    "name" : "CareTradeOffConcepts"
+  },
+  {
     "id" : "pco-codes",
     "type" : "CodeSystem",
     "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes",
@@ -99,11 +120,25 @@
     ]
   },
   {
+    "id" : "pco-bothersome-health-concern",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-bothersome-health-concern",
+    "version" : "0.2.0",
+    "name" : "BothersomeHealthConcern"
+  },
+  {
     "id" : "pco-care-plan",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
     "version" : "0.2.0",
     "name" : "PCOCarePlan"
+  },
+  {
+    "id" : "pco-care-tradeoff",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff",
+    "version" : "0.2.0",
+    "name" : "CareTradeOff"
   },
   {
     "id" : "pco-gas-goal-profile",
@@ -155,11 +190,11 @@
     "name" : "WhatMattersAssessment"
   },
   {
-    "id" : "pco-what-matters-priority",
+    "id" : "pco-what-matters-priority-focus",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus",
     "version" : "0.2.0",
-    "name" : "WhatMattersPriority"
+    "name" : "WhatMattersPriorityOrFocus"
   },
   {
     "id" : "pco-what-matters-statement",
@@ -183,6 +218,27 @@
     "name" : "GoalAttainmentScalingScore"
   },
   {
+    "id" : "pco-bothersome-health-concern-valueset",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset",
+    "version" : "0.2.0",
+    "name" : "BothersomeHealthConcernValueSet"
+  },
+  {
+    "id" : "pco-care-tradeoff-choices-valueset",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset",
+    "version" : "0.2.0",
+    "name" : "CareTradeOffChoicesValueSet"
+  },
+  {
+    "id" : "pco-care-tradeoff-valueset",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset",
+    "version" : "0.2.0",
+    "name" : "CareTradeOffValueSet"
+  },
+  {
     "id" : "pco-domain-category-valueset",
     "type" : "ValueSet",
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
@@ -202,6 +258,13 @@
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs",
     "version" : "0.2.0",
     "name" : "WellBeingDomainValueSet"
+  },
+  {
+    "id" : "wellbeing-priority-focus-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs",
+    "version" : "0.2.0",
+    "name" : "WellBeingPriorityOrFocusValueSet"
   },
   {
     "id" : "44249-1",

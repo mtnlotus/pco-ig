@@ -3,14 +3,14 @@
   "id" : "pcoWhatMattersBodyExample",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersBodyExample</b></p><a name=\"pcoWhatMattersBodyExample\"> </a><a name=\"hcpcoWhatMattersBodyExample\"> </a><a name=\"pcoWhatMattersBodyExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health body}\">Moving the Body</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts wellbeing-assessment}\">Well-Being Assessment</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2024-03-27 15:10:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-rating}\">Now Rating</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-reasons}\">Now Reasons</span></p><p><b>value</b>: My knee pain prevents me from walking.</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts future-rating}\">Future Rating</span></p><p><b>value</b>: 7</p></blockquote></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersBodyExample</b></p><a name=\"pcoWhatMattersBodyExample\"> </a><a name=\"hcpcoWhatMattersBodyExample\"> </a><a name=\"pcoWhatMattersBodyExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts wellbeing-assessment}\">Well-Being Assessment</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health body}\">Moving the Body</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2024-03-27 15:10:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-rating}\">Now Rating</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-reasons}\">Now Reasons</span></p><p><b>value</b>: My knee pain prevents me from walking.</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts future-rating}\">Future Rating</span></p><p><b>value</b>: 7</p></blockquote></div>"
   },
   "status" : "final",
   "category" : [{
     "coding" : [{
-      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
-      "code" : "body",
-      "display" : "Moving the Body"
+      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
+      "code" : "wellbeing-assessment",
+      "display" : "Well-Being Assessment"
     }]
   },
   {
@@ -21,8 +21,9 @@
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
-      "code" : "wellbeing-assessment"
+      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
+      "code" : "body",
+      "display" : "Moving the Body"
     }]
   },
   "subject" : {

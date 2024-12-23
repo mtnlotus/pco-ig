@@ -64,6 +64,24 @@
     }
   ],
   "profiles": {
+    "Observation": [
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation",
+        "title": "Patient-Reported Outcome Measure (PROM) score"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
+        "title": "What Matters Assessment"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus",
+        "title": "What Matters Priority or Focus Area"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement",
+        "title": "What Matters Statement"
+      }
+    ],
     "CarePlan": [
       {
         "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
@@ -78,24 +96,6 @@
       {
         "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile",
         "title": "Person-Centered PROM Goal"
-      }
-    ],
-    "Observation": [
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation",
-        "title": "Patient-Reported Outcome Measure (PROM) score"
-      },
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
-        "title": "What Matters Assessment"
-      },
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority",
-        "title": "What Matters Priority"
-      },
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement",
-        "title": "What Matters Statement"
       }
     ]
   },
@@ -121,6 +121,7 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal": [
+      "Observation",
       "ServiceRequest"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [

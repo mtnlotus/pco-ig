@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="82e76ace-a026-4372-bdcc-698291df0861"/>
+  <id value="549fa84c-2555-4fde-ac71-6a5e8f6736a2"/>
   <meta>
-    <lastUpdated value="2024-12-13T23:01:09.032+00:00"/>
+    <lastUpdated value="2024-12-23T14:45:33.705+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -63,7 +63,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-13T23:01:09+00:00"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71,8 +71,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fb41273c-ed11-4bdf-af93-b4c671aedec8"/>
-          <timestamp value="2024-12-13T23:02:35+00:00"/>
+          <identifier value="urn:uuid:cdb02c7f-da81-4d5b-98b1-f03e3b659658"/>
+          <timestamp value="2024-12-23T14:46:52+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -151,7 +151,7 @@
         <title value="Goal Attainment Scaling (GAS) Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-13T23:01:09+00:00"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -159,8 +159,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8dd01c53-ce7b-4358-8c05-a05399adcc85"/>
-          <timestamp value="2024-12-13T23:02:36+00:00"/>
+          <identifier value="urn:uuid:a113abd8-8d88-412b-935d-32b8a7f7926e"/>
+          <timestamp value="2024-12-23T14:46:53+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -187,6 +187,730 @@
             <name value="version"/>
             <valueUri value="http://loinc.org|2.78"/>
           </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-pco-bothersome-health-concern-concepts.html">codesystem Bothersome Health Concern Concepts v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 23 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-other"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-other">other</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-muscle-weakness"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-muscle-weakness">muscle-weakness</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling muscle weakness</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-pain"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-pain">pain</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling pain</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-medications"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-medications">medications</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling unsteady; trouble balancing/walking</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-worried-nervous-anxious"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-worried-nervous-anxious">worried-nervous-anxious</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling worried, nervous, anxious</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-sad"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-sad">sad</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling sad</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-irritable"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-irritable">irritable</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling irritable</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-adverse-effects"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-adverse-effects">adverse-effects</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling adverse effects from treatment(s)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-dizzy"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-dizzy">dizzy</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling dizzy</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-tired-lacking-energy"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-tired-lacking-energy">tired-lacking-energy</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Feeling tired/lacking energy</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-touble-sleeping"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-touble-sleeping">touble-sleeping</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having trouble sleeping</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-poor-eyesight"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-poor-eyesight">poor-eyesight</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having poor eyesight</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-poor-hearing"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-poor-hearing">poor-hearing</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having poor hearing</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-leg-swelling"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-leg-swelling">leg-swelling</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having leg swelling</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-trouble-breathing"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-trouble-breathing">trouble-breathing</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having trouble breathing (short of breath)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-healthcare-tasks-take-too-much-time"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-healthcare-tasks-take-too-much-time">healthcare-tasks-take-too-much-time</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having health care tasks take too much time</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-urinary-incontinence"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-urinary-incontinence">urinary-incontinence</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having urinary incontinence</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-bathroom-often"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-bathroom-often">bathroom-often</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having to go to the bathroom often</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-diarrhea"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-diarrhea">diarrhea</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having diarrhea</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-constipation"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-constipation">constipation</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having constipation</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-upset-stomach-nausea"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-upset-stomach-nausea">upset-stomach-nausea</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having upset stomach, nausea</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-memory-problems"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-memory-problems">memory-problems</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Having confusing or memory problems</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts-problem-list-item"> </a>  
+                  <a href="CodeSystem-pco-bothersome-health-concern-concepts.html#pco-bothersome-health-concern-concepts-problem-list-item">problem-list-item</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts</td>
+                <td>Problem List Item</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset"/>
+        <version value="0.2.0"/>
+        <name value="BothersomeHealthConcernValueSet"/>
+        <title value="Bothersome Health Concern Example ValueSet"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:b898533c-351c-4c94-a4fb-95b61faf2f6b"/>
+          <timestamp value="2024-12-23T14:46:53+00:00"/>
+          <total value="23"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="other"/>
+            <display value="Other"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="muscle-weakness"/>
+            <display value="Feeling muscle weakness"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="pain"/>
+            <display value="Feeling pain"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="medications"/>
+            <display value="Feeling unsteady; trouble balancing/walking"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="worried-nervous-anxious"/>
+            <display value="Feeling worried, nervous, anxious"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="sad"/>
+            <display value="Feeling sad"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="irritable"/>
+            <display value="Feeling irritable"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="adverse-effects"/>
+            <display value="Feeling adverse effects from treatment(s)"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="dizzy"/>
+            <display value="Feeling dizzy"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="tired-lacking-energy"/>
+            <display value="Feeling tired/lacking energy"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="touble-sleeping"/>
+            <display value="Having trouble sleeping"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="poor-eyesight"/>
+            <display value="Having poor eyesight"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="poor-hearing"/>
+            <display value="Having poor hearing"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="leg-swelling"/>
+            <display value="Having leg swelling"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="trouble-breathing"/>
+            <display value="Having trouble breathing (short of breath)"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="healthcare-tasks-take-too-much-time"/>
+            <display value="Having health care tasks take too much time"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="urinary-incontinence"/>
+            <display value="Having urinary incontinence"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="bathroom-often"/>
+            <display value="Having to go to the bathroom often"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="diarrhea"/>
+            <display value="Having diarrhea"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="constipation"/>
+            <display value="Having constipation"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="upset-stomach-nausea"/>
+            <display value="Having upset stomach, nausea"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="memory-problems"/>
+            <display value="Having confusing or memory problems"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"/>
+            <code value="problem-list-item"/>
+            <display value="Problem List Item"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-pco-care-tradeoff-choices.html">codesystem Care Trade-off Choices v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices-helpful"> </a>  
+                  <a href="CodeSystem-pco-care-tradeoff-choices.html#pco-care-tradeoff-choices-helpful">helpful</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices</td>
+                <td>Helpful</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices-bothersome"> </a>  
+                  <a href="CodeSystem-pco-care-tradeoff-choices.html#pco-care-tradeoff-choices-bothersome">bothersome</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices</td>
+                <td>Bothersome</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset"/>
+        <version value="0.2.0"/>
+        <name value="CareTradeOffChoicesValueSet"/>
+        <title value="Care Trade-off Choices ValueSet"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:179833ff-30b2-4209-8c4e-def4ab51bb50"/>
+          <timestamp value="2024-12-23T14:46:54+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"/>
+            <code value="helpful"/>
+            <display value="Helpful"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"/>
+            <code value="bothersome"/>
+            <display value="Bothersome"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-pco-care-tradeoff-concepts.html">codesystem Care Trade-off Concepts v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 13 concepts</p>
+            <table class="codes">
+              <tr>
+                <td>
+                  <b>Level</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-medications"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-medications">medications</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Medications</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-self-care-tasks"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-self-care-tasks">self-care-tasks</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Self-care tasks</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-diet"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-diet">diet</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Following a special diet</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-exercise"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-exercise">exercise</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Exercising</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-checking-vitals"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-checking-vitals">checking-vitals</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Checking health signs (e.g., weight, blood pressure)</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-checking-blood-sugar"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-checking-blood-sugar">checking-blood-sugar</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Checking blood sugar</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-wearing-cpap-mask"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-wearing-cpap-mask">wearing-cpap-mask</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Wearing CPAP mask</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-wearing-oxygen"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-wearing-oxygen">wearing-oxygen</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Wearing oxygen</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-using-cane-or-walker"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-using-cane-or-walker">using-cane-or-walker</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Using a cane or walker</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-other"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-other">other</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Other</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-tests-and-procedures"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-tests-and-procedures">tests-and-procedures</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Tests, treatments, and procedures</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-health-care-visits"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-health-care-visits">health-care-visits</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Health Care visits</td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts-community-services"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="CodeSystem-pco-care-tradeoff-concepts.html#pco-care-tradeoff-concepts-community-services">community-services</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts</td>
+                <td>Community programs, services and supports</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset"/>
+        <version value="0.2.0"/>
+        <name value="CareTradeOffValueSet"/>
+        <title value="Care Trade-off Example ValueSet"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:c2c8ead2-3b1f-445b-9860-1dcfc115286d"/>
+          <timestamp value="2024-12-23T14:46:54+00:00"/>
+          <total value="13"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+            <code value="medications"/>
+            <display value="Medications"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+            <code value="self-care-tasks"/>
+            <display value="Self-care tasks"/>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="diet"/>
+              <display value="Following a special diet"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="exercise"/>
+              <display value="Exercising"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="checking-vitals"/>
+              <display value="Checking health signs (e.g., weight, blood pressure)"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="checking-blood-sugar"/>
+              <display value="Checking blood sugar"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="wearing-cpap-mask"/>
+              <display value="Wearing CPAP mask"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="wearing-oxygen"/>
+              <display value="Wearing oxygen"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="using-cane-or-walker"/>
+              <display value="Using a cane or walker"/>
+            </contains>
+            <contains>
+              <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+              <code value="other"/>
+              <display value="Other"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+            <code value="tests-and-procedures"/>
+            <display value="Tests, treatments, and procedures"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+            <code value="health-care-visits"/>
+            <display value="Health Care visits"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
+            <code value="community-services"/>
+            <display value="Community programs, services and supports"/>
+          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -388,7 +1112,7 @@
         <title value="PCO Domain Categories"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-13T23:01:09+00:00"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -396,8 +1120,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:70caccde-28ab-4885-9694-0e96063f7f59"/>
-          <timestamp value="2024-12-13T23:02:37+00:00"/>
+          <identifier value="urn:uuid:18b4233f-a5d5-4d59-8faa-aadf6a758103"/>
+          <timestamp value="2024-12-23T14:46:55+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -785,7 +1509,7 @@
         <title value="PROM Target Measures"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-13T23:01:09+00:00"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -793,8 +1517,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5ddcbeff-8683-4422-9726-a6b974809fc7"/>
-          <timestamp value="2024-12-13T23:02:37+00:00"/>
+          <identifier value="urn:uuid:5f2a3d06-b043-46cd-822d-d4de9cf8af02"/>
+          <timestamp value="2024-12-23T14:46:55+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -1159,7 +1883,7 @@
         <title value="Well-Being Domains Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-13T23:01:09+00:00"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1167,8 +1891,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a8f9a56c-58bd-4eee-b721-4d7491d55dea"/>
-          <timestamp value="2024-12-13T23:02:38+00:00"/>
+          <identifier value="urn:uuid:23601d6f-2ed8-4e7a-981d-e6976cfcde30"/>
+          <timestamp value="2024-12-23T14:46:56+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -1231,6 +1955,114 @@
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
             <code value="professional-care"/>
             <display value="Professional Care"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-wellbeing-concepts.html">codesystem Well-Being Concepts v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-wellbeing-priority"> </a>  
+                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-wellbeing-priority">wellbeing-priority</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
+                <td>Well-Being Priority</td>
+                <td>
+                  <div>
+                    <p>Priority for one area of well-being</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-wellbeing-focus-area"> </a>  
+                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-wellbeing-focus-area">wellbeing-focus-area</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
+                <td>Well-Being Focus Area</td>
+                <td>
+                  <div>
+                    <p>Priority for one area of well-being</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs"/>
+        <version value="0.2.0"/>
+        <name value="WellBeingPriorityOrFocusValueSet"/>
+        <title value="Well-Being Priority Or Focus"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-23T14:45:33+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:6ec6001c-7b91-4a6d-b21d-1eccc68a530e"/>
+          <timestamp value="2024-12-23T14:46:56+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
+            <code value="wellbeing-priority"/>
+            <display value="Well-Being Priority"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
+            <code value="wellbeing-focus-area"/>
+            <display value="Well-Being Focus Area"/>
           </contains>
         </expansion>
       </ValueSet>

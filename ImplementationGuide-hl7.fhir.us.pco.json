@@ -10,7 +10,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-12-13T23:01:09+00:00",
+  "date" : "2024-12-23T14:45:33+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -657,6 +657,42 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-bothersome-health-concern"
+      },
+      "name" : "Bothersome Health Concern",
+      "description" : "Assessment observation about a bothersome symptom or health concern.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pco-bothersome-health-concern-concepts"
+      },
+      "name" : "Bothersome Health Concern Concepts",
+      "description" : "Code system to identify bothersome symptoms or health concerns..",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-bothersome-health-concern-valueset"
+      },
+      "name" : "Bothersome Health Concern Example ValueSet",
+      "description" : "Example value set containing types of bothersome symptoms or health concerns.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CarePlan"
       }],
       "reference" : {
@@ -725,6 +761,66 @@
       "name" : "Care Plan: Personal action step",
       "description" : "Care Plan activity: Initial personal action step toward goal of walking dog outside",
       "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-care-tradeoff"
+      },
+      "name" : "Care Trade-off Assessment",
+      "description" : "Assessment observation about a care trade-off that is helpful or burdensome (difficult, uncomfortable, or unhelpful).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pco-care-tradeoff-choices"
+      },
+      "name" : "Care Trade-off Choices",
+      "description" : "Code system to identify care trade-off choices.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-care-tradeoff-choices-valueset"
+      },
+      "name" : "Care Trade-off Choices ValueSet",
+      "description" : "Example value set containing options for a care trade-off.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pco-care-tradeoff-concepts"
+      },
+      "name" : "Care Trade-off Concepts",
+      "description" : "Code system to identify care trade-off concepts.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-care-tradeoff-valueset"
+      },
+      "name" : "Care Trade-off Example ValueSet",
+      "description" : "Example value set containing types of care trade-off.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1177,6 +1273,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/wellbeing-priority-focus-vs"
+      },
+      "name" : "Well-Being Priority Or Focus",
+      "description" : "Value set containing well-being concepts for priority or focus area.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1192,10 +1300,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-priority"
+        "reference" : "StructureDefinition/pco-what-matters-priority-focus"
       },
-      "name" : "What Matters Priority",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority.",
+      "name" : "What Matters Priority or Focus Area",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area.",
       "exampleBoolean" : false
     },
     {
@@ -1208,7 +1316,7 @@
       },
       "name" : "What Matters Priority: Moving the Body",
       "description" : "What Matters observation recorded by a Patient to indicate their priority for well-being.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus"
     },
     {
       "extension" : [{
@@ -1219,7 +1327,7 @@
         "reference" : "StructureDefinition/pco-what-matters-statement"
       },
       "name" : "What Matters Statement",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area.",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain.",
       "exampleBoolean" : false
     },
     {

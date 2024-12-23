@@ -3,7 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="wellbeing-concepts"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name="wellbeing-concepts"> </a><a name="hcwellbeing-concepts"> </a><a name="wellbeing-concepts-en-US"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">wellbeing-priority<a name="wellbeing-concepts-wellbeing-priority"> </a></td><td>Well-Being Priority</td><td>Priority for one area of well-being</td></tr><tr><td style="white-space:nowrap">wellbeing-statement<a name="wellbeing-concepts-wellbeing-statement"> </a></td><td>Well-Being Statement</td><td>Statement about one area of well-being</td></tr><tr><td style="white-space:nowrap">wellbeing-assessment<a name="wellbeing-concepts-wellbeing-assessment"> </a></td><td>Well-Being Assessment</td><td>Assessment rating about one area of well-being</td></tr><tr><td style="white-space:nowrap">now-rating<a name="wellbeing-concepts-now-rating"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style="white-space:nowrap">now-reasons<a name="wellbeing-concepts-now-reasons"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style="white-space:nowrap">future-rating<a name="wellbeing-concepts-future-rating"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style="white-space:nowrap">future-changes<a name="wellbeing-concepts-future-changes"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name="wellbeing-concepts"> </a><a name="hcwellbeing-concepts"> </a><a name="wellbeing-concepts-en-US"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">wellbeing-vision<a name="wellbeing-concepts-wellbeing-vision"> </a></td><td>Well-Being Vision</td><td>A peron's vision for well-being</td></tr><tr><td style="white-space:nowrap">wellbeing-priority<a name="wellbeing-concepts-wellbeing-priority"> </a></td><td>Well-Being Priority</td><td>Priority for one area of well-being</td></tr><tr><td style="white-space:nowrap">wellbeing-focus-area<a name="wellbeing-concepts-wellbeing-focus-area"> </a></td><td>Well-Being Focus Area</td><td>Priority for one area of well-being</td></tr><tr><td style="white-space:nowrap">wellbeing-statement<a name="wellbeing-concepts-wellbeing-statement"> </a></td><td>Well-Being Statement</td><td>Statement about one area of well-being</td></tr><tr><td style="white-space:nowrap">wellbeing-assessment<a name="wellbeing-concepts-wellbeing-assessment"> </a></td><td>Well-Being Assessment</td><td>Assessment rating about one area of well-being</td></tr><tr><td style="white-space:nowrap">now-rating<a name="wellbeing-concepts-now-rating"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style="white-space:nowrap">now-reasons<a name="wellbeing-concepts-now-reasons"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style="white-space:nowrap">future-rating<a name="wellbeing-concepts-future-rating"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style="white-space:nowrap">future-changes<a name="wellbeing-concepts-future-changes"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
   <version value="0.2.0"/>
@@ -11,7 +11,7 @@
   <title value="Well-Being Concepts"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-12-13T23:01:09+00:00"/>
+  <date value="2024-12-23T14:45:33+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -33,10 +33,20 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <content value="complete"/>
-  <count value="7"/>
+  <count value="9"/>
+  <concept>
+    <code value="wellbeing-vision"/>
+    <display value="Well-Being Vision"/>
+    <definition value="A peron's vision for well-being"/>
+  </concept>
   <concept>
     <code value="wellbeing-priority"/>
     <display value="Well-Being Priority"/>
+    <definition value="Priority for one area of well-being"/>
+  </concept>
+  <concept>
+    <code value="wellbeing-focus-area"/>
+    <display value="Well-Being Focus Area"/>
     <definition value="Priority for one area of well-being"/>
   </concept>
   <concept>

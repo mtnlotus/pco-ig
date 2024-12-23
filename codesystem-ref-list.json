@@ -1,6 +1,39 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "BothersomeHealthConcernConcepts",
+      "title" : "Bothersome Health Concern Concepts",
+      "description" : "Code system to identify bothersome symptoms or health concerns..",
+      "uses" : {
+      },
+      "ValueSet-pco-bothersome-health-concern-valueset.html" : "Bothersome Health Concern Example ValueSet"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "CareTradeOffChoices",
+      "title" : "Care Trade-off Choices",
+      "description" : "Code system to identify care trade-off choices.",
+      "uses" : {
+      },
+      "ValueSet-pco-care-tradeoff-choices-valueset.html" : "Care Trade-off Choices ValueSet"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "CareTradeOffConcepts",
+      "title" : "Care Trade-off Concepts",
+      "description" : "Code system to identify care trade-off concepts.",
+      "uses" : {
+      },
+      "ValueSet-pco-care-tradeoff-valueset.html" : "Care Trade-off Example ValueSet"
+    },
+    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
       "version" : "0.2.0",
       "status" : "active",
@@ -23,6 +56,17 @@
       "ValueSet-wellbeing-domains-example-vs.html" : "Well-Being Domains Example"
     },
     {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "WellBeingConcepts",
+      "title" : "Well-Being Concepts",
+      "description" : "Code system to identify resource codes and category domains for \"What Matters\".",
+      "uses" : {
+      },
+      "ValueSet-wellbeing-priority-focus-vs.html" : "Well-Being Priority Or Focus"
+    },
+    {
       "url" : "http://loinc.org",
       "version" : "3.1.0",
       "status" : "active",
@@ -33,8 +77,8 @@
       "uses" : {
       },
       "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
-      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers"
+      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures"
     }
   ]
 }

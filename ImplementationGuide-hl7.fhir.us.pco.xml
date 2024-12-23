@@ -11,7 +11,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-13T23:01:09+00:00"/>
+  <date value="2024-12-23T14:45:33+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -492,6 +492,39 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-bothersome-health-concern"/>
+      </reference>
+      <name value="Bothersome Health Concern"/>
+      <description value="Assessment observation about a bothersome symptom or health concern."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pco-bothersome-health-concern-concepts"/>
+      </reference>
+      <name value="Bothersome Health Concern Concepts"/>
+      <description value="Code system to identify bothersome symptoms or health concerns.."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-bothersome-health-concern-valueset"/>
+      </reference>
+      <name value="Bothersome Health Concern Example ValueSet"/>
+      <description value="Example value set containing types of bothersome symptoms or health concerns."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CarePlan"/>
       </extension>
       <reference>
@@ -555,6 +588,61 @@
       <name value="Care Plan: Personal action step"/>
       <description value="Care Plan activity: Initial personal action step toward goal of walking dog outside"/>
       <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-care-tradeoff"/>
+      </reference>
+      <name value="Care Trade-off Assessment"/>
+      <description value="Assessment observation about a care trade-off that is helpful or burdensome (difficult, uncomfortable, or unhelpful)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pco-care-tradeoff-choices"/>
+      </reference>
+      <name value="Care Trade-off Choices"/>
+      <description value="Code system to identify care trade-off choices."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-care-tradeoff-choices-valueset"/>
+      </reference>
+      <name value="Care Trade-off Choices ValueSet"/>
+      <description value="Example value set containing options for a care trade-off."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pco-care-tradeoff-concepts"/>
+      </reference>
+      <name value="Care Trade-off Concepts"/>
+      <description value="Code system to identify care trade-off concepts."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-care-tradeoff-valueset"/>
+      </reference>
+      <name value="Care Trade-off Example ValueSet"/>
+      <description value="Example value set containing types of care trade-off."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -968,6 +1056,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/wellbeing-priority-focus-vs"/>
+      </reference>
+      <name value="Well-Being Priority Or Focus"/>
+      <description value="Value set containing well-being concepts for priority or focus area."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -982,10 +1081,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-what-matters-priority"/>
+        <reference value="StructureDefinition/pco-what-matters-priority-focus"/>
       </reference>
-      <name value="What Matters Priority"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."/>
+      <name value="What Matters Priority or Focus Area"/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -997,7 +1096,7 @@
       </reference>
       <name value="What Matters Priority: Moving the Body"/>
       <description value="What Matters observation recorded by a Patient to indicate their priority for well-being."/>
-      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1007,7 +1106,7 @@
         <reference value="StructureDefinition/pco-what-matters-statement"/>
       </reference>
       <name value="What Matters Statement"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with a text statement about a focus area."/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
