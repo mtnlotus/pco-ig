@@ -1,12 +1,12 @@
 
 Instance: pcoWhatMattersPriorityExample
-InstanceOf: WhatMattersPriorityOrFocus
+InstanceOf: WhatMattersPriority
 Title: "What Matters Priority: Moving the Body"
 Description: "What Matters observation recorded by a Patient to indicate their priority for well-being."
 Usage: #example
 * status = #final 
 * category[wellbeing-category] = WellBeingConcepts#wellbeing-priority "Well-Being Priority"
-* code = VAWholeHealth#body "Moving the Body"
+* code = VAWholeHealthExample#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:05:00Z"
@@ -19,7 +19,7 @@ Description: "What Matters observation added by a Patient to record a statement 
 Usage: #example
 * status = #final 
 * category[wellbeing-category] = WellBeingConcepts#wellbeing-statement "Well-Being Statement"
-* code = VAWholeHealth#relationships "Family, Friends & Co-Workers"
+* code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T14:30:00Z"
@@ -32,7 +32,7 @@ Description: "What Matters assessment observation recorded by a Patient as prepa
 Usage: #example
 * status = #final 
 * category[wellbeing-category] = WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
-* code = VAWholeHealth#body "Moving the Body"
+* code = VAWholeHealthExample#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T15:10:00Z"
@@ -46,7 +46,7 @@ Title: "What Matters: Family & Friends"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
 // * category[wellbeing-category] = WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
-* code = VAWholeHealth#relationships "Family, Friends & Co-Workers"
+* code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * status = #final 
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)

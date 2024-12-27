@@ -31,7 +31,7 @@ Id: pco-gas-score-observation
 Title: "Goal Attainment Scaling (GAS) score"
 Description: "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."
 // Satisfies US Core required binding for category
-* category[us-core] 1..1 MS
+* category[us-core] 1..* MS
 * category[us-core] = OBSCAT#survey
 * effectiveDateTime 1..1 MS
   * ^short = "When the score was assessed"

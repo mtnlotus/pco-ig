@@ -16,6 +16,9 @@ copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#US
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg 
+    valueCode: pc
 publisher:
   name: HL7 International / Patient Care
   url: http://www.hl7.org/Special/committees/patientcare
@@ -60,6 +63,10 @@ menu:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
 parameters:
+  path-expansion-params: '../../input/_resources/terminology-settings.json'  # for using US ed of SNOMED
+  show-inherited-invariants: false
+  apply-jurisdiction: true
+  apply-publisher: true
   # no-narrative:
   #   - "Bundle/*"
   #   - "DiagnosticReport/*"

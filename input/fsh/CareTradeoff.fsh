@@ -16,8 +16,9 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 * code from CareTradeOffValueSet (preferred)
   * ^short = "Type of care trade-off"
 * focus 0..* MS
-* focus only Reference(MedicationRequest or Procedure)
+* focus only Reference(MedicationRequest or Procedure or ServiceRequest)
   * ^short = "The medication or procedure that has this trade-off"
+* note 0..* MS
 
 // TODO: how to specify text-entered medication name?
 
@@ -34,6 +35,7 @@ Description: "Code system to identify care trade-off concepts."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* insert PCOCodeSystemPublisher
 * #medications "Medications"
 * #self-care-tasks "Self-care tasks"
   * #diet "Following a special diet"
@@ -63,8 +65,10 @@ Description: "Code system to identify care trade-off choices."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* insert PCOCodeSystemPublisher
 * #helpful "Helpful"
 * #bothersome "Bothersome"
+* #unspecified "Unspecified"
 
 ValueSet: CareTradeOffChoicesValueSet
 Id: pco-care-tradeoff-choices-valueset

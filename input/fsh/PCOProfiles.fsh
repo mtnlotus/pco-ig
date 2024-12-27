@@ -1,26 +1,24 @@
 
-RuleSet: PCOGoalCategory
+RuleSet: PersonCenteredCategory
 * category MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
 * category contains
-    pco-goal 1..1 MS
-// * category[pco-goal] from PCOCategoryValueSet (required)
-* category[pco-goal] = PCOCodes#person-centered-goal
-  * ^short = "Person-Centered Goal category"
+    pco-category 0..1 MS
+* category[pco-category] from PCOCategoryValueSet (extensible)
+  * ^short = "Person-Centered category"
 
-RuleSet: PCOGoalDomainCategory
+RuleSet: GoalDomainCategory
 * category MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
 * category contains
     goal-domain 0..* MS
 * category[goal-domain] from PCODomainCategoryValueSet (preferred)
   * ^short = "Person-Centered Outcome domain category"
   
-/*
 RuleSet: PCOSurveyCategory
 * category MS
 * category ^slicing.discriminator.type = #pattern
@@ -34,15 +32,14 @@ RuleSet: PCOSurveyCategory
 * category[survey] ^requirements = "Indicates the person-centered outcomes observation is of type survey"
 * category[survey]
   * ^binding.description = "Required by US Core"
-*/
 
 Profile: PCOGoalProfile
 Parent: USCoreGoalProfile
 Id: pco-goal-profile
 Title: "Person-Centered Goal"
 Description: "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."
-* insert PCOGoalCategory
-* insert PCOGoalDomainCategory
+* insert PersonCenteredCategory
+* insert GoalDomainCategory
 * expressedBy 0..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
 * start[x] 1..1 MS

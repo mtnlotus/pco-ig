@@ -27,7 +27,7 @@ Usage: #example
 * description.text = "Reduce to mild anxiety level score"
 * target.measure = $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]"
 * target.detailQuantity.comparator = #<
-* target.detailQuantity = 6 '{score}' "score"
+* target.detailQuantity = 6 #{score} "score"
 
 Instance: pcoPROMScoreAnxietyExample
 InstanceOf: PCOPatientReportedOutcomeScore

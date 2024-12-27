@@ -6,6 +6,7 @@ Description: "Code system to identify resource codes and category domains for \"
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* insert PCOCodeSystemPublisher
 * #wellbeing-vision "Well-Being Vision"
     "A peron's vision for well-being"
 * #wellbeing-priority "Well-Being Priority"
@@ -33,13 +34,14 @@ Description: "Value set containing well-being concepts for priority or focus are
 * WellBeingConcepts#wellbeing-priority "Well-Being Priority"
 * WellBeingConcepts#wellbeing-focus-area "Well-Being Focus Area"
 
-CodeSystem: VAWholeHealth
-Id: va-whole-health
+CodeSystem: VAWholeHealthExample
+Id: va-whole-health-example
 Title: "VA Whole Health Concepts"
 Description: "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* insert PCOCodeSystemPublisher
 * #body "Moving the Body"
     "Our physical, mental, and emotional health are impacted by the amount and kind of movement we do. Moving the body can take many forms such as dancing, walking, gardening, yoga, and exercise."
 * #mind "Power of the Mind"
@@ -65,13 +67,13 @@ Title: "Well-Being Domains Example"
 Description: "Example value set containing well-being domains from the VA Circle of Health."
 * ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-// * include codes from system VAWholeHealth
-* VAWholeHealth#body "Moving the Body"
-* VAWholeHealth#mind "Power of the Mind"
-* VAWholeHealth#nourishment "Food & Drink"
-* VAWholeHealth#recharge "Recharge"
-* VAWholeHealth#surroundings "Surroundings"
-* VAWholeHealth#personal-development "Personal Development"
-* VAWholeHealth#spirit-and-soul "Spirit & Soul"
-* VAWholeHealth#relationships "Family, Friends & Co-Workers"
-* VAWholeHealth#professional-care "Professional Care"
+// * include codes from system VAWholeHealthExample
+* VAWholeHealthExample#body "Moving the Body"
+* VAWholeHealthExample#mind "Power of the Mind"
+* VAWholeHealthExample#nourishment "Food & Drink"
+* VAWholeHealthExample#recharge "Recharge"
+* VAWholeHealthExample#surroundings "Surroundings"
+* VAWholeHealthExample#personal-development "Personal Development"
+* VAWholeHealthExample#spirit-and-soul "Spirit & Soul"
+* VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
+* VAWholeHealthExample#professional-care "Professional Care"

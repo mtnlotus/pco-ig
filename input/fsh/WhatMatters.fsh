@@ -8,7 +8,7 @@ RuleSet: WellBeingCategory
     wellbeing-category 0..1 MS
   * ^short = "Well-Being observation category"
 
-Profile: WhatMattersPriorityOrFocus
+Profile: WhatMattersPriority
 Parent: USCoreSimpleObservationProfile
 Id: pco-what-matters-priority-focus
 Title: "What Matters Priority or Focus Area"
