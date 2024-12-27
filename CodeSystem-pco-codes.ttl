@@ -10,15 +10,19 @@
   fhir:id [ fhir:v "pco-codes"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco-codes</b></p><a name=\"pco-codes\"> </a><a name=\"hcpco-codes\"> </a><a name=\"pco-codes-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered<a name=\"pco-codes-person-centered\"> </a></td><td>Person-Centered</td></tr><tr><td style=\"white-space:nowrap\">person-centered-goal<a name=\"pco-codes-person-centered-goal\"> </a></td><td>Person-Centered Goal</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-bundle<a name=\"pco-codes-pco-data-submission-bundle\"> </a></td><td>PCO Bundle</td></tr><tr><td style=\"white-space:nowrap\">pco-data-submission-standing-order<a name=\"pco-codes-pco-data-submission-standing-order\"> </a></td><td>PCO Submission Standing Order</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco-codes</b></p><a name=\"pco-codes\"> </a><a name=\"hcpco-codes\"> </a><a name=\"pco-codes-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered<a name=\"pco-codes-person-centered\"> </a></td><td>Person-Centered</td></tr><tr><td style=\"white-space:nowrap\">what-matters<a name=\"pco-codes-what-matters\"> </a></td><td>What Matters</td></tr><tr><td style=\"white-space:nowrap\">bothersome-health-concern<a name=\"pco-codes-bothersome-health-concern\"> </a></td><td>Bothersome Health Concern</td></tr><tr><td style=\"white-space:nowrap\">care-trade-off<a name=\"pco-codes-care-trade-off\"> </a></td><td>Care Trade-Off</td></tr></table></div>"
   ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pc" ]
+  ] ) ; # 
   fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "PCOCodes"] ; # 
   fhir:title [ fhir:v "Codes for PCO"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-12-23T14:45:33+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-27T16:03:14+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -44,14 +48,14 @@
      fhir:code [ fhir:v "person-centered" ] ;
      fhir:display [ fhir:v "Person-Centered" ]
   ] [
-     fhir:code [ fhir:v "person-centered-goal" ] ;
-     fhir:display [ fhir:v "Person-Centered Goal" ]
+     fhir:code [ fhir:v "what-matters" ] ;
+     fhir:display [ fhir:v "What Matters" ]
   ] [
-     fhir:code [ fhir:v "pco-data-submission-bundle" ] ;
-     fhir:display [ fhir:v "PCO Bundle" ]
+     fhir:code [ fhir:v "bothersome-health-concern" ] ;
+     fhir:display [ fhir:v "Bothersome Health Concern" ]
   ] [
-     fhir:code [ fhir:v "pco-data-submission-standing-order" ] ;
-     fhir:display [ fhir:v "PCO Submission Standing Order" ]
+     fhir:code [ fhir:v "care-trade-off" ] ;
+     fhir:display [ fhir:v "Care Trade-Off" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

@@ -5,12 +5,16 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.us.pco</b></p><a name=\"hl7.fhir.us.pco\"> </a><a name=\"hchl7.fhir.us.pco\"> </a><a name=\"hl7.fhir.us.pco-en-US\"> </a><h2>PCO</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco</pre><div><p>Person-Centered Outcomes (PCO) FHIR Implementation Guide</p>\n</div></div>"
   },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pc"
+  }],
   "url" : "http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco",
   "version" : "0.2.0",
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-12-23T14:45:33+00:00",
+  "date" : "2024-12-27T16:03:14+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -97,6 +101,50 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-expansion-params"
+      },
+      {
+        "url" : "value",
+        "valueString" : "../../input/_resources/terminology-settings.json"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -257,29 +305,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -387,6 +413,50 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-expansion-params"
+      },
+      {
+        "url" : "value",
+        "valueString" : "../../input/_resources/terminology-settings.json"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -547,29 +617,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueCode" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -910,7 +958,7 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/pcoGASScoretBaselineExample"
+        "reference" : "Observation/pcoGASScoreBaselineExample"
       },
       "name" : "GAS Baseline Score",
       "description" : "Baseline GAS score observation at start of goal.",
@@ -1130,6 +1178,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-category-vs"
+      },
+      "name" : "Person-Centered Category Value Set",
+      "description" : "Used to categorize resources as being a Person-Centered Goal",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1173,6 +1233,18 @@
       },
       "name" : "Person-Centered Goal Identification",
       "description" : "Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-survey-category-vs"
+      },
+      "name" : "Person-Centered Outcomes Survey Value Set",
+      "description" : "Used to indicate that PCO observations of of type Survey, as defined by US-Core.",
       "exampleBoolean" : false
     },
     {
@@ -1240,7 +1312,7 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/va-whole-health"
+        "reference" : "CodeSystem/va-whole-health-example"
       },
       "name" : "VA Whole Health Concepts",
       "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",

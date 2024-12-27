@@ -6,12 +6,15 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.us.pco</b></p><a name="hl7.fhir.us.pco"> </a><a name="hchl7.fhir.us.pco"> </a><a name="hl7.fhir.us.pco-en-US"> </a><h2>PCO</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco</pre><div><p>Person-Centered Outcomes (PCO) FHIR Implementation Guide</p>
 </div></div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco"/>
   <version value="0.2.0"/>
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-23T14:45:33+00:00"/>
+  <date value="2024-12-27T16:03:14+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -85,6 +88,38 @@
       </extension>
       <extension url="value">
         <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../input/_resources/terminology-settings.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -201,23 +236,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-jurisdiction"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueString value="apply-license"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-publisher"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -296,6 +315,38 @@
       </extension>
       <extension url="value">
         <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../input/_resources/terminology-settings.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -412,23 +463,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-jurisdiction"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueCode value="apply-license"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="apply-publisher"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -724,7 +759,7 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/pcoGASScoretBaselineExample"/>
+        <reference value="Observation/pcoGASScoreBaselineExample"/>
       </reference>
       <name value="GAS Baseline Score"/>
       <description value="Baseline GAS score observation at start of goal."/>
@@ -925,6 +960,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-category-vs"/>
+      </reference>
+      <name value="Person-Centered Category Value Set"/>
+      <description value="Used to categorize resources as being a Person-Centered Goal"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -965,6 +1011,17 @@
       </reference>
       <name value="Person-Centered Goal Identification"/>
       <description value="Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pco-survey-category-vs"/>
+      </reference>
+      <name value="Person-Centered Outcomes Survey Value Set"/>
+      <description value="Used to indicate that PCO observations of of type Survey, as defined by US-Core."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1026,7 +1083,7 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/va-whole-health"/>
+        <reference value="CodeSystem/va-whole-health-example"/>
       </reference>
       <name value="VA Whole Health Concepts"/>
       <description value="Code system to identify &quot;What Matters&quot; concepts from the VA Whole Health appraoch and Circle of Health."/>

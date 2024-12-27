@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="549fa84c-2555-4fde-ac71-6a5e8f6736a2"/>
+  <id value="8d40b2b1-48d3-4f25-89f2-76d0942498a5"/>
   <meta>
-    <lastUpdated value="2024-12-23T14:45:33.705+00:00"/>
+    <lastUpdated value="2024-12-27T16:03:14.809+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -63,7 +63,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71,8 +71,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:cdb02c7f-da81-4d5b-98b1-f03e3b659658"/>
-          <timestamp value="2024-12-23T14:46:52+00:00"/>
+          <identifier value="urn:uuid:0931e123-69a6-440d-908d-db0dfaac32b1"/>
+          <timestamp value="2024-12-27T16:05:49+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -151,7 +151,7 @@
         <title value="Goal Attainment Scaling (GAS) Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -159,8 +159,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a113abd8-8d88-412b-935d-32b8a7f7926e"/>
-          <timestamp value="2024-12-23T14:46:53+00:00"/>
+          <identifier value="urn:uuid:b57b807b-d6a9-4587-becc-ef98e6a83c17"/>
+          <timestamp value="2024-12-27T16:05:50+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -410,7 +410,7 @@
         <title value="Bothersome Health Concern Example ValueSet"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -418,8 +418,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b898533c-351c-4c94-a4fb-95b61faf2f6b"/>
-          <timestamp value="2024-12-23T14:46:53+00:00"/>
+          <identifier value="urn:uuid:c08bc787-ccca-4ab7-a0ce-61328f5f192f"/>
+          <timestamp value="2024-12-27T16:05:51+00:00"/>
           <total value="23"/>
           <offset value="0"/>
           <parameter>
@@ -570,7 +570,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
               <a href="CodeSystem-pco-care-tradeoff-choices.html">codesystem Care Trade-off Choices v0.2.0 (CodeSystem)</a>
             </p>
-            <p>This value set contains 2 concepts</p>
+            <p>This value set contains 3 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -599,6 +599,14 @@
                 <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices</td>
                 <td>Bothersome</td>
               </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices-unspecified"> </a>  
+                  <a href="CodeSystem-pco-care-tradeoff-choices.html#pco-care-tradeoff-choices-unspecified">unspecified</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices</td>
+                <td>Unspecified</td>
+              </tr>
             </table>
           </div>
         </text>
@@ -608,7 +616,7 @@
         <title value="Care Trade-off Choices ValueSet"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -616,9 +624,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:179833ff-30b2-4209-8c4e-def4ab51bb50"/>
-          <timestamp value="2024-12-23T14:46:54+00:00"/>
-          <total value="2"/>
+          <identifier value="urn:uuid:a54f0f5e-8d18-4886-a143-7fe90beff7fa"/>
+          <timestamp value="2024-12-27T16:05:51+00:00"/>
+          <total value="3"/>
           <offset value="0"/>
           <parameter>
             <name value="count"/>
@@ -645,6 +653,11 @@
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"/>
             <code value="bothersome"/>
             <display value="Bothersome"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"/>
+            <code value="unspecified"/>
+            <display value="Unspecified"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -818,7 +831,7 @@
         <title value="Care Trade-off Example ValueSet"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -826,8 +839,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c2c8ead2-3b1f-445b-9860-1dcfc115286d"/>
-          <timestamp value="2024-12-23T14:46:54+00:00"/>
+          <identifier value="urn:uuid:8742c977-03d9-41cf-a3a0-0b30e913b1ba"/>
+          <timestamp value="2024-12-27T16:05:52+00:00"/>
           <total value="13"/>
           <offset value="0"/>
           <parameter>
@@ -910,6 +923,86 @@
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"/>
             <code value="community-services"/>
             <display value="Community programs, services and supports"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-pco-codes.html">codesystem Codes for PCO v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-codes-person-centered"> </a>  
+                  <a href="CodeSystem-pco-codes.html#pco-codes-person-centered">person-centered</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-codes</td>
+                <td>Person-Centered</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+        <version value="0.2.0"/>
+        <name value="PCOCategoryValueSet"/>
+        <title value="Person-Centered Category Value Set"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:dce77433-c37d-457e-a5b3-d2e46c93dbfa"/>
+          <timestamp value="2024-12-27T16:05:52+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"/>
+            <code value="person-centered"/>
+            <display value="Person-Centered"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -1112,7 +1205,7 @@
         <title value="PCO Domain Categories"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1120,8 +1213,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:18b4233f-a5d5-4d59-8faa-aadf6a758103"/>
-          <timestamp value="2024-12-23T14:46:55+00:00"/>
+          <identifier value="urn:uuid:0acc1358-33cf-45f4-9983-9c6be1b39594"/>
+          <timestamp value="2024-12-27T16:05:53+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -1199,6 +1292,95 @@
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains"/>
             <code value="emotional-and-mental-health"/>
             <display value="Emotional And Mental Health"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://terminology.hl7.org/6.1.0/CodeSystem-observation-category.html">codesystem Observation Category Codes v1.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://terminology.hl7.org/CodeSystem/observation-category-survey"> </a>  
+                  <a href="http://terminology.hl7.org/6.1.0/CodeSystem-observation-category.html#observation-category-survey">survey</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Survey</td>
+                <td>
+                  <div>
+                    <p>Assessment tool/survey instrument observations (e.g., Apgar Scores, Montreal Cognitive Assessment (MoCA)).</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs"/>
+        <version value="0.2.0"/>
+        <name value="PCOSurveyCategoryVS"/>
+        <title value="Person-Centered Outcomes Survey Value Set"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:d9fac527-4d50-4a62-9cc4-c58b0d0c6ecb"/>
+          <timestamp value="2024-12-27T16:05:53+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/observation-category|1.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -1509,7 +1691,7 @@
         <title value="PROM Target Measures"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1517,8 +1699,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5f2a3d06-b043-46cd-822d-d4de9cf8af02"/>
-          <timestamp value="2024-12-23T14:46:55+00:00"/>
+          <identifier value="urn:uuid:e8e2888e-d620-4eab-8fdc-929cae9b1aca"/>
+          <timestamp value="2024-12-27T16:05:54+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -1730,7 +1912,7 @@
               <b>Generated Narrative: ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-va-whole-health.html">codesystem VA Whole Health Concepts v0.2.0 (CodeSystem)</a>
+              <a href="CodeSystem-va-whole-health-example.html">codesystem VA Whole Health Concepts v0.2.0 (CodeSystem)</a>
             </p>
             <p>This value set contains 9 concepts</p>
             <table class="codes">
@@ -1750,10 +1932,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-body"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-body">body</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-body"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-body">body</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Moving the Body</td>
                 <td>
                   <div>
@@ -1764,10 +1946,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-mind"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-mind">mind</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-mind"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-mind">mind</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Power of the Mind</td>
                 <td>
                   <div>
@@ -1778,10 +1960,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-nourishment"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-nourishment">nourishment</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-nourishment"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-nourishment">nourishment</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Food &amp; Drink</td>
                 <td>
                   <div>
@@ -1792,10 +1974,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-recharge"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-recharge">recharge</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-recharge"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-recharge">recharge</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Recharge</td>
                 <td>
                   <div>
@@ -1806,10 +1988,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-surroundings"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-surroundings">surroundings</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-surroundings"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-surroundings">surroundings</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Surroundings</td>
                 <td>
                   <div>
@@ -1820,10 +2002,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-personal-development"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-personal-development">personal-development</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-personal-development"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-personal-development">personal-development</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Personal Development</td>
                 <td>
                   <div>
@@ -1834,10 +2016,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-spirit-and-soul"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-spirit-and-soul">spirit-and-soul</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-spirit-and-soul"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-spirit-and-soul">spirit-and-soul</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Spirit &amp; Soul</td>
                 <td>
                   <div>
@@ -1848,10 +2030,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-relationships"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-relationships">relationships</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-relationships"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-relationships">relationships</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Family, Friends &amp; Co-Workers</td>
                 <td>
                   <div>
@@ -1862,10 +2044,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-professional-care"> </a>  
-                  <a href="CodeSystem-va-whole-health.html#va-whole-health-professional-care">professional-care</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example-professional-care"> </a>  
+                  <a href="CodeSystem-va-whole-health-example.html#va-whole-health-example-professional-care">professional-care</a>
                 </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example</td>
                 <td>Professional Care</td>
                 <td>
                   <div>
@@ -1883,7 +2065,7 @@
         <title value="Well-Being Domains Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1891,8 +2073,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:23601d6f-2ed8-4e7a-981d-e6976cfcde30"/>
-          <timestamp value="2024-12-23T14:46:56+00:00"/>
+          <identifier value="urn:uuid:aef98b14-4e11-43f2-a9b8-07d9f1ca6cb3"/>
+          <timestamp value="2024-12-27T16:05:54+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>
@@ -1909,50 +2091,50 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health|0.2.0"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example|0.2.0"/>
           </parameter>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="body"/>
             <display value="Moving the Body"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="mind"/>
             <display value="Power of the Mind"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="nourishment"/>
             <display value="Food &amp; Drink"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="recharge"/>
             <display value="Recharge"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="surroundings"/>
             <display value="Surroundings"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="personal-development"/>
             <display value="Personal Development"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="spirit-and-soul"/>
             <display value="Spirit &amp; Soul"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="relationships"/>
             <display value="Family, Friends &amp; Co-Workers"/>
           </contains>
           <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"/>
             <code value="professional-care"/>
             <display value="Professional Care"/>
           </contains>
@@ -2026,7 +2208,7 @@
         <title value="Well-Being Priority Or Focus"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2024-12-23T14:45:33+00:00"/>
+        <date value="2024-12-27T16:03:14+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -2034,8 +2216,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6ec6001c-7b91-4a6d-b21d-1eccc68a530e"/>
-          <timestamp value="2024-12-23T14:46:56+00:00"/>
+          <identifier value="urn:uuid:c34e1f85-1e81-4897-9643-15da9750fc1b"/>
+          <timestamp value="2024-12-27T16:05:55+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>

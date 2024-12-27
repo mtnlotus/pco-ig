@@ -128,6 +128,17 @@
       "ValueSet-pco-care-tradeoff-valueset.html" : "Care Trade-off Example ValueSet"
     },
     {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-codes",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PCOCodes",
+      "title" : "Codes for PCO",
+      "description" : "Codes to identify content associated with this IG",
+      "uses" : {
+      },
+      "ValueSet-pco-category-vs.html" : "Person-Centered Category Value Set"
+    },
+    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
       "version" : "0.2.0",
       "status" : "active",
@@ -139,10 +150,10 @@
       "ValueSet-pco-domain-category-valueset.html" : "PCO Domain Categories"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example",
       "version" : "0.2.0",
       "status" : "active",
-      "name" : "VAWholeHealth",
+      "name" : "VAWholeHealthExample",
       "title" : "VA Whole Health Concepts",
       "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",
       "uses" : {
@@ -186,15 +197,15 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
       "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
       "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
       "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
       "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category"
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
@@ -254,8 +265,9 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1125"],
       "uses" : {
       },
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-simple-observation-category.html" : "US Core Simple Observation Category",
-      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes"
+      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes",
+      "ValueSet-pco-survey-category-vs.html" : "Person-Centered Outcomes Survey Value Set",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-simple-observation-category.html" : "US Core Simple Observation Category"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",

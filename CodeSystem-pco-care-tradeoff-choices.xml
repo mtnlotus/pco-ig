@@ -3,15 +3,18 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="pco-care-tradeoff-choices"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem pco-care-tradeoff-choices</b></p><a name="pco-care-tradeoff-choices"> </a><a name="hcpco-care-tradeoff-choices"> </a><a name="pco-care-tradeoff-choices-en-US"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">helpful<a name="pco-care-tradeoff-choices-helpful"> </a></td><td>Helpful</td></tr><tr><td style="white-space:nowrap">bothersome<a name="pco-care-tradeoff-choices-bothersome"> </a></td><td>Bothersome</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem pco-care-tradeoff-choices</b></p><a name="pco-care-tradeoff-choices"> </a><a name="hcpco-care-tradeoff-choices"> </a><a name="pco-care-tradeoff-choices-en-US"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">helpful<a name="pco-care-tradeoff-choices-helpful"> </a></td><td>Helpful</td></tr><tr><td style="white-space:nowrap">bothersome<a name="pco-care-tradeoff-choices-bothersome"> </a></td><td>Bothersome</td></tr><tr><td style="white-space:nowrap">unspecified<a name="pco-care-tradeoff-choices-unspecified"> </a></td><td>Unspecified</td></tr></table></div>
   </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"/>
   <version value="0.2.0"/>
   <name value="CareTradeOffChoices"/>
   <title value="Care Trade-off Choices"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-12-23T14:45:33+00:00"/>
+  <date value="2024-12-27T16:03:14+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -33,7 +36,7 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <content value="complete"/>
-  <count value="2"/>
+  <count value="3"/>
   <concept>
     <code value="helpful"/>
     <display value="Helpful"/>
@@ -41,5 +44,9 @@
   <concept>
     <code value="bothersome"/>
     <display value="Bothersome"/>
+  </concept>
+  <concept>
+    <code value="unspecified"/>
+    <display value="Unspecified"/>
   </concept>
 </CodeSystem>

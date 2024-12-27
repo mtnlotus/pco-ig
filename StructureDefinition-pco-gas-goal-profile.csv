@@ -43,17 +43,12 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Goal.achievementStatus","Goal.achievementStatus","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","in-progress | improving | worsening | no-change | achieved | sustaining | not-achieved | no-progress | not-attainable","Describes the progression, or lack thereof, towards the goal against the target.","","","","","","","","","",,"preferred","Indicates the progression, or lack thereof, towards the goal against the target.","http://hl7.org/fhir/ValueSet/goal-achievement","",,,,"Goal.achievementStatus",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".statusCode achieved = complete sustaining = active"
-"Goal.category","Goal.category","","","",1,*,"Y","","Y","CodeableConcept {[]} {[]}
-","E.g. Treatment, dietary, behavioral, etc.","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"example","Codes for grouping and sorting goals.","http://hl7.org/fhir/ValueSet/goal-category","","pattern:$this}
+"Goal.category","Goal.category","","","",0,*,"Y","","Y","CodeableConcept {[]} {[]}
+","E.g. Treatment, dietary, behavioral, etc.","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"example","Codes for grouping and sorting goals.","http://hl7.org/fhir/ValueSet/goal-category","","value:$this}
 ","",,"open","Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
-"Goal.category:pco-goal","Goal.category","pco-goal","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
-","Person-Centered Goal category","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
-  <coding>
-    <system value=""http://hl7.org/fhir/us/pco/CodeSystem/pco-codes""/>
-    <code value=""person-centered-goal""/>
-  </coding>
-</valueCodeableConcept>","","","",,"example","Codes for grouping and sorting goals.","http://hl7.org/fhir/ValueSet/goal-category","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"Goal.category:pco-category","Goal.category","pco-category","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
+","Person-Centered category","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"extensible","","http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "Goal.category:goal-domain","Goal.category","goal-domain","","",0,*,"Y","","Y","CodeableConcept {[]} {[]}
 ","Person-Centered Outcome domain category","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"preferred","","http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
