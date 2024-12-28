@@ -6,7 +6,7 @@ RuleSet: PersonCenteredCategory
 * category ^slicing.rules = #open
 * category contains
     pco-category 0..1 MS
-* category[pco-category] from PCOCategoryValueSet (extensible)
+* category[pco-category] from PCOCategoryValueSet (required)
   * ^short = "Person-Centered category"
 
 RuleSet: GoalDomainCategory
@@ -16,8 +16,12 @@ RuleSet: GoalDomainCategory
 * category ^slicing.rules = #open
 * category contains
     goal-domain 0..* MS
-* category[goal-domain] from PCODomainCategoryValueSet (preferred)
+* category[goal-domain] from PCODomainCategoryValueSet (required)
   * ^short = "Person-Centered Outcome domain category"
+  // Include same binding description as in US Core profiles.
+* category[goal-domain]
+  * ^binding.description = "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"
+
   
 RuleSet: PCOSurveyCategory
 * category MS

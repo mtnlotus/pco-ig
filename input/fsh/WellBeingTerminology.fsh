@@ -26,6 +26,17 @@ Description: "Code system to identify resource codes and category domains for \"
 * #future-changes "Future Changes"
     "What changes could you make to help you get there?"
 
+ValueSet: WellBeingCategoryValueSet
+Id: wellbeing-category-vs
+Title: "Well-Being Categories"
+Description: "Value set containing well-being concepts for observation category."
+* ^experimental = false
+* WellBeingConcepts#wellbeing-vision "Well-Being Vision"
+* WellBeingConcepts#wellbeing-statement "Well-Being Statement"
+* WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
+* WellBeingConcepts#wellbeing-priority "Well-Being Priority"
+* WellBeingConcepts#wellbeing-focus-area "Well-Being Focus Area"
+
 ValueSet: WellBeingPriorityOrFocusValueSet
 Id: wellbeing-priority-focus-vs
 Title: "Well-Being Priority Or Focus"

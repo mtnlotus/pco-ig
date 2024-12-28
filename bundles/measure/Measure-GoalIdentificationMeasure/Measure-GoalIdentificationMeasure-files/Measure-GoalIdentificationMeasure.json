@@ -54,7 +54,7 @@
         "valueString": "PCO Goals"
       }, {
         "url": "statement",
-        "valueString": "/* \n  A \"PCO Goal\" is any FHIR Goal that has a category in \"PCO Categories\"\n  and has a start date.\n  TODO: or a Goal that addresses a What Matters observation.\n*/\ndefine \"PCO Goals\":\n  [Goal] goal\n    where goal.category in \"PCO Categories\"\n      and (goal.start as FHIR.date) is not null"
+        "valueString": "/* \n  A \"PCO Goal\" is any FHIR Goal that has a category in \"Person-Centered Category\" or \"PCO Domain Categories\"\n  and has a start date.\n  TODO: or a Goal that addresses a What Matters observation.\n*/\ndefine \"PCO Goals\":\n  [Goal] goal\n    where (goal.category in \"Person-Centered Category\"\n        or goal.category in \"PCO Domain Categories\")\n      and (goal.start as FHIR.date) is not null"
       }, {
         "url": "displaySequence",
         "valueInteger": 2
@@ -416,8 +416,12 @@
       "resource": "http://loinc.org"
     }, {
       "type": "depends-on",
-      "display": "Value set PCO Categories",
-      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset"
+      "display": "Value set Person-Centered Category",
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"
+    }, {
+      "type": "depends-on",
+      "display": "Value set PCO Domain Categories",
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"
     }, {
       "type": "depends-on",
       "display": "Value set Goal Attainment Scaling (GAS) Score",
@@ -561,7 +565,7 @@
   "title": "Person-Centered Goal Identification",
   "status": "active",
   "experimental": false,
-  "date": "2024-12-11T00:23:37+00:00",
+  "date": "2024-12-28T18:49:50+00:00",
   "publisher": "HL7 International / Patient Care",
   "contact": [ {
     "telecom": [ {

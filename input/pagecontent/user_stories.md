@@ -50,7 +50,7 @@ Dorothy's mobile app prompts her once each month to record progress on attainmen
 #### Track progress using using PROMs
 Dorothy's mobile app prompts her to complete the GAD-7 anxiety assessment once each month and shares that Observation with the rest of her care team, where they all can track progress on attainment of Dorothy's PROM goal to achieve a GAD-7 score of less than 6.
 
-**☛ See [Profile: PROM progress score](StructureDefinition-pco-prom-score.html#profile)**
+**☛ See [Profile: PROM progress score](StructureDefinition-pco-prom-score-observation.html#profile)**
 
 **☛ See [Example: PROM score by patient](Observation-pcoPROMScoreAnxietyExample.html#root)**
 

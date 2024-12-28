@@ -35,6 +35,7 @@ Description: "Code system to identify care trade-off concepts."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* ^hierarchyMeaning = #is-a
 * insert PCOCodeSystemPublisher
 * #medications "Medications"
 * #self-care-tasks "Self-care tasks"

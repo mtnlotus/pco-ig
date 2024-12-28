@@ -7,7 +7,7 @@ We plan to submit a proposal to HL7 workgroup(s) for migrating this work into an
 
 ### User Stories
 
-Any feedback on [User Stories](index.html#user-stories) or suggestions for additional stories?
+Any feedback on [User Stories](user_stories.html) or suggestions for additional stories?
 
 ### Profiles
 
@@ -16,7 +16,7 @@ Questions for FHIR Connectathon participants on distinctions needed to select da
 1. **How do we determine that a person has "a complex care need?"**
 
 2. **How do we distiguish a "PCO Goal" from other kinds of FHIR Goals?**
-   * Require a category from [PCO Category](ValueSet-pco-category-valueset.html) value set defined by this IG?
+   * Require a category from [PCO Domain Categories](ValueSet-pco-domain-category-valueset.html) value set defined by this IG?
    * Or, check for Goal.addresses relationship with a [What Matters Assessment](StructureDefinition-pco-what-matters-assessment.html#profile) observation?
    * Or, check that a Goal satisfies either the GAS Goal or PROM Goal criteria listed below?
   
