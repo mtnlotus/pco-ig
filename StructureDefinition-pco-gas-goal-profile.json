@@ -14,7 +14,7 @@
   "name" : "PCOGoalAttainmentScaleProfile",
   "title" : "Person-Centered GAS Goal",
   "status" : "draft",
-  "date" : "2024-12-27T16:03:14+00:00",
+  "date" : "2024-12-28T21:18:04+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -643,7 +643,7 @@
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
-        "strength" : "extensible",
+        "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"
       },
       "mapping" : [{
@@ -680,7 +680,8 @@
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
-        "strength" : "preferred",
+        "strength" : "required",
+        "description" : "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
         "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"
       },
       "mapping" : [{

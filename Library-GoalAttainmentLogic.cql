@@ -8,7 +8,8 @@ include PCOCommon version '0.1.0' called PC
 codesystem "LOINC": 'http://loinc.org'
 // codesystem "PCO GAS Codes": 'http://hl7.org/fhir/us/pco/CodeSystem/pco-gas-codes-temporary'
 
-valueset "PCO Categories": 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset'
+valueset "Person-Centered Category": 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs'
+valueset "PCO Domain Categories": 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset'
 valueset "Goal Attainment Scaling (GAS) Score": 'http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score'
 valueset "Follow-Up GAS Score Answers": 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers'
 valueset "PROM Target Measures": 'http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures'
@@ -32,7 +33,7 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoCategories: goal.category in "PCO Categories",
+      pcoCategories: goal.category in "Person-Centered Category",
       hasGAS: goal.hasGAS(),
       hasPROM: goal.hasPROM(),
       carePlans: goal.carePlans()
@@ -51,13 +52,14 @@ define "All Goals":
   [Goal] goal
 
 /* 
-  A "PCO Goal" is any FHIR Goal that has a category in "PCO Categories"
+  A "PCO Goal" is any FHIR Goal that has a category in "Person-Centered Category" or "PCO Domain Categories"
   and has a start date.
   TODO: or a Goal that addresses a What Matters observation.
 */
 define "PCO Goals":
   [Goal] goal
-    where goal.category in "PCO Categories"
+    where (goal.category in "Person-Centered Category"
+        or goal.category in "PCO Domain Categories")
       and (goal.start as FHIR.date) is not null
 
 // A "GAS Goal" is any PCO Goal that includes GAS extensions

@@ -22,7 +22,7 @@
   <name value="PCOGoalAttainmentScaleProfile"/>
   <title value="Person-Centered GAS Goal"/>
   <status value="draft"/>
-  <date value="2024-12-27T16:03:14+00:00"/>
+  <date value="2024-12-28T21:18:04+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -628,7 +628,7 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <strength value="extensible"/>
+        <strength value="required"/>
         <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
       </binding>
       <mapping>
@@ -664,7 +664,8 @@
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <strength value="preferred"/>
+        <strength value="required"/>
+        <description value="Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"/>
         <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
       </binding>
       <mapping>

@@ -258,7 +258,7 @@
         
           Draft
           
-            as of 2024-12-27
+            as of 2024-12-28
           
         
       </td>
@@ -358,7 +358,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2024-12-27 16:03:14+0000</td>
+            <td style="padding-left: 4px;">2024-12-28 21:18:04+0000</td>
         </tr>
         
 
@@ -414,7 +414,9 @@
                   
                     <li><a href="http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
                   
-                    <li><code>http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset</code></li>
+                    <li><a href="ValueSet-pco-category-vs.html">Person-Centered Category Value Set</a></li>
+                  
+                    <li><a href="ValueSet-pco-domain-category-valueset.html">PCO Domain Categories</a></li>
                   
                     <li><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></li>
                   
@@ -593,7 +595,8 @@ include PCOCommon version '0.1.0' called PC
 codesystem &quot;LOINC&quot;: 'http://loinc.org'
 // codesystem &quot;PCO GAS Codes&quot;: 'http://hl7.org/fhir/us/pco/CodeSystem/pco-gas-codes-temporary'
 
-valueset &quot;PCO Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset'
+valueset &quot;Person-Centered Category&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs'
+valueset &quot;PCO Domain Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset'
 valueset &quot;Goal Attainment Scaling (GAS) Score&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score'
 valueset &quot;Follow-Up GAS Score Answers&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers'
 valueset &quot;PROM Target Measures&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures'
@@ -617,7 +620,7 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoCategories: goal.category in &quot;PCO Categories&quot;,
+      pcoCategories: goal.category in &quot;Person-Centered Category&quot;,
       hasGAS: goal.hasGAS(),
       hasPROM: goal.hasPROM(),
       carePlans: goal.carePlans()
@@ -636,13 +639,14 @@ define &quot;All Goals&quot;:
   [Goal] goal
 
 /* 
-  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;
   and has a start date.
   TODO: or a Goal that addresses a What Matters observation.
 */
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where goal.category in &quot;PCO Categories&quot;
+    where (goal.category in &quot;Person-Centered Category&quot;
+        or goal.category in &quot;PCO Domain Categories&quot;)
       and (goal.start as FHIR.date) is not null
 
 // A &quot;GAS Goal&quot; is any PCO Goal that includes GAS extensions
@@ -788,7 +792,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (144616 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (148444 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -800,7 +804,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (267688 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (274968 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -833,7 +837,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 27, 2024 16:03+0000">2024-12-27</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Dec 28, 2024 21:18+0000">2024-12-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

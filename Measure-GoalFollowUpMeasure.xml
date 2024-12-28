@@ -568,7 +568,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: Value set PCO Categories
+    <em>Description</em>: Value set Person-Centered Category
     
     <br/>
     
@@ -577,9 +577,36 @@
     
     
     
-    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset</code>
+    <em>Resource</em>: <a href="ValueSet-pco-category-vs.html">Person-Centered Category Value Set</a>
     <br/>
-    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset</tt>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</tt>
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+<th scope="row" class="row-header">Dependency</th>
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: Value set PCO Domain Categories
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="ValueSet-pco-domain-category-valueset.html">PCO Domain Categories</a>
+    <br/>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</tt>
     
   </td>
 </tr>
@@ -981,13 +1008,14 @@ define &quot;Denominator&quot;:
 
   <td>
     <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">/* 
-  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;
   and has a start date.
   TODO: or a Goal that addresses a What Matters observation.
 */
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where goal.category in &quot;PCO Categories&quot;
+    where (goal.category in &quot;Person-Centered Category&quot;
+        or goal.category in &quot;PCO Domain Categories&quot;)
       and (goal.start as FHIR.date) is not null</code></pre>
   </td>
 
@@ -1575,7 +1603,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="PCO Goals"/>
         </extension>
         <extension url="statement">
-          <valueString value="/* &#xA;  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;PCO Categories&quot;&#xA;  and has a start date.&#xA;  TODO: or a Goal that addresses a What Matters observation.&#xA;*/&#xA;define &quot;PCO Goals&quot;:&#xA;  [Goal] goal&#xA;    where goal.category in &quot;PCO Categories&quot;&#xA;      and (goal.start as FHIR.date) is not null"/>
+          <valueString value="/* &#xA;  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;&#xA;  and has a start date.&#xA;  TODO: or a Goal that addresses a What Matters observation.&#xA;*/&#xA;define &quot;PCO Goals&quot;:&#xA;  [Goal] goal&#xA;    where (goal.category in &quot;Person-Centered Category&quot;&#xA;        or goal.category in &quot;PCO Domain Categories&quot;)&#xA;      and (goal.start as FHIR.date) is not null"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="2"/>
@@ -1919,8 +1947,13 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
-        <display value="Value set PCO Categories"/>
-        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-valueset"/>
+        <display value="Value set Person-Centered Category"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set PCO Domain Categories"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
@@ -2084,7 +2117,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
   <title value="Person-Centered Goal Follow-Up"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-12-11T00:23:37+00:00"/>
+  <date value="2024-12-28T18:49:50+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>

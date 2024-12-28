@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCOGoalOutcomeMeasureProfile"] ; # 
   fhir:title [ fhir:v "Person-Centered PROM Goal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-27T16:03:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-28T21:18:04+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -646,7 +646,7 @@
        fhir:isModifier [ fhir:v "false"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:binding [
-         fhir:strength [ fhir:v "extensible" ] ;
+         fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
            fhir:v "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"^^xsd:anyURI ;
            fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs>
@@ -688,7 +688,8 @@
        fhir:isModifier [ fhir:v "false"^^xsd:boolean ] ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
        fhir:binding [
-         fhir:strength [ fhir:v "preferred" ] ;
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:description [ fhir:v "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)" ] ;
          fhir:valueSet [
            fhir:v "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"^^xsd:anyURI ;
            fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset>

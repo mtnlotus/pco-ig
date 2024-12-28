@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-27T16:03:14+00:00"/>
+  <date value="2024-12-28T21:18:04+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -1087,6 +1087,17 @@
       </reference>
       <name value="VA Whole Health Concepts"/>
       <description value="Code system to identify &quot;What Matters&quot; concepts from the VA Whole Health appraoch and Circle of Health."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/wellbeing-category-vs"/>
+      </reference>
+      <name value="Well-Being Categories"/>
+      <description value="Value set containing well-being concepts for observation category."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
