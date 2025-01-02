@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ppcCareTradeOffHelpful",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ppcCareTradeOffHelpful</b></p><a name=\"ppcCareTradeOffHelpful\"> </a><a name=\"hcppcCareTradeOffHelpful\"> </a><a name=\"ppcCareTradeOffHelpful-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts health-care-visits}\">Health Care visits</span></p><p><b>subject</b>: <a href=\"Patient-ppcPatientKay.html\">John Kay  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>focus</b>: <a href=\"Goal-ppcGoalCookingDinner.html\">Goal: lifecycleStatus = active; achievementStatus = In Progress; category = What Matters Most,Social Functioning; description = ; start[x] = 2025-01-02</a></p><p><b>effective</b>: 2025-01-02 15:05:00+0000</p><p><b>performer</b>: <a href=\"Patient-ppcPatientKay.html\">John Kay  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>value</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices helpful}\">Helpful</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "survey"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts",
+      "code" : "health-care-visits",
+      "display" : "Health Care visits"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ppcPatientKay"
+  },
+  "focus" : [{
+    "reference" : "Goal/ppcGoalCookingDinner"
+  }],
+  "effectiveDateTime" : "2025-01-02T15:05:00Z",
+  "performer" : [{
+    "reference" : "Patient/ppcPatientKay"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices",
+      "code" : "helpful",
+      "display" : "Helpful"
+    }]
+  }
+}

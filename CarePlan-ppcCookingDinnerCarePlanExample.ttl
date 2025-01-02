@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/pco/CarePlan/ppcCookingDinnerCarePlanExample> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ppcCookingDinnerCarePlanExample"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CarePlan ppcCookingDinnerCarePlanExample</b></p><a name=\"ppcCookingDinnerCarePlanExample\"> </a><a name=\"hcppcCookingDinnerCarePlanExample\"> </a><a name=\"ppcCookingDinnerCarePlanExample-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/core/CodeSystem/careplan-category assess-plan}\">Assessment and Plan of Treatment</span></p><p><b>subject</b>: <a href=\"Patient-ppcPatientKay.html\">John Kay  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a></p><p><b>period</b>: 2025-01-05 --&gt; 2025-06-30</p><p><b>goal</b>: <a href=\"Goal-ppcGoalCookingDinner.html\">Goal: lifecycleStatus = active; achievementStatus = In Progress; category = What Matters Most,Social Functioning; description = ; start[x] = 2025-01-02</a></p><h3>Activities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"ServiceRequest-ppcPhysicalTherapyReferral.html\">ServiceRequest Physical therapy procedure (regime/therapy)</a></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "plan"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/core/CodeSystem/careplan-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "assess-plan" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> ;
+     fhir:reference [ fhir:v "Patient/ppcPatientKay" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2025-01-05"^^xsd:date ] ;
+     fhir:end [ fhir:v "2025-06-30"^^xsd:date ]
+  ] ; # 
+  fhir:goal ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Goal/ppcGoalCookingDinner> ;
+     fhir:reference [ fhir:v "Goal/ppcGoalCookingDinner" ]
+  ] ) ; # 
+  fhir:activity ( [
+     fhir:reference [
+       fhir:link <http://hl7.org/fhir/us/pco/ServiceRequest/ppcPhysicalTherapyReferral> ;
+       fhir:reference [ fhir:v "ServiceRequest/ppcPhysicalTherapyReferral" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Goal/ppcGoalCookingDinner> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ServiceRequest/ppcPhysicalTherapyReferral> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

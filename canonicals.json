@@ -42,6 +42,13 @@
     "name" : "PCOGoalDomains"
   },
   {
+    "id" : "ppc-what-matters-concepts",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts",
+    "version" : "0.2.0",
+    "name" : "PPCWhatMattersConcepts"
+  },
+  {
     "id" : "va-whole-health-example",
     "type" : "CodeSystem",
     "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example",
@@ -120,13 +127,6 @@
     ]
   },
   {
-    "id" : "pco-bothersome-health-concern",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-bothersome-health-concern",
-    "version" : "0.2.0",
-    "name" : "BothersomeHealthConcern"
-  },
-  {
     "id" : "pco-care-plan",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
@@ -138,7 +138,7 @@
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff",
     "version" : "0.2.0",
-    "name" : "CareTradeOff"
+    "name" : "PCOCareTradeOff"
   },
   {
     "id" : "pco-gas-goal-profile",
@@ -162,11 +162,25 @@
     "name" : "PCOGoalAttainmentScaling"
   },
   {
+    "id" : "pco-goal-barrier",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier",
+    "version" : "0.2.0",
+    "name" : "PCOGoalBarrier"
+  },
+  {
     "id" : "pco-goal-profile",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile",
     "version" : "0.2.0",
     "name" : "PCOGoalProfile"
+  },
+  {
+    "id" : "pco-personal-priorities-organizer",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer",
+    "version" : "0.2.0",
+    "name" : "PCOPersonalPrioritiesOrganizer"
   },
   {
     "id" : "pco-prom-goal-profile",
@@ -190,18 +204,11 @@
     "name" : "WhatMattersAssessment"
   },
   {
-    "id" : "pco-what-matters-priority-focus",
+    "id" : "pco-what-matters-priority",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus",
+    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority",
     "version" : "0.2.0",
     "name" : "WhatMattersPriority"
-  },
-  {
-    "id" : "pco-what-matters-statement",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement",
-    "version" : "0.2.0",
-    "name" : "WhatMattersStatement"
   },
   {
     "id" : "gas-score-answers",
@@ -216,6 +223,13 @@
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score",
     "version" : "0.2.0",
     "name" : "GoalAttainmentScalingScore"
+  },
+  {
+    "id" : "goal-barrier-codes",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes",
+    "version" : "0.2.0",
+    "name" : "GoalBarrierCodes"
   },
   {
     "id" : "pco-bothersome-health-concern-valueset",
@@ -239,18 +253,11 @@
     "name" : "CareTradeOffValueSet"
   },
   {
-    "id" : "pco-category-vs",
+    "id" : "pco-goal-domains-example-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs",
     "version" : "0.2.0",
-    "name" : "PCOCategoryValueSet"
-  },
-  {
-    "id" : "pco-domain-category-valueset",
-    "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
-    "version" : "0.2.0",
-    "name" : "PCODomainCategoryValueSet"
+    "name" : "PCOGoalDomainsExample"
   },
   {
     "id" : "pco-survey-category-vs",
@@ -258,6 +265,13 @@
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs",
     "version" : "0.2.0",
     "name" : "PCOSurveyCategoryVS"
+  },
+  {
+    "id" : "ppc-what-matters-example-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-what-matters-example-vs",
+    "version" : "0.2.0",
+    "name" : "PPCWhatMattersExample"
   },
   {
     "id" : "prom-target-measures",
@@ -281,11 +295,11 @@
     "name" : "WellBeingDomainValueSet"
   },
   {
-    "id" : "wellbeing-priority-focus-vs",
+    "id" : "what-matters-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs",
     "version" : "0.2.0",
-    "name" : "WellBeingPriorityOrFocusValueSet"
+    "name" : "WhatMattersValueSet"
   },
   {
     "id" : "44249-1",

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="ppcPhysicalTherapyReferral"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest ppcPhysicalTherapyReferral</b></p><a name="ppcPhysicalTherapyReferral"> </a><a name="hcppcPhysicalTherapyReferral"> </a><a name="ppcPhysicalTherapyReferral-en-US"> </a><p><b>ServiceRequest Pertains To Goal</b>: <a href="Goal-ppcGoalCookingDinner.html">Goal: lifecycleStatus = active; achievementStatus = In Progress; category = What Matters Most,Social Functioning; description = ; start[x] = 2025-01-02</a></p><p><b>status</b>: Active</p><p><b>intent</b>: Plan</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 91251008}">Physical therapy procedure (regime/therapy)</span></p><p><b>subject</b>: <a href="Patient-ppcPatientKay.html">John Kay  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a></p><p><b>occurrence</b>: Once</p><p><b>authoredOn</b>: 2025-01-05</p><p><b>requester</b>: <a href="Practitioner-pcoPractitionerAnderson.html">Practitioner John Anderson, MD</a></p><p><b>note</b>: Trial of physical therapy focused on improving balance while standing and walking</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal">
+    <valueReference>
+      <reference value="Goal/ppcGoalCookingDinner"/>
+    </valueReference>
+  </extension>
+  <status value="active"/>
+  <intent value="plan"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="91251008"/>
+      <display value="Physical therapy procedure (regime/therapy)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ppcPatientKay"/>
+  </subject>
+  <occurrenceTiming>
+    <repeat>
+      <boundsPeriod>
+        <start value="2025-01-05"/>
+        <end value="2025-03-05"/>
+      </boundsPeriod>
+      <frequency value="1"/>
+      <periodUnit value="wk"/>
+    </repeat>
+  </occurrenceTiming>
+  <authoredOn value="2025-01-05"/>
+  <requester>
+    <reference value="Practitioner/pcoPractitionerAnderson"/>
+  </requester>
+  <note>
+    <text value="Trial of physical therapy focused on improving balance while standing and walking"/>
+  </note>
+</ServiceRequest>

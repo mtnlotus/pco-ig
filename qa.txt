@@ -1,24 +1,28 @@
 PCO : Validation Results
 =========================================
 
-err = 50, warn = 24, info = 18
+err = 63, warn = 22, info = 19
 IG Publisher Version: 1.8.4
-Generated Sat Dec 28 21:21:42 UTC 2024. FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = http://hl7.org/fhir/us/pco)
- Build Errors : 1 / 13 / 0
+Generated Thu Jan 02 22:58:44 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = http://hl7.org/fhir/us/pco)
+ Build Errors : 2 / 13 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 1 / 0 / 3
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-ppcCookingDinnerCarePlanExample : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-bothersome-health-concern-concepts : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-care-tradeoff-choices : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-care-tradeoff-concepts : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-codes : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-goal-domains : 0 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-ppc-what-matters-concepts : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-va-whole-health-example : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-wellbeing-concepts : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalAnxietyExample : 0 / 1 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalPainLevelExample : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExample : 4 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions : 1 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-ppcGoalCookingDinner : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/List-ppcPrioritiesList : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScoreBaselineExample : 3 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample : 1 / 0 / 1
@@ -28,46 +32,56 @@ Generated Sat Dec 28 21:21:42 UTC 2024. FHIR version 4.0.1 for hl7.fhir.us.pco#0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersPriorityExample : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersStatementExample : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcBarrierDiabetes : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcBarrierUnsteady : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcCareTradeOffBothersome : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcCareTradeOffHelpful : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcGASScoreBaselineExample : 3 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcWhatMattersActivitiesWithFamily : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcWhatMattersMovingTheBody : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientJones : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientLopez : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-ppcPatientKay : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerAnderson : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerGonzalez : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-pcoMindfulnessSupportProgram : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-pcoPhysicalTherapyReferral : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-pcoWalkOutsideActionStep : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-bothersome-health-concern : 0 / 1 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-ppcPhysicalTherapyReferral : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-care-plan : 0 / 1 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-care-tradeoff : 0 / 1 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-care-tradeoff : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-gas-goal-profile : 2 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-gas-score-observation : 0 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-barrier : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-profile : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-goal-profile : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-score-observation : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-priority-focus : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-statement : 0 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-priority : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-gas-score-answers : 0 / 2 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-goal-attainment-scaling-score : 0 / 4 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-goal-barrier-codes : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-bothersome-health-concern-valueset : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-valueset : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-care-tradeoff-valueset : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-category-vs : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-domain-category-valueset : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-goal-domains-example-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-survey-category-vs : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-ppc-what-matters-example-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-prom-target-measures : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-category-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-domains-example-vs : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-priority-focus-vs : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-what-matters-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/device/cqf-tooling : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers : 2 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalFollowUpMeasure : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 3 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalFollowUpMeasure : 3 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 3 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/PCOCommon : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 1 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 3 / 1 / 13
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 3 / 1 / 13
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 5 / 1 / 13
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 5 / 1 / 13
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7 : 10 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9 : 13 / 0 / 1
 </table>
@@ -82,6 +96,7 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Device/cqf-tooling.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
+ERROR: /home/runner/work/pco-ig/pco-ig/output/feedback.html#/html/body/div/div/div/div/div/ol/li/ul/li/a at Line 245, column 36: The link 'ValueSet-pco-domain-category-valueset.html' for "PCO Domain Categories" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -92,11 +107,14 @@ INFORMATION: CarePlan/pcoAnxietyCarePlanExample: CarePlan.text.status: Reference
 INFORMATION: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan.goal[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan: Slice 'CarePlan.goal:SupportedGoals': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0). Note that other slices are allowed in addition to this required slice
 INFORMATION: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
+== fsh-generated/resources/CarePlan-ppcCookingDinnerCarePlanExample.json ==
+INFORMATION: CarePlan/ppcCookingDinnerCarePlanExample: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 == fsh-generated/resources/CodeSystem-pco-bothersome-health-concern-concepts.json ==
 == fsh-generated/resources/CodeSystem-pco-care-tradeoff-choices.json ==
 == fsh-generated/resources/CodeSystem-pco-care-tradeoff-concepts.json ==
 == fsh-generated/resources/CodeSystem-pco-codes.json ==
 == fsh-generated/resources/CodeSystem-pco-goal-domains.json ==
+== fsh-generated/resources/CodeSystem-ppc-what-matters-concepts.json ==
 == fsh-generated/resources/CodeSystem-va-whole-health-example.json ==
 == fsh-generated/resources/CodeSystem-wellbeing-concepts.json ==
 == fsh-generated/resources/Goal-pcoGoalAnxietyExample.json ==
@@ -108,7 +126,9 @@ ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[4].extension[0].value.ofType(C
 ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[4].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'
 == fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions.json ==
 ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.target[0].measure.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
+== fsh-generated/resources/Goal-ppcGoalCookingDinner.json ==
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco.json ==
+== fsh-generated/resources/List-ppcPrioritiesList.json ==
 == fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication.json ==
 == fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json ==
 ERROR: Observation/pcoGASScoreBaselineExample: Observation.code.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
@@ -124,31 +144,41 @@ ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.code.codi
 == fsh-generated/resources/Observation-pcoWhatMattersPriorityExample.json ==
 == fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample.json ==
 == fsh-generated/resources/Observation-pcoWhatMattersStatementExample.json ==
+== fsh-generated/resources/Observation-ppcBarrierDiabetes.json ==
+== fsh-generated/resources/Observation-ppcBarrierUnsteady.json ==
+== fsh-generated/resources/Observation-ppcCareTradeOffBothersome.json ==
+== fsh-generated/resources/Observation-ppcCareTradeOffHelpful.json ==
+== fsh-generated/resources/Observation-ppcGASScoreBaselineExample.json ==
+ERROR: Observation/ppcGASScoreBaselineExample: Observation.code.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
+ERROR: Observation/ppcGASScoreBaselineExample: Observation.value.ofType(CodeableConcept).coding[0].code: Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'
+ERROR: Observation/ppcGASScoreBaselineExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)
+== fsh-generated/resources/Observation-ppcWhatMattersActivitiesWithFamily.json ==
+== fsh-generated/resources/Observation-ppcWhatMattersMovingTheBody.json ==
 == fsh-generated/resources/Patient-pcoPatientJones.json ==
 == fsh-generated/resources/Patient-pcoPatientLopez.json ==
+== fsh-generated/resources/Patient-ppcPatientKay.json ==
 == fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json ==
 == fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json ==
 == fsh-generated/resources/ServiceRequest-pcoMindfulnessSupportProgram.json ==
 == fsh-generated/resources/ServiceRequest-pcoPhysicalTherapyReferral.json ==
 == fsh-generated/resources/ServiceRequest-pcoWalkOutsideActionStep.json ==
-== fsh-generated/resources/StructureDefinition-pco-bothersome-health-concern.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-bothersome-health-concern'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ServiceRequest-ppcPhysicalTherapyReferral.json ==
 == fsh-generated/resources/StructureDefinition-pco-care-plan.json ==
 WARNING: StructureDefinition/pco-care-plan: StructureDefinition.snapshot.element[9].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 == fsh-generated/resources/StructureDefinition-pco-care-tradeoff.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pco-gas-goal-profile.json ==
 ERROR: StructureDefinition/pco-gas-goal-profile: StructureDefinition.snapshot.element[24].pattern.ofType(CodeableConcept).coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: StructureDefinition/pco-gas-goal-profile: StructureDefinition.differential.element[4].pattern.ofType(CodeableConcept).coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 == fsh-generated/resources/StructureDefinition-pco-gas-score-observation.json ==
 INFORMATION: StructureDefinition/pco-gas-score-observation: StructureDefinition.snapshot.element[14].pattern.ofType(CodeableConcept): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 == fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling.json ==
+== fsh-generated/resources/StructureDefinition-pco-goal-barrier.json ==
 == fsh-generated/resources/StructureDefinition-pco-goal-profile.json ==
+== fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer.json ==
 == fsh-generated/resources/StructureDefinition-pco-prom-goal-profile.json ==
 == fsh-generated/resources/StructureDefinition-pco-prom-score-observation.json ==
 == fsh-generated/resources/StructureDefinition-pco-what-matters-assessment.json ==
-== fsh-generated/resources/StructureDefinition-pco-what-matters-priority-focus.json ==
-== fsh-generated/resources/StructureDefinition-pco-what-matters-statement.json ==
+== fsh-generated/resources/StructureDefinition-pco-what-matters-priority.json ==
 == fsh-generated/resources/ValueSet-gas-score-answers.json ==
 WARNING: ValueSet/gas-score-answers: ValueSet.compose.include[0].concept[3]: The code 'gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')
 WARNING: ValueSet/gas-score-answers: ValueSet.compose.include[0].concept[4]: The code 'gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')
@@ -158,26 +188,33 @@ INFORMATION: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0]
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[1]: The code '68490' is not valid in the system http://loinc.org (Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78')
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[2]: The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[3]: The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')
+== fsh-generated/resources/ValueSet-goal-barrier-codes.json ==
 == fsh-generated/resources/ValueSet-pco-bothersome-health-concern-valueset.json ==
 == fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-valueset.json ==
 == fsh-generated/resources/ValueSet-pco-care-tradeoff-valueset.json ==
-== fsh-generated/resources/ValueSet-pco-category-vs.json ==
-== fsh-generated/resources/ValueSet-pco-domain-category-valueset.json ==
+== fsh-generated/resources/ValueSet-pco-goal-domains-example-vs.json ==
 == fsh-generated/resources/ValueSet-pco-survey-category-vs.json ==
+== fsh-generated/resources/ValueSet-ppc-what-matters-example-vs.json ==
 == fsh-generated/resources/ValueSet-prom-target-measures.json ==
 == fsh-generated/resources/ValueSet-wellbeing-category-vs.json ==
 == fsh-generated/resources/ValueSet-wellbeing-domains-example-vs.json ==
-== fsh-generated/resources/ValueSet-wellbeing-priority-focus-vs.json ==
+== fsh-generated/resources/ValueSet-what-matters-vs.json ==
 == input/resources/device/cqf-tooling.json ==
 == input/resources/library/FHIRHelpers.json ==
 ERROR: Library.where(url = 'http://hl7.org/fhir/Library/FHIRHelpers'): Conformance resource /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers.json - the canonical URL (http://hl7.org/fhir/us/pco/Library/FHIRHelpers) does not match the URL (http://hl7.org/fhir/Library/FHIRHelpers)
 ERROR: /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers: URL Mismatch http://hl7.org/fhir/us/pco/Library/FHIRHelpers vs http://hl7.org/fhir/Library/FHIRHelpers
 == input/resources/library/GoalAttainmentLogic.json ==
 ERROR: Library/GoalAttainmentLogic: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
+ERROR: Library/GoalAttainmentLogic: Library.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs' does not resolve
+ERROR: Library/GoalAttainmentLogic: Library.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset' does not resolve
 == input/resources/library/GoalFollowUpMeasure.json ==
 ERROR: Library/GoalFollowUpMeasure: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
+ERROR: Library/GoalFollowUpMeasure: Library.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs' does not resolve
+ERROR: Library/GoalFollowUpMeasure: Library.relatedArtifact[6].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset' does not resolve
 == input/resources/library/GoalIdentificationMeasure.json ==
 ERROR: Library/GoalIdentificationMeasure: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
+ERROR: Library/GoalIdentificationMeasure: Library.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs' does not resolve
+ERROR: Library/GoalIdentificationMeasure: Library.relatedArtifact[6].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset' does not resolve
 == input/resources/library/PCOCommon.json ==
 ERROR: Library/PCOCommon: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
 == input/resources/library/WhatMattersLogic.json ==
@@ -186,6 +223,8 @@ ERROR: Library/WhatMattersLogic: Library.relatedArtifact[1].resource: Canonical 
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
+ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs' does not resolve
+ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset' does not resolve
 ERROR: Measure/GoalFollowUpMeasure: Measure.extension[1].value.ofType(Reference): Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1].value.ofType(Reference): Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0
 WARNING: Measure/GoalFollowUpMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)
@@ -197,6 +236,8 @@ INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[2]: This element doe
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000' does not resolve
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[4].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs' does not resolve
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset' does not resolve
 ERROR: Measure/GoalIdentificationMeasure: Measure.extension[1].value.ofType(Reference): Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1].value.ofType(Reference): Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0
 WARNING: Measure/GoalIdentificationMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)

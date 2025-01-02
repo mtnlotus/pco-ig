@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2024-12-28T21:18:04+00:00"/>
+  <date value="2025-01-02T22:55:55+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -527,17 +527,6 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-bothersome-health-concern"/>
-      </reference>
-      <name value="Bothersome Health Concern"/>
-      <description value="Assessment observation about a bothersome symptom or health concern."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -675,7 +664,7 @@
       <reference>
         <reference value="ValueSet/pco-care-tradeoff-valueset"/>
       </reference>
-      <name value="Care Trade-off Example ValueSet"/>
+      <name value="Care Trade-off ValueSet"/>
       <description value="Example value set containing types of care trade-off."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -699,28 +688,6 @@
       </reference>
       <name value="cqf-tooling"/>
       <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/pcoPatientLopez"/>
-      </reference>
-      <name value="Example Patient Camila"/>
-      <description value="Camila Lopez"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/pcoPatientJones"/>
-      </reference>
-      <name value="Example Patient Dorothy"/>
-      <description value="Dorothy Jones"/>
-      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -810,6 +777,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/goal-barrier-codes"/>
+      </reference>
+      <name value="Goal Barrier Assessment Codes"/>
+      <description value="Terminology codes for goal barrier assessment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Goal"/>
       </extension>
       <reference>
@@ -895,6 +873,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/pcoPatientLopez"/>
+      </reference>
+      <name value="Patient Camila Lopez"/>
+      <description value="Camila Lopez"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/pcoPatientJones"/>
+      </reference>
+      <name value="Patient Dorothy Jones"/>
+      <description value="Dorothy Jones"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -903,6 +903,17 @@
       <name value="Patient GAS Follow-up Score"/>
       <description value="Follow-up GAS score observation recorded by a Patient showing goal progress."/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ppcPatientKay"/>
+      </reference>
+      <name value="Patient John Kay"/>
+      <description value="John Kay for PPC examples"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -920,10 +931,10 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/pco-domain-category-valueset"/>
+        <reference value="ValueSet/pco-goal-domains-example-vs"/>
       </reference>
-      <name value="PCO Domain Categories"/>
-      <description value="Example value set to identify the domains category for PCO resources."/>
+      <name value="PCO Goal Domain Categories Example"/>
+      <description value="Example value set to identify the goal domains category for PCO resources."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -960,17 +971,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/pco-category-vs"/>
-      </reference>
-      <name value="Person-Centered Category Value Set"/>
-      <description value="Used to categorize resources as being a Person-Centered Goal"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -989,6 +989,17 @@
       </reference>
       <name value="Person-Centered Goal"/>
       <description value="Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-goal-barrier"/>
+      </reference>
+      <name value="Person-Centered Goal Barrier"/>
+      <description value="Assessment observation about a barrier, bothersome symptom or health concern that interferes with goal achievement."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1037,6 +1048,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-personal-priorities-organizer"/>
+      </reference>
+      <name value="Personal Priorities Organizer"/>
+      <description value="Personal Priorities Organizer is used to represent a set of person-centered goals, preferences or care experiences in a preferred ranked order."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
@@ -1044,6 +1066,149 @@
       </reference>
       <name value="PHQ-9 quick depression assessment panel"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcBarrierDiabetes"/>
+      </reference>
+      <name value="PPC Bothersome Health Concern: Diabeted diet (other)"/>
+      <description value="PPC Bothersome health problem, other with free-text description"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcBarrierUnsteady"/>
+      </reference>
+      <name value="PPC Bothersome Symptom: Feeling Unsteady"/>
+      <description value="PPC Bothersome symptom or health problem"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/ppcCookingDinnerCarePlanExample"/>
+      </reference>
+      <name value="PPC Care Plan for person-centered goal"/>
+      <description value="Care Plan for a person-centered goal with action steps for achieving what matters most to that person."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/ppcPhysicalTherapyReferral"/>
+      </reference>
+      <name value="PPC Care Plan: Clinical action step for PT"/>
+      <description value="Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcCareTradeOffBothersome"/>
+      </reference>
+      <name value="PPC Care Trade-Off: Following a special diet"/>
+      <description value="PPC Care Trade-off that is bothersome"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcCareTradeOffHelpful"/>
+      </reference>
+      <name value="PPC Care Trade-Off: Health care visits"/>
+      <description value="PPC Care Trade-off that is helpful"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcGASScoreBaselineExample"/>
+      </reference>
+      <name value="PPC GAS Baseline Score"/>
+      <description value="Baseline GAS score observation at start of goal."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Goal"/>
+      </extension>
+      <reference>
+        <reference value="Goal/ppcGoalCookingDinner"/>
+      </reference>
+      <name value="PPC Goal: Cooking Dinner"/>
+      <description value="Patient Priorities Care goal: cooking dinner"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="List"/>
+      </extension>
+      <reference>
+        <reference value="List/ppcPrioritiesList"/>
+      </reference>
+      <name value="PPC Priorities List"/>
+      <description value="PPC what matters MOST, and the MOST bothersome Care Trade-off"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/ppc-what-matters-concepts"/>
+      </reference>
+      <name value="PPC What Matters Concepts"/>
+      <description value="Code system to identify What Matters concepts from Patient Priories Care (PPC)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/ppc-what-matters-example-vs"/>
+      </reference>
+      <name value="PPC What Matters Example ValueSet"/>
+      <description value="Example value set containing types of What Matters."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcWhatMattersActivitiesWithFamily"/>
+      </reference>
+      <name value="PPC What Matters: Activities with Family"/>
+      <description value="Patient Priorities Care what matters: doing activities with family"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcWhatMattersMovingTheBody"/>
+      </reference>
+      <name value="PPC What Matters: Walking or moving"/>
+      <description value="Patient Priorities Care what matters: Walking or moving"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1124,24 +1289,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/wellbeing-priority-focus-vs"/>
-      </reference>
-      <name value="Well-Being Priority Or Focus"/>
-      <description value="Value set containing well-being concepts for priority or focus area."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/pco-what-matters-assessment"/>
       </reference>
       <name value="What Matters Assessment"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with either free-text description or component values rating where a person is now and where they would like to be in the future."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/what-matters-vs"/>
+      </reference>
+      <name value="What Matters Categories"/>
+      <description value="Value set containing well-being concepts for What Matters Most."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1149,10 +1314,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-what-matters-priority-focus"/>
+        <reference value="StructureDefinition/pco-what-matters-priority"/>
       </reference>
-      <name value="What Matters Priority or Focus Area"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area."/>
+      <name value="What Matters Priority"/>
+      <description value="Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1164,18 +1329,7 @@
       </reference>
       <name value="What Matters Priority: Moving the Body"/>
       <description value="What Matters observation recorded by a Patient to indicate their priority for well-being."/>
-      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/pco-what-matters-statement"/>
-      </reference>
-      <name value="What Matters Statement"/>
-      <description value="Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain."/>
-      <exampleBoolean value="false"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1185,8 +1339,8 @@
         <reference value="Observation/pcoWhatMattersStatementExample"/>
       </reference>
       <name value="What Matters Statement: Family &amp; Friends"/>
-      <description value="What Matters observation added by a Patient to record a statement about a well-being focus area."/>
-      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement"/>
+      <description value="What Matters observation added by a Patient to record a free-text statement about a well-being focus area."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

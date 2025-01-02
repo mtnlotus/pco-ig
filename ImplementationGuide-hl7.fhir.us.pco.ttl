@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-28T21:18:04+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-02T22:55:55+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -612,18 +612,6 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-bothersome-health-concern> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-bothersome-health-concern" ]
-       ] ;
-       fhir:name [ fhir:v "Bothersome Health Concern" ] ;
-       fhir:description [ fhir:v "Assessment observation about a bothersome symptom or health concern." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -780,7 +768,7 @@
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset> ;
          fhir:reference [ fhir:v "ValueSet/pco-care-tradeoff-valueset" ]
        ] ;
-       fhir:name [ fhir:v "Care Trade-off Example ValueSet" ] ;
+       fhir:name [ fhir:v "Care Trade-off ValueSet" ] ;
        fhir:description [ fhir:v "Example value set containing types of care trade-off." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -806,30 +794,6 @@
        ] ;
        fhir:name [ fhir:v "cqf-tooling" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> ;
-         fhir:reference [ fhir:v "Patient/pcoPatientLopez" ]
-       ] ;
-       fhir:name [ fhir:v "Example Patient Camila" ] ;
-       fhir:description [ fhir:v "Camila Lopez" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
-         fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
-       ] ;
-       fhir:name [ fhir:v "Example Patient Dorothy" ] ;
-       fhir:description [ fhir:v "Dorothy Jones" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -929,6 +893,18 @@
        ] ;
        fhir:name [ fhir:v "Goal Attainment Scaling (GAS) Score" ] ;
        fhir:description [ fhir:v "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes> ;
+         fhir:reference [ fhir:v "ValueSet/goal-barrier-codes" ]
+       ] ;
+       fhir:name [ fhir:v "Goal Barrier Assessment Codes" ] ;
+       fhir:description [ fhir:v "Terminology codes for goal barrier assessment" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1038,6 +1014,30 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> ;
+         fhir:reference [ fhir:v "Patient/pcoPatientLopez" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Camila Lopez" ] ;
+       fhir:description [ fhir:v "Camila Lopez" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
+         fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Dorothy Jones" ] ;
+       fhir:description [ fhir:v "Dorothy Jones" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
@@ -1050,6 +1050,18 @@
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation>
        ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> ;
+         fhir:reference [ fhir:v "Patient/ppcPatientKay" ]
+       ] ;
+       fhir:name [ fhir:v "Patient John Kay" ] ;
+       fhir:description [ fhir:v "John Kay for PPC examples" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1068,11 +1080,11 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset> ;
-         fhir:reference [ fhir:v "ValueSet/pco-domain-category-valueset" ]
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs> ;
+         fhir:reference [ fhir:v "ValueSet/pco-goal-domains-example-vs" ]
        ] ;
-       fhir:name [ fhir:v "PCO Domain Categories" ] ;
-       fhir:description [ fhir:v "Example value set to identify the domains category for PCO resources." ] ;
+       fhir:name [ fhir:v "PCO Goal Domain Categories Example" ] ;
+       fhir:description [ fhir:v "Example value set to identify the goal domains category for PCO resources." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1112,18 +1124,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs> ;
-         fhir:reference [ fhir:v "ValueSet/pco-category-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Person-Centered Category Value Set" ] ;
-       fhir:description [ fhir:v "Used to categorize resources as being a Person-Centered Goal" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -1144,6 +1144,18 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-goal-barrier" ]
+       ] ;
+       fhir:name [ fhir:v "Person-Centered Goal Barrier" ] ;
+       fhir:description [ fhir:v "Assessment observation about a barrier, bothersome symptom or health concern that interferes with goal achievement." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1196,6 +1208,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-personal-priorities-organizer" ]
+       ] ;
+       fhir:name [ fhir:v "Personal Priorities Organizer" ] ;
+       fhir:description [ fhir:v "Personal Priorities Organizer is used to represent a set of person-centered goals, preferences or care experiences in a preferred ranked order." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "Questionnaire" ]
        ] ) ;
        fhir:reference [
@@ -1204,6 +1228,192 @@
        ] ;
        fhir:name [ fhir:v "PHQ-9 quick depression assessment panel" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierDiabetes> ;
+         fhir:reference [ fhir:v "Observation/ppcBarrierDiabetes" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Bothersome Health Concern: Diabeted diet (other)" ] ;
+       fhir:description [ fhir:v "PPC Bothersome health problem, other with free-text description" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierUnsteady> ;
+         fhir:reference [ fhir:v "Observation/ppcBarrierUnsteady" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Bothersome Symptom: Feeling Unsteady" ] ;
+       fhir:description [ fhir:v "PPC Bothersome symptom or health problem" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CarePlan" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/CarePlan/ppcCookingDinnerCarePlanExample> ;
+         fhir:reference [ fhir:v "CarePlan/ppcCookingDinnerCarePlanExample" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Care Plan for person-centered goal" ] ;
+       fhir:description [ fhir:v "Care Plan for a person-centered goal with action steps for achieving what matters most to that person." ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ServiceRequest/ppcPhysicalTherapyReferral> ;
+         fhir:reference [ fhir:v "ServiceRequest/ppcPhysicalTherapyReferral" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Care Plan: Clinical action step for PT" ] ;
+       fhir:description [ fhir:v "Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBothersome> ;
+         fhir:reference [ fhir:v "Observation/ppcCareTradeOffBothersome" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Care Trade-Off: Following a special diet" ] ;
+       fhir:description [ fhir:v "PPC Care Trade-off that is bothersome" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpful> ;
+         fhir:reference [ fhir:v "Observation/ppcCareTradeOffHelpful" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Care Trade-Off: Health care visits" ] ;
+       fhir:description [ fhir:v "PPC Care Trade-off that is helpful" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcGASScoreBaselineExample> ;
+         fhir:reference [ fhir:v "Observation/ppcGASScoreBaselineExample" ]
+       ] ;
+       fhir:name [ fhir:v "PPC GAS Baseline Score" ] ;
+       fhir:description [ fhir:v "Baseline GAS score observation at start of goal." ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Goal" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Goal/ppcGoalCookingDinner> ;
+         fhir:reference [ fhir:v "Goal/ppcGoalCookingDinner" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Goal: Cooking Dinner" ] ;
+       fhir:description [ fhir:v "Patient Priorities Care goal: cooking dinner" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "List" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/List/ppcPrioritiesList> ;
+         fhir:reference [ fhir:v "List/ppcPrioritiesList" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Priorities List" ] ;
+       fhir:description [ fhir:v "PPC what matters MOST, and the MOST bothersome Care Trade-off" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts> ;
+         fhir:reference [ fhir:v "CodeSystem/ppc-what-matters-concepts" ]
+       ] ;
+       fhir:name [ fhir:v "PPC What Matters Concepts" ] ;
+       fhir:description [ fhir:v "Code system to identify What Matters concepts from Patient Priories Care (PPC)" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/ppc-what-matters-example-vs> ;
+         fhir:reference [ fhir:v "ValueSet/ppc-what-matters-example-vs" ]
+       ] ;
+       fhir:name [ fhir:v "PPC What Matters Example ValueSet" ] ;
+       fhir:description [ fhir:v "Example value set containing types of What Matters." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersActivitiesWithFamily> ;
+         fhir:reference [ fhir:v "Observation/ppcWhatMattersActivitiesWithFamily" ]
+       ] ;
+       fhir:name [ fhir:v "PPC What Matters: Activities with Family" ] ;
+       fhir:description [ fhir:v "Patient Priorities Care what matters: doing activities with family" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersMovingTheBody> ;
+         fhir:reference [ fhir:v "Observation/ppcWhatMattersMovingTheBody" ]
+       ] ;
+       fhir:name [ fhir:v "PPC What Matters: Walking or moving" ] ;
+       fhir:description [ fhir:v "Patient Priorities Care what matters: Walking or moving" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1294,18 +1504,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs> ;
-         fhir:reference [ fhir:v "ValueSet/wellbeing-priority-focus-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Well-Being Priority Or Focus" ] ;
-       fhir:description [ fhir:v "Value set containing well-being concepts for priority or focus area." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
@@ -1313,7 +1511,19 @@
          fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-assessment" ]
        ] ;
        fhir:name [ fhir:v "What Matters Assessment" ] ;
-       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future." ] ;
+       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with either free-text description or component values rating where a person is now and where they would like to be in the future." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs> ;
+         fhir:reference [ fhir:v "ValueSet/what-matters-vs" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Categories" ] ;
+       fhir:description [ fhir:v "Value set containing well-being concepts for What Matters Most." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1321,11 +1531,11 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-priority-focus" ]
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-priority" ]
        ] ;
-       fhir:name [ fhir:v "What Matters Priority or Focus Area" ] ;
-       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area." ] ;
+       fhir:name [ fhir:v "What Matters Priority" ] ;
+       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1339,21 +1549,9 @@
        fhir:name [ fhir:v "What Matters Priority: Moving the Body" ] ;
        fhir:description [ fhir:v "What Matters observation recorded by a Patient to indicate their priority for well-being." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus>
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
        ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-statement" ]
-       ] ;
-       fhir:name [ fhir:v "What Matters Statement" ] ;
-       fhir:description [ fhir:v "Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1364,10 +1562,10 @@
          fhir:reference [ fhir:v "Observation/pcoWhatMattersStatementExample" ]
        ] ;
        fhir:name [ fhir:v "What Matters Statement: Family & Friends" ] ;
-       fhir:description [ fhir:v "What Matters observation added by a Patient to record a statement about a well-being focus area." ] ;
+       fhir:description [ fhir:v "What Matters observation added by a Patient to record a free-text statement about a well-being focus area." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement>
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
        ]
      ] [
        fhir:extension ( [
@@ -1550,8 +1748,6 @@
      ] )
   ] . # 
 
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-bothersome-health-concern> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset> a fhir:us .
@@ -1582,10 +1778,6 @@
 
 <http://hl7.org/fhir/us/pco/Device/cqf-tooling> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/Library/FHIRHelpers> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers> a fhir:us .
@@ -1601,6 +1793,8 @@
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Goal/pcoGoalAnxietyExample> a fhir:us .
 
@@ -1618,11 +1812,17 @@
 
 <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerGonzalez> a fhir:us .
 
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
 <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePatientFollowupExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset> a fhir:us .
+<http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains> a fhir:us .
 
@@ -1630,11 +1830,11 @@
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Measure/GoalFollowUpMeasure> a fhir:us .
 
@@ -1644,7 +1844,35 @@
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile> a fhir:us .
 
+<http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer> a fhir:us .
+
 <http://hl7.org/fhir/us/pco/Questionnaire/44249-1> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcBarrierDiabetes> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcBarrierUnsteady> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/CarePlan/ppcCookingDinnerCarePlanExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ServiceRequest/ppcPhysicalTherapyReferral> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBothersome> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpful> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcGASScoreBaselineExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Goal/ppcGoalCookingDinner> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/List/ppcPrioritiesList> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ValueSet/ppc-what-matters-example-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersActivitiesWithFamily> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersMovingTheBody> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePractitionerFollowupExample> a fhir:us .
 
@@ -1660,15 +1888,13 @@
 
 <http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus> a fhir:us .
+<http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersPriorityExample> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersStatementExample> a fhir:us .
 

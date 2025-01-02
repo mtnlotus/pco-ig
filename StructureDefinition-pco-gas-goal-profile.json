@@ -14,7 +14,7 @@
   "name" : "PCOGoalAttainmentScaleProfile",
   "title" : "Person-Centered GAS Goal",
   "status" : "draft",
-  "date" : "2024-12-28T21:18:04+00:00",
+  "date" : "2025-01-02T22:55:55+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -615,10 +615,10 @@
       }]
     },
     {
-      "id" : "Goal.category:pco-category",
+      "id" : "Goal.category:what-matters",
       "path" : "Goal.category",
-      "sliceName" : "pco-category",
-      "short" : "Person-Centered category",
+      "sliceName" : "what-matters",
+      "short" : "What Matters observation category",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
       "min" : 0,
@@ -644,7 +644,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"
+        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -655,7 +655,7 @@
       "id" : "Goal.category:goal-domain",
       "path" : "Goal.category",
       "sliceName" : "goal-domain",
-      "short" : "Person-Centered Outcome domain category",
+      "short" : "Person-Centered Outcome goal domain category",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
       "min" : 0,
@@ -682,7 +682,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
-        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"
+        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -1321,7 +1321,7 @@
       "id" : "Goal.addresses:SupportedAddresses",
       "path" : "Goal.addresses",
       "sliceName" : "SupportedAddresses",
-      "short" : "What Matters Assessment or Statement",
+      "short" : "What Matters Assessment or Priority",
       "definition" : "The identified conditions and other health record elements that are intended to be addressed by the goal.",
       "requirements" : "When a goal addresses PCO what matters most observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment profiles. However, references to other instance types are also possible.",
       "min" : 0,
@@ -1334,7 +1334,7 @@
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
-        "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement"]
+        "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"]
       }],
       "constraint" : [{
         "key" : "ele-1",

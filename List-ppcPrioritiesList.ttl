@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/pco/List/ppcPrioritiesList> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ppcPrioritiesList"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: List ppcPrioritiesList</b></p><a name=\"ppcPrioritiesList\"> </a><a name=\"hcppcPrioritiesList\"> </a><a name=\"ppcPrioritiesList-en-US\"> </a><table class=\"clstu\"><tr><td>Date: 2025-01-02 15:05:00+0000 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: Goals AndOr preferences in order of priority [Reported] </td></tr><tr><td>Subject: <a href=\"Patient-ppcPatientKay.html\">John Kay  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a>Order: Sorted by Priority </td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Items</b></td></tr><tr><td><a href=\"Observation-ppcWhatMattersActivitiesWithFamily.html\">Observation Doing activities with family and friends</a></td></tr><tr><td><a href=\"Observation-ppcBarrierUnsteady.html\">Observation Assessment of barriers to meet care plan goals performed</a></td></tr><tr><td><a href=\"Observation-ppcCareTradeOffBothersome.html\">Observation Following a special diet</a></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "working"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:81340-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "81340-2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> ;
+     fhir:reference [ fhir:v "Patient/ppcPatientKay" ]
+  ] ; # 
+  fhir:date [ fhir:v "2025-01-02T15:05:00Z"^^xsd:dateTime] ; # 
+  fhir:orderedBy [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/list-order"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "priority" ]
+     ] )
+  ] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersActivitiesWithFamily> ;
+       fhir:reference [ fhir:v "Observation/ppcWhatMattersActivitiesWithFamily" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierUnsteady> ;
+       fhir:reference [ fhir:v "Observation/ppcBarrierUnsteady" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBothersome> ;
+       fhir:reference [ fhir:v "Observation/ppcCareTradeOffBothersome" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersActivitiesWithFamily> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcBarrierUnsteady> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBothersome> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

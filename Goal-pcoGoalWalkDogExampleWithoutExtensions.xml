@@ -3,7 +3,7 @@
 <Goal xmlns="http://hl7.org/fhir">
   <id value="pcoGoalWalkDogExampleWithoutExtensions"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Goal pcoGoalWalkDogExampleWithoutExtensions</b></p><a name="pcoGoalWalkDogExampleWithoutExtensions"> </a><a name="hcpcoGoalWalkDogExampleWithoutExtensions"> </a><a name="pcoGoalWalkDogExampleWithoutExtensions-en-US"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}">In Progress</span></p><p><b>category</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains physical-function}">Physical Function</span></p><p><b>description</b>: <span title="Codes:">Walk dog outside once a week</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>start</b>: 2024-04-03</p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Measure</b></td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 68489}">Goal attainment scale</span></td><td>2024-09-30</td></tr></table><p><b>expressedBy</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>addresses</b>: </p><ul><li><a href="Observation-pcoWhatMattersBodyExample.html">What Matters: Moving the Body</a></li><li><a href="Observation-pcoWhatMattersRelationshipsExample.html">What Matters: Family &amp; Friends</a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Goal pcoGoalWalkDogExampleWithoutExtensions</b></p><a name="pcoGoalWalkDogExampleWithoutExtensions"> </a><a name="hcpcoGoalWalkDogExampleWithoutExtensions"> </a><a name="pcoGoalWalkDogExampleWithoutExtensions-en-US"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}">In Progress</span></p><p><b>category</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts what-matters}">What Matters Most</span>, <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains physical-function}">Physical Function</span></p><p><b>description</b>: <span title="Codes:">Walk dog outside once a week</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>start</b>: 2024-04-03</p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Measure</b></td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://loinc.org 68489}">Goal attainment scale</span></td><td>2024-09-30</td></tr></table><p><b>expressedBy</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>addresses</b>: </p><ul><li><a href="Observation-pcoWhatMattersBodyExample.html">What Matters: Moving the Body</a></li><li><a href="Observation-pcoWhatMattersRelationshipsExample.html">What Matters: Family &amp; Friends</a></li></ul></div>
   </text>
   <lifecycleStatus value="active"/>
   <achievementStatus>
@@ -12,6 +12,13 @@
       <code value="in-progress"/>
     </coding>
   </achievementStatus>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
+      <code value="what-matters"/>
+      <display value="What Matters Most"/>
+    </coding>
+  </category>
   <category>
     <coding>
       <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains"/>

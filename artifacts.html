@@ -332,15 +332,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-bothersome-health-concern.html"
-                  title="StructureDefinition/pco-bothersome-health-concern">Bothersome Health Concern</a>
-            </td>
-            <td>
-<p>Assessment observation about a bothersome symptom or health concern.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-pco-care-tradeoff.html"
                   title="StructureDefinition/pco-care-tradeoff">Care Trade-off Assessment</a>
             </td>
@@ -395,6 +386,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-pco-goal-barrier.html"
+                  title="StructureDefinition/pco-goal-barrier">Person-Centered Goal Barrier</a>
+            </td>
+            <td>
+<p>Assessment observation about a barrier, bothersome symptom or health concern that interferes with goal achievement.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-pco-prom-goal-profile.html"
                   title="StructureDefinition/pco-prom-goal-profile">Person-Centered PROM Goal</a>
             </td>
@@ -404,29 +404,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-pco-personal-priorities-organizer.html"
+                  title="StructureDefinition/pco-personal-priorities-organizer">Personal Priorities Organizer</a>
+            </td>
+            <td>
+<p>Personal Priorities Organizer is used to represent a set of person-centered goals, preferences or care experiences in a preferred ranked order.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-pco-what-matters-assessment.html"
                   title="StructureDefinition/pco-what-matters-assessment">What Matters Assessment</a>
             </td>
             <td>
-<p>Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future.</p>
+<p>Assessment observation for one aspect of What Matters Most to a person, with either free-text description or component values rating where a person is now and where they would like to be in the future.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-what-matters-priority-focus.html"
-                  title="StructureDefinition/pco-what-matters-priority-focus">What Matters Priority or Focus Area</a>
+               <a href="StructureDefinition-pco-what-matters-priority.html"
+                  title="StructureDefinition/pco-what-matters-priority">What Matters Priority</a>
             </td>
             <td>
-<p>Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-pco-what-matters-statement.html"
-                  title="StructureDefinition/pco-what-matters-statement">What Matters Statement</a>
-            </td>
-            <td>
-<p>Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain.</p>
+<p>Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority.</p>
 </td>
          </tr>
       </tbody>
@@ -475,7 +475,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="ValueSet-pco-care-tradeoff-valueset.html"
-                  title="ValueSet/pco-care-tradeoff-valueset">Care Trade-off Example ValueSet</a>
+                  title="ValueSet/pco-care-tradeoff-valueset">Care Trade-off ValueSet</a>
             </td>
             <td>
 <p>Example value set containing types of care trade-off.</p>
@@ -501,11 +501,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-pco-domain-category-valueset.html"
-                  title="ValueSet/pco-domain-category-valueset">PCO Domain Categories</a>
+               <a href="ValueSet-goal-barrier-codes.html"
+                  title="ValueSet/goal-barrier-codes">Goal Barrier Assessment Codes</a>
             </td>
             <td>
-<p>Example value set to identify the domains category for PCO resources.</p>
+<p>Terminology codes for goal barrier assessment</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-pco-goal-domains-example-vs.html"
+                  title="ValueSet/pco-goal-domains-example-vs">PCO Goal Domain Categories Example</a>
+            </td>
+            <td>
+<p>Example value set to identify the goal domains category for PCO resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ppc-what-matters-example-vs.html"
+                  title="ValueSet/ppc-what-matters-example-vs">PPC What Matters Example ValueSet</a>
+            </td>
+            <td>
+<p>Example value set containing types of What Matters.</p>
 </td>
          </tr>
          <tr>
@@ -515,14 +533,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Target measure codes used to track progress on patient-reported outcome measures (PROMs).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-pco-category-vs.html" title="ValueSet/pco-category-vs">Person-Centered Category Value Set</a>
-            </td>
-            <td>
-<p>Used to categorize resources as being a Person-Centered Goal</p>
 </td>
          </tr>
          <tr>
@@ -554,11 +564,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-wellbeing-priority-focus-vs.html"
-                  title="ValueSet/wellbeing-priority-focus-vs">Well-Being Priority Or Focus</a>
+               <a href="ValueSet-what-matters-vs.html" title="ValueSet/what-matters-vs">What Matters Categories</a>
             </td>
             <td>
-<p>Value set containing well-being concepts for priority or focus area.</p>
+<p>Value set containing well-being concepts for What Matters Most.</p>
 </td>
          </tr>
       </tbody>
@@ -611,6 +620,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Goal domain codes used to identify the category for PCO resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ppc-what-matters-concepts.html"
+                  title="CodeSystem/ppc-what-matters-concepts">PPC What Matters Concepts</a>
+            </td>
+            <td>
+<p>Code system to identify What Matters concepts from Patient Priories Care (PPC)</p>
 </td>
          </tr>
          <tr>
@@ -695,22 +713,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-pcoPatientLopez.html" title="Patient/pcoPatientLopez">Example Patient Camila</a>
-            </td>
-            <td>
-<p>Camila Lopez</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Patient-pcoPatientJones.html" title="Patient/pcoPatientJones">Example Patient Dorothy</a>
-            </td>
-            <td>
-<p>Dorothy Jones</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="Observation-pcoPROMScoreAnxietyExample.html"
                   title="Observation/pcoPROMScoreAnxietyExample">GAD-7 PROM Follow-up Score</a>
             </td>
@@ -774,11 +776,132 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-ppcBarrierDiabetes.html"
+                  title="Observation/ppcBarrierDiabetes">PPC Bothersome Health Concern: Diabeted diet (other)</a>
+            </td>
+            <td>
+<p>PPC Bothersome health problem, other with free-text description</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ppcBarrierUnsteady.html"
+                  title="Observation/ppcBarrierUnsteady">PPC Bothersome Symptom: Feeling Unsteady</a>
+            </td>
+            <td>
+<p>PPC Bothersome symptom or health problem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-ppcCookingDinnerCarePlanExample.html"
+                  title="CarePlan/ppcCookingDinnerCarePlanExample">PPC Care Plan for person-centered goal</a>
+            </td>
+            <td>
+<p>Care Plan for a person-centered goal with action steps for achieving what matters most to that person.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ppcPhysicalTherapyReferral.html"
+                  title="ServiceRequest/ppcPhysicalTherapyReferral">PPC Care Plan: Clinical action step for PT</a>
+            </td>
+            <td>
+<p>Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ppcCareTradeOffBothersome.html"
+                  title="Observation/ppcCareTradeOffBothersome">PPC Care Trade-Off: Following a special diet</a>
+            </td>
+            <td>
+<p>PPC Care Trade-off that is bothersome</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ppcCareTradeOffHelpful.html"
+                  title="Observation/ppcCareTradeOffHelpful">PPC Care Trade-Off: Health care visits</a>
+            </td>
+            <td>
+<p>PPC Care Trade-off that is helpful</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ppcGASScoreBaselineExample.html"
+                  title="Observation/ppcGASScoreBaselineExample">PPC GAS Baseline Score</a>
+            </td>
+            <td>
+<p>Baseline GAS score observation at start of goal.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Goal-ppcGoalCookingDinner.html" title="Goal/ppcGoalCookingDinner">PPC Goal: Cooking Dinner</a>
+            </td>
+            <td>
+<p>Patient Priorities Care goal: cooking dinner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="List-ppcPrioritiesList.html" title="List/ppcPrioritiesList">PPC Priorities List</a>
+            </td>
+            <td>
+<p>PPC what matters MOST, and the MOST bothersome Care Trade-off</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ppcWhatMattersActivitiesWithFamily.html"
+                  title="Observation/ppcWhatMattersActivitiesWithFamily">PPC What Matters: Activities with Family</a>
+            </td>
+            <td>
+<p>Patient Priorities Care what matters: doing activities with family</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ppcWhatMattersMovingTheBody.html"
+                  title="Observation/ppcWhatMattersMovingTheBody">PPC What Matters: Walking or moving</a>
+            </td>
+            <td>
+<p>Patient Priorities Care what matters: Walking or moving</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-pcoPatientLopez.html" title="Patient/pcoPatientLopez">Patient Camila Lopez</a>
+            </td>
+            <td>
+<p>Camila Lopez</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-pcoPatientJones.html" title="Patient/pcoPatientJones">Patient Dorothy Jones</a>
+            </td>
+            <td>
+<p>Dorothy Jones</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-pcoGASScorePatientFollowupExample.html"
                   title="Observation/pcoGASScorePatientFollowupExample">Patient GAS Follow-up Score</a>
             </td>
             <td>
 <p>Follow-up GAS score observation recorded by a Patient showing goal progress.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ppcPatientKay.html" title="Patient/ppcPatientKay">Patient John Kay</a>
+            </td>
+            <td>
+<p>John Kay for PPC examples</p>
 </td>
          </tr>
          <tr>
@@ -814,7 +937,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="Observation/pcoWhatMattersStatementExample">What Matters Statement: Family &amp; Friends</a>
             </td>
             <td>
-<p>What Matters observation added by a Patient to record a statement about a well-being focus area.</p>
+<p>What Matters observation added by a Patient to record a free-text statement about a well-being focus area.</p>
 </td>
          </tr>
          <tr>
@@ -868,7 +991,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Dec 28, 2024 21:18+0000">2024-12-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

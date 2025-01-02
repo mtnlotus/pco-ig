@@ -64,6 +64,12 @@
     }
   ],
   "profiles": {
+    "CarePlan": [
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
+        "title": "Person-Centered Care Plan"
+      }
+    ],
     "Observation": [
       {
         "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation",
@@ -74,28 +80,20 @@
         "title": "What Matters Assessment"
       },
       {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus",
-        "title": "What Matters Priority or Focus Area"
-      },
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement",
-        "title": "What Matters Statement"
-      }
-    ],
-    "CarePlan": [
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
-        "title": "Person-Centered Care Plan"
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority",
+        "title": "What Matters Priority"
       }
     ],
     "Goal": [
       {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile",
-        "title": "Person-Centered Goal"
-      },
-      {
         "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile",
         "title": "Person-Centered PROM Goal"
+      }
+    ],
+    "List": [
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer",
+        "title": "Personal Priorities Organizer"
       }
     ]
   },
@@ -121,7 +119,6 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal": [
-      "Observation",
       "ServiceRequest"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [

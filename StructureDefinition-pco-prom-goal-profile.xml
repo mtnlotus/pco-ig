@@ -18,7 +18,7 @@
   <name value="PCOGoalOutcomeMeasureProfile"/>
   <title value="Person-Centered PROM Goal"/>
   <status value="draft"/>
-  <date value="2024-12-28T21:18:04+00:00"/>
+  <date value="2025-01-02T22:55:55+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -559,10 +559,10 @@
         <map value="FiveWs.class"/>
       </mapping>
     </element>
-    <element id="Goal.category:pco-category">
+    <element id="Goal.category:what-matters">
       <path value="Goal.category"/>
-      <sliceName value="pco-category"/>
-      <short value="Person-Centered category"/>
+      <sliceName value="what-matters"/>
+      <short value="What Matters observation category"/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
       <min value="0"/>
@@ -588,7 +588,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -598,7 +598,7 @@
     <element id="Goal.category:goal-domain">
       <path value="Goal.category"/>
       <sliceName value="goal-domain"/>
-      <short value="Person-Centered Outcome domain category"/>
+      <short value="Person-Centered Outcome goal domain category"/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
       <min value="0"/>
@@ -625,7 +625,7 @@
       <binding>
         <strength value="required"/>
         <description value="Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"/>
-        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
+        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -1252,7 +1252,7 @@
     <element id="Goal.addresses:SupportedAddresses">
       <path value="Goal.addresses"/>
       <sliceName value="SupportedAddresses"/>
-      <short value="What Matters Assessment or Statement"/>
+      <short value="What Matters Assessment or Priority"/>
       <definition value="The identified conditions and other health record elements that are intended to be addressed by the goal."/>
       <requirements value="When a goal addresses PCO what matters most observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment profiles. However, references to other instance types are also possible."/>
       <min value="0"/>
@@ -1265,7 +1265,7 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"/>
-        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement"/>
+        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
       </type>
       <constraint>
         <key value="ele-1"/>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pco-goal-domains-example-vs"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pco-goal-domains-example-vs</b></p><a name="pco-goal-domains-example-vs"> </a><a name="hcpco-goal-domains-example-vs"> </a><a name="pco-goal-domains-example-vs-en-US"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-pco-goal-domains.html"><code>http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-housing">housing</a></td><td>Housing</td><td>Having acceptable housing that is appropriate for a person's needs.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-access-to-services">access-to-services</a></td><td>Access To Services</td><td>Ability to access, afford, and utilize appropriate health and community resources. Includes access to transportation, stable food resources, and assistance with financial concerns.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-caregiver-needs">caregiver-needs</a></td><td>Caregiver Needs</td><td/></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-end-of-life">end-of-life</a></td><td>End Of Life</td><td>Planning for end-of-life care and desires to reduce burden on family or others.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-independence">independence</a></td><td>Independence</td><td>Ability to live independently without help or assistance from others.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-legal">legal</a></td><td>Legal</td><td>Having adequate support for legal issues such as child custody, medical power of attorney, etc.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-managing-conditions">managing-conditions</a></td><td>Managing Conditions</td><td>Satisfaction with health care received or desired, and experiences with providers and the health care system.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-medication-management">medication-management</a></td><td>Medication Management</td><td>Satisfaction with ability to manage medications.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-improving-health-and-wellness">improving-health-and-wellness</a></td><td>Improving Health And Wellness</td><td>Ability to develop, improve and maintain positive health and wellness habits.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-physical-function">physical-function</a></td><td>Physical Function</td><td>Ability to manage physical functioning, physical symptoms or conditions, and improve or maintain ability to participate in physical activities.</td></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-social-functioning">social-functioning</a></td><td>Social Functioning</td><td/></tr><tr><td><a href="CodeSystem-pco-goal-domains.html#pco-goal-domains-emotional-and-mental-health">emotional-and-mental-health</a></td><td>Emotional And Mental Health</td><td/></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"/>
+  <version value="0.2.0"/>
+  <name value="PCOGoalDomainsExample"/>
+  <title value="PCO Goal Domain Categories Example"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-01-02T22:55:55+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Example value set to identify the goal domains category for PCO resources."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains"/>
+      <concept>
+        <code value="housing"/>
+        <display value="Housing"/>
+      </concept>
+      <concept>
+        <code value="access-to-services"/>
+        <display value="Access To Services"/>
+      </concept>
+      <concept>
+        <code value="caregiver-needs"/>
+        <display value="Caregiver Needs"/>
+      </concept>
+      <concept>
+        <code value="end-of-life"/>
+        <display value="End Of Life"/>
+      </concept>
+      <concept>
+        <code value="independence"/>
+        <display value="Independence"/>
+      </concept>
+      <concept>
+        <code value="legal"/>
+        <display value="Legal"/>
+      </concept>
+      <concept>
+        <code value="managing-conditions"/>
+        <display value="Managing Conditions"/>
+      </concept>
+      <concept>
+        <code value="medication-management"/>
+        <display value="Medication Management"/>
+      </concept>
+      <concept>
+        <code value="improving-health-and-wellness"/>
+        <display value="Improving Health And Wellness"/>
+      </concept>
+      <concept>
+        <code value="physical-function"/>
+        <display value="Physical Function"/>
+      </concept>
+      <concept>
+        <code value="social-functioning"/>
+        <display value="Social Functioning"/>
+      </concept>
+      <concept>
+        <code value="emotional-and-mental-health"/>
+        <display value="Emotional And Mental Health"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

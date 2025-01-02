@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ppc-what-matters-example-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ppc-what-matters-example-vs</b></p><a name="ppc-what-matters-example-vs"> </a><a name="hcppc-what-matters-example-vs"> </a><a name="ppc-what-matters-example-vs-en-US"> </a><ul><li>Include all codes defined in <a href="CodeSystem-ppc-what-matters-concepts.html"><code>http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts</code></a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/ValueSet/ppc-what-matters-example-vs"/>
+  <version value="0.2.0"/>
+  <name value="PPCWhatMattersExample"/>
+  <title value="PPC What Matters Example ValueSet"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-01-02T22:55:55+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Example value set containing types of What Matters."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -19,6 +19,15 @@
       "systems" : ["http://loinc.org"]
     },
     {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "GoalBarrierCodes",
+      "title" : "Goal Barrier Assessment Codes",
+      "description" : "Terminology codes for goal barrier assessment",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset",
       "version" : "0.2.0",
       "status" : "draft",
@@ -45,28 +54,19 @@
       "version" : "0.2.0",
       "status" : "draft",
       "name" : "CareTradeOffValueSet",
-      "title" : "Care Trade-off Example ValueSet",
+      "title" : "Care Trade-off ValueSet",
       "description" : "Example value set containing types of care trade-off.",
       "systems" : [
         "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"
       ]
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs",
       "version" : "0.2.0",
       "status" : "draft",
-      "name" : "PCOCategoryValueSet",
-      "title" : "Person-Centered Category Value Set",
-      "description" : "Used to categorize resources as being a Person-Centered Goal",
-      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/pco-codes"]
-    },
-    {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "PCODomainCategoryValueSet",
-      "title" : "PCO Domain Categories",
-      "description" : "Example value set to identify the domains category for PCO resources.",
+      "name" : "PCOGoalDomainsExample",
+      "title" : "PCO Goal Domain Categories Example",
+      "description" : "Example value set to identify the goal domains category for PCO resources.",
       "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains"]
     },
     {
@@ -77,6 +77,17 @@
       "title" : "Person-Centered Outcomes Survey Value Set",
       "description" : "Used to indicate that PCO observations of of type Survey, as defined by US-Core.",
       "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-what-matters-example-vs",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PPCWhatMattersExample",
+      "title" : "PPC What Matters Example ValueSet",
+      "description" : "Example value set containing types of What Matters.",
+      "systems" : [
+        "http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts"
+      ]
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures",
@@ -108,12 +119,12 @@
       ]
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-priority-focus-vs",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs",
       "version" : "0.2.0",
       "status" : "draft",
-      "name" : "WellBeingPriorityOrFocusValueSet",
-      "title" : "Well-Being Priority Or Focus",
-      "description" : "Value set containing well-being concepts for priority or focus area.",
+      "name" : "WhatMattersValueSet",
+      "title" : "What Matters Categories",
+      "description" : "Value set containing well-being concepts for What Matters Most.",
       "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"]
     }
   ]

@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2024-12-28T21:18:04+00:00",
+  "date" : "2025-01-02T22:55:55+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -705,18 +705,6 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-bothersome-health-concern"
-      },
-      "name" : "Bothersome Health Concern",
-      "description" : "Assessment observation about a bothersome symptom or health concern.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -866,7 +854,7 @@
       "reference" : {
         "reference" : "ValueSet/pco-care-tradeoff-valueset"
       },
-      "name" : "Care Trade-off Example ValueSet",
+      "name" : "Care Trade-off ValueSet",
       "description" : "Example value set containing types of care trade-off.",
       "exampleBoolean" : false
     },
@@ -892,30 +880,6 @@
       },
       "name" : "cqf-tooling",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/pcoPatientLopez"
-      },
-      "name" : "Example Patient Camila",
-      "description" : "Camila Lopez",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/pcoPatientJones"
-      },
-      "name" : "Example Patient Dorothy",
-      "description" : "Dorothy Jones",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1014,6 +978,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/goal-barrier-codes"
+      },
+      "name" : "Goal Barrier Assessment Codes",
+      "description" : "Terminology codes for goal barrier assessment",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
       }],
       "reference" : {
@@ -1107,6 +1083,30 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/pcoPatientLopez"
+      },
+      "name" : "Patient Camila Lopez",
+      "description" : "Camila Lopez",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/pcoPatientJones"
+      },
+      "name" : "Patient Dorothy Jones",
+      "description" : "Dorothy Jones",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
@@ -1115,6 +1115,18 @@
       "name" : "Patient GAS Follow-up Score",
       "description" : "Follow-up GAS score observation recorded by a Patient showing goal progress.",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/ppcPatientKay"
+      },
+      "name" : "Patient John Kay",
+      "description" : "John Kay for PPC examples",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1134,10 +1146,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/pco-domain-category-valueset"
+        "reference" : "ValueSet/pco-goal-domains-example-vs"
       },
-      "name" : "PCO Domain Categories",
-      "description" : "Example value set to identify the domains category for PCO resources.",
+      "name" : "PCO Goal Domain Categories Example",
+      "description" : "Example value set to identify the goal domains category for PCO resources.",
       "exampleBoolean" : false
     },
     {
@@ -1178,18 +1190,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pco-category-vs"
-      },
-      "name" : "Person-Centered Category Value Set",
-      "description" : "Used to categorize resources as being a Person-Centered Goal",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1209,6 +1209,18 @@
       },
       "name" : "Person-Centered Goal",
       "description" : "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-goal-barrier"
+      },
+      "name" : "Person-Centered Goal Barrier",
+      "description" : "Assessment observation about a barrier, bothersome symptom or health concern that interferes with goal achievement.",
       "exampleBoolean" : false
     },
     {
@@ -1262,6 +1274,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-personal-priorities-organizer"
+      },
+      "name" : "Personal Priorities Organizer",
+      "description" : "Personal Priorities Organizer is used to represent a set of person-centered goals, preferences or care experiences in a preferred ranked order.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Questionnaire"
       }],
       "reference" : {
@@ -1269,6 +1293,162 @@
       },
       "name" : "PHQ-9 quick depression assessment panel",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcBarrierDiabetes"
+      },
+      "name" : "PPC Bothersome Health Concern: Diabeted diet (other)",
+      "description" : "PPC Bothersome health problem, other with free-text description",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcBarrierUnsteady"
+      },
+      "name" : "PPC Bothersome Symptom: Feeling Unsteady",
+      "description" : "PPC Bothersome symptom or health problem",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/ppcCookingDinnerCarePlanExample"
+      },
+      "name" : "PPC Care Plan for person-centered goal",
+      "description" : "Care Plan for a person-centered goal with action steps for achieving what matters most to that person.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ppcPhysicalTherapyReferral"
+      },
+      "name" : "PPC Care Plan: Clinical action step for PT",
+      "description" : "Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcCareTradeOffBothersome"
+      },
+      "name" : "PPC Care Trade-Off: Following a special diet",
+      "description" : "PPC Care Trade-off that is bothersome",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcCareTradeOffHelpful"
+      },
+      "name" : "PPC Care Trade-Off: Health care visits",
+      "description" : "PPC Care Trade-off that is helpful",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcGASScoreBaselineExample"
+      },
+      "name" : "PPC GAS Baseline Score",
+      "description" : "Baseline GAS score observation at start of goal.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Goal"
+      }],
+      "reference" : {
+        "reference" : "Goal/ppcGoalCookingDinner"
+      },
+      "name" : "PPC Goal: Cooking Dinner",
+      "description" : "Patient Priorities Care goal: cooking dinner",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "List"
+      }],
+      "reference" : {
+        "reference" : "List/ppcPrioritiesList"
+      },
+      "name" : "PPC Priorities List",
+      "description" : "PPC what matters MOST, and the MOST bothersome Care Trade-off",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ppc-what-matters-concepts"
+      },
+      "name" : "PPC What Matters Concepts",
+      "description" : "Code system to identify What Matters concepts from Patient Priories Care (PPC)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ppc-what-matters-example-vs"
+      },
+      "name" : "PPC What Matters Example ValueSet",
+      "description" : "Example value set containing types of What Matters.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcWhatMattersActivitiesWithFamily"
+      },
+      "name" : "PPC What Matters: Activities with Family",
+      "description" : "Patient Priorities Care what matters: doing activities with family",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcWhatMattersMovingTheBody"
+      },
+      "name" : "PPC What Matters: Walking or moving",
+      "description" : "Patient Priorities Care what matters: Walking or moving",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
     },
     {
       "extension" : [{
@@ -1357,25 +1537,25 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/wellbeing-priority-focus-vs"
-      },
-      "name" : "Well-Being Priority Or Focus",
-      "description" : "Value set containing well-being concepts for priority or focus area.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-what-matters-assessment"
       },
       "name" : "What Matters Assessment",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future.",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with either free-text description or component values rating where a person is now and where they would like to be in the future.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/what-matters-vs"
+      },
+      "name" : "What Matters Categories",
+      "description" : "Value set containing well-being concepts for What Matters Most.",
       "exampleBoolean" : false
     },
     {
@@ -1384,10 +1564,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-priority-focus"
+        "reference" : "StructureDefinition/pco-what-matters-priority"
       },
-      "name" : "What Matters Priority or Focus Area",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area.",
+      "name" : "What Matters Priority",
+      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority.",
       "exampleBoolean" : false
     },
     {
@@ -1400,19 +1580,7 @@
       },
       "name" : "What Matters Priority: Moving the Body",
       "description" : "What Matters observation recorded by a Patient to indicate their priority for well-being.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority-focus"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-statement"
-      },
-      "name" : "What Matters Statement",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain.",
-      "exampleBoolean" : false
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
     },
     {
       "extension" : [{
@@ -1423,8 +1591,8 @@
         "reference" : "Observation/pcoWhatMattersStatementExample"
       },
       "name" : "What Matters Statement: Family & Friends",
-      "description" : "What Matters observation added by a Patient to record a statement about a well-being focus area.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-statement"
+      "description" : "What Matters observation added by a Patient to record a free-text statement about a well-being focus area.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
     },
     {
       "extension" : [{
