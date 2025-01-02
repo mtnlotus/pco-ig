@@ -1,7 +1,7 @@
 
 Instance: pcoPatientJones
 InstanceOf: USCorePatientProfile
-Title: "Example Patient Dorothy" 
+Title: "Patient Dorothy Jones" 
 Description: "Dorothy Jones"
 Usage: #example
 * identifier[0].use = #official
@@ -47,7 +47,7 @@ Description: "Person-centered goal without attainment scaling or PROM"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[pco-category] = PCOCodes#person-centered "Person-Centered"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
 * category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)

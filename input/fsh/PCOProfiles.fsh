@@ -1,28 +1,4 @@
 
-RuleSet: PersonCenteredCategory
-* category MS
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains
-    pco-category 0..1 MS
-* category[pco-category] from PCOCategoryValueSet (required)
-  * ^short = "Person-Centered category"
-
-RuleSet: GoalDomainCategory
-* category MS
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains
-    goal-domain 0..* MS
-* category[goal-domain] from PCODomainCategoryValueSet (required)
-  * ^short = "Person-Centered Outcome domain category"
-  // Include same binding description as in US Core profiles.
-* category[goal-domain]
-  * ^binding.description = "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"
-
-  
 RuleSet: PCOSurveyCategory
 * category MS
 * category ^slicing.discriminator.type = #pattern
@@ -37,12 +13,25 @@ RuleSet: PCOSurveyCategory
 * category[survey]
   * ^binding.description = "Required by US Core"
 
+RuleSet: GoalDomainCategory
+* category MS
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains
+    goal-domain 0..* MS
+* category[goal-domain] from PCOGoalDomainsExample (required) // must be (required) when slicing category to eliminate QA errors
+  * ^short = "Person-Centered Outcome goal domain category"
+  // Include same binding description as in US Core profiles.
+* category[goal-domain]
+  * ^binding.description = "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"
+
 Profile: PCOGoalProfile
 Parent: USCoreGoalProfile
 Id: pco-goal-profile
 Title: "Person-Centered Goal"
 Description: "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment."
-* insert PersonCenteredCategory
+* insert WhatMattersCategory
 * insert GoalDomainCategory
 * expressedBy 0..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
@@ -53,17 +42,18 @@ Description: "Person-centered goal focused on what matters most to an individual
 * addresses ^slicing.discriminator.path = "resolve()"
 * addresses ^slicing.rules = #open
 * addresses contains SupportedAddresses 0..* MS
-* addresses[SupportedAddresses] only Reference(WhatMattersAssessment or WhatMattersStatement)
-  * ^short = "What Matters Assessment or Statement"
+* addresses[SupportedAddresses] only Reference(WhatMattersAssessment or WhatMattersPriority)
+  * ^short = "What Matters Assessment or Priority"
   * ^requirements = "When a goal addresses PCO what matters most observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment profiles. However, references to other instance types are also possible."
 
-// TODO: add a constraint that either Goal.category from PCOCategory or Goal.addresses WhatMattersAssessment SHALL be present
+// TODO: add a constraint that either Goal.category from PCOGoalDomainsExample or Goal.addresses WhatMattersAssessment SHALL be present
 
 Profile: PCOCarePlan
 Parent: USCoreCarePlanProfile
 Id: pco-care-plan
 Title: "Person-Centered Care Plan"
 Description: "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person."
+* insert WhatMattersCategory
 * goal 1..* MS
 * goal ^slicing.discriminator.type = #profile
 * goal ^slicing.discriminator.path = "resolve()"

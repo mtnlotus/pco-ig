@@ -1,7 +1,7 @@
 
 Instance: pcoPatientLopez
 InstanceOf: USCorePatientProfile
-Title: "Example Patient Camila" 
+Title: "Patient Camila Lopez" 
 Description: "Camila Lopez"
 Usage: #example
 * identifier[0].use = #official

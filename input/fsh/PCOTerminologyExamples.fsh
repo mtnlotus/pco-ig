@@ -35,10 +35,10 @@ Description: "Goal domain codes used to identify the category for PCO resources.
 * #emotional-and-mental-health "Emotional And Mental Health"
     ""
 
-ValueSet: PCODomainCategoryValueSet
-Id: pco-domain-category-valueset
-Title: "PCO Domain Categories"
-Description: "Example value set to identify the domains category for PCO resources."
+ValueSet: PCOGoalDomainsExample
+Id: pco-goal-domains-example-vs
+Title: "PCO Goal Domain Categories Example"
+Description: "Example value set to identify the goal domains category for PCO resources."
 * ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
 // * include codes from system PCOGoalDomains

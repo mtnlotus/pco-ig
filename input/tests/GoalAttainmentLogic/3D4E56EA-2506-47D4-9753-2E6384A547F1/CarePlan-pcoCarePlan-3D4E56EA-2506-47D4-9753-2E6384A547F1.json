@@ -1,0 +1,32 @@
+{
+  "resourceType": "CarePlan",
+  "id": "pcoCarePlan-3D4E56EA-2506-47D4-9753-2E6384A547F1",
+  "status": "active",
+  "intent": "plan",
+  "subject": {
+    "reference": "Patient/3D4E56EA-2506-47D4-9753-2E6384A547F1",
+    "display": "Camila Lopez"
+  },
+  "author": {
+    "reference": "Patient/3D4E56EA-2506-47D4-9753-2E6384A547F1",
+    "display": "Camila Lopez"
+  },
+  "goal": [ {
+    "reference": "Goal/DEB35CAD-D5B4-4E29-8A03-23958A04FA94",
+    "display": "Walk my dog 5 times per week in the park"
+  }, {
+    "reference": "Goal/0E089CD9-5B4A-43B3-8900-E17D81AC0763",
+    "display": "Resistance training 3x per week"
+  } ],
+  "activity": [ {
+    "reference": {
+      "reference": "ServiceRequest/25468FD8-4714-40B9-BA72-97AF4F10A346",
+      "display": "Walk around the block two times per week"
+    }
+  }, {
+    "reference": {
+      "reference": "ServiceRequest/58E98674-83F5-4E91-B91B-210903011E39",
+      "display": "Squats with 20 lbs"
+    }
+  } ]
+}

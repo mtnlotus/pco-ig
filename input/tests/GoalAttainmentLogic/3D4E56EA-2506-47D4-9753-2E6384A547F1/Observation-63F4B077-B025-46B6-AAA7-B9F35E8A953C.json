@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "63F4B077-B025-46B6-AAA7-B9F35E8A953C",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment" ]
+  },
+  "status": "final",
+  "category": [ {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "survey",
+      "display": "Survey"
+    } ]
+  }, {
+    "coding": [ {
+      "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
+      "code": "wellbeing-assessment",
+      "display": "Well-Being Assessment"
+    } ]
+  } ],
+  "code": {
+    "text": "Access to Services & Supports"
+  },
+  "subject": {
+    "reference": "Patient/3D4E56EA-2506-47D4-9753-2E6384A547F1",
+    "display": "Camila Lopez"
+  },
+  "effectiveDateTime": "2024-07-11T15:49:24.766306042-07:00",
+  "performer": [ {
+    "reference": "Patient/3D4E56EA-2506-47D4-9753-2E6384A547F1",
+    "display": "Camila Lopez"
+  } ],
+  "derivedFrom": [ {
+    "display": "NCQA Health Outcomes"
+  } ],
+  "component": [ {
+    "code": {
+      "coding": [ {
+        "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
+        "code": "future-rating",
+        "display": "Future Rating"
+      } ]
+    },
+    "valueInteger": 8
+  } ]
+}

@@ -25,7 +25,7 @@ Alias: $GoalAchievement = http://terminology.hl7.org/CodeSystem/goal-achievement
 Alias: PertainsToGoalExtension = http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal
 
 // Misc
-// Alias: USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias: USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 // Alias: USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 // Alias: USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 // Alias: USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
@@ -33,5 +33,3 @@ Alias: PertainsToGoalExtension = http://hl7.org/fhir/StructureDefinition/resourc
 // Alias: USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 // Alias: USCoreQuestionnaireResponse = http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
 // Alias: USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-// Alias: USCoreDiagnosticReport = http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
-// Alias: $us-core-diagnosticreport-category = http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category

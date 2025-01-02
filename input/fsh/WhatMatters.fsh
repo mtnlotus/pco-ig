@@ -1,52 +1,42 @@
 
-RuleSet: WellBeingCategory
+RuleSet: WhatMattersCategory
 * category MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
 * category contains
-    wellbeing-category 0..1 MS
-  * ^short = "Well-Being observation category"
+    what-matters 0..1 MS
+* category[what-matters] from WhatMattersValueSet (required)
+  * ^short = "What Matters observation category"
 
 Profile: WhatMattersPriority
 Parent: USCoreSimpleObservationProfile
-Id: pco-what-matters-priority-focus
-Title: "What Matters Priority or Focus Area"
-Description: "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority, or the selected focus area."
+Id: pco-what-matters-priority
+Title: "What Matters Priority"
+Description: "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority."
 // Satisfies US Core required binding for category
 * category[us-core] 1..1 MS
 * category[us-core] = OBSCAT#survey
-* insert WellBeingCategory
-* category[wellbeing-category] from WellBeingPriorityOrFocusValueSet (required)
+* insert WhatMattersCategory
 * code from WellBeingDomainValueSet (preferred)
 * value[x] 1..1 MS
 * value[x] only boolean
-  * ^short = "Indicates if this well-being domain is a current priority or focus area"
+  * ^short = "Indicates if this well-being domain is a current priority"
 
-Profile: WhatMattersStatement
-Parent: USCoreSimpleObservationProfile
-Id: pco-what-matters-statement
-Title: "What Matters Statement"
-Description: "Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain."
-* category[us-core] 1..1 MS
-* category[us-core] = OBSCAT#survey
-* insert WellBeingCategory
-* category[wellbeing-category] = WellBeingConcepts#wellbeing-statement
-* code from WellBeingDomainValueSet (preferred)
-* value[x] 1..1 MS
-* value[x] only string
-  * ^short = "Description of what matters for this well-being domain"
+// TODO: Add WhatMattersAssessment constraint that either valueString or component SHALL be present.
 
 Profile: WhatMattersAssessment
 Parent: USCoreSimpleObservationProfile
 Id: pco-what-matters-assessment
 Title: "What Matters Assessment"
-Description: "Assessment observation for one aspect of What Matters Most to a person, with component values rating where a person is now and where they would like to be in the future."
+Description: "Assessment observation for one aspect of What Matters Most to a person, with either free-text description or component values rating where a person is now and where they would like to be in the future."
 * category[us-core] 1..1 MS
 * category[us-core] = OBSCAT#survey
-* insert WellBeingCategory
-* category[wellbeing-category] = WellBeingConcepts#wellbeing-assessment
+* insert WhatMattersCategory
 * code from WellBeingDomainValueSet (preferred)
+* value[x] 0..1 MS
+* value[x] only string
+  * ^short = "Description of what matters for this well-being domain"
 * component
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
@@ -83,3 +73,16 @@ RuleSet: RatingValueString
 * value[x] 1..1 MS
 * value[x] only string
   * ^short = "Reasons for your rating"
+
+// Profile: WhatMattersStatement
+// Parent: USCoreSimpleObservationProfile
+// Id: pco-what-matters-statement
+// Title: "What Matters Statement"
+// Description: "Assessment observation for one aspect of What Matters Most to a person, with a text statement about this well-being domain."
+// * category[us-core] 1..1 MS
+// * category[us-core] = OBSCAT#survey
+// * insert WhatMattersCategory
+// * code from WellBeingDomainValueSet (preferred)
+// * value[x] 1..1 MS
+// * value[x] only string
+//   * ^short = "Description of what matters for this well-being domain"

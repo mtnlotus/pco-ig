@@ -32,6 +32,13 @@ define fluent function addressesConditions(goal Goal):
         where obs.id = GA.reference.getId()
   )
 
+// Returns a list of Observations that this Goal addresses.
+define fluent function addressesObservations(goal Goal):
+  flatten( goal.addresses GA
+      return [Observation] obs
+        where obs.id = GA.reference.getId()
+  )
+
 // Returns a list of Goals that address this Observation
 define fluent function addressedByGoals(obs Observation):
   [Goal] goal

@@ -1,12 +1,9 @@
 
-Profile: CareTradeOff
+Profile: PCOCareTradeOff
 Parent: USCoreSimpleObservationProfile
 Id: pco-care-tradeoff
 Title: "Care Trade-off Assessment"
 Description: "Assessment observation about a care trade-off that is helpful or burdensome (difficult, uncomfortable, or unhelpful)."
-* extension contains
-      PertainsToGoalExtension named pertainsToGoal 0..1 MS
-* extension[pertainsToGoal] ^short = "The goal that has this trade-off"
 // Satisfies US Core required binding for category
 * category[us-core] 1..1 MS
 * category[us-core] = OBSCAT#survey
@@ -16,8 +13,8 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 * code from CareTradeOffValueSet (preferred)
   * ^short = "Type of care trade-off"
 * focus 0..* MS
-* focus only Reference(MedicationRequest or Procedure or ServiceRequest)
-  * ^short = "The medication or procedure that has this trade-off"
+* focus only Reference(Goal or MedicationRequest or ServiceRequest or Procedure)
+  * ^short = "The goal, medication and/or procedure that has this trade-off"
 * note 0..* MS
 
 // TODO: how to specify text-entered medication name?
@@ -53,7 +50,7 @@ Description: "Code system to identify care trade-off concepts."
 
 ValueSet: CareTradeOffValueSet
 Id: pco-care-tradeoff-valueset
-Title: "Care Trade-off Example ValueSet"
+Title: "Care Trade-off ValueSet"
 Description: "Example value set containing types of care trade-off."
 * ^experimental = false
 // Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion

@@ -7,11 +7,11 @@ Description: "Code system to identify resource codes and category domains for \"
 * ^experimental = false
 * ^status = #active
 * insert PCOCodeSystemPublisher
+* #what-matters "What Matters Most"
+    "What matters most for a person's well-being"
 * #wellbeing-vision "Well-Being Vision"
     "A peron's vision for well-being"
 * #wellbeing-priority "Well-Being Priority"
-    "Priority for one area of well-being"
-* #wellbeing-focus-area "Well-Being Focus Area"
     "Priority for one area of well-being"
 * #wellbeing-statement "Well-Being Statement"
     "Statement about one area of well-being"
@@ -26,6 +26,13 @@ Description: "Code system to identify resource codes and category domains for \"
 * #future-changes "Future Changes"
     "What changes could you make to help you get there?"
 
+ValueSet: WhatMattersValueSet
+Id: what-matters-vs
+Title: "What Matters Categories"
+Description: "Value set containing well-being concepts for What Matters Most."
+* ^experimental = false
+* WellBeingConcepts#what-matters "What Matters Most"
+
 ValueSet: WellBeingCategoryValueSet
 Id: wellbeing-category-vs
 Title: "Well-Being Categories"
@@ -35,15 +42,6 @@ Description: "Value set containing well-being concepts for observation category.
 * WellBeingConcepts#wellbeing-statement "Well-Being Statement"
 * WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
 * WellBeingConcepts#wellbeing-priority "Well-Being Priority"
-* WellBeingConcepts#wellbeing-focus-area "Well-Being Focus Area"
-
-ValueSet: WellBeingPriorityOrFocusValueSet
-Id: wellbeing-priority-focus-vs
-Title: "Well-Being Priority Or Focus"
-Description: "Value set containing well-being concepts for priority or focus area."
-* ^experimental = false
-* WellBeingConcepts#wellbeing-priority "Well-Being Priority"
-* WellBeingConcepts#wellbeing-focus-area "Well-Being Focus Area"
 
 CodeSystem: VAWholeHealthExample
 Id: va-whole-health-example
