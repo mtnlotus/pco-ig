@@ -33,8 +33,9 @@ Description: "Example value set containing types of What Matters."
 * ^experimental = false
 * include codes from system PPCWhatMattersConcepts
 
-CodeSystem: BothersomeHealthConcernConcepts
-Id: pco-bothersome-health-concern-concepts
+
+CodeSystem: PPCBothersomeHealthConcernConcepts
+Id: ppc-bothersome-health-concern-concepts
 Title: "Bothersome Health Concern Concepts"
 Description: "Code system to identify bothersome symptoms or health concerns.."
 * ^caseSensitive = true
@@ -65,12 +66,58 @@ Description: "Code system to identify bothersome symptoms or health concerns.."
 * #memory-problems "Having confusing or memory problems"
 * #problem-list-item "Problem List Item"
 
-ValueSet: BothersomeHealthConcernValueSet
-Id: pco-bothersome-health-concern-valueset
+ValueSet: PPCBothersomeHealthConcernValueSet
+Id: ppc-bothersome-health-concern-valueset
 Title: "Bothersome Health Concern Example ValueSet"
 Description: "Example value set containing types of bothersome symptoms or health concerns."
 * ^experimental = false
-// Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-* include codes from system BothersomeHealthConcernConcepts
+* include codes from system PPCBothersomeHealthConcernConcepts
 
-// TODO: add a ConceptMap to LOINC
+// TODO: add a ConceptMap to LOINC for bothersome health concerns
+
+
+CodeSystem: PPCCareTradeOffConcepts
+Id: ppc-care-tradeoff-concepts
+Title: "Care Trade-off Concepts"
+Description: "Code system to identify care trade-off concepts."
+* ^caseSensitive = true
+* ^experimental = false
+* ^status = #active
+* ^hierarchyMeaning = #is-a
+* insert PCOCodeSystemPublisher
+* #medications "Medications"
+* #self-care-tasks "Self-care tasks"
+  * #diet "Following a special diet"
+  * #exercise "Exercising"
+  * #checking-vitals "Checking health signs (e.g., weight, blood pressure)"
+  * #checking-blood-sugar "Checking blood sugar"
+  * #wearing-cpap-mask "Wearing CPAP mask"
+  * #wearing-oxygen "Wearing oxygen"
+  * #using-cane-or-walker "Using a cane or walker"
+* #treatments-procedures "Tests, treatments, and procedures"
+  * #dialysis "Doing Dialysis"
+  * #chemotherapy "Doing Chemotherapy"
+  * #radiation "Going through Radiation"
+  * #blood-tests "Having Blood Tests done"
+  * #x-rays "Having X-Rays done"
+  * #other-diagnostic-tests "Going through other Diagnostic Tests (e.g. mammography)"
+  * #surgeries "Having Surgeries"
+  * #other-procedures "Having other procedures done (e.g. colonoscopy)"
+* #health-care-visits "Health Care visits"
+  * #pcp "Visiting PCP primary clinician"
+  * #specialists "Visiting specialists (e.g., cardiologist, pulmonologist, urologist)"
+  * #counselor "Visiting counselor (e.g., psychologist, social worker, therapist)"
+  * #rehabilitation "Doing rehabilitation (e.g., physical therapy, cardio rehabilitation)"
+* #community-services "Community programs, services and supports"
+  * #in-home-help "In-home help"
+  * #transportation "Transportation"
+  * #meal-delivery "Meal delivery"
+  * #community-based-program "Community-based program"
+* #other "Other"
+
+ValueSet: PPCCareTradeOffValueSet
+Id: ppc-care-tradeoff-valueset
+Title: "Care Trade-off ValueSet"
+Description: "Example value set containing types of care trade-off."
+* ^experimental = false
+* include codes from system PPCCareTradeOffConcepts

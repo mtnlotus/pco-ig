@@ -10,7 +10,7 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 
 // Cannot override preferred binding with example binding; LOINC is preferred.
 // If #other, then use text element for free-text
-* code from CareTradeOffValueSet (preferred)
+* code from PPCCareTradeOffValueSet (preferred)
   * ^short = "Type of care trade-off"
 * focus 0..* MS
 * focus only Reference(Goal or MedicationRequest or ServiceRequest or Procedure)
@@ -23,38 +23,6 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 * value[x] only CodeableConcept
 * valueCodeableConcept from CareTradeOffChoicesValueSet (required)
   * ^short = "Indicates whether this care is helpful or bothersome"
-
-
-CodeSystem: CareTradeOffConcepts
-Id: pco-care-tradeoff-concepts
-Title: "Care Trade-off Concepts"
-Description: "Code system to identify care trade-off concepts."
-* ^caseSensitive = true
-* ^experimental = false
-* ^status = #active
-* ^hierarchyMeaning = #is-a
-* insert PCOCodeSystemPublisher
-* #medications "Medications"
-* #self-care-tasks "Self-care tasks"
-  * #diet "Following a special diet"
-  * #exercise "Exercising"
-  * #checking-vitals "Checking health signs (e.g., weight, blood pressure)"
-  * #checking-blood-sugar "Checking blood sugar"
-  * #wearing-cpap-mask "Wearing CPAP mask"
-  * #wearing-oxygen "Wearing oxygen"
-  * #using-cane-or-walker "Using a cane or walker"
-  * #other "Other"
-* #tests-and-procedures "Tests, treatments, and procedures"
-* #health-care-visits "Health Care visits"
-* #community-services "Community programs, services and supports"
-
-ValueSet: CareTradeOffValueSet
-Id: pco-care-tradeoff-valueset
-Title: "Care Trade-off ValueSet"
-Description: "Example value set containing types of care trade-off."
-* ^experimental = false
-// Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-* include codes from system CareTradeOffConcepts
 
 CodeSystem: CareTradeOffChoices
 Id: pco-care-tradeoff-choices

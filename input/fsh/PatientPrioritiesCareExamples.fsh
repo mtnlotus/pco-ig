@@ -65,7 +65,7 @@ Usage: #example
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
 * effectiveDateTime = "2025-01-02T15:05:00Z"
-* valueCodeableConcept = BothersomeHealthConcernConcepts#unsteady "Feeling unsteady; trouble balancing/walking"
+* valueCodeableConcept = PPCBothersomeHealthConcernConcepts#unsteady "Feeling unsteady; trouble balancing/walking"
 
 Instance: ppcBarrierDiabetes
 InstanceOf: PCOGoalBarrier
@@ -86,7 +86,7 @@ Title: "PPC Care Trade-Off: Following a special diet"
 Description: "PPC Care Trade-off that is bothersome"
 Usage: #example
 * status = #final 
-* code = CareTradeOffConcepts#diet "Following a special diet"
+* code = PPCCareTradeOffConcepts#diet "Following a special diet"
 * focus = Reference(ppcGoalCookingDinner)
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
@@ -99,7 +99,7 @@ Title: "PPC Care Trade-Off: Health care visits"
 Description: "PPC Care Trade-off that is helpful"
 Usage: #example
 * status = #final 
-* code = CareTradeOffConcepts#health-care-visits "Health Care visits"
+* code = PPCCareTradeOffConcepts#health-care-visits "Health Care visits"
 * focus = Reference(ppcGoalCookingDinner)
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
