@@ -74,7 +74,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2025-01-02 22:55:55+0000</td>
+            <td style="padding-left: 4px;">2025-01-06 17:40:57+0000</td>
         </tr>
         
 
@@ -130,11 +130,15 @@
                   
                     <li><code>http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic|0.1.0</code></li>
                   
+                    <li><code>http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0</code></li>
+                  
                     <li><a href="http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
                   
-                    <li><code>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</code></li>
+                    <li><a href="ValueSet-what-matters-vs.html">What Matters Categories</a></li>
                   
-                    <li><code>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</code></li>
+                    <li><a href="ValueSet-pco-goal-domains-example-vs.html">PCO Goal Domain Categories Example</a></li>
+                  
+                    <li><a href="ValueSet-wellbeing-domains-example-vs.html">Well-Being Domains Example</a></li>
                   
                     <li><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></li>
                   
@@ -195,9 +199,9 @@
                 </tr>
               
                 <tr>
-                  <th>Goal</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;;</th>
+                  <th>Observation</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
+                  <th>;;;</th>
                   <th>
                     
                   </th>
@@ -255,6 +259,15 @@
                       </span>
                       
                       
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>Goal</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
+                  <th>;;;;;</th>
+                  <th>
                     
                   </th>
                 </tr>
@@ -390,11 +403,11 @@ define &quot;Numerator&quot;:
       </parameter>
       <parameter>
         <name value="format"/>
-        <valueString value="JSON"/>
+        <valueString value="XML"/>
       </parameter>
       <parameter>
         <name value="format"/>
-        <valueString value="XML"/>
+        <valueString value="JSON"/>
       </parameter>
       <parameter>
         <name value="analyzeDataRequirements"/>
@@ -453,7 +466,7 @@ define &quot;Numerator&quot;:
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2025-01-02T22:55:55+00:00"/>
+  <date value="2025-01-06T17:40:57+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -494,18 +507,28 @@ define &quot;Numerator&quot;:
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
+    <display value="Library WM"/>
+    <resource value="http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="depends-on"/>
     <display value="Code system LOINC"/>
     <resource value="http://loinc.org"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <display value="Value set Person-Centered Category"/>
-    <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+    <display value="Value set What Matters Categories"/>
+    <resource value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
-    <display value="Value set PCO Domain Categories"/>
-    <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
+    <display value="Value set PCO Goal Domain Categories"/>
+    <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="depends-on"/>
+    <display value="Value set Well-Being Domains"/>
+    <resource value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs"/>
   </relatedArtifact>
   <relatedArtifact>
     <type value="depends-on"/>
@@ -578,11 +601,10 @@ define &quot;Numerator&quot;:
     <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
   </dataRequirement>
   <dataRequirement>
-    <type value="Goal"/>
-    <profile value="http://hl7.org/fhir/StructureDefinition/Goal"/>
+    <type value="Observation"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
     <mustSupport value="category"/>
-    <mustSupport value="start"/>
-    <mustSupport value="measure"/>
+    <mustSupport value="code"/>
     <mustSupport value="id"/>
   </dataRequirement>
   <dataRequirement>
@@ -602,6 +624,15 @@ define &quot;Numerator&quot;:
       <path value="code"/>
       <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"/>
     </codeFilter>
+  </dataRequirement>
+  <dataRequirement>
+    <type value="Goal"/>
+    <profile value="http://hl7.org/fhir/StructureDefinition/Goal"/>
+    <mustSupport value="category"/>
+    <mustSupport value="start"/>
+    <mustSupport value="reference"/>
+    <mustSupport value="measure"/>
+    <mustSupport value="id"/>
   </dataRequirement>
   <dataRequirement>
     <type value="CarePlan"/>

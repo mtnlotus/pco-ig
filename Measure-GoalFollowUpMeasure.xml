@@ -514,6 +514,33 @@
   
   <td class="content-container">
     
+    <em>Description</em>: Library WM
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0</code>
+    <br/>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0</tt>
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+<th scope="row" class="row-header">Dependency</th>
+
+  
+  <td class="content-container">
+    
     <em>Description</em>: Library PC
     
     <br/>
@@ -568,7 +595,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: Value set Person-Centered Category
+    <em>Description</em>: Value set What Matters Categories
     
     <br/>
     
@@ -577,9 +604,9 @@
     
     
     
-    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</code>
+    <em>Resource</em>: <a href="ValueSet-what-matters-vs.html">What Matters Categories</a>
     <br/>
-    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</tt>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs</tt>
     
   </td>
 </tr>
@@ -595,7 +622,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: Value set PCO Domain Categories
+    <em>Description</em>: Value set PCO Goal Domain Categories
     
     <br/>
     
@@ -604,9 +631,36 @@
     
     
     
-    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</code>
+    <em>Resource</em>: <a href="ValueSet-pco-goal-domains-example-vs.html">PCO Goal Domain Categories Example</a>
     <br/>
-    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</tt>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs</tt>
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+<th scope="row" class="row-header">Dependency</th>
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: Value set Well-Being Domains
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="ValueSet-wellbeing-domains-example-vs.html">Well-Being Domains Example</a>
+    <br/>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs</tt>
     
   </td>
 </tr>
@@ -826,17 +880,17 @@
 <tr>
   <th scope="row" class="row-header">Data Requirement</th>
   <td class="content-container">
-    <em>Type</em>: Goal
+    <em>Type</em>: Observation
     <br/>
   
     <em>Profile(s)</em>: 
   
-    <a href="http://hl7.org/fhir/R4/goal.html">Goal</a>
+    <a href="http://hl7.org/fhir/R4/observation.html">Observation</a>
     <br/>        
   
    
    
-    <em>Must Support Elements</em>: category, start, measure, id
+    <em>Must Support Elements</em>: category, code, id
     <br/>
    
    
@@ -909,6 +963,26 @@
   
   
   
+   
+  </td>
+</tr>
+
+<tr>
+  <th scope="row" class="row-header">Data Requirement</th>
+  <td class="content-container">
+    <em>Type</em>: Goal
+    <br/>
+  
+    <em>Profile(s)</em>: 
+  
+    <a href="http://hl7.org/fhir/R4/goal.html">Goal</a>
+    <br/>        
+  
+   
+   
+    <em>Must Support Elements</em>: category, start, reference, measure, id
+    <br/>
+   
    
   </td>
 </tr>
@@ -996,6 +1070,29 @@ define &quot;Denominator&quot;:
   <th scope="row" rowspan="2" class="row-header">
     
       
+      <a name="whatmatterslogic-what-matters-observations"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> WhatMattersLogic</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define &quot;What Matters Observations&quot;:
+  [Observation] obs
+    where obs.category in &quot;What Matters Categories&quot;
+      or obs.code in &quot;Well-Being Domains&quot;</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
       <a name="goalattainmentlogic-pco-goals"> </a>
     
     Logic Definition
@@ -1008,14 +1105,15 @@ define &quot;Denominator&quot;:
 
   <td>
     <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">/* 
-  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;What Matters Category&quot; or &quot;PCO Domain Categories&quot;
+      or that addresses a What Matters observation
   and has a start date.
-  TODO: or a Goal that addresses a What Matters observation.
 */
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where (goal.category in &quot;Person-Centered Category&quot;
-        or goal.category in &quot;PCO Domain Categories&quot;)
+    where (goal.category in WM.&quot;What Matters Categories&quot;
+        or goal.category in &quot;PCO Goal Domain Categories&quot;
+        or exists goal.whatMattersObservations())
       and (goal.start as FHIR.date) is not null</code></pre>
   </td>
 
@@ -1224,6 +1322,94 @@ define function ToConcept(concept FHIR.CodeableConcept):
   <th scope="row" rowspan="2" class="row-header">
     
       
+      <a name="whatmatterslogic-whatmattersobservations"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> WhatMattersLogic</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">// Returns a list of what matters Observations this Goal addresses.
+define fluent function whatMattersObservations(goal Goal):
+  flatten( goal.addresses GA
+      return [Observation] obs
+        where obs.id = GA.reference.getId()
+          and obs.isWhatMatters()
+  )</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
+      <a name="fhirhelpers-tostring"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> FHIRHelpers</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define function ToString(value string): value.value</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
+      <a name="pcocommon-getid"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> PCOCommon</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define fluent function getId(uri String):
+  Last(Split(uri, '/'))</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
+      <a name="whatmatterslogic-iswhatmatters"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> WhatMattersLogic</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define fluent function isWhatMatters(obs Observation):
+  &quot;What Matters Observations&quot; contains obs</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
       <a name="fhirhelpers-todate"> </a>
     
     Logic Definition
@@ -1300,26 +1486,6 @@ define fluent function extensions(domainResource DomainResource, url String):
   <th scope="row" rowspan="2" class="row-header">
     
       
-      <a name="fhirhelpers-tostring"> </a>
-    
-    Logic Definition
-  </th>
-
-  <td class="content-container"><em>Library Name:</em> FHIRHelpers</td>
-
-</tr>
-<tr>
-
-  <td>
-    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define function ToString(value uri): value.value</code></pre>
-  </td>
-
-</tr>
-        
-<tr>
-  <th scope="row" rowspan="2" class="row-header">
-    
-      
       <a name="goalattainmentlogic-gasscores"> </a>
     
     Logic Definition
@@ -1381,27 +1547,6 @@ define fluent function focusGoals(obs Observation):
     return [Goal] resource
       where resource.id = ref.reference.getId()
   )</code></pre>
-  </td>
-
-</tr>
-        
-<tr>
-  <th scope="row" rowspan="2" class="row-header">
-    
-      
-      <a name="pcocommon-getid"> </a>
-    
-    Logic Definition
-  </th>
-
-  <td class="content-container"><em>Library Name:</em> PCOCommon</td>
-
-</tr>
-<tr>
-
-  <td>
-    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define fluent function getId(uri String):
-  Last(Split(uri, '/'))</code></pre>
   </td>
 
 </tr>
@@ -1597,16 +1742,30 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
         <extension url="libraryName">
+          <valueString value="WhatMattersLogic"/>
+        </extension>
+        <extension url="name">
+          <valueString value="What Matters Observations"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="define &quot;What Matters Observations&quot;:&#xA;  [Observation] obs&#xA;    where obs.category in &quot;What Matters Categories&quot;&#xA;      or obs.code in &quot;Well-Being Domains&quot;"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="2"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
           <valueString value="GoalAttainmentLogic"/>
         </extension>
         <extension url="name">
           <valueString value="PCO Goals"/>
         </extension>
         <extension url="statement">
-          <valueString value="/* &#xA;  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;&#xA;  and has a start date.&#xA;  TODO: or a Goal that addresses a What Matters observation.&#xA;*/&#xA;define &quot;PCO Goals&quot;:&#xA;  [Goal] goal&#xA;    where (goal.category in &quot;Person-Centered Category&quot;&#xA;        or goal.category in &quot;PCO Domain Categories&quot;)&#xA;      and (goal.start as FHIR.date) is not null"/>
+          <valueString value="/* &#xA;  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;What Matters Category&quot; or &quot;PCO Domain Categories&quot;&#xA;      or that addresses a What Matters observation&#xA;  and has a start date.&#xA;*/&#xA;define &quot;PCO Goals&quot;:&#xA;  [Goal] goal&#xA;    where (goal.category in WM.&quot;What Matters Categories&quot;&#xA;        or goal.category in &quot;PCO Goal Domain Categories&quot;&#xA;        or exists goal.whatMattersObservations())&#xA;      and (goal.start as FHIR.date) is not null"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="2"/>
+          <valueInteger value="3"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1620,7 +1779,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Observations containing a GAS score.&#xA;define &quot;GAS Scores&quot;:&#xA;  [Observation: &quot;Goal Attainment Scaling (GAS) Score&quot;]"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="3"/>
+          <valueInteger value="4"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1634,7 +1793,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// PCO Goals whose startDate falls within the Measurement Period&#xA;define &quot;PCO Goals During Measurement Period&quot;:&#xA;  &quot;PCO Goals&quot; goal&#xA;    where (ToDateTime(goal.start as FHIR.date) during &quot;Measurement Period&quot;)&#xA;      and (goal.hasGAS() or goal.hasPROM())&#xA;      and exists goal.carePlans()"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="4"/>
+          <valueInteger value="5"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1648,7 +1807,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Observations containing a PROM score.&#xA;define &quot;PROM Scores&quot;:&#xA;  [Observation: &quot;PROM Target Measures&quot;]"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="5"/>
+          <valueInteger value="6"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1662,7 +1821,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/* &#xA;Follow-Up Scares are PCO score observations taken during the Measurement Period,&#xA;and during the follow-up period for its Goal. Default follow-up period is &#xA;2 weeks to 6 months following the goal startDate.&#xA;*/&#xA;define &quot;Follow-Up Scores During Measurement Period&quot;:&#xA;  flatten( &quot;PCO Goals During Measurement Period&quot; goal&#xA;    let pcoScores: goal.pcoScores()&#xA;      return pcoScores score &#xA;        let scoreDate: score.effective as FHIR.dateTime&#xA;        where scoreDate during &quot;Measurement Period&quot;&#xA;          and scoreDate during &quot;Follow-Up Interval For&quot;(goal)&#xA;  )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="6"/>
+          <valueInteger value="7"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1676,7 +1835,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/*&#xA;@description: Indivuals who received follow-up on their PCO goal within two&#xA;weeks to six months of when the PCO goal and GAS or PROM were identified.&#xA;*/&#xA;define &quot;Numerator&quot;:&#xA;  &quot;Denominator&quot; person&#xA;    where exists PCOLogic.&quot;Follow-Up Scores During Measurement Period&quot;"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="7"/>
+          <valueInteger value="8"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1690,7 +1849,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define &quot;Denominator Exclusions&quot;:&#xA;  null"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="8"/>
+          <valueInteger value="9"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1704,7 +1863,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define &quot;Denominator Exceptions&quot;:&#xA;  null"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="9"/>
+          <valueInteger value="10"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1718,49 +1877,21 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/*&#xA;@description: Converts the given FHIR [CodeableConcept](https://hl7.org/fhir/datatypes.html#CodeableConcept) value to a CQL Concept.&#xA;*/&#xA;define function ToConcept(concept FHIR.CodeableConcept):&#xA;    if concept is null then&#xA;        null&#xA;    else&#xA;        System.Concept {&#xA;            codes: concept.coding C return ToCode(C),&#xA;            display: concept.text.value&#xA;        }"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="10"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="FHIRHelpers"/>
-        </extension>
-        <extension url="name">
-          <valueString value="ToDate"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="define function ToDate(value date): value.value"/>
-        </extension>
-        <extension url="displaySequence">
           <valueInteger value="11"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
         <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
+          <valueString value="WhatMattersLogic"/>
         </extension>
         <extension url="name">
-          <valueString value="hasGAS"/>
+          <valueString value="whatMattersObservations"/>
         </extension>
         <extension url="statement">
-          <valueString value="// where exists obs.performer.resolveRelatedPersons()&#xA;&#xA;define fluent function hasGAS(goal Goal):&#xA;  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')&#xA;    or exists (goal.target target&#xA;      where target.measure = &quot;Goal attainment scale&quot;&#xA;    )&#xA;    or exists goal.gasScores()"/>
+          <valueString value="// Returns a list of what matters Observations this Goal addresses.&#xA;define fluent function whatMattersObservations(goal Goal):&#xA;  flatten( goal.addresses GA&#xA;      return [Observation] obs&#xA;        where obs.id = GA.reference.getId()&#xA;          and obs.isWhatMatters()&#xA;  )"/>
         </extension>
         <extension url="displaySequence">
           <valueInteger value="12"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="PCOCommon"/>
-        </extension>
-        <extension url="name">
-          <valueString value="extensions"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="/*&#xA;@description: Returns any extensions defined on the given resource with the specified url.&#xA;@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access&#xA;content that is defined by extensions but not yet surfaced in the&#xA;CQL model info.&#xA;*/&#xA;define fluent function extensions(domainResource DomainResource, url String):&#xA;  domainResource.extension E&#xA;&#x9;  where E.url = url&#xA;&#x9;&#x9;return E"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="13"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1771,52 +1902,10 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="ToString"/>
         </extension>
         <extension url="statement">
-          <valueString value="define function ToString(value uri): value.value"/>
+          <valueString value="define function ToString(value string): value.value"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="14"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
-        </extension>
-        <extension url="name">
-          <valueString value="gasScores"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="// Returns a list of Observation including only GAS scores&#xA;define fluent function gasScores(goal Goal):&#xA;  &quot;GAS Scores&quot; score&#xA;    where score.focusGoals() contains goal"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="15"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="GoalAttainmentLogic"/>
-        </extension>
-        <extension url="name">
-          <valueString value="focusGoals"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="// Returns a list of Goal where focus includes the given Observation.&#xA;define fluent function focusGoals(obs Observation):&#xA;  obs.focus.resolveGoals()"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="16"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
-        <extension url="libraryName">
-          <valueString value="PCOCommon"/>
-        </extension>
-        <extension url="name">
-          <valueString value="resolveGoals"/>
-        </extension>
-        <extension url="statement">
-          <valueString value="define fluent function resolveGoals(references List&lt;Reference&gt;):&#xA;  flatten( references ref&#xA;    return [Goal] resource&#xA;      where resource.id = ref.reference.getId()&#xA;  )"/>
-        </extension>
-        <extension url="displaySequence">
-          <valueInteger value="17"/>
+          <valueInteger value="13"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1830,7 +1919,105 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define fluent function getId(uri String):&#xA;  Last(Split(uri, '/'))"/>
         </extension>
         <extension url="displaySequence">
+          <valueInteger value="14"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="WhatMattersLogic"/>
+        </extension>
+        <extension url="name">
+          <valueString value="isWhatMatters"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="define fluent function isWhatMatters(obs Observation):&#xA;  &quot;What Matters Observations&quot; contains obs"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="15"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="FHIRHelpers"/>
+        </extension>
+        <extension url="name">
+          <valueString value="ToDate"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="define function ToDate(value date): value.value"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="16"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="GoalAttainmentLogic"/>
+        </extension>
+        <extension url="name">
+          <valueString value="hasGAS"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="// where exists obs.performer.resolveRelatedPersons()&#xA;&#xA;define fluent function hasGAS(goal Goal):&#xA;  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')&#xA;    or exists (goal.target target&#xA;      where target.measure = &quot;Goal attainment scale&quot;&#xA;    )&#xA;    or exists goal.gasScores()"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="17"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="PCOCommon"/>
+        </extension>
+        <extension url="name">
+          <valueString value="extensions"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="/*&#xA;@description: Returns any extensions defined on the given resource with the specified url.&#xA;@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access&#xA;content that is defined by extensions but not yet surfaced in the&#xA;CQL model info.&#xA;*/&#xA;define fluent function extensions(domainResource DomainResource, url String):&#xA;  domainResource.extension E&#xA;&#x9;  where E.url = url&#xA;&#x9;&#x9;return E"/>
+        </extension>
+        <extension url="displaySequence">
           <valueInteger value="18"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="GoalAttainmentLogic"/>
+        </extension>
+        <extension url="name">
+          <valueString value="gasScores"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="// Returns a list of Observation including only GAS scores&#xA;define fluent function gasScores(goal Goal):&#xA;  &quot;GAS Scores&quot; score&#xA;    where score.focusGoals() contains goal"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="19"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="GoalAttainmentLogic"/>
+        </extension>
+        <extension url="name">
+          <valueString value="focusGoals"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="// Returns a list of Goal where focus includes the given Observation.&#xA;define fluent function focusGoals(obs Observation):&#xA;  obs.focus.resolveGoals()"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="20"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
+        <extension url="libraryName">
+          <valueString value="PCOCommon"/>
+        </extension>
+        <extension url="name">
+          <valueString value="resolveGoals"/>
+        </extension>
+        <extension url="statement">
+          <valueString value="define fluent function resolveGoals(references List&lt;Reference&gt;):&#xA;  flatten( references ref&#xA;    return [Goal] resource&#xA;      where resource.id = ref.reference.getId()&#xA;  )"/>
+        </extension>
+        <extension url="displaySequence">
+          <valueInteger value="21"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1844,7 +2031,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/// Returns true if this Goal has a PROM code in its target.measure&#xA;define fluent function hasPROM(goal Goal):&#xA;  exists (goal.target target&#xA;    where target.measure in &quot;PROM Target Measures&quot;&#xA;  )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="19"/>
+          <valueInteger value="22"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1858,7 +2045,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of CarePlan that support this Goal.&#xA;define fluent function carePlans(goal Goal):&#xA;  [CarePlan] carePlan&#xA;    where exists ( carePlan.goal goalRef&#xA;        where goal.id = goalRef.reference.getId()&#xA;    )"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="20"/>
+          <valueInteger value="23"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1872,7 +2059,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of Observation including both GAS and PROM scores&#xA;define fluent function pcoScores(goal Goal):&#xA;  goal.gasScores()&#xA;    union goal.promScores()"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="21"/>
+          <valueInteger value="24"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1886,7 +2073,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="// Returns a list of Observation including only PROM scores&#xA;define fluent function promScores(goal Goal):&#xA;  &quot;PROM Scores&quot; score&#xA;    where score.focusGoals() contains goal"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="22"/>
+          <valueInteger value="25"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1900,7 +2087,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="define function ToDateTime(value dateTime): value.value"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="23"/>
+          <valueInteger value="26"/>
         </extension>
       </extension>
       <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition">
@@ -1914,7 +2101,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <valueString value="/*&#xA;Computes the follow-up interval for a Goal based on this measure's &quot;Follow-Up Interval&quot; parameter.&#xA;@return Interval&lt;DateTime&gt;&#xA;*/&#xA;define function &quot;Follow-Up Interval For&quot; (goal Goal):&#xA;  goal goal&#xA;    let startDate: ToDateTime(goal.start as FHIR.date)&#xA;      return Interval(startDate + start of &quot;Follow-Up Interval&quot;, startDate + end of &quot;Follow-Up Interval&quot;)"/>
         </extension>
         <extension url="displaySequence">
-          <valueInteger value="24"/>
+          <valueInteger value="27"/>
         </extension>
       </extension>
       <name value="EffectiveDataRequirements"/>
@@ -1937,6 +2124,11 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
+        <display value="Library WM"/>
+        <resource value="http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
         <display value="Library PC"/>
         <resource value="http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0"/>
       </relatedArtifact>
@@ -1947,13 +2139,18 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
-        <display value="Value set Person-Centered Category"/>
-        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"/>
+        <display value="Value set What Matters Categories"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
-        <display value="Value set PCO Domain Categories"/>
-        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"/>
+        <display value="Value set PCO Goal Domain Categories"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Well-Being Domains"/>
+        <resource value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs"/>
       </relatedArtifact>
       <relatedArtifact>
         <type value="depends-on"/>
@@ -2019,11 +2216,10 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
         <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
       </dataRequirement>
       <dataRequirement>
-        <type value="Goal"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/Goal"/>
+        <type value="Observation"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
         <mustSupport value="category"/>
-        <mustSupport value="start"/>
-        <mustSupport value="measure"/>
+        <mustSupport value="code"/>
         <mustSupport value="id"/>
       </dataRequirement>
       <dataRequirement>
@@ -2043,6 +2239,15 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <path value="code"/>
           <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"/>
         </codeFilter>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="Goal"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Goal"/>
+        <mustSupport value="category"/>
+        <mustSupport value="start"/>
+        <mustSupport value="reference"/>
+        <mustSupport value="measure"/>
+        <mustSupport value="id"/>
       </dataRequirement>
       <dataRequirement>
         <type value="CarePlan"/>
@@ -2117,7 +2322,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
   <title value="Person-Centered Goal Follow-Up"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-12-28T18:49:50+00:00"/>
+  <date value="2025-01-04T23:50:51+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>

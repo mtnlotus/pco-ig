@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10.1"}
-    h3,h4,h5,h6{--heading-prefix:"10.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"12.1"}
+    h3,h4,h5,h6{--heading-prefix:"12.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -258,7 +258,7 @@
         
           Active
           
-            as of 2024-12-28
+            as of 2025-01-04
           
         
       </td>
@@ -816,6 +816,33 @@
   
   <td class="content-container">
     
+    <em>Description</em>: Library WM
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0</code>
+    <br/>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0</tt>
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+<th scope="row" class="row-header">Dependency</th>
+
+  
+  <td class="content-container">
+    
     <em>Description</em>: Library PC
     
     <br/>
@@ -870,7 +897,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: Value set Person-Centered Category
+    <em>Description</em>: Value set What Matters Categories
     
     <br/>
     
@@ -879,9 +906,9 @@
     
     
     
-    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</code>
+    <em>Resource</em>: <a href="ValueSet-what-matters-vs.html">What Matters Categories</a>
     <br/>
-    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</tt>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs</tt>
     
   </td>
 </tr>
@@ -897,7 +924,7 @@
   
   <td class="content-container">
     
-    <em>Description</em>: Value set PCO Domain Categories
+    <em>Description</em>: Value set PCO Goal Domain Categories
     
     <br/>
     
@@ -906,9 +933,36 @@
     
     
     
-    <em>Resource</em>: <code>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</code>
+    <em>Resource</em>: <a href="ValueSet-pco-goal-domains-example-vs.html">PCO Goal Domain Categories Example</a>
     <br/>
-    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</tt>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs</tt>
+    
+  </td>
+</tr>
+
+<tr>
+  
+  
+  
+  
+  
+<th scope="row" class="row-header">Dependency</th>
+
+  
+  <td class="content-container">
+    
+    <em>Description</em>: Value set Well-Being Domains
+    
+    <br/>
+    
+    
+    
+    
+    
+    
+    <em>Resource</em>: <a href="ValueSet-wellbeing-domains-example-vs.html">Well-Being Domains Example</a>
+    <br/>
+    <em>Canonical URL</em>: <tt>http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs</tt>
     
   </td>
 </tr>
@@ -1128,17 +1182,17 @@
 <tr>
   <th scope="row" class="row-header">Data Requirement</th>
   <td class="content-container">
-    <em>Type</em>: Goal
+    <em>Type</em>: Observation
     <br/>
   
     <em>Profile(s)</em>: 
   
-    <a href="http://hl7.org/fhir/R4/goal.html">Goal</a>
+    <a href="http://hl7.org/fhir/R4/observation.html">Observation</a>
     <br/>        
   
    
    
-    <em>Must Support Elements</em>: category, start, measure, id
+    <em>Must Support Elements</em>: category, code, id
     <br/>
    
    
@@ -1211,6 +1265,26 @@
   
   
   
+   
+  </td>
+</tr>
+
+<tr>
+  <th scope="row" class="row-header">Data Requirement</th>
+  <td class="content-container">
+    <em>Type</em>: Goal
+    <br/>
+  
+    <em>Profile(s)</em>: 
+  
+    <a href="http://hl7.org/fhir/R4/goal.html">Goal</a>
+    <br/>        
+  
+   
+   
+    <em>Must Support Elements</em>: category, start, reference, measure, id
+    <br/>
+   
    
   </td>
 </tr>
@@ -1298,6 +1372,29 @@ define &quot;Denominator&quot;:
   <th scope="row" rowspan="2" class="row-header">
     
       
+      <a name="whatmatterslogic-what-matters-observations"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> WhatMattersLogic</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define &quot;What Matters Observations&quot;:
+  [Observation] obs
+    where obs.category in &quot;What Matters Categories&quot;
+      or obs.code in &quot;Well-Being Domains&quot;</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
       <a name="goalattainmentlogic-pco-goals"> </a>
     
     Logic Definition
@@ -1310,14 +1407,15 @@ define &quot;Denominator&quot;:
 
   <td>
     <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">/* 
-  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;What Matters Category&quot; or &quot;PCO Domain Categories&quot;
+      or that addresses a What Matters observation
   and has a start date.
-  TODO: or a Goal that addresses a What Matters observation.
 */
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where (goal.category in &quot;Person-Centered Category&quot;
-        or goal.category in &quot;PCO Domain Categories&quot;)
+    where (goal.category in WM.&quot;What Matters Categories&quot;
+        or goal.category in &quot;PCO Goal Domain Categories&quot;
+        or exists goal.whatMattersObservations())
       and (goal.start as FHIR.date) is not null</code></pre>
   </td>
 
@@ -1526,6 +1624,94 @@ define function ToConcept(concept FHIR.CodeableConcept):
   <th scope="row" rowspan="2" class="row-header">
     
       
+      <a name="whatmatterslogic-whatmattersobservations"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> WhatMattersLogic</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">// Returns a list of what matters Observations this Goal addresses.
+define fluent function whatMattersObservations(goal Goal):
+  flatten( goal.addresses GA
+      return [Observation] obs
+        where obs.id = GA.reference.getId()
+          and obs.isWhatMatters()
+  )</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
+      <a name="fhirhelpers-tostring"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> FHIRHelpers</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define function ToString(value string): value.value</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
+      <a name="pcocommon-getid"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> PCOCommon</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define fluent function getId(uri String):
+  Last(Split(uri, '/'))</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
+      <a name="whatmatterslogic-iswhatmatters"> </a>
+    
+    Logic Definition
+  </th>
+
+  <td class="content-container"><em>Library Name:</em> WhatMattersLogic</td>
+
+</tr>
+<tr>
+
+  <td>
+    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define fluent function isWhatMatters(obs Observation):
+  &quot;What Matters Observations&quot; contains obs</code></pre>
+  </td>
+
+</tr>
+        
+<tr>
+  <th scope="row" rowspan="2" class="row-header">
+    
+      
       <a name="fhirhelpers-todate"> </a>
     
     Logic Definition
@@ -1602,26 +1788,6 @@ define fluent function extensions(domainResource DomainResource, url String):
   <th scope="row" rowspan="2" class="row-header">
     
       
-      <a name="fhirhelpers-tostring"> </a>
-    
-    Logic Definition
-  </th>
-
-  <td class="content-container"><em>Library Name:</em> FHIRHelpers</td>
-
-</tr>
-<tr>
-
-  <td>
-    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define function ToString(value uri): value.value</code></pre>
-  </td>
-
-</tr>
-        
-<tr>
-  <th scope="row" rowspan="2" class="row-header">
-    
-      
       <a name="goalattainmentlogic-gasscores"> </a>
     
     Logic Definition
@@ -1683,27 +1849,6 @@ define fluent function focusGoals(obs Observation):
     return [Goal] resource
       where resource.id = ref.reference.getId()
   )</code></pre>
-  </td>
-
-</tr>
-        
-<tr>
-  <th scope="row" rowspan="2" class="row-header">
-    
-      
-      <a name="pcocommon-getid"> </a>
-    
-    Logic Definition
-  </th>
-
-  <td class="content-container"><em>Library Name:</em> PCOCommon</td>
-
-</tr>
-<tr>
-
-  <td>
-    <pre style="border: none;" class="content-container highlight language-cql"><code class="language-cql">define fluent function getId(uri String):
-  Last(Split(uri, '/'))</code></pre>
   </td>
 
 </tr>
@@ -1882,7 +2027,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 6, 2025 17:40+0000">2025-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

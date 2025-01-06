@@ -119,17 +119,6 @@
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-simple-observation-category.html" : "US Core Simple Observation Category"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "BothersomeHealthConcernConcepts",
-      "title" : "Bothersome Health Concern Concepts",
-      "description" : "Code system to identify bothersome symptoms or health concerns..",
-      "uses" : {
-      },
-      "ValueSet-pco-bothersome-health-concern-valueset.html" : "Bothersome Health Concern Example ValueSet"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices",
       "version" : "0.2.0",
       "status" : "active",
@@ -141,17 +130,6 @@
       "ValueSet-pco-care-tradeoff-choices-valueset.html" : "Care Trade-off Choices ValueSet"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "CareTradeOffConcepts",
-      "title" : "Care Trade-off Concepts",
-      "description" : "Code system to identify care trade-off concepts.",
-      "uses" : {
-      },
-      "ValueSet-pco-care-tradeoff-valueset.html" : "Care Trade-off ValueSet"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
       "version" : "0.2.0",
       "status" : "active",
@@ -161,6 +139,28 @@
       "uses" : {
       },
       "ValueSet-pco-goal-domains-example-vs.html" : "PCO Goal Domain Categories Example"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-bothersome-health-concern-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PPCBothersomeHealthConcernConcepts",
+      "title" : "Bothersome Health Concern Concepts",
+      "description" : "Code system to identify bothersome symptoms or health concerns..",
+      "uses" : {
+      },
+      "ValueSet-ppc-bothersome-health-concern-valueset.html" : "Bothersome Health Concern Example ValueSet"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PPCCareTradeOffConcepts",
+      "title" : "Care Trade-off Concepts",
+      "description" : "Code system to identify care trade-off concepts.",
+      "uses" : {
+      },
+      "ValueSet-ppc-care-tradeoff-valueset.html" : "Care Trade-off ValueSet"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts",
@@ -206,11 +206,11 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
       "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
       "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
-      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures"
+      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -222,16 +222,16 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
       "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
       "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
       "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
       "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes"
+      "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",

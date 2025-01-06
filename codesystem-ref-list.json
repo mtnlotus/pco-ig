@@ -1,17 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "BothersomeHealthConcernConcepts",
-      "title" : "Bothersome Health Concern Concepts",
-      "description" : "Code system to identify bothersome symptoms or health concerns..",
-      "uses" : {
-      },
-      "ValueSet-pco-bothersome-health-concern-valueset.html" : "Bothersome Health Concern Example ValueSet"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices",
       "version" : "0.2.0",
       "status" : "active",
@@ -23,17 +12,6 @@
       "ValueSet-pco-care-tradeoff-choices-valueset.html" : "Care Trade-off Choices ValueSet"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "CareTradeOffConcepts",
-      "title" : "Care Trade-off Concepts",
-      "description" : "Code system to identify care trade-off concepts.",
-      "uses" : {
-      },
-      "ValueSet-pco-care-tradeoff-valueset.html" : "Care Trade-off ValueSet"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
       "version" : "0.2.0",
       "status" : "active",
@@ -43,6 +21,28 @@
       "uses" : {
       },
       "ValueSet-pco-goal-domains-example-vs.html" : "PCO Goal Domain Categories Example"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-bothersome-health-concern-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PPCBothersomeHealthConcernConcepts",
+      "title" : "Bothersome Health Concern Concepts",
+      "description" : "Code system to identify bothersome symptoms or health concerns..",
+      "uses" : {
+      },
+      "ValueSet-ppc-bothersome-health-concern-valueset.html" : "Bothersome Health Concern Example ValueSet"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PPCCareTradeOffConcepts",
+      "title" : "Care Trade-off Concepts",
+      "description" : "Code system to identify care trade-off concepts.",
+      "uses" : {
+      },
+      "ValueSet-ppc-care-tradeoff-valueset.html" : "Care Trade-off ValueSet"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts",
@@ -88,9 +88,9 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
       "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
-      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures"
+      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers"
     },
     {
       "url" : "http://snomed.info/sct",

@@ -45,8 +45,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10.5"}
-    h3,h4,h5,h6{--heading-prefix:"10.5"}</style>
+    <style type="text/css">h2{--heading-prefix:"12.5"}
+    h3,h4,h5,h6{--heading-prefix:"12.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -245,7 +245,7 @@
         
           Draft
           
-            as of 2025-01-02
+            as of 2025-01-06
           
         
       </td>
@@ -337,7 +337,7 @@
         
         &lt;tr&gt;
             &lt;th scope=&quot;row&quot;&gt;&lt;b&gt;Date: &lt;/b&gt;&lt;/th&gt;
-            &lt;td style=&quot;padding-left: 4px;&quot;&gt;2025-01-02 22:55:55+0000&lt;/td&gt;
+            &lt;td style=&quot;padding-left: 4px;&quot;&gt;2025-01-06 17:40:57+0000&lt;/td&gt;
         &lt;/tr&gt;
         
 
@@ -393,11 +393,15 @@
                   
                     &lt;li&gt;&lt;code&gt;http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic|0.1.0&lt;/code&gt;&lt;/li&gt;
                   
+                    &lt;li&gt;&lt;code&gt;http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0&lt;/code&gt;&lt;/li&gt;
+                  
                     &lt;li&gt;&lt;a href=&quot;http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html&quot;&gt;Logical Observation Identifiers, Names and Codes (LOINC)&lt;/a&gt;&lt;/li&gt;
                   
-                    &lt;li&gt;&lt;code&gt;http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs&lt;/code&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;ValueSet-what-matters-vs.html&quot;&gt;What Matters Categories&lt;/a&gt;&lt;/li&gt;
                   
-                    &lt;li&gt;&lt;code&gt;http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset&lt;/code&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;ValueSet-pco-goal-domains-example-vs.html&quot;&gt;PCO Goal Domain Categories Example&lt;/a&gt;&lt;/li&gt;
+                  
+                    &lt;li&gt;&lt;a href=&quot;ValueSet-wellbeing-domains-example-vs.html&quot;&gt;Well-Being Domains Example&lt;/a&gt;&lt;/li&gt;
                   
                     &lt;li&gt;&lt;a href=&quot;ValueSet-goal-attainment-scaling-score.html&quot;&gt;Goal Attainment Scaling (GAS) Score&lt;/a&gt;&lt;/li&gt;
                   
@@ -458,9 +462,9 @@
                 &lt;/tr&gt;
               
                 &lt;tr&gt;
-                  &lt;th&gt;Goal&lt;/th&gt;
-                  &lt;th&gt;http://hl7.org/fhir/StructureDefinition/Goal&lt;/th&gt;
-                  &lt;th&gt;;;;;&lt;/th&gt;
+                  &lt;th&gt;Observation&lt;/th&gt;
+                  &lt;th&gt;http://hl7.org/fhir/StructureDefinition/Observation&lt;/th&gt;
+                  &lt;th&gt;;;;&lt;/th&gt;
                   &lt;th&gt;
                     
                   &lt;/th&gt;
@@ -518,6 +522,15 @@
                       &lt;/span&gt;
                       
                       
+                    
+                  &lt;/th&gt;
+                &lt;/tr&gt;
+              
+                &lt;tr&gt;
+                  &lt;th&gt;Goal&lt;/th&gt;
+                  &lt;th&gt;http://hl7.org/fhir/StructureDefinition/Goal&lt;/th&gt;
+                  &lt;th&gt;;;;;;&lt;/th&gt;
+                  &lt;th&gt;
                     
                   &lt;/th&gt;
                 &lt;/tr&gt;
@@ -654,11 +667,11 @@ define &amp;quot;Numerator&amp;quot;:
       &lt;/parameter&gt;
       &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;format&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;JSON&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;XML&quot;/&gt;
       &lt;/parameter&gt;
       &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;format&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;XML&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;JSON&quot;/&gt;
       &lt;/parameter&gt;
       &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;analyzeDataRequirements&quot;/&gt;
@@ -719,7 +732,7 @@ define &amp;quot;Numerator&amp;quot;:
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;logic-library&quot;/&gt;
     &lt;/coding&gt;
   &lt;/type&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-01-02T22:55:55+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-01-06T17:40:57+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International / Patient Care&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International / Patient Care&quot;/&gt;
@@ -762,19 +775,31 @@ define &amp;quot;Numerator&amp;quot;:
   &lt;/relatedArtifact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Library WM&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0&quot;/&gt;
+  &lt;/relatedArtifact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Code system LOINC&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://loinc.org&quot;/&gt;
   &lt;/relatedArtifact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set Person-Centered Category&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set What Matters Categories&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs&quot;/&gt;
   &lt;/relatedArtifact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PCO Domain Categories&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set PCO Goal Domain Categories&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs&quot;/&gt;
+  &lt;/relatedArtifact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Value set Well-Being Domains&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">resource</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs&quot;/&gt;
   &lt;/relatedArtifact&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">relatedArtifact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;depends-on&quot;/&gt;
@@ -849,11 +874,10 @@ define &amp;quot;Numerator&amp;quot;:
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;/&gt;
   &lt;/dataRequirement&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Goal&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Goal&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Observation&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Observation&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;category&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;start&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;measure&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;code&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;id&quot;/&gt;
   &lt;/dataRequirement&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
@@ -875,6 +899,15 @@ define &amp;quot;Numerator&amp;quot;:
       &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.codeFilter.valueSet">valueSet</a>
                 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures&quot;/&gt;
     &lt;/codeFilter&gt;
+  &lt;/dataRequirement&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Goal&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">profile</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Goal&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;category&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;start&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;reference&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;measure&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.mustSupport">mustSupport</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;id&quot;/&gt;
   &lt;/dataRequirement&gt;
   &lt;<a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">dataRequirement</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CarePlan&quot;/&gt;
@@ -920,7 +953,7 @@ define &amp;quot;Numerator&amp;quot;:
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 6, 2025 17:40+0000">2025-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

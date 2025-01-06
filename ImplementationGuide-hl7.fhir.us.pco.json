@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-01-02T22:55:55+00:00",
+  "date" : "2025-01-06T17:40:57+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -708,7 +708,7 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/pco-bothersome-health-concern-concepts"
+        "reference" : "CodeSystem/ppc-bothersome-health-concern-concepts"
       },
       "name" : "Bothersome Health Concern Concepts",
       "description" : "Code system to identify bothersome symptoms or health concerns..",
@@ -720,7 +720,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/pco-bothersome-health-concern-valueset"
+        "reference" : "ValueSet/ppc-bothersome-health-concern-valueset"
       },
       "name" : "Bothersome Health Concern Example ValueSet",
       "description" : "Example value set containing types of bothersome symptoms or health concerns.",
@@ -840,7 +840,7 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/pco-care-tradeoff-concepts"
+        "reference" : "CodeSystem/ppc-care-tradeoff-concepts"
       },
       "name" : "Care Trade-off Concepts",
       "description" : "Code system to identify care trade-off concepts.",
@@ -852,7 +852,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/pco-care-tradeoff-valueset"
+        "reference" : "ValueSet/ppc-care-tradeoff-valueset"
       },
       "name" : "Care Trade-off ValueSet",
       "description" : "Example value set containing types of care trade-off.",
@@ -1716,6 +1716,24 @@
         }],
         "nameUrl" : "user_stories.html",
         "title" : "User Stories",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "what_matters_ppc.html"
+        }],
+        "nameUrl" : "what_matters_ppc.html",
+        "title" : "What Matters Ppc",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "what_matters_va.html"
+        }],
+        "nameUrl" : "what_matters_va.html",
+        "title" : "What Matters Va",
         "generation" : "markdown"
       }]
     },

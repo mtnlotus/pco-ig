@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2025-01-02T22:55:55+00:00"/>
+  <date value="2025-01-06T17:40:57+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -530,7 +530,7 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/pco-bothersome-health-concern-concepts"/>
+        <reference value="CodeSystem/ppc-bothersome-health-concern-concepts"/>
       </reference>
       <name value="Bothersome Health Concern Concepts"/>
       <description value="Code system to identify bothersome symptoms or health concerns.."/>
@@ -541,7 +541,7 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/pco-bothersome-health-concern-valueset"/>
+        <reference value="ValueSet/ppc-bothersome-health-concern-valueset"/>
       </reference>
       <name value="Bothersome Health Concern Example ValueSet"/>
       <description value="Example value set containing types of bothersome symptoms or health concerns."/>
@@ -651,7 +651,7 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/pco-care-tradeoff-concepts"/>
+        <reference value="CodeSystem/ppc-care-tradeoff-concepts"/>
       </reference>
       <name value="Care Trade-off Concepts"/>
       <description value="Code system to identify care trade-off concepts."/>
@@ -662,7 +662,7 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/pco-care-tradeoff-valueset"/>
+        <reference value="ValueSet/ppc-care-tradeoff-valueset"/>
       </reference>
       <name value="Care Trade-off ValueSet"/>
       <description value="Example value set containing types of care trade-off."/>
@@ -1451,6 +1451,22 @@
         </extension>
         <nameUrl value="user_stories.html"/>
         <title value="User Stories"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="what_matters_ppc.html"/>
+        </extension>
+        <nameUrl value="what_matters_ppc.html"/>
+        <title value="What Matters Ppc"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="what_matters_va.html"/>
+        </extension>
+        <nameUrl value="what_matters_va.html"/>
+        <title value="What Matters Va"/>
         <generation value="markdown"/>
       </page>
     </page>

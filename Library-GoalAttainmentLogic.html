@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10.4"}
-    h3,h4,h5,h6{--heading-prefix:"10.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"12.4"}
+    h3,h4,h5,h6{--heading-prefix:"12.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -258,7 +258,7 @@
         
           Draft
           
-            as of 2025-01-02
+            as of 2025-01-06
           
         
       </td>
@@ -358,7 +358,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2025-01-02 22:55:55+0000</td>
+            <td style="padding-left: 4px;">2025-01-06 17:40:57+0000</td>
         </tr>
         
 
@@ -412,17 +412,21 @@
                   
                     <li><code>http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0</code></li>
                   
+                    <li><code>http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0</code></li>
+                  
                     <li><a href="http://terminology.hl7.org/5.2.0/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></li>
                   
-                    <li><code>http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs</code></li>
-                  
-                    <li><code>http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset</code></li>
+                    <li><a href="ValueSet-pco-goal-domains-example-vs.html">PCO Goal Domain Categories Example</a></li>
                   
                     <li><a href="ValueSet-goal-attainment-scaling-score.html">Goal Attainment Scaling (GAS) Score</a></li>
                   
                     <li><a href="ValueSet-gas-score-answers.html">Follow-Up GAS Score Answers</a></li>
                   
                     <li><a href="ValueSet-prom-target-measures.html">PROM Target Measures</a></li>
+                  
+                    <li><a href="ValueSet-what-matters-vs.html">What Matters Categories</a></li>
+                  
+                    <li><a href="ValueSet-wellbeing-domains-example-vs.html">Well-Being Domains Example</a></li>
                   
                 </ul>
                 
@@ -503,6 +507,15 @@
                 <tr>
                   <th>Observation</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
+                  <th>;;;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
+                  <th>Observation</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
                   <th>;</th>
                   <th>
                     
@@ -559,7 +572,7 @@
                 <tr>
                   <th>Goal</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;;;;;;</th>
+                  <th>;;;;;;;;</th>
                   <th>
                     
                   </th>
@@ -591,12 +604,10 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
+include WhatMattersLogic version '0.1.0' called WM
 
 codesystem &quot;LOINC&quot;: 'http://loinc.org'
-// codesystem &quot;PCO GAS Codes&quot;: 'http://hl7.org/fhir/us/pco/CodeSystem/pco-gas-codes-temporary'
-
-valueset &quot;Person-Centered Category&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs'
-valueset &quot;PCO Domain Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset'
+valueset &quot;PCO Goal Domain Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs'
 valueset &quot;Goal Attainment Scaling (GAS) Score&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score'
 valueset &quot;Follow-Up GAS Score Answers&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers'
 valueset &quot;PROM Target Measures&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures'
@@ -620,7 +631,9 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      pcoCategories: goal.category in &quot;Person-Centered Category&quot;,
+      whatMattersCategory: goal.category in WM.&quot;What Matters Categories&quot;,
+      goalDomainCategory: goal.category in &quot;PCO Goal Domain Categories&quot;,
+      addressesWhatMatters: exists goal.whatMattersObservations(),
       hasGAS: goal.hasGAS(),
       hasPROM: goal.hasPROM(),
       carePlans: goal.carePlans()
@@ -639,14 +652,15 @@ define &quot;All Goals&quot;:
   [Goal] goal
 
 /* 
-  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;Person-Centered Category&quot; or &quot;PCO Domain Categories&quot;
+  A &quot;PCO Goal&quot; is any FHIR Goal that has a category in &quot;What Matters Category&quot; or &quot;PCO Domain Categories&quot;
+      or that addresses a What Matters observation
   and has a start date.
-  TODO: or a Goal that addresses a What Matters observation.
 */
 define &quot;PCO Goals&quot;:
   [Goal] goal
-    where (goal.category in &quot;Person-Centered Category&quot;
-        or goal.category in &quot;PCO Domain Categories&quot;)
+    where (goal.category in WM.&quot;What Matters Categories&quot;
+        or goal.category in &quot;PCO Goal Domain Categories&quot;
+        or exists goal.whatMattersObservations())
       and (goal.start as FHIR.date) is not null
 
 // A &quot;GAS Goal&quot; is any PCO Goal that includes GAS extensions
@@ -792,7 +806,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (148444 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (155660 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -804,7 +818,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (274968 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (289224 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -837,7 +851,7 @@ define function &quot;Follow-Up Interval For&quot; (goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 6, 2025 17:40+0000">2025-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

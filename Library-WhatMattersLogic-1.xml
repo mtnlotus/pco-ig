@@ -3,7 +3,7 @@
    <annotation translatorVersion="3.11.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
    <annotation message="An operand identifier [obs] is hiding another identifier of the same name." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
    <annotation xsi:type="a:Annotation">
-      <a:s r="325">
+      <a:s r="290">
          <a:s>library WhatMattersLogic version '0.1.0'</a:s>
       </a:s>
    </annotation>
@@ -128,10 +128,10 @@
       </def>
    </parameters>
    <valueSets>
-      <def localId="209" locator="8:1-8:93" name="Well-Being Categories" id="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-category-vs" accessLevel="Public">
+      <def localId="209" locator="8:1-8:89" name="What Matters Categories" id="http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs" accessLevel="Public">
          <annotation xsi:type="a:Annotation">
             <a:s r="209">
-               <a:s>valueset &quot;Well-Being Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-category-vs'</a:s>
+               <a:s>valueset &quot;What Matters Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs'</a:s>
             </a:s>
          </annotation>
       </def>
@@ -185,7 +185,7 @@
                            </a:s>
                            <a:s> in </a:s>
                            <a:s r="250">
-                              <a:s>&quot;Well-Being Categories&quot;</a:s>
+                              <a:s>&quot;What Matters Categories&quot;</a:s>
                            </a:s>
                         </a:s>
                         <a:s>
@@ -215,7 +215,7 @@
                <expression localId="246" locator="20:3-20:15" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" xsi:type="Retrieve"/>
             </source>
             <where localId="247" locator="21:5-22:41" xsi:type="Or">
-               <operand localId="251" locator="21:11-21:49" xsi:type="AnyInValueSet">
+               <operand localId="251" locator="21:11-21:51" xsi:type="AnyInValueSet">
                   <signature localId="257" xsi:type="ListTypeSpecifier">
                      <elementType localId="258" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
                   </signature>
@@ -229,7 +229,7 @@
                         </expression>
                      </return>
                   </codes>
-                  <valueset localId="250" locator="21:27-21:49" name="Well-Being Categories" preserve="true"/>
+                  <valueset localId="250" locator="21:27-21:51" name="What Matters Categories" preserve="true"/>
                </operand>
                <operand localId="262" locator="22:10-22:41" xsi:type="InValueSet">
                   <signature localId="264" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
@@ -396,235 +396,6 @@ define fluent function whatMattersObservations(goal Goal):
          </expression>
          <operand localId="292" name="obs">
             <operandTypeSpecifier localId="291" locator="32:42-32:52" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="302" locator="36:1-40:5" name="addressedByGoals" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="302">
-               <a:s>// Returns a list of Goals that address this Observation
-define fluent function addressedByGoals(obs Observation):
-  </a:s>
-               <a:s r="324">
-                  <a:s r="324">
-                     <a:s>
-                        <a:s r="305">
-                           <a:s r="306">
-                              <a:s r="306">
-                                 <a:s>[Goal]</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s> goal</a:s>
-                        </a:s>
-                     </a:s>
-                     <a:s>
-    </a:s>
-                     <a:s r="307">
-                        <a:s>where </a:s>
-                        <a:s r="307">
-                           <a:s>exists </a:s>
-                           <a:s r="323">
-                              <a:s>( </a:s>
-                              <a:s r="323">
-                                 <a:s>
-                                    <a:s r="308">
-                                       <a:s r="310">
-                                          <a:s>
-                                             <a:s>goal.addresses</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> GA</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s>
-        </a:s>
-                                 <a:s r="311">
-                                    <a:s>where </a:s>
-                                    <a:s r="311">
-                                       <a:s r="313">
-                                          <a:s r="312">
-                                             <a:s>obs</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="313">
-                                             <a:s>id</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> = </a:s>
-                                       <a:s r="316">
-                                          <a:s r="315">
-                                             <a:s r="314">
-                                                <a:s>GA</a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="315">
-                                                <a:s>reference</a:s>
-                                             </a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="316">
-                                             <a:s>getId()</a:s>
-                                          </a:s>
-                                       </a:s>
-                                    </a:s>
-                                 </a:s>
-                              </a:s>
-                              <a:s>
-    )</a:s>
-                           </a:s>
-                        </a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="324" locator="37:3-40:5" xsi:type="Query">
-            <source localId="305" locator="37:3-37:13" alias="goal">
-               <expression localId="306" locator="37:3-37:8" dataType="fhir:Goal" templateId="http://hl7.org/fhir/StructureDefinition/Goal" xsi:type="Retrieve"/>
-            </source>
-            <where localId="307" locator="38:5-40:5" xsi:type="Exists">
-               <operand localId="323" locator="38:18-40:5" xsi:type="Query">
-                  <source localId="308" locator="38:20-38:36" alias="GA">
-                     <expression localId="310" locator="38:20-38:33" path="addresses" scope="goal" xsi:type="Property"/>
-                  </source>
-                  <where localId="311" locator="39:9-39:43" xsi:type="Equal">
-                     <signature localId="321" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                     <signature localId="322" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                     <operand localId="319" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                        <signature localId="320" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                        <operand localId="313" locator="39:15-39:20" path="id" xsi:type="Property">
-                           <source localId="312" locator="39:15-39:17" name="obs" xsi:type="OperandRef"/>
-                        </operand>
-                     </operand>
-                     <operand localId="316" locator="39:24-39:43" name="getId" libraryName="PC" xsi:type="FunctionRef">
-                        <operand localId="317" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                           <signature localId="318" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="315" locator="39:24-39:35" path="reference" scope="GA" xsi:type="Property"/>
-                        </operand>
-                     </operand>
-                  </where>
-               </operand>
-            </where>
-         </expression>
-         <operand localId="304" name="obs">
-            <operandTypeSpecifier localId="303" locator="36:45-36:55" name="fhir:Observation" xsi:type="NamedTypeSpecifier"/>
-         </operand>
-      </def>
-      <def localId="325" locator="43:1-47:3" name="addressesConditions" context="Patient" accessLevel="Public" fluent="true" xsi:type="FunctionDef">
-         <annotation xsi:type="a:Annotation">
-            <a:s r="325">
-               <a:s>// Returns a list of Conditions that this Goal addresses.
-define fluent function addressesConditions(goal Goal):
-  </a:s>
-               <a:s r="328">
-                  <a:s r="328">
-                     <a:s>flatten</a:s>
-                     <a:s r="348">
-                        <a:s>( </a:s>
-                        <a:s r="348">
-                           <a:s>
-                              <a:s r="329">
-                                 <a:s r="331">
-                                    <a:s>
-                                       <a:s>goal.addresses</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s> GA</a:s>
-                              </a:s>
-                           </a:s>
-                           <a:s>
-      </a:s>
-                           <a:s r="332">
-                              <a:s>return </a:s>
-                              <a:s r="347">
-                                 <a:s>
-                                    <a:s r="333">
-                                       <a:s r="334">
-                                          <a:s r="334">
-                                             <a:s>[Condition]</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> obs</a:s>
-                                    </a:s>
-                                 </a:s>
-                                 <a:s>
-        </a:s>
-                                 <a:s r="335">
-                                    <a:s>where </a:s>
-                                    <a:s r="335">
-                                       <a:s r="337">
-                                          <a:s r="336">
-                                             <a:s>obs</a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="337">
-                                             <a:s>id</a:s>
-                                          </a:s>
-                                       </a:s>
-                                       <a:s> = </a:s>
-                                       <a:s r="340">
-                                          <a:s r="339">
-                                             <a:s r="338">
-                                                <a:s>GA</a:s>
-                                             </a:s>
-                                             <a:s>.</a:s>
-                                             <a:s r="339">
-                                                <a:s>reference</a:s>
-                                             </a:s>
-                                          </a:s>
-                                          <a:s>.</a:s>
-                                          <a:s r="340">
-                                             <a:s>getId()</a:s>
-                                          </a:s>
-                                       </a:s>
-                                    </a:s>
-                                 </a:s>
-                              </a:s>
-                           </a:s>
-                        </a:s>
-                        <a:s>
-  )</a:s>
-                     </a:s>
-                  </a:s>
-               </a:s>
-            </a:s>
-         </annotation>
-         <expression localId="328" locator="44:3-47:3" xsi:type="Flatten">
-            <signature localId="349" xsi:type="ListTypeSpecifier">
-               <elementType localId="350" xsi:type="ListTypeSpecifier">
-                  <elementType localId="351" name="fhir:Condition" xsi:type="NamedTypeSpecifier"/>
-               </elementType>
-            </signature>
-            <operand localId="348" locator="44:10-47:3" xsi:type="Query">
-               <source localId="329" locator="44:12-44:28" alias="GA">
-                  <expression localId="331" locator="44:12-44:25" path="addresses" xsi:type="Property">
-                     <source localId="330" name="goal" xsi:type="OperandRef"/>
-                  </expression>
-               </source>
-               <return localId="332" locator="45:7-46:43">
-                  <expression localId="347" locator="45:14-46:43" xsi:type="Query">
-                     <source localId="333" locator="45:14-45:28" alias="obs">
-                        <expression localId="334" locator="45:14-45:24" dataType="fhir:Condition" templateId="http://hl7.org/fhir/StructureDefinition/Condition" xsi:type="Retrieve"/>
-                     </source>
-                     <where localId="335" locator="46:9-46:43" xsi:type="Equal">
-                        <signature localId="345" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                        <signature localId="346" name="t:String" xsi:type="NamedTypeSpecifier"/>
-                        <operand localId="343" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                           <signature localId="344" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                           <operand localId="337" locator="46:15-46:20" path="id" scope="obs" xsi:type="Property"/>
-                        </operand>
-                        <operand localId="340" locator="46:24-46:43" name="getId" libraryName="PC" xsi:type="FunctionRef">
-                           <operand localId="341" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
-                              <signature localId="342" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
-                              <operand localId="339" locator="46:24-46:35" path="reference" scope="GA" xsi:type="Property"/>
-                           </operand>
-                        </operand>
-                     </where>
-                  </expression>
-               </return>
-            </operand>
-         </expression>
-         <operand localId="327" name="goal">
-            <operandTypeSpecifier localId="326" locator="43:49-43:52" name="fhir:Goal" xsi:type="NamedTypeSpecifier"/>
          </operand>
       </def>
    </statements>

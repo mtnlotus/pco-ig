@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10.8"}
-    h3,h4,h5,h6{--heading-prefix:"10.8"}</style>
+    <style type="text/css">h2{--heading-prefix:"12.8"}
+    h3,h4,h5,h6{--heading-prefix:"12.8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -258,7 +258,7 @@
         
           Draft
           
-            as of 2025-01-02
+            as of 2025-01-06
           
         
       </td>
@@ -358,7 +358,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2025-01-02 22:55:55+0000</td>
+            <td style="padding-left: 4px;">2025-01-06 17:40:57+0000</td>
         </tr>
         
 
@@ -412,7 +412,7 @@
                   
                     <li><code>http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0</code></li>
                   
-                    <li><a href="ValueSet-wellbeing-category-vs.html">Well-Being Categories</a></li>
+                    <li><a href="ValueSet-what-matters-vs.html">What Matters Categories</a></li>
                   
                     <li><a href="ValueSet-wellbeing-domains-example-vs.html">Well-Being Domains Example</a></li>
                   
@@ -471,24 +471,6 @@
                   </th>
                 </tr>
               
-                <tr>
-                  <th>Goal</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
-                  <th>;;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
-                <tr>
-                  <th>Condition</th>
-                  <th>http://hl7.org/fhir/StructureDefinition/Condition</th>
-                  <th>;</th>
-                  <th>
-                    
-                  </th>
-                </tr>
-              
             </table>
           </td>
         </tr>
@@ -507,7 +489,7 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
-valueset &quot;Well-Being Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-category-vs'
+valueset &quot;What Matters Categories&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs'
 valueset &quot;Well-Being Domains&quot;: 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs'
 
 parameter &quot;Measurement Period&quot; Interval&lt;DateTime&gt;
@@ -520,7 +502,7 @@ context Patient
 
 define &quot;What Matters Observations&quot;:
   [Observation] obs
-    where obs.category in &quot;Well-Being Categories&quot;
+    where obs.category in &quot;What Matters Categories&quot;
       or obs.code in &quot;Well-Being Domains&quot;
 
 // Returns a list of what matters Observations this Goal addresses.
@@ -533,20 +515,6 @@ define fluent function whatMattersObservations(goal Goal):
 
 define fluent function isWhatMatters(obs Observation):
   &quot;What Matters Observations&quot; contains obs
-
-// Returns a list of Goals that address this Observation
-define fluent function addressedByGoals(obs Observation):
-  [Goal] goal
-    where exists ( goal.addresses GA
-        where obs.id = GA.reference.getId()
-    )
-
-// Returns a list of Conditions that this Goal addresses.
-define fluent function addressesConditions(goal Goal):
-  flatten( goal.addresses GA
-      return [Condition] obs
-        where obs.id = GA.reference.getId()
-  )
 </code></pre></td></tr>
             </table>
           </td>
@@ -560,7 +528,7 @@ define fluent function addressesConditions(goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (43848 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (27664 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -572,7 +540,7 @@ define fluent function addressesConditions(goal Goal):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (83440 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (52184 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -605,7 +573,7 @@ define fluent function addressesConditions(goal Goal):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 6, 2025 17:40+0000">2025-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -5,7 +5,7 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
-valueset "Well-Being Categories": 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-category-vs'
+valueset "What Matters Categories": 'http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs'
 valueset "Well-Being Domains": 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs'
 
 parameter "Measurement Period" Interval<DateTime>
@@ -18,7 +18,7 @@ context Patient
 
 define "What Matters Observations":
   [Observation] obs
-    where obs.category in "Well-Being Categories"
+    where obs.category in "What Matters Categories"
       or obs.code in "Well-Being Domains"
 
 // Returns a list of what matters Observations this Goal addresses.
@@ -31,17 +31,3 @@ define fluent function whatMattersObservations(goal Goal):
 
 define fluent function isWhatMatters(obs Observation):
   "What Matters Observations" contains obs
-
-// Returns a list of Goals that address this Observation
-define fluent function addressedByGoals(obs Observation):
-  [Goal] goal
-    where exists ( goal.addresses GA
-        where obs.id = GA.reference.getId()
-    )
-
-// Returns a list of Conditions that this Goal addresses.
-define fluent function addressesConditions(goal Goal):
-  flatten( goal.addresses GA
-      return [Condition] obs
-        where obs.id = GA.reference.getId()
-  )

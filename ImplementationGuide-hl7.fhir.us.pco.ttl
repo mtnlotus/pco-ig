@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-02T22:55:55+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-06T17:40:57+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -615,8 +615,8 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts> ;
-         fhir:reference [ fhir:v "CodeSystem/pco-bothersome-health-concern-concepts" ]
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/ppc-bothersome-health-concern-concepts> ;
+         fhir:reference [ fhir:v "CodeSystem/ppc-bothersome-health-concern-concepts" ]
        ] ;
        fhir:name [ fhir:v "Bothersome Health Concern Concepts" ] ;
        fhir:description [ fhir:v "Code system to identify bothersome symptoms or health concerns.." ] ;
@@ -627,8 +627,8 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset> ;
-         fhir:reference [ fhir:v "ValueSet/pco-bothersome-health-concern-valueset" ]
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/ppc-bothersome-health-concern-valueset> ;
+         fhir:reference [ fhir:v "ValueSet/ppc-bothersome-health-concern-valueset" ]
        ] ;
        fhir:name [ fhir:v "Bothersome Health Concern Example ValueSet" ] ;
        fhir:description [ fhir:v "Example value set containing types of bothersome symptoms or health concerns." ] ;
@@ -753,8 +753,8 @@
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts> ;
-         fhir:reference [ fhir:v "CodeSystem/pco-care-tradeoff-concepts" ]
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts> ;
+         fhir:reference [ fhir:v "CodeSystem/ppc-care-tradeoff-concepts" ]
        ] ;
        fhir:name [ fhir:v "Care Trade-off Concepts" ] ;
        fhir:description [ fhir:v "Code system to identify care trade-off concepts." ] ;
@@ -765,8 +765,8 @@
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset> ;
-         fhir:reference [ fhir:v "ValueSet/pco-care-tradeoff-valueset" ]
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/ppc-care-tradeoff-valueset> ;
+         fhir:reference [ fhir:v "ValueSet/ppc-care-tradeoff-valueset" ]
        ] ;
        fhir:name [ fhir:v "Care Trade-off ValueSet" ] ;
        fhir:description [ fhir:v "Example value set containing types of care trade-off." ] ;
@@ -1689,6 +1689,22 @@
          fhir:name [ fhir:v "user_stories.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "User Stories" ] ;
          fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "what_matters_ppc.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "what_matters_ppc.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "What Matters Ppc" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "what_matters_va.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "what_matters_va.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "What Matters Va" ] ;
+         fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
      fhir:parameter ( [
@@ -1748,9 +1764,9 @@
      ] )
   ] . # 
 
-<http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts> a fhir:us .
+<http://hl7.org/fhir/us/pco/CodeSystem/ppc-bothersome-health-concern-concepts> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset> a fhir:us .
+<http://hl7.org/fhir/us/pco/ValueSet/ppc-bothersome-health-concern-valueset> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/CarePlan/pcoAnxietyCarePlanExample> a fhir:us .
 
@@ -1770,9 +1786,9 @@
 
 <http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts> a fhir:us .
+<http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset> a fhir:us .
+<http://hl7.org/fhir/us/pco/ValueSet/ppc-care-tradeoff-valueset> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/CodeSystem/pco-codes> a fhir:us .
 

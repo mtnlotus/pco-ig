@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10.7"}
-    h3,h4,h5,h6{--heading-prefix:"10.7"}</style>
+    <style type="text/css">h2{--heading-prefix:"12.7"}
+    h3,h4,h5,h6{--heading-prefix:"12.7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -258,7 +258,7 @@
         
           Draft
           
-            as of 2025-01-02
+            as of 2025-01-06
           
         
       </td>
@@ -358,7 +358,7 @@
         
         <tr>
             <th scope="row"><b>Date: </b></th>
-            <td style="padding-left: 4px;">2025-01-02 22:55:55+0000</td>
+            <td style="padding-left: 4px;">2025-01-06 17:40:57+0000</td>
         </tr>
         
 
@@ -462,6 +462,15 @@
                 </tr>
               
                 <tr>
+                  <th>Observation</th>
+                  <th>http://hl7.org/fhir/StructureDefinition/Observation</th>
+                  <th>;</th>
+                  <th>
+                    
+                  </th>
+                </tr>
+              
+                <tr>
                   <th>Goal</th>
                   <th>http://hl7.org/fhir/StructureDefinition/Goal</th>
                   <th>;;;;;</th>
@@ -542,6 +551,13 @@ define fluent function addressesConditions(goal Goal):
         where obs.id = GA.reference.getId()
   )
 
+// Returns a list of Observations that this Goal addresses.
+define fluent function addressesObservations(goal Goal):
+  flatten( goal.addresses GA
+      return [Observation] obs
+        where obs.id = GA.reference.getId()
+  )
+
 // Returns a list of Goals that address this Observation
 define fluent function addressedByGoals(obs Observation):
   [Goal] goal
@@ -614,7 +630,7 @@ define fluent function extension(domainResource DomainResource, url String):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+xml</th></tr>
-              <tr><td><pre><code>Encoded data (90888 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (99312 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -626,7 +642,7 @@ define fluent function extension(domainResource DomainResource, url String):
           <td colspan="2">
             <table>
               <tr><th><b>Content: </b> application/elm+json</th></tr>
-              <tr><td><pre><code>Encoded data (171156 characters)</code></pre></td></tr>
+              <tr><td><pre><code>Encoded data (187372 characters)</code></pre></td></tr>
             </table>
           </td>
         </tr>
@@ -659,7 +675,7 @@ define fluent function extension(domainResource DomainResource, url String):
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 6, 2025 17:40+0000">2025-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

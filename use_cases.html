@@ -213,7 +213,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#identifying-what-matters-most" id="markdown-toc-identifying-what-matters-most">Identifying What Matters Most</a></li>
+  <li><a href="#identifying-what-matters" id="markdown-toc-identifying-what-matters">Identifying What Matters</a></li>
   <li><a href="#goal-attainment-scaling-gas" id="markdown-toc-goal-attainment-scaling-gas">Goal Attainment Scaling (GAS)</a></li>
   <li><a href="#goals-using-patient-reported-outcome-measures-prom" id="markdown-toc-goals-using-patient-reported-outcome-measures-prom">Goals using Patient-Reported Outcome Measures (PROM)</a></li>
   <li><a href="#pco-digital-quality-measures-dqm" id="markdown-toc-pco-digital-quality-measures-dqm">PCO Digital Quality Measures (dQM)</a></li>
@@ -223,15 +223,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </div>
 
-<h3 id="identifying-what-matters-most">Identifying What Matters Most</h3>
+<h3 id="identifying-what-matters">Identifying What Matters</h3>
 
-<p>More detail coming soon!</p>
+<p>The <a href="https://www.ihi.org/networks/initiatives/age-friendly-health-systems">Age-Friendly Health Systems (AFHS)</a> initiative follows evidence-based practices to align with What Matters (i.e., ‘values’) to the older adult and their family caregivers.</p>
 
-<p>Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being. One example is the U.S. Department of Veterns Affairs <a href="https://va.gov/wholehealth">Whole Health appoach to care</a> that includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a>. The examples in this FHIR IG are based on VA's approach, but can be adapted to other asseessments used by different organizations.</p>
+<ul>
+  <li><strong>What Matters</strong>: Know and align care with each older adult's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</li>
+</ul>
+
+<p>Several alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health &amp; well-being and create personalized goals. Two well-known approaches were used to develop, evaluate, and test this PCO IG:</p>
+
+<ul>
+  <li>The U.S. Department of Veterans Affairs <a href="https://va.gov/wholehealth">Whole Health approach to care</a> includes a <a href="https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp">Circle of Health</a> and <a href="https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf">Personal Health Inventory</a> along with extensive guidance on how to implement these practices for Veterans.</li>
+  <li><a href="https://patientprioritiescare.org">Patient Priorities Care</a> is an evidence-based approach for identifying patients’ health priorities and aligning decision-making and care to those priorities. The PCO IG FHIR profiles were developed to support all information captured in their patient-facing app <a href="https://myhealthpriorities.org">MyHealthPriorities.org</a>.</li>
+</ul>
+
+<p>After capturing what matters, the clinician and patient work together to document person-centered outcome goals and collaborate on action steps to achieve them. The PCO measures standardize documentation and tracking, and measure progress using patient-reported outcome measures (PROMs) or goal attainment scaling (GAS). Within six months, the clinician completes a follow-up visit with the individual, in-person or telephonically, to assess progress on the person-centered outcome goal.</p>
 
 <h3 id="goal-attainment-scaling-gas">Goal Attainment Scaling (GAS)</h3>
-
-<p>More detail coming soon!</p>
 
 <p>Goal Attainment Scaling (GAS) in healthcare, measures the extent to which individuals achieve specific goals or objectives. It allows for the quantification and evaluation of progress toward individualized goals, particularly in areas where traditional outcome measures may be insufficient. GAS involves collaboratively setting goals with the individual and assigning numerical scales to each goal to represent different levels of achievement. This approach provides a more nuanced and tailored way to assess progress and outcomes, taking into account the unique circumstances and aspirations of the individual.</p>
 
@@ -366,7 +375,7 @@ who achieved their PCO goal within two weeks to six months of when the PCO goal 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 2, 2025 22:55+0000">2025-01-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 6, 2025 17:40+0000">2025-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

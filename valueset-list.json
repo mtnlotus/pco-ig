@@ -28,17 +28,6 @@
       "systems" : ["http://snomed.info/sct"]
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-bothersome-health-concern-valueset",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "BothersomeHealthConcernValueSet",
-      "title" : "Bothersome Health Concern Example ValueSet",
-      "description" : "Example value set containing types of bothersome symptoms or health concerns.",
-      "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/pco-bothersome-health-concern-concepts"
-      ]
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset",
       "version" : "0.2.0",
       "status" : "draft",
@@ -47,17 +36,6 @@
       "description" : "Example value set containing options for a care trade-off.",
       "systems" : [
         "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"
-      ]
-    },
-    {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-valueset",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "CareTradeOffValueSet",
-      "title" : "Care Trade-off ValueSet",
-      "description" : "Example value set containing types of care trade-off.",
-      "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-concepts"
       ]
     },
     {
@@ -77,6 +55,28 @@
       "title" : "Person-Centered Outcomes Survey Value Set",
       "description" : "Used to indicate that PCO observations of of type Survey, as defined by US-Core.",
       "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-bothersome-health-concern-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PPCBothersomeHealthConcernValueSet",
+      "title" : "Bothersome Health Concern Example ValueSet",
+      "description" : "Example value set containing types of bothersome symptoms or health concerns.",
+      "systems" : [
+        "http://hl7.org/fhir/us/pco/CodeSystem/ppc-bothersome-health-concern-concepts"
+      ]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-care-tradeoff-valueset",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PPCCareTradeOffValueSet",
+      "title" : "Care Trade-off ValueSet",
+      "description" : "Example value set containing types of care trade-off.",
+      "systems" : [
+        "http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts"
+      ]
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-what-matters-example-vs",
