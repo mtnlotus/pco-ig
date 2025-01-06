@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-01-06T17:40:57+00:00",
+  "date" : "2025-01-06T22:35:31+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -720,7 +720,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/ppc-bothersome-health-concern-valueset"
+        "reference" : "ValueSet/ppc-bothersome-health-concern-examples-vs"
       },
       "name" : "Bothersome Health Concern Example ValueSet",
       "description" : "Example value set containing types of bothersome symptoms or health concerns.",
@@ -813,25 +813,25 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "CodeSystem/pco-care-tradeoff-choices"
+        "reference" : "ValueSet/pco-care-tradeoff-choices-vs"
       },
       "name" : "Care Trade-off Choices",
-      "description" : "Code system to identify care trade-off choices.",
+      "description" : "Options for a care trade-off.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "ValueSet/pco-care-tradeoff-choices-valueset"
+        "reference" : "CodeSystem/pco-care-tradeoff-choice-codes"
       },
-      "name" : "Care Trade-off Choices ValueSet",
-      "description" : "Example value set containing options for a care trade-off.",
+      "name" : "Care Trade-off Choices",
+      "description" : "Code system to identify care trade-off choices.",
       "exampleBoolean" : false
     },
     {
@@ -852,9 +852,9 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/ppc-care-tradeoff-valueset"
+        "reference" : "ValueSet/ppc-care-tradeoff-examples-vs"
       },
-      "name" : "Care Trade-off ValueSet",
+      "name" : "Care Trade-off Examples",
       "description" : "Example value set containing types of care trade-off.",
       "exampleBoolean" : false
     },
@@ -1352,6 +1352,18 @@
       },
       "name" : "PPC Care Trade-Off: Following a special diet",
       "description" : "PPC Care Trade-off that is bothersome",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcCareTradeOffDescription"
+      },
+      "name" : "PPC Care Trade-Off: Free-text description",
+      "description" : "PPC Care Trade-off that is bothersome with free-text description",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
     },
     {

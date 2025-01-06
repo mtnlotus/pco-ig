@@ -3,12 +3,12 @@ PCO : Validation Results
 
 err = 53, warn = 22, info = 19
 IG Publisher Version: 1.8.6
-Generated Mon Jan 06 17:43:27 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = http://hl7.org/fhir/us/pco)
+Generated Mon Jan 06 22:38:54 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = http://hl7.org/fhir/us/pco)
  Build Errors : 1 / 13 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-ppcCookingDinnerCarePlanExample : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-care-tradeoff-choices : 0 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-care-tradeoff-choice-codes : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-codes : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-goal-domains : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-ppc-bothersome-health-concern-concepts : 0 / 0 / 2
@@ -35,6 +35,7 @@ Generated Mon Jan 06 17:43:27 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcBarrierDiabetes : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcBarrierUnsteady : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcCareTradeOffBothersome : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcCareTradeOffDescription : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcCareTradeOffHelpful : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcGASScoreBaselineExample : 3 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcWhatMattersActivitiesWithFamily : 0 / 0 / 1
@@ -63,11 +64,11 @@ Generated Mon Jan 06 17:43:27 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-gas-score-answers : 0 / 2 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-goal-attainment-scaling-score : 0 / 4 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-goal-barrier-codes : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-valueset : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-goal-domains-example-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-survey-category-vs : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-ppc-bothersome-health-concern-valueset : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-ppc-care-tradeoff-valueset : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-ppc-bothersome-health-concern-examples-vs : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-ppc-care-tradeoff-examples-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-ppc-what-matters-example-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-prom-target-measures : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-category-vs : 0 / 0 / 1
@@ -108,7 +109,7 @@ ERROR: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan: Slice 'CarePlan.goa
 INFORMATION: CarePlan/pcoPhyicalFunctionCarePlanExample: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 == fsh-generated/resources/CarePlan-ppcCookingDinnerCarePlanExample.json ==
 INFORMATION: CarePlan/ppcCookingDinnerCarePlanExample: CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
-== fsh-generated/resources/CodeSystem-pco-care-tradeoff-choices.json ==
+== fsh-generated/resources/CodeSystem-pco-care-tradeoff-choice-codes.json ==
 == fsh-generated/resources/CodeSystem-pco-codes.json ==
 == fsh-generated/resources/CodeSystem-pco-goal-domains.json ==
 == fsh-generated/resources/CodeSystem-ppc-bothersome-health-concern-concepts.json ==
@@ -146,6 +147,7 @@ ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.code.codi
 == fsh-generated/resources/Observation-ppcBarrierDiabetes.json ==
 == fsh-generated/resources/Observation-ppcBarrierUnsteady.json ==
 == fsh-generated/resources/Observation-ppcCareTradeOffBothersome.json ==
+== fsh-generated/resources/Observation-ppcCareTradeOffDescription.json ==
 == fsh-generated/resources/Observation-ppcCareTradeOffHelpful.json ==
 == fsh-generated/resources/Observation-ppcGASScoreBaselineExample.json ==
 ERROR: Observation/ppcGASScoreBaselineExample: Observation.code.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
@@ -188,11 +190,11 @@ WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].con
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[2]: The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')
 WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].concept[3]: The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')
 == fsh-generated/resources/ValueSet-goal-barrier-codes.json ==
-== fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-valueset.json ==
+== fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-vs.json ==
 == fsh-generated/resources/ValueSet-pco-goal-domains-example-vs.json ==
 == fsh-generated/resources/ValueSet-pco-survey-category-vs.json ==
-== fsh-generated/resources/ValueSet-ppc-bothersome-health-concern-valueset.json ==
-== fsh-generated/resources/ValueSet-ppc-care-tradeoff-valueset.json ==
+== fsh-generated/resources/ValueSet-ppc-bothersome-health-concern-examples-vs.json ==
+== fsh-generated/resources/ValueSet-ppc-care-tradeoff-examples-vs.json ==
 == fsh-generated/resources/ValueSet-ppc-what-matters-example-vs.json ==
 == fsh-generated/resources/ValueSet-prom-target-measures.json ==
 == fsh-generated/resources/ValueSet-wellbeing-category-vs.json ==

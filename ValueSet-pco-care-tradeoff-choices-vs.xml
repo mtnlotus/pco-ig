@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pco-care-tradeoff-choices-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pco-care-tradeoff-choices-vs</b></p><a name="pco-care-tradeoff-choices-vs"> </a><a name="hcpco-care-tradeoff-choices-vs"> </a><a name="pco-care-tradeoff-choices-vs-en-US"> </a><ul><li>Include all codes defined in <a href="CodeSystem-pco-care-tradeoff-choice-codes.html"><code>http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes</code></a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs"/>
+  <version value="0.2.0"/>
+  <name value="CareTradeOffChoices"/>
+  <title value="Care Trade-off Choices"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-01-06T22:35:31+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Options for a care trade-off."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2025-01-06T17:40:57+00:00"/>
+  <date value="2025-01-06T22:35:31+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -541,7 +541,7 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/ppc-bothersome-health-concern-valueset"/>
+        <reference value="ValueSet/ppc-bothersome-health-concern-examples-vs"/>
       </reference>
       <name value="Bothersome Health Concern Example ValueSet"/>
       <description value="Example value set containing types of bothersome symptoms or health concerns."/>
@@ -626,24 +626,24 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/pco-care-tradeoff-choices"/>
+        <reference value="ValueSet/pco-care-tradeoff-choices-vs"/>
       </reference>
       <name value="Care Trade-off Choices"/>
-      <description value="Code system to identify care trade-off choices."/>
+      <description value="Options for a care trade-off."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="ValueSet/pco-care-tradeoff-choices-valueset"/>
+        <reference value="CodeSystem/pco-care-tradeoff-choice-codes"/>
       </reference>
-      <name value="Care Trade-off Choices ValueSet"/>
-      <description value="Example value set containing options for a care trade-off."/>
+      <name value="Care Trade-off Choices"/>
+      <description value="Code system to identify care trade-off choices."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -662,9 +662,9 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/ppc-care-tradeoff-valueset"/>
+        <reference value="ValueSet/ppc-care-tradeoff-examples-vs"/>
       </reference>
-      <name value="Care Trade-off ValueSet"/>
+      <name value="Care Trade-off Examples"/>
       <description value="Example value set containing types of care trade-off."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -1120,6 +1120,17 @@
       </reference>
       <name value="PPC Care Trade-Off: Following a special diet"/>
       <description value="PPC Care Trade-off that is bothersome"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcCareTradeOffDescription"/>
+      </reference>
+      <name value="PPC Care Trade-Off: Free-text description"/>
+      <description value="PPC Care Trade-off that is bothersome with free-text description"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
     </resource>
     <resource>

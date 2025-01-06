@@ -10,8 +10,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score",
-      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling"
+      "StructureDefinition-pco-goal-attainment-scaling.html" : "Goal Attainment Scaling",
+      "StructureDefinition-pco-gas-score-observation.html" : "Goal Attainment Scaling (GAS) score"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score",
@@ -38,14 +38,14 @@
       "StructureDefinition-pco-goal-barrier.html" : "Person-Centered Goal Barrier"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-valueset",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs",
       "version" : "0.2.0",
       "status" : "draft",
-      "name" : "CareTradeOffChoicesValueSet",
-      "title" : "Care Trade-off Choices ValueSet",
-      "description" : "Example value set containing options for a care trade-off.",
+      "name" : "CareTradeOffChoices",
+      "title" : "Care Trade-off Choices",
+      "description" : "Options for a care trade-off.",
       "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choices"
+        "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes"
       ],
       "uses" : {
       },
@@ -73,10 +73,10 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"]
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-bothersome-health-concern-valueset",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-bothersome-health-concern-examples-vs",
       "version" : "0.2.0",
       "status" : "draft",
-      "name" : "PPCBothersomeHealthConcernValueSet",
+      "name" : "PPCBothersomeHealthConcernExamples",
       "title" : "Bothersome Health Concern Example ValueSet",
       "description" : "Example value set containing types of bothersome symptoms or health concerns.",
       "systems" : [
@@ -87,11 +87,11 @@
       "StructureDefinition-pco-goal-barrier.html" : "Person-Centered Goal Barrier"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-care-tradeoff-valueset",
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/ppc-care-tradeoff-examples-vs",
       "version" : "0.2.0",
       "status" : "draft",
-      "name" : "PPCCareTradeOffValueSet",
-      "title" : "Care Trade-off ValueSet",
+      "name" : "PPCCareTradeOffExamples",
+      "title" : "Care Trade-off Examples",
       "description" : "Example value set containing types of care trade-off.",
       "systems" : [
         "http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts"
@@ -121,8 +121,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-pco-prom-score-observation.html" : "Patient-Reported Outcome Measure (PROM) score",
-      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal"
+      "StructureDefinition-pco-prom-goal-profile.html" : "Person-Centered PROM Goal",
+      "StructureDefinition-pco-prom-score-observation.html" : "Patient-Reported Outcome Measure (PROM) score"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-category-vs",
@@ -145,8 +145,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority",
-      "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment"
+      "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
+      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs",
@@ -158,10 +158,10 @@
       "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"],
       "uses" : {
       },
-      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal",
-      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority",
+      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan",
       "StructureDefinition-pco-what-matters-assessment.html" : "What Matters Assessment",
-      "StructureDefinition-pco-care-plan.html" : "Person-Centered Care Plan"
+      "StructureDefinition-pco-what-matters-priority.html" : "What Matters Priority",
+      "StructureDefinition-pco-goal-profile.html" : "Person-Centered Goal"
     }
   ]
 }
