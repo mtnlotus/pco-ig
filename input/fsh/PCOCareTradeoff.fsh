@@ -8,38 +8,36 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 * category[us-core] 1..1 MS
 * category[us-core] = OBSCAT#survey
 
-// Cannot override preferred binding with example binding; LOINC is preferred.
-// If #other, then use text element for free-text
-* code from PPCCareTradeOffValueSet (preferred)
-  * ^short = "Type of care trade-off"
+* code from CareTradeOffChoices (extensible)
+  * ^short = "Indicates whether this care is helpful or bothersome"
 * focus 0..* MS
 * focus only Reference(Goal or MedicationRequest or ServiceRequest or Procedure)
   * ^short = "The goal, medication and/or procedure that has this trade-off"
-* note 0..* MS
-
-// TODO: how to specify text-entered medication name?
 
 * value[x] 1..1 MS
-* value[x] only CodeableConcept
-* valueCodeableConcept from CareTradeOffChoicesValueSet (required)
-  * ^short = "Indicates whether this care is helpful or bothersome"
+* value[x] only CodeableConcept or string
+* valueCodeableConcept from PPCCareTradeOffExamples (example)
+  * ^short = "Type of care selected from a list"
+* valueString
+  * ^short = "Free-text description of a care trade-off"
+* note 0..* MS
 
-CodeSystem: CareTradeOffChoices
-Id: pco-care-tradeoff-choices
+CodeSystem: CareTradeOffChoiceCodes
+Id: pco-care-tradeoff-choice-codes
 Title: "Care Trade-off Choices"
 Description: "Code system to identify care trade-off choices."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
 * insert PCOCodeSystemPublisher
-* #helpful "Helpful"
-* #bothersome "Bothersome"
-* #unspecified "Unspecified"
+* #helpful-care "Helpful"
+* #bothersome-care "Bothersome"
+* #willing-to-change "Willing to change"
+* #unwilling-to-change "Unwilling to change"
 
-ValueSet: CareTradeOffChoicesValueSet
-Id: pco-care-tradeoff-choices-valueset
-Title: "Care Trade-off Choices ValueSet"
-Description: "Example value set containing options for a care trade-off."
+ValueSet: CareTradeOffChoices
+Id: pco-care-tradeoff-choices-vs
+Title: "Care Trade-off Choices"
+Description: "Options for a care trade-off."
 * ^experimental = false
-// Cannot use "include codes" because cqframework -EnsureExecutableValueSet does not support this expansion
-* include codes from system CareTradeOffChoices
+* include codes from system CareTradeOffChoiceCodes

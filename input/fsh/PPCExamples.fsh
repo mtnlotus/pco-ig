@@ -86,12 +86,12 @@ Title: "PPC Care Trade-Off: Following a special diet"
 Description: "PPC Care Trade-off that is bothersome"
 Usage: #example
 * status = #final 
-* code = PPCCareTradeOffConcepts#diet "Following a special diet"
+* code = CareTradeOffChoiceCodes#bothersome-care "Bothersome"
 * focus = Reference(ppcGoalCookingDinner)
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
 * effectiveDateTime = "2025-01-02T15:05:00Z"
-* valueCodeableConcept = CareTradeOffChoices#bothersome "Bothersome"
+* valueCodeableConcept = PPCCareTradeOffConcepts#diet "Following a special diet"
 
 Instance: ppcCareTradeOffHelpful
 InstanceOf: PCOCareTradeOff
@@ -99,12 +99,24 @@ Title: "PPC Care Trade-Off: Health care visits"
 Description: "PPC Care Trade-off that is helpful"
 Usage: #example
 * status = #final 
-* code = PPCCareTradeOffConcepts#health-care-visits "Health Care visits"
+* code = CareTradeOffChoiceCodes#helpful-care "Helpful"
 * focus = Reference(ppcGoalCookingDinner)
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
 * effectiveDateTime = "2025-01-02T15:05:00Z"
-* valueCodeableConcept = CareTradeOffChoices#helpful "Helpful"
+* valueCodeableConcept = PPCCareTradeOffConcepts#health-care-visits "Health Care visits"
+
+Instance: ppcCareTradeOffDescription
+InstanceOf: PCOCareTradeOff
+Title: "PPC Care Trade-Off: Free-text description"
+Description: "PPC Care Trade-off that is bothersome with free-text description"
+Usage: #example
+* status = #final 
+* code = CareTradeOffChoiceCodes#bothersome-care "Bothersome"
+* subject = Reference(ppcPatientKay)
+* performer = Reference(ppcPatientKay)
+* effectiveDateTime = "2025-01-02T15:05:00Z"
+* valueString = "My PT therapy leaves me too tired to do anything for two days."
 
 // The most important item from What Matters
 //      - Use a List to rank order the What Matters observations

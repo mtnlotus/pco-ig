@@ -19,7 +19,7 @@ Description: "Assessment observation about a barrier, bothersome symptom or heal
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept or string
-* valueCodeableConcept from PPCBothersomeHealthConcernValueSet (example)
+* valueCodeableConcept from PPCBothersomeHealthConcernExamples (example)
   * ^short = "Common barriers selected from a list"
 * valueString
   * ^short = "Free-text description of the barrier"

@@ -66,8 +66,8 @@ Description: "Code system to identify bothersome symptoms or health concerns.."
 * #memory-problems "Having confusing or memory problems"
 * #problem-list-item "Problem List Item"
 
-ValueSet: PPCBothersomeHealthConcernValueSet
-Id: ppc-bothersome-health-concern-valueset
+ValueSet: PPCBothersomeHealthConcernExamples
+Id: ppc-bothersome-health-concern-examples-vs
 Title: "Bothersome Health Concern Example ValueSet"
 Description: "Example value set containing types of bothersome symptoms or health concerns."
 * ^experimental = false
@@ -115,9 +115,9 @@ Description: "Code system to identify care trade-off concepts."
   * #community-based-program "Community-based program"
 * #other "Other"
 
-ValueSet: PPCCareTradeOffValueSet
-Id: ppc-care-tradeoff-valueset
-Title: "Care Trade-off ValueSet"
+ValueSet: PPCCareTradeOffExamples
+Id: ppc-care-tradeoff-examples-vs
+Title: "Care Trade-off Examples"
 Description: "Example value set containing types of care trade-off."
 * ^experimental = false
 * include codes from system PPCCareTradeOffConcepts
