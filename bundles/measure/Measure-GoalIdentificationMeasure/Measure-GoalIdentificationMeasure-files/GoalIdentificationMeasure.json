@@ -21,10 +21,10 @@
       "valueString": "DisableListPromotion"
     }, {
       "name": "format",
-      "valueString": "JSON"
+      "valueString": "XML"
     }, {
       "name": "format",
-      "valueString": "XML"
+      "valueString": "JSON"
     }, {
       "name": "analyzeDataRequirements",
       "valueBoolean": false
@@ -89,16 +89,24 @@
     "resource": "http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic|0.1.0"
   }, {
     "type": "depends-on",
+    "display": "Library WM",
+    "resource": "http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0"
+  }, {
+    "type": "depends-on",
     "display": "Code system LOINC",
     "resource": "http://loinc.org"
   }, {
     "type": "depends-on",
-    "display": "Value set Person-Centered Category",
-    "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"
+    "display": "Value set What Matters Categories",
+    "resource": "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"
   }, {
     "type": "depends-on",
-    "display": "Value set PCO Domain Categories",
-    "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"
+    "display": "Value set PCO Goal Domain Categories",
+    "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"
+  }, {
+    "type": "depends-on",
+    "display": "Value set Well-Being Domains",
+    "resource": "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs"
   }, {
     "type": "depends-on",
     "display": "Value set Goal Attainment Scaling (GAS) Score",
@@ -161,9 +169,9 @@
     "type": "Patient",
     "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
   }, {
-    "type": "Goal",
-    "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
-    "mustSupport": [ "category", "start", "measure", "id" ]
+    "type": "Observation",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
+    "mustSupport": [ "category", "code", "id" ]
   }, {
     "type": "Observation",
     "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
@@ -180,6 +188,10 @@
       "path": "code",
       "valueSet": "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"
     } ]
+  }, {
+    "type": "Goal",
+    "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
+    "mustSupport": [ "category", "start", "reference", "measure", "id" ]
   }, {
     "type": "CarePlan",
     "profile": [ "http://hl7.org/fhir/StructureDefinition/CarePlan" ],

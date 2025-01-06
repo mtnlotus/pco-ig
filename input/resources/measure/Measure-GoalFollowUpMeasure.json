@@ -48,16 +48,31 @@
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
       "extension": [ {
         "url": "libraryName",
+        "valueString": "WhatMattersLogic"
+      }, {
+        "url": "name",
+        "valueString": "What Matters Observations"
+      }, {
+        "url": "statement",
+        "valueString": "define \"What Matters Observations\":\n  [Observation] obs\n    where obs.category in \"What Matters Categories\"\n      or obs.code in \"Well-Being Domains\""
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 2
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
         "valueString": "GoalAttainmentLogic"
       }, {
         "url": "name",
         "valueString": "PCO Goals"
       }, {
         "url": "statement",
-        "valueString": "/* \n  A \"PCO Goal\" is any FHIR Goal that has a category in \"Person-Centered Category\" or \"PCO Domain Categories\"\n  and has a start date.\n  TODO: or a Goal that addresses a What Matters observation.\n*/\ndefine \"PCO Goals\":\n  [Goal] goal\n    where (goal.category in \"Person-Centered Category\"\n        or goal.category in \"PCO Domain Categories\")\n      and (goal.start as FHIR.date) is not null"
+        "valueString": "/* \n  A \"PCO Goal\" is any FHIR Goal that has a category in \"What Matters Category\" or \"PCO Domain Categories\"\n      or that addresses a What Matters observation\n  and has a start date.\n*/\ndefine \"PCO Goals\":\n  [Goal] goal\n    where (goal.category in WM.\"What Matters Categories\"\n        or goal.category in \"PCO Goal Domain Categories\"\n        or exists goal.whatMattersObservations())\n      and (goal.start as FHIR.date) is not null"
       }, {
         "url": "displaySequence",
-        "valueInteger": 2
+        "valueInteger": 3
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -72,7 +87,7 @@
         "valueString": "// Observations containing a GAS score.\ndefine \"GAS Scores\":\n  [Observation: \"Goal Attainment Scaling (GAS) Score\"]"
       }, {
         "url": "displaySequence",
-        "valueInteger": 3
+        "valueInteger": 4
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -87,7 +102,7 @@
         "valueString": "// PCO Goals whose startDate falls within the Measurement Period\ndefine \"PCO Goals During Measurement Period\":\n  \"PCO Goals\" goal\n    where (ToDateTime(goal.start as FHIR.date) during \"Measurement Period\")\n      and (goal.hasGAS() or goal.hasPROM())\n      and exists goal.carePlans()"
       }, {
         "url": "displaySequence",
-        "valueInteger": 4
+        "valueInteger": 5
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -102,7 +117,7 @@
         "valueString": "// Observations containing a PROM score.\ndefine \"PROM Scores\":\n  [Observation: \"PROM Target Measures\"]"
       }, {
         "url": "displaySequence",
-        "valueInteger": 5
+        "valueInteger": 6
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -117,7 +132,7 @@
         "valueString": "/* \nFollow-Up Scares are PCO score observations taken during the Measurement Period,\nand during the follow-up period for its Goal. Default follow-up period is \n2 weeks to 6 months following the goal startDate.\n*/\ndefine \"Follow-Up Scores During Measurement Period\":\n  flatten( \"PCO Goals During Measurement Period\" goal\n    let pcoScores: goal.pcoScores()\n      return pcoScores score \n        let scoreDate: score.effective as FHIR.dateTime\n        where scoreDate during \"Measurement Period\"\n          and scoreDate during \"Follow-Up Interval For\"(goal)\n  )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 6
+        "valueInteger": 7
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -132,7 +147,7 @@
         "valueString": "/*\n@description: Indivuals who received follow-up on their PCO goal within two\nweeks to six months of when the PCO goal and GAS or PROM were identified.\n*/\ndefine \"Numerator\":\n  \"Denominator\" person\n    where exists PCOLogic.\"Follow-Up Scores During Measurement Period\""
       }, {
         "url": "displaySequence",
-        "valueInteger": 7
+        "valueInteger": 8
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -147,7 +162,7 @@
         "valueString": "define \"Denominator Exclusions\":\n  null"
       }, {
         "url": "displaySequence",
-        "valueInteger": 8
+        "valueInteger": 9
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -162,7 +177,7 @@
         "valueString": "define \"Denominator Exceptions\":\n  null"
       }, {
         "url": "displaySequence",
-        "valueInteger": 9
+        "valueInteger": 10
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -177,52 +192,22 @@
         "valueString": "/*\n@description: Converts the given FHIR [CodeableConcept](https://hl7.org/fhir/datatypes.html#CodeableConcept) value to a CQL Concept.\n*/\ndefine function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }"
       }, {
         "url": "displaySequence",
-        "valueInteger": 10
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "FHIRHelpers"
-      }, {
-        "url": "name",
-        "valueString": "ToDate"
-      }, {
-        "url": "statement",
-        "valueString": "define function ToDate(value date): value.value"
-      }, {
-        "url": "displaySequence",
         "valueInteger": 11
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
       "extension": [ {
         "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
+        "valueString": "WhatMattersLogic"
       }, {
         "url": "name",
-        "valueString": "hasGAS"
+        "valueString": "whatMattersObservations"
       }, {
         "url": "statement",
-        "valueString": "// where exists obs.performer.resolveRelatedPersons()\n\ndefine fluent function hasGAS(goal Goal):\n  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')\n    or exists (goal.target target\n      where target.measure = \"Goal attainment scale\"\n    )\n    or exists goal.gasScores()"
+        "valueString": "// Returns a list of what matters Observations this Goal addresses.\ndefine fluent function whatMattersObservations(goal Goal):\n  flatten( goal.addresses GA\n      return [Observation] obs\n        where obs.id = GA.reference.getId()\n          and obs.isWhatMatters()\n  )"
       }, {
         "url": "displaySequence",
         "valueInteger": 12
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "PCOCommon"
-      }, {
-        "url": "name",
-        "valueString": "extensions"
-      }, {
-        "url": "statement",
-        "valueString": "/*\n@description: Returns any extensions defined on the given resource with the specified url.\n@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info.\n*/\ndefine fluent function extensions(domainResource DomainResource, url String):\n  domainResource.extension E\n\t  where E.url = url\n\t\treturn E"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 13
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -234,55 +219,10 @@
         "valueString": "ToString"
       }, {
         "url": "statement",
-        "valueString": "define function ToString(value uri): value.value"
+        "valueString": "define function ToString(value string): value.value"
       }, {
         "url": "displaySequence",
-        "valueInteger": 14
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
-      }, {
-        "url": "name",
-        "valueString": "gasScores"
-      }, {
-        "url": "statement",
-        "valueString": "// Returns a list of Observation including only GAS scores\ndefine fluent function gasScores(goal Goal):\n  \"GAS Scores\" score\n    where score.focusGoals() contains goal"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 15
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "GoalAttainmentLogic"
-      }, {
-        "url": "name",
-        "valueString": "focusGoals"
-      }, {
-        "url": "statement",
-        "valueString": "// Returns a list of Goal where focus includes the given Observation.\ndefine fluent function focusGoals(obs Observation):\n  obs.focus.resolveGoals()"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 16
-      } ]
-    }, {
-      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
-      "extension": [ {
-        "url": "libraryName",
-        "valueString": "PCOCommon"
-      }, {
-        "url": "name",
-        "valueString": "resolveGoals"
-      }, {
-        "url": "statement",
-        "valueString": "define fluent function resolveGoals(references List<Reference>):\n  flatten( references ref\n    return [Goal] resource\n      where resource.id = ref.reference.getId()\n  )"
-      }, {
-        "url": "displaySequence",
-        "valueInteger": 17
+        "valueInteger": 13
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -297,7 +237,112 @@
         "valueString": "define fluent function getId(uri String):\n  Last(Split(uri, '/'))"
       }, {
         "url": "displaySequence",
+        "valueInteger": 14
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "WhatMattersLogic"
+      }, {
+        "url": "name",
+        "valueString": "isWhatMatters"
+      }, {
+        "url": "statement",
+        "valueString": "define fluent function isWhatMatters(obs Observation):\n  \"What Matters Observations\" contains obs"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 15
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "FHIRHelpers"
+      }, {
+        "url": "name",
+        "valueString": "ToDate"
+      }, {
+        "url": "statement",
+        "valueString": "define function ToDate(value date): value.value"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 16
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "GoalAttainmentLogic"
+      }, {
+        "url": "name",
+        "valueString": "hasGAS"
+      }, {
+        "url": "statement",
+        "valueString": "// where exists obs.performer.resolveRelatedPersons()\n\ndefine fluent function hasGAS(goal Goal):\n  exists goal.extensions('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling')\n    or exists (goal.target target\n      where target.measure = \"Goal attainment scale\"\n    )\n    or exists goal.gasScores()"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 17
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "PCOCommon"
+      }, {
+        "url": "name",
+        "valueString": "extensions"
+      }, {
+        "url": "statement",
+        "valueString": "/*\n@description: Returns any extensions defined on the given resource with the specified url.\n@comment: NOTE: Extensions are not the preferred approach, but are used as a way to access\ncontent that is defined by extensions but not yet surfaced in the\nCQL model info.\n*/\ndefine fluent function extensions(domainResource DomainResource, url String):\n  domainResource.extension E\n\t  where E.url = url\n\t\treturn E"
+      }, {
+        "url": "displaySequence",
         "valueInteger": 18
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "GoalAttainmentLogic"
+      }, {
+        "url": "name",
+        "valueString": "gasScores"
+      }, {
+        "url": "statement",
+        "valueString": "// Returns a list of Observation including only GAS scores\ndefine fluent function gasScores(goal Goal):\n  \"GAS Scores\" score\n    where score.focusGoals() contains goal"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 19
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "GoalAttainmentLogic"
+      }, {
+        "url": "name",
+        "valueString": "focusGoals"
+      }, {
+        "url": "statement",
+        "valueString": "// Returns a list of Goal where focus includes the given Observation.\ndefine fluent function focusGoals(obs Observation):\n  obs.focus.resolveGoals()"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 20
+      } ]
+    }, {
+      "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
+      "extension": [ {
+        "url": "libraryName",
+        "valueString": "PCOCommon"
+      }, {
+        "url": "name",
+        "valueString": "resolveGoals"
+      }, {
+        "url": "statement",
+        "valueString": "define fluent function resolveGoals(references List<Reference>):\n  flatten( references ref\n    return [Goal] resource\n      where resource.id = ref.reference.getId()\n  )"
+      }, {
+        "url": "displaySequence",
+        "valueInteger": 21
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -312,7 +357,7 @@
         "valueString": "/// Returns true if this Goal has a PROM code in its target.measure\ndefine fluent function hasPROM(goal Goal):\n  exists (goal.target target\n    where target.measure in \"PROM Target Measures\"\n  )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 19
+        "valueInteger": 22
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -327,7 +372,7 @@
         "valueString": "// Returns a list of CarePlan that support this Goal.\ndefine fluent function carePlans(goal Goal):\n  [CarePlan] carePlan\n    where exists ( carePlan.goal goalRef\n        where goal.id = goalRef.reference.getId()\n    )"
       }, {
         "url": "displaySequence",
-        "valueInteger": 20
+        "valueInteger": 23
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -342,7 +387,7 @@
         "valueString": "// Returns a list of Observation including both GAS and PROM scores\ndefine fluent function pcoScores(goal Goal):\n  goal.gasScores()\n    union goal.promScores()"
       }, {
         "url": "displaySequence",
-        "valueInteger": 21
+        "valueInteger": 24
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -357,7 +402,7 @@
         "valueString": "// Returns a list of Observation including only PROM scores\ndefine fluent function promScores(goal Goal):\n  \"PROM Scores\" score\n    where score.focusGoals() contains goal"
       }, {
         "url": "displaySequence",
-        "valueInteger": 22
+        "valueInteger": 25
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -372,7 +417,7 @@
         "valueString": "define function ToDateTime(value dateTime): value.value"
       }, {
         "url": "displaySequence",
-        "valueInteger": 23
+        "valueInteger": 26
       } ]
     }, {
       "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition",
@@ -387,7 +432,7 @@
         "valueString": "/*\nComputes the follow-up interval for a Goal based on this measure's \"Follow-Up Interval\" parameter.\n@return Interval<DateTime>\n*/\ndefine function \"Follow-Up Interval For\" (goal Goal):\n  goal goal\n    let startDate: ToDateTime(goal.start as FHIR.date)\n      return Interval(startDate + start of \"Follow-Up Interval\", startDate + end of \"Follow-Up Interval\")"
       }, {
         "url": "displaySequence",
-        "valueInteger": 24
+        "valueInteger": 27
       } ]
     } ],
     "name": "EffectiveDataRequirements",
@@ -408,6 +453,10 @@
       "resource": "http://hl7.org/fhir/us/pco/Library/FHIRHelpers|4.4.000"
     }, {
       "type": "depends-on",
+      "display": "Library WM",
+      "resource": "http://hl7.org/fhir/us/pco/Library/WhatMattersLogic|0.1.0"
+    }, {
+      "type": "depends-on",
       "display": "Library PC",
       "resource": "http://hl7.org/fhir/us/pco/Library/PCOCommon|0.1.0"
     }, {
@@ -416,12 +465,16 @@
       "resource": "http://loinc.org"
     }, {
       "type": "depends-on",
-      "display": "Value set Person-Centered Category",
-      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-category-vs"
+      "display": "Value set What Matters Categories",
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"
     }, {
       "type": "depends-on",
-      "display": "Value set PCO Domain Categories",
-      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-domain-category-valueset"
+      "display": "Value set PCO Goal Domain Categories",
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs"
+    }, {
+      "type": "depends-on",
+      "display": "Value set Well-Being Domains",
+      "resource": "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs"
     }, {
       "type": "depends-on",
       "display": "Value set Goal Attainment Scaling (GAS) Score",
@@ -478,9 +531,9 @@
       "type": "Patient",
       "profile": [ "http://hl7.org/fhir/StructureDefinition/Patient" ]
     }, {
-      "type": "Goal",
-      "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
-      "mustSupport": [ "category", "start", "measure", "id" ]
+      "type": "Observation",
+      "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
+      "mustSupport": [ "category", "code", "id" ]
     }, {
       "type": "Observation",
       "profile": [ "http://hl7.org/fhir/StructureDefinition/Observation" ],
@@ -497,6 +550,10 @@
         "path": "code",
         "valueSet": "http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures"
       } ]
+    }, {
+      "type": "Goal",
+      "profile": [ "http://hl7.org/fhir/StructureDefinition/Goal" ],
+      "mustSupport": [ "category", "start", "reference", "measure", "id" ]
     }, {
       "type": "CarePlan",
       "profile": [ "http://hl7.org/fhir/StructureDefinition/CarePlan" ],
@@ -565,7 +622,7 @@
   "title": "Person-Centered Goal Follow-Up",
   "status": "active",
   "experimental": false,
-  "date": "2024-12-28T18:49:50+00:00",
+  "date": "2025-01-04T23:50:51+00:00",
   "publisher": "HL7 International / Patient Care",
   "contact": [ {
     "telecom": [ {
