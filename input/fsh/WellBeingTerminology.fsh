@@ -7,7 +7,7 @@ Description: "Code system to identify resource codes and category domains for \"
 * ^experimental = false
 * ^status = #active
 * insert PCOCodeSystemPublisher
-* #what-matters "What Matters Most"
+* #what-matters "What Matters"
     "What matters most for a person's well-being"
 * #wellbeing-vision "Well-Being Vision"
     "A peron's vision for well-being"
@@ -31,7 +31,7 @@ Id: what-matters-vs
 Title: "What Matters Categories"
 Description: "Value set containing well-being concepts for What Matters Most."
 * ^experimental = false
-* WellBeingConcepts#what-matters "What Matters Most"
+* WellBeingConcepts#what-matters "What Matters"
 
 ValueSet: WellBeingCategoryValueSet
 Id: wellbeing-category-vs

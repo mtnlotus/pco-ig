@@ -18,7 +18,7 @@ Title: "PPC What Matters: Walking or moving"
 Description: "Patient Priorities Care what matters: Walking or moving"
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = PPCWhatMattersConcepts#ppc-wm-3 "Walking or moving inside and outside of my home"
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
@@ -31,7 +31,7 @@ Title: "PPC What Matters: Activities with Family"
 Description: "Patient Priorities Care what matters: doing activities with family"
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = PPCWhatMattersConcepts#ppc-wm-2 "Doing activities with family and friends"
 * subject = Reference(ppcPatientKay)
 * performer = Reference(ppcPatientKay)
@@ -45,7 +45,7 @@ Description: "Patient Priorities Care goal: cooking dinner"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * category[goal-domain] = PCOGoalDomains#social-functioning "Social Functioning"
 * subject = Reference(ppcPatientKay)
 * expressedBy = Reference(ppcPatientKay)

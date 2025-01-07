@@ -47,7 +47,7 @@ Description: "Person-centered goal without attainment scaling or PROM"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)

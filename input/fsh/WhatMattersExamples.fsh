@@ -5,7 +5,7 @@ Title: "What Matters Priority: Moving the Body"
 Description: "What Matters observation recorded by a Patient to indicate their priority for well-being."
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -18,7 +18,7 @@ Title: "What Matters Statement: Family & Friends"
 Description: "What Matters observation added by a Patient to record a free-text statement about a well-being focus area."
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -31,7 +31,7 @@ Title: "What Matters: Moving the Body"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -45,7 +45,7 @@ InstanceOf: WhatMattersAssessment
 Title: "What Matters: Family & Friends"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * status = #final 
 * subject = Reference(pcoPatientJones)
@@ -64,7 +64,7 @@ Title: "What Matters: Invalid missing value or component"
 Description: "What Matters observation with invalid elements."
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -76,7 +76,7 @@ Title: "What Matters: Invalid both value and component"
 Description: "What Matters observation with invalid elements."
 Usage: #example
 * status = #final 
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters Most"
+* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
