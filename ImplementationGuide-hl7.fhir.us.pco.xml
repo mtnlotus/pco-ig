@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2025-01-06T22:35:31+00:00"/>
+  <date value="2025-01-08T19:36:44+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -909,10 +909,10 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/ppcPatientKay"/>
+        <reference value="Patient/ppcPatientMrK"/>
       </reference>
-      <name value="Patient John Kay"/>
-      <description value="John Kay for PPC examples"/>
+      <name value="Patient Mr. K"/>
+      <description value="Patient for PPC examples"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1072,9 +1072,9 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/ppcBarrierDiabetes"/>
+        <reference value="Observation/ppcBarrierDiabeticDiet"/>
       </reference>
-      <name value="PPC Bothersome Health Concern: Diabeted diet (other)"/>
+      <name value="PPC Bothersome Health Concern: Diabetic diet (other)"/>
       <description value="PPC Bothersome health problem, other with free-text description"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"/>
     </resource>
@@ -1083,9 +1083,20 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/ppcBarrierUnsteady"/>
+        <reference value="Observation/ppcBarrierFeelingTired"/>
       </reference>
-      <name value="PPC Bothersome Symptom: Feeling Unsteady"/>
+      <name value="PPC Bothersome Health Concern: Low energy"/>
+      <description value="PPC Bothersome symptom or health problem"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcBarrierUrinaryIncontinence"/>
+      </reference>
+      <name value="PPC Bothersome Symptom: urinary incontinence"/>
       <description value="PPC Bothersome symptom or health problem"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"/>
     </resource>
@@ -1108,7 +1119,7 @@
         <reference value="ServiceRequest/ppcPhysicalTherapyReferral"/>
       </reference>
       <name value="PPC Care Plan: Clinical action step for PT"/>
-      <description value="Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner"/>
+      <description value="Care Plan activity: Physical therapy to improve stamina and energy"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1116,10 +1127,32 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/ppcCareTradeOffBothersome"/>
+        <reference value="Observation/ppcCareTradeOffHelpfulArthritisCream"/>
+      </reference>
+      <name value="PPC Care Trade-Off: Arthritis cream"/>
+      <description value="PPC Care Trade-off that is helpful"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcCareTradeOffHelpfulExercising"/>
+      </reference>
+      <name value="PPC Care Trade-Off: Exercising"/>
+      <description value="PPC Care Trade-off that is helpful"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcCareTradeOffBurdensomeSpecialDiet"/>
       </reference>
       <name value="PPC Care Trade-Off: Following a special diet"/>
-      <description value="PPC Care Trade-off that is bothersome"/>
+      <description value="PPC Care Trade-off that is burdensome"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
     </resource>
     <resource>
@@ -1127,21 +1160,10 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/ppcCareTradeOffDescription"/>
+        <reference value="Observation/ppcCareTradeOffBurdensomeWaterPill"/>
       </reference>
-      <name value="PPC Care Trade-Off: Free-text description"/>
-      <description value="PPC Care Trade-off that is bothersome with free-text description"/>
-      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/ppcCareTradeOffHelpful"/>
-      </reference>
-      <name value="PPC Care Trade-Off: Health care visits"/>
-      <description value="PPC Care Trade-off that is helpful"/>
+      <name value="PPC Care Trade-Off: Water pill"/>
+      <description value="PPC Care Trade-off that is burdensome"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
     </resource>
     <resource>
@@ -1160,11 +1182,22 @@
         <valueString value="Goal"/>
       </extension>
       <reference>
-        <reference value="Goal/ppcGoalCookingDinner"/>
+        <reference value="Goal/ppcGoalGrillForFamily"/>
       </reference>
-      <name value="PPC Goal: Cooking Dinner"/>
-      <description value="Patient Priorities Care goal: cooking dinner"/>
+      <name value="PPC Goal: Grill for family"/>
+      <description value="Patient Priorities Care goal: Grill for my family every Sunday"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ppcGASScorePractitionerFollowupExample"/>
+      </reference>
+      <name value="PPC Practitioner GAS Follow-up Score"/>
+      <description value="Follow-up GAS score observation recorded by a Practitioner showing goal progress."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1174,7 +1207,7 @@
         <reference value="List/ppcPrioritiesList"/>
       </reference>
       <name value="PPC Priorities List"/>
-      <description value="PPC what matters MOST, and the MOST bothersome Care Trade-off"/>
+      <description value="PPC what matters most, and the most bothersome Care Trade-off"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"/>
     </resource>
     <resource>
@@ -1206,8 +1239,8 @@
       <reference>
         <reference value="Observation/ppcWhatMattersActivitiesWithFamily"/>
       </reference>
-      <name value="PPC What Matters: Activities with Family"/>
-      <description value="Patient Priorities Care what matters: doing activities with family"/>
+      <name value="PPC What Matters: Activities with family"/>
+      <description value="Patient Priorities Care what matters: Doing activities with family"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
     </resource>
     <resource>
@@ -1215,10 +1248,10 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/ppcWhatMattersMovingTheBody"/>
+        <reference value="Observation/ppcWhatMattersTakingCareOfFamily"/>
       </reference>
-      <name value="PPC What Matters: Walking or moving"/>
-      <description value="Patient Priorities Care what matters: Walking or moving"/>
+      <name value="PPC What Matters: Taking care of family"/>
+      <description value="Patient Priorities Care what matters: Taking care of family and friends"/>
       <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
     </resource>
     <resource>

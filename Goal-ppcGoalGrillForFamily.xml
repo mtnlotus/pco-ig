@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="ppcGoalGrillForFamily"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Goal ppcGoalGrillForFamily</b></p><a name="ppcGoalGrillForFamily"> </a><a name="hcppcGoalGrillForFamily"> </a><a name="ppcGoalGrillForFamily-en-US"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}">In Progress</span></p><p><b>category</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts what-matters}">What Matters</span>, <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains social-functioning}">Social Functioning</span></p><p><b>description</b>: <span title="Codes:">Grill for my family every Sunday when the weather is nice.</span></p><p><b>subject</b>: <a href="Patient-ppcPatientMrK.html">Mr. K  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a></p><p><b>start</b>: 2025-01-02</p><h3>Targets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Due[x]</b></td></tr><tr><td style="display: none">*</td><td>2025-06-30</td></tr></table><p><b>expressedBy</b>: <a href="Patient-ppcPatientMrK.html">Mr. K  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a></p><p><b>addresses</b>: <a href="Observation-ppcWhatMattersActivitiesWithFamily.html">PPC What Matters: Activities with Family</a></p></div>
+  </text>
+  <lifecycleStatus value="active"/>
+  <achievementStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-achievement"/>
+      <code value="in-progress"/>
+    </coding>
+  </achievementStatus>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
+      <code value="what-matters"/>
+      <display value="What Matters"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains"/>
+      <code value="social-functioning"/>
+      <display value="Social Functioning"/>
+    </coding>
+  </category>
+  <description>
+    <text value="Grill for my family every Sunday when the weather is nice."/>
+  </description>
+  <subject>
+    <reference value="Patient/ppcPatientMrK"/>
+  </subject>
+  <startDate value="2025-01-02"/>
+  <target>
+    <dueDate value="2025-06-30"/>
+  </target>
+  <expressedBy>
+    <reference value="Patient/ppcPatientMrK"/>
+  </expressedBy>
+  <addresses>
+    <reference value="Observation/ppcWhatMattersActivitiesWithFamily"/>
+    <display value="PPC What Matters: Activities with Family"/>
+  </addresses>
+</Goal>

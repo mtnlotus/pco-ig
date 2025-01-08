@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-06T22:35:31+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-08T19:36:44+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -1056,11 +1056,11 @@
          fhir:value [ fhir:v "Patient" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> ;
-         fhir:reference [ fhir:v "Patient/ppcPatientKay" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Patient/ppcPatientMrK> ;
+         fhir:reference [ fhir:v "Patient/ppcPatientMrK" ]
        ] ;
-       fhir:name [ fhir:v "Patient John Kay" ] ;
-       fhir:description [ fhir:v "John Kay for PPC examples" ] ;
+       fhir:name [ fhir:v "Patient Mr. K" ] ;
+       fhir:description [ fhir:v "Patient for PPC examples" ] ;
        fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1234,10 +1234,10 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierDiabetes> ;
-         fhir:reference [ fhir:v "Observation/ppcBarrierDiabetes" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierDiabeticDiet> ;
+         fhir:reference [ fhir:v "Observation/ppcBarrierDiabeticDiet" ]
        ] ;
-       fhir:name [ fhir:v "PPC Bothersome Health Concern: Diabeted diet (other)" ] ;
+       fhir:name [ fhir:v "PPC Bothersome Health Concern: Diabetic diet (other)" ] ;
        fhir:description [ fhir:v "PPC Bothersome health problem, other with free-text description" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
@@ -1249,10 +1249,25 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierUnsteady> ;
-         fhir:reference [ fhir:v "Observation/ppcBarrierUnsteady" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierFeelingTired> ;
+         fhir:reference [ fhir:v "Observation/ppcBarrierFeelingTired" ]
        ] ;
-       fhir:name [ fhir:v "PPC Bothersome Symptom: Feeling Unsteady" ] ;
+       fhir:name [ fhir:v "PPC Bothersome Health Concern: Low energy" ] ;
+       fhir:description [ fhir:v "PPC Bothersome symptom or health problem" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcBarrierUrinaryIncontinence> ;
+         fhir:reference [ fhir:v "Observation/ppcBarrierUrinaryIncontinence" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Bothersome Symptom: urinary incontinence" ] ;
        fhir:description [ fhir:v "PPC Bothersome symptom or health problem" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
@@ -1283,7 +1298,7 @@
          fhir:reference [ fhir:v "ServiceRequest/ppcPhysicalTherapyReferral" ]
        ] ;
        fhir:name [ fhir:v "PPC Care Plan: Clinical action step for PT" ] ;
-       fhir:description [ fhir:v "Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner" ] ;
+       fhir:description [ fhir:v "Care Plan activity: Physical therapy to improve stamina and energy" ] ;
        fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1291,11 +1306,41 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBothersome> ;
-         fhir:reference [ fhir:v "Observation/ppcCareTradeOffBothersome" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpfulArthritisCream> ;
+         fhir:reference [ fhir:v "Observation/ppcCareTradeOffHelpfulArthritisCream" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Care Trade-Off: Arthritis cream" ] ;
+       fhir:description [ fhir:v "PPC Care Trade-off that is helpful" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpfulExercising> ;
+         fhir:reference [ fhir:v "Observation/ppcCareTradeOffHelpfulExercising" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Care Trade-Off: Exercising" ] ;
+       fhir:description [ fhir:v "PPC Care Trade-off that is helpful" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBurdensomeSpecialDiet> ;
+         fhir:reference [ fhir:v "Observation/ppcCareTradeOffBurdensomeSpecialDiet" ]
        ] ;
        fhir:name [ fhir:v "PPC Care Trade-Off: Following a special diet" ] ;
-       fhir:description [ fhir:v "PPC Care Trade-off that is bothersome" ] ;
+       fhir:description [ fhir:v "PPC Care Trade-off that is burdensome" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
@@ -1306,26 +1351,11 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffDescription> ;
-         fhir:reference [ fhir:v "Observation/ppcCareTradeOffDescription" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBurdensomeWaterPill> ;
+         fhir:reference [ fhir:v "Observation/ppcCareTradeOffBurdensomeWaterPill" ]
        ] ;
-       fhir:name [ fhir:v "PPC Care Trade-Off: Free-text description" ] ;
-       fhir:description [ fhir:v "PPC Care Trade-off that is bothersome with free-text description" ] ;
-       fhir:example [
-         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpful> ;
-         fhir:reference [ fhir:v "Observation/ppcCareTradeOffHelpful" ]
-       ] ;
-       fhir:name [ fhir:v "PPC Care Trade-Off: Health care visits" ] ;
-       fhir:description [ fhir:v "PPC Care Trade-off that is helpful" ] ;
+       fhir:name [ fhir:v "PPC Care Trade-Off: Water pill" ] ;
+       fhir:description [ fhir:v "PPC Care Trade-off that is burdensome" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
@@ -1351,14 +1381,29 @@
          fhir:value [ fhir:v "Goal" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Goal/ppcGoalCookingDinner> ;
-         fhir:reference [ fhir:v "Goal/ppcGoalCookingDinner" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Goal/ppcGoalGrillForFamily> ;
+         fhir:reference [ fhir:v "Goal/ppcGoalGrillForFamily" ]
        ] ;
-       fhir:name [ fhir:v "PPC Goal: Cooking Dinner" ] ;
-       fhir:description [ fhir:v "Patient Priorities Care goal: cooking dinner" ] ;
+       fhir:name [ fhir:v "PPC Goal: Grill for family" ] ;
+       fhir:description [ fhir:v "Patient Priorities Care goal: Grill for my family every Sunday" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcGASScorePractitionerFollowupExample> ;
+         fhir:reference [ fhir:v "Observation/ppcGASScorePractitionerFollowupExample" ]
+       ] ;
+       fhir:name [ fhir:v "PPC Practitioner GAS Follow-up Score" ] ;
+       fhir:description [ fhir:v "Follow-up GAS score observation recorded by a Practitioner showing goal progress." ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation>
        ]
      ] [
        fhir:extension ( [
@@ -1370,7 +1415,7 @@
          fhir:reference [ fhir:v "List/ppcPrioritiesList" ]
        ] ;
        fhir:name [ fhir:v "PPC Priorities List" ] ;
-       fhir:description [ fhir:v "PPC what matters MOST, and the MOST bothersome Care Trade-off" ] ;
+       fhir:description [ fhir:v "PPC what matters most, and the most bothersome Care Trade-off" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer>
@@ -1408,8 +1453,8 @@
          fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersActivitiesWithFamily> ;
          fhir:reference [ fhir:v "Observation/ppcWhatMattersActivitiesWithFamily" ]
        ] ;
-       fhir:name [ fhir:v "PPC What Matters: Activities with Family" ] ;
-       fhir:description [ fhir:v "Patient Priorities Care what matters: doing activities with family" ] ;
+       fhir:name [ fhir:v "PPC What Matters: Activities with family" ] ;
+       fhir:description [ fhir:v "Patient Priorities Care what matters: Doing activities with family" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
@@ -1420,11 +1465,11 @@
          fhir:value [ fhir:v "Observation" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersMovingTheBody> ;
-         fhir:reference [ fhir:v "Observation/ppcWhatMattersMovingTheBody" ]
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersTakingCareOfFamily> ;
+         fhir:reference [ fhir:v "Observation/ppcWhatMattersTakingCareOfFamily" ]
        ] ;
-       fhir:name [ fhir:v "PPC What Matters: Walking or moving" ] ;
-       fhir:description [ fhir:v "Patient Priorities Care what matters: Walking or moving" ] ;
+       fhir:name [ fhir:v "PPC What Matters: Taking care of family" ] ;
+       fhir:description [ fhir:v "Patient Priorities Care what matters: Taking care of family and friends" ] ;
        fhir:example [
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
@@ -1849,7 +1894,7 @@
 
 <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePatientFollowupExample> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Patient/ppcPatientKay> a fhir:us .
+<http://hl7.org/fhir/us/pco/Patient/ppcPatientMrK> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation> a fhir:us .
 
@@ -1879,23 +1924,29 @@
 
 <http://hl7.org/fhir/us/pco/Questionnaire/44249-1> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/ppcBarrierDiabetes> a fhir:us .
+<http://hl7.org/fhir/us/pco/Observation/ppcBarrierDiabeticDiet> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/ppcBarrierUnsteady> a fhir:us .
+<http://hl7.org/fhir/us/pco/Observation/ppcBarrierFeelingTired> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcBarrierUrinaryIncontinence> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/CarePlan/ppcCookingDinnerCarePlanExample> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ServiceRequest/ppcPhysicalTherapyReferral> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBothersome> a fhir:us .
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpfulArthritisCream> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffDescription> a fhir:us .
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpfulExercising> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffHelpful> a fhir:us .
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBurdensomeSpecialDiet> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcCareTradeOffBurdensomeWaterPill> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/ppcGASScoreBaselineExample> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Goal/ppcGoalCookingDinner> a fhir:us .
+<http://hl7.org/fhir/us/pco/Goal/ppcGoalGrillForFamily> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/ppcGASScorePractitionerFollowupExample> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/List/ppcPrioritiesList> a fhir:us .
 
@@ -1905,7 +1956,7 @@
 
 <http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersActivitiesWithFamily> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersMovingTheBody> a fhir:us .
+<http://hl7.org/fhir/us/pco/Observation/ppcWhatMattersTakingCareOfFamily> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePractitionerFollowupExample> a fhir:us .
 

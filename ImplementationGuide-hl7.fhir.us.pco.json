@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-01-06T22:35:31+00:00",
+  "date" : "2025-01-08T19:36:44+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -1122,10 +1122,10 @@
         "valueString" : "Patient"
       }],
       "reference" : {
-        "reference" : "Patient/ppcPatientKay"
+        "reference" : "Patient/ppcPatientMrK"
       },
-      "name" : "Patient John Kay",
-      "description" : "John Kay for PPC examples",
+      "name" : "Patient Mr. K",
+      "description" : "Patient for PPC examples",
       "exampleBoolean" : true
     },
     {
@@ -1300,9 +1300,9 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ppcBarrierDiabetes"
+        "reference" : "Observation/ppcBarrierDiabeticDiet"
       },
-      "name" : "PPC Bothersome Health Concern: Diabeted diet (other)",
+      "name" : "PPC Bothersome Health Concern: Diabetic diet (other)",
       "description" : "PPC Bothersome health problem, other with free-text description",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
     },
@@ -1312,9 +1312,21 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ppcBarrierUnsteady"
+        "reference" : "Observation/ppcBarrierFeelingTired"
       },
-      "name" : "PPC Bothersome Symptom: Feeling Unsteady",
+      "name" : "PPC Bothersome Health Concern: Low energy",
+      "description" : "PPC Bothersome symptom or health problem",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcBarrierUrinaryIncontinence"
+      },
+      "name" : "PPC Bothersome Symptom: urinary incontinence",
       "description" : "PPC Bothersome symptom or health problem",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
     },
@@ -1339,7 +1351,7 @@
         "reference" : "ServiceRequest/ppcPhysicalTherapyReferral"
       },
       "name" : "PPC Care Plan: Clinical action step for PT",
-      "description" : "Care Plan activity: Physical therapy to reduce unsteadiness while cooking dinner",
+      "description" : "Care Plan activity: Physical therapy to improve stamina and energy",
       "exampleBoolean" : true
     },
     {
@@ -1348,10 +1360,34 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ppcCareTradeOffBothersome"
+        "reference" : "Observation/ppcCareTradeOffHelpfulArthritisCream"
+      },
+      "name" : "PPC Care Trade-Off: Arthritis cream",
+      "description" : "PPC Care Trade-off that is helpful",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcCareTradeOffHelpfulExercising"
+      },
+      "name" : "PPC Care Trade-Off: Exercising",
+      "description" : "PPC Care Trade-off that is helpful",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcCareTradeOffBurdensomeSpecialDiet"
       },
       "name" : "PPC Care Trade-Off: Following a special diet",
-      "description" : "PPC Care Trade-off that is bothersome",
+      "description" : "PPC Care Trade-off that is burdensome",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
     },
     {
@@ -1360,22 +1396,10 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ppcCareTradeOffDescription"
+        "reference" : "Observation/ppcCareTradeOffBurdensomeWaterPill"
       },
-      "name" : "PPC Care Trade-Off: Free-text description",
-      "description" : "PPC Care Trade-off that is bothersome with free-text description",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcCareTradeOffHelpful"
-      },
-      "name" : "PPC Care Trade-Off: Health care visits",
-      "description" : "PPC Care Trade-off that is helpful",
+      "name" : "PPC Care Trade-Off: Water pill",
+      "description" : "PPC Care Trade-off that is burdensome",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
     },
     {
@@ -1396,11 +1420,23 @@
         "valueString" : "Goal"
       }],
       "reference" : {
-        "reference" : "Goal/ppcGoalCookingDinner"
+        "reference" : "Goal/ppcGoalGrillForFamily"
       },
-      "name" : "PPC Goal: Cooking Dinner",
-      "description" : "Patient Priorities Care goal: cooking dinner",
+      "name" : "PPC Goal: Grill for family",
+      "description" : "Patient Priorities Care goal: Grill for my family every Sunday",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ppcGASScorePractitionerFollowupExample"
+      },
+      "name" : "PPC Practitioner GAS Follow-up Score",
+      "description" : "Follow-up GAS score observation recorded by a Practitioner showing goal progress.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"
     },
     {
       "extension" : [{
@@ -1411,7 +1447,7 @@
         "reference" : "List/ppcPrioritiesList"
       },
       "name" : "PPC Priorities List",
-      "description" : "PPC what matters MOST, and the MOST bothersome Care Trade-off",
+      "description" : "PPC what matters most, and the most bothersome Care Trade-off",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"
     },
     {
@@ -1446,8 +1482,8 @@
       "reference" : {
         "reference" : "Observation/ppcWhatMattersActivitiesWithFamily"
       },
-      "name" : "PPC What Matters: Activities with Family",
-      "description" : "Patient Priorities Care what matters: doing activities with family",
+      "name" : "PPC What Matters: Activities with family",
+      "description" : "Patient Priorities Care what matters: Doing activities with family",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
     },
     {
@@ -1456,10 +1492,10 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ppcWhatMattersMovingTheBody"
+        "reference" : "Observation/ppcWhatMattersTakingCareOfFamily"
       },
-      "name" : "PPC What Matters: Walking or moving",
-      "description" : "Patient Priorities Care what matters: Walking or moving",
+      "name" : "PPC What Matters: Taking care of family",
+      "description" : "Patient Priorities Care what matters: Taking care of family and friends",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
     },
     {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ppcCareTradeOffBurdensomeWaterPill"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ppcCareTradeOffBurdensomeWaterPill</b></p><a name="ppcCareTradeOffBurdensomeWaterPill"> </a><a name="hcppcCareTradeOffBurdensomeWaterPill"> </a><a name="ppcCareTradeOffBurdensomeWaterPill-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes burdensome-care}">Burdensome</span></p><p><b>subject</b>: <a href="Patient-ppcPatientMrK.html">Mr. K  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a></p><p><b>focus</b>: <a href="Goal-ppcGoalGrillForFamily.html">Goal: lifecycleStatus = active; achievementStatus = In Progress; category = What Matters,Social Functioning; description = ; start[x] = 2025-01-02</a></p><p><b>effective</b>: 2025-01-02 15:05:00+0000</p><p><b>performer</b>: <a href="Patient-ppcPatientMrK.html">Mr. K  Male, DoB: 1948-10-07 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1dz4 (use: official, ))</a></p><p><b>value</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts medications}">Water pill</span></p><p><b>note</b>: Have to go to the bathroom too often</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes"/>
+      <code value="burdensome-care"/>
+      <display value="Burdensome"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ppcPatientMrK"/>
+  </subject>
+  <focus>
+    <reference value="Goal/ppcGoalGrillForFamily"/>
+  </focus>
+  <effectiveDateTime value="2025-01-02T15:05:00Z"/>
+  <performer>
+    <reference value="Patient/ppcPatientMrK"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts"/>
+      <code value="medications"/>
+      <display value="Medications"/>
+    </coding>
+    <text value="Water pill"/>
+  </valueCodeableConcept>
+  <note>
+    <text value="Have to go to the bathroom too often"/>
+  </note>
+</Observation>
