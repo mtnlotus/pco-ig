@@ -2,6 +2,10 @@
  * Terminology examples for Patient Priorities Care (PPC).
 */
 
+// 
+RuleSet: MyHealthPrioritiesCopyrightNotice
+* ^copyright = "© Copyright 2024+ Mary Tinetti and Aanand Naik. All rights reserved. Licensed under CC BY 4.0"
+
 CodeSystem: PPCWhatMattersConcepts
 Id: ppc-what-matters-concepts
 Title: "PPC What Matters Concepts"
@@ -10,6 +14,7 @@ Description: "Code system to identify What Matters concepts from Patient Priorie
 * ^experimental = false
 * ^status = #active
 * insert PCOCodeSystemPublisher
+* insert MyHealthPrioritiesCopyrightNotice
 * #ppc-wm-1 "Other"
 * #ppc-wm-2 "Doing activities with family and friends"
 * #ppc-wm-3 "Walking or moving inside and outside of my home"
@@ -42,6 +47,7 @@ Description: "Code system to identify bothersome symptoms or health concerns.."
 * ^experimental = false
 * ^status = #active
 * insert PCOCodeSystemPublisher
+* insert MyHealthPrioritiesCopyrightNotice
 * #other "Other"
 * #muscle-weakness "Feeling muscle weakness"
 * #pain "Feeling pain"
@@ -85,6 +91,7 @@ Description: "Code system to identify care trade-off concepts."
 * ^status = #active
 * ^hierarchyMeaning = #is-a
 * insert PCOCodeSystemPublisher
+* insert MyHealthPrioritiesCopyrightNotice
 * #medications "Medications"
 * #self-care-tasks "Self-care tasks"
   * #diet "Following a special diet"

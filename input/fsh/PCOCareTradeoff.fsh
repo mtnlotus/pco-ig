@@ -31,7 +31,7 @@ Description: "Code system to identify care trade-off choices."
 * ^status = #active
 * insert PCOCodeSystemPublisher
 * #helpful-care "Helpful"
-* #bothersome-care "Bothersome"
+* #burdensome-care "Burdensome"
 * #willing-to-change "Willing to change"
 * #unwilling-to-change "Unwilling to change"
 
