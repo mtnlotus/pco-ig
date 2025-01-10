@@ -45,7 +45,7 @@ Usage: #example
 * target.measure = $LNC#68489 "Goal attainment scale"
 
 Instance: pcoBarrierUrinaryIncontinence
-InstanceOf: PCOGoalBarrier
+InstanceOf: PCOGoalBarrierProfile
 Title: "Goal Barrier: Urinary incontinence"
 Description: "Barrier for goal achievement"
 Usage: #example
@@ -58,7 +58,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#165232002 "Urinary incontinence"
 
 Instance: pcoBarrierDiabeticDiet
-InstanceOf: PCOGoalBarrier
+InstanceOf: PCOGoalBarrierProfile
 Title: "Goal Barrier: Diabetic diet (other)"
 Description: "Barrier with a free-text description"
 Usage: #example
@@ -71,7 +71,7 @@ Usage: #example
 * valueString = "Diabetic diet restrictions"
 
 Instance: pcoCareTradeOffBurdensomeWaterPill
-InstanceOf: PCOCareTradeOff
+InstanceOf: PCOCareTradeOffProfile
 Title: "Care Trade-Off: Water pill"
 Description: "Care Trade-off that is burdensome"
 Usage: #example
@@ -86,7 +86,7 @@ Usage: #example
 * note.text = "Have to go to the bathroom too often"
 
 Instance: pcoCareTradeOffHelpfulExercising
-InstanceOf: PCOCareTradeOff
+InstanceOf: PCOCareTradeOffProfile
 Title: "Care Trade-Off: Exercising"
 Description: "Care Trade-off that is helpful"
 Usage: #example
@@ -97,6 +97,27 @@ Usage: #example
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-04-10T15:05:00Z"
 * valueCodeableConcept = $SCT#256235009 "Exercise"
+
+// The most important item from What Matters
+//      - Use a List to rank order the What Matters observations
+//      - The list only needs to contain the one, not all WhatMatters rank-ordered, although all could be included.
+
+// One most bothersome symptom or health concern
+//      - Use a List to rank order the barriers
+//      - The list only needs to contain the one most bothersome, not all barriers rank-ordered, although all could be included.
+
+Instance: pcoPrioritiesList
+InstanceOf: PCOPersonalPrioritiesOrganizer
+Title: "Personal Priorities List"
+Description: "Patient selecton of the most important items for What Matters most, goal barrier, and the most bothersome Care Trade-off"
+Usage: #example
+* status = #current 
+* mode = #working
+* subject = Reference(pcoPatientJones)
+* date = "2024-04-10T15:05:00Z"
+* entry[0].item = Reference(pcoWhatMattersRelationshipsExample)
+* entry[1].item = Reference(pcoBarrierUrinaryIncontinence)
+* entry[2].item = Reference(pcoCareTradeOffBurdensomeWaterPill)
 
 Instance: pcoGASScoreBaselineExample
 InstanceOf: PCOGoalAttainmentScoreObservation

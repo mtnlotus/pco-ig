@@ -35,7 +35,7 @@ Usage: #example
 
 Instance: pcoPhysicalTherapyReferral
 InstanceOf: USCoreServiceRequestProfile
-Title: "Care Plan: Clinical action step for PT"
+Title: "Care Plan: Clinical action step a patient"
 Description: "Care Plan activity: Physical therapy to relieve pain related to walking"
 Usage: #example
 * status = #active
@@ -60,7 +60,7 @@ Usage: #example
 * intent = #order
 * subject = Reference(pcoPatientJones)
 * requester = Reference(pcoPractitionerAnderson)
-* medicationCodeableConcept = $rxNorm#2550740 "Aleve Arthritis Pain 1 % Topical Gel"
+* medicationCodeableConcept = $rxNorm#2550740 "diclofenac sodium 0.01 MG/MG Topical Gel [Aleve Arthritis Pain]"
 * dosageInstruction.asNeededBoolean = true
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2024-02-22"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2024-06-30"

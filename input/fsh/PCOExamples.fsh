@@ -17,9 +17,8 @@ InstanceOf: USCorePractitionerProfile
 Title: "Health & Wellness Coach" 
 Description: "Maria Gonzalez, NBC-HWC"
 Usage: #example
-* identifier[0].use = #official
-* identifier[0].system = "http://example.org"
-* identifier[0].value = "ee8d4ac0-545c-4501-8d7e-646bfbda6cd7"
+* identifier[0].system = "http://hl7.org/fhir/sid/us-npi"
+* identifier[0].value = "9941339100"
 * name.family = "Gonzalez"
 * name.given[0] = "Maria"
 * name.suffix = "NBC-HWC"
@@ -31,9 +30,8 @@ InstanceOf: USCorePractitionerProfile
 Title: "Primary Care Physician" 
 Description: "John Anderson, MD"
 Usage: #example
-* identifier[0].use = #official
-* identifier[0].system = "http://example.org"
-* identifier[0].value = "ee8d4ac0-545c-4501-8d7e-646bfbda6de8"
+* identifier[0].system = "http://hl7.org/fhir/sid/us-npi"
+* identifier[0].value = "9941339100"
 * name.family = "Anderson"
 * name.given[0] = "John"
 * name.suffix = "MD"

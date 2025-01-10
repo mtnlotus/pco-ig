@@ -1,5 +1,5 @@
 
-Profile: PCOCareTradeOff
+Profile: PCOCareTradeOffProfile
 Parent: USCoreSimpleObservationProfile
 Id: pco-care-tradeoff
 Title: "Care Trade-off Assessment"
@@ -24,7 +24,7 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 
 CodeSystem: CareTradeOffChoiceCodes
 Id: pco-care-tradeoff-choice-codes
-Title: "Care Trade-off Choices"
+Title: "Care Trade-off Choice Codes"
 Description: "Code system to identify care trade-off choices."
 * ^caseSensitive = true
 * ^experimental = false

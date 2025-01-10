@@ -8,13 +8,13 @@
 <artifact id="CarePlan/pcoPhyicalFunctionCarePlanExample" key="CarePlan-pcoPhyicalFunctionCarePlanExample" name="Care Plan for person-centered goal"/>
 <artifact id="ServiceRequest/pcoMindfulnessSupportProgram" key="ServiceRequest-pcoMindfulnessSupportProgram" name="Care Plan: Action step for mindfulness program"/>
 <artifact id="MedicationRequest/pcoAntiInflammatoryMedication" key="MedicationRequest-pcoAntiInflammatoryMedication" name="Care Plan: Anti-Inflammatory Medication"/>
-<artifact id="ServiceRequest/pcoPhysicalTherapyReferral" key="ServiceRequest-pcoPhysicalTherapyReferral" name="Care Plan: Clinical action step for PT"/>
+<artifact id="ServiceRequest/pcoPhysicalTherapyReferral" key="ServiceRequest-pcoPhysicalTherapyReferral" name="Care Plan: Clinical action step a patient"/>
 <artifact id="ServiceRequest/pcoWalkOutsideActionStep" key="ServiceRequest-pcoWalkOutsideActionStep" name="Care Plan: Personal action step"/>
 <artifact id="Observation/pcoCareTradeOffHelpfulExercising" key="Observation-pcoCareTradeOffHelpfulExercising" name="Care Trade-Off: Exercising"/>
 <artifact id="Observation/pcoCareTradeOffBurdensomeWaterPill" key="Observation-pcoCareTradeOffBurdensomeWaterPill" name="Care Trade-Off: Water pill"/>
 <artifact id="StructureDefinition/pco-care-tradeoff" key="StructureDefinition-pco-care-tradeoff" name="Care Trade-off Assessment"/>
+<artifact id="CodeSystem/pco-care-tradeoff-choice-codes" key="CodeSystem-pco-care-tradeoff-choice-codes" name="Care Trade-off Choice Codes"/>
 <artifact id="ValueSet/pco-care-tradeoff-choices-vs" key="ValueSet-pco-care-tradeoff-choices-vs" name="Care Trade-off Choices"/>
-<artifact id="CodeSystem/pco-care-tradeoff-choice-codes" key="CodeSystem-pco-care-tradeoff-choice-codes" name="Care Trade-off Choices"/>
 <artifact id="ValueSet/pco-care-tradeoff-types-example-vs" key="ValueSet-pco-care-tradeoff-types-example-vs" name="Care Trade-off Types Example"/>
 <artifact id="CodeSystem/pco-codes" key="CodeSystem-pco-codes" name="Codes for PCO"/>
 <artifact id="Library/FHIRHelpers" key="Library-FHIRHelpers" name="FHIRHelpers"/>
@@ -22,9 +22,9 @@
 <artifact id="Observation/pcoPROMScoreAnxietyExample" key="Observation-pcoPROMScoreAnxietyExample" name="GAD-7 PROM Follow-up Score"/>
 <artifact id="Observation/pcoGASScoreBaselineExample" key="Observation-pcoGASScoreBaselineExample" name="GAS Baseline Score"/>
 <artifact id="Questionnaire/69737-5" key="Questionnaire-69737-5" name="Generalized anxiety disorder 7 item"/>
-<artifact id="StructureDefinition/pco-goal-attainment-scaling" key="StructureDefinition-pco-goal-attainment-scaling" name="Goal Attainment Scaling"/>
 <artifact id="ValueSet/goal-attainment-scaling-score" key="ValueSet-goal-attainment-scaling-score" name="Goal Attainment Scaling (GAS) Score"/>
-<artifact id="StructureDefinition/pco-gas-score-observation" key="StructureDefinition-pco-gas-score-observation" name="Goal Attainment Scaling (GAS) score"/>
+<artifact id="StructureDefinition/pco-gas-score-observation" key="StructureDefinition-pco-gas-score-observation" name="Goal Attainment Scaling (GAS) score observation"/>
+<artifact id="StructureDefinition/pco-goal-attainment-scaling" key="StructureDefinition-pco-goal-attainment-scaling" name="Goal Attainment Scaling Extension"/>
 <artifact id="ValueSet/goal-barrier-codes" key="ValueSet-goal-barrier-codes" name="Goal Barrier Assessment Codes"/>
 <artifact id="ValueSet/pco-goal-barrier-types-example-vs" key="ValueSet-pco-goal-barrier-types-example-vs" name="Goal Barrier Types Example"/>
 <artifact id="Observation/pcoBarrierDiabeticDiet" key="Observation-pcoBarrierDiabeticDiet" name="Goal Barrier: Diabetic diet (other)"/>
@@ -45,7 +45,7 @@
 <artifact id="Patient/pcoPatientLopez" key="Patient-pcoPatientLopez" name="Patient Camila Lopez"/>
 <artifact id="Patient/pcoPatientJones" key="Patient-pcoPatientJones" name="Patient Dorothy Jones"/>
 <artifact id="Observation/pcoGASScorePatientFollowupExample" key="Observation-pcoGASScorePatientFollowupExample" name="Patient GAS Follow-up Score"/>
-<artifact id="StructureDefinition/pco-prom-score-observation" key="StructureDefinition-pco-prom-score-observation" name="Patient-Reported Outcome Measure (PROM) score"/>
+<artifact id="StructureDefinition/pco-prom-score-observation" key="StructureDefinition-pco-prom-score-observation" name="Patient-Reported Outcome Measure (PROM) score observation"/>
 <artifact id="StructureDefinition/pco-care-plan" key="StructureDefinition-pco-care-plan" name="Person-Centered Care Plan"/>
 <artifact id="StructureDefinition/pco-gas-goal-profile" key="StructureDefinition-pco-gas-goal-profile" name="Person-Centered GAS Goal"/>
 <artifact id="StructureDefinition/pco-goal-profile" key="StructureDefinition-pco-goal-profile" name="Person-Centered Goal"/>
@@ -54,6 +54,7 @@
 <artifact id="Measure/GoalIdentificationMeasure" key="Measure-GoalIdentificationMeasure" name="Person-Centered Goal Identification"/>
 <artifact id="ValueSet/pco-survey-category-vs" key="ValueSet-pco-survey-category-vs" name="Person-Centered Outcomes Survey Value Set"/>
 <artifact id="StructureDefinition/pco-prom-goal-profile" key="StructureDefinition-pco-prom-goal-profile" name="Person-Centered PROM Goal"/>
+<artifact id="List/pcoPrioritiesList" key="List-pcoPrioritiesList" name="Personal Priorities List"/>
 <artifact id="StructureDefinition/pco-personal-priorities-organizer" key="StructureDefinition-pco-personal-priorities-organizer" name="Personal Priorities Organizer"/>
 <artifact id="Observation/pcoGASScorePractitionerFollowupExample" key="Observation-pcoGASScorePractitionerFollowupExample" name="Practitioner GAS Follow-up Score"/>
 <artifact id="Practitioner/pcoPractitionerAnderson" key="Practitioner-pcoPractitionerAnderson" name="Primary Care Physician"/>

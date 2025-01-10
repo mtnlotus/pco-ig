@@ -1,5 +1,5 @@
 
-Profile: PCOGoalBarrier
+Profile: PCOGoalBarrierProfile
 Parent: USCoreSimpleObservationProfile
 Id: pco-goal-barrier
 Title: "Person-Centered Goal Barrier"
