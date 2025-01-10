@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-10T15:56:56+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-10T20:42:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -672,7 +672,7 @@
          fhir:link <http://hl7.org/fhir/us/pco/ServiceRequest/pcoPhysicalTherapyReferral> ;
          fhir:reference [ fhir:v "ServiceRequest/pcoPhysicalTherapyReferral" ]
        ] ;
-       fhir:name [ fhir:v "Care Plan: Clinical action step for PT" ] ;
+       fhir:name [ fhir:v "Care Plan: Clinical action step a patient" ] ;
        fhir:description [ fhir:v "Care Plan activity: Physical therapy to relieve pain related to walking" ] ;
        fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
@@ -702,6 +702,18 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/pco-care-tradeoff-choice-codes" ]
+       ] ;
+       fhir:name [ fhir:v "Care Trade-off Choice Codes" ] ;
+       fhir:description [ fhir:v "Code system to identify care trade-off choices." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
@@ -710,18 +722,6 @@
        ] ;
        fhir:name [ fhir:v "Care Trade-off Choices" ] ;
        fhir:description [ fhir:v "Options for a care trade-off." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes> ;
-         fhir:reference [ fhir:v "CodeSystem/pco-care-tradeoff-choice-codes" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-off Choices" ] ;
-       fhir:description [ fhir:v "Code system to identify care trade-off choices." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -855,14 +855,14 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [ fhir:v "ValueSet" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-goal-attainment-scaling" ]
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> ;
+         fhir:reference [ fhir:v "ValueSet/goal-attainment-scaling-score" ]
        ] ;
-       fhir:name [ fhir:v "Goal Attainment Scaling" ] ;
-       fhir:description [ fhir:v "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal." ] ;
+       fhir:name [ fhir:v "Goal Attainment Scaling (GAS) Score" ] ;
+       fhir:description [ fhir:v "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -873,20 +873,20 @@
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation> ;
          fhir:reference [ fhir:v "StructureDefinition/pco-gas-score-observation" ]
        ] ;
-       fhir:name [ fhir:v "Goal Attainment Scaling (GAS) score" ] ;
+       fhir:name [ fhir:v "Goal Attainment Scaling (GAS) score observation" ] ;
        fhir:description [ fhir:v "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> ;
-         fhir:reference [ fhir:v "ValueSet/goal-attainment-scaling-score" ]
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-goal-attainment-scaling" ]
        ] ;
-       fhir:name [ fhir:v "Goal Attainment Scaling (GAS) Score" ] ;
-       fhir:description [ fhir:v "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
+       fhir:name [ fhir:v "Goal Attainment Scaling Extension" ] ;
+       fhir:description [ fhir:v "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1095,7 +1095,7 @@
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation> ;
          fhir:reference [ fhir:v "StructureDefinition/pco-prom-score-observation" ]
        ] ;
-       fhir:name [ fhir:v "Patient-Reported Outcome Measure (PROM) score" ] ;
+       fhir:name [ fhir:v "Patient-Reported Outcome Measure (PROM) score observation" ] ;
        fhir:description [ fhir:v "This observation records how a patient's progress score is rated using a PROM assessment." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
@@ -1229,6 +1229,21 @@
        fhir:name [ fhir:v "Person-Centered PROM Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "List" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/List/pcoPrioritiesList> ;
+         fhir:reference [ fhir:v "List/pcoPrioritiesList" ]
+       ] ;
+       fhir:name [ fhir:v "Personal Priorities List" ] ;
+       fhir:description [ fhir:v "Patient selecton of the most important items for What Matters most, goal barrier, and the most bothersome Care Trade-off" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1624,9 +1639,9 @@
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-types-example-vs> a fhir:us .
 
@@ -1648,11 +1663,11 @@
 
 <http://hl7.org/fhir/us/pco/Questionnaire/69737-5> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling> a fhir:us .
+<http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> a fhir:us .
+<http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes> a fhir:us .
 
@@ -1707,6 +1722,8 @@
 <http://hl7.org/fhir/us/pco/ValueSet/pco-survey-category-vs> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/List/pcoPrioritiesList> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer> a fhir:us .
 

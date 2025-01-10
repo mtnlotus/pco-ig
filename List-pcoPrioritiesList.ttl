@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/pco/List/pcoPrioritiesList> a fhir:List ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoPrioritiesList"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: List pcoPrioritiesList</b></p><a name=\"pcoPrioritiesList\"> </a><a name=\"hcpcoPrioritiesList\"> </a><a name=\"pcoPrioritiesList-en-US\"> </a><table class=\"clstu\"><tr><td>Date: 2024-04-10 15:05:00+0000 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: Goals AndOr preferences in order of priority [Reported] </td></tr><tr><td>Subject: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a>Order: Sorted by Priority </td></tr></table><table class=\"grid\"><tr style=\"backgound-color: #eeeeee\"><td><b>Items</b></td></tr><tr><td><a href=\"Observation-pcoWhatMattersRelationshipsExample.html\">Observation Family, Friends &amp; Co-Workers</a></td></tr><tr><td><a href=\"Observation-pcoBarrierUrinaryIncontinence.html\">Observation Assessment of barriers to meet care plan goals performed</a></td></tr><tr><td><a href=\"Observation-pcoCareTradeOffBurdensomeWaterPill.html\">Observation Burdensome</a></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "current"] ; # 
+  fhir:mode [ fhir:v "working"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:81340-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "81340-2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-04-10T15:05:00Z"^^xsd:dateTime] ; # 
+  fhir:orderedBy [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/list-order"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "priority" ]
+     ] )
+  ] ; # 
+  fhir:entry ( [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExample> ;
+       fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExample" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoBarrierUrinaryIncontinence> ;
+       fhir:reference [ fhir:v "Observation/pcoBarrierUrinaryIncontinence" ]
+     ]
+  ] [
+     fhir:item [
+       fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoCareTradeOffBurdensomeWaterPill> ;
+       fhir:reference [ fhir:v "Observation/pcoCareTradeOffBurdensomeWaterPill" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoBarrierUrinaryIncontinence> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoCareTradeOffBurdensomeWaterPill> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

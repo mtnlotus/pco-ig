@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<List xmlns="http://hl7.org/fhir">
+  <id value="pcoPrioritiesList"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: List pcoPrioritiesList</b></p><a name="pcoPrioritiesList"> </a><a name="hcpcoPrioritiesList"> </a><a name="pcoPrioritiesList-en-US"> </a><table class="clstu"><tr><td>Date: 2024-04-10 15:05:00+0000 </td><td>Mode: Working List </td><td>Status: Current </td><td>Code: Goals AndOr preferences in order of priority [Reported] </td></tr><tr><td>Subject: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a>Order: Sorted by Priority </td></tr></table><table class="grid"><tr style="backgound-color: #eeeeee"><td><b>Items</b></td></tr><tr><td><a href="Observation-pcoWhatMattersRelationshipsExample.html">Observation Family, Friends &amp; Co-Workers</a></td></tr><tr><td><a href="Observation-pcoBarrierUrinaryIncontinence.html">Observation Assessment of barriers to meet care plan goals performed</a></td></tr><tr><td><a href="Observation-pcoCareTradeOffBurdensomeWaterPill.html">Observation Burdensome</a></td></tr></table></div>
+  </text>
+  <status value="current"/>
+  <mode value="working"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="81340-2"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <date value="2024-04-10T15:05:00Z"/>
+  <orderedBy>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/list-order"/>
+      <code value="priority"/>
+    </coding>
+  </orderedBy>
+  <entry>
+    <item>
+      <reference value="Observation/pcoWhatMattersRelationshipsExample"/>
+    </item>
+  </entry>
+  <entry>
+    <item>
+      <reference value="Observation/pcoBarrierUrinaryIncontinence"/>
+    </item>
+  </entry>
+  <entry>
+    <item>
+      <reference value="Observation/pcoCareTradeOffBurdensomeWaterPill"/>
+    </item>
+  </entry>
+</List>

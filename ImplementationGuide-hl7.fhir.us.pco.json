@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-01-10T15:56:56+00:00",
+  "date" : "2025-01-10T20:42:09+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -758,7 +758,7 @@
       "reference" : {
         "reference" : "ServiceRequest/pcoPhysicalTherapyReferral"
       },
-      "name" : "Care Plan: Clinical action step for PT",
+      "name" : "Care Plan: Clinical action step a patient",
       "description" : "Care Plan activity: Physical therapy to relieve pain related to walking",
       "exampleBoolean" : true
     },
@@ -789,6 +789,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/pco-care-tradeoff-choice-codes"
+      },
+      "name" : "Care Trade-off Choice Codes",
+      "description" : "Code system to identify care trade-off choices.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -796,18 +808,6 @@
       },
       "name" : "Care Trade-off Choices",
       "description" : "Options for a care trade-off.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/pco-care-tradeoff-choice-codes"
-      },
-      "name" : "Care Trade-off Choices",
-      "description" : "Code system to identify care trade-off choices.",
       "exampleBoolean" : false
     },
     {
@@ -930,13 +930,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-goal-attainment-scaling"
+        "reference" : "ValueSet/goal-attainment-scaling-score"
       },
-      "name" : "Goal Attainment Scaling",
-      "description" : "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.",
+      "name" : "Goal Attainment Scaling (GAS) Score",
+      "description" : "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
       "exampleBoolean" : false
     },
     {
@@ -947,20 +947,20 @@
       "reference" : {
         "reference" : "StructureDefinition/pco-gas-score-observation"
       },
-      "name" : "Goal Attainment Scaling (GAS) score",
+      "name" : "Goal Attainment Scaling (GAS) score observation",
       "description" : "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "ValueSet/goal-attainment-scaling-score"
+        "reference" : "StructureDefinition/pco-goal-attainment-scaling"
       },
-      "name" : "Goal Attainment Scaling (GAS) Score",
-      "description" : "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling.",
+      "name" : "Goal Attainment Scaling Extension",
+      "description" : "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.",
       "exampleBoolean" : false
     },
     {
@@ -1148,7 +1148,7 @@
       "reference" : {
         "reference" : "StructureDefinition/pco-prom-score-observation"
       },
-      "name" : "Patient-Reported Outcome Measure (PROM) score",
+      "name" : "Patient-Reported Outcome Measure (PROM) score observation",
       "description" : "This observation records how a patient's progress score is rated using a PROM assessment.",
       "exampleBoolean" : false
     },
@@ -1282,6 +1282,18 @@
       "name" : "Person-Centered PROM Goal",
       "description" : "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "List"
+      }],
+      "reference" : {
+        "reference" : "List/pcoPrioritiesList"
+      },
+      "name" : "Personal Priorities List",
+      "description" : "Patient selecton of the most important items for What Matters most, goal barrier, and the most bothersome Care Trade-off",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"
     },
     {
       "extension" : [{

@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2025-01-10T15:56:56+00:00"/>
+  <date value="2025-01-10T20:42:09+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -576,7 +576,7 @@
       <reference>
         <reference value="ServiceRequest/pcoPhysicalTherapyReferral"/>
       </reference>
-      <name value="Care Plan: Clinical action step for PT"/>
+      <name value="Care Plan: Clinical action step a patient"/>
       <description value="Care Plan activity: Physical therapy to relieve pain related to walking"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -604,6 +604,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/pco-care-tradeoff-choice-codes"/>
+      </reference>
+      <name value="Care Trade-off Choice Codes"/>
+      <description value="Code system to identify care trade-off choices."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -611,17 +622,6 @@
       </reference>
       <name value="Care Trade-off Choices"/>
       <description value="Options for a care trade-off."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/pco-care-tradeoff-choice-codes"/>
-      </reference>
-      <name value="Care Trade-off Choices"/>
-      <description value="Code system to identify care trade-off choices."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -733,13 +733,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/pco-goal-attainment-scaling"/>
+        <reference value="ValueSet/goal-attainment-scaling-score"/>
       </reference>
-      <name value="Goal Attainment Scaling"/>
-      <description value="Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal."/>
+      <name value="Goal Attainment Scaling (GAS) Score"/>
+      <description value="The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -749,19 +749,19 @@
       <reference>
         <reference value="StructureDefinition/pco-gas-score-observation"/>
       </reference>
-      <name value="Goal Attainment Scaling (GAS) score"/>
+      <name value="Goal Attainment Scaling (GAS) score observation"/>
       <description value="The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
-        <reference value="ValueSet/goal-attainment-scaling-score"/>
+        <reference value="StructureDefinition/pco-goal-attainment-scaling"/>
       </reference>
-      <name value="Goal Attainment Scaling (GAS) Score"/>
-      <description value="The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling."/>
+      <name value="Goal Attainment Scaling Extension"/>
+      <description value="Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -933,7 +933,7 @@
       <reference>
         <reference value="StructureDefinition/pco-prom-score-observation"/>
       </reference>
-      <name value="Patient-Reported Outcome Measure (PROM) score"/>
+      <name value="Patient-Reported Outcome Measure (PROM) score observation"/>
       <description value="This observation records how a patient's progress score is rated using a PROM assessment."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -1056,6 +1056,17 @@
       <name value="Person-Centered PROM Goal"/>
       <description value="Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="List"/>
+      </extension>
+      <reference>
+        <reference value="List/pcoPrioritiesList"/>
+      </reference>
+      <name value="Personal Priorities List"/>
+      <description value="Patient selecton of the most important items for What Matters most, goal barrier, and the most bothersome Care Trade-off"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

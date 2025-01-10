@@ -453,7 +453,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "pco-gas-goal-profile","Goal.extension:gas-scaling","Goal.extension","gas-scaling","","",0,5,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling]]} {[]}
-","Goal Attainment Scaling","Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Goal Attainment Scaling Extension","Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "pco-gas-goal-profile","Goal.modifierExtension","Goal.modifierExtension","","extensions
@@ -745,7 +745,7 @@ The alternate way is to use the value element for actual observations and use th
 ","Provides guide for interpretation of component result","Guidance on how to interpret the value by comparison to a normal or recommended range.","Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.","Knowing what values are considered ""normal"" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.","","","","","","","",,,,,"",,,,"Observation.component.referenceRange",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "pco-goal-attainment-scaling","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Goal Attainment Scaling","Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Goal Attainment Scaling Extension","Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "pco-goal-attainment-scaling","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}

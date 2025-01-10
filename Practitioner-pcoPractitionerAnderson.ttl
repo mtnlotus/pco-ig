@@ -16,12 +16,11 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner pcoPractitionerAnderson</b></p><a name=\"pcoPractitionerAnderson\"> </a><a name=\"hcpcoPractitionerAnderson\"> </a><a name=\"pcoPractitionerAnderson-en-US\"> </a><p><b>identifier</b>: <code>http://example.org</code>/ee8d4ac0-545c-4501-8d7e-646bfbda6de8 (use: official, )</p><p><b>name</b>: John Anderson, MD</p><p><b>gender</b>: Male</p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner pcoPractitionerAnderson</b></p><a name=\"pcoPractitionerAnderson\"> </a><a name=\"hcpcoPractitionerAnderson\"> </a><a name=\"pcoPractitionerAnderson-en-US\"> </a><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.2.0/NamingSystem-npi.html\" title=\"National Provider Identifier\">United States National Provider Identifier</a>/9941339100</p><p><b>name</b>: John Anderson, MD</p><p><b>gender</b>: Male</p></div>"
   ] ; # 
   fhir:identifier ( [
-     fhir:use [ fhir:v "official" ] ;
-     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "ee8d4ac0-545c-4501-8d7e-646bfbda6de8" ]
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-npi"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "9941339100" ]
   ] ) ; # 
   fhir:name ( [
      fhir:text [ fhir:v "John Anderson, MD" ] ;

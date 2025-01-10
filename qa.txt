@@ -1,10 +1,10 @@
 PCO : Validation Results
 =========================================
 
-err = 19, warn = 23, info = 18
+err = 18, warn = 21, info = 16
 IG Publisher Version: 1.8.7
-Generated Fri Jan 10 15:59:53 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = http://hl7.org/fhir/us/pco)
- Build Errors : 5 / 13 / 0
+Generated Fri Jan 10 20:45:04 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = http://hl7.org/fhir/us/pco)
+ Build Errors : 1 / 13 / 0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoAnxietyCarePlanExample : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample : 1 / 0 / 3
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-care-tradeoff-choice-codes : 0 / 0 / 2
@@ -17,7 +17,8 @@ Generated Fri Jan 10 15:59:53 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExample : 4 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions : 1 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication : 1 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/List-pcoPrioritiesList : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoBarrierDiabeticDiet : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoBarrierUrinaryIncontinence : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoCareTradeOffBurdensomeWaterPill : 0 / 0 / 1
@@ -32,8 +33,8 @@ Generated Fri Jan 10 15:59:53 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersStatementExample : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientJones : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Patient-pcoPatientLopez : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerAnderson : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerGonzalez : 0 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerAnderson : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Practitioner-pcoPractitionerGonzalez : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-pcoMindfulnessSupportProgram : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-pcoPhysicalTherapyReferral : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ServiceRequest-pcoWalkOutsideActionStep : 0 / 0 / 1
@@ -44,7 +45,7 @@ Generated Fri Jan 10 15:59:53 UTC 2025. FHIR version 4.0.1 for hl7.fhir.us.pco#0
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-barrier : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-goal-profile : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer : 0 / 1 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-goal-profile : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-score-observation : 0 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment : 0 / 0 / 2
@@ -84,10 +85,6 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Device/cqf-tooling.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
-ERROR: /home/runner/work/pco-ig/pco-ig/output/StructureDefinition-pco-what-matters-assessment.html#/html/body/div/div/div/div/div/div/ol/li/a at Line 358, column 22: The link 'ValueSet-pfe-category-vs.html' for "category value or values" cannot be resolved
-ERROR: /home/runner/work/pco-ig/pco-ig/output/StructureDefinition-pco-what-matters-assessment.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 368, column 79: The link 'ValueSet-pfe-category-vs.html' for "category value" cannot be resolved
-ERROR: /home/runner/work/pco-ig/pco-ig/output/StructureDefinition-pco-what-matters-assessment.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 368, column 248: The link '#domain-specific-value-set-bindings' for "below" cannot be resolved (valid targets: 563 targets)
-ERROR: /home/runner/work/pco-ig/pco-ig/output/StructureDefinition-pco-what-matters-assessment.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 368, column 315: The link 'domains.html' for "domains" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -111,8 +108,8 @@ ERROR: Goal/pcoGoalWalkDogExample: Goal.extension[4].extension[0].value.ofType(C
 == fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions.json ==
 ERROR: Goal/pcoGoalWalkDogExampleWithoutExtensions: Goal.target[0].measure.coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco.json ==
+== fsh-generated/resources/List-pcoPrioritiesList.json ==
 == fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication.json ==
-ERROR: MedicationRequest/pcoAntiInflammatoryMedication: MedicationRequest.medication.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Aleve Arthritis Pain 1 % Topical Gel' for http://www.nlm.nih.gov/research/umls/rxnorm#2550740. Valid display is 'diclofenac sodium 0.01 MG/MG Topical Gel [Aleve Arthritis Pain]' (for the language(s) 'en')
 == fsh-generated/resources/Observation-pcoBarrierDiabeticDiet.json ==
 == fsh-generated/resources/Observation-pcoBarrierUrinaryIncontinence.json ==
 == fsh-generated/resources/Observation-pcoCareTradeOffBurdensomeWaterPill.json ==
@@ -134,14 +131,11 @@ ERROR: Observation/pcoGASScorePractitionerFollowupExample: Observation.code.codi
 == fsh-generated/resources/Patient-pcoPatientJones.json ==
 == fsh-generated/resources/Patient-pcoPatientLopez.json ==
 == fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json ==
-INFORMATION: Practitioner/pcoPractitionerAnderson: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json ==
-INFORMATION: Practitioner/pcoPractitionerGonzalez: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/ServiceRequest-pcoMindfulnessSupportProgram.json ==
 == fsh-generated/resources/ServiceRequest-pcoPhysicalTherapyReferral.json ==
 == fsh-generated/resources/ServiceRequest-pcoWalkOutsideActionStep.json ==
 == fsh-generated/resources/StructureDefinition-pco-care-plan.json ==
-WARNING: StructureDefinition/pco-care-plan: StructureDefinition.snapshot.element[9].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 == fsh-generated/resources/StructureDefinition-pco-care-tradeoff.json ==
 == fsh-generated/resources/StructureDefinition-pco-gas-goal-profile.json ==
 ERROR: StructureDefinition/pco-gas-goal-profile: StructureDefinition.snapshot.element[24].pattern.ofType(CodeableConcept).coding[0].code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
@@ -152,7 +146,6 @@ INFORMATION: StructureDefinition/pco-gas-score-observation: StructureDefinition.
 == fsh-generated/resources/StructureDefinition-pco-goal-barrier.json ==
 == fsh-generated/resources/StructureDefinition-pco-goal-profile.json ==
 == fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-pco-prom-goal-profile.json ==
 == fsh-generated/resources/StructureDefinition-pco-prom-score-observation.json ==
 == fsh-generated/resources/StructureDefinition-pco-what-matters-assessment.json ==
