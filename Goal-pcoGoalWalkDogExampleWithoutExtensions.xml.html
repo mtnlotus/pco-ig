@@ -45,8 +45,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"12.54"}
-    h3,h4,h5,h6{--heading-prefix:"12.54"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.54"}
+    h3,h4,h5,h6{--heading-prefix:"13.54"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -249,6 +249,10 @@
   <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/R4/goal.html#Goal">Goal</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/goal.html#Goal.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;pcoGoalWalkDogExampleWithoutExtensions&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/goal.html#Goal.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile&quot;/&gt;
+  &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/R4/goal.html#Goal.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Goal pcoGoalWalkDogExampleWithoutExtensions&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;pcoGoalWalkDogExampleWithoutExtensions&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcpcoGoalWalkDogExampleWithoutExtensions&quot;&gt; &lt;/a&gt;&lt;a name=&quot;pcoGoalWalkDogExampleWithoutExtensions-en-US&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;lifecycleStatus&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;achievementStatus&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}&quot;&gt;In Progress&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts what-matters}&quot;&gt;What Matters&lt;/span&gt;, &lt;span title=&quot;Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains physical-function}&quot;&gt;Physical Function&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: &lt;span title=&quot;Codes:&quot;&gt;Walk dog outside once a week&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-pcoPatientJones.html&quot;&gt;Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;start&lt;/b&gt;: 2024-04-03&lt;/p&gt;&lt;h3&gt;Targets&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Measure&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Due[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://loinc.org 68489}&quot;&gt;Goal attainment scale&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2024-09-30&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;expressedBy&lt;/b&gt;: &lt;a href=&quot;Patient-pcoPatientJones.html&quot;&gt;Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;addresses&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;Observation-pcoWhatMattersBodyExample.html&quot;&gt;What Matters: Moving the Body&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;Observation-pcoWhatMattersRelationshipsExample.html&quot;&gt;What Matters: Family &amp;amp; Friends&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
@@ -327,7 +331,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 9, 2025 14:13+0000">2025-01-09</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 10, 2025 15:56+0000">2025-01-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

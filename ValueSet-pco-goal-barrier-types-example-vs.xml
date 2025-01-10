@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="pco-goal-barrier-types-example-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet pco-goal-barrier-types-example-vs</b></p><a name="pco-goal-barrier-types-example-vs"> </a><a name="hcpco-goal-barrier-types-example-vs"> </a><a name="pco-goal-barrier-types-example-vs-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/22253000">22253000</a></td><td>Pain</td></tr><tr><td><a href="http://snomed.info/id/48694002">48694002</a></td><td>Feeling anxious</td></tr><tr><td><a href="http://snomed.info/id/224960004">224960004</a></td><td>Feeling tired</td></tr><tr><td><a href="http://snomed.info/id/15188001">15188001</a></td><td>Difficulty hearing</td></tr><tr><td><a href="http://snomed.info/id/165232002">165232002</a></td><td>Urinary incontinence</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-goal-barrier-types-example-vs"/>
+  <version value="0.2.0"/>
+  <name value="GoalBarrierTypesExample"/>
+  <title value="Goal Barrier Types Example"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-01-10T15:56:56+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Example value set containing types of goal barriers."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology. The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="22253000"/>
+        <display value="Pain"/>
+      </concept>
+      <concept>
+        <code value="48694002"/>
+        <display value="Feeling anxious"/>
+      </concept>
+      <concept>
+        <code value="224960004"/>
+        <display value="Feeling tired"/>
+      </concept>
+      <concept>
+        <code value="15188001"/>
+        <display value="Difficulty hearing"/>
+      </concept>
+      <concept>
+        <code value="165232002"/>
+        <display value="Urinary incontinence"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

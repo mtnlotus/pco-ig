@@ -141,45 +141,12 @@
       "ValueSet-pco-goal-domains-example-vs.html" : "PCO Goal Domain Categories Example"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-bothersome-health-concern-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "PPCBothersomeHealthConcernConcepts",
-      "title" : "Bothersome Health Concern Concepts",
-      "description" : "Code system to identify bothersome symptoms or health concerns..",
-      "uses" : {
-      },
-      "ValueSet-ppc-bothersome-health-concern-examples-vs.html" : "Bothersome Health Concern Example ValueSet"
-    },
-    {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-care-tradeoff-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "PPCCareTradeOffConcepts",
-      "title" : "Care Trade-off Concepts",
-      "description" : "Code system to identify care trade-off concepts.",
-      "uses" : {
-      },
-      "ValueSet-ppc-care-tradeoff-examples-vs.html" : "Care Trade-off Examples"
-    },
-    {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/ppc-what-matters-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "PPCWhatMattersConcepts",
-      "title" : "PPC What Matters Concepts",
-      "description" : "Code system to identify What Matters concepts from Patient Priories Care (PPC)",
-      "uses" : {
-      },
-      "ValueSet-ppc-what-matters-example-vs.html" : "PPC What Matters Example ValueSet"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example",
       "version" : "0.2.0",
       "status" : "active",
       "name" : "VAWholeHealthExample",
       "title" : "VA Whole Health Concepts",
-      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",
+      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health approach and Circle of Health.",
       "uses" : {
       },
       "ValueSet-wellbeing-domains-example-vs.html" : "Well-Being Domains Example"
@@ -206,11 +173,11 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
-      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
+      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
-      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers"
+      "ValueSet-prom-target-measures.html" : "PROM Target Measures",
+      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
+      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -222,16 +189,18 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
-      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
       "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes",
-      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
       "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
-      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures"
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+      "ValueSet-pco-goal-barrier-types-example-vs.html" : "Goal Barrier Types Example",
+      "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "ValueSet-pco-care-tradeoff-types-example-vs.html" : "Care Trade-off Types Example",
+      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
@@ -327,9 +296,9 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1125"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes",
+      "ValueSet-pco-survey-category-vs.html" : "Person-Centered Outcomes Survey Value Set",
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-simple-observation-category.html" : "US Core Simple Observation Category",
-      "ValueSet-pco-survey-category-vs.html" : "Person-Centered Outcomes Survey Value Set"
+      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",

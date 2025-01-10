@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pcoCareTradeOffHelpfulExercising"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation pcoCareTradeOffHelpfulExercising</b></p><a name="pcoCareTradeOffHelpfulExercising"> </a><a name="hcpcoCareTradeOffHelpfulExercising"> </a><a name="pcoCareTradeOffHelpfulExercising-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes helpful-care}">Helpful</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>focus</b>: <a href="Goal-pcoGoalWalkDogExample.html">Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = What Matters,Physical Function; description = ; start[x] = 2024-04-03</a></p><p><b>effective</b>: 2024-04-10 15:05:00+0000</p><p><b>performer</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 256235009}">Exercise</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes"/>
+      <code value="helpful-care"/>
+      <display value="Helpful"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <focus>
+    <reference value="Goal/pcoGoalWalkDogExample"/>
+  </focus>
+  <effectiveDateTime value="2024-04-10T15:05:00Z"/>
+  <performer>
+    <reference value="Patient/pcoPatientJones"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="256235009"/>
+      <display value="Exercise"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

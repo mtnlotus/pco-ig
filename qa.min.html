@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 22, warn = 22, info = 17-->
+<!-- broken links = 4, errors = 19, warn = 23, info = 18-->
 <head>
   <title>PCO : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,9 +36,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for PCO</h1>
- <p>Generated Thu Jan 09 14:15:58 UTC 2025, FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = <a href="http://hl7.org/fhir/us/pco">http://hl7.org/fhir/us/pco</a> (<a href="http://hl7.org/fhir/us/pco/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Fri Jan 10 15:59:53 UTC 2025, FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = <a href="http://hl7.org/fhir/us/pco">http://hl7.org/fhir/us/pco</a> (<a href="http://hl7.org/fhir/us/pco/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.6</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.7</span></td></tr>
  <tr><td>Publication Code:</td><td>pco<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.us.pco, Canonical = http://hl7.org/fhir/us/pco</td></tr>
  <tr><td>Realm Check for US:</td><td><span style="color: maroon; font-weight: bold"></span><p>Snomed: The IG specifies the US edition of SNOMED CT <b>&#10003;</b> </p><p>Profiles: All OK</p></td></tr>
  <tr><td>Language Info:</td><td>This IG has no language information</td></tr>
@@ -178,7 +178,7 @@ hl7.fhir.uv.extensions.r4#5.1.0:     <a href="http://hl7.org/fhir/extensions/5.1
   </li>
   <li>
 hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/StructureDefinition-resource-sort.html">ResourceSortExt</a>
- (82 uses)
+ (66 uses)
   </li>
 </ul>
 </td></tr>
@@ -187,14 +187,14 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 22, warn = 22, info = 17, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 19, warn = 23, info = 18, broken links = 4</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>1</b></td><td><b>13</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>5</b></td><td><b>13</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CarePlan-pcoPhyicalFunctionCarePlanExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>1</b></td>
@@ -206,6 +206,9 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalWalkDogExampleWithoutExtensions"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_MedicationRequest-pcoAntiInflammatoryMedication"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScoreBaselineExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScoreBaselineExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
@@ -214,17 +217,14 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-ppcGASScoreBaselineExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcGASScoreBaselineExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-ppcGASScorePractitionerFollowupExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-ppcGASScorePractitionerFollowupExample</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>1</b></td>
-   </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-care-plan"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-care-plan</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-gas-goal-profile"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-gas-goal-profile</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-personal-priorities-organizer"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-gas-score-answers"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-gas-score-answers</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
@@ -245,46 +245,58 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalAttainmentLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalAttainmentLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalFollowUpMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalFollowUpMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalIdentificationMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalIdentificationMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PCOCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PCOCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/WhatMattersLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/WhatMattersLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/69737-5.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/69737-5.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Device/cqf-tooling.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Device/cqf-tooling.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b></b></td><td><b>error</b></td><td title=""><b>There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.</b></td>
+     <td><b></b></td><td><b>error</b></td><td><b>There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-pco-what-matters-assessment.html#l524">output&#8203;/StructureDefinition-pco-what-matters-assessment&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ol&#8203;/li&#8203;/a at Line 358, column 22</a></b></td><td><b>error</b></td><td><b>The link 'ValueSet-pfe-category-vs.html' for &quot;category value or values&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-pco-what-matters-assessment.html#l552">output&#8203;/StructureDefinition-pco-what-matters-assessment&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 368, column 79</a></b></td><td><b>error</b></td><td><b>The link 'ValueSet-pfe-category-vs.html' for &quot;category value&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-pco-what-matters-assessment.html#l552">output&#8203;/StructureDefinition-pco-what-matters-assessment&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 368, column 248</a></b></td><td><b>error</b></td><td><b>The link '#domain-specific-value-set-bindings' for &quot;below&quot; cannot be resolved (valid targets: 563 targets)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-pco-what-matters-assessment.html#l552">output&#8203;/StructureDefinition-pco-what-matters-assessment&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 368, column 315</a></b></td><td><b>error</b></td><td><b>The link 'domains.html' for &quot;domains&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>1</b></td><td><b>warning</b></td><td title=""><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b></td>
+     <td><b>1</b></td><td><b>warning</b></td><td><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>2</b></td><td><b>warning</b></td><td title=""><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b></td>
+     <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>3</b></td><td><b>warning</b></td><td title=""><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b></td>
+     <td><b>3</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>4</b></td><td><b>warning</b></td><td title=""><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b></td>
+     <td><b>4</b></td><td><b>warning</b></td><td><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
 </table>
 <hr/>
@@ -297,32 +309,32 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">CarePlan.goal[0] (l5/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl14" class="flip" onclick="flip('l14')">Show Reasoning</span><div id="l14" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>CarePlan.goal[0]: discriminator = true and resolve().conformsTo('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile')</li>, <li>CarePlan.goal[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile does not match for CarePlan because of the following profile issues: <ul><li>Goal.extension[3].extension[0].value.ofType(Coding).code: Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[3].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding).code: Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></li></ul></div></td>
+     <td><b><a href="">CarePlan.goal[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl18" class="flip" onclick="flip('l18')">Show Reasoning</span><div id="l18" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>CarePlan.goal[0]: discriminator = true and resolve().conformsTo('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile')</li>, <li>CarePlan.goal[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile does not match for CarePlan because of the following profile issues: <ul><li>Goal.extension[3].extension[0].value.ofType(Coding).code: Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[3].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding).code: Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CarePlan (l1/c2)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum_SLICE"><b>Slice 'CarePlan.goal:SupportedGoals': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0). Note that other slices are allowed in addition to this required slice</b></td>
+     <td><b>CarePlan (l1/c2)</b></td><td><b>error</b></td><td><b>Slice 'CarePlan.goal:SupportedGoals': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0). Note that other slices are allowed in addition to this required slice</b> <span style="font-size: 8px; font-color: silver">Validation_VAL_Profile_Minimum_SLICE</span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalWalkDogExample"> </a>
-<h2><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a> and <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a></li></ul>
+<h2><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(3)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a>, <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a> (per meta) and <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l98&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l70">log</a>)</td>
+     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l103&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l76">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l98&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server<ta>, see <a href="qa-tx.html#l71">log</a>)</td>
+     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l103&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server<ta>, see <a href="qa-tx.html#l77">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l115&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l72">log</a>)</td>
+     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l120&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l78">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l115&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server<ta>, see <a href="qa-tx.html#l73">log</a>)</td>
+     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l120&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server<ta>, see <a href="qa-tx.html#l79">log</a>)</td>
    </tr>
 </table>
 <hr/>
@@ -335,31 +347,25 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.target[0]&#8203;.measure&#8203;.coding[0]&#8203;.code (l26&#8203;/c8)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+     <td><b>Goal&#8203;.target[0]&#8203;.measure&#8203;.coding[0]&#8203;.code (l31&#8203;/c8)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScoreBaselineExample"> </a>
-<h2><a href="Observation-pcoGASScoreBaselineExample.html">fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_MedicationRequest-pcoAntiInflammatoryMedication"> </a>
+<h2><a href="MedicationRequest-pcoAntiInflammatoryMedication.html">fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>MedicationRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l29&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l38&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l38&#8203;/c4)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b></td>
+     <td><b>MedicationRequest&#8203;.medication&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.display (l31&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Aleve Arthritis Pain 1 % Topical Gel' for http://www.nlm.nih.gov/research/umls/rxnorm#2550740. Valid display is 'diclofenac sodium 0.01 MG/MG Topical Gel [Aleve Arthritis Pain]' (for the language(s) 'en')</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l80">log</a>)</td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientFollowupExample"> </a>
-<h2><a href="Observation-pcoGASScorePatientFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScoreBaselineExample"> </a>
+<h2><a href="Observation-pcoGASScoreBaselineExample.html">fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score</a></li></ul>
 </div>
  <table class="grid">
@@ -367,77 +373,61 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l39&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l34&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l43&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l43&#8203;/c4)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b> <span style="font-size: 8px; font-color: silver">Terminology_TX_NoValid_1_CC</span></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"> </a>
-<h2><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientFollowupExample"> </a>
+<h2><a href="Observation-pcoGASScorePatientFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Observation.category[0] (l5/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl25" class="flip" onclick="flip('l25')">Show Reasoning</span><div id="l25" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Observation.category[0]: discriminator = true and $this.coding.where((system = 'http://terminology.hl7.org/CodeSystem/observation-category') and (code = 'survey')).exists()</li></ul></div></td>
-   </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l48&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l44&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-ppcGASScoreBaselineExample"> </a>
-<h2><a href="Observation-ppcGASScoreBaselineExample.html">fsh-generated/resources/Observation-ppcGASScoreBaselineExample.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"> </a>
+<h2><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l29&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l38&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l38&#8203;/c4)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-ppcGASScorePractitionerFollowupExample"> </a>
-<h2><a href="Observation-ppcGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-ppcGASScorePractitionerFollowupExample.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Observation.category[0] (l5/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl30" class="flip" onclick="flip('l30')">Show Reasoning</span><div id="l30" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Observation.category[0]: discriminator = true and $this.coding.where((system = 'http://terminology.hl7.org/CodeSystem/observation-category') and (code = 'survey')).exists()</li></ul></div></td>
+     <td><b><a href="">Observation.category[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl30" class="flip" onclick="flip('l30')">Show Reasoning</span><div id="l30" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Observation.category[0]: discriminator = true and $this.coding.where((system = 'http://terminology.hl7.org/CodeSystem/observation-category') and (code = 'survey')).exists()</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l48&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l53&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-care-plan"> </a>
-<h2><a href="StructureDefinition-pco-care-plan.html">fsh-generated/resources/StructureDefinition-pco-care-plan.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-care-plan.html">fsh-generated/resources/StructureDefinition-pco-care-plan.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[9]&#8203;.comment (l1&#8203;/c35154)</b></td><td><b>warning</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_MARKDOWN_HTML"><b>The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour</b></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[9]&#8203;.comment (l1&#8203;/c35154)</b></td><td><b>warning</b></td><td><b>The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour</b> <span style="font-size: 8px; font-color: silver">TYPE_SPECIFIC_CHECKS_DT_MARKDOWN_HTML</span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-gas-goal-profile"> </a>
-<h2><a href="StructureDefinition-pco-gas-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-gas-goal-profile.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-gas-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-gas-goal-profile.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -451,6 +441,19 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-personal-priorities-organizer"> </a>
+<h2><a href="StructureDefinition-pco-personal-priorities-organizer.html">fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.org&#8203;/fhir&#8203;/us&#8203;/pco&#8203;/StructureDefinition&#8203;/pco-personal-priorities-organizer')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span style="font-size: 8px; font-color: silver"></span></td>
+   </tr>
+</table>
+<hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-gas-score-answers"> </a>
 <h2><a href="ValueSet-gas-score-answers.html">fsh-generated/resources/ValueSet-gas-score-answers.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
@@ -460,10 +463,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code 'gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b></td>
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code 'gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td title=""><b>The code 'gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b></td>
+     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td><b>The code 'gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
 </table>
 <hr/>
@@ -476,19 +479,19 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>warning</b></td><td title=""><b>The code '68489' is not valid in the system http://loinc.org (Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78')</b></td>
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>warning</b></td><td><b>The code '68489' is not valid in the system http://loinc.org (Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>information</b></td><td title="Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'"><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b></td>
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>information</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> <span style="font-size: 8px; font-color: silver">Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td title=""><b>The code '68490' is not valid in the system http://loinc.org (Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78')</b></td>
+     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td><b>The code '68490' is not valid in the system http://loinc.org (Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td title=""><b>The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')</b></td>
+     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td><b>The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td title=""><b>The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')</b></td>
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
    </tr>
 </table>
 <hr/>
@@ -501,31 +504,31 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl42" class="flip" onclick="flip('l42')">Show Reasoning</span><div id="l42" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl43" class="flip" onclick="flip('l43')">Show Reasoning</span><div id="l43" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c587)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l31">log</a>)</td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c587)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l36">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17557)</b></td><td><b>error</b></td><td title="Reference_REF_CantMatchChoice"><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b></td>
+     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17557)</b></td><td><b>error</b></td><td><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b> <span style="font-size: 8px; font-color: silver">Reference_REF_CantMatchChoice</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17557)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl45" class="flip" onclick="flip('l45')">Show Reasoning</span><div id="l45" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div></td>
+     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17557)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl46" class="flip" onclick="flip('l46')">Show Reasoning</span><div id="l46" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.group[0].id (l1/c21526)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b></td>
+     <td><b>Measure.group[0].id (l1/c21526)</b></td><td><b>warning</b></td><td><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b> <span style="font-size: 8px; font-color: silver">http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm#cqm-3</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17558)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl47" class="flip" onclick="flip('l47')">Show Reasoning</span><div id="l47" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17558)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl48" class="flip" onclick="flip('l48')">Show Reasoning</span><div id="l48" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl48" class="flip" onclick="flip('l48')">Show Reasoning</span><div id="l48" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl49" class="flip" onclick="flip('l49')">Show Reasoning</span><div id="l49" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17558)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl49" class="flip" onclick="flip('l49')">Show Reasoning</span><div id="l49" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17558)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl50" class="flip" onclick="flip('l50')">Show Reasoning</span><div id="l50" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl50" class="flip" onclick="flip('l50')">Show Reasoning</span><div id="l50" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl51" class="flip" onclick="flip('l51')">Show Reasoning</span><div id="l51" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
    </tr>
 </table>
 <hr/>
@@ -538,43 +541,43 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl51" class="flip" onclick="flip('l51')">Show Reasoning</span><div id="l51" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl52" class="flip" onclick="flip('l52')">Show Reasoning</span><div id="l52" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c593)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l31">log</a>)</td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c593)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l36">log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17933)</b></td><td><b>error</b></td><td title="Reference_REF_CantMatchChoice"><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b></td>
+     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17933)</b></td><td><b>error</b></td><td><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b> <span style="font-size: 8px; font-color: silver">Reference_REF_CantMatchChoice</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17933)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl54" class="flip" onclick="flip('l54')">Show Reasoning</span><div id="l54" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div></td>
+     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17933)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl55" class="flip" onclick="flip('l55')">Show Reasoning</span><div id="l55" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.group[0].id (l1/c21972)</b></td><td><b>warning</b></td><td title=""><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b></td>
+     <td><b>Measure.group[0].id (l1/c21972)</b></td><td><b>warning</b></td><td><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b> <span style="font-size: 8px; font-color: silver">http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm#cqm-3</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17934)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl56" class="flip" onclick="flip('l56')">Show Reasoning</span><div id="l56" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17934)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl57" class="flip" onclick="flip('l57')">Show Reasoning</span><div id="l57" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl57" class="flip" onclick="flip('l57')">Show Reasoning</span><div id="l57" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl58" class="flip" onclick="flip('l58')">Show Reasoning</span><div id="l58" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17934)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl58" class="flip" onclick="flip('l58')">Show Reasoning</span><div id="l58" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17934)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl59" class="flip" onclick="flip('l59')">Show Reasoning</span><div id="l59" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl59" class="flip" onclick="flip('l59')">Show Reasoning</span><div id="l59" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl60" class="flip" onclick="flip('l60')">Show Reasoning</span><div id="l60" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p><b>The value sets defined in this IG are still experimental and not ready to go into THO</b></p><ul>
- <li>%Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now% <span style="color: navy">(8 uses)<span></li>
+ <li>%Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now% <span style="color: navy">(5 uses)<span></li>
 </ul>
 <p><b>These warnings will be eliminated when US Core is updated.</b></p><ul>
  <li>SD_PATH_SLICING_DEPRECATED <span style="color: navy">(7 uses)<span></li>
 </ul>
 <p><b>This reference is generated by the HL7 publisher tooling</b></p><ul>
- <li>%CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1 <span style="color: navy">(3 uses)<span></li>
+ <li>%CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1 <span style="color: navy">(2 uses)<span></li>
 </ul>
 <p><b>{score} is a valid UCOM code</b></p><ul>
  <li>%UCUM Codes that contain human readable annotations like {score} can be misleading% <span style="color: navy">(1 uses)<span></li>
@@ -618,9 +621,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    <tr style="background-color: #ffeeee">
      <td><a href="Observation-pcoGASScoreBaselineExample.html">fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json</a></td><td><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b></td>
    </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Observation-ppcGASScoreBaselineExample.html">fsh-generated/resources/Observation-ppcGASScoreBaselineExample.json</a></td><td><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b></td>
-   </tr>
 </table>
 <hr/>
 <a name="This_element_does_not_match_any_known_slice_"> </a>
@@ -633,7 +633,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Observation-ppcGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-ppcGASScorePractitionerFollowupExample.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+     <td><a href="Practitioner-pcoPractitionerAnderson.html">fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Practitioner-pcoPractitionerGonzalez.html">fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>

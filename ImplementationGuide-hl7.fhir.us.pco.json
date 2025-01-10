@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-01-09T14:13:32+00:00",
+  "date" : "2025-01-10T15:56:56+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -705,30 +705,6 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/ppc-bothersome-health-concern-concepts"
-      },
-      "name" : "Bothersome Health Concern Concepts",
-      "description" : "Code system to identify bothersome symptoms or health concerns..",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/ppc-bothersome-health-concern-examples-vs"
-      },
-      "name" : "Bothersome Health Concern Example ValueSet",
-      "description" : "Example value set containing types of bothersome symptoms or health concerns.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CarePlan"
       }],
       "reference" : {
@@ -837,26 +813,38 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "CodeSystem/ppc-care-tradeoff-concepts"
+        "reference" : "ValueSet/pco-care-tradeoff-types-example-vs"
       },
-      "name" : "Care Trade-off Concepts",
-      "description" : "Code system to identify care trade-off concepts.",
+      "name" : "Care Trade-off Types Example",
+      "description" : "Example value set containing types of care trade-off.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "ValueSet/ppc-care-tradeoff-examples-vs"
+        "reference" : "Observation/pcoCareTradeOffHelpfulExercising"
       },
-      "name" : "Care Trade-off Examples",
-      "description" : "Example value set containing types of care trade-off.",
-      "exampleBoolean" : false
+      "name" : "Care Trade-Off: Exercising",
+      "description" : "Care Trade-off that is helpful",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoCareTradeOffBurdensomeWaterPill"
+      },
+      "name" : "Care Trade-Off: Water pill",
+      "description" : "Care Trade-off that is burdensome",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
     },
     {
       "extension" : [{
@@ -990,6 +978,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pco-goal-barrier-types-example-vs"
+      },
+      "name" : "Goal Barrier Types Example",
+      "description" : "Example value set containing types of goal barriers.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoBarrierDiabeticDiet"
+      },
+      "name" : "Goal Barrier: Diabetic diet (other)",
+      "description" : "Barrier with a free-text description",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoBarrierUrinaryIncontinence"
+      },
+      "name" : "Goal Barrier: Urinary incontinence",
+      "description" : "Barrier for goal achievement",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Goal"
       }],
       "reference" : {
@@ -1115,18 +1139,6 @@
       "name" : "Patient GAS Follow-up Score",
       "description" : "Follow-up GAS score observation recorded by a Patient showing goal progress.",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/ppcPatientMrK"
-      },
-      "name" : "Patient Mr. K",
-      "description" : "Patient for PPC examples",
-      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1300,210 +1312,6 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/ppcBarrierDiabeticDiet"
-      },
-      "name" : "PPC Bothersome Health Concern: Diabetic diet (other)",
-      "description" : "PPC Bothersome health problem, other with free-text description",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcBarrierFeelingTired"
-      },
-      "name" : "PPC Bothersome Health Concern: Low energy",
-      "description" : "PPC Bothersome symptom or health problem",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcBarrierUrinaryIncontinence"
-      },
-      "name" : "PPC Bothersome Symptom: urinary incontinence",
-      "description" : "PPC Bothersome symptom or health problem",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CarePlan"
-      }],
-      "reference" : {
-        "reference" : "CarePlan/ppcCookingDinnerCarePlanExample"
-      },
-      "name" : "PPC Care Plan for person-centered goal",
-      "description" : "Care Plan for a person-centered goal with action steps for achieving what matters most to that person.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ServiceRequest"
-      }],
-      "reference" : {
-        "reference" : "ServiceRequest/ppcPhysicalTherapyReferral"
-      },
-      "name" : "PPC Care Plan: Clinical action step for PT",
-      "description" : "Care Plan activity: Physical therapy to improve stamina and energy",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcCareTradeOffHelpfulArthritisCream"
-      },
-      "name" : "PPC Care Trade-Off: Arthritis cream",
-      "description" : "PPC Care Trade-off that is helpful",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcCareTradeOffHelpfulExercising"
-      },
-      "name" : "PPC Care Trade-Off: Exercising",
-      "description" : "PPC Care Trade-off that is helpful",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcCareTradeOffBurdensomeSpecialDiet"
-      },
-      "name" : "PPC Care Trade-Off: Following a special diet",
-      "description" : "PPC Care Trade-off that is burdensome",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcCareTradeOffBurdensomeWaterPill"
-      },
-      "name" : "PPC Care Trade-Off: Water pill",
-      "description" : "PPC Care Trade-off that is burdensome",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcGASScoreBaselineExample"
-      },
-      "name" : "PPC GAS Baseline Score",
-      "description" : "Baseline GAS score observation at start of goal.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Goal"
-      }],
-      "reference" : {
-        "reference" : "Goal/ppcGoalGrillForFamily"
-      },
-      "name" : "PPC Goal: Grill for family",
-      "description" : "Patient Priorities Care goal: Grill for my family every Sunday",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcGASScorePractitionerFollowupExample"
-      },
-      "name" : "PPC Practitioner GAS Follow-up Score",
-      "description" : "Follow-up GAS score observation recorded by a Practitioner showing goal progress.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "List"
-      }],
-      "reference" : {
-        "reference" : "List/ppcPrioritiesList"
-      },
-      "name" : "PPC Priorities List",
-      "description" : "PPC what matters most, and the most bothersome Care Trade-off",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/ppc-what-matters-concepts"
-      },
-      "name" : "PPC What Matters Concepts",
-      "description" : "Code system to identify What Matters concepts from Patient Priories Care (PPC)",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/ppc-what-matters-example-vs"
-      },
-      "name" : "PPC What Matters Example ValueSet",
-      "description" : "Example value set containing types of What Matters.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcWhatMattersActivitiesWithFamily"
-      },
-      "name" : "PPC What Matters: Activities with family",
-      "description" : "Patient Priorities Care what matters: Doing activities with family",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/ppcWhatMattersTakingCareOfFamily"
-      },
-      "name" : "PPC What Matters: Taking care of family",
-      "description" : "Patient Priorities Care what matters: Taking care of family and friends",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
         "reference" : "Observation/pcoGASScorePractitionerFollowupExample"
       },
       "name" : "Practitioner GAS Follow-up Score",
@@ -1543,7 +1351,7 @@
         "reference" : "CodeSystem/va-whole-health-example"
       },
       "name" : "VA Whole Health Concepts",
-      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health.",
+      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health approach and Circle of Health.",
       "exampleBoolean" : false
     },
     {
@@ -1764,6 +1572,15 @@
         }],
         "nameUrl" : "user_stories.html",
         "title" : "User Stories",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "wellbeing-domains.html"
+        }],
+        "nameUrl" : "wellbeing-domains.html",
+        "title" : "Wellbeing Domains",
         "generation" : "markdown"
       },
       {
