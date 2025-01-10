@@ -16,7 +16,7 @@ Description: "Assessment observation about a care trade-off that is helpful or b
 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept or string
-* valueCodeableConcept from PPCCareTradeOffExamples (example)
+* valueCodeableConcept from CareTradeOffTypesExample (example)
   * ^short = "Type of care selected from a list"
 * valueString
   * ^short = "Free-text description of a care trade-off"

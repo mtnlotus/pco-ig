@@ -46,7 +46,7 @@ Description: "Value set containing well-being concepts for observation category.
 CodeSystem: VAWholeHealthExample
 Id: va-whole-health-example
 Title: "VA Whole Health Concepts"
-Description: "Code system to identify \"What Matters\" concepts from the VA Whole Health appraoch and Circle of Health."
+Description: "Code system to identify \"What Matters\" concepts from the VA Whole Health approach and Circle of Health."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active

@@ -44,6 +44,60 @@ Usage: #example
 * description.text = "Walk dog outside once a week"
 * target.measure = $LNC#68489 "Goal attainment scale"
 
+Instance: pcoBarrierUrinaryIncontinence
+InstanceOf: PCOGoalBarrier
+Title: "Goal Barrier: Urinary incontinence"
+Description: "Barrier for goal achievement"
+Usage: #example
+* status = #final 
+* code = $SCT#452341000124107 "Assessment of barriers to meet care plan goals performed"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* valueCodeableConcept = $SCT#165232002 "Urinary incontinence"
+
+Instance: pcoBarrierDiabeticDiet
+InstanceOf: PCOGoalBarrier
+Title: "Goal Barrier: Diabetic diet (other)"
+Description: "Barrier with a free-text description"
+Usage: #example
+* status = #final 
+* code = $SCT#452341000124107 "Assessment of barriers to meet care plan goals performed"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* valueString = "Diabetic diet restrictions"
+
+Instance: pcoCareTradeOffBurdensomeWaterPill
+InstanceOf: PCOCareTradeOff
+Title: "Care Trade-Off: Water pill"
+Description: "Care Trade-off that is burdensome"
+Usage: #example
+* status = #final 
+* code = CareTradeOffChoiceCodes#burdensome-care "Burdensome"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* valueCodeableConcept = $SCT#422979000 "Medication regimen behavior finding"
+* valueCodeableConcept.text = "Water pill"
+* note.text = "Have to go to the bathroom too often"
+
+Instance: pcoCareTradeOffHelpfulExercising
+InstanceOf: PCOCareTradeOff
+Title: "Care Trade-Off: Exercising"
+Description: "Care Trade-off that is helpful"
+Usage: #example
+* status = #final 
+* code = CareTradeOffChoiceCodes#helpful-care "Helpful"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* valueCodeableConcept = $SCT#256235009 "Exercise"
+
 Instance: pcoGASScoreBaselineExample
 InstanceOf: PCOGoalAttainmentScoreObservation
 Title: "GAS Baseline Score"
