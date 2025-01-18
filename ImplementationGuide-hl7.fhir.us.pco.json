@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-01-10T20:42:09+00:00",
+  "date" : "2025-01-18T20:16:34+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -849,18 +849,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/pco-codes"
-      },
-      "name" : "Codes for PCO",
-      "description" : "Codes to identify content associated with this IG",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Device"
       }],
       "reference" : {
@@ -1220,7 +1208,7 @@
         "reference" : "StructureDefinition/pco-goal-profile"
       },
       "name" : "Person-Centered Goal",
-      "description" : "Person-centered goal focused on what matters most to an individual. A Person-centered goal SHALL include either a Person-Centered Outcome category, or address a What Matters assessment.",
+      "description" : "Person-centered goal focused on an individual's well-being. A Person-centered goal SHALL include either a Well-Being category, or address a Well-Being assessment.",
       "exampleBoolean" : false
     },
     {
@@ -1262,18 +1250,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pco-survey-category-vs"
-      },
-      "name" : "Person-Centered Outcomes Survey Value Set",
-      "description" : "Used to indicate that PCO observations of of type Survey, as defined by US-Core.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1292,7 +1268,7 @@
         "reference" : "List/pcoPrioritiesList"
       },
       "name" : "Personal Priorities List",
-      "description" : "Patient selecton of the most important items for What Matters most, goal barrier, and the most bothersome Care Trade-off",
+      "description" : "Patient selecton of the most important items for well-being, goal barrier, and the most bothersome care trade-off",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"
     },
     {
@@ -1350,8 +1326,8 @@
       "reference" : {
         "reference" : "ValueSet/prom-target-measures"
       },
-      "name" : "PROM Target Measures",
-      "description" : "Target measure codes used to track progress on patient-reported outcome measures (PROMs).",
+      "name" : "PROM Target Measure Scores",
+      "description" : "Target measure score codes used to track progress on patient-reported outcome measures (PROMs).",
       "exampleBoolean" : false
     },
     {
@@ -1369,13 +1345,25 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/pco-well-being-assessment"
+      },
+      "name" : "Well-Being Assessment",
+      "description" : "Assessment observation for one aspect of a person's well-being, with either free-text description or component values rating where a person is now and where they would like to be in the future.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/wellbeing-category-vs"
+        "reference" : "ValueSet/well-being-categories"
       },
       "name" : "Well-Being Categories",
-      "description" : "Value set containing well-being concepts for observation category.",
+      "description" : "Categories for well-being assessment or goals.",
       "exampleBoolean" : false
     },
     {
@@ -1387,7 +1375,7 @@
         "reference" : "CodeSystem/wellbeing-concepts"
       },
       "name" : "Well-Being Concepts",
-      "description" : "Code system to identify resource codes and category domains for \"What Matters\".",
+      "description" : "Code system to identify resource codes and category codes for Well-Being.",
       "exampleBoolean" : false
     },
     {
@@ -1396,7 +1384,7 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/wellbeing-domains-example-vs"
+        "reference" : "ValueSet/wellbeing-domains-example"
       },
       "name" : "Well-Being Domains Example",
       "description" : "Example value set containing well-being domains from the VA Circle of Health.",
@@ -1408,34 +1396,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-assessment"
+        "reference" : "StructureDefinition/pco-well-being-priority"
       },
-      "name" : "What Matters Assessment",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with either free-text description or component values rating where a person is now and where they would like to be in the future.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/what-matters-vs"
-      },
-      "name" : "What Matters Categories",
-      "description" : "Value set containing well-being concepts for What Matters Most.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-priority"
-      },
-      "name" : "What Matters Priority",
-      "description" : "Assessment observation for one aspect of What Matters Most to a person, with a boolean value indicating whether this is a current priority.",
+      "name" : "Well-Being Priority",
+      "description" : "Assessment observation for one aspect of a person's well-being, with a boolean value indicating whether this is a current priority.",
       "exampleBoolean" : false
     },
     {
@@ -1444,11 +1408,11 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/pcoWhatMattersPriorityExample"
+        "reference" : "Observation/pcoWellBeingPriorityExample"
       },
       "name" : "What Matters Priority: Moving the Body",
       "description" : "What Matters observation recorded by a Patient to indicate their priority for well-being.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-priority"
     },
     {
       "extension" : [{
@@ -1460,7 +1424,7 @@
       },
       "name" : "What Matters Statement: Family & Friends",
       "description" : "What Matters observation added by a Patient to record a free-text statement about a well-being focus area.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment"
     },
     {
       "extension" : [{
@@ -1472,7 +1436,7 @@
       },
       "name" : "What Matters: Family & Friends",
       "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment"
     },
     {
       "extension" : [{
@@ -1484,7 +1448,7 @@
       },
       "name" : "What Matters: Moving the Body",
       "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment"
     },
     {
       "extension" : [{

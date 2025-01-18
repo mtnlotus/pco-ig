@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"13.39"}
-    h3,h4,h5,h6{--heading-prefix:"13.39"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.36"}
+    h3,h4,h5,h6{--heading-prefix:"13.36"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -257,7 +257,7 @@
         
           Active
           
-            as of 2025-01-10
+            as of 2025-01-18
           
         
       </td>
@@ -273,7 +273,7 @@
   </table>
 
 <p>
-<p>Code system to identify resource codes and category domains for "What Matters".</p>
+<p>Code system to identify resource codes and category codes for Well-Being.</p>
 
 </p>
 
@@ -288,38 +288,50 @@
 
   
 <ul>
- <li><a href="ValueSet-wellbeing-category-vs.html">WellBeingCategoryValueSet</a></li>
- <li><a href="ValueSet-what-matters-vs.html">WhatMattersValueSet</a></li>
+ <li><a href="ValueSet-well-being-categories.html">WellBeingCategories</a></li>
 </ul>
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name="wellbeing-concepts"> </a><a name="hcwellbeing-concepts"> </a><a name="wellbeing-concepts-und"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p>
-<table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
-<tr><td style="white-space:nowrap">what-matters<a name="wellbeing-concepts-what-matters"> </a></td>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name="wellbeing-concepts"> </a><a name="hcwellbeing-concepts"> </a><a name="wellbeing-concepts-und"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes in a Is-A hierarchy:</p>
+<table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr>
+<tr><td>1</td>
+<td style="white-space:nowrap">what-matters<a name="wellbeing-concepts-what-matters"> </a></td>
 <td>What Matters</td>
-<td>What matters most for a person's well-being</td></tr>
-<tr><td style="white-space:nowrap">wellbeing-vision<a name="wellbeing-concepts-wellbeing-vision"> </a></td>
-<td>Well-Being Vision</td>
-<td>A peron's vision for well-being</td></tr>
-<tr><td style="white-space:nowrap">wellbeing-priority<a name="wellbeing-concepts-wellbeing-priority"> </a></td>
-<td>Well-Being Priority</td>
-<td>Priority for one area of well-being</td></tr>
-<tr><td style="white-space:nowrap">wellbeing-statement<a name="wellbeing-concepts-wellbeing-statement"> </a></td>
-<td>Well-Being Statement</td>
-<td>Statement about one area of well-being</td></tr>
-<tr><td style="white-space:nowrap">wellbeing-assessment<a name="wellbeing-concepts-wellbeing-assessment"> </a></td>
-<td>Well-Being Assessment</td>
-<td>Assessment rating about one area of well-being</td></tr>
-<tr><td style="white-space:nowrap">now-rating<a name="wellbeing-concepts-now-rating"> </a></td>
+<td>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</td></tr>
+<tr><td>1</td>
+<td style="white-space:nowrap">mentation<a name="wellbeing-concepts-mentation"> </a></td>
+<td>Mentation</td>
+<td>Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care.</td></tr>
+<tr><td>1</td>
+<td style="white-space:nowrap">mobility<a name="wellbeing-concepts-mobility"> </a></td>
+<td>Mobility</td>
+<td>Ensure that person can move safely every day in order to maintain function and do What Matters.</td></tr>
+<tr><td>1</td>
+<td style="white-space:nowrap">medication<a name="wellbeing-concepts-medication"> </a></td>
+<td>Medicaion</td>
+<td>If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care.</td></tr>
+<tr><td>1</td>
+<td style="white-space:nowrap">person-centered<a name="wellbeing-concepts-person-centered"> </a></td>
+<td>Person-Centered</td>
+<td>General category for person-centered goals and observations</td></tr>
+<tr><td>1</td>
+<td style="white-space:nowrap">assessment-type<a name="wellbeing-concepts-assessment-type"> </a></td>
+<td>Assessment Type</td>
+<td></td></tr>
+<tr><td>2</td>
+<td style="white-space:nowrap">&nbsp;&nbsp;now-rating<a name="wellbeing-concepts-now-rating"> </a></td>
 <td>Now Rating</td>
 <td>Where are you now?</td></tr>
-<tr><td style="white-space:nowrap">now-reasons<a name="wellbeing-concepts-now-reasons"> </a></td>
+<tr><td>2</td>
+<td style="white-space:nowrap">&nbsp;&nbsp;now-reasons<a name="wellbeing-concepts-now-reasons"> </a></td>
 <td>Now Reasons</td>
 <td>What are the reasons you chose this number?</td></tr>
-<tr><td style="white-space:nowrap">future-rating<a name="wellbeing-concepts-future-rating"> </a></td>
+<tr><td>2</td>
+<td style="white-space:nowrap">&nbsp;&nbsp;future-rating<a name="wellbeing-concepts-future-rating"> </a></td>
 <td>Future Rating</td>
 <td>Where would you like to be?</td></tr>
-<tr><td style="white-space:nowrap">future-changes<a name="wellbeing-concepts-future-changes"> </a></td>
+<tr><td>2</td>
+<td style="white-space:nowrap">&nbsp;&nbsp;future-changes<a name="wellbeing-concepts-future-changes"> </a></td>
 <td>Future Changes</td>
 <td>What changes could you make to help you get there?</td></tr></table></div>
 
@@ -348,7 +360,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 10, 2025 20:42+0000">2025-01-10</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jan 18, 2025 20:16+0000">2025-01-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

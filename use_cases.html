@@ -217,8 +217,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#goal-attainment-scaling-gas" id="markdown-toc-goal-attainment-scaling-gas">Goal Attainment Scaling (GAS)</a></li>
   <li><a href="#goals-using-patient-reported-outcome-measures-prom" id="markdown-toc-goals-using-patient-reported-outcome-measures-prom">Goals using Patient-Reported Outcome Measures (PROM)</a></li>
   <li><a href="#pco-digital-quality-measures-dqm" id="markdown-toc-pco-digital-quality-measures-dqm">PCO Digital Quality Measures (dQM)</a></li>
-  <li><a href="#pco-data-submission-bundles" id="markdown-toc-pco-data-submission-bundles">PCO Data Submission: Bundles</a></li>
-  <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
 </ul>
 
 </div>
@@ -320,42 +318,6 @@ who received follow-up on their PCO goal within two weeks to six months of when 
 <p>% of individuals 18 years of age or older with a complex care need 
 who achieved their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified.</p>
 
-<h3 id="pco-data-submission-bundles">PCO Data Submission: Bundles</h3>
-
-<p><em>Profile Specification and examples are still under development.</em></p>
-
-<p>This section is inspired by a similar data submission bundle in the draft <a href="https://build.fhir.org/ig/HL7/cgm/index.html#cgm-data-submission-bundles">Argo CCM Write</a> FHIR IG.</p>
-
-<p><strong>Technical Details</strong></p>
-
-<ul>
-  <li>PCO Submitters and Receivers SHALL support bundle-based submission, and MAY support individual resource submission</li>
-  <li>PCO Receivers MAY choose to store only a subset of resources in a submitted bundle
-    <ul>
-      <li>Each entry in the <code class="language-plaintext highlighter-rouge">batch-response</code> bundle SHALL provide a status code indicating whether the submission was accepted</li>
-      <li>Accepted entries SHOULD be available for read/search immediately after submission, but MAY be subjected to additional ingestion workflow steps</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="actors">Actors</h3>
-
-<h4 id="pco-data-submitter">PCO Data Submitter</h4>
-
-<p>The data submitter is a software system that collects and manages PCO data. It typically incorporates a patient-facing app, and may also incorporate a clinician-facing EHR-integrated app and a cloud service.</p>
-
-<p>This IG also refers to Data Submitters as "<strong>apps</strong>".</p>
-
-<h4 id="pco-data-receiver">PCO Data Receiver</h4>
-
-<p>The data receiver is a software system that receives and stores the PCO data submitted by the data submitter.</p>
-
-<p>This IG also refers to Data Receivers as "<strong>EHRs</strong>" or "<strong>PCO management platforms</strong>".</p>
-
-<h4 id="pco-measure-performer">PCO Measure Performer</h4>
-
-<p>The measure performer is a software system that receives the PCO data and computes digital quality measures for a population of individuals.</p>
-
 
 
 
@@ -375,7 +337,7 @@ who achieved their PCO goal within two weeks to six months of when the PCO goal 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 10, 2025 20:42+0000">2025-01-10</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jan 18, 2025 20:16+0000">2025-01-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

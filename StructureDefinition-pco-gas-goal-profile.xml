@@ -22,7 +22,7 @@
   <name value="PCOGoalAttainmentScaleProfile"/>
   <title value="Person-Centered GAS Goal"/>
   <status value="draft"/>
-  <date value="2025-01-10T20:42:09+00:00"/>
+  <date value="2025-01-18T20:16:34+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -600,10 +600,10 @@
         <map value="FiveWs.class"/>
       </mapping>
     </element>
-    <element id="Goal.category:what-matters">
+    <element id="Goal.category:well-being">
       <path value="Goal.category"/>
-      <sliceName value="what-matters"/>
-      <short value="What Matters observation category"/>
+      <sliceName value="well-being"/>
+      <short value="Well-Being resource category"/>
       <definition value="Indicates a category the goal falls within."/>
       <requirements value="Allows goals to be filtered and sorted."/>
       <min value="0"/>
@@ -629,7 +629,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"/>
+        <valueSet value="http://hl7.org/fhir/us/pco/ValueSet/well-being-categories"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -1277,9 +1277,9 @@
     <element id="Goal.addresses:SupportedAddresses">
       <path value="Goal.addresses"/>
       <sliceName value="SupportedAddresses"/>
-      <short value="What Matters Assessment or Priority"/>
+      <short value="Well-Being Assessment or Priority"/>
       <definition value="The identified conditions and other health record elements that are intended to be addressed by the goal."/>
-      <requirements value="When a goal addresses PCO what matters most observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment profiles. However, references to other instance types are also possible."/>
+      <requirements value="When a goal addresses well-being observations, Goal.addresses should reference instances that comply with the PCO Well-Being Assessment of Priority profiles. However, references to other instance types are also possible."/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -1289,8 +1289,8 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"/>
-        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
+        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment"/>
+        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-priority"/>
       </type>
       <constraint>
         <key value="ele-1"/>

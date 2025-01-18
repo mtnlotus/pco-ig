@@ -14,7 +14,7 @@
   "name" : "PCOGoalAttainmentScaleProfile",
   "title" : "Person-Centered GAS Goal",
   "status" : "draft",
-  "date" : "2025-01-10T20:42:09+00:00",
+  "date" : "2025-01-18T20:16:34+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -615,10 +615,10 @@
       }]
     },
     {
-      "id" : "Goal.category:what-matters",
+      "id" : "Goal.category:well-being",
       "path" : "Goal.category",
-      "sliceName" : "what-matters",
-      "short" : "What Matters observation category",
+      "sliceName" : "well-being",
+      "short" : "Well-Being resource category",
       "definition" : "Indicates a category the goal falls within.",
       "requirements" : "Allows goals to be filtered and sorted.",
       "min" : 0,
@@ -644,7 +644,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs"
+        "valueSet" : "http://hl7.org/fhir/us/pco/ValueSet/well-being-categories"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -1321,9 +1321,9 @@
       "id" : "Goal.addresses:SupportedAddresses",
       "path" : "Goal.addresses",
       "sliceName" : "SupportedAddresses",
-      "short" : "What Matters Assessment or Priority",
+      "short" : "Well-Being Assessment or Priority",
       "definition" : "The identified conditions and other health record elements that are intended to be addressed by the goal.",
-      "requirements" : "When a goal addresses PCO what matters most observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment profiles. However, references to other instance types are also possible.",
+      "requirements" : "When a goal addresses well-being observations, Goal.addresses should reference instances that comply with the PCO Well-Being Assessment of Priority profiles. However, references to other instance types are also possible.",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -1333,8 +1333,8 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
-        "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"]
+        "targetProfile" : ["http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment",
+        "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-priority"]
       }],
       "constraint" : [{
         "key" : "ele-1",

@@ -7,6 +7,10 @@
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
     span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    button { padding: 0px 8px; font-size: 12px; cursor: pointer; border-radius: 2px; border: 1px solid #ccc; background-color: #f0f0f0 }
+    button:hover { background-color: #e0e0e0; }
+    .code-value { display: inline; }
+    .code-hidden { display: none; }
     span.toggle  { font-size: 10px }
   </style>
   <script>
@@ -32,13 +36,19 @@
         span.innerHTML = 'Show Validation Information';
       }
     }
+    function toggleCodes() {
+      const codes = document.getElementsByClassName('code-value');
+      for (let code of codes) {
+        code.classList.toggle('code-hidden');
+      }
+    }
   </script>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for PCO</h1>
- <p>Generated Fri Jan 10 20:45:04 UTC 2025, FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = <a href="http://hl7.org/fhir/us/pco">http://hl7.org/fhir/us/pco</a> (<a href="http://hl7.org/fhir/us/pco/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Sat Jan 18 20:19:30 UTC 2025, FHIR version 4.0.1 for hl7.fhir.us.pco#0.2.0 (canonical = <a href="http://hl7.org/fhir/us/pco">http://hl7.org/fhir/us/pco</a> (<a href="http://hl7.org/fhir/us/pco/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.7</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.8</span></td></tr>
  <tr><td>Publication Code:</td><td>pco<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.us.pco, Canonical = http://hl7.org/fhir/us/pco</td></tr>
  <tr><td>Realm Check for US:</td><td><span style="color: maroon; font-weight: bold"></span><p>Snomed: The IG specifies the US edition of SNOMED CT <b>&#10003;</b> </p><p>Profiles: All OK</p></td></tr>
  <tr><td>Language Info:</td><td>This IG has no language information</td></tr>
@@ -139,7 +149,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (8 uses),     <a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a>
  (6 uses),     <a href="http://hl7.org/fhir/R4/imagingstudy.html">ImagingStudy</a>
  (12 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-category.html">ObservationCategoryCodes</a>
- (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-body-site.html">SNOMEDCTBodyStructures</a>
+ (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-body-site.html">SNOMEDCTBodyStructures</a>
  (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-methods.html">ObservationMethods</a>
  (6 uses),     <a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>
  (6 uses),     <a href="http://hl7.org/fhir/R4/devicemetric.html">DeviceMetric</a>
@@ -173,12 +183,12 @@ hl7.fhir.uv.cpg#1.0.0:     <a href="http://hl7.org/fhir/uv/cpg/STU1/Implementati
   </li>
   <li>
 hl7.fhir.uv.extensions.r4#5.1.0:     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-elementdefinition-type-must-support.html">TypeMustSupport</a>
- (130 uses),     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-cqf-cqlOptions.html">CQFCQLOptions</a>
+ (136 uses),     <a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-cqf-cqlOptions.html">CQFCQLOptions</a>
  (6 uses)
   </li>
   <li>
 hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/StructureDefinition-resource-sort.html">ResourceSortExt</a>
- (67 uses)
+ (64 uses)
   </li>
 </ul>
 </td></tr>
@@ -187,7 +197,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 18, warn = 21, info = 16, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 18, warn = 21, info = 16, broken links = 0.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -204,9 +214,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco-care-tradeoff-choice-codes"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-care-tradeoff-choice-codes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco-codes"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-codes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco-goal-domains"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/CodeSystem-pco-goal-domains</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -263,10 +270,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoPROMScoreAnxietyExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoPROMScoreAnxietyExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersBodyExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersBodyExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWellBeingPriorityExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWellBeingPriorityExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersPriorityExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersPriorityExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersBodyExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersBodyExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersRelationshipsExample"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -326,10 +333,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-prom-score-observation"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-prom-score-observation</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-what-matters-assessment"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-assessment</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-well-being-assessment"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-well-being-assessment</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-what-matters-priority"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-what-matters-priority</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-well-being-priority"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/StructureDefinition-pco-well-being-priority</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-gas-score-answers"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-gas-score-answers</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
@@ -353,19 +360,13 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-goal-domains-example-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-goal-domains-example-vs</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-survey-category-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-survey-category-vs</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-prom-target-measures"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-prom-target-measures</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-wellbeing-category-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-category-vs</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-well-being-categories"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-well-being-categories</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-wellbeing-domains-example-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-domains-example-vs</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-what-matters-vs"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-what-matters-vs</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-wellbeing-domains-example"><b>/home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-domains-example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_pco-ig_pco-ig_input_resources_device_cqf-tooling"><b>/home/runner/work/pco-ig/pco-ig/input/resources/device/cqf-tooling</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -407,46 +408,46 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/FHIRHelpers.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalAttainmentLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalAttainmentLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalFollowUpMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalFollowUpMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalIdentificationMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/GoalIdentificationMeasure.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PCOCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/PCOCommon.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/WhatMattersLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Library/WhatMattersLogic.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/69737-5.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/69737-5.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/44249-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Device/cqf-tooling.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>warning</b></td><td><b>Unable to find ImplementationGuide.definition.resource.description for the resource Device/cqf-tooling.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b></b></td><td><b>error</b></td><td><b>There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b></b></td><td><b>error</b></td><td><b>There is no jira specification file defined with the expected name of FHIR-us-pco in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>1</b></td><td><b>warning</b></td><td><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>1</b></td><td><b>warning</b></td><td><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>3</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>3</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>4</b></td><td><b>warning</b></td><td><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>4</b></td><td><b>warning</b></td><td><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
@@ -469,10 +470,10 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">CarePlan.goal[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl14" class="flip" onclick="flip('l14')">Show Reasoning</span><div id="l14" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>CarePlan.goal[0]: discriminator = true and resolve().conformsTo('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile')</li>, <li>CarePlan.goal[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile does not match for CarePlan because of the following profile issues: <ul><li>Goal.extension[3].extension[0].value.ofType(Coding).code: Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[3].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding).code: Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></li></ul></div></td>
+     <td><b><a href="">CarePlan.goal[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl14" class="flip" onclick="flip('l14')">Show Reasoning</span><div id="l14" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>CarePlan.goal[0]: discriminator = true and resolve().conformsTo('http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile')</li>, <li>CarePlan.goal[0]: Profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile does not match for CarePlan because of the following profile issues: <ul><li>Goal.extension[3].extension[0].value.ofType(Coding).code: Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[3].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding).code: Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li>, <li>Goal.extension[4].extension[0].value.ofType(Coding): The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CarePlan (l1/c2)</b></td><td><b>error</b></td><td><b>Slice 'CarePlan.goal:SupportedGoals': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0). Note that other slices are allowed in addition to this required slice</b> <span style="font-size: 8px; font-color: silver">Validation_VAL_Profile_Minimum_SLICE</span></td>
+     <td><b>CarePlan (l1/c2)</b></td><td><b>error</b></td><td><b>Slice 'CarePlan.goal:SupportedGoals': a matching slice is required, but not found (from http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0). Note that other slices are allowed in addition to this required slice</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Validation_VAL_Profile_Minimum_SLICE</span></td>
    </tr>
 </table>
 <hr/>
@@ -486,8 +487,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco-codes"> </a>
-<h2><a href="CodeSystem-pco-codes.html">fsh-generated/resources/CodeSystem-pco-codes.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco-goal-domains"> </a>
+<h2><a href="CodeSystem-pco-goal-domains.html">fsh-generated/resources/CodeSystem-pco-goal-domains.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
 </div>
  <table class="grid">
@@ -496,8 +497,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-pco-goal-domains"> </a>
-<h2><a href="CodeSystem-pco-goal-domains.html">fsh-generated/resources/CodeSystem-pco-goal-domains.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-va-whole-health-example"> </a>
+<h2><a href="CodeSystem-va-whole-health-example.html">fsh-generated/resources/CodeSystem-va-whole-health-example.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
 </div>
  <table class="grid">
@@ -506,8 +507,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-va-whole-health-example"> </a>
-<h2><a href="CodeSystem-va-whole-health-example.html">fsh-generated/resources/CodeSystem-va-whole-health-example.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-wellbeing-concepts"> </a>
+<h2><a href="CodeSystem-wellbeing-concepts.html">fsh-generated/resources/CodeSystem-wellbeing-concepts.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
 </div>
  <table class="grid">
@@ -516,19 +517,9 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_CodeSystem-wellbeing-concepts"> </a>
-<h2><a href="CodeSystem-wellbeing-concepts.html">fsh-generated/resources/CodeSystem-wellbeing-concepts.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalAnxietyExample"> </a>
-<h2><a href="Goal-pcoGoalAnxietyExample.html">fsh-generated/resources/Goal-pcoGoalAnxietyExample.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(3)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a>, <i>this.</i><a href="StructureDefinition-pco-prom-goal-profile.html">Person-Centered PROM Goal</a> (per meta) and <i>this.</i><a href="StructureDefinition-pco-prom-goal-profile.html">Person-Centered PROM Goal</a></li></ul>
+<h2><a href="Goal-pcoGoalAnxietyExample.html">fsh-generated/resources/Goal-pcoGoalAnxietyExample.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(3)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a>, <i>this.</i><a href="StructureDefinition-pco-prom-goal-profile.html">Person-Centered PROM Goal</a> (per meta) and <i>this.</i><a href="StructureDefinition-pco-prom-goal-profile.html">Person-Centered PROM Goal</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -537,8 +528,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalPainLevelExample"> </a>
-<h2><a href="Goal-pcoGoalPainLevelExample.html">fsh-generated/resources/Goal-pcoGoalPainLevelExample.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a></li></ul>
+<h2><a href="Goal-pcoGoalPainLevelExample.html">fsh-generated/resources/Goal-pcoGoalPainLevelExample.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -547,43 +538,43 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalWalkDogExample"> </a>
-<h2><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(3)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a>, <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a> (per meta) and <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a></li></ul>
+<h2><a href="Goal-pcoGoalWalkDogExample.html">fsh-generated/resources/Goal-pcoGoalWalkDogExample.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(3)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-profile.html">Person-Centered Goal</a>, <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a> (per meta) and <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l103&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l77">log</a>)</td>
+     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l103&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l77">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l103&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server<ta>, see <a href="qa-tx.html#l78">log</a>)</td>
+     <td><b>Goal&#8203;.extension[3]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l103&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-less-than-expected ('Less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l78">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_Confirm_4a</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l120&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l79">log</a>)</td>
+     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l120&#8203;/c12)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l79">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l120&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server<ta>, see <a href="qa-tx.html#l80">log</a>)</td>
+     <td><b>Goal&#8203;.extension[4]&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding) (l120&#8203;/c12)</b></td><td><b>error</b></td><td><b>The code provided (http://loinc.org#gas-much-less-than-expected) was not found in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a code from this value set is required: The provided code 'http://loinc.org#gas-much-less-than-expected ('Much less than expected')' was not found in the value set 'http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0'; Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l80">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_Confirm_4a</span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Goal-pcoGoalWalkDogExampleWithoutExtensions"> </a>
-<h2><a href="Goal-pcoGoalWalkDogExampleWithoutExtensions.html">fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a></li></ul>
+<h2><a href="Goal-pcoGoalWalkDogExampleWithoutExtensions.html">fsh-generated/resources/Goal-pcoGoalWalkDogExampleWithoutExtensions.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>Goal: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-goal-profile.html">Person-Centered GAS Goal</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Goal&#8203;.target[0]&#8203;.measure&#8203;.coding[0]&#8203;.code (l31&#8203;/c8)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+     <td><b>Goal&#8203;.target[0]&#8203;.measure&#8203;.coding[0]&#8203;.code (l31&#8203;/c8)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ImplementationGuide-hl7.fhir.us.pco"> </a>
-<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>ImplementationGuide/hl7.fhir.us.pco: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a></li></ul>
+<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-hl7.fhir.us.pco.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>ImplementationGuide/hl7.fhir.us.pco: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -592,8 +583,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_List-pcoPrioritiesList"> </a>
-<h2><a href="List-pcoPrioritiesList.html">fsh-generated/resources/List-pcoPrioritiesList.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>List: Validated against <i>this.</i><a href="StructureDefinition-pco-personal-priorities-organizer.html">Personal Priorities Organizer</a></li></ul>
+<h2><a href="List-pcoPrioritiesList.html">fsh-generated/resources/List-pcoPrioritiesList.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>List: Validated against <i>this.</i><a href="StructureDefinition-pco-personal-priorities-organizer.html">Personal Priorities Organizer</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -602,8 +593,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_MedicationRequest-pcoAntiInflammatoryMedication"> </a>
-<h2><a href="MedicationRequest-pcoAntiInflammatoryMedication.html">fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>MedicationRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></li></ul>
+<h2><a href="MedicationRequest-pcoAntiInflammatoryMedication.html">fsh-generated/resources/MedicationRequest-pcoAntiInflammatoryMedication.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>MedicationRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -612,8 +603,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoBarrierDiabeticDiet"> </a>
-<h2><a href="Observation-pcoBarrierDiabeticDiet.html">fsh-generated/resources/Observation-pcoBarrierDiabeticDiet.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-barrier.html">Person-Centered Goal Barrier</a></li></ul>
+<h2><a href="Observation-pcoBarrierDiabeticDiet.html">fsh-generated/resources/Observation-pcoBarrierDiabeticDiet.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-barrier.html">Person-Centered Goal Barrier</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -622,8 +613,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoBarrierUrinaryIncontinence"> </a>
-<h2><a href="Observation-pcoBarrierUrinaryIncontinence.html">fsh-generated/resources/Observation-pcoBarrierUrinaryIncontinence.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-barrier.html">Person-Centered Goal Barrier</a></li></ul>
+<h2><a href="Observation-pcoBarrierUrinaryIncontinence.html">fsh-generated/resources/Observation-pcoBarrierUrinaryIncontinence.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-goal-barrier.html">Person-Centered Goal Barrier</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -632,8 +623,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoCareTradeOffBurdensomeWaterPill"> </a>
-<h2><a href="Observation-pcoCareTradeOffBurdensomeWaterPill.html">fsh-generated/resources/Observation-pcoCareTradeOffBurdensomeWaterPill.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-care-tradeoff.html">Care Trade-off Assessment</a></li></ul>
+<h2><a href="Observation-pcoCareTradeOffBurdensomeWaterPill.html">fsh-generated/resources/Observation-pcoCareTradeOffBurdensomeWaterPill.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-care-tradeoff.html">Care Trade-off Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -642,8 +633,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoCareTradeOffHelpfulExercising"> </a>
-<h2><a href="Observation-pcoCareTradeOffHelpfulExercising.html">fsh-generated/resources/Observation-pcoCareTradeOffHelpfulExercising.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-care-tradeoff.html">Care Trade-off Assessment</a></li></ul>
+<h2><a href="Observation-pcoCareTradeOffHelpfulExercising.html">fsh-generated/resources/Observation-pcoCareTradeOffHelpfulExercising.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-care-tradeoff.html">Care Trade-off Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -652,7 +643,26 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScoreBaselineExample"> </a>
-<h2><a href="Observation-pcoGASScoreBaselineExample.html">fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+<h2><a href="Observation-pcoGASScoreBaselineExample.html">fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score observation</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l34&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l43&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l43&#8203;/c4)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_1_CC</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientFollowupExample"> </a>
+<h2><a href="Observation-pcoGASScorePatientFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score observation</a></li></ul>
 </div>
  <table class="grid">
@@ -660,48 +670,39 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l34&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l43&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.value&#8203;.ofType(CodeableConcept) (l43&#8203;/c4)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b> <span style="font-size: 8px; font-color: silver">Terminology_TX_NoValid_1_CC</span></td>
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l44&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePatientFollowupExample"> </a>
-<h2><a href="Observation-pcoGASScorePatientFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePatientFollowupExample.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"> </a>
+<h2><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score observation</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l44&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoGASScorePractitionerFollowupExample"> </a>
-<h2><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-gas-score-observation.html">Goal Attainment Scaling (GAS) score observation</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Observation.category[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl25" class="flip" onclick="flip('l25')">Show Reasoning</span><div id="l25" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Observation.category[0]: discriminator = true and $this.coding.where((system = 'http://terminology.hl7.org/CodeSystem/observation-category') and (code = 'survey')).exists()</li></ul></div></td>
+     <td><b><a href="">Observation.category[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl25" class="flip" onclick="flip('l25')">Show Reasoning</span><div id="l25" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Observation.category[0]: discriminator = true and $this.coding.where((system = 'http://terminology.hl7.org/CodeSystem/observation-category') and (code = 'survey')).exists()</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l53&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
+     <td><b>Observation&#8203;.code&#8203;.coding[0]&#8203;.code (l53&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoPROMScoreAnxietyExample"> </a>
-<h2><a href="Observation-pcoPROMScoreAnxietyExample.html">fsh-generated/resources/Observation-pcoPROMScoreAnxietyExample.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-prom-score-observation.html">Patient-Reported Outcome Measure (PROM) score observation</a></li></ul>
+<h2><a href="Observation-pcoPROMScoreAnxietyExample.html">fsh-generated/resources/Observation-pcoPROMScoreAnxietyExample.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-prom-score-observation.html">Patient-Reported Outcome Measure (PROM) score observation</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWellBeingPriorityExample"> </a>
+<h2><a href="Observation-pcoWellBeingPriorityExample.html">fsh-generated/resources/Observation-pcoWellBeingPriorityExample.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-well-being-priority.html">Well-Being Priority</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -711,17 +712,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersBodyExample"> </a>
 <h2><a href="Observation-pcoWhatMattersBodyExample.html">fsh-generated/resources/Observation-pcoWhatMattersBodyExample.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-what-matters-assessment.html">What Matters Assessment</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersPriorityExample"> </a>
-<h2><a href="Observation-pcoWhatMattersPriorityExample.html">fsh-generated/resources/Observation-pcoWhatMattersPriorityExample.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-what-matters-priority.html">What Matters Priority</a></li></ul>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-well-being-assessment.html">Well-Being Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -730,8 +721,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersRelationshipsExample"> </a>
-<h2><a href="Observation-pcoWhatMattersRelationshipsExample.html">fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-what-matters-assessment.html">What Matters Assessment</a></li></ul>
+<h2><a href="Observation-pcoWhatMattersRelationshipsExample.html">fsh-generated/resources/Observation-pcoWhatMattersRelationshipsExample.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-well-being-assessment.html">Well-Being Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -740,8 +731,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Observation-pcoWhatMattersStatementExample"> </a>
-<h2><a href="Observation-pcoWhatMattersStatementExample.html">fsh-generated/resources/Observation-pcoWhatMattersStatementExample.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-what-matters-assessment.html">What Matters Assessment</a></li></ul>
+<h2><a href="Observation-pcoWhatMattersStatementExample.html">fsh-generated/resources/Observation-pcoWhatMattersStatementExample.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-pco-well-being-assessment.html">Well-Being Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -750,8 +741,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Patient-pcoPatientJones"> </a>
-<h2><a href="Patient-pcoPatientJones.html">fsh-generated/resources/Patient-pcoPatientJones.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></li></ul>
+<h2><a href="Patient-pcoPatientJones.html">fsh-generated/resources/Patient-pcoPatientJones.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -760,8 +751,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Patient-pcoPatientLopez"> </a>
-<h2><a href="Patient-pcoPatientLopez.html">fsh-generated/resources/Patient-pcoPatientLopez.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></li></ul>
+<h2><a href="Patient-pcoPatientLopez.html">fsh-generated/resources/Patient-pcoPatientLopez.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html">US Core Patient Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -770,8 +761,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Practitioner-pcoPractitionerAnderson"> </a>
-<h2><a href="Practitioner-pcoPractitionerAnderson.html">fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>Practitioner: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></li></ul>
+<h2><a href="Practitioner-pcoPractitionerAnderson.html">fsh-generated/resources/Practitioner-pcoPractitionerAnderson.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>Practitioner: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -780,8 +771,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_Practitioner-pcoPractitionerGonzalez"> </a>
-<h2><a href="Practitioner-pcoPractitionerGonzalez.html">fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>Practitioner: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></li></ul>
+<h2><a href="Practitioner-pcoPractitionerGonzalez.html">fsh-generated/resources/Practitioner-pcoPractitionerGonzalez.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>Practitioner: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -790,8 +781,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ServiceRequest-pcoMindfulnessSupportProgram"> </a>
-<h2><a href="ServiceRequest-pcoMindfulnessSupportProgram.html">fsh-generated/resources/ServiceRequest-pcoMindfulnessSupportProgram.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a></li></ul>
+<h2><a href="ServiceRequest-pcoMindfulnessSupportProgram.html">fsh-generated/resources/ServiceRequest-pcoMindfulnessSupportProgram.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -800,8 +791,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ServiceRequest-pcoPhysicalTherapyReferral"> </a>
-<h2><a href="ServiceRequest-pcoPhysicalTherapyReferral.html">fsh-generated/resources/ServiceRequest-pcoPhysicalTherapyReferral.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a></li></ul>
+<h2><a href="ServiceRequest-pcoPhysicalTherapyReferral.html">fsh-generated/resources/ServiceRequest-pcoPhysicalTherapyReferral.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -810,8 +801,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ServiceRequest-pcoWalkOutsideActionStep"> </a>
-<h2><a href="ServiceRequest-pcoWalkOutsideActionStep.html">fsh-generated/resources/ServiceRequest-pcoWalkOutsideActionStep.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi33"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a></li></ul>
+<h2><a href="ServiceRequest-pcoWalkOutsideActionStep.html">fsh-generated/resources/ServiceRequest-pcoWalkOutsideActionStep.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>ServiceRequest: Validated against <a href="http://hl7.org/fhir/us/core/STU6.1">hl7.fhir.us.core</a>.<a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -820,8 +811,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-care-plan"> </a>
-<h2><a href="StructureDefinition-pco-care-plan.html">fsh-generated/resources/StructureDefinition-pco-care-plan.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-care-plan.html">fsh-generated/resources/StructureDefinition-pco-care-plan.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi33"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -830,8 +821,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-care-tradeoff"> </a>
-<h2><a href="StructureDefinition-pco-care-tradeoff.html">fsh-generated/resources/StructureDefinition-pco-care-tradeoff.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-care-tradeoff.html">fsh-generated/resources/StructureDefinition-pco-care-tradeoff.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -840,37 +831,37 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-gas-goal-profile"> </a>
-<h2><a href="StructureDefinition-pco-gas-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-gas-goal-profile.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(1)</span></h2>
+<h2><a href="StructureDefinition-pco-gas-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-gas-goal-profile.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[24]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c55485)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[4]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c67236)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-gas-score-observation"> </a>
+<h2><a href="StructureDefinition-pco-gas-score-observation.html">fsh-generated/resources/StructureDefinition-pco-gas-score-observation.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi36"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[24]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c55488)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[4]&#8203;.pattern&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.code (l1&#8203;/c67246)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>)</td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-gas-score-observation"> </a>
-<h2><a href="StructureDefinition-pco-gas-score-observation.html">fsh-generated/resources/StructureDefinition-pco-gas-score-observation.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[14]&#8203;.pattern&#8203;.ofType(CodeableConcept)</b></td><td><b>information</b></td><td><b>The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[14]&#8203;.pattern&#8203;.ofType(CodeableConcept)</b></td><td><b>information</b></td><td><b>The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal-attainment-scaling"> </a>
-<h2><a href="StructureDefinition-pco-goal-attainment-scaling.html">fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-goal-attainment-scaling.html">fsh-generated/resources/StructureDefinition-pco-goal-attainment-scaling.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -879,8 +870,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal-barrier"> </a>
-<h2><a href="StructureDefinition-pco-goal-barrier.html">fsh-generated/resources/StructureDefinition-pco-goal-barrier.json</a> <span id="svi39" class="toggle" onclick="toggle('vi39')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi39')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi39"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-goal-barrier.html">fsh-generated/resources/StructureDefinition-pco-goal-barrier.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -889,8 +880,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-goal-profile"> </a>
-<h2><a href="StructureDefinition-pco-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-goal-profile.json</a> <span id="svi40" class="toggle" onclick="toggle('vi40')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi40')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi40"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-goal-profile.json</a> <span id="svi39" class="toggle" onclick="toggle('vi39')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi39')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi39"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -899,8 +890,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-personal-priorities-organizer"> </a>
-<h2><a href="StructureDefinition-pco-personal-priorities-organizer.html">fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer.json</a> <span id="svi41" class="toggle" onclick="toggle('vi41')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi41')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi41"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-personal-priorities-organizer.html">fsh-generated/resources/StructureDefinition-pco-personal-priorities-organizer.json</a> <span id="svi40" class="toggle" onclick="toggle('vi40')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi40')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi40"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -909,8 +900,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-prom-goal-profile"> </a>
-<h2><a href="StructureDefinition-pco-prom-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-prom-goal-profile.json</a> <span id="svi42" class="toggle" onclick="toggle('vi42')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi42')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi42"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<h2><a href="StructureDefinition-pco-prom-goal-profile.html">fsh-generated/resources/StructureDefinition-pco-prom-goal-profile.json</a> <span id="svi41" class="toggle" onclick="toggle('vi41')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi41')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi41"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -919,7 +910,17 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-prom-score-observation"> </a>
-<h2><a href="StructureDefinition-pco-prom-score-observation.html">fsh-generated/resources/StructureDefinition-pco-prom-score-observation.json</a> <span id="svi43" class="toggle" onclick="toggle('vi43')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi43')">(1)</span></h2>
+<h2><a href="StructureDefinition-pco-prom-score-observation.html">fsh-generated/resources/StructureDefinition-pco-prom-score-observation.json</a> <span id="svi42" class="toggle" onclick="toggle('vi42')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi42')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi42"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-well-being-assessment"> </a>
+<h2><a href="StructureDefinition-pco-well-being-assessment.html">fsh-generated/resources/StructureDefinition-pco-well-being-assessment.json</a> <span id="svi43" class="toggle" onclick="toggle('vi43')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi43')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi43"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
@@ -928,8 +929,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-what-matters-assessment"> </a>
-<h2><a href="StructureDefinition-pco-what-matters-assessment.html">fsh-generated/resources/StructureDefinition-pco-what-matters-assessment.json</a> <span id="svi44" class="toggle" onclick="toggle('vi44')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi44')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-well-being-priority"> </a>
+<h2><a href="StructureDefinition-pco-well-being-priority.html">fsh-generated/resources/StructureDefinition-pco-well-being-priority.json</a> <span id="svi44" class="toggle" onclick="toggle('vi44')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi44')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi44"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
@@ -938,18 +939,24 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_StructureDefinition-pco-what-matters-priority"> </a>
-<h2><a href="StructureDefinition-pco-what-matters-priority.html">fsh-generated/resources/StructureDefinition-pco-what-matters-priority.json</a> <span id="svi45" class="toggle" onclick="toggle('vi45')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi45')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi45"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-gas-score-answers"> </a>
+<h2><a href="ValueSet-gas-score-answers.html">fsh-generated/resources/ValueSet-gas-score-answers.json</a> <span id="svi45" class="toggle" onclick="toggle('vi45')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi45')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi45"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
-     <td>&check;</td>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code 'gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td><b>The code 'gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-gas-score-answers"> </a>
-<h2><a href="ValueSet-gas-score-answers.html">fsh-generated/resources/ValueSet-gas-score-answers.json</a> <span id="svi46" class="toggle" onclick="toggle('vi46')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi46')">(1)</span></h2>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-goal-attainment-scaling-score"> </a>
+<h2><a href="ValueSet-goal-attainment-scaling-score.html">fsh-generated/resources/ValueSet-goal-attainment-scaling-score.json</a> <span id="svi46" class="toggle" onclick="toggle('vi46')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi46')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi46"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
@@ -957,41 +964,25 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code 'gas-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[4]</b></td><td><b>warning</b></td><td><b>The code 'gas-much-less-than-expected' is not valid in the system http://loinc.org (Unknown code 'gas-much-less-than-expected' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-goal-attainment-scaling-score"> </a>
-<h2><a href="ValueSet-goal-attainment-scaling-score.html">fsh-generated/resources/ValueSet-goal-attainment-scaling-score.json</a> <span id="svi47" class="toggle" onclick="toggle('vi47')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi47')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi47"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>warning</b></td><td><b>The code '68489' is not valid in the system http://loinc.org (Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>warning</b></td><td><b>The code '68489' is not valid in the system http://loinc.org (Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>information</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> <span style="font-size: 8px; font-color: silver">Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</span></td>
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.concept[0] (l1&#8203;/c2355)</b></td><td><b>information</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td><b>The code '68490' is not valid in the system http://loinc.org (Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>ValueSet.compose.include[0].concept[1]</b></td><td><b>warning</b></td><td><b>The code '68490' is not valid in the system http://loinc.org (Unknown code '68490' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td><b>The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>ValueSet.compose.include[0].concept[2]</b></td><td><b>warning</b></td><td><b>The code '68491' is not valid in the system http://loinc.org (Unknown code '68491' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span style="font-size: 8px; font-color: silver"></span></td>
+     <td><b>ValueSet.compose.include[0].concept[3]</b></td><td><b>warning</b></td><td><b>The code '68492' is not valid in the system http://loinc.org (Unknown code '68492' in the CodeSystem 'http://loinc.org' version '2.78')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-goal-barrier-codes"> </a>
-<h2><a href="ValueSet-goal-barrier-codes.html">fsh-generated/resources/ValueSet-goal-barrier-codes.json</a> <span id="svi48" class="toggle" onclick="toggle('vi48')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi48')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi48"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<h2><a href="ValueSet-goal-barrier-codes.html">fsh-generated/resources/ValueSet-goal-barrier-codes.json</a> <span id="svi47" class="toggle" onclick="toggle('vi47')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi47')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi47"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1000,8 +991,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-care-tradeoff-choices-vs"> </a>
-<h2><a href="ValueSet-pco-care-tradeoff-choices-vs.html">fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-vs.json</a> <span id="svi49" class="toggle" onclick="toggle('vi49')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi49')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi49"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<h2><a href="ValueSet-pco-care-tradeoff-choices-vs.html">fsh-generated/resources/ValueSet-pco-care-tradeoff-choices-vs.json</a> <span id="svi48" class="toggle" onclick="toggle('vi48')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi48')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi48"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1010,8 +1001,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-care-tradeoff-types-example-vs"> </a>
-<h2><a href="ValueSet-pco-care-tradeoff-types-example-vs.html">fsh-generated/resources/ValueSet-pco-care-tradeoff-types-example-vs.json</a> <span id="svi50" class="toggle" onclick="toggle('vi50')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi50')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi50"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<h2><a href="ValueSet-pco-care-tradeoff-types-example-vs.html">fsh-generated/resources/ValueSet-pco-care-tradeoff-types-example-vs.json</a> <span id="svi49" class="toggle" onclick="toggle('vi49')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi49')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi49"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1020,8 +1011,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-goal-barrier-types-example-vs"> </a>
-<h2><a href="ValueSet-pco-goal-barrier-types-example-vs.html">fsh-generated/resources/ValueSet-pco-goal-barrier-types-example-vs.json</a> <span id="svi51" class="toggle" onclick="toggle('vi51')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi51')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi51"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<h2><a href="ValueSet-pco-goal-barrier-types-example-vs.html">fsh-generated/resources/ValueSet-pco-goal-barrier-types-example-vs.json</a> <span id="svi50" class="toggle" onclick="toggle('vi50')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi50')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi50"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1030,18 +1021,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-goal-domains-example-vs"> </a>
-<h2><a href="ValueSet-pco-goal-domains-example-vs.html">fsh-generated/resources/ValueSet-pco-goal-domains-example-vs.json</a> <span id="svi52" class="toggle" onclick="toggle('vi52')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi52')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi52"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-pco-survey-category-vs"> </a>
-<h2><a href="ValueSet-pco-survey-category-vs.html">fsh-generated/resources/ValueSet-pco-survey-category-vs.json</a> <span id="svi53" class="toggle" onclick="toggle('vi53')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi53')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi53"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<h2><a href="ValueSet-pco-goal-domains-example-vs.html">fsh-generated/resources/ValueSet-pco-goal-domains-example-vs.json</a> <span id="svi51" class="toggle" onclick="toggle('vi51')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi51')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi51"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1050,7 +1031,27 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-prom-target-measures"> </a>
-<h2><a href="ValueSet-prom-target-measures.html">fsh-generated/resources/ValueSet-prom-target-measures.json</a> <span id="svi54" class="toggle" onclick="toggle('vi54')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi54')">(1)</span></h2>
+<h2><a href="ValueSet-prom-target-measures.html">fsh-generated/resources/ValueSet-prom-target-measures.json</a> <span id="svi52" class="toggle" onclick="toggle('vi52')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi52')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi52"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-well-being-categories"> </a>
+<h2><a href="ValueSet-well-being-categories.html">fsh-generated/resources/ValueSet-well-being-categories.json</a> <span id="svi53" class="toggle" onclick="toggle('vi53')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi53')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi53"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-wellbeing-domains-example"> </a>
+<h2><a href="ValueSet-wellbeing-domains-example.html">fsh-generated/resources/ValueSet-wellbeing-domains-example.json</a> <span id="svi54" class="toggle" onclick="toggle('vi54')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi54')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi54"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
@@ -1059,39 +1060,9 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-wellbeing-category-vs"> </a>
-<h2><a href="ValueSet-wellbeing-category-vs.html">fsh-generated/resources/ValueSet-wellbeing-category-vs.json</a> <span id="svi55" class="toggle" onclick="toggle('vi55')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi55')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi55"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-wellbeing-domains-example-vs"> </a>
-<h2><a href="ValueSet-wellbeing-domains-example-vs.html">fsh-generated/resources/ValueSet-wellbeing-domains-example-vs.json</a> <span id="svi56" class="toggle" onclick="toggle('vi56')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi56')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi56"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
-<a name="_home_runner_work_pco-ig_pco-ig_fsh-generated_resources_ValueSet-what-matters-vs"> </a>
-<h2><a href="ValueSet-what-matters-vs.html">fsh-generated/resources/ValueSet-what-matters-vs.json</a> <span id="svi57" class="toggle" onclick="toggle('vi57')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi57')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi57"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td>&check;</td>
-   </tr>
-</table>
-<hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_device_cqf-tooling"> </a>
-<h2><a href="Device-cqf-tooling.html">input/resources/device/cqf-tooling.json</a> <span id="svi58" class="toggle" onclick="toggle('vi58')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi58')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi58"><ul style="font-size: 7px"><li>Device: Validated against <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-device-softwaresystem-cqfm.html">CQFM Device</a></li></ul>
+<h2><a href="Device-cqf-tooling.html">input/resources/device/cqf-tooling.json</a> <span id="svi55" class="toggle" onclick="toggle('vi55')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi55')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi55"><ul style="font-size: 7px"><li>Device: Validated against <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-device-softwaresystem-cqfm.html">CQFM Device</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1100,8 +1071,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_FHIRHelpers"> </a>
-<h2><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a> <span id="svi59" class="toggle" onclick="toggle('vi59')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi59')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi59"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-FHIRHelpers.html">input/resources/library/FHIRHelpers.json</a> <span id="svi56" class="toggle" onclick="toggle('vi56')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi56')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi56"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1110,8 +1081,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalAttainmentLogic"> </a>
-<h2><a href="Library-GoalAttainmentLogic.html">input/resources/library/GoalAttainmentLogic.json</a> <span id="svi60" class="toggle" onclick="toggle('vi60')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi60')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi60"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-GoalAttainmentLogic.html">input/resources/library/GoalAttainmentLogic.json</a> <span id="svi57" class="toggle" onclick="toggle('vi57')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi57')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi57"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1120,8 +1091,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalFollowUpMeasure"> </a>
-<h2><a href="Library-GoalFollowUpMeasure.html">input/resources/library/GoalFollowUpMeasure.json</a> <span id="svi61" class="toggle" onclick="toggle('vi61')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi61')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi61"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-GoalFollowUpMeasure.html">input/resources/library/GoalFollowUpMeasure.json</a> <span id="svi58" class="toggle" onclick="toggle('vi58')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi58')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi58"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1130,8 +1101,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_GoalIdentificationMeasure"> </a>
-<h2><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a> <span id="svi62" class="toggle" onclick="toggle('vi62')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi62')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi62"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-GoalIdentificationMeasure.html">input/resources/library/GoalIdentificationMeasure.json</a> <span id="svi59" class="toggle" onclick="toggle('vi59')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi59')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi59"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1140,8 +1111,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_PCOCommon"> </a>
-<h2><a href="Library-PCOCommon.html">input/resources/library/PCOCommon.json</a> <span id="svi63" class="toggle" onclick="toggle('vi63')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi63')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi63"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-PCOCommon.html">input/resources/library/PCOCommon.json</a> <span id="svi60" class="toggle" onclick="toggle('vi60')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi60')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi60"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1150,8 +1121,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_library_WhatMattersLogic"> </a>
-<h2><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a> <span id="svi64" class="toggle" onclick="toggle('vi64')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi64')">(2)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi64"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
+<h2><a href="Library-WhatMattersLogic.html">input/resources/library/WhatMattersLogic.json</a> <span id="svi61" class="toggle" onclick="toggle('vi61')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi61')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi61"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a></li><li>Library.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/parameters.html">Parameters</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1160,82 +1131,82 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-GoalFollowUpMeasure"> </a>
-<h2><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a> <span id="svi65" class="toggle" onclick="toggle('vi65')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi65')">(8)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi65"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a> (per meta) and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a> and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-module-definition-library-cqfm.html">CQFM Module Definition Library</a></li></ul>
+<h2><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a> <span id="svi62" class="toggle" onclick="toggle('vi62')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi62')">(8)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi62"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a> (per meta) and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a> and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-module-definition-library-cqfm.html">CQFM Module Definition Library</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl37" class="flip" onclick="flip('l37')">Show Reasoning</span><div id="l37" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c17651)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl37" class="flip" onclick="flip('l37')">Show Reasoning</span><div id="l37" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c587)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l37">log</a>)</td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c587)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17557)</b></td><td><b>error</b></td><td><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b> <span style="font-size: 8px; font-color: silver">Reference_REF_CantMatchChoice</span></td>
+     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17560)</b></td><td><b>error</b></td><td><b>Unable to find a profile match for #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Reference_REF_CantMatchChoice</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17557)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl40" class="flip" onclick="flip('l40')">Show Reasoning</span><div id="l40" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div></td>
+     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17560)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl40" class="flip" onclick="flip('l40')">Show Reasoning</span><div id="l40" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.group[0].id (l1/c21526)</b></td><td><b>warning</b></td><td><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b> <span style="font-size: 8px; font-color: silver">http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm#cqm-3</span></td>
+     <td><b>Measure.group[0].id (l1/c21529)</b></td><td><b>warning</b></td><td><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm#cqm-3</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17558)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl42" class="flip" onclick="flip('l42')">Show Reasoning</span><div id="l42" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17561)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl42" class="flip" onclick="flip('l42')">Show Reasoning</span><div id="l42" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl43" class="flip" onclick="flip('l43')">Show Reasoning</span><div id="l43" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c17651)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl43" class="flip" onclick="flip('l43')">Show Reasoning</span><div id="l43" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17558)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl44" class="flip" onclick="flip('l44')">Show Reasoning</span><div id="l44" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17561)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl44" class="flip" onclick="flip('l44')">Show Reasoning</span><div id="l44" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c17648)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl45" class="flip" onclick="flip('l45')">Show Reasoning</span><div id="l45" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c17651)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl45" class="flip" onclick="flip('l45')">Show Reasoning</span><div id="l45" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_measure_Measure-GoalIdentificationMeasure"> </a>
-<h2><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a> <span id="svi66" class="toggle" onclick="toggle('vi66')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi66')">(8)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi66"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a> (per meta) and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a> and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-module-definition-library-cqfm.html">CQFM Module Definition Library</a></li></ul>
+<h2><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a> <span id="svi63" class="toggle" onclick="toggle('vi63')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi63')">(8)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi63"><ul style="font-size: 7px"><li>Measure: Validated against <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a> (per meta), <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-publishable-measure-cqfm.html">CQFM Publishable Measure</a>, <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-computable-measure-cqfm.html">CQFM Computable Measure</a> (per meta) and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-executable-measure-cqfm.html">CQFM Executable Measure</a></li><li>Measure.contained[0]: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a> and <a href="http://hl7.org/fhir/us/cqfmeasures/STU4">hl7.fhir.us.cqfmeasures</a>.<a href="http://hl7.org/fhir/us/cqfmeasures/STU4/StructureDefinition-module-definition-library-cqfm.html">CQFM Module Definition Library</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl46" class="flip" onclick="flip('l46')">Show Reasoning</span><div id="l46" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c18027)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl46" class="flip" onclick="flip('l46')">Show Reasoning</span><div id="l46" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c593)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4<ta>, see <a href="qa-tx.html#l37">log</a>)</td>
+     <td><b>Measure&#8203;.contained[0]&#8203;/*Library&#8203;/effective-data-requirements*&#8203;/&#8203;.extension[0]&#8203;.value&#8203;.ofType(Coding)&#8203;.code (l1&#8203;/c593)</b></td><td><b>error</b></td><td><b>Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</b> (from <a href="qa-txservers.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17933)</b></td><td><b>error</b></td><td><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b> <span style="font-size: 8px; font-color: silver">Reference_REF_CantMatchChoice</span></td>
+     <td><b>Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17936)</b></td><td><b>error</b></td><td><b>Unable to find a profile match for #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Reference_REF_CantMatchChoice</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17933)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl49" class="flip" onclick="flip('l49')">Show Reasoning</span><div id="l49" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div></td>
+     <td><b><a href="">Measure&#8203;.extension[1]&#8203;.value&#8203;.ofType(Reference) (l1&#8203;/c17936)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b> <span id="sl49" class="flip" onclick="flip('l49')">Show Reasoning</span><div id="l49" style="display: none"><p>&nbsp;</p><ul><li>Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Measure.group[0].id (l1/c21972)</b></td><td><b>warning</b></td><td><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b> <span style="font-size: 8px; font-color: silver">http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm#cqm-3</span></td>
+     <td><b>Measure.group[0].id (l1/c21975)</b></td><td><b>warning</b></td><td><b>Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: &quot;group-[group number]&quot;, where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm#cqm-3</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17934)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl51" class="flip" onclick="flip('l51')">Show Reasoning</span><div id="l51" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17937)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl51" class="flip" onclick="flip('l51')">Show Reasoning</span><div id="l51" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl52" class="flip" onclick="flip('l52')">Show Reasoning</span><div id="l52" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c18027)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl52" class="flip" onclick="flip('l52')">Show Reasoning</span><div id="l52" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-supplementalDataGuidance' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[1] (l1/c17934)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl53" class="flip" onclick="flip('l53')">Show Reasoning</span><div id="l53" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[1] (l1/c17937)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl53" class="flip" onclick="flip('l53')">Show Reasoning</span><div id="l53" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[1]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b><a href="">Measure.extension[2] (l1/c18024)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl54" class="flip" onclick="flip('l54')">Show Reasoning</span><div id="l54" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div></td>
+     <td><b><a href="">Measure.extension[2] (l1/c18027)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b> <span id="sl54" class="flip" onclick="flip('l54')">Show Reasoning</span><div id="l54" style="display: none"><p>&nbsp;</p>This element does not match any known slice Defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)<ul><li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-artifactComment' in url)</li>, <li>Measure.extension[2]: discriminator = true and ('http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' in url)</li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td>
    </tr>
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-GAD7"> </a>
-<h2><a href="Questionnaire-69737-5.html">input/resources/questionnaire/Questionnaire-GAD7.json</a> <span id="svi67" class="toggle" onclick="toggle('vi67')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi67')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi67"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
+<h2><a href="Questionnaire-69737-5.html">input/resources/questionnaire/Questionnaire-GAD7.json</a> <span id="svi64" class="toggle" onclick="toggle('vi64')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi64')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi64"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1244,8 +1215,8 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 </table>
 <hr/>
 <a name="_home_runner_work_pco-ig_pco-ig_input_resources_questionnaire_Questionnaire-PHQ9"> </a>
-<h2><a href="Questionnaire-44249-1.html">input/resources/questionnaire/Questionnaire-PHQ9.json</a> <span id="svi68" class="toggle" onclick="toggle('vi68')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi68')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi68"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
+<h2><a href="Questionnaire-44249-1.html">input/resources/questionnaire/Questionnaire-PHQ9.json</a> <span id="svi65" class="toggle" onclick="toggle('vi65')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi65')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi65"><ul style="font-size: 7px"><li>Questionnaire: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1255,7 +1226,7 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
 <a name="suppressed"> </a>
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p><b>The value sets defined in this IG are still experimental and not ready to go into THO</b></p><ul>
- <li>%Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now% <span style="color: navy">(5 uses)<span></li>
+ <li>%Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now% <span style="color: navy">(4 uses)<span></li>
 </ul>
 <p><b>These warnings will be eliminated when US Core is updated.</b></p><ul>
  <li>SD_PATH_SLICING_DEPRECATED <span style="color: navy">(7 uses)<span></li>
@@ -1267,19 +1238,66 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <li>%CarePlan.text.status: Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1 <span style="color: navy">(2 uses)<span></li>
 </ul>
 <p><b>{score} is a valid UCOM code</b></p><ul>
- <li>%UCUM Codes that contain human readable annotations like {score} can be misleading% <span style="color: navy">(1 uses)<span></li>
+ <li>%UCUM Codes that contain human readable annotations like {score} can be misleading% <span style="color: navy">(2 uses)<span></li>
 </ul>
 <a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="Details_for__matching_against_Profile_"> </a>
+<h2>Details_for__matching_against_Profile_</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="CarePlan-pcoPhyicalFunctionCarePlanExample.html">fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
+   </tr>
+</table>
 <hr/>
 <a name="Reference_REF_CantMatchChoice"> </a>
 <h2>Reference_REF_CantMatchChoice</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b></td>
+     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>Unable to find a profile match for #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>Unable to find a match for profile #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b></td>
+     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>Unable to find a profile match for #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm</b></td>
    </tr>
 </table>
 <hr/>
@@ -1299,47 +1317,6 @@ hl7.fhir.uv.tools.r4#0.3.0:     <a href="http://hl7.org/fhir/tools/0.3.0/Structu
  <table class="grid">
    <tr style="background-color: #ffeeee">
      <td><a href="Observation-pcoGASScoreBaselineExample.html">fsh-generated/resources/Observation-pcoGASScoreBaselineExample.json</a></td><td><b>None of the codings provided are in the value set 'Follow-Up GAS Score Answers' (http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers|0.2.0), and a coding from this value set is required) (codes = http://loinc.org#gas-less-than-expected)</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="This_element_does_not_match_any_known_slice_"> </a>
-<h2>This_element_does_not_match_any_known_slice_</h2>
- <table class="grid">
-   <tr style="background-color: #fffff2">
-     <td><a href="CarePlan-pcoPhyicalFunctionCarePlanExample.html">fsh-generated/resources/CarePlan-pcoPhyicalFunctionCarePlanExample.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Observation-pcoGASScorePractitionerFollowupExample.html">fsh-generated/resources/Observation-pcoGASScorePractitionerFollowupExample.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalFollowUpMeasure.html">input/resources/measure/Measure-GoalFollowUpMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/publishable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Measure-GoalIdentificationMeasure.html">input/resources/measure/Measure-GoalIdentificationMeasure.json</a></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/executable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td>
    </tr>
 </table>
 <hr/>
