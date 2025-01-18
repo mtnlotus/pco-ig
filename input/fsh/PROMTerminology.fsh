@@ -1,8 +1,8 @@
 
 ValueSet: PROMTargetMeasures
 Id: prom-target-measures
-Title: "PROM Target Measures"
-Description: "Target measure codes used to track progress on patient-reported outcome measures (PROMs)."
+Title: "PROM Target Measure Scores"
+Description: "Target measure score codes used to track progress on patient-reported outcome measures (PROMs)."
 * ^experimental = false
 * $LNC#70274-6 "Generalized anxiety disorder 7 item (GAD-7) total score"
 * $LNC#44261-6 "Patient health questionnaire 9 item (PHQ-9) total score"

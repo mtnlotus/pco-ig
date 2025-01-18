@@ -5,8 +5,8 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
-valueset "What Matters Categories": 'http://hl7.org/fhir/us/pco/ValueSet/what-matters-vs'
-valueset "Well-Being Domains": 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example-vs'
+valueset "What Matters Categories": 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories'
+valueset "Well-Being Domains": 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example'
 
 parameter "Measurement Period" Interval<DateTime>
     default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]

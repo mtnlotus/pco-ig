@@ -2,46 +2,42 @@
 CodeSystem: WellBeingConcepts
 Id: wellbeing-concepts
 Title: "Well-Being Concepts"
-Description: "Code system to identify resource codes and category domains for \"What Matters\"."
+Description: "Code system to identify resource codes and category codes for Well-Being."
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
+* ^hierarchyMeaning = #is-a
 * insert PCOCodeSystemPublisher
 * #what-matters "What Matters"
-    "What matters most for a person's well-being"
-* #wellbeing-vision "Well-Being Vision"
-    "A peron's vision for well-being"
-* #wellbeing-priority "Well-Being Priority"
-    "Priority for one area of well-being"
-* #wellbeing-statement "Well-Being Statement"
-    "Statement about one area of well-being"
-* #wellbeing-assessment "Well-Being Assessment"
-    "Assessment rating about one area of well-being"
-* #now-rating "Now Rating"
-    "Where are you now?"
-* #now-reasons "Now Reasons"
-    "What are the reasons you chose this number?"
-* #future-rating "Future Rating"
-    "Where would you like to be?"
-* #future-changes "Future Changes"
-    "What changes could you make to help you get there?"
+    "Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care."
+* #mentation "Mentation"
+    "Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care."
+* #mobility "Mobility"
+    "Ensure that person can move safely every day in order to maintain function and do What Matters."
+* #medication "Medicaion"
+    "If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care."
+* #person-centered "Person-Centered"
+    "General category for person-centered goals and observations"
+* #assessment-type "Assessment Type"
+  * #now-rating "Now Rating"
+      "Where are you now?"
+  * #now-reasons "Now Reasons"
+      "What are the reasons you chose this number?"
+  * #future-rating "Future Rating"
+      "Where would you like to be?"
+  * #future-changes "Future Changes"
+      "What changes could you make to help you get there?"
 
-ValueSet: WhatMattersValueSet
-Id: what-matters-vs
-Title: "What Matters Categories"
-Description: "Value set containing well-being concepts for What Matters Most."
+ValueSet: WellBeingCategories
+Id: well-being-categories
+Title: "Well-Being Categories"
+Description: "Categories for well-being assessment or goals."
 * ^experimental = false
 * WellBeingConcepts#what-matters "What Matters"
-
-ValueSet: WellBeingCategoryValueSet
-Id: wellbeing-category-vs
-Title: "Well-Being Categories"
-Description: "Value set containing well-being concepts for observation category."
-* ^experimental = false
-* WellBeingConcepts#wellbeing-vision "Well-Being Vision"
-* WellBeingConcepts#wellbeing-statement "Well-Being Statement"
-* WellBeingConcepts#wellbeing-assessment "Well-Being Assessment"
-* WellBeingConcepts#wellbeing-priority "Well-Being Priority"
+* WellBeingConcepts#mentation "Mentation"
+* WellBeingConcepts#mobility "Mobility"
+* WellBeingConcepts#medication "Medication"
+* WellBeingConcepts#person-centered "Person-Centered"
 
 CodeSystem: VAWholeHealthExample
 Id: va-whole-health-example
@@ -71,7 +67,7 @@ Description: "Code system to identify \"What Matters\" concepts from the VA Whol
     "Staying up to date on prevention and understanding your health concerns, care options, treatment plan, and their role in your health."
 
 ValueSet: WellBeingDomainValueSet
-Id: wellbeing-domains-example-vs
+Id: wellbeing-domains-example
 Title: "Well-Being Domains Example"
 Description: "Example value set containing well-being domains from the VA Circle of Health."
 * ^experimental = false

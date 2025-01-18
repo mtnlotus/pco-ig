@@ -17,4 +17,4 @@ Description: "Personal Priorities Organizer is used to represent a set of person
 * orderedBy 1..1 MS
 * orderedBy = http://terminology.hl7.org/CodeSystem/list-order#priority
 
-* entry.item only Reference(PCOGoalProfile or WhatMattersPriority or WhatMattersAssessment or PCOGoalBarrierProfile or PCOCareTradeOffProfile)
+* entry.item only Reference(PCOGoalProfile or WellBeingPriority or WellBeingAssessment or PCOGoalBarrierProfile or PCOCareTradeOffProfile)

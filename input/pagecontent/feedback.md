@@ -17,7 +17,7 @@ Questions for FHIR Connectathon participants on distinctions needed to select da
 
 2. **How do we distiguish a "PCO Goal" from other kinds of FHIR Goals?**
    * Require a category from [PCO Goal Domain Categories](ValueSet-pco-goal-domains-example-vs.html) value set defined by this IG?
-   * Or, check for Goal.addresses relationship with a [What Matters Assessment](StructureDefinition-pco-what-matters-assessment.html#profile) observation?
+   * Or, check for Goal.addresses relationship with a [What Matters Assessment](StructureDefinition-pco-well-being-assessment.html#profile) observation?
    * Or, check that a Goal satisfies either the GAS Goal or PROM Goal criteria listed below?
   
 3. **How do we distinguish a Goal with GAS from a Goal with PROM as measurement?**

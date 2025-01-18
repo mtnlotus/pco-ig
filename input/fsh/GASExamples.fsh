@@ -6,7 +6,7 @@ Description: "Person-centered goal with attainment scaling extensions"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
+* category[well-being] = WellBeingConcepts#what-matters "What Matters"
 * category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
@@ -33,7 +33,7 @@ Description: "Person-centered goal with GAS target measure and without GAS exten
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[what-matters] = WellBeingConcepts#what-matters "What Matters"
+* category[well-being] = WellBeingConcepts#what-matters "What Matters"
 * category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
@@ -109,7 +109,7 @@ Usage: #example
 Instance: pcoPrioritiesList
 InstanceOf: PCOPersonalPrioritiesOrganizer
 Title: "Personal Priorities List"
-Description: "Patient selecton of the most important items for What Matters most, goal barrier, and the most bothersome Care Trade-off"
+Description: "Patient selecton of the most important items for well-being, goal barrier, and the most bothersome care trade-off"
 Usage: #example
 * status = #current 
 * mode = #working

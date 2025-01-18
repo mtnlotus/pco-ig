@@ -26,4 +26,4 @@ Description: "This observation records how a patient's progress score is rated u
 * focus only Reference(PCOGoalOutcomeMeasureProfile)
   * ^short = "The goal whose progress was scored"
 * value[x] 1..1 MS
-* value[x] only Quantity or integer
+* value[x] only Quantity
