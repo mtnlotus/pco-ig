@@ -52,3 +52,45 @@ Usage: #example
 * startDate = "2024-02-15"
 * target.dueDate = "2024-06-30"
 * description.text = "Maintain pain level below 5 while walking"
+
+Instance: pcoReadinessAssessmentPanel
+InstanceOf: PCOReadinessAssessmentProfile
+Title: "Readiness Assessment panel"
+Description: "Readiness assessment with two members"
+Usage: #example
+* status = #final 
+* code = ReadinessConcepts#readiness-assessent "Readiness assessment"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* hasMember[0] = Reference(pcoReadinessAssessmentImportance)
+* hasMember[1] = Reference(pcoReadinessAssessmentConfidence)
+
+Instance: pcoReadinessAssessmentImportance
+InstanceOf: PCOReadinessAssessmentProfile
+Title: "Readiness Assessment: Importance"
+Description: "Readiness assessment of importance for a goal"
+Usage: #example
+* status = #final 
+* code = ReadinessConcepts#importance "Importance of change"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* valueQuantity.value = 8
+* derivedFrom = Reference(pcoReadinessAssessmentPanel)
+
+Instance: pcoReadinessAssessmentConfidence
+InstanceOf: PCOReadinessAssessmentProfile
+Title: "Readiness Assessment: Confidence"
+Description: "Readiness assessment of confidence to achieve a goal"
+Usage: #example
+* status = #final 
+* code = ReadinessConcepts#confidence "Confidence to change"
+* focus = Reference(pcoGoalWalkDogExample)
+* subject = Reference(pcoPatientJones)
+* performer = Reference(pcoPatientJones)
+* effectiveDateTime = "2024-04-10T15:05:00Z"
+* valueQuantity.value = 3
+* derivedFrom = Reference(pcoReadinessAssessmentPanel)

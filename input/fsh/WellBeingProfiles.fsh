@@ -13,7 +13,7 @@ Profile: WellBeingPriority
 Parent: USCoreObservationScreeningAssessmentProfile
 Id: pco-well-being-priority
 Title: "Well-Being Priority"
-Description: "Assessment observation for one aspect of a person's well-being, with a boolean value indicating whether this is a current priority."
+Description: "Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority."
 * insert WellBeingCategory
 * code from WellBeingDomainValueSet (preferred)
 * value[x] 1..1 MS
@@ -26,7 +26,7 @@ Profile: WellBeingAssessment
 Parent: USCoreObservationScreeningAssessmentProfile
 Id: pco-well-being-assessment
 Title: "Well-Being Assessment"
-Description: "Assessment observation for one aspect of a person's well-being, with either free-text description or component values rating where a person is now and where they would like to be in the future."
+Description: "Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future."
 * insert WellBeingCategory
 * code from WellBeingDomainValueSet (preferred)
 * value[x] 0..1 MS
