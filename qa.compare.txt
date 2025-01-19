@@ -1,7 +1,7 @@
 PCO : Validation Results
 =========================================
 
-err = 18, warn = 21, info = 16
+err = 24, warn = 21, info = 16
 $--
 Generated $--. FHIR version $-- for hl7.fhir.us.pco#$-- (canonical = http://hl7.org/fhir/us/pco)
  Build Errors : 1 / 13 / 0
@@ -63,17 +63,17 @@ Generated $--. FHIR version $-- for hl7.fhir.us.pco#$-- (canonical = http://hl7.
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-pco-goal-domains-example-vs : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-prom-target-measures : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-readiness-assessment-codes : 0 / 0 / 1
- /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-well-being-categories : 0 / 0 / 1
+ /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-categories : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/fsh-generated/resources/ValueSet-wellbeing-domains-example : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/device/cqf-tooling : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/library/FHIRHelpers : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalFollowUpMeasure : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 0 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalAttainmentLogic : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalFollowUpMeasure : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/GoalIdentificationMeasure : 1 / 0 / 2
  /home/runner/work/pco-ig/pco-ig/input/resources/library/PCOCommon : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 0 / 0 / 2
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 2 / 1 / 13
- /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 2 / 1 / 13
+ /home/runner/work/pco-ig/pco-ig/input/resources/library/WhatMattersLogic : 1 / 0 / 2
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalFollowUpMeasure : 3 / 1 / 13
+ /home/runner/work/pco-ig/pco-ig/input/resources/measure/Measure-GoalIdentificationMeasure : 3 / 1 / 13
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-GAD7 : 0 / 0 / 1
  /home/runner/work/pco-ig/pco-ig/input/resources/questionnaire/Questionnaire-PHQ9 : 0 / 0 / 1
 </table>
@@ -173,18 +173,23 @@ WARNING: ValueSet/goal-attainment-scaling-score: ValueSet.compose.include[0].con
 == fsh-generated/resources/ValueSet-pco-goal-domains-example-vs.json ==
 == fsh-generated/resources/ValueSet-prom-target-measures.json ==
 == fsh-generated/resources/ValueSet-readiness-assessment-codes.json ==
-== fsh-generated/resources/ValueSet-well-being-categories.json ==
+== fsh-generated/resources/ValueSet-wellbeing-categories.json ==
 == fsh-generated/resources/ValueSet-wellbeing-domains-example.json ==
 == input/resources/device/cqf-tooling.json ==
 == input/resources/library/FHIRHelpers.json ==
 == input/resources/library/GoalAttainmentLogic.json ==
+ERROR: Library/GoalAttainmentLogic: Library.relatedArtifact[9].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories' does not resolve
 == input/resources/library/GoalFollowUpMeasure.json ==
+ERROR: Library/GoalFollowUpMeasure: Library.relatedArtifact[6].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories' does not resolve
 == input/resources/library/GoalIdentificationMeasure.json ==
+ERROR: Library/GoalIdentificationMeasure: Library.relatedArtifact[6].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories' does not resolve
 == input/resources/library/PCOCommon.json ==
 == input/resources/library/WhatMattersLogic.json ==
+ERROR: Library/WhatMattersLogic: Library.relatedArtifact[3].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories' does not resolve
 == input/resources/measure/Measure-GoalFollowUpMeasure.json ==
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
+ERROR: Measure/GoalFollowUpMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories' does not resolve
 ERROR: Measure/GoalFollowUpMeasure: Measure.extension[1].value.ofType(Reference): Unable to find a profile match for #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm
 INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[1].value.ofType(Reference): Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0
 WARNING: Measure/GoalFollowUpMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)
@@ -195,6 +200,7 @@ INFORMATION: Measure/GoalFollowUpMeasure: Measure.extension[2]: This element doe
 == input/resources/measure/Measure-GoalIdentificationMeasure.json ==
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.extension[0].value.ofType(Coding).code: Unknown code '68489' in the CodeSystem 'http://loinc.org' version '2.78'
+ERROR: Measure/GoalIdentificationMeasure: Measure.contained[0]/*Library/effective-data-requirements*/.relatedArtifact[5].resource: Canonical URL 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories' does not resolve
 ERROR: Measure/GoalIdentificationMeasure: Measure.extension[1].value.ofType(Reference): Unable to find a profile match for #effective-data-requirements among choices: http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm
 INFORMATION: Measure/GoalIdentificationMeasure: Measure.extension[1].value.ofType(Reference): Details for #effective-data-requirements matching against profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/module-definition-library-cqfm|4.0.0
 WARNING: Measure/GoalIdentificationMeasure: Measure.group[0].id: Constraint failed: cqm-3: 'Group identifiers SHOULD use the convention: "group-[group number]", where [group number] corresponds with the group naming convention for the criteria within the group' (defined in http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/measure-cqfm)

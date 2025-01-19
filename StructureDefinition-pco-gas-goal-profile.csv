@@ -48,7 +48,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","",,"open","Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "Goal.category:well-being","Goal.category","well-being","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}
-","Well-Being resource category","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"required","","http://hl7.org/fhir/us/pco/ValueSet/well-being-categories","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Well-Being resource category","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"required","","http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
 "Goal.category:goal-domain","Goal.category","goal-domain","","",0,*,"Y","","Y","CodeableConcept {[]} {[]}
 ","Person-Centered Outcome goal domain category","Indicates a category the goal falls within.","","Allows goals to be filtered and sorted.","","","","","","","",,"required","Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)","http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs","",,,,"Goal.category",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
