@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-18T20:16:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-19T14:30:29+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -1285,6 +1285,87 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment> ;
+         fhir:reference [ fhir:v "StructureDefinition/pco-readiness-assessment" ]
+       ] ;
+       fhir:name [ fhir:v "Readiness Assessment" ] ;
+       fhir:description [ fhir:v "Assessment of a person's readiness for change including importance and confidence for making that change." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/readiness-assessment-codes> ;
+         fhir:reference [ fhir:v "ValueSet/readiness-assessment-codes" ]
+       ] ;
+       fhir:name [ fhir:v "Readiness Assessment Codes" ] ;
+       fhir:description [ fhir:v "Terminology codes for readiness assessment types." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts> ;
+         fhir:reference [ fhir:v "CodeSystem/readiness-assessment-concepts" ]
+       ] ;
+       fhir:name [ fhir:v "Readiness Assessment Concepts" ] ;
+       fhir:description [ fhir:v "Code system to types of readiness for change." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentPanel> ;
+         fhir:reference [ fhir:v "Observation/pcoReadinessAssessmentPanel" ]
+       ] ;
+       fhir:name [ fhir:v "Readiness Assessment panel" ] ;
+       fhir:description [ fhir:v "Readiness assessment with two members" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentConfidence> ;
+         fhir:reference [ fhir:v "Observation/pcoReadinessAssessmentConfidence" ]
+       ] ;
+       fhir:name [ fhir:v "Readiness Assessment: Confidence" ] ;
+       fhir:description [ fhir:v "Readiness assessment of confidence to achieve a goal" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentImportance> ;
+         fhir:reference [ fhir:v "Observation/pcoReadinessAssessmentImportance" ]
+       ] ;
+       fhir:name [ fhir:v "Readiness Assessment: Importance" ] ;
+       fhir:description [ fhir:v "Readiness assessment of importance for a goal" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -1304,7 +1385,7 @@
          fhir:reference [ fhir:v "StructureDefinition/pco-well-being-assessment" ]
        ] ;
        fhir:name [ fhir:v "Well-Being Assessment" ] ;
-       fhir:description [ fhir:v "Assessment observation for one aspect of a person's well-being, with either free-text description or component values rating where a person is now and where they would like to be in the future." ] ;
+       fhir:description [ fhir:v "Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1352,7 +1433,7 @@
          fhir:reference [ fhir:v "StructureDefinition/pco-well-being-priority" ]
        ] ;
        fhir:name [ fhir:v "Well-Being Priority" ] ;
-       fhir:description [ fhir:v "Assessment observation for one aspect of a person's well-being, with a boolean value indicating whether this is a current priority." ] ;
+       fhir:description [ fhir:v "Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1694,6 +1775,18 @@
 <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ValueSet/readiness-assessment-codes> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentPanel> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentConfidence> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentImportance> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example> a fhir:us .
 

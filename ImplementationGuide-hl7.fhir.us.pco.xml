@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2025-01-18T20:16:34+00:00"/>
+  <date value="2025-01-19T14:30:29+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -1102,6 +1102,72 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/pco-readiness-assessment"/>
+      </reference>
+      <name value="Readiness Assessment"/>
+      <description value="Assessment of a person's readiness for change including importance and confidence for making that change."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/readiness-assessment-codes"/>
+      </reference>
+      <name value="Readiness Assessment Codes"/>
+      <description value="Terminology codes for readiness assessment types."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/readiness-assessment-concepts"/>
+      </reference>
+      <name value="Readiness Assessment Concepts"/>
+      <description value="Code system to types of readiness for change."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoReadinessAssessmentPanel"/>
+      </reference>
+      <name value="Readiness Assessment panel"/>
+      <description value="Readiness assessment with two members"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoReadinessAssessmentConfidence"/>
+      </reference>
+      <name value="Readiness Assessment: Confidence"/>
+      <description value="Readiness assessment of confidence to achieve a goal"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pcoReadinessAssessmentImportance"/>
+      </reference>
+      <name value="Readiness Assessment: Importance"/>
+      <description value="Readiness assessment of importance for a goal"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -1119,7 +1185,7 @@
         <reference value="StructureDefinition/pco-well-being-assessment"/>
       </reference>
       <name value="Well-Being Assessment"/>
-      <description value="Assessment observation for one aspect of a person's well-being, with either free-text description or component values rating where a person is now and where they would like to be in the future."/>
+      <description value="Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1163,7 +1229,7 @@
         <reference value="StructureDefinition/pco-well-being-priority"/>
       </reference>
       <name value="Well-Being Priority"/>
-      <description value="Assessment observation for one aspect of a person's well-being, with a boolean value indicating whether this is a current priority."/>
+      <description value="Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

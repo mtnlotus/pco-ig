@@ -116,8 +116,8 @@
       "description" : "Category codes used across US Core Profiles and resource types. They are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
       "uses" : {
       },
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-screening-assessment-observation-category.html" : "US Core Screening Assessment Observation Category",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-simple-observation-category.html" : "US Core Simple Observation Category"
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-simple-observation-category.html" : "US Core Simple Observation Category",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-screening-assessment-observation-category.html" : "US Core Screening Assessment Observation Category"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes",
@@ -140,6 +140,17 @@
       "uses" : {
       },
       "ValueSet-pco-goal-domains-example-vs.html" : "PCO Goal Domain Categories Example"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "ReadinessConcepts",
+      "title" : "Readiness Assessment Concepts",
+      "description" : "Code system to types of readiness for change.",
+      "uses" : {
+      },
+      "ValueSet-readiness-assessment-codes.html" : "Readiness Assessment Codes"
     },
     {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example",
@@ -173,9 +184,9 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
       "ValueSet-prom-target-measures.html" : "PROM Target Measure Scores",
       "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
+      "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
       "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
       "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes"
     },
@@ -189,18 +200,18 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
       "http://hl7.org/fhir/R4/valueset-care-plan-activity-outcome.html" : "Care Plan Activity Outcome",
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
       "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-      "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes",
-      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes",
-      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
       "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
-      "ValueSet-pco-care-tradeoff-types-example-vs.html" : "Care Trade-off Types Example",
       "ValueSet-pco-goal-barrier-types-example-vs.html" : "Goal Barrier Types Example",
-      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes"
+      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+      "http://hl7.org/fhir/R4/valueset-care-plan-category.html" : "Care Plan Category",
+      "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
+      "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+      "ValueSet-pco-care-tradeoff-types-example-vs.html" : "Care Trade-off Types Example",
+      "http://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-goal-description.html" : "US Core Goal Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",

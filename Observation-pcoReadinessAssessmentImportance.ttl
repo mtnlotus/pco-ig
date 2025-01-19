@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentImportance> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoReadinessAssessmentImportance"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoReadinessAssessmentImportance</b></p><a name=\"pcoReadinessAssessmentImportance\"> </a><a name=\"hcpcoReadinessAssessmentImportance\"> </a><a name=\"pcoReadinessAssessmentImportance-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts importance}\">Importance of change</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>focus</b>: <a href=\"Goal-pcoGoalWalkDogExample.html\">Goal: extension = ,,,,; lifecycleStatus = active; achievementStatus = In Progress; category = What Matters,Physical Function; description = ; start[x] = 2024-04-03</a></p><p><b>effective</b>: 2024-04-10 15:05:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>value</b>: 8</p><p><b>derivedFrom</b>: <a href=\"Observation-pcoReadinessAssessmentPanel.html\">Observation Readiness assessment</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "survey" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "importance" ] ;
+       fhir:display [ fhir:v "Importance of change" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> ;
+     fhir:reference [ fhir:v "Goal/pcoGoalWalkDogExample" ]
+  ] ) ; # 
+  fhir:effective [ fhir:v "2024-04-10T15:05:00Z"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "8"^^xsd:decimal ]
+  ] ; # 
+  fhir:derivedFrom ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentPanel> ;
+     fhir:reference [ fhir:v "Observation/pcoReadinessAssessmentPanel" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentPanel> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

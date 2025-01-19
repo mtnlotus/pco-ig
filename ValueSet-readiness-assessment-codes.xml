@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="readiness-assessment-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet readiness-assessment-codes</b></p><a name="readiness-assessment-codes"> </a><a name="hcreadiness-assessment-codes"> </a><a name="readiness-assessment-codes-en-US"> </a><ul><li>Include all codes defined in <a href="CodeSystem-readiness-assessment-concepts.html"><code>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</code></a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/ValueSet/readiness-assessment-codes"/>
+  <version value="0.2.0"/>
+  <name value="ReadinessAssessmentType"/>
+  <title value="Readiness Assessment Codes"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-01-19T14:30:29+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Terminology codes for readiness assessment types."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts"/>
+    </include>
+  </compose>
+</ValueSet>

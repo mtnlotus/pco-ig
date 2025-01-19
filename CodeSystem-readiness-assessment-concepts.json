@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "readiness-assessment-concepts",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem readiness-assessment-concepts</b></p><a name=\"readiness-assessment-concepts\"> </a><a name=\"hcreadiness-assessment-concepts\"> </a><a name=\"readiness-assessment-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">readiness-assessent<a name=\"readiness-assessment-concepts-readiness-assessent\"> </a></td><td>Readiness assessment</td><td>Used as a panel code for readiness scales</td></tr><tr><td style=\"white-space:nowrap\">importance<a name=\"readiness-assessment-concepts-importance\"> </a></td><td>Importance of change</td><td/></tr><tr><td style=\"white-space:nowrap\">confidence<a name=\"readiness-assessment-concepts-confidence\"> </a></td><td>Confidence to change</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pc"
+  }],
+  "url" : "http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts",
+  "version" : "0.2.0",
+  "name" : "ReadinessConcepts",
+  "title" : "Readiness Assessment Concepts",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-01-19T14:30:29+00:00",
+  "publisher" : "HL7 International / Patient Care",
+  "contact" : [{
+    "name" : "HL7 International / Patient Care",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientcare"
+    },
+    {
+      "system" : "email",
+      "value" : "patientcare@lists.HL7.org"
+    }]
+  }],
+  "description" : "Code system to types of readiness for change.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "readiness-assessent",
+    "display" : "Readiness assessment",
+    "definition" : "Used as a panel code for readiness scales"
+  },
+  {
+    "code" : "importance",
+    "display" : "Importance of change"
+  },
+  {
+    "code" : "confidence",
+    "display" : "Confidence to change"
+  }]
+}
