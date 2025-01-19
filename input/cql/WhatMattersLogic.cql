@@ -5,8 +5,11 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.4.000' called FHIRHelpers
 include PCOCommon version '0.1.0' called PC
 
-valueset "What Matters Categories": 'http://hl7.org/fhir/us/pco/ValueSet/well-being-categories'
+codesystem "Well-Being Concepts": 'http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts'
+valueset "Well-Being Categories": 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories'
 valueset "Well-Being Domains": 'http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example'
+
+code "What Matters category": 'what-matters' from "Well-Being Concepts" display 'What Matters'
 
 parameter "Measurement Period" Interval<DateTime>
     default Interval[@2024-01-01T00:00:00.000Z, @2024-12-31T23:59:59.999Z]
@@ -16,9 +19,9 @@ parameter "Follow-Up Interval" Interval<System.Quantity>
 
 context Patient
 
-define "What Matters Observations":
+define "Well-Being Observations":
   [Observation] obs
-    where obs.category in "What Matters Categories"
+    where obs.category in "Well-Being Categories"
       or obs.code in "Well-Being Domains"
 
 // Returns a list of what matters Observations this Goal addresses.
@@ -30,4 +33,6 @@ define fluent function whatMattersObservations(goal Goal):
   )
 
 define fluent function isWhatMatters(obs Observation):
-  "What Matters Observations" contains obs
+  exists( "Well-Being Observations" obs
+    where exists(obs.category cat where cat = "What Matters category")
+  )

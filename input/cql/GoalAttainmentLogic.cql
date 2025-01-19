@@ -31,7 +31,7 @@ define GoalSummary:
     return {
       id: goal.id.value,
       dueDate: goal.dueDate(),
-      whatMattersCategory: goal.category in WM."What Matters Categories",
+      wellbeingCategory: goal.category in WM."Well-Being Categories",
       goalDomainCategory: goal.category in "PCO Goal Domain Categories",
       addressesWhatMatters: exists goal.whatMattersObservations(),
       hasGAS: goal.hasGAS(),
@@ -58,7 +58,7 @@ define "All Goals":
 */
 define "PCO Goals":
   [Goal] goal
-    where (goal.category in WM."What Matters Categories"
+    where (goal.category in WM."Well-Being Categories"
         or goal.category in "PCO Goal Domain Categories"
         or exists goal.whatMattersObservations())
       and (goal.start as FHIR.date) is not null

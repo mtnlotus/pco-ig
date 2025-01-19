@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "wellbeing-category-vs",
+  "id": "wellbeing-categories",
   "meta": {
     "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
   },
@@ -11,52 +11,59 @@
     "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
     "valueString": "executable"
   } ],
-  "url": "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-category-vs",
-  "name": "WellBeingCategoryValueSet",
+  "url": "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories",
+  "name": "WellBeingCategories",
   "title": "Well-Being Categories",
   "status": "draft",
   "experimental": false,
-  "description": "Value set containing well-being concepts for observation category.",
+  "description": "Categories for well-being assessment or goals.",
   "compose": {
     "include": [ {
       "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
       "concept": [ {
-        "code": "wellbeing-vision",
-        "display": "Well-Being Vision"
+        "code": "what-matters",
+        "display": "What Matters"
       }, {
-        "code": "wellbeing-statement",
-        "display": "Well-Being Statement"
+        "code": "mentation",
+        "display": "Mentation"
       }, {
-        "code": "wellbeing-assessment",
-        "display": "Well-Being Assessment"
+        "code": "mobility",
+        "display": "Mobility"
       }, {
-        "code": "wellbeing-priority",
-        "display": "Well-Being Priority"
+        "code": "medication",
+        "display": "Medication"
+      }, {
+        "code": "person-centered",
+        "display": "Person-Centered"
       } ]
     } ]
   },
   "expansion": {
-    "timestamp": "2025-01-04T16:50:34-07:00",
+    "timestamp": "2025-01-19T09:19:39-07:00",
     "parameter": [ {
       "name": "naive",
       "valueBoolean": true
     } ],
     "contains": [ {
       "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
-      "code": "wellbeing-vision",
-      "display": "Well-Being Vision"
+      "code": "what-matters",
+      "display": "What Matters"
     }, {
       "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
-      "code": "wellbeing-statement",
-      "display": "Well-Being Statement"
+      "code": "mentation",
+      "display": "Mentation"
     }, {
       "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
-      "code": "wellbeing-assessment",
-      "display": "Well-Being Assessment"
+      "code": "mobility",
+      "display": "Mobility"
     }, {
       "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
-      "code": "wellbeing-priority",
-      "display": "Well-Being Priority"
+      "code": "medication",
+      "display": "Medication"
+    }, {
+      "system": "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
+      "code": "person-centered",
+      "display": "Person-Centered"
     } ]
   }
 }

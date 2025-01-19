@@ -29,7 +29,7 @@ Description: "Code system to identify resource codes and category codes for Well
       "What changes could you make to help you get there?"
 
 ValueSet: WellBeingCategories
-Id: well-being-categories
+Id: wellbeing-categories
 Title: "Well-Being Categories"
 Description: "Categories for well-being assessment or goals."
 * ^experimental = false

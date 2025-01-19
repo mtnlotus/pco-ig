@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "id": "goal-barrier-codes",
+  "id": "pco-goal-barrier-types-example-vs",
   "meta": {
     "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
   },
@@ -11,19 +11,31 @@
     "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
     "valueString": "executable"
   } ],
-  "url": "http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes",
-  "name": "GoalBarrierCodes",
-  "title": "Goal Barrier Assessment Codes",
+  "url": "http://hl7.org/fhir/us/pco/ValueSet/pco-goal-barrier-types-example-vs",
+  "name": "GoalBarrierTypesExample",
+  "title": "Goal Barrier Types Example",
   "status": "draft",
   "experimental": false,
-  "description": "Terminology codes for goal barrier assessment",
+  "description": "Example value set containing types of goal barriers.",
   "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. The SNOMED International IPS Terminology is distributed by International Health Terminology Standards Development Organisation, trading as SNOMED International, and is subject the terms of the Creative Commons Attribution 4.0 International Public License. For more information, see SNOMED IPS Terminology. The HL7 International IPS implementation guides incorporate SNOMED CT®, used by permission of the International Health Terminology Standards Development Organisation, trading as SNOMED International. SNOMED CT was originally created by the College of American Pathologists. SNOMED CT is a registered trademark of the International Health Terminology Standards Development Organisation, all rights reserved. Implementers of SNOMED CT should review usage terms or directly contact SNOMED International: info@snomed.org",
   "compose": {
     "include": [ {
       "system": "http://snomed.info/sct",
       "concept": [ {
-        "code": "452341000124107",
-        "display": "Assessment of barriers to meet care plan goals performed"
+        "code": "22253000",
+        "display": "Pain"
+      }, {
+        "code": "48694002",
+        "display": "Feeling anxious"
+      }, {
+        "code": "224960004",
+        "display": "Feeling tired"
+      }, {
+        "code": "15188001",
+        "display": "Difficulty hearing"
+      }, {
+        "code": "165232002",
+        "display": "Urinary incontinence"
       } ]
     } ]
   },
@@ -35,8 +47,24 @@
     } ],
     "contains": [ {
       "system": "http://snomed.info/sct",
-      "code": "452341000124107",
-      "display": "Assessment of barriers to meet care plan goals performed"
+      "code": "22253000",
+      "display": "Pain"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "48694002",
+      "display": "Feeling anxious"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "224960004",
+      "display": "Feeling tired"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "15188001",
+      "display": "Difficulty hearing"
+    }, {
+      "system": "http://snomed.info/sct",
+      "code": "165232002",
+      "display": "Urinary incontinence"
     } ]
   }
 }
