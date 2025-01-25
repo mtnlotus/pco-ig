@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersPriorityExample> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcoWhatMattersPriorityExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersPriorityExample</b></p><a name=\"pcoWhatMattersPriorityExample\"> </a><a name=\"hcpcoWhatMattersPriorityExample\"> </a><a name=\"pcoWhatMattersPriorityExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}\">What Matters</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example body}\">Moving the Body</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>effective</b>: 2024-03-27 15:05:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>value</b>: true</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "what-matters" ] ;
+       fhir:display [ fhir:v "What Matters" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "survey" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "body" ] ;
+       fhir:display [ fhir:v "Moving the Body" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2024-03-27T15:05:00Z"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
+     fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
+  ] ) ; # 
+  fhir:value [ fhir:v "true"^^xsd:boolean] . # 
+
+<http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+# -------------------------------------------------------------------------------------
+

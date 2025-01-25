@@ -10,7 +10,7 @@
   fhir:id [ fhir:v "wellbeing-concepts"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name=\"wellbeing-concepts\"> </a><a name=\"hcwellbeing-concepts\"> </a><a name=\"wellbeing-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">what-matters<a name=\"wellbeing-concepts-what-matters\"> </a></td><td>What Matters</td><td>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">mentation<a name=\"wellbeing-concepts-mentation\"> </a></td><td>Mentation</td><td>Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">mobility<a name=\"wellbeing-concepts-mobility\"> </a></td><td>Mobility</td><td>Ensure that person can move safely every day in order to maintain function and do What Matters.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">medication<a name=\"wellbeing-concepts-medication\"> </a></td><td>Medicaion</td><td>If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">person-centered<a name=\"wellbeing-concepts-person-centered\"> </a></td><td>Person-Centered</td><td>General category for person-centered goals and observations</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">assessment-type<a name=\"wellbeing-concepts-assessment-type\"> </a></td><td>Assessment Type</td><td/></tr><tr><td>2</td><td style=\"white-space:nowrap\">  now-rating<a name=\"wellbeing-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  now-reasons<a name=\"wellbeing-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  future-rating<a name=\"wellbeing-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  future-changes<a name=\"wellbeing-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name=\"wellbeing-concepts\"> </a><a name=\"hcwellbeing-concepts\"> </a><a name=\"wellbeing-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"wellbeing-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"wellbeing-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"wellbeing-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"wellbeing-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
@@ -22,7 +22,7 @@
   fhir:title [ fhir:v "Well-Being Concepts"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2025-01-19T16:32:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-25T16:46:38+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -42,49 +42,24 @@
      ] )
   ] ) ; # 
   fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
-  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
   fhir:content [ fhir:v "complete"] ; # 
-  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
   fhir:concept ( [
-     fhir:code [ fhir:v "what-matters" ] ;
-     fhir:display [ fhir:v "What Matters" ] ;
-     fhir:definition [ fhir:v "Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care." ]
+     fhir:code [ fhir:v "now-rating" ] ;
+     fhir:display [ fhir:v "Now Rating" ] ;
+     fhir:definition [ fhir:v "Where are you now?" ]
   ] [
-     fhir:code [ fhir:v "mentation" ] ;
-     fhir:display [ fhir:v "Mentation" ] ;
-     fhir:definition [ fhir:v "Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care." ]
+     fhir:code [ fhir:v "now-reasons" ] ;
+     fhir:display [ fhir:v "Now Reasons" ] ;
+     fhir:definition [ fhir:v "What are the reasons you chose this number?" ]
   ] [
-     fhir:code [ fhir:v "mobility" ] ;
-     fhir:display [ fhir:v "Mobility" ] ;
-     fhir:definition [ fhir:v "Ensure that person can move safely every day in order to maintain function and do What Matters." ]
+     fhir:code [ fhir:v "future-rating" ] ;
+     fhir:display [ fhir:v "Future Rating" ] ;
+     fhir:definition [ fhir:v "Where would you like to be?" ]
   ] [
-     fhir:code [ fhir:v "medication" ] ;
-     fhir:display [ fhir:v "Medicaion" ] ;
-     fhir:definition [ fhir:v "If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care." ]
-  ] [
-     fhir:code [ fhir:v "person-centered" ] ;
-     fhir:display [ fhir:v "Person-Centered" ] ;
-     fhir:definition [ fhir:v "General category for person-centered goals and observations" ]
-  ] [
-     fhir:code [ fhir:v "assessment-type" ] ;
-     fhir:display [ fhir:v "Assessment Type" ] ;
-     fhir:concept ( [
-       fhir:code [ fhir:v "now-rating" ] ;
-       fhir:display [ fhir:v "Now Rating" ] ;
-       fhir:definition [ fhir:v "Where are you now?" ]
-     ] [
-       fhir:code [ fhir:v "now-reasons" ] ;
-       fhir:display [ fhir:v "Now Reasons" ] ;
-       fhir:definition [ fhir:v "What are the reasons you chose this number?" ]
-     ] [
-       fhir:code [ fhir:v "future-rating" ] ;
-       fhir:display [ fhir:v "Future Rating" ] ;
-       fhir:definition [ fhir:v "Where would you like to be?" ]
-     ] [
-       fhir:code [ fhir:v "future-changes" ] ;
-       fhir:display [ fhir:v "Future Changes" ] ;
-       fhir:definition [ fhir:v "What changes could you make to help you get there?" ]
-     ] )
+     fhir:code [ fhir:v "future-changes" ] ;
+     fhir:display [ fhir:v "Future Changes" ] ;
+     fhir:definition [ fhir:v "What changes could you make to help you get there?" ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="8c04c16a-c392-4d22-874d-989d2ac8f042"/>
+  <id value="b32cd0d9-0899-4a0d-8f5b-49db52fcdf57"/>
   <meta>
-    <lastUpdated value="2025-01-19T16:32:23.089+00:00"/>
+    <lastUpdated value="2025-01-25T16:46:38.148+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -63,7 +63,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71,8 +71,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:863e5191-467e-4363-9f1a-67387b503be6"/>
-          <timestamp value="2025-01-19T16:33:45+00:00"/>
+          <identifier value="urn:uuid:a01e27d4-0ff6-4165-8c2e-d22a973932a3"/>
+          <timestamp value="2025-01-25T16:48:09+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -151,7 +151,7 @@
         <title value="Goal Attainment Scaling (GAS) Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -159,8 +159,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e15de334-4a28-4189-8f21-7c1b9fa06a01"/>
-          <timestamp value="2025-01-19T16:33:46+00:00"/>
+          <identifier value="urn:uuid:db531f28-bf40-4b2b-9329-dda027568424"/>
+          <timestamp value="2025-01-25T16:48:10+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -232,7 +232,7 @@
         <title value="Goal Barrier Assessment Codes"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -240,8 +240,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:70355829-5093-4374-a61d-cbf07f204d85"/>
-          <timestamp value="2025-01-19T16:33:47+00:00"/>
+          <identifier value="urn:uuid:960d9474-3f81-44c6-b021-74ac3f0c92ae"/>
+          <timestamp value="2025-01-25T16:48:10+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -344,7 +344,7 @@
         <title value="Care Trade-off Choices"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -352,8 +352,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:18035ce7-e4f6-4f74-b181-696876d92ab0"/>
-          <timestamp value="2025-01-19T16:33:47+00:00"/>
+          <identifier value="urn:uuid:ad7ff326-bfae-4115-a36d-c669c513ca31"/>
+          <timestamp value="2025-01-25T16:48:11+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -477,7 +477,7 @@
         <title value="Care Trade-off Types Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -485,8 +485,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4cad5023-588d-4f6a-9e57-20772cf26e4c"/>
-          <timestamp value="2025-01-19T16:33:48+00:00"/>
+          <identifier value="urn:uuid:cfd360fd-a7f3-4556-bca5-5288c67f0285"/>
+          <timestamp value="2025-01-25T16:48:11+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -542,6 +542,114 @@
             <system value="http://snomed.info/sct"/>
             <code value="105389006"/>
             <display value="Personal care assistance at home"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/pco-categories"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
+              <a href="CodeSystem-pco-concepts.html">codesystem Person-Centered Outcome Concepts v0.2.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts-person-centered"> </a>  
+                  <a href="CodeSystem-pco-concepts.html#pco-concepts-person-centered">person-centered</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts</td>
+                <td>Person-Centered</td>
+                <td>
+                  <div>
+                    <p>General category for person-centered goals and observations</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts-what-matters"> </a>  
+                  <a href="CodeSystem-pco-concepts.html#pco-concepts-what-matters">what-matters</a>
+                </td>
+                <td>http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts</td>
+                <td>What Matters</td>
+                <td>
+                  <div>
+                    <p>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/pco-categories"/>
+        <version value="0.2.0"/>
+        <name value="PCOCategories"/>
+        <title value="Person-Centered Categories"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:c67d2eb4-9f5e-41f0-9031-e66bb6b613ec"/>
+          <timestamp value="2025-01-25T16:48:12+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts|0.2.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts"/>
+            <code value="person-centered"/>
+            <display value="Person-Centered"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts"/>
+            <code value="what-matters"/>
+            <display value="What Matters"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -620,7 +728,7 @@
         <title value="Goal Barrier Types Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -628,8 +736,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0c059114-b32a-467b-aaa2-b1146b3b9efa"/>
-          <timestamp value="2025-01-19T16:33:48+00:00"/>
+          <identifier value="urn:uuid:16ffd337-fc3a-4f4e-a726-67f1824f9daf"/>
+          <timestamp value="2025-01-25T16:48:12+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -882,7 +990,7 @@
         <title value="PCO Goal Domain Categories Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -890,8 +998,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d69af59e-20e1-43ed-95f5-034da75dac0d"/>
-          <timestamp value="2025-01-19T16:33:49+00:00"/>
+          <identifier value="urn:uuid:bc6a63ac-266a-4def-8630-c32db0b5b414"/>
+          <timestamp value="2025-01-25T16:48:13+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -1279,7 +1387,7 @@
         <title value="PROM Target Measure Scores"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1287,8 +1395,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:362fc206-69f7-4aee-8181-2b95aa9435e7"/>
-          <timestamp value="2025-01-19T16:33:49+00:00"/>
+          <identifier value="urn:uuid:337b04e7-68c6-4b24-8081-50c8aaf254a8"/>
+          <timestamp value="2025-01-25T16:48:13+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -1563,7 +1671,7 @@
         <title value="Readiness Assessment Codes"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1571,8 +1679,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:17685228-09e9-41c5-be09-f1071e3263e5"/>
-          <timestamp value="2025-01-19T16:33:50+00:00"/>
+          <identifier value="urn:uuid:d0e4b969-8cd2-4bb1-bb97-4b4fa356c7ad"/>
+          <timestamp value="2025-01-25T16:48:14+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1605,171 +1713,6 @@
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts"/>
             <code value="confidence"/>
             <display value="Confidence to change"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>Generated Narrative: ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion done internally based on 
-              <a href="CodeSystem-wellbeing-concepts.html">codesystem Well-Being Concepts v0.2.0 (CodeSystem)</a>
-            </p>
-            <p>This value set contains 5 concepts</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-what-matters"> </a>  
-                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-what-matters">what-matters</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
-                <td>What Matters</td>
-                <td>
-                  <div>
-                    <p>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-mentation"> </a>  
-                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-mentation">mentation</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
-                <td>Mentation</td>
-                <td>
-                  <div>
-                    <p>Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-mobility"> </a>  
-                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-mobility">mobility</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
-                <td>Mobility</td>
-                <td>
-                  <div>
-                    <p>Ensure that person can move safely every day in order to maintain function and do What Matters.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-medication"> </a>  
-                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-medication">medication</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
-                <td>Medication</td>
-                <td>
-                  <div>
-                    <p>If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care.</p>
-
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts-person-centered"> </a>  
-                  <a href="CodeSystem-wellbeing-concepts.html#wellbeing-concepts-person-centered">person-centered</a>
-                </td>
-                <td>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</td>
-                <td>Person-Centered</td>
-                <td>
-                  <div>
-                    <p>General category for person-centered goals and observations</p>
-
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories"/>
-        <version value="0.2.0"/>
-        <name value="WellBeingCategories"/>
-        <title value="Well-Being Categories"/>
-        <status value="draft"/>
-        <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="US"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:cf60ab47-7e4f-4cf9-811a-057373334c84"/>
-          <timestamp value="2025-01-19T16:33:50+00:00"/>
-          <total value="5"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="used-codesystem"/>
-            <valueUri value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts|0.2.0"/>
-          </parameter>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
-            <code value="what-matters"/>
-            <display value="What Matters"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
-            <code value="mentation"/>
-            <display value="Mentation"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
-            <code value="mobility"/>
-            <display value="Mobility"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
-            <code value="medication"/>
-            <display value="Medication"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"/>
-            <code value="person-centered"/>
-            <display value="Person-Centered"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -1939,7 +1882,7 @@
         <title value="Well-Being Domains Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-19T16:32:23+00:00"/>
+        <date value="2025-01-25T16:46:38+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1947,8 +1890,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b6775ab1-9f7f-422d-a6d3-b9b5f807574a"/>
-          <timestamp value="2025-01-19T16:33:51+00:00"/>
+          <identifier value="urn:uuid:2ac8c181-6dcb-4947-841f-eebcf9fdaddd"/>
+          <timestamp value="2025-01-25T16:48:14+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>

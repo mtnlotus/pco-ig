@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="pco-concepts"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem pco-concepts</b></p><a name="pco-concepts"> </a><a name="hcpco-concepts"> </a><a name="pco-concepts-en-US"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">person-centered<a name="pco-concepts-person-centered"> </a></td><td>Person-Centered</td><td>General category for person-centered goals and observations</td></tr><tr><td style="white-space:nowrap">what-matters<a name="pco-concepts-what-matters"> </a></td><td>What Matters</td><td>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts"/>
+  <version value="0.2.0"/>
+  <name value="PCOConcepts"/>
+  <title value="Person-Centered Outcome Concepts"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-01-25T16:46:38+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Code system to identify resource codes and category codes for Person-Centered Outcomes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="person-centered"/>
+    <display value="Person-Centered"/>
+    <definition value="General category for person-centered goals and observations"/>
+  </concept>
+  <concept>
+    <code value="what-matters"/>
+    <display value="What Matters"/>
+    <definition value="Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care."/>
+  </concept>
+</CodeSystem>

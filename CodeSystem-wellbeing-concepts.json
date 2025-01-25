@@ -3,7 +3,7 @@
   "id" : "wellbeing-concepts",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name=\"wellbeing-concepts\"> </a><a name=\"hcwellbeing-concepts\"> </a><a name=\"wellbeing-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">what-matters<a name=\"wellbeing-concepts-what-matters\"> </a></td><td>What Matters</td><td>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">mentation<a name=\"wellbeing-concepts-mentation\"> </a></td><td>Mentation</td><td>Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">mobility<a name=\"wellbeing-concepts-mobility\"> </a></td><td>Mobility</td><td>Ensure that person can move safely every day in order to maintain function and do What Matters.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">medication<a name=\"wellbeing-concepts-medication\"> </a></td><td>Medicaion</td><td>If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">person-centered<a name=\"wellbeing-concepts-person-centered\"> </a></td><td>Person-Centered</td><td>General category for person-centered goals and observations</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">assessment-type<a name=\"wellbeing-concepts-assessment-type\"> </a></td><td>Assessment Type</td><td/></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0now-rating<a name=\"wellbeing-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0now-reasons<a name=\"wellbeing-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0future-rating<a name=\"wellbeing-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0future-changes<a name=\"wellbeing-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem wellbeing-concepts</b></p><a name=\"wellbeing-concepts\"> </a><a name=\"hcwellbeing-concepts\"> </a><a name=\"wellbeing-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"wellbeing-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"wellbeing-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"wellbeing-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"wellbeing-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -15,7 +15,7 @@
   "title" : "Well-Being Concepts",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-01-19T16:32:23+00:00",
+  "date" : "2025-01-25T16:46:38+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -36,56 +36,26 @@
     }]
   }],
   "caseSensitive" : true,
-  "hierarchyMeaning" : "is-a",
   "content" : "complete",
-  "count" : 10,
+  "count" : 4,
   "concept" : [{
-    "code" : "what-matters",
-    "display" : "What Matters",
-    "definition" : "Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care."
+    "code" : "now-rating",
+    "display" : "Now Rating",
+    "definition" : "Where are you now?"
   },
   {
-    "code" : "mentation",
-    "display" : "Mentation",
-    "definition" : "Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care."
+    "code" : "now-reasons",
+    "display" : "Now Reasons",
+    "definition" : "What are the reasons you chose this number?"
   },
   {
-    "code" : "mobility",
-    "display" : "Mobility",
-    "definition" : "Ensure that person can move safely every day in order to maintain function and do What Matters."
+    "code" : "future-rating",
+    "display" : "Future Rating",
+    "definition" : "Where would you like to be?"
   },
   {
-    "code" : "medication",
-    "display" : "Medicaion",
-    "definition" : "If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care."
-  },
-  {
-    "code" : "person-centered",
-    "display" : "Person-Centered",
-    "definition" : "General category for person-centered goals and observations"
-  },
-  {
-    "code" : "assessment-type",
-    "display" : "Assessment Type",
-    "concept" : [{
-      "code" : "now-rating",
-      "display" : "Now Rating",
-      "definition" : "Where are you now?"
-    },
-    {
-      "code" : "now-reasons",
-      "display" : "Now Reasons",
-      "definition" : "What are the reasons you chose this number?"
-    },
-    {
-      "code" : "future-rating",
-      "display" : "Future Rating",
-      "definition" : "Where would you like to be?"
-    },
-    {
-      "code" : "future-changes",
-      "display" : "Future Changes",
-      "definition" : "What changes could you make to help you get there?"
-    }]
+    "code" : "future-changes",
+    "display" : "Future Changes",
+    "definition" : "What changes could you make to help you get there?"
   }]
 }

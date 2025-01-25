@@ -22,7 +22,7 @@
   fhir:name [ fhir:v "PCOGoalAttainmentScaleProfile"] ; # 
   fhir:title [ fhir:v "Person-Centered GAS Goal"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-19T16:32:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-25T16:46:38+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -662,10 +662,10 @@
          fhir:map [ fhir:v "FiveWs.class" ]
        ] )
      ] [
-       fhir:id [ fhir:v "Goal.category:well-being" ] ;
+       fhir:id [ fhir:v "Goal.category:pco" ] ;
        fhir:path [ fhir:v "Goal.category" ] ;
-       fhir:sliceName [ fhir:v "well-being" ] ;
-       fhir:short [ fhir:v "Well-Being resource category" ] ;
+       fhir:sliceName [ fhir:v "pco" ] ;
+       fhir:short [ fhir:v "Person-Centered resource category" ] ;
        fhir:definition [ fhir:v "Indicates a category the goal falls within." ] ;
        fhir:requirements [ fhir:v "Allows goals to be filtered and sorted." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
@@ -695,8 +695,8 @@
        fhir:binding [
          fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/us/pco/ValueSet/wellbeing-categories>
+           fhir:v "http://hl7.org/fhir/us/pco/ValueSet/pco-categories"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-categories>
          ]
        ] ;
        fhir:mapping ( [
@@ -1419,9 +1419,9 @@
        fhir:id [ fhir:v "Goal.addresses:SupportedAddresses" ] ;
        fhir:path [ fhir:v "Goal.addresses" ] ;
        fhir:sliceName [ fhir:v "SupportedAddresses" ] ;
-       fhir:short [ fhir:v "Well-Being Assessment or Priority" ] ;
+       fhir:short [ fhir:v "What Matters Assessment or Priority" ] ;
        fhir:definition [ fhir:v "The identified conditions and other health record elements that are intended to be addressed by the goal." ] ;
-       fhir:requirements [ fhir:v "When a goal addresses well-being observations, Goal.addresses should reference instances that comply with the PCO Well-Being Assessment of Priority profiles. However, references to other instance types are also possible." ] ;
+       fhir:requirements [ fhir:v "When a goal addresses What Matters observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment of Priority profiles. However, references to other instance types are also possible." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -1432,11 +1432,11 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-assessment>
+           fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
          ] [
-           fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-priority"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-well-being-priority>
+           fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
          ] )
        ] ) ;
        fhir:constraint ( [

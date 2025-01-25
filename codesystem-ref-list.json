@@ -12,6 +12,17 @@
       "ValueSet-pco-care-tradeoff-choices-vs.html" : "Care Trade-off Choices"
     },
     {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "PCOConcepts",
+      "title" : "Person-Centered Outcome Concepts",
+      "description" : "Code system to identify resource codes and category codes for Person-Centered Outcomes.",
+      "uses" : {
+      },
+      "ValueSet-pco-categories.html" : "Person-Centered Categories"
+    },
+    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains",
       "version" : "0.2.0",
       "status" : "active",
@@ -45,17 +56,6 @@
       "ValueSet-wellbeing-domains-example.html" : "Well-Being Domains Example"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "WellBeingConcepts",
-      "title" : "Well-Being Concepts",
-      "description" : "Code system to identify resource codes and category codes for Well-Being.",
-      "uses" : {
-      },
-      "ValueSet-wellbeing-categories.html" : "Well-Being Categories"
-    },
-    {
       "url" : "http://loinc.org",
       "version" : "3.1.0",
       "status" : "active",
@@ -65,9 +65,9 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
+      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
       "ValueSet-prom-target-measures.html" : "PROM Target Measure Scores",
-      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers",
-      "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score"
+      "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -79,8 +79,8 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-pco-care-tradeoff-types-example-vs.html" : "Care Trade-off Types Example",
       "ValueSet-pco-goal-barrier-types-example-vs.html" : "Goal Barrier Types Example",
+      "ValueSet-pco-care-tradeoff-types-example-vs.html" : "Care Trade-off Types Example",
       "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes"
     }
   ]

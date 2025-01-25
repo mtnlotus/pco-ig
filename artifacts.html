@@ -381,7 +381,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   title="StructureDefinition/pco-goal-profile">Person-Centered Goal</a>
             </td>
             <td>
-<p>Person-centered goal focused on an individual's well-being. A Person-centered goal SHALL include either a Well-Being category, or address a Well-Being assessment.</p>
+<p>Person-centered goal focused on an individual's well-being. A Person-centered goal SHALL include either a PCO category, or address a What Matters assessment.</p>
 </td>
          </tr>
          <tr>
@@ -422,8 +422,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-well-being-assessment.html"
-                  title="StructureDefinition/pco-well-being-assessment">Well-Being Assessment</a>
+               <a href="StructureDefinition-pco-what-matters-assessment.html"
+                  title="StructureDefinition/pco-what-matters-assessment">What Matters Assessment</a>
             </td>
             <td>
 <p>Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future.</p>
@@ -431,8 +431,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-pco-well-being-priority.html"
-                  title="StructureDefinition/pco-well-being-priority">Well-Being Priority</a>
+               <a href="StructureDefinition-pco-what-matters-priority.html"
+                  title="StructureDefinition/pco-what-matters-priority">What Matters Priority</a>
             </td>
             <td>
 <p>Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority.</p>
@@ -537,20 +537,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-pco-categories.html" title="ValueSet/pco-categories">Person-Centered Categories</a>
+            </td>
+            <td>
+<p>Categories for person-centered assessment or goals.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-readiness-assessment-codes.html"
                   title="ValueSet/readiness-assessment-codes">Readiness Assessment Codes</a>
             </td>
             <td>
 <p>Terminology codes for readiness assessment types.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-wellbeing-categories.html"
-                  title="ValueSet/wellbeing-categories">Well-Being Categories</a>
-            </td>
-            <td>
-<p>Categories for well-being assessment or goals.</p>
 </td>
          </tr>
          <tr>
@@ -586,6 +585,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Goal domain codes used to identify the category for PCO resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-pco-concepts.html" title="CodeSystem/pco-concepts">Person-Centered Outcome Concepts</a>
+            </td>
+            <td>
+<p>Code system to identify resource codes and category codes for Person-Centered Outcomes.</p>
 </td>
          </tr>
          <tr>
@@ -856,8 +863,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Observation-pcoWellBeingPriorityExample.html"
-                  title="Observation/pcoWellBeingPriorityExample">What Matters Priority: Moving the Body</a>
+               <a href="Observation-pcoWhatMattersPriorityExample.html"
+                  title="Observation/pcoWhatMattersPriorityExample">What Matters Priority: Moving the Body</a>
             </td>
             <td>
 <p>What Matters observation recorded by a Patient to indicate their priority for well-being.</p>
@@ -923,7 +930,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Jan 19, 2025 16:32+0000">2025-01-19</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.us.pco#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jan 25, 2025 16:46+0000">2025-01-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
