@@ -1,11 +1,11 @@
 
-Instance: pcoWellBeingPriorityExample
-InstanceOf: WellBeingPriority
+Instance: pcoWhatMattersPriorityExample
+InstanceOf: WhatMattersPriority
 Title: "What Matters Priority: Moving the Body"
 Description: "What Matters observation recorded by a Patient to indicate their priority for well-being."
 Usage: #example
 * status = #final 
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -13,12 +13,12 @@ Usage: #example
 * valueBoolean = true
 
 Instance: pcoWhatMattersStatementExample
-InstanceOf: WellBeingAssessment
+InstanceOf: WhatMattersAssessment
 Title: "What Matters Statement: Family & Friends"
 Description: "What Matters observation added by a Patient to record a free-text statement about a well-being focus area."
 Usage: #example
 * status = #final 
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -26,12 +26,12 @@ Usage: #example
 * valueString = "I would like to meet my friends again for morning walks, but my knee pain prevents me from doing that."
 
 Instance: pcoWhatMattersBodyExample
-InstanceOf: WellBeingAssessment
+InstanceOf: WhatMattersAssessment
 Title: "What Matters: Moving the Body"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
 * status = #final 
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#body "Moving the Body"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
@@ -41,11 +41,11 @@ Usage: #example
 * component[futureRating].valueInteger = 7
 
 Instance: pcoWhatMattersRelationshipsExample
-InstanceOf: WellBeingAssessment
+InstanceOf: WhatMattersAssessment
 Title: "What Matters: Family & Friends"
 Description: "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps."
 Usage: #example
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * status = #final 
 * subject = Reference(pcoPatientJones)
@@ -59,24 +59,24 @@ Usage: #example
 /*
 
 Instance: pcoWhatMattersInvalidExampleMissingValues
-InstanceOf: WellBeingAssessment
+InstanceOf: WhatMattersAssessment
 Title: "What Matters: Invalid missing value or component"
 Description: "What Matters observation with invalid elements."
 Usage: #example
 * status = #final 
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)
 * effectiveDateTime = "2024-03-27T14:30:00Z"
 
 Instance: pcoWhatMattersInvalidExampleValueAndComponent
-InstanceOf: WellBeingAssessment
+InstanceOf: WhatMattersAssessment
 Title: "What Matters: Invalid both value and component"
 Description: "What Matters observation with invalid elements."
 Usage: #example
 * status = #final 
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * code = VAWholeHealthExample#relationships "Family, Friends & Co-Workers"
 * subject = Reference(pcoPatientJones)
 * performer = Reference(pcoPatientJones)

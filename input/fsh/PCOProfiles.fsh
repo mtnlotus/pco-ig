@@ -1,4 +1,14 @@
 
+RuleSet: PCOCategory
+* category MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* category contains
+    pco 0..1 MS
+* category[pco] from PCOCategories (required)
+  * ^short = "Person-Centered resource category"
+
 RuleSet: GoalDomainCategory
 * category MS
 * category ^slicing.discriminator.type = #value
@@ -16,8 +26,8 @@ Profile: PCOGoalProfile
 Parent: USCoreGoalProfile
 Id: pco-goal-profile
 Title: "Person-Centered Goal"
-Description: "Person-centered goal focused on an individual's well-being. A Person-centered goal SHALL include either a Well-Being category, or address a Well-Being assessment."
-* insert WellBeingCategory
+Description: "Person-centered goal focused on an individual's well-being. A Person-centered goal SHALL include either a PCO category, or address a What Matters assessment."
+* insert PCOCategory
 * insert GoalDomainCategory
 * expressedBy 0..1 MS
 * expressedBy only Reference(USCorePatientProfile or USCorePractitionerProfile or USCoreRelatedPersonProfile)
@@ -28,18 +38,18 @@ Description: "Person-centered goal focused on an individual's well-being. A Pers
 * addresses ^slicing.discriminator.path = "resolve()"
 * addresses ^slicing.rules = #open
 * addresses contains SupportedAddresses 0..* MS
-* addresses[SupportedAddresses] only Reference(WellBeingAssessment or WellBeingPriority)
-  * ^short = "Well-Being Assessment or Priority"
-  * ^requirements = "When a goal addresses well-being observations, Goal.addresses should reference instances that comply with the PCO Well-Being Assessment of Priority profiles. However, references to other instance types are also possible."
+* addresses[SupportedAddresses] only Reference(WhatMattersAssessment or WhatMattersPriority)
+  * ^short = "What Matters Assessment or Priority"
+  * ^requirements = "When a goal addresses What Matters observations, Goal.addresses should reference instances that comply with the PCO What Matters Assessment of Priority profiles. However, references to other instance types are also possible."
 
-// TODO: add a constraint that either Goal.category from GoalDomainCategory or Goal.addresses WellBeingAssessment SHALL be present
+// TODO: add a constraint that either Goal.category from GoalDomainCategory or Goal.addresses WhatMattersAssessment SHALL be present
 
 Profile: PCOCarePlan
 Parent: USCoreCarePlanProfile
 Id: pco-care-plan
 Title: "Person-Centered Care Plan"
 Description: "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person."
-* insert WellBeingCategory
+* insert PCOCategory
 * goal 1..* MS
 * goal ^slicing.discriminator.type = #profile
 * goal ^slicing.discriminator.path = "resolve()"

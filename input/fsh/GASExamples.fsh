@@ -6,7 +6,7 @@ Description: "Person-centered goal with attainment scaling extensions"
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)
@@ -33,7 +33,7 @@ Description: "Person-centered goal with GAS target measure and without GAS exten
 Usage: #example
 * lifecycleStatus = #active
 * achievementStatus = $GoalAchievement#in-progress
-* category[well-being] = WellBeingConcepts#what-matters "What Matters"
+* category[pco] = PCOConcepts#what-matters "What Matters"
 * category[goal-domain] = PCOGoalDomains#physical-function "Physical Function"
 * subject = Reference(pcoPatientJones)
 * expressedBy = Reference(pcoPatientJones)

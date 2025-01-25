@@ -1,33 +1,23 @@
 
-RuleSet: WellBeingCategory
-* category MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* category contains
-    well-being 0..1 MS
-* category[well-being] from WellBeingCategories (required)
-  * ^short = "Well-Being resource category"
-
-Profile: WellBeingPriority
+Profile: WhatMattersPriority
 Parent: USCoreObservationScreeningAssessmentProfile
-Id: pco-well-being-priority
-Title: "Well-Being Priority"
+Id: pco-what-matters-priority
+Title: "What Matters Priority"
 Description: "Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority."
-* insert WellBeingCategory
+* insert PCOCategory
 * code from WellBeingDomainValueSet (preferred)
 * value[x] 1..1 MS
 * value[x] only boolean
   * ^short = "Indicates if this well-being domain is a current priority"
 
-// TODO: Add WellBeingAssessment constraint that either valueString or component SHALL be present.
+// TODO: Add WhatMattersAssessment constraint that either valueString or component SHALL be present.
 
-Profile: WellBeingAssessment
+Profile: WhatMattersAssessment
 Parent: USCoreObservationScreeningAssessmentProfile
-Id: pco-well-being-assessment
-Title: "Well-Being Assessment"
+Id: pco-what-matters-assessment
+Title: "What Matters Assessment"
 Description: "Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future."
-* insert WellBeingCategory
+* insert PCOCategory
 * code from WellBeingDomainValueSet (preferred)
 * value[x] 0..1 MS
 * value[x] only string or CodeableConcept

@@ -5,7 +5,7 @@ Dorothy uses a dedicated mobile app that presents a list of several areas for he
 
 Many alternative tools have been developed and are in use that enable individuals to reflect on What Matters Most for their health & well-being. One example is the U.S. Department of Veterns Affairs [Whole Health appoach to care](https://va.gov/wholehealth) that includes a [Circle of Health](https://www.va.gov/WHOLEHEALTH/circle-of-health/index.asp) and [Personal Health Inventory](https://www.va.gov/WHOLEHEALTH/docs/PHI_Jan2022_Final_508.pdf). The examples in this FHIR IG are based on VA's approach, but can be adapted to other asseessments used by different organizations.
 
-**☛ See [Profile: Well-Being Assessment](StructureDefinition-pco-well-being-assessment.html#profile)**
+**☛ See [Profile: Well-Being Assessment](StructureDefinition-pco-what-matters-assessment.html#profile)**
 
 **☛ See [Example: Assessment Observation](Observation-pcoWhatMattersRelationshipsExample.html#root)**
 

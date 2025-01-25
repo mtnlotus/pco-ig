@@ -19,7 +19,7 @@ The following data elements must always be present or must be supported if the d
 
 **Each Well-Being Assessment Observation must support:**
 
-1. an additional well-being category code
+1. an additional pco category code
 1. either a valueString, valueCodeableConcept, or 1..* components
    1. a value string containing a free-text description of this well-being domain
    1. or a codeable concept containing a code for assessment this well-being domain

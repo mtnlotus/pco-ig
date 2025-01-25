@@ -6,38 +6,15 @@ Description: "Code system to identify resource codes and category codes for Well
 * ^caseSensitive = true
 * ^experimental = false
 * ^status = #active
-* ^hierarchyMeaning = #is-a
 * insert PCOCodeSystemPublisher
-* #what-matters "What Matters"
-    "Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care."
-* #mentation "Mentation"
-    "Prevent, identify, treat, and manage dementia, depression, and delirium and other mental health conditions across settings of care."
-* #mobility "Mobility"
-    "Ensure that person can move safely every day in order to maintain function and do What Matters."
-* #medication "Medicaion"
-    "If medication is necessary, use Age-Friendly medication that does not interfere with What Matters to the person, Mobility, or Mentation across settings of care."
-* #person-centered "Person-Centered"
-    "General category for person-centered goals and observations"
-* #assessment-type "Assessment Type"
-  * #now-rating "Now Rating"
-      "Where are you now?"
-  * #now-reasons "Now Reasons"
-      "What are the reasons you chose this number?"
-  * #future-rating "Future Rating"
-      "Where would you like to be?"
-  * #future-changes "Future Changes"
-      "What changes could you make to help you get there?"
-
-ValueSet: WellBeingCategories
-Id: wellbeing-categories
-Title: "Well-Being Categories"
-Description: "Categories for well-being assessment or goals."
-* ^experimental = false
-* WellBeingConcepts#what-matters "What Matters"
-* WellBeingConcepts#mentation "Mentation"
-* WellBeingConcepts#mobility "Mobility"
-* WellBeingConcepts#medication "Medication"
-* WellBeingConcepts#person-centered "Person-Centered"
+* #now-rating "Now Rating"
+    "Where are you now?"
+* #now-reasons "Now Reasons"
+    "What are the reasons you chose this number?"
+* #future-rating "Future Rating"
+    "Where would you like to be?"
+* #future-changes "Future Changes"
+    "What changes could you make to help you get there?"
 
 CodeSystem: VAWholeHealthExample
 Id: va-whole-health-example
