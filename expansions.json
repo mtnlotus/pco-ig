@@ -1,11 +1,74 @@
 {
   "resourceType" : "Bundle",
-  "id" : "b32cd0d9-0899-4a0d-8f5b-49db52fcdf57",
+  "id" : "68fb91d7-1895-4dcb-9f7f-e9fca3a0a702",
   "meta" : {
-    "lastUpdated" : "2025-01-25T16:46:38.148+00:00"
+    "lastUpdated" : "2025-02-03T23:01:50.727+00:00"
   },
   "type" : "collection",
   "entry" : [{
+    "fullUrl" : "http://hl7.org/fhir/us/pco/ValueSet/focus-selection",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on SNOMED CT 731000124108 edition 01-Sep 2024</p><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-363702006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/363702006\">363702006</a></td><td>http://snomed.info/sct</td><td>Has focus</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://snomed.info/sct-6061000175107\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/6061000175107\">6061000175107</a></td><td>http://snomed.info/sct</td><td>No preference (qualifier value)</td></tr></table></div>"
+      },
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/focus-selection",
+      "version" : "0.2.0",
+      "name" : "FocusSelectionValueSet",
+      "title" : "Focus Selection",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2025-02-03T23:01:50+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:8d253800-c43d-4e0c-8dda-16c8f37c01d4",
+        "timestamp" : "2025-02-03T23:03:18+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "363702006",
+          "display" : "Has focus"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "6061000175107",
+          "display" : "No preference (qualifier value)"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -19,7 +82,7 @@
       "title" : "Follow-Up GAS Score Answers",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -27,8 +90,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:a01e27d4-0ff6-4165-8c2e-d22a973932a3",
-        "timestamp" : "2025-01-25T16:48:09+00:00",
+        "identifier" : "urn:uuid:86081db9-2ba3-4e7d-9c7d-36f24f56d550",
+        "timestamp" : "2025-02-03T23:03:19+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -87,7 +150,7 @@
       "title" : "Goal Attainment Scaling (GAS) Score",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -95,8 +158,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:db531f28-bf40-4b2b-9329-dda027568424",
-        "timestamp" : "2025-01-25T16:48:10+00:00",
+        "identifier" : "urn:uuid:44db4982-801d-4e3e-818f-dac1b7a780ff",
+        "timestamp" : "2025-02-03T23:03:19+00:00",
         "total" : 0,
         "offset" : 0,
         "parameter" : [{
@@ -140,7 +203,7 @@
       "title" : "Goal Barrier Assessment Codes",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -148,8 +211,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:960d9474-3f81-44c6-b021-74ac3f0c92ae",
-        "timestamp" : "2025-01-25T16:48:10+00:00",
+        "identifier" : "urn:uuid:3c301ef5-04d8-4e97-8ae9-3696da99920a",
+        "timestamp" : "2025-02-03T23:03:20+00:00",
         "total" : 1,
         "offset" : 0,
         "parameter" : [{
@@ -198,7 +261,7 @@
       "title" : "Care Trade-off Choices",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -206,8 +269,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:ad7ff326-bfae-4115-a36d-c669c513ca31",
-        "timestamp" : "2025-01-25T16:48:11+00:00",
+        "identifier" : "urn:uuid:bda51e40-f3c7-419b-aacb-e9733bd3c49b",
+        "timestamp" : "2025-02-03T23:03:21+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -263,7 +326,7 @@
       "title" : "Care Trade-off Types Example",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -271,8 +334,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:cfd360fd-a7f3-4556-bca5-5288c67f0285",
-        "timestamp" : "2025-01-25T16:48:11+00:00",
+        "identifier" : "urn:uuid:24d8792f-00ec-4dda-949b-59936ba37383",
+        "timestamp" : "2025-02-03T23:03:21+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -346,7 +409,7 @@
       "title" : "Person-Centered Categories",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -354,8 +417,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c67d2eb4-9f5e-41f0-9031-e66bb6b613ec",
-        "timestamp" : "2025-01-25T16:48:12+00:00",
+        "identifier" : "urn:uuid:23621b65-1379-46fd-a830-045da0db37ff",
+        "timestamp" : "2025-02-03T23:03:22+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -401,7 +464,7 @@
       "title" : "Goal Barrier Types Example",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -409,8 +472,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:16ffd337-fc3a-4f4e-a726-67f1824f9daf",
-        "timestamp" : "2025-01-25T16:48:12+00:00",
+        "identifier" : "urn:uuid:90ce3f2e-e336-461d-8890-0f11195fea77",
+        "timestamp" : "2025-02-03T23:03:22+00:00",
         "total" : 5,
         "offset" : 0,
         "parameter" : [{
@@ -479,7 +542,7 @@
       "title" : "PCO Goal Domain Categories Example",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -487,8 +550,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:bc6a63ac-266a-4def-8630-c32db0b5b414",
-        "timestamp" : "2025-01-25T16:48:13+00:00",
+        "identifier" : "urn:uuid:262279ac-09e5-4224-bed1-86d4bf4157e6",
+        "timestamp" : "2025-02-03T23:03:23+00:00",
         "total" : 12,
         "offset" : 0,
         "parameter" : [{
@@ -584,7 +647,7 @@
       "title" : "PROM Target Measure Scores",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -592,8 +655,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:337b04e7-68c6-4b24-8081-50c8aaf254a8",
-        "timestamp" : "2025-01-25T16:48:13+00:00",
+        "identifier" : "urn:uuid:72b2f467-3096-4242-8ce7-814bb1d96782",
+        "timestamp" : "2025-02-03T23:03:23+00:00",
         "total" : 34,
         "offset" : 0,
         "parameter" : [{
@@ -799,7 +862,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion done internally based on <a href=\"CodeSystem-readiness-assessment-concepts.html\">codesystem Readiness Assessment Concepts v0.2.0 (CodeSystem)</a></p><p>This value set contains 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-readiness-assessent\"> </a>\u00a0\u00a0<a href=\"CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-readiness-assessent\">readiness-assessent</a></td><td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td><td>Readiness assessment</td><td><div><p>Used as a panel code for readiness scales</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-importance\"> </a>\u00a0\u00a0<a href=\"CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-importance\">importance</a></td><td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td><td>Importance of change</td><td><div/></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-confidence\"> </a>\u00a0\u00a0<a href=\"CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-confidence\">confidence</a></td><td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td><td>Confidence to change</td><td><div/></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion done internally based on <a href=\"CodeSystem-readiness-assessment-concepts.html\">codesystem Readiness Assessment Concepts v0.2.0 (CodeSystem)</a></p><p>This value set contains 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-readiness-assessment\"> </a>\u00a0\u00a0<a href=\"CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-readiness-assessment\">readiness-assessment</a></td><td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td><td>Readiness assessment</td><td><div><p>Panel code for readiness scales</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-importance\"> </a>\u00a0\u00a0<a href=\"CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-importance\">importance</a></td><td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td><td>Importance of change</td><td><div/></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-confidence\"> </a>\u00a0\u00a0<a href=\"CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-confidence\">confidence</a></td><td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td><td>Confidence to change</td><td><div/></td></tr></table></div>"
       },
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/readiness-assessment-codes",
       "version" : "0.2.0",
@@ -807,7 +870,7 @@
       "title" : "Readiness Assessment Codes",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -815,8 +878,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d0e4b969-8cd2-4bb1-bb97-4b4fa356c7ad",
-        "timestamp" : "2025-01-25T16:48:14+00:00",
+        "identifier" : "urn:uuid:303a979b-c983-46f0-90c4-a58c41cab333",
+        "timestamp" : "2025-02-03T23:03:24+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -837,7 +900,7 @@
         }],
         "contains" : [{
           "system" : "http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts",
-          "code" : "readiness-assessent",
+          "code" : "readiness-assessment",
           "display" : "Readiness assessment"
         },
         {
@@ -867,7 +930,7 @@
       "title" : "Well-Being Domains Example",
       "status" : "draft",
       "experimental" : false,
-      "date" : "2025-01-25T16:46:38+00:00",
+      "date" : "2025-02-03T23:01:50+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -875,8 +938,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:2ac8c181-6dcb-4947-841f-eebcf9fdaddd",
-        "timestamp" : "2025-01-25T16:48:14+00:00",
+        "identifier" : "urn:uuid:547007d0-b9df-477f-bf4a-56a7d360f65c",
+        "timestamp" : "2025-02-03T23:03:24+00:00",
         "total" : 9,
         "offset" : 0,
         "parameter" : [{

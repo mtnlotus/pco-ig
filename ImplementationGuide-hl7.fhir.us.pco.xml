@@ -14,7 +14,7 @@
   <name value="PCO"/>
   <title value="Person-Centered Outcomes"/>
   <status value="draft"/>
-  <date value="2025-01-25T16:46:38+00:00"/>
+  <date value="2025-02-03T23:01:50+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -675,6 +675,17 @@
         <reference value="Library/FHIRHelpers"/>
       </reference>
       <name value="FHIRHelpers"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/focus-selection"/>
+      </reference>
+      <name value="Focus Selection"/>
+      <description value="Value set containing choices for a person's focus."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

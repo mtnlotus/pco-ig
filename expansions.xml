@@ -1,11 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="b32cd0d9-0899-4a0d-8f5b-49db52fcdf57"/>
+  <id value="68fb91d7-1895-4dcb-9f7f-e9fca3a0a702"/>
   <meta>
-    <lastUpdated value="2025-01-25T16:46:38.148+00:00"/>
+    <lastUpdated value="2025-02-03T23:01:50.727+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/focus-selection"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on SNOMED CT 731000124108 edition 01-Sep 2024</p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-363702006"> </a>  
+                  <a href="http://snomed.info/id/363702006">363702006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Has focus</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://snomed.info/sct-6061000175107"> </a>  
+                  <a href="http://snomed.info/id/6061000175107">6061000175107</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>No preference (qualifier value)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/pco/ValueSet/focus-selection"/>
+        <version value="0.2.0"/>
+        <name value="FocusSelectionValueSet"/>
+        <title value="Focus Selection"/>
+        <status value="draft"/>
+        <experimental value="false"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:8d253800-c43d-4e0c-8dda-16c8f37c01d4"/>
+          <timestamp value="2025-02-03T23:03:18+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="363702006"/>
+            <display value="Has focus"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="6061000175107"/>
+            <display value="No preference (qualifier value)"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
   <entry>
     <fullUrl value="http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers"/>
     <resource>
@@ -63,7 +162,7 @@
         <title value="Follow-Up GAS Score Answers"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71,8 +170,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a01e27d4-0ff6-4165-8c2e-d22a973932a3"/>
-          <timestamp value="2025-01-25T16:48:09+00:00"/>
+          <identifier value="urn:uuid:86081db9-2ba3-4e7d-9c7d-36f24f56d550"/>
+          <timestamp value="2025-02-03T23:03:19+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -151,7 +250,7 @@
         <title value="Goal Attainment Scaling (GAS) Score"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -159,8 +258,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:db531f28-bf40-4b2b-9329-dda027568424"/>
-          <timestamp value="2025-01-25T16:48:10+00:00"/>
+          <identifier value="urn:uuid:44db4982-801d-4e3e-818f-dac1b7a780ff"/>
+          <timestamp value="2025-02-03T23:03:19+00:00"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -232,7 +331,7 @@
         <title value="Goal Barrier Assessment Codes"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -240,8 +339,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:960d9474-3f81-44c6-b021-74ac3f0c92ae"/>
-          <timestamp value="2025-01-25T16:48:10+00:00"/>
+          <identifier value="urn:uuid:3c301ef5-04d8-4e97-8ae9-3696da99920a"/>
+          <timestamp value="2025-02-03T23:03:20+00:00"/>
           <total value="1"/>
           <offset value="0"/>
           <parameter>
@@ -344,7 +443,7 @@
         <title value="Care Trade-off Choices"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -352,8 +451,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:ad7ff326-bfae-4115-a36d-c669c513ca31"/>
-          <timestamp value="2025-01-25T16:48:11+00:00"/>
+          <identifier value="urn:uuid:bda51e40-f3c7-419b-aacb-e9733bd3c49b"/>
+          <timestamp value="2025-02-03T23:03:21+00:00"/>
           <total value="4"/>
           <offset value="0"/>
           <parameter>
@@ -477,7 +576,7 @@
         <title value="Care Trade-off Types Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -485,8 +584,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:cfd360fd-a7f3-4556-bca5-5288c67f0285"/>
-          <timestamp value="2025-01-25T16:48:11+00:00"/>
+          <identifier value="urn:uuid:24d8792f-00ec-4dda-949b-59936ba37383"/>
+          <timestamp value="2025-02-03T23:03:21+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -613,7 +712,7 @@
         <title value="Person-Centered Categories"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -621,8 +720,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c67d2eb4-9f5e-41f0-9031-e66bb6b613ec"/>
-          <timestamp value="2025-01-25T16:48:12+00:00"/>
+          <identifier value="urn:uuid:23621b65-1379-46fd-a830-045da0db37ff"/>
+          <timestamp value="2025-02-03T23:03:22+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -728,7 +827,7 @@
         <title value="Goal Barrier Types Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -736,8 +835,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:16ffd337-fc3a-4f4e-a726-67f1824f9daf"/>
-          <timestamp value="2025-01-25T16:48:12+00:00"/>
+          <identifier value="urn:uuid:90ce3f2e-e336-461d-8890-0f11195fea77"/>
+          <timestamp value="2025-02-03T23:03:22+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -990,7 +1089,7 @@
         <title value="PCO Goal Domain Categories Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -998,8 +1097,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:bc6a63ac-266a-4def-8630-c32db0b5b414"/>
-          <timestamp value="2025-01-25T16:48:13+00:00"/>
+          <identifier value="urn:uuid:262279ac-09e5-4224-bed1-86d4bf4157e6"/>
+          <timestamp value="2025-02-03T23:03:23+00:00"/>
           <total value="12"/>
           <offset value="0"/>
           <parameter>
@@ -1387,7 +1486,7 @@
         <title value="PROM Target Measure Scores"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1395,8 +1494,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:337b04e7-68c6-4b24-8081-50c8aaf254a8"/>
-          <timestamp value="2025-01-25T16:48:13+00:00"/>
+          <identifier value="urn:uuid:72b2f467-3096-4242-8ce7-814bb1d96782"/>
+          <timestamp value="2025-02-03T23:03:23+00:00"/>
           <total value="34"/>
           <offset value="0"/>
           <parameter>
@@ -1628,14 +1727,14 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-readiness-assessent"> </a>  
-                  <a href="CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-readiness-assessent">readiness-assessent</a>
+                  <a name="x-http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts-readiness-assessment"> </a>  
+                  <a href="CodeSystem-readiness-assessment-concepts.html#readiness-assessment-concepts-readiness-assessment">readiness-assessment</a>
                 </td>
                 <td>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</td>
                 <td>Readiness assessment</td>
                 <td>
                   <div>
-                    <p>Used as a panel code for readiness scales</p>
+                    <p>Panel code for readiness scales</p>
 
                   </div>
                 </td>
@@ -1671,7 +1770,7 @@
         <title value="Readiness Assessment Codes"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1679,8 +1778,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d0e4b969-8cd2-4bb1-bb97-4b4fa356c7ad"/>
-          <timestamp value="2025-01-25T16:48:14+00:00"/>
+          <identifier value="urn:uuid:303a979b-c983-46f0-90c4-a58c41cab333"/>
+          <timestamp value="2025-02-03T23:03:24+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1701,7 +1800,7 @@
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts"/>
-            <code value="readiness-assessent"/>
+            <code value="readiness-assessment"/>
             <display value="Readiness assessment"/>
           </contains>
           <contains>
@@ -1882,7 +1981,7 @@
         <title value="Well-Being Domains Example"/>
         <status value="draft"/>
         <experimental value="false"/>
-        <date value="2025-01-25T16:46:38+00:00"/>
+        <date value="2025-02-03T23:01:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1890,8 +1989,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2ac8c181-6dcb-4947-841f-eebcf9fdaddd"/>
-          <timestamp value="2025-01-25T16:48:14+00:00"/>
+          <identifier value="urn:uuid:547007d0-b9df-477f-bf4a-56a7d360f65c"/>
+          <timestamp value="2025-02-03T23:03:24+00:00"/>
           <total value="9"/>
           <offset value="0"/>
           <parameter>

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-25T16:46:38+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-03T23:01:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -786,6 +786,18 @@
          fhir:reference [ fhir:v "Library/FHIRHelpers" ]
        ] ;
        fhir:name [ fhir:v "FHIRHelpers" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/focus-selection> ;
+         fhir:reference [ fhir:v "ValueSet/focus-selection" ]
+       ] ;
+       fhir:name [ fhir:v "Focus Selection" ] ;
+       fhir:description [ fhir:v "Value set containing choices for a person's focus." ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
@@ -1709,6 +1721,8 @@
 <http://hl7.org/fhir/us/pco/Device/cqf-tooling> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Library/FHIRHelpers> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/ValueSet/focus-selection> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers> a fhir:us .
 
