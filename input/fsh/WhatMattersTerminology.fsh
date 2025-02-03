@@ -16,6 +16,15 @@ Description: "Code system to identify resource codes and category codes for Well
 * #future-changes "Future Changes"
     "What changes could you make to help you get there?"
 
+ValueSet: FocusSelectionValueSet
+Id: focus-selection
+Title: "Focus Selection"
+Description: "Value set containing choices for a person's focus."
+* ^experimental = false
+* insert SNOMEDCopyrightNotice
+* $SCT#363702006 "Has focus"
+* $SCT#6061000175107 "No preference"
+
 CodeSystem: VAWholeHealthExample
 Id: va-whole-health-example
 Title: "VA Whole Health Concepts"
