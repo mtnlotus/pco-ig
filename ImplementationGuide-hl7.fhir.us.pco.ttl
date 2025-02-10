@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,18 +11,21 @@
   fhir:id [ fhir:v "hl7.fhir.us.pco"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.us.pco</b></p><a name=\"hl7.fhir.us.pco\"> </a><a name=\"hchl7.fhir.us.pco\"> </a><a name=\"hl7.fhir.us.pco-en-US\"> </a><h2>PCO</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco</pre><div><p>Person-Centered Outcomes (PCO) FHIR Implementation Guide</p>\n</div></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.us.pco</b></p><a name=\"hl7.fhir.us.pco\"> </a><a name=\"hchl7.fhir.us.pco\"> </a><a name=\"hl7.fhir.us.pco-en-US\"> </a><h2>PCO</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco</pre><div><p>Person-Centered Outcomes (PCO) FHIR Implementation Guide</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "pc" ]
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pc"
+     ]
   ] ) ; # 
   fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/ImplementationGuide/hl7.fhir.us.pco"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "PCO"] ; # 
   fhir:title [ fhir:v "Person-Centered Outcomes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-02-03T23:01:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-10T21:11:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
@@ -47,7 +51,10 @@
      fhir:id [ fhir:v "hl7tx" ] ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
      ] ) ;
      fhir:uri [
        fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
@@ -59,7 +66,10 @@
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
      ] ) ;
      fhir:uri [
        fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
@@ -104,515 +114,857 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "copyrightyear" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "copyrightyear"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2024+" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2024+"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "releaselabel" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "releaselabel"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ci-build" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ci-build"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-expansion-params" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-expansion-params"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "../../input/_resources/terminology-settings.json" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "../../input/_resources/terminology-settings.json"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "show-inherited-invariants" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "show-inherited-invariants"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "false" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "false"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-jurisdiction" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-jurisdiction"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-publisher" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-publisher"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "templates/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "templates/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-history" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-history"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/us/pco/history.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/us/pco/history.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "autoload-resources" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "autoload-resources"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-qa"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-temp" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-temp"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/pages" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-output"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-suppressed-warnings" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-suppressed-warnings"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-html"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-md" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-md"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page-md.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-contact" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-contact"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-context" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-context"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-copyright" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-copyright"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-license" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-license"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-version" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-version"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-wg" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-wg"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "active-tables" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "active-tables"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "fmm-definition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "fmm-definition"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "propagate-status" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "propagate-status"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "excludelogbinaryformat" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "excludelogbinaryformat"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "tabbed-snapshots" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "tabbed-snapshots"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "hl7.fhir.uv.tools.r4#0.3.0" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "hl7.fhir.uv.tools.r4#0.3.0"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "copyrightyear" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "copyrightyear"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2024+" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2024+"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "releaselabel" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "releaselabel"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ci-build" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ci-build"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-expansion-params" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-expansion-params"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "../../input/_resources/terminology-settings.json" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "../../input/_resources/terminology-settings.json"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "show-inherited-invariants" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "show-inherited-invariants"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "false" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "false"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-jurisdiction" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-jurisdiction"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-publisher" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-publisher"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "templates/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "templates/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-history" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-history"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/us/pco/history.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/us/pco/history.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "autoload-resources" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "autoload-resources"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-qa" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-qa"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-temp" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-temp"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/pages" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-output" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-output"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-suppressed-warnings" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-suppressed-warnings"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-html" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-html"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-md" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-md"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page-md.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-contact" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-contact"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-context" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-context"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-copyright" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-copyright"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-license" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-license"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-version" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-version"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-wg" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-wg"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "active-tables" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "active-tables"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "fmm-definition" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "fmm-definition"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "propagate-status" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "propagate-status"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "excludelogbinaryformat" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "excludelogbinaryformat"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "tabbed-snapshots" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "tabbed-snapshots"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CarePlan" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CarePlan"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/CarePlan/pcoAnxietyCarePlanExample> ;
@@ -621,13 +973,17 @@
        fhir:name [ fhir:v "Care Plan for PCO Anxiety Goal" ] ;
        fhir:description [ fhir:v "Care Plan for a person-centered goal using a PROM score measure." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CarePlan" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CarePlan"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/CarePlan/pcoPhyicalFunctionCarePlanExample> ;
@@ -636,13 +992,17 @@
        fhir:name [ fhir:v "Care Plan for person-centered goal" ] ;
        fhir:description [ fhir:v "Care Plan for a person-centered goal with action steps for achieving what matters most to that person." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ServiceRequest" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ServiceRequest/pcoMindfulnessSupportProgram> ;
@@ -650,11 +1010,17 @@
        ] ;
        fhir:name [ fhir:v "Care Plan: Action step for mindfulness program" ] ;
        fhir:description [ fhir:v "Care Plan activity: Mindfulness coaching to support anxiety management" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationRequest" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationRequest"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/MedicationRequest/pcoAntiInflammatoryMedication> ;
@@ -662,11 +1028,17 @@
        ] ;
        fhir:name [ fhir:v "Care Plan: Anti-Inflammatory Medication" ] ;
        fhir:description [ fhir:v "Care Plan activity: Anti-inflammatory gel for knee pain to enable walking" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ServiceRequest" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ServiceRequest/pcoPhysicalTherapyReferral> ;
@@ -674,11 +1046,17 @@
        ] ;
        fhir:name [ fhir:v "Care Plan: Clinical action step a patient" ] ;
        fhir:description [ fhir:v "Care Plan activity: Physical therapy to relieve pain related to walking" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ServiceRequest" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ServiceRequest/pcoWalkOutsideActionStep> ;
@@ -686,123 +1064,51 @@
        ] ;
        fhir:name [ fhir:v "Care Plan: Personal action step" ] ;
        fhir:description [ fhir:v "Care Plan activity: Initial personal action step toward goal of walking dog outside" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-care-tradeoff" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-off Assessment" ] ;
-       fhir:description [ fhir:v "Assessment observation about a care trade-off that is helpful or burdensome (difficult, uncomfortable, or unhelpful)." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes> ;
-         fhir:reference [ fhir:v "CodeSystem/pco-care-tradeoff-choice-codes" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-off Choice Codes" ] ;
-       fhir:description [ fhir:v "Code system to identify care trade-off choices." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs> ;
-         fhir:reference [ fhir:v "ValueSet/pco-care-tradeoff-choices-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-off Choices" ] ;
-       fhir:description [ fhir:v "Options for a care trade-off." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-types-example-vs> ;
-         fhir:reference [ fhir:v "ValueSet/pco-care-tradeoff-types-example-vs" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-off Types Example" ] ;
-       fhir:description [ fhir:v "Example value set containing types of care trade-off." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoCareTradeOffHelpfulExercising> ;
-         fhir:reference [ fhir:v "Observation/pcoCareTradeOffHelpfulExercising" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-Off: Exercising" ] ;
-       fhir:description [ fhir:v "Care Trade-off that is helpful" ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoCareTradeOffBurdensomeWaterPill> ;
-         fhir:reference [ fhir:v "Observation/pcoCareTradeOffBurdensomeWaterPill" ]
-       ] ;
-       fhir:name [ fhir:v "Care Trade-Off: Water pill" ] ;
-       fhir:description [ fhir:v "Care Trade-off that is burdensome" ] ;
-       fhir:example [
-         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Device" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Device"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Device/cqf-tooling> ;
          fhir:reference [ fhir:v "Device/cqf-tooling" ]
        ] ;
        fhir:name [ fhir:v "cqf-tooling" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Library"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Library/FHIRHelpers> ;
          fhir:reference [ fhir:v "Library/FHIRHelpers" ]
        ] ;
        fhir:name [ fhir:v "FHIRHelpers" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/focus-selection> ;
-         fhir:reference [ fhir:v "ValueSet/focus-selection" ]
-       ] ;
-       fhir:name [ fhir:v "Focus Selection" ] ;
-       fhir:description [ fhir:v "Value set containing choices for a person's focus." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers> ;
@@ -810,11 +1116,17 @@
        ] ;
        fhir:name [ fhir:v "Follow-Up GAS Score Answers" ] ;
        fhir:description [ fhir:v "The progress rating on goal attainment scaling." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoPROMScoreAnxietyExample> ;
@@ -823,13 +1135,17 @@
        fhir:name [ fhir:v "GAD-7 PROM Follow-up Score" ] ;
        fhir:description [ fhir:v "Follow-up GAD-7 PROM score observation recorded by a Patient showing goal progress." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoGASScoreBaselineExample> ;
@@ -838,24 +1154,35 @@
        fhir:name [ fhir:v "GAS Baseline Score" ] ;
        fhir:description [ fhir:v "Baseline GAS score observation at start of goal." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Questionnaire" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Questionnaire/69737-5> ;
          fhir:reference [ fhir:v "Questionnaire/69737-5" ]
        ] ;
-       fhir:name [ fhir:v "Generalized anxiety disorder 7 item" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:name [ fhir:v "Generalized Anxiety Disorder (GAD-7)" ] ;
+       fhir:description [ fhir:v "Generalized anxiety disorder 7-item assessment" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/goal-attainment-scaling-score> ;
@@ -863,11 +1190,17 @@
        ] ;
        fhir:name [ fhir:v "Goal Attainment Scaling (GAS) Score" ] ;
        fhir:description [ fhir:v "The score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation> ;
@@ -875,11 +1208,17 @@
        ] ;
        fhir:name [ fhir:v "Goal Attainment Scaling (GAS) score observation" ] ;
        fhir:description [ fhir:v "The follow-up score indicates how a patient, caregiver, or practitioner rated progress on goal attainment scaling." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-attainment-scaling> ;
@@ -887,11 +1226,17 @@
        ] ;
        fhir:name [ fhir:v "Goal Attainment Scaling Extension" ] ;
        fhir:description [ fhir:v "Goal Attainment Scaling (GAS) is an extension used to specify five levels of attainment for a person-centered goal." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes> ;
@@ -899,11 +1244,17 @@
        ] ;
        fhir:name [ fhir:v "Goal Barrier Assessment Codes" ] ;
        fhir:description [ fhir:v "Terminology codes for goal barrier assessment" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-goal-barrier-types-example-vs> ;
@@ -911,11 +1262,17 @@
        ] ;
        fhir:name [ fhir:v "Goal Barrier Types Example" ] ;
        fhir:description [ fhir:v "Example value set containing types of goal barriers." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoBarrierDiabeticDiet> ;
@@ -924,13 +1281,17 @@
        fhir:name [ fhir:v "Goal Barrier: Diabetic diet (other)" ] ;
        fhir:description [ fhir:v "Barrier with a free-text description" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoBarrierUrinaryIncontinence> ;
@@ -939,13 +1300,17 @@
        fhir:name [ fhir:v "Goal Barrier: Urinary incontinence" ] ;
        fhir:description [ fhir:v "Barrier for goal achievement" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Goal" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Goal"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalAnxietyExample> ;
@@ -954,13 +1319,17 @@
        fhir:name [ fhir:v "Goal for GAD-7 PROM Outcome" ] ;
        fhir:description [ fhir:v "Person-centered goal with a PROM outcome target for GAD-7 score." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Goal" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Goal"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExample> ;
@@ -969,13 +1338,17 @@
        fhir:name [ fhir:v "Goal with GAS" ] ;
        fhir:description [ fhir:v "Person-centered goal with attainment scaling extensions" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Goal" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Goal"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalWalkDogExampleWithoutExtensions> ;
@@ -984,13 +1357,17 @@
        fhir:name [ fhir:v "Goal without GAS Extensions" ] ;
        fhir:description [ fhir:v "Person-centered goal with GAS target measure and without GAS extensions" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Goal" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Goal"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Goal/pcoGoalPainLevelExample> ;
@@ -999,46 +1376,68 @@
        fhir:name [ fhir:v "Goal without GAS or PROM" ] ;
        fhir:description [ fhir:v "Person-centered goal without attainment scaling or PROM" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Library"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Library/GoalAttainmentLogic> ;
          fhir:reference [ fhir:v "Library/GoalAttainmentLogic" ]
        ] ;
        fhir:name [ fhir:v "GoalAttainmentLogic" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Library"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Library/GoalFollowUpMeasure> ;
          fhir:reference [ fhir:v "Library/GoalFollowUpMeasure" ]
        ] ;
        fhir:name [ fhir:v "GoalFollowUpMeasure" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Library"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Library/GoalIdentificationMeasure> ;
          fhir:reference [ fhir:v "Library/GoalIdentificationMeasure" ]
        ] ;
        fhir:name [ fhir:v "GoalIdentificationMeasure" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerGonzalez> ;
@@ -1046,11 +1445,17 @@
        ] ;
        fhir:name [ fhir:v "Health & Wellness Coach" ] ;
        fhir:description [ fhir:v "Maria Gonzalez, NBC-HWC" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> ;
@@ -1058,11 +1463,17 @@
        ] ;
        fhir:name [ fhir:v "Patient Camila Lopez" ] ;
        fhir:description [ fhir:v "Camila Lopez" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
@@ -1070,11 +1481,17 @@
        ] ;
        fhir:name [ fhir:v "Patient Dorothy Jones" ] ;
        fhir:description [ fhir:v "Dorothy Jones" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePatientFollowupExample> ;
@@ -1083,13 +1500,17 @@
        fhir:name [ fhir:v "Patient GAS Follow-up Score" ] ;
        fhir:description [ fhir:v "Follow-up GAS score observation recorded by a Patient showing goal progress." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation> ;
@@ -1097,11 +1518,17 @@
        ] ;
        fhir:name [ fhir:v "Patient-Reported Outcome Measure (PROM) score observation" ] ;
        fhir:description [ fhir:v "This observation records how a patient's progress score is rated using a PROM assessment." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-goal-domains-example-vs> ;
@@ -1109,11 +1536,17 @@
        ] ;
        fhir:name [ fhir:v "PCO Goal Domain Categories Example" ] ;
        fhir:description [ fhir:v "Example value set to identify the goal domains category for PCO resources." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains> ;
@@ -1121,22 +1554,34 @@
        ] ;
        fhir:name [ fhir:v "PCO Goal Domains" ] ;
        fhir:description [ fhir:v "Goal domain codes used to identify the category for PCO resources." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Library"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Library/PCOCommon> ;
          fhir:reference [ fhir:v "Library/PCOCommon" ]
        ] ;
        fhir:name [ fhir:v "PCOCommon" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan> ;
@@ -1144,11 +1589,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Care Plan" ] ;
        fhir:description [ fhir:v "A person-centered care plan SHALL reference a person-centered goal and SHALL include action steps that support progress toward achievement of the plan's goals and desired outcomes. A plan SHOULD address the person's stated priorities for what matters most to them. Action steps may include both treatment procedures and self-care steps identified by the person." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/pco-categories> ;
@@ -1156,11 +1607,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Categories" ] ;
        fhir:description [ fhir:v "Categories for person-centered assessment or goals." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-goal-profile> ;
@@ -1168,11 +1625,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered GAS Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal with goal attainment scaling." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile> ;
@@ -1180,11 +1643,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal focused on an individual's well-being. A Person-centered goal SHALL include either a PCO category, or address a What Matters assessment." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-barrier> ;
@@ -1192,11 +1661,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal Barrier" ] ;
        fhir:description [ fhir:v "Assessment observation about a barrier, bothersome symptom or health concern that interferes with goal achievement." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Measure" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Measure"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Measure/GoalFollowUpMeasure> ;
@@ -1204,11 +1679,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal Follow-Up" ] ;
        fhir:description [ fhir:v "Measure 2 - Goal Follow-up: % of individuals 18 years of age or older with a complex care need who received follow-up on their PCO goal within two weeks to six months of when the PCO goal and GAS or PROM were identified." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Measure" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Measure"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Measure/GoalIdentificationMeasure> ;
@@ -1216,11 +1697,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Goal Identification" ] ;
        fhir:description [ fhir:v "Measure 1 - Goal Identification: % of individuals 18 years of age and older with a complex care need who had a PCO goal identified resulting in completion of goal attainment scaling (GAS) or a Patient-Reported Outcome Measure (PROM) and development of an action plan." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts> ;
@@ -1228,11 +1715,17 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered Outcome Concepts" ] ;
        fhir:description [ fhir:v "Code system to identify resource codes and category codes for Person-Centered Outcomes." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile> ;
@@ -1240,11 +1733,35 @@
        ] ;
        fhir:name [ fhir:v "Person-Centered PROM Goal" ] ;
        fhir:description [ fhir:v "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "List" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Questionnaire/health-inventory-example> ;
+         fhir:reference [ fhir:v "Questionnaire/health-inventory-example" ]
+       ] ;
+       fhir:name [ fhir:v "Personal Health Inventory" ] ;
+       fhir:description [ fhir:v "An Questionnaire for a person's assessment of what matters most in their health and well-being." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "List"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/List/pcoPrioritiesList> ;
@@ -1253,36 +1770,53 @@
        fhir:name [ fhir:v "Personal Priorities List" ] ;
        fhir:description [ fhir:v "Patient selecton of the most important items for well-being, goal barrier, and the most bothersome care trade-off" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer> ;
          fhir:reference [ fhir:v "StructureDefinition/pco-personal-priorities-organizer" ]
        ] ;
        fhir:name [ fhir:v "Personal Priorities Organizer" ] ;
-       fhir:description [ fhir:v "Personal Priorities Organizer is used to represent a set of person-centered goals, preferences or care experiences in a preferred ranked order." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:description [ fhir:v "Personal Priorities Organizer is used to represent a set of person-centered goals, what matters assessment, or barriers in a preferred ranked order." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Questionnaire" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Questionnaire"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Questionnaire/44249-1> ;
          fhir:reference [ fhir:v "Questionnaire/44249-1" ]
        ] ;
-       fhir:name [ fhir:v "PHQ-9 quick depression assessment panel" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:name [ fhir:v "PHQ-9 Depression Assessment" ] ;
+       fhir:description [ fhir:v "Depression assessment 9-item panel" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoGASScorePractitionerFollowupExample> ;
@@ -1291,13 +1825,17 @@
        fhir:name [ fhir:v "Practitioner GAS Follow-up Score" ] ;
        fhir:description [ fhir:v "Follow-up GAS score observation recorded by a Practitioner showing goal progress." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-gas-score-observation>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> ;
@@ -1305,11 +1843,17 @@
        ] ;
        fhir:name [ fhir:v "Primary Care Physician" ] ;
        fhir:description [ fhir:v "John Anderson, MD" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "true"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/prom-target-measures> ;
@@ -1317,11 +1861,17 @@
        ] ;
        fhir:name [ fhir:v "PROM Target Measure Scores" ] ;
        fhir:description [ fhir:v "Target measure score codes used to track progress on patient-reported outcome measures (PROMs)." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment> ;
@@ -1329,11 +1879,17 @@
        ] ;
        fhir:name [ fhir:v "Readiness Assessment" ] ;
        fhir:description [ fhir:v "Assessment of a person's readiness for change including importance and confidence for making that change." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/readiness-assessment-codes> ;
@@ -1341,11 +1897,17 @@
        ] ;
        fhir:name [ fhir:v "Readiness Assessment Codes" ] ;
        fhir:description [ fhir:v "Terminology codes for readiness assessment types." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts> ;
@@ -1353,11 +1915,17 @@
        ] ;
        fhir:name [ fhir:v "Readiness Assessment Concepts" ] ;
        fhir:description [ fhir:v "Code system to types of readiness for change." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentPanel> ;
@@ -1366,13 +1934,17 @@
        fhir:name [ fhir:v "Readiness Assessment panel" ] ;
        fhir:description [ fhir:v "Readiness assessment with two members" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentConfidence> ;
@@ -1381,13 +1953,17 @@
        fhir:name [ fhir:v "Readiness Assessment: Confidence" ] ;
        fhir:description [ fhir:v "Readiness assessment of confidence to achieve a goal" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentImportance> ;
@@ -1396,37 +1972,35 @@
        fhir:name [ fhir:v "Readiness Assessment: Importance" ] ;
        fhir:description [ fhir:v "Readiness assessment of importance for a goal" ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-readiness-assessment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example> ;
-         fhir:reference [ fhir:v "CodeSystem/va-whole-health-example" ]
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health> ;
+         fhir:reference [ fhir:v "CodeSystem/va-whole-health" ]
        ] ;
        fhir:name [ fhir:v "VA Whole Health Concepts" ] ;
-       fhir:description [ fhir:v "Code system to identify \"What Matters\" concepts from the VA Whole Health approach and Circle of Health." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:description [ fhir:v "Code system to identify concepts from the VA Whole Health approach and Circle of Health." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts> ;
-         fhir:reference [ fhir:v "CodeSystem/wellbeing-concepts" ]
-       ] ;
-       fhir:name [ fhir:v "Well-Being Concepts" ] ;
-       fhir:description [ fhir:v "Code system to identify resource codes and category codes for Well-Being." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example> ;
@@ -1434,50 +2008,90 @@
        ] ;
        fhir:name [ fhir:v "Well-Being Domains Example" ] ;
        fhir:description [ fhir:v "Example value set containing well-being domains from the VA Circle of Health." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment> ;
          fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-assessment" ]
        ] ;
        fhir:name [ fhir:v "What Matters Assessment" ] ;
-       fhir:description [ fhir:v "Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority> ;
-         fhir:reference [ fhir:v "StructureDefinition/pco-what-matters-priority" ]
-       ] ;
-       fhir:name [ fhir:v "What Matters Priority" ] ;
-       fhir:description [ fhir:v "Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority." ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersPriorityExample> ;
-         fhir:reference [ fhir:v "Observation/pcoWhatMattersPriorityExample" ]
-       ] ;
-       fhir:name [ fhir:v "What Matters Priority: Moving the Body" ] ;
-       fhir:description [ fhir:v "What Matters observation recorded by a Patient to indicate their priority for well-being." ] ;
+       fhir:description [ fhir:v "Assessment observation for What Matters to a person. May be a panel assessment with member observations." ] ;
        fhir:example [
-         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"^^xsd:anyURI ;
-         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority>
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/ValueSet/what-matters-codes-example> ;
+         fhir:reference [ fhir:v "ValueSet/what-matters-codes-example" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Codes Example" ] ;
+       fhir:description [ fhir:v "Example value set containing codes for What Matters observations." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts> ;
+         fhir:reference [ fhir:v "CodeSystem/what-matters-concepts" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Concepts" ] ;
+       fhir:description [ fhir:v "Code system to identify observation codes for What Matters." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersFocusAreaExample> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersFocusAreaExample" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters Focus: Moving the Body" ] ;
+       fhir:description [ fhir:v "What Matters observation recorded by a Patient to indicate their focus area for well-being." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersStatementExample> ;
@@ -1486,154 +2100,291 @@
        fhir:name [ fhir:v "What Matters Statement: Family & Friends" ] ;
        fhir:description [ fhir:v "What Matters observation added by a Patient to record a free-text statement about a well-being focus area." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExample> ;
          fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExample" ]
        ] ;
-       fhir:name [ fhir:v "What Matters: Family & Friends" ] ;
+       fhir:name [ fhir:v "What Matters: Family & Friends (Panel)" ] ;
        fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureRating> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExampleFutureRating" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Family & Friends, Future Rating" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleNowRating> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExampleNowRating" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Family & Friends, Now Rating" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExample> ;
          fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExample" ]
        ] ;
-       fhir:name [ fhir:v "What Matters: Moving the Body" ] ;
+       fhir:name [ fhir:v "What Matters: Moving the Body (Panel)" ] ;
        fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
        fhir:example [
+         a fhir:canonical ;
          fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
          fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
        ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Library" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureChanges> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExampleFutureChanges" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Moving the Body, Future Changes" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleFutureRating> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExampleFutureRating" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Moving the Body, Future Rating" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowRating> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExampleNowRating" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Moving the Body, Now Rating" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowReasons> ;
+         fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExampleNowReasons" ]
+       ] ;
+       fhir:name [ fhir:v "What Matters: Moving the Body, Now Reasons" ] ;
+       fhir:description [ fhir:v "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Library"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://hl7.org/fhir/us/pco/Library/WhatMattersLogic> ;
          fhir:reference [ fhir:v "Library/WhatMattersLogic" ]
        ] ;
        fhir:name [ fhir:v "WhatMattersLogic" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v "false"^^xsd:boolean
+       ]
      ] ) ;
      fhir:page [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+         fhir:value [
+           a fhir:url ;
+           fhir:v "toc.html"^^xsd:anyURI
+         ]
        ] ) ;
-       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:name [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
        fhir:title [ fhir:v "Table of Contents" ] ;
        fhir:generation [ fhir:v "html" ] ;
        fhir:page ( [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "index.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Home" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "user_stories.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Downloads" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "feedback.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "feedback.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Feedback" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "formal_specification.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "formal_specification.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Formal Specification" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "gas-examples.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "gas-examples.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Gas Examples" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "gas-examples-one-table.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "gas-examples-one-table.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Gas Examples One Table" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "underlying_technologies.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "underlying_technologies.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Underlying Technologies" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "use_cases.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "use_cases.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Use Cases" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "user_stories.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "user_stories.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "user_stories.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "User Stories" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "wellbeing-domains.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "goal-attainment-scaling.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "wellbeing-domains.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Wellbeing Domains" ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "goal-attainment-scaling.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Goal Attainment Scaling (GAS)" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "what_matters_ppc.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "related-fhir-igs.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "what_matters_ppc.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "What Matters Ppc" ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "related-fhir-igs.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Related FHIR IGs" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "what_matters_va.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "formal_specification.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "what_matters_va.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "What Matters Va" ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "formal_specification.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Formal Specification" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "underlying_technologies.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "underlying_technologies.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Underlying Technologies" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "downloads.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "downloads.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
@@ -1706,23 +2457,9 @@
 
 <http://hl7.org/fhir/us/pco/ServiceRequest/pcoWalkOutsideActionStep> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-types-example-vs> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/Observation/pcoCareTradeOffHelpfulExercising> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/Observation/pcoCareTradeOffBurdensomeWaterPill> a fhir:us .
-
 <http://hl7.org/fhir/us/pco/Device/cqf-tooling> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Library/FHIRHelpers> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/ValueSet/focus-selection> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers> a fhir:us .
 
@@ -1794,6 +2531,8 @@
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile> a fhir:us .
 
+<http://hl7.org/fhir/us/pco/Questionnaire/health-inventory-example> a fhir:us .
+
 <http://hl7.org/fhir/us/pco/List/pcoPrioritiesList> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-personal-priorities-organizer> a fhir:us .
@@ -1818,23 +2557,35 @@
 
 <http://hl7.org/fhir/us/pco/Observation/pcoReadinessAssessmentImportance> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example> a fhir:us .
-
-<http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts> a fhir:us .
+<http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority> a fhir:us .
+<http://hl7.org/fhir/us/pco/ValueSet/what-matters-codes-example> a fhir:us .
 
-<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersPriorityExample> a fhir:us .
+<http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersFocusAreaExample> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersStatementExample> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExample> a fhir:us .
 
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureRating> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleNowRating> a fhir:us .
+
 <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureChanges> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleFutureRating> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowRating> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowReasons> a fhir:us .
 
 <http://hl7.org/fhir/us/pco/Library/WhatMattersLogic> a fhir:us .
 

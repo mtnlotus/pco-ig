@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Observation",
+  "id" : "pcoWhatMattersFocusAreaExample",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersFocusAreaExample</b></p><a name=\"pcoWhatMattersFocusAreaExample\"> </a><a name=\"hcpcoWhatMattersFocusAreaExample\"> </a><a name=\"pcoWhatMattersFocusAreaExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}\">What Matters</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 363702006}\">Has focus</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2024-03-27 15:05:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA14495-8}\">True</span></p><p><b>derivedFrom</b>: <a href=\"Observation-pcoWhatMattersBodyExample.html\">Observation Moving the Body</a></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts",
+      "code" : "what-matters",
+      "display" : "What Matters"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "survey"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "363702006",
+      "display" : "Has focus"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pcoPatientJones"
+  },
+  "effectiveDateTime" : "2024-03-27T15:05:00Z",
+  "performer" : [{
+    "reference" : "Patient/pcoPatientJones"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA14495-8",
+      "display" : "True"
+    }]
+  },
+  "derivedFrom" : [{
+    "reference" : "Observation/pcoWhatMattersBodyExample"
+  }]
+}

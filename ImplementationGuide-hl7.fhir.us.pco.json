@@ -14,7 +14,7 @@
   "name" : "PCO",
   "title" : "Person-Centered Outcomes",
   "status" : "draft",
-  "date" : "2025-02-03T23:01:50+00:00",
+  "date" : "2025-02-10T21:11:28+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -777,78 +777,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/pco-care-tradeoff"
-      },
-      "name" : "Care Trade-off Assessment",
-      "description" : "Assessment observation about a care trade-off that is helpful or burdensome (difficult, uncomfortable, or unhelpful).",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/pco-care-tradeoff-choice-codes"
-      },
-      "name" : "Care Trade-off Choice Codes",
-      "description" : "Code system to identify care trade-off choices.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pco-care-tradeoff-choices-vs"
-      },
-      "name" : "Care Trade-off Choices",
-      "description" : "Options for a care trade-off.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/pco-care-tradeoff-types-example-vs"
-      },
-      "name" : "Care Trade-off Types Example",
-      "description" : "Example value set containing types of care trade-off.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/pcoCareTradeOffHelpfulExercising"
-      },
-      "name" : "Care Trade-Off: Exercising",
-      "description" : "Care Trade-off that is helpful",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/pcoCareTradeOffBurdensomeWaterPill"
-      },
-      "name" : "Care Trade-Off: Water pill",
-      "description" : "Care Trade-off that is burdensome",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Device"
       }],
       "reference" : {
@@ -866,18 +794,6 @@
         "reference" : "Library/FHIRHelpers"
       },
       "name" : "FHIRHelpers",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/focus-selection"
-      },
-      "name" : "Focus Selection",
-      "description" : "Value set containing choices for a person's focus.",
       "exampleBoolean" : false
     },
     {
@@ -924,7 +840,8 @@
       "reference" : {
         "reference" : "Questionnaire/69737-5"
       },
-      "name" : "Generalized anxiety disorder 7 item",
+      "name" : "Generalized Anxiety Disorder (GAD-7)",
+      "description" : "Generalized anxiety disorder 7-item assessment",
       "exampleBoolean" : false
     },
     {
@@ -942,7 +859,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-gas-score-observation"
@@ -954,7 +871,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-goal-attainment-scaling"
@@ -1143,7 +1060,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-prom-score-observation"
@@ -1190,7 +1107,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-care-plan"
@@ -1214,7 +1131,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-gas-goal-profile"
@@ -1226,7 +1143,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-goal-profile"
@@ -1238,7 +1155,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-goal-barrier"
@@ -1286,13 +1203,25 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-prom-goal-profile"
       },
       "name" : "Person-Centered PROM Goal",
       "description" : "Person-centered goal with a Patient-Reported Outcome Measure (PROM) score target.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/health-inventory-example"
+      },
+      "name" : "Personal Health Inventory",
+      "description" : "An Questionnaire for a person's assessment of what matters most in their health and well-being.",
       "exampleBoolean" : false
     },
     {
@@ -1310,13 +1239,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-personal-priorities-organizer"
       },
       "name" : "Personal Priorities Organizer",
-      "description" : "Personal Priorities Organizer is used to represent a set of person-centered goals, preferences or care experiences in a preferred ranked order.",
+      "description" : "Personal Priorities Organizer is used to represent a set of person-centered goals, what matters assessment, or barriers in a preferred ranked order.",
       "exampleBoolean" : false
     },
     {
@@ -1327,7 +1256,8 @@
       "reference" : {
         "reference" : "Questionnaire/44249-1"
       },
-      "name" : "PHQ-9 quick depression assessment panel",
+      "name" : "PHQ-9 Depression Assessment",
+      "description" : "Depression assessment 9-item panel",
       "exampleBoolean" : false
     },
     {
@@ -1369,7 +1299,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-readiness-assessment"
@@ -1444,22 +1374,10 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/va-whole-health-example"
+        "reference" : "CodeSystem/va-whole-health"
       },
       "name" : "VA Whole Health Concepts",
-      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health approach and Circle of Health.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/wellbeing-concepts"
-      },
-      "name" : "Well-Being Concepts",
-      "description" : "Code system to identify resource codes and category codes for Well-Being.",
+      "description" : "Code system to identify concepts from the VA Whole Health approach and Circle of Health.",
       "exampleBoolean" : false
     },
     {
@@ -1477,25 +1395,37 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition"
       }],
       "reference" : {
         "reference" : "StructureDefinition/pco-what-matters-assessment"
       },
       "name" : "What Matters Assessment",
-      "description" : "Assessment observation for one element of a person's well-being, with a free-text description, coded value, or component values rating where a person is now and where they would like to be in the future.",
+      "description" : "Assessment observation for What Matters to a person. May be a panel assessment with member observations.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/pco-what-matters-priority"
+        "reference" : "ValueSet/what-matters-codes-example"
       },
-      "name" : "What Matters Priority",
-      "description" : "Assessment observation for one element of a person's well-being, with a boolean value indicating whether this is a current priority.",
+      "name" : "What Matters Codes Example",
+      "description" : "Example value set containing codes for What Matters observations.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/what-matters-concepts"
+      },
+      "name" : "What Matters Concepts",
+      "description" : "Code system to identify observation codes for What Matters.",
       "exampleBoolean" : false
     },
     {
@@ -1504,11 +1434,11 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/pcoWhatMattersPriorityExample"
+        "reference" : "Observation/pcoWhatMattersFocusAreaExample"
       },
-      "name" : "What Matters Priority: Moving the Body",
-      "description" : "What Matters observation recorded by a Patient to indicate their priority for well-being.",
-      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"
+      "name" : "What Matters Focus: Moving the Body",
+      "description" : "What Matters observation recorded by a Patient to indicate their focus area for well-being.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
     },
     {
       "extension" : [{
@@ -1530,7 +1460,31 @@
       "reference" : {
         "reference" : "Observation/pcoWhatMattersRelationshipsExample"
       },
-      "name" : "What Matters: Family & Friends",
+      "name" : "What Matters: Family & Friends (Panel)",
+      "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoWhatMattersRelationshipsExampleFutureRating"
+      },
+      "name" : "What Matters: Family & Friends, Future Rating",
+      "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoWhatMattersRelationshipsExampleNowRating"
+      },
+      "name" : "What Matters: Family & Friends, Now Rating",
       "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
     },
@@ -1542,7 +1496,55 @@
       "reference" : {
         "reference" : "Observation/pcoWhatMattersBodyExample"
       },
-      "name" : "What Matters: Moving the Body",
+      "name" : "What Matters: Moving the Body (Panel)",
+      "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoWhatMattersRelationshipsExampleFutureChanges"
+      },
+      "name" : "What Matters: Moving the Body, Future Changes",
+      "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoWhatMattersBodyExampleFutureRating"
+      },
+      "name" : "What Matters: Moving the Body, Future Rating",
+      "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoWhatMattersBodyExampleNowRating"
+      },
+      "name" : "What Matters: Moving the Body, Now Rating",
+      "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/pcoWhatMattersBodyExampleNowReasons"
+      },
+      "name" : "What Matters: Moving the Body, Now Reasons",
       "description" : "What Matters assessment observation recorded by a Patient as preparation for creating PCO goals and CarePlan action steps.",
       "exampleCanonical" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"
     },
@@ -1577,19 +1579,28 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "downloads.html"
+          "valueUrl" : "user_stories.html"
         }],
-        "nameUrl" : "downloads.html",
-        "title" : "Downloads",
+        "nameUrl" : "user_stories.html",
+        "title" : "User Stories",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "feedback.html"
+          "valueUrl" : "goal-attainment-scaling.html"
         }],
-        "nameUrl" : "feedback.html",
-        "title" : "Feedback",
+        "nameUrl" : "goal-attainment-scaling.html",
+        "title" : "Goal Attainment Scaling (GAS)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "related-fhir-igs.html"
+        }],
+        "nameUrl" : "related-fhir-igs.html",
+        "title" : "Related FHIR IGs",
         "generation" : "markdown"
       },
       {
@@ -1604,24 +1615,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "gas-examples.html"
-        }],
-        "nameUrl" : "gas-examples.html",
-        "title" : "Gas Examples",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "gas-examples-one-table.html"
-        }],
-        "nameUrl" : "gas-examples-one-table.html",
-        "title" : "Gas Examples One Table",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "underlying_technologies.html"
         }],
         "nameUrl" : "underlying_technologies.html",
@@ -1631,46 +1624,10 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "use_cases.html"
+          "valueUrl" : "downloads.html"
         }],
-        "nameUrl" : "use_cases.html",
-        "title" : "Use Cases",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "user_stories.html"
-        }],
-        "nameUrl" : "user_stories.html",
-        "title" : "User Stories",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "wellbeing-domains.html"
-        }],
-        "nameUrl" : "wellbeing-domains.html",
-        "title" : "Wellbeing Domains",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "what_matters_ppc.html"
-        }],
-        "nameUrl" : "what_matters_ppc.html",
-        "title" : "What Matters Ppc",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "what_matters_va.html"
-        }],
-        "nameUrl" : "what_matters_va.html",
-        "title" : "What Matters Va",
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
         "generation" : "markdown"
       }]
     },

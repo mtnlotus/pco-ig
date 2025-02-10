@@ -70,6 +70,12 @@
         "title": "Person-Centered Care Plan"
       }
     ],
+    "Goal": [
+      {
+        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile",
+        "title": "Person-Centered PROM Goal"
+      }
+    ],
     "Observation": [
       {
         "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-score-observation",
@@ -82,16 +88,6 @@
       {
         "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment",
         "title": "What Matters Assessment"
-      },
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority",
-        "title": "What Matters Priority"
-      }
-    ],
-    "Goal": [
-      {
-        "url": "http://hl7.org/fhir/us/pco/StructureDefinition/pco-prom-goal-profile",
-        "title": "Person-Centered PROM Goal"
       }
     ],
     "List": [
@@ -122,6 +118,12 @@
       "StructureDefinition.differential.element.type.targetProfile",
       "StructureDefinition.snapshot.element.type",
       "StructureDefinition.snapshot.element.type.targetProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/maxValue": [
+      "Questionnaire.item.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/minValue": [
+      "Questionnaire.item.item.item"
     ],
     "http://hl7.org/fhir/StructureDefinition/resource-pertainsToGoal": [
       "ServiceRequest"
@@ -159,6 +161,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
     ],
     "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement": [
       "StructureDefinition.snapshot.element"

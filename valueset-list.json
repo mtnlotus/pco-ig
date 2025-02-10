@@ -1,15 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/focus-selection",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "FocusSelectionValueSet",
-      "title" : "Focus Selection",
-      "description" : "Value set containing choices for a person's focus.",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers",
       "version" : "0.2.0",
       "status" : "draft",
@@ -34,26 +25,6 @@
       "name" : "GoalBarrierCodes",
       "title" : "Goal Barrier Assessment Codes",
       "description" : "Terminology codes for goal barrier assessment",
-      "systems" : ["http://snomed.info/sct"]
-    },
-    {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "CareTradeOffChoices",
-      "title" : "Care Trade-off Choices",
-      "description" : "Options for a care trade-off.",
-      "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes"
-      ]
-    },
-    {
-      "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-types-example-vs",
-      "version" : "0.2.0",
-      "status" : "draft",
-      "name" : "CareTradeOffTypesExample",
-      "title" : "Care Trade-off Types Example",
-      "description" : "Example value set containing types of care trade-off.",
       "systems" : ["http://snomed.info/sct"]
     },
     {
@@ -110,8 +81,19 @@
       "name" : "WellBeingDomainValueSet",
       "title" : "Well-Being Domains Example",
       "description" : "Example value set containing well-being domains from the VA Circle of Health.",
+      "systems" : ["http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-codes-example",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "WhatMattersCodesExample",
+      "title" : "What Matters Codes Example",
+      "description" : "Example value set containing codes for What Matters observations.",
       "systems" : [
-        "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"
+        "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
+        "http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts",
+        "http://snomed.info/sct"
       ]
     }
   ]

@@ -1,0 +1,61 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "what-matters-concepts",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem what-matters-concepts</b></p><a name=\"what-matters-concepts\"> </a><a name=\"hcwhat-matters-concepts\"> </a><a name=\"what-matters-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">now-rating<a name=\"what-matters-concepts-now-rating\"> </a></td><td>Now Rating</td><td>Where are you now?</td></tr><tr><td style=\"white-space:nowrap\">now-reasons<a name=\"what-matters-concepts-now-reasons\"> </a></td><td>Now Reasons</td><td>What are the reasons you chose this number?</td></tr><tr><td style=\"white-space:nowrap\">future-rating<a name=\"what-matters-concepts-future-rating\"> </a></td><td>Future Rating</td><td>Where would you like to be?</td></tr><tr><td style=\"white-space:nowrap\">future-changes<a name=\"what-matters-concepts-future-changes\"> </a></td><td>Future Changes</td><td>What changes could you make to help you get there?</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "pc"
+  }],
+  "url" : "http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts",
+  "version" : "0.2.0",
+  "name" : "WhatMattersConcepts",
+  "title" : "What Matters Concepts",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-02-10T21:11:28+00:00",
+  "publisher" : "HL7 International / Patient Care",
+  "contact" : [{
+    "name" : "HL7 International / Patient Care",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/patientcare"
+    },
+    {
+      "system" : "email",
+      "value" : "patientcare@lists.HL7.org"
+    }]
+  }],
+  "description" : "Code system to identify observation codes for What Matters.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "now-rating",
+    "display" : "Now Rating",
+    "definition" : "Where are you now?"
+  },
+  {
+    "code" : "now-reasons",
+    "display" : "Now Reasons",
+    "definition" : "What are the reasons you chose this number?"
+  },
+  {
+    "code" : "future-rating",
+    "display" : "Future Rating",
+    "definition" : "Where would you like to be?"
+  },
+  {
+    "code" : "future-changes",
+    "display" : "Future Changes",
+    "definition" : "What changes could you make to help you get there?"
+  }]
+}

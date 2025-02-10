@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -16,7 +17,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersRelationshipsExample</b></p><a name=\"pcoWhatMattersRelationshipsExample\"> </a><a name=\"hcpcoWhatMattersRelationshipsExample\"> </a><a name=\"pcoWhatMattersRelationshipsExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}\">What Matters</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example relationships}\">Family, Friends &amp; Co-Workers</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>effective</b>: 2024-03-27 15:20:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-rating}\">Now Rating</span></p><p><b>value</b>: 3</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-reasons}\">Now Reasons</span></p><p><b>value</b>: I am still recovering from isolation during COVID and now physical difficulty leaving my home.</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts future-rating}\">Future Rating</span></p><p><b>value</b>: 9</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts future-changes}\">Future Changes</span></p><p><b>value</b>: I want to walk outside and visit friends in the park.</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersRelationshipsExample</b></p><a name=\"pcoWhatMattersRelationshipsExample\"> </a><a name=\"hcpcoWhatMattersRelationshipsExample\"> </a><a name=\"pcoWhatMattersRelationshipsExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}\">What Matters</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health relationships}\">Family, Friends &amp; Co-Workers</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>effective</b>: 2024-03-27 15:20:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-pcoWhatMattersRelationshipsExampleNowRating.html\">Observation Now Rating</a></li><li><a href=\"Observation-pcoWhatMattersRelationshipsExampleFutureRating.html\">Observation Now Rating</a></li><li><a href=\"Observation-pcoWhatMattersRelationshipsExampleFutureChanges.html\">Observation Future Changes</a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
@@ -33,7 +34,7 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "relationships" ] ;
        fhir:display [ fhir:v "Family, Friends & Co-Workers" ]
      ] )
@@ -42,46 +43,32 @@
      fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ; # 
-  fhir:effective [ fhir:v "2024-03-27T15:20:00Z"^^xsd:dateTime] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-03-27T15:20:00Z"^^xsd:dateTime
+  ] ; # 
   fhir:performer ( [
      fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ) ; # 
-  fhir:component ( [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "now-rating" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "3"^^xsd:integer ]
+  fhir:hasMember ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleNowRating> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExampleNowRating" ]
   ] [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "now-reasons" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "I am still recovering from isolation during COVID and now physical difficulty leaving my home." ]
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureRating> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExampleFutureRating" ]
   ] [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "future-rating" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "9"^^xsd:integer ]
-  ] [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "future-changes" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "I want to walk outside and visit friends in the park." ]
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureChanges> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersRelationshipsExampleFutureChanges" ]
   ] ) . # 
 
 <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleNowRating> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureRating> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersRelationshipsExampleFutureChanges> a fhir:us .
 
 # -------------------------------------------------------------------------------------
 

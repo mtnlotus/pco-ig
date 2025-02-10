@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -16,7 +17,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersBodyExample</b></p><a name=\"pcoWhatMattersBodyExample\"> </a><a name=\"hcpcoWhatMattersBodyExample\"> </a><a name=\"pcoWhatMattersBodyExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}\">What Matters</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example body}\">Moving the Body</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>effective</b>: 2024-03-27 15:10:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-rating}\">Now Rating</span></p><p><b>value</b>: 2</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts now-reasons}\">Now Reasons</span></p><p><b>value</b>: My knee pain prevents me from walking.</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts future-rating}\">Future Rating</span></p><p><b>value</b>: 7</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pcoWhatMattersBodyExample</b></p><a name=\"pcoWhatMattersBodyExample\"> </a><a name=\"hcpcoWhatMattersBodyExample\"> </a><a name=\"pcoWhatMattersBodyExample-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}\">What Matters</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health body}\">Moving the Body</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>effective</b>: 2024-03-27 15:10:00+0000</p><p><b>performer</b>: <a href=\"Patient-pcoPatientJones.html\">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-pcoWhatMattersFocusAreaExample.html\">Observation Has focus</a></li><li><a href=\"Observation-pcoWhatMattersBodyExampleNowRating.html\">Observation Now Rating</a></li><li><a href=\"Observation-pcoWhatMattersBodyExampleNowReasons.html\">Observation Now Reasons</a></li><li><a href=\"Observation-pcoWhatMattersBodyExampleFutureRating.html\">Observation Future Rating</a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:category ( [
@@ -33,7 +34,7 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "body" ] ;
        fhir:display [ fhir:v "Moving the Body" ]
      ] )
@@ -42,38 +43,37 @@
      fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ; # 
-  fhir:effective [ fhir:v "2024-03-27T15:10:00Z"^^xsd:dateTime] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-03-27T15:10:00Z"^^xsd:dateTime
+  ] ; # 
   fhir:performer ( [
      fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> ;
      fhir:reference [ fhir:v "Patient/pcoPatientJones" ]
   ] ) ; # 
-  fhir:component ( [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "now-rating" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "2"^^xsd:integer ]
+  fhir:hasMember ( [
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersFocusAreaExample> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersFocusAreaExample" ]
   ] [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "now-reasons" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "My knee pain prevents me from walking." ]
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowRating> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExampleNowRating" ]
   ] [
-     fhir:code [
-       fhir:coding ( [
-         fhir:system [ fhir:v "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "future-rating" ]
-       ] )
-     ] ;
-     fhir:value [ fhir:v "7"^^xsd:integer ]
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowReasons> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExampleNowReasons" ]
+  ] [
+     fhir:link <http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleFutureRating> ;
+     fhir:reference [ fhir:v "Observation/pcoWhatMattersBodyExampleFutureRating" ]
   ] ) . # 
 
 <http://hl7.org/fhir/us/pco/Patient/pcoPatientJones> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersFocusAreaExample> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowRating> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleNowReasons> a fhir:us .
+
+<http://hl7.org/fhir/us/pco/Observation/pcoWhatMattersBodyExampleFutureRating> a fhir:us .
 
 # -------------------------------------------------------------------------------------
 

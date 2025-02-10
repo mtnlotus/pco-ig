@@ -3,7 +3,7 @@
   "id" : "pco-concepts",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco-concepts</b></p><a name=\"pco-concepts\"> </a><a name=\"hcpco-concepts\"> </a><a name=\"pco-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered<a name=\"pco-concepts-person-centered\"> </a></td><td>Person-Centered</td><td>General category for person-centered goals and observations</td></tr><tr><td style=\"white-space:nowrap\">what-matters<a name=\"pco-concepts-what-matters\"> </a></td><td>What Matters</td><td>Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care.</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem pco-concepts</b></p><a name=\"pco-concepts\"> </a><a name=\"hcpco-concepts\"> </a><a name=\"pco-concepts-en-US\"> </a><p>This case-sensitive code system <code>http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">person-centered<a name=\"pco-concepts-person-centered\"> </a></td><td>Person-Centered</td><td>General category for person-centered goals and observations</td></tr><tr><td style=\"white-space:nowrap\">what-matters<a name=\"pco-concepts-what-matters\"> </a></td><td>What Matters</td><td>Identify each person's specific health outcome goals and priorities across settings of care.</td></tr><tr><td style=\"white-space:nowrap\">well-being<a name=\"pco-concepts-well-being\"> </a></td><td>Well-Being</td><td>Indicator for a person's well-being.</td></tr></table></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
@@ -15,7 +15,7 @@
   "title" : "Person-Centered Outcome Concepts",
   "status" : "active",
   "experimental" : false,
-  "date" : "2025-02-03T23:01:50+00:00",
+  "date" : "2025-02-10T21:11:28+00:00",
   "publisher" : "HL7 International / Patient Care",
   "contact" : [{
     "name" : "HL7 International / Patient Care",
@@ -38,7 +38,7 @@
   "caseSensitive" : true,
   "hierarchyMeaning" : "is-a",
   "content" : "complete",
-  "count" : 2,
+  "count" : 3,
   "concept" : [{
     "code" : "person-centered",
     "display" : "Person-Centered",
@@ -47,6 +47,11 @@
   {
     "code" : "what-matters",
     "display" : "What Matters",
-    "definition" : "Know and align care with each person's specific health outcome goals and care preferences including, but not limited to, end-of-life care, and across settings of care."
+    "definition" : "Identify each person's specific health outcome goals and priorities across settings of care."
+  },
+  {
+    "code" : "well-being",
+    "display" : "Well-Being",
+    "definition" : "Indicator for a person's well-being."
   }]
 }

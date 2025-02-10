@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pcoWhatMattersFocusAreaExample"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation pcoWhatMattersFocusAreaExample</b></p><a name="pcoWhatMattersFocusAreaExample"> </a><a name="hcpcoWhatMattersFocusAreaExample"> </a><a name="pcoWhatMattersFocusAreaExample-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts what-matters}">What Matters</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 363702006}">Has focus</span></p><p><b>subject</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>effective</b>: 2024-03-27 15:05:00+0000</p><p><b>performer</b>: <a href="Patient-pcoPatientJones.html">Dorothy Jones  Female, DoB: 1947-11-25 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1db5 (use: official, ))</a></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA14495-8}">True</span></p><p><b>derivedFrom</b>: <a href="Observation-pcoWhatMattersBodyExample.html">Observation Moving the Body</a></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts"/>
+      <code value="what-matters"/>
+      <display value="What Matters"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="363702006"/>
+      <display value="Has focus"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pcoPatientJones"/>
+  </subject>
+  <effectiveDateTime value="2024-03-27T15:05:00Z"/>
+  <performer>
+    <reference value="Patient/pcoPatientJones"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA14495-8"/>
+      <display value="True"/>
+    </coding>
+  </valueCodeableConcept>
+  <derivedFrom>
+    <reference value="Observation/pcoWhatMattersBodyExample"/>
+  </derivedFrom>
+</Observation>

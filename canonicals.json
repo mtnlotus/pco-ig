@@ -1,12 +1,5 @@
 [
   {
-    "id" : "pco-care-tradeoff-choice-codes",
-    "type" : "CodeSystem",
-    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes",
-    "version" : "0.2.0",
-    "name" : "CareTradeOffChoiceCodes"
-  },
-  {
     "id" : "pco-concepts",
     "type" : "CodeSystem",
     "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts",
@@ -28,18 +21,18 @@
     "name" : "ReadinessConcepts"
   },
   {
-    "id" : "va-whole-health-example",
+    "id" : "va-whole-health",
     "type" : "CodeSystem",
-    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
     "version" : "0.2.0",
-    "name" : "VAWholeHealthExample"
+    "name" : "VAWholeHealth"
   },
   {
-    "id" : "wellbeing-concepts",
+    "id" : "what-matters-concepts",
     "type" : "CodeSystem",
-    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/wellbeing-concepts",
+    "url" : "http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts",
     "version" : "0.2.0",
-    "name" : "WellBeingConcepts"
+    "name" : "WhatMattersConcepts"
   },
   {
     "id" : "hl7.fhir.us.pco",
@@ -127,18 +120,18 @@
     "name" : "Generalized_anxiety_disorder_item"
   },
   {
+    "id" : "health-inventory-example",
+    "type" : "Questionnaire",
+    "url" : "http://hl7.org/fhir/us/pco/Questionnaire/health-inventory-example",
+    "version" : "0.2.0",
+    "name" : "PersonalHealthInventory"
+  },
+  {
     "id" : "pco-care-plan",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-plan",
     "version" : "0.2.0",
     "name" : "PCOCarePlan"
-  },
-  {
-    "id" : "pco-care-tradeoff",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-care-tradeoff",
-    "version" : "0.2.0",
-    "name" : "PCOCareTradeOffProfile"
   },
   {
     "id" : "pco-gas-goal-profile",
@@ -211,20 +204,6 @@
     "name" : "WhatMattersAssessment"
   },
   {
-    "id" : "pco-what-matters-priority",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority",
-    "version" : "0.2.0",
-    "name" : "WhatMattersPriority"
-  },
-  {
-    "id" : "focus-selection",
-    "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/pco/ValueSet/focus-selection",
-    "version" : "0.2.0",
-    "name" : "FocusSelectionValueSet"
-  },
-  {
     "id" : "gas-score-answers",
     "type" : "ValueSet",
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/gas-score-answers",
@@ -244,20 +223,6 @@
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/goal-barrier-codes",
     "version" : "0.2.0",
     "name" : "GoalBarrierCodes"
-  },
-  {
-    "id" : "pco-care-tradeoff-choices-vs",
-    "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-choices-vs",
-    "version" : "0.2.0",
-    "name" : "CareTradeOffChoices"
-  },
-  {
-    "id" : "pco-care-tradeoff-types-example-vs",
-    "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/pco/ValueSet/pco-care-tradeoff-types-example-vs",
-    "version" : "0.2.0",
-    "name" : "CareTradeOffTypesExample"
   },
   {
     "id" : "pco-categories",
@@ -300,5 +265,12 @@
     "url" : "http://hl7.org/fhir/us/pco/ValueSet/wellbeing-domains-example",
     "version" : "0.2.0",
     "name" : "WellBeingDomainValueSet"
+  },
+  {
+    "id" : "what-matters-codes-example",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/pco/ValueSet/what-matters-codes-example",
+    "version" : "0.2.0",
+    "name" : "WhatMattersCodesExample"
   }
 ]

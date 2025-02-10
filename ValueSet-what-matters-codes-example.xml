@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="what-matters-codes-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet what-matters-codes-example</b></p><a name="what-matters-codes-example"> </a><a name="hcwhat-matters-codes-example"> </a><a name="what-matters-codes-example-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/363702006">363702006</a></td><td>Has focus</td></tr></table></li><li>Include all codes defined in <a href="CodeSystem-what-matters-concepts.html"><code>http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts</code></a></li><li>Include all codes defined in <a href="CodeSystem-va-whole-health.html"><code>http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health</code></a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/pco/ValueSet/what-matters-codes-example"/>
+  <version value="0.2.0"/>
+  <name value="WhatMattersCodesExample"/>
+  <title value="What Matters Codes Example"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2025-02-10T21:11:28+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="patientcare@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Example value set containing codes for What Matters observations."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="363702006"/>
+        <display value="Has focus"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts"/>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health"/>
+    </include>
+  </compose>
+</ValueSet>

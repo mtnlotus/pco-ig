@@ -1,17 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-care-tradeoff-choice-codes",
-      "version" : "0.2.0",
-      "status" : "active",
-      "name" : "CareTradeOffChoiceCodes",
-      "title" : "Care Trade-off Choice Codes",
-      "description" : "Code system to identify care trade-off choices.",
-      "uses" : {
-      },
-      "ValueSet-pco-care-tradeoff-choices-vs.html" : "Care Trade-off Choices"
-    },
-    {
       "url" : "http://hl7.org/fhir/us/pco/CodeSystem/pco-concepts",
       "version" : "0.2.0",
       "status" : "active",
@@ -45,15 +34,27 @@
       "ValueSet-readiness-assessment-codes.html" : "Readiness Assessment Codes"
     },
     {
-      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health-example",
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/va-whole-health",
       "version" : "0.2.0",
       "status" : "active",
-      "name" : "VAWholeHealthExample",
+      "name" : "VAWholeHealth",
       "title" : "VA Whole Health Concepts",
-      "description" : "Code system to identify \"What Matters\" concepts from the VA Whole Health approach and Circle of Health.",
+      "description" : "Code system to identify concepts from the VA Whole Health approach and Circle of Health.",
       "uses" : {
       },
+      "ValueSet-what-matters-codes-example.html" : "What Matters Codes Example",
       "ValueSet-wellbeing-domains-example.html" : "Well-Being Domains Example"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/pco/CodeSystem/what-matters-concepts",
+      "version" : "0.2.0",
+      "status" : "active",
+      "name" : "WhatMattersConcepts",
+      "title" : "What Matters Concepts",
+      "description" : "Code system to identify observation codes for What Matters.",
+      "uses" : {
+      },
+      "ValueSet-what-matters-codes-example.html" : "What Matters Codes Example"
     },
     {
       "url" : "http://loinc.org",
@@ -65,9 +66,9 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "ValueSet-prom-target-measures.html" : "PROM Target Measure Scores",
       "http://tx.fhir.org/r4/ValueSet/244df1e0-5b26-4fd1-be31-76406ceb2b2c" : "LOINCAnswerListLL2335_9",
       "ValueSet-goal-attainment-scaling-score.html" : "Goal Attainment Scaling (GAS) Score",
+      "ValueSet-prom-target-measures.html" : "PROM Target Measure Scores",
       "ValueSet-gas-score-answers.html" : "Follow-Up GAS Score Answers"
     },
     {
@@ -80,10 +81,9 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes",
-      "ValueSet-focus-selection.html" : "Focus Selection",
-      "ValueSet-pco-care-tradeoff-types-example-vs.html" : "Care Trade-off Types Example",
-      "ValueSet-pco-goal-barrier-types-example-vs.html" : "Goal Barrier Types Example"
+      "ValueSet-pco-goal-barrier-types-example-vs.html" : "Goal Barrier Types Example",
+      "ValueSet-what-matters-codes-example.html" : "What Matters Codes Example",
+      "ValueSet-goal-barrier-codes.html" : "Goal Barrier Assessment Codes"
     }
   ]
 }

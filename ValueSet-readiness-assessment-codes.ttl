@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,11 +11,14 @@
   fhir:id [ fhir:v "readiness-assessment-codes"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet readiness-assessment-codes</b></p><a name=\"readiness-assessment-codes\"> </a><a name=\"hcreadiness-assessment-codes\"> </a><a name=\"readiness-assessment-codes-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-readiness-assessment-concepts.html\"><code>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</code></a></li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet readiness-assessment-codes</b></p><a name=\"readiness-assessment-codes\"> </a><a name=\"hcreadiness-assessment-codes\"> </a><a name=\"readiness-assessment-codes-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-readiness-assessment-concepts.html\"><code>http://hl7.org/fhir/us/pco/CodeSystem/readiness-assessment-concepts</code></a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "pc" ]
+     fhir:value [
+       a fhir:code ;
+       fhir:v "pc"
+     ]
   ] ) ; # 
   fhir:url [ fhir:v "http://hl7.org/fhir/us/pco/ValueSet/readiness-assessment-codes"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.2.0"] ; # 
@@ -22,7 +26,7 @@
   fhir:title [ fhir:v "Readiness Assessment Codes"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2025-02-03T23:01:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-02-10T21:11:28+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 International / Patient Care" ] ;

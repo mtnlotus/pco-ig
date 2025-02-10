@@ -1,6 +1,7 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -17,7 +18,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pcoGoalAnxietyExample</b></p><a name=\"pcoGoalAnxietyExample\"> </a><a name=\"hcpcoGoalAnxietyExample\"> </a><a name=\"pcoGoalAnxietyExample-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains emotional-and-mental-health}\">Emotional And Mental Health</span></p><p><b>description</b>: <span title=\"Codes:\">Reduce to mild anxiety level score</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientLopez.html\">Camila Lopez  Female, DoB: 1959-07-16 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1ge3 (use: official, ))</a></p><p><b>start</b>: 2024-08-11</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 70274-6}\">Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]</span></td><td>&lt;6 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></td><td>2024-12-31</td></tr></table><p><b>expressedBy</b>: <a href=\"Practitioner-pcoPractitionerAnderson.html\">Practitioner John Anderson, MD</a></p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal pcoGoalAnxietyExample</b></p><a name=\"pcoGoalAnxietyExample\"> </a><a name=\"hcpcoGoalAnxietyExample\"> </a><a name=\"pcoGoalAnxietyExample-en-US\"> </a><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement in-progress}\">In Progress</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/pco/CodeSystem/pco-goal-domains emotional-and-mental-health}\">Emotional And Mental Health</span></p><p><b>description</b>: <span title=\"Codes:\">Reduce to mild anxiety level score</span></p><p><b>subject</b>: <a href=\"Patient-pcoPatientLopez.html\">Camila Lopez  Female, DoB: 1959-07-16 ( http://example.org#ee8d4ac0-545c-4501-8d7e-646bfbda1ge3 (use: official, ))</a></p><p><b>start</b>: 2024-08-11</p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 70274-6}\">Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]</span></td><td>&lt;6 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></td><td>2024-12-31</td></tr></table><p><b>expressedBy</b>: <a href=\"Practitioner-pcoPractitionerAnderson.html\">Practitioner John Anderson, MD</a></p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:lifecycleStatus [ fhir:v "active"] ; # 
   fhir:achievementStatus [
@@ -40,7 +41,10 @@
      fhir:link <http://hl7.org/fhir/us/pco/Patient/pcoPatientLopez> ;
      fhir:reference [ fhir:v "Patient/pcoPatientLopez" ]
   ] ; # 
-  fhir:start [ fhir:v "2024-08-11"^^xsd:date] ; # 
+  fhir:start [
+     a fhir:date ;
+     fhir:v "2024-08-11"^^xsd:date
+  ] ; # 
   fhir:target ( [
      fhir:measure [
        fhir:coding ( [
@@ -58,7 +62,10 @@
        fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "{score}" ]
      ] ;
-     fhir:due [ fhir:v "2024-12-31"^^xsd:date ]
+     fhir:due [
+       a fhir:date ;
+       fhir:v "2024-12-31"^^xsd:date
+     ]
   ] ) ; # 
   fhir:expressedBy [
      fhir:link <http://hl7.org/fhir/us/pco/Practitioner/pcoPractitionerAnderson> ;

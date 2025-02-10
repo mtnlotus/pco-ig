@@ -18,7 +18,7 @@
   <name value="PCOGoalOutcomeMeasureProfile"/>
   <title value="Person-Centered PROM Goal"/>
   <status value="draft"/>
-  <date value="2025-02-03T23:01:50+00:00"/>
+  <date value="2025-02-10T21:11:28+00:00"/>
   <publisher value="HL7 International / Patient Care"/>
   <contact>
     <name value="HL7 International / Patient Care"/>
@@ -60,6 +60,9 @@
   <baseDefinition value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-goal-profile"/>
   <derivation value="constraint"/>
   <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.2.0"/>
+    </extension>
     <element id="Goal">
       <path value="Goal"/>
       <short value="Describes the intended objective(s) for a patient, group or organization"/>
@@ -1265,7 +1268,6 @@
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-assessment"/>
-        <targetProfile value="http://hl7.org/fhir/us/pco/StructureDefinition/pco-what-matters-priority"/>
       </type>
       <constraint>
         <key value="ele-1"/>
