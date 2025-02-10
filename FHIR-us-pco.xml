@@ -10,17 +10,11 @@
 <artifact id="MedicationRequest/pcoAntiInflammatoryMedication" key="MedicationRequest-pcoAntiInflammatoryMedication" name="Care Plan: Anti-Inflammatory Medication"/>
 <artifact id="ServiceRequest/pcoPhysicalTherapyReferral" key="ServiceRequest-pcoPhysicalTherapyReferral" name="Care Plan: Clinical action step a patient"/>
 <artifact id="ServiceRequest/pcoWalkOutsideActionStep" key="ServiceRequest-pcoWalkOutsideActionStep" name="Care Plan: Personal action step"/>
-<artifact id="Observation/pcoCareTradeOffHelpfulExercising" key="Observation-pcoCareTradeOffHelpfulExercising" name="Care Trade-Off: Exercising"/>
-<artifact id="Observation/pcoCareTradeOffBurdensomeWaterPill" key="Observation-pcoCareTradeOffBurdensomeWaterPill" name="Care Trade-Off: Water pill"/>
-<artifact id="StructureDefinition/pco-care-tradeoff" key="StructureDefinition-pco-care-tradeoff" name="Care Trade-off Assessment"/>
-<artifact id="CodeSystem/pco-care-tradeoff-choice-codes" key="CodeSystem-pco-care-tradeoff-choice-codes" name="Care Trade-off Choice Codes"/>
-<artifact id="ValueSet/pco-care-tradeoff-choices-vs" key="ValueSet-pco-care-tradeoff-choices-vs" name="Care Trade-off Choices"/>
-<artifact id="ValueSet/pco-care-tradeoff-types-example-vs" key="ValueSet-pco-care-tradeoff-types-example-vs" name="Care Trade-off Types Example"/>
 <artifact id="Library/FHIRHelpers" key="Library-FHIRHelpers" name="FHIRHelpers"/>
 <artifact id="ValueSet/gas-score-answers" key="ValueSet-gas-score-answers" name="Follow-Up GAS Score Answers"/>
 <artifact id="Observation/pcoPROMScoreAnxietyExample" key="Observation-pcoPROMScoreAnxietyExample" name="GAD-7 PROM Follow-up Score"/>
 <artifact id="Observation/pcoGASScoreBaselineExample" key="Observation-pcoGASScoreBaselineExample" name="GAS Baseline Score"/>
-<artifact id="Questionnaire/69737-5" key="Questionnaire-69737-5" name="Generalized anxiety disorder 7 item"/>
+<artifact id="Questionnaire/69737-5" key="Questionnaire-69737-5" name="Generalized Anxiety Disorder (GAD-7)"/>
 <artifact id="ValueSet/goal-attainment-scaling-score" key="ValueSet-goal-attainment-scaling-score" name="Goal Attainment Scaling (GAS) Score"/>
 <artifact id="StructureDefinition/pco-gas-score-observation" key="StructureDefinition-pco-gas-score-observation" name="Goal Attainment Scaling (GAS) score observation"/>
 <artifact id="StructureDefinition/pco-goal-attainment-scaling" key="StructureDefinition-pco-goal-attainment-scaling" name="Goal Attainment Scaling Extension"/>
@@ -39,7 +33,7 @@
 <artifact id="ValueSet/pco-goal-domains-example-vs" key="ValueSet-pco-goal-domains-example-vs" name="PCO Goal Domain Categories Example"/>
 <artifact id="CodeSystem/pco-goal-domains" key="CodeSystem-pco-goal-domains" name="PCO Goal Domains"/>
 <artifact id="Library/PCOCommon" key="Library-PCOCommon" name="PCOCommon"/>
-<artifact id="Questionnaire/44249-1" key="Questionnaire-44249-1" name="PHQ-9 quick depression assessment panel"/>
+<artifact id="Questionnaire/44249-1" key="Questionnaire-44249-1" name="PHQ-9 Depression Assessment"/>
 <artifact id="ValueSet/prom-target-measures" key="ValueSet-prom-target-measures" name="PROM Target Measure Scores"/>
 <artifact id="Patient/pcoPatientLopez" key="Patient-pcoPatientLopez" name="Patient Camila Lopez"/>
 <artifact id="Patient/pcoPatientJones" key="Patient-pcoPatientJones" name="Patient Dorothy Jones"/>
@@ -54,6 +48,7 @@
 <artifact id="Measure/GoalIdentificationMeasure" key="Measure-GoalIdentificationMeasure" name="Person-Centered Goal Identification"/>
 <artifact id="CodeSystem/pco-concepts" key="CodeSystem-pco-concepts" name="Person-Centered Outcome Concepts"/>
 <artifact id="StructureDefinition/pco-prom-goal-profile" key="StructureDefinition-pco-prom-goal-profile" name="Person-Centered PROM Goal"/>
+<artifact id="Questionnaire/health-inventory-example" key="Questionnaire-health-inventory-example" name="Personal Health Inventory"/>
 <artifact id="List/pcoPrioritiesList" key="List-pcoPrioritiesList" name="Personal Priorities List"/>
 <artifact id="StructureDefinition/pco-personal-priorities-organizer" key="StructureDefinition-pco-personal-priorities-organizer" name="Personal Priorities Organizer"/>
 <artifact id="Observation/pcoGASScorePractitionerFollowupExample" key="Observation-pcoGASScorePractitionerFollowupExample" name="Practitioner GAS Follow-up Score"/>
@@ -64,31 +59,32 @@
 <artifact id="Observation/pcoReadinessAssessmentPanel" key="Observation-pcoReadinessAssessmentPanel" name="Readiness Assessment panel"/>
 <artifact id="Observation/pcoReadinessAssessmentConfidence" key="Observation-pcoReadinessAssessmentConfidence" name="Readiness Assessment: Confidence"/>
 <artifact id="Observation/pcoReadinessAssessmentImportance" key="Observation-pcoReadinessAssessmentImportance" name="Readiness Assessment: Importance"/>
-<artifact id="CodeSystem/va-whole-health-example" key="CodeSystem-va-whole-health-example" name="VA Whole Health Concepts"/>
-<artifact id="CodeSystem/wellbeing-concepts" key="CodeSystem-wellbeing-concepts" name="Well-Being Concepts"/>
+<artifact id="CodeSystem/va-whole-health" key="CodeSystem-va-whole-health" name="VA Whole Health Concepts"/>
 <artifact id="ValueSet/wellbeing-domains-example" key="ValueSet-wellbeing-domains-example" name="Well-Being Domains Example"/>
 <artifact id="StructureDefinition/pco-what-matters-assessment" key="StructureDefinition-pco-what-matters-assessment" name="What Matters Assessment"/>
-<artifact id="StructureDefinition/pco-what-matters-priority" key="StructureDefinition-pco-what-matters-priority" name="What Matters Priority"/>
-<artifact id="Observation/pcoWhatMattersPriorityExample" key="Observation-pcoWhatMattersPriorityExample" name="What Matters Priority: Moving the Body"/>
+<artifact id="ValueSet/what-matters-codes-example" key="ValueSet-what-matters-codes-example" name="What Matters Codes Example"/>
+<artifact id="CodeSystem/what-matters-concepts" key="CodeSystem-what-matters-concepts" name="What Matters Concepts"/>
+<artifact id="Observation/pcoWhatMattersFocusAreaExample" key="Observation-pcoWhatMattersFocusAreaExample" name="What Matters Focus: Moving the Body"/>
 <artifact id="Observation/pcoWhatMattersStatementExample" key="Observation-pcoWhatMattersStatementExample" name="What Matters Statement: Family &amp; Friends"/>
-<artifact id="Observation/pcoWhatMattersRelationshipsExample" key="Observation-pcoWhatMattersRelationshipsExample" name="What Matters: Family &amp; Friends"/>
-<artifact id="Observation/pcoWhatMattersBodyExample" key="Observation-pcoWhatMattersBodyExample" name="What Matters: Moving the Body"/>
+<artifact id="Observation/pcoWhatMattersRelationshipsExample" key="Observation-pcoWhatMattersRelationshipsExample" name="What Matters: Family &amp; Friends (Panel)"/>
+<artifact id="Observation/pcoWhatMattersRelationshipsExampleFutureRating" key="Observation-pcoWhatMattersRelationshipsExampleFutureRating" name="What Matters: Family &amp; Friends, Future Rating"/>
+<artifact id="Observation/pcoWhatMattersRelationshipsExampleNowRating" key="Observation-pcoWhatMattersRelationshipsExampleNowRating" name="What Matters: Family &amp; Friends, Now Rating"/>
+<artifact id="Observation/pcoWhatMattersBodyExample" key="Observation-pcoWhatMattersBodyExample" name="What Matters: Moving the Body (Panel)"/>
+<artifact id="Observation/pcoWhatMattersRelationshipsExampleFutureChanges" key="Observation-pcoWhatMattersRelationshipsExampleFutureChanges" name="What Matters: Moving the Body, Future Changes"/>
+<artifact id="Observation/pcoWhatMattersBodyExampleFutureRating" key="Observation-pcoWhatMattersBodyExampleFutureRating" name="What Matters: Moving the Body, Future Rating"/>
+<artifact id="Observation/pcoWhatMattersBodyExampleNowRating" key="Observation-pcoWhatMattersBodyExampleNowRating" name="What Matters: Moving the Body, Now Rating"/>
+<artifact id="Observation/pcoWhatMattersBodyExampleNowReasons" key="Observation-pcoWhatMattersBodyExampleNowReasons" name="What Matters: Moving the Body, Now Reasons"/>
 <artifact id="Library/WhatMattersLogic" key="Library-WhatMattersLogic" name="WhatMattersLogic"/>
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="cqf-tooling"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="downloads" name="Downloads"/>
-<page key="feedback" name="Feedback"/>
 <page key="formal_specification" name="Formal Specification"/>
-<page key="gas-examples" name="Gas Examples"/>
-<page key="gas-examples-one-table" name="Gas Examples One Table"/>
+<page key="goal-attainment-scaling" name="Goal Attainment Scaling (GAS)"/>
 <page key="index" name="Home"/>
+<page key="related-fhir-igs" name="Related FHIR IGs"/>
 <page key="toc" name="Table of Contents"/>
 <page key="underlying_technologies" name="Underlying Technologies"/>
-<page key="use_cases" name="Use Cases"/>
 <page key="user_stories" name="User Stories"/>
-<page key="wellbeing-domains" name="Wellbeing Domains"/>
-<page key="what_matters_ppc" name="What Matters Ppc"/>
-<page key="what_matters_va" name="What Matters Va"/>
 </specification>
